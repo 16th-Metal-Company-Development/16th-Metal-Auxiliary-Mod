@@ -24,7 +24,7 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
           name: 16th-Metal-Auxiliary-Mod
-          path: .hemttout//16th-Metal-Auxiliary-Mod.zip
+          path: .hemttout/16th-Metal-Auxiliary-Mod
           include-hidden-files: true
 
     - name: Publish to Steam Workshop
