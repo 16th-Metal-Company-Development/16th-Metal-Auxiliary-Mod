@@ -18,7 +18,7 @@ jobs:
       run: hemtt release
 
     - name: Rename build folder
-      run: mv .hemttout/build .hemttout/16th-Metal-Auxiliary-Mod
+      run: mv .hemttout/release .hemttout/16th-Metal-Auxiliary-Mod
 
     - name: Upload Release
       uses: actions/upload-artifact@v4
