@@ -1,0 +1,50 @@
+name: Release Mod
+on:
+  push:
+    branches: [ release ]
+
+jobs:
+  release:
+    runs-on: windows-latest
+    if: contains(github.head_commit.message, 'Merge pull request')
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: arma-actions/hemtt@v1
+        name: Setup HEMTT
+
+      - name: Build and Package (HEMTT)
+        uses: gruppe-adler/action-release-with-hemtt@v3
+        id: build
+
+      - name: Create GitHub Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: v1.0.0
+          release_name: "MyMod v1.0.0"
+          body: "Automated release of MyMod v1.0.0."
+          draft: false
+          prerelease: false
+
+      - name: Upload Mod Zip
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          file: ${{ steps.build.outputs.zip_path }}
+          asset_name: ${{ steps.build.outputs.zip_name }}.zip
+          release_url: ${{ steps.create_release.outputs.upload_url }}
+
+      - name: Publish to Steam Workshop
+        uses: gruppe-adler/action-release-to-steam-ws@v1
+        with:
+          file_id: 1234567890
+          username: ${{ secrets.STEAM_USERNAME }}
+          password: ${{ secrets.STEAM_PASSWORD }}
+          path: ${{ steps.build.outputs.release_path }}/@${{ steps.build.outputs.mod_name }}
+          name: ${{ steps.build.outputs.mod_name }}
+          change_notes_title: ${{ github.event.release.name }}
+          change_notes: ${{ github.event.release.body }}
