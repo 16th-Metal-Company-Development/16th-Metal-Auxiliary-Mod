@@ -14,6 +14,8 @@ jobs:
 
       - name: Build and Package (HEMTT)
         uses: gruppe-adler/action-release-with-hemtt@v3
+        with:
+         working-directory: addons/16th_metal
         id: build
 
       - name: Create GitHub Release
