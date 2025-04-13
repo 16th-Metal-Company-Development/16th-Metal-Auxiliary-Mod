@@ -18,8 +18,8 @@ jobs:
       - name: Upload Release
         uses: actions/upload-artifact@v4
         with:
-            name: my-mod-latest
-            path: release/my-mod-latest.zip
+            name: 16th-Metal-Auxiliary-Mod
+            path: .releases/16th-Metal-Auxiliary-Mod.zip
 
       - name: Publish to Steam Workshop
         uses: gruppe-adler/action-release-to-steam-ws@v1
