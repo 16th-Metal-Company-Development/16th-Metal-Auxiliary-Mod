@@ -1,29 +1,40 @@
 name: Release Mod
+
 on:
   push:
     branches: [ release ]
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+  windows:
+    runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v2
-  
-      - name: Setup HEMTT
-        uses: arma-actions/hemtt@v1
+    - name: Install Arma 3 Tools
+      uses: arma-actions/arma3-tools@master
+      with:
+        toolsUrl: ${{ secrets.ARMA3_TOOLS_URL }}
+        
+    - name: Checkout the source code
+      uses: actions/checkout@v4
 
-      - name: Run HEMTT build
-        run: hemtt release
+    - name: Setup HEMTT
+      uses: arma-actions/hemtt@v1
 
-      - name: Upload Release
-        uses: actions/upload-artifact@v4
-        with:
-            name: 16th-Metal-Auxiliary-Mod
-            path: .releases/16th-Metal-Auxiliary-Mod.zip
+    - name: Build Mod
+      run: hemtt release
 
-      - name: Publish to Steam Workshop
-        uses: gruppe-adler/action-release-to-steam-ws@v1
-        with:
+    - name: Rename build folder
+      run: mv .hemttout/build .hemttout/16th-Metal-Auxiliary-Mod
+
+    - name: Upload Release
+      uses: actions/upload-artifact@v4
+      with:
+          name: 16th-Metal-Auxiliary-Mod
+          path: .hemttout//16th-Metal-Auxiliary-Mod.zip
+          include-hidden-files: true
+
+    - name: Publish to Steam Workshop
+      uses: gruppe-adler/action-release-to-steam-ws@v1
+      with:
           file_id: 1234567890
           username: ${{ secrets.STEAM_USERNAME }}
           password: ${{ secrets.STEAM_PASSWORD }}
