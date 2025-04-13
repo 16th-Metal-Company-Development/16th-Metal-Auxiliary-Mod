@@ -36,7 +36,7 @@ jobs:
       uses: actions/download-artifact@v3
       with:
          name: 16th-Metal-Auxiliary-Mod
-         path: build_artifacts
+         path: .releases/
 
     - name: Create GitHub Release
       id: create_release
