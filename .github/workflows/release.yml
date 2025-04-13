@@ -14,18 +14,41 @@ jobs:
     - name: Setup HEMTT
       uses: arma-actions/hemtt@v1
 
+    - name: Get HEMTT version
+      id: hemtt_version
+      run: |
+        echo "::set-output name=version::$(hemtt version)"
+
     - name: Build Mod
       run: hemtt release
 
     - name: Rename build folder
       run: mv .hemttout/release .hemttout/16th-Metal-Auxiliary-Mod
 
-    - name: Upload Release
+    - name: Prepare Release
       uses: actions/upload-artifact@v4
       with:
           name: 16th-Metal-Auxiliary-Mod
           path: .hemttout/16th-Metal-Auxiliary-Mod
-          include-hidden-files: true
+          include-hidden-files: true 
+          
+    - name: Prepare Release
+      uses: actions/download-artifact@v3
+      with:
+         name: 16th-Metal-Auxiliary-Mod
+         path: build_artifacts
+
+    - name: Create GitHub Release
+      id: create_release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: v${{ steps.hemtt_version.outputs.version }}
+        release_name: "16th Metal Auxiliary Mod v${{ steps.hemtt_version.outputs.version }}"
+        body: "Automated release of MyMod"
+        draft: false
+        prerelease: false
 
     - name: Publish to Steam Workshop
       uses: gruppe-adler/action-release-to-steam-ws@v1
