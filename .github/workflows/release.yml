@@ -35,7 +35,7 @@ jobs:
 
         $version = "$major.$minor.$patch"
 
-        Write-Host "version=$version" >> $env:GITHUB_OUTPUT
+        Write-Host "HEMTT_VERSION=$version" >> $env:GITHUB_OUTPUT
 
     - name: Build Mod
       run: hemtt release
@@ -46,11 +46,10 @@ jobs:
     - name: Zip Release Folder
       shell: pwsh
       run: |
-        $version = "${{ steps.get_version.outputs.version }}"
-        Write-Host "Zipping with version=$version"
+        Write-Host "Zipping with version=$env:HEMTT_VERSION"
           
         Compress-Archive -Path ".hemttout/16th-Metal-Auxiliary-Mod" `
-                        -DestinationPath "16th-Metal-Auxiliary-Mod-v$version.zip"
+                        -DestinationPath "16th-Metal-Auxiliary-Mod-v$($env:HEMTT_VERSION).zip"
           
         dir *.zip
 
@@ -60,8 +59,8 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        tag_name: v${{ steps.get_version.outputs.version }}
-        release_name: "16th Metal Auxiliary Mod v${{ steps.get_version.outputs.version }}"
+        tag_name: v${{ env.HEMTT_VERSION }}
+        release_name: "16th Metal Auxiliary Mod v${{ env.HEMTT_VERSION }}"
         body: "Automated release of MyMod"
         draft: false
         prerelease: false
