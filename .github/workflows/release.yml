@@ -42,10 +42,10 @@ jobs:
     - name: Zip Release Folder
       shell: pwsh
       run: |
-        Write-Host "Zipping with version=mod_version"
+        Write-Host "Zipping with version=v$mod_version"
           
         Compress-Archive -Path ".hemttout/16th-Metal-Auxiliary-Mod" `
-                        -DestinationPath "16th-Metal-Auxiliary-Mod-v$(mod_version).zip"
+                        -DestinationPath "16th-Metal-Auxiliary-Mod-v$(v$mod_version).zip"
           
         dir *.zip
 
@@ -56,7 +56,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         tag_name: v$mod_version
-        release_name: "16th Metal Auxiliary Mod v$mod_versionn"
+        release_name: "16th Metal Auxiliary Mod v$mod_version"
         body: "Automated release of MyMod"
         draft: false
         prerelease: false
