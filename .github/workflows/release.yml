@@ -30,8 +30,7 @@ jobs:
         $version = "$major.$minor.$patch"
         Write-Host "Extracted version=$version"
 
-      env:
-        mod_version: $version
+        echo "version=$version" >> $env:GITHUB_OUTPUT
 
     - name: Build Mod
       run: hemtt release
@@ -42,11 +41,9 @@ jobs:
     - name: Zip Release Folder
       shell: pwsh
       run: |
-        Write-Host "Zipping with version=v$mod_version"
-          
+        Write-Host "Zipping with version=v${{ steps.get_version.outputs.version }}"
         Compress-Archive -Path ".hemttout/16th-Metal-Auxiliary-Mod" `
-                        -DestinationPath "16th-Metal-Auxiliary-Mod-v$(v$mod_version).zip"
-          
+                          -DestinationPath "16th-Metal-Auxiliary-Mod-v${{ steps.get_version.outputs.version }}.zip"
         dir *.zip
 
     - name: Create GitHub Release
@@ -55,8 +52,8 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        tag_name: v$mod_version
-        release_name: "16th Metal Auxiliary Mod v$mod_version"
+        tag_name: v${{ steps.get_version.outputs.version }}
+        release_name: "16th Metal Auxiliary Mod v${{ steps.get_version.outputs.version }}"
         body: "Automated release of MyMod"
         draft: false
         prerelease: false
@@ -67,8 +64,8 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: "16th-Metal-Auxiliary-Mod-v$mod_version}.zip"
-        asset_name: "16th-Metal-Auxiliary-Mod-v$mod_version}.zip"
+        asset_path: "16th-Metal-Auxiliary-Mod-v${{ steps.get_version.outputs.version }}.zip"
+        asset_name: "16th-Metal-Auxiliary-Mod-v${{ steps.get_version.outputs.version }}.zip"
         asset_content_type: "application/zip"
     
     - name: Publish to Steam Workshop
