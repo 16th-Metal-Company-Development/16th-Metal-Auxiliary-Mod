@@ -30,8 +30,8 @@ jobs:
         $version = "$major.$minor.$patch"
         Write-Host "Extracted version=$version"
 
-        env:
-          mod_version: $version
+      env:
+        mod_version: $version
 
     - name: Build Mod
       run: hemtt release
