@@ -23,11 +23,11 @@ class CfgAmmo
 		};
 		class Direct
 		{
-			launchAngle=0.8
+			launchAngle=0.8;
 		};
 		class Overfly: Direct
 		{
-			launchAngle=0
+			launchAngle=0;
 			overflyElevation=2.5;
 		};
 	};
