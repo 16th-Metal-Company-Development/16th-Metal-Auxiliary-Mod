@@ -1,0 +1,31 @@
+params ["_unit"]; 
+
+if !(local _unit) exitwith{};
+
+private _cargoArray = [
+	"MET_AmmoBox_F",
+	"MET_AmmoBox_F",
+	"MET_AmmoBox_F",
+	"MET_RocExpBox_F",
+    "MET_RocExpBox_F",
+    "MET_RocExpBox_F",
+    "MET_MedicalBox_F",
+	"MET_MedicalBox_F",	
+	"MET_MedicalBox_F",	
+    "MET_FuelBox_F",
+    "MET_FuelBox_F",
+    "MET_FuelBox_F",
+    "MET_MortarBox_F",
+    "MET_MortarBox_F",
+    "MET_MortarBox_F",
+    "MET_EODBox_F",
+    "MET_EODBox_F",
+    "MET_EODBox_F",
+    "MET_EwebBox_F",
+    "MET_EwebBox_F",
+    "MET_EwebBox_F"
+];
+
+{
+    [_x,_unit] call ace_cargo_fnc_loadItem
+} foreach _cargoArray;
