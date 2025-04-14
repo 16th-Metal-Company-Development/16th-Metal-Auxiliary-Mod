@@ -23,19 +23,14 @@ jobs:
       shell: pwsh
       run: |
         $lines = Get-Content ".hemtt\project.toml"
-
         $major = ($lines | Select-String '^major\s*=\s*(\d+)').Matches.Groups[1].Value
         $minor = ($lines | Select-String '^minor\s*=\s*(\d+)').Matches.Groups[1].Value
         $patch = ($lines | Select-String '^patch\s*=\s*(\d+)').Matches.Groups[1].Value
 
-        if (!$major -or !$minor -or !$patch) {
-          Write-Error "Missing major/minor/patch in project.toml"
-          exit 1
-        }
-
         $version = "$major.$minor.$patch"
+        Write-Host "Extracted version=$version"
 
-        Write-Host "HEMTT_VERSION=$version" >> $env:GITHUB_OUTPUT
+        Write-Host "HEMTT_VERSION=$version" >> $env:GITHUB_ENV
 
     - name: Build Mod
       run: hemtt release
@@ -71,8 +66,8 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: "16th-Metal-Auxiliary-Mod-v${{ steps.hemtt_version.outputs.version }}.zip"   # A single file
-        asset_name: "16th-Metal-Auxiliary-Mod-v${{ steps.hemtt_version.outputs.version }}.zip"
+        asset_path: "16th-Metal-Auxiliary-Mod-v${{ env.HEMTT_VERSION }}.zip"
+        asset_name: "16th-Metal-Auxiliary-Mod-v${{ env.HEMTT_VERSION }}.zip"
         asset_content_type: "application/zip"
     
     - name: Publish to Steam Workshop
