@@ -419,7 +419,7 @@ class cfgVehicles
 			class MET_PLX1_AA
 			{
 				count = 5;
-				weapons = "MET_PLX1_AA"
+				weapons = "MET_PLX1_AA";
 			};
 			class rps_16th
 			{
