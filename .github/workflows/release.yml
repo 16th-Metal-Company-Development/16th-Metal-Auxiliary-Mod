@@ -7,6 +7,10 @@ on:
 jobs:
   windows:
     runs-on: windows-latest
+
+    permissions:
+      contents: write
+
     steps:   
     - name: Checkout the source code
       uses: actions/checkout@v4
@@ -14,10 +18,24 @@ jobs:
     - name: Setup HEMTT
       uses: arma-actions/hemtt@v1
 
-    - name: Get HEMTT version
-      id: hemtt_version
+    - name: Track Version
+      id: get_version
+      shell: pwsh
       run: |
-        echo "::set-output name=version::$(hemtt version)"
+        $lines = Get-Content ".hemtt\project.toml"
+
+        $major = ($lines | Select-String '^major\s*=\s*(\d+)').Matches.Groups[1].Value
+        $minor = ($lines | Select-String '^minor\s*=\s*(\d+)').Matches.Groups[1].Value
+        $patch = ($lines | Select-String '^patch\s*=\s*(\d+)').Matches.Groups[1].Value
+
+        if (!$major -or !$minor -or !$patch) {
+          Write-Error "Missing major/minor/patch in project.toml"
+          exit 1
+        }
+
+        $version = "$major.$minor.$patch"
+
+        Write-Host "version=$version" >> $env:GITHUB_OUTPUT
 
     - name: Build Mod
       run: hemtt release
@@ -26,7 +44,15 @@ jobs:
       run: mv .hemttout/release .hemttout/16th-Metal-Auxiliary-Mod/
 
     - name: Zip Release Folder
-      run: powershell -Command "Compress-Archive -Path .hemttout/16th-Metal-Auxiliary-Mod -DestinationPath 16th-Metal-Auxiliary-Mod-v${{ steps.hemtt_version.outputs.version }}.zip"
+      shell: pwsh
+      run: |
+        $version = "${{ steps.get_version.outputs.version }}"
+        Write-Host "Zipping with version=$version"
+          
+        Compress-Archive -Path ".hemttout/16th-Metal-Auxiliary-Mod" `
+                        -DestinationPath "16th-Metal-Auxiliary-Mod-v$version.zip"
+          
+        dir *.zip
 
     - name: Create GitHub Release
       id: create_release
@@ -34,8 +60,8 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        tag_name: v${{ steps.hemtt_version.outputs.version }}
-        release_name: "16th Metal Auxiliary Mod v${{ steps.hemtt_version.outputs.version }}"
+        tag_name: v${{ steps.get_version.outputs.version }}
+        release_name: "16th Metal Auxiliary Mod v${{ steps.get_version.outputs.version }}"
         body: "Automated release of MyMod"
         draft: false
         prerelease: false
