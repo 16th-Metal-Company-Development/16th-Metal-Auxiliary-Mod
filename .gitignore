@@ -1,6 +1,9 @@
 # Prerequisites
 *.d
 
+# Directories
+.hemttout/
+
 # Object files
 *.o
 *.ko

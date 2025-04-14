@@ -1,5 +1,6 @@
 name = "The 16th Metal Company Aux Mod v2"
 prefix = "16th"
+mainprefix = "z"
 
 [build]
 addons_directory = "addons"
