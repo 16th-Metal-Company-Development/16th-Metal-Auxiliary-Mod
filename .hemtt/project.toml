@@ -1,0 +1,16 @@
+name = "The 16th Metal Company Aux Mod v2"
+prefix = "16th"
+
+[build]
+addons_directory = "addons"
+
+[properties]
+author = "16th Modding Team"
+
+[release]
+sign = false
+
+[version]
+major = 2
+minor = 7
+patch = 5
