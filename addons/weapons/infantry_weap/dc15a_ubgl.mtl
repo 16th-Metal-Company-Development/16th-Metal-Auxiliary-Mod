@@ -1,0 +1,72 @@
+# Blender 4.3.0 MTL File: 'dc15a_ubgl.blend'
+# www.blender.org
+
+newmtl _NNN3410
+Ns 200.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 3
+map_Kd E:/Steam/SteamLibrary/steamapps/common/Arma 3 Tools/ObjectBuilder
+
+newmtl _NNN477
+Ns 200.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 3
+map_Kd D:/_NNN477
+
+newmtl dc15a_mag_co.paa_NNN2
+Ns 200.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 3
+map_Kd E:/Steam/SteamLibrary/steamapps/common/Arma 3 Tools/ObjectBuilder
+
+newmtl dc15a_optic_ca.paa_NNN842
+Ns 200.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 3
+map_Kd E:/Steam/SteamLibrary/steamapps/common/Arma 3 Tools/ObjectBuilder
+
+newmtl dc15a_plastic_co.paa_NNN57
+Ns 200.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 3
+map_Kd E:/Steam/SteamLibrary/steamapps/common/Arma 3 Tools/ObjectBuilder
+
+newmtl dc15a_ugl_co.paa_NNN340
+Ns 200.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 3
+map_Kd E:/Steam/SteamLibrary/steamapps/common/Arma 3 Tools/ObjectBuilder
+
+newmtl dc15a_ugl_reticle_ca.paa_NNN476
+Ns 200.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 3
+map_Kd E:/Steam/SteamLibrary/steamapps/common/Arma 3 Tools/ObjectBuilder
