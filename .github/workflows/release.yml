@@ -54,7 +54,7 @@ jobs:
       with:
         tag_name: v${{ steps.get_version.outputs.version }}
         release_name: "16th Metal Auxiliary Mod v${{ steps.get_version.outputs.version }}"
-        body: "Automated release of MyMod"
+        body: ${{ github.event.pull_request.body || github.event.head_commit.message || 'Automated release of MyMod' }}
         draft: false
         prerelease: false
 
