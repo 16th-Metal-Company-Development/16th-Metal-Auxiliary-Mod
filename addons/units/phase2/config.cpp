@@ -1352,4 +1352,4 @@ class CfgVehicles
 			"212th_JLTS_Clone_Helmet_NVG_Chip"
 		};
 	};
-}
+};

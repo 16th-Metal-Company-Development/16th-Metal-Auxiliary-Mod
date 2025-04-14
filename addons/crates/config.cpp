@@ -2105,4 +2105,4 @@ class CfgVehicles
 			};
 		};
 	};
-}
+};

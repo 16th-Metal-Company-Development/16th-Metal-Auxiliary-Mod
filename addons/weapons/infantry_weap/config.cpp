@@ -1850,7 +1850,7 @@ class CfgWeapons
 				weaponInfoType="RscWeaponEmpty";
 			};
 		};
-	}
+	};
 	class MET_rifle_base: Rifle_Long_Base_F
 	{
 		author="Schlabbie";
