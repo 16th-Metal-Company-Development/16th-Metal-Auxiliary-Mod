@@ -1586,7 +1586,7 @@ class CfgVehicles
             {
                 backpack="3AS_Republic_HR_Shield_Bag";
 				count=5;
-            }
+            };
 		};
 	};
     class Box_MET_ARF: Box_MET_Base
