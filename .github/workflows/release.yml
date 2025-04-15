@@ -33,7 +33,7 @@ jobs:
         echo "version=$version" >> $env:GITHUB_OUTPUT
 
     - name: Build Mod
-      run: hemtt release
+      run: hemtt release --no-rap
 
     - name: Rename Release folder
       run: mv .hemttout/release .hemttout/16th-Metal-Auxiliary-Mod/

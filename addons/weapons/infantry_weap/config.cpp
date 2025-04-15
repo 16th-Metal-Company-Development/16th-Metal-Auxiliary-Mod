@@ -11,7 +11,7 @@ class CfgPatches
 		};
 		magazines[]=
 		{
-			"MET_DC15A_mag",
+			"MET_DC15A_mag"
 		};
 		ammo[]=
 		{
