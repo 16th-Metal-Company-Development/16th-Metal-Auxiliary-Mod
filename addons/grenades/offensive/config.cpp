@@ -50,7 +50,7 @@ class CfgMagazines
 		maxLeadSpeed=7;
 		ammo="MET_Weapons_Ammo_Grenades_Detonator";
 		model="\kobra\442_weapons\explosive\thermal_det.p3d";
-		picture="grenades_16\data\UI\MET_icon_mag_rep_nade_thermal_det_ui_ca.paa";
+		picture="z\16th\addons\grenades\data\UI\MET_icon_mag_rep_nade_thermal_det_ui_ca.paa";
 	};
 	class MET_Weapons_Mags_Thermal_Imploder: MET_Weapons_Mags_Thermal_Detonator
 	{
@@ -70,7 +70,7 @@ class CfgMagazines
 		descriptionShort="Clone Impact Grenade";
 		ammo="MET_Weapons_Ammo_Grenades_Impacter";
 		model="\kobra\442_weapons\explosive\impact_grenade.p3d";
-		picture="grenades_16\data\UI\MET_icon_mag_rep_nade_thermal_impacter_ui_ca.paa";
+		picture="z\16th\addons\grenades\data\UI\MET_icon_mag_rep_nade_thermal_impacter_ui_ca.paa";
 		initSpeed=25;
 	};
 	class MET_Weapons_Mags_Ctype: MET_Weapons_Mags_Thermal_Detonator
@@ -92,8 +92,8 @@ class CfgMagazines
 			10
 		};
 		ammo="MET_Weapons_Ammo_Grenades_Ctype";
-		picture="grenades_16\data\UI\MET_icon_mag_rep_nade_dtype_ui_ca.paa";
-		uiPicture="grenades_16\data\UI\MET_icon_mag_rep_nade_dtype_ui_ca.paa";
+		picture="z\16th\addons\grenades\data\UI\MET_icon_mag_rep_nade_dtype_ui_ca.paa";
+		uiPicture="z\16th\addons\grenades\data\UI\MET_icon_mag_rep_nade_dtype_ui_ca.paa";
 		model="ls_weapons\explosives\detPack\ls_explosives_detpack";
 	};
 	/*class MET_Weapons_Mags_CISDetonator: MET_Weapons_Mags_Thermal_Detonator
@@ -103,7 +103,7 @@ class CfgMagazines
 		descriptionShort="Droid Frag Grenade";
 		ammo="MET_Weapons_Ammo_Grenades_CISDetonator";
 		model="ls_weapons\grenades\thermalDet\ls_grenade_thermalDet";
-		picture="grenades_16\data\UI\MET_icon_mag_cis_nade_thermal_det_ui_ca.paa";
+		picture="z\16th\addons\grenades\data\UI\MET_icon_mag_cis_nade_thermal_det_ui_ca.paa";
 	};*/
 	class MET_Weapons_Mags_flashnade: ACE_M84
 	{
@@ -202,7 +202,7 @@ class CfgAmmo
 		simulation="shotGrenade";
 		soundFly[]=
 		{
-			"grenades_16\data\sounds\imploder_flyby.wss",
+			"z\16th\addons\grenades\data\sounds\imploder_flyby.wss",
 			1.5,
 			1,
 			90
@@ -338,7 +338,7 @@ class CfgSoundShaders
 		{
 			
 			{
-				"grenades_16\data\sounds\rep_thermal_det_explode.wss",
+				"z\16th\addons\grenades\data\sounds\rep_thermal_det_explode.wss",
 				1
 			}
 		};
@@ -357,7 +357,7 @@ class CfgSoundShaders
 		{
 			
 			{
-				"grenades_16\data\sounds\rep_thermal_det_explode.wss",
+				"z\16th\addons\grenades\data\sounds\rep_thermal_det_explode.wss",
 				1
 			}
 		};
@@ -377,7 +377,7 @@ class CfgSoundShaders
 		{
 			
 			{
-				"grenades_16\data\sounds\cis_thermal_det_explode.wss",
+				"z\16th\addons\grenades\data\sounds\cis_thermal_det_explode.wss",
 				1
 			}
 		};
@@ -396,7 +396,7 @@ class CfgSoundShaders
 		{
 			
 			{
-				"grenades_16\data\sounds\cis_thermal_det_explode.wss",
+				"z\16th\addons\grenades\data\sounds\cis_thermal_det_explode.wss",
 				1
 			}
 		};
@@ -416,7 +416,7 @@ class CfgSoundShaders
 		{
 			
 			{
-				"grenades_16\data\sounds\thermal_imploder_explosion.wss",
+				"z\16th\addons\grenades\data\sounds\thermal_imploder_explosion.wss",
 				1
 			}
 		};
@@ -435,7 +435,7 @@ class CfgSoundShaders
 		{
 			
 			{
-				"grenades_16\data\sounds\throwable_ctype_explosion.wss",
+				"z\16th\addons\grenades\data\sounds\throwable_ctype_explosion.wss",
 				1
 			}
 		};
@@ -454,7 +454,7 @@ class CfgSoundShaders
 		{
 			
 			{
-				"grenades_16\data\sounds\throwable_ctype_explosion.wss",
+				"z\16th\addons\grenades\data\sounds\throwable_ctype_explosion.wss",
 				1
 			}
 		};
@@ -474,7 +474,7 @@ class CfgSoundShaders
 		{
 			
 			{
-				"grenades_16\data\sounds\thermal_stunner_explosion.wss",
+				"z\16th\addons\grenades\data\sounds\thermal_stunner_explosion.wss",
 				1
 			}
 		};
@@ -493,7 +493,7 @@ class CfgSoundShaders
 		{
 			
 			{
-				"grenades_16\data\sounds\thermal_stunner_explosion.wss",
+				"z\16th\addons\grenades\data\sounds\thermal_stunner_explosion.wss",
 				1
 			}
 		};
