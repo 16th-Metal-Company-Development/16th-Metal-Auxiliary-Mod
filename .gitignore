@@ -44,7 +44,7 @@
 *.su
 *.idb
 *.pdb
-*.gitattributes
+.gitattributes
 
 # Kernel Module Compile Results
 *.mod*
