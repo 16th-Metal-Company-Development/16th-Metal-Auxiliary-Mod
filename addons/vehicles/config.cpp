@@ -58,7 +58,7 @@ class CfgMods
 	class Mod_Base;
 	class MET_Mod3 : Mod_Base
 	{
-		logo = "Vehicles_16\16th_logo.paa";
+		logo = "z\16th\addons\vehicles\16th_logo.paa";
 	};
 };
 class cfgvehicles
@@ -143,7 +143,7 @@ class cfgvehicles
 class CfgFunctions {
 	class MET {
 		class SpawnPads {
-			file = "vehicles_16\spawnpads";
+			file = "z\16th\addons\vehicles\spawnpads";
 			class spawnCargo {};
 			class spawnVehicle {};
 			class addSpawnEntry {};
@@ -158,7 +158,7 @@ class CfgFunctions {
 			class addSupportPad {};
 		};
 		class Resupply {
-			file = "vehicles_16\resupply";
+			file = "z\16th\addons\vehicles\resupply";
 			class addCrates {};
 		};
 	};

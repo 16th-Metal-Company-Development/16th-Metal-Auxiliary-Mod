@@ -3061,9 +3061,9 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"weapons_16\infantry_weap\data\Z6_co.paa",
-			"weapons_16\infantry_weap\data\Z6_Barrel_co.paa",
-			"weapons_16\infantry_weap\data\Z6_Mag_co.paa"
+			"z\16th\addons\weapons\infantry_weap\data\Z6_co.paa",
+			"z\16th\addons\weapons\infantry_weap\data\Z6_Barrel_co.paa",
+			"z\16th\addons\weapons\infantry_weap\data\Z6_Mag_co.paa"
 		};
 		magazines[]=
 		{
@@ -3087,14 +3087,14 @@ class CfgWeapons
 		fireLightDiffuse[]={0.1,0.25,1};
 		drySound[]=
 		{
-			"weapons_16\infantry_weap\sounds\weapon_dry.ogg",
+			"z\16th\addons\weapons\infantry_weap\sounds\weapon_dry.ogg",
 			5,
 			1,
 			10
 		};
 		reloadMagazineSound[]=
 		{
-			"weapons_16\infantry_weap\sounds\republic\z-6\Z6_reload.ogg",
+			"z\16th\addons\weapons\infantry_weap\sounds\republic\z-6\Z6_reload.ogg",
 			1.5,
 			1,
 			100
@@ -3125,35 +3125,35 @@ class CfgWeapons
 				weaponSoundEffect="";
 				begin1[]=
 				{
-					"weapons_16\infantry_weap\sounds\republic\z-6\z6.ogg",
+					"z\16th\addons\weapons\infantry_weap\sounds\republic\z-6\z6.ogg",
 					1,
 					1,
 					1800
 				};
 				begin2[]=
 				{
-					"weapons_16\infantry_weap\sounds\republic\z-6\z6.ogg",
+					"z\16th\addons\weapons\infantry_weap\sounds\republic\z-6\z6.ogg",
 					1,
 					1.015,
 					1800
 				};
 				begin3[]=
 				{
-					"weapons_16\infantry_weap\sounds\republic\z-6\z6.ogg",
+					"z\16th\addons\weapons\infantry_weap\sounds\republic\z-6\z6.ogg",
 					1,
 					0.98500001,
 					1800
 				};
 				begin4[]=
 				{
-					"weapons_16\infantry_weap\sounds\republic\z-6\z6.ogg",
+					"z\16th\addons\weapons\infantry_weap\sounds\republic\z-6\z6.ogg",
 					1,
 					1.01,
 					1800
 				};
 				begin5[]=
 				{
-					"weapons_16\infantry_weap\sounds\republic\z-6\z6.ogg",
+					"z\16th\addons\weapons\infantry_weap\sounds\republic\z-6\z6.ogg",
 					1,
 					0.995,
 					1800
@@ -3173,7 +3173,7 @@ class CfgWeapons
 				};
 				beginwater1[]=
 				{
-					"weapons_16\infantry_weap\sounds\republic\z-6\z6.ogg",
+					"z\16th\addons\weapons\infantry_weap\sounds\republic\z-6\z6.ogg",
 					1,
 					1,
 					400

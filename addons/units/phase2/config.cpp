@@ -443,7 +443,7 @@ class CfgVehicles
 		scope=2;
 		displayName="Trooper (DC-15A)";
 		editorSubCategory="metal_co_EdSubCat_p2";
-		editorPreview="\units_16\data\Editor Previews\Phase2\p2_trooper.jpg";
+		editorPreview="\z\16th\addons\units\data\Editor Previews\Phase2\p2_trooper.jpg";
 		side=1;
         //backpack="";
 		uniformClass="armor_16th_trp";
@@ -523,7 +523,7 @@ class CfgVehicles
 		scope=2;
 		displayName="Trooper (DC-15S)";
 		editorSubCategory="metal_co_EdSubCat_p2";
-		editorPreview="\units_16\data\Editor Previews\Phase2\p2_trooper_s.jpg";
+		editorPreview="\z\16th\addons\units\data\Editor Previews\Phase2\p2_trooper_s.jpg";
 		side=1;
         //backpack="";
 		uniformClass="armor_16th_trp";
@@ -603,7 +603,7 @@ class CfgVehicles
 		scope=2;
 		displayName="Medic";
 		editorSubCategory="metal_co_EdSubCat_p2";
-		editorPreview="\units_16\data\Editor Previews\Phase2\p2_medic.jpg";
+		editorPreview="\z\16th\addons\units\data\Editor Previews\Phase2\p2_medic.jpg";
 		side=1;
         backpack="backpack_16th_medic_npc";
 		uniformClass="armor_16th_med";
@@ -707,7 +707,7 @@ class CfgVehicles
 		scope=2;
 		displayName="Auto Rifleman";
 		editorSubCategory="metal_co_EdSubCat_p2";
-		editorPreview="\units_16\data\Editor Previews\Phase2\p2_ar.jpg";
+		editorPreview="\z\16th\addons\units\data\Editor Previews\Phase2\p2_ar.jpg";
 		side=1;
         backpack="backpack_16th_heavy_AR";
 		uniformClass="armor_16th_trp";
@@ -793,7 +793,7 @@ class CfgVehicles
 		scope=2;
 		displayName="Machine Gunner";
 		editorSubCategory="metal_co_EdSubCat_p2";
-		editorPreview="\units_16\data\Editor Previews\Phase2\p2_mg.jpg";
+		editorPreview="\z\16th\addons\units\data\Editor Previews\Phase2\p2_mg.jpg";
 		side=1;
         backpack="backpack_16th_heavy_z6";
 		uniformClass="armor_16th_trp";
@@ -879,7 +879,7 @@ class CfgVehicles
 		scope=2;
 		displayName="Grenadier";
 		editorSubCategory="metal_co_EdSubCat_p2";
-		editorPreview="\units_16\data\Editor Previews\Phase2\p2_gl.jpg";
+		editorPreview="\z\16th\addons\units\data\Editor Previews\Phase2\p2_gl.jpg";
 		side=1;
         backpack="backpack_16th_gl";
 		uniformClass="armor_16th_trp";
@@ -959,7 +959,7 @@ class CfgVehicles
 		scope=2;
 		displayName="Trooper (CQC)";
 		editorSubCategory="metal_co_EdSubCat_p2";
-		editorPreview="\units_16\data\Editor Previews\Phase2\p2_cqc.jpg";
+		editorPreview="\z\16th\addons\units\data\Editor Previews\Phase2\p2_cqc.jpg";
 		side=1;
         //backpack="";
 		uniformClass="armor_16th_trp";
@@ -1027,7 +1027,7 @@ class CfgVehicles
 		scope=2;
 		displayName="Light AT";
 		editorSubCategory="metal_co_EdSubCat_p2";
-		editorPreview="\units_16\data\Editor Previews\Phase2\p2_lat.jpg";
+		editorPreview="\z\16th\addons\units\data\Editor Previews\Phase2\p2_lat.jpg";
 		side=1;
         backpack="backpack_16th_heavy_LAT";
 		uniformClass="armor_16th_trp";
@@ -1137,7 +1137,7 @@ class CfgVehicles
 		scope=2;
 		displayName="Heavy AT";
 		editorSubCategory="metal_co_EdSubCat_p2";
-		editorPreview="\units_16\data\Editor Previews\Phase2\p2_hat.jpg";
+		editorPreview="\z\16th\addons\units\data\Editor Previews\Phase2\p2_hat.jpg";
 		side=1;
         backpack="backpack_16th_heavy_HAT";
 		uniformClass="armor_16th_trp";
@@ -1247,7 +1247,7 @@ class CfgVehicles
 		scope=2;
 		displayName="Anti Air";
 		editorSubCategory="metal_co_EdSubCat_p2";
-		editorPreview="\units_16\data\Editor Previews\Phase2\p2_hat.jpg";
+		editorPreview="\z\16th\addons\units\data\Editor Previews\Phase2\p2_hat.jpg";
 		side=1;
         backpack="backpack_16th_heavy_AA";
 		uniformClass="armor_16th_trp";

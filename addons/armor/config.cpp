@@ -26,6 +26,10 @@ class CfgPatches
 		Name="16th Metal Armor";
 	};
 };
+
+#include "XtdGearModels.hpp"
+#include "XtdGearInfos.hpp"
+
 class HitPoints;
 class CfgWeapons
 {
@@ -47,7 +51,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\infantry\rifleman\trooper_helmet_co.paa"
+			"z\16th\addons\armor\data\infantry\rifleman\trooper_helmet_co.paa"
 		};
 		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetP2.p3d";
 		ace_hearing_protection=0.94999999;
@@ -89,7 +93,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\airborne\rifleman\ab_ct_helmet_co.paa"
+			"z\16th\addons\armor\data\airborne\rifleman\ab_ct_helmet_co.paa"
 		};
 		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetAB.p3d";
 		ace_hearing_protection=0.94999999;
@@ -131,7 +135,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\airborne\vt\ab_vct_helmet_co.paa"
+			"z\16th\addons\armor\data\airborne\vt\ab_vct_helmet_co.paa"
 		};
 	};
 	class helmet_16th_ab_cpl: helmet_16th_ab_trp
@@ -144,7 +148,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\airborne\ncos\ab_cpl_helmet_co.paa"
+			"z\16th\addons\armor\data\airborne\ncos\ab_cpl_helmet_co.paa"
 		};
 	};
 	class helmet_16th_ab_sgt: helmet_16th_ab_trp
@@ -157,7 +161,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\airborne\ncos\ab_sgt_helmet_co.paa"
+			"z\16th\addons\armor\data\airborne\ncos\ab_sgt_helmet_co.paa"
 		};
 	};
 	class helmet_16th_ab_ssgt: helmet_16th_ab_trp
@@ -170,7 +174,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\airborne\ncos\ab_ssgt_helmet_co.paa"
+			"z\16th\addons\armor\data\airborne\ncos\ab_ssgt_helmet_co.paa"
 		};
 	};
 	class helmet_16th_ab_cfs: helmet_16th_ab_trp
@@ -183,7 +187,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\airborne\ncos\ab_cfs_helmet_co.paa"
+			"z\16th\addons\armor\data\airborne\ncos\ab_cfs_helmet_co.paa"
 		};
 	};
 	class helmet_16th_ab_sgm: helmet_16th_ab_trp
@@ -196,7 +200,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\airborne\ncos\ab_sgm_helmet_co.paa"
+			"z\16th\addons\armor\data\airborne\ncos\ab_sgm_helmet_co.paa"
 		};
 	};
 	class helmet_16th_ab_medic: helmet_16th_ab_trp
@@ -209,7 +213,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\airborne\medic\ab_medic_helmet_co.paa"
+			"z\16th\addons\armor\data\airborne\medic\ab_medic_helmet_co.paa"
 		};
 	};
 	class helmet_16th_trp_illum: JLTS_CloneHelmetP2_illum
@@ -223,8 +227,8 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\infantry\rifleman\trooper_helmet_co.paa",
-			"16th_metal\data\infantry\rifleman\trooper_helmet_co.paa"
+			"z\16th\addons\armor\data\infantry\rifleman\trooper_helmet_co.paa",
+			"z\16th\addons\armor\data\infantry\rifleman\trooper_helmet_co.paa"
 		};
 		hiddenSelectionsMaterials[]=
 		{
@@ -317,7 +321,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\arf\arf_helmet_co.paa"
+			"z\16th\addons\armor\data\arf\arf_helmet_co.paa"
 		};
 		class ItemInfo: HeadgearItem
 		{
@@ -355,7 +359,7 @@ class CfgWeapons
 		displayName="[16th] Goff NCO Helmet";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\arf\arf_nco_helmet_co.paa"
+			"z\16th\addons\armor\data\arf\arf_nco_helmet_co.paa"
 		};
 	};
 	class helmet_16th_plt: 3as_P2_Pilot_helmet
@@ -374,11 +378,11 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\aviation\plt_cxp_helmet_co.paa",
-			"16th_metal\data\aviation\plt_cxp_helmet_co.paa",
+			"z\16th\addons\armor\data\aviation\plt_cxp_helmet_co.paa",
+			"z\16th\addons\armor\data\aviation\plt_cxp_helmet_co.paa",
 			"",
 			"3AS\3AS_Characters\Clones\Headgear\Textures\PilotP2\Phase_2_Pilot_Tubes_co.paa",
-			"16th_metal\data\aviation\plt_cxp_helmet_co.paa",
+			"z\16th\addons\armor\data\aviation\plt_cxp_helmet_co.paa",
 			""
 		};
 		ace_hearing_protection=0.94999999;
@@ -420,11 +424,11 @@ class CfgWeapons
 		displayName="[16th] Sunto's Helmet";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\custom\plt_sunton_helmet_co.paa",
-			"16th_metal\data\custom\plt_sunton_helmet_co.paa",
+			"z\16th\addons\armor\data\custom\plt_sunton_helmet_co.paa",
+			"z\16th\addons\armor\data\custom\plt_sunton_helmet_co.paa",
 			"",
 			"3AS\3AS_Characters\Clones\Headgear\Textures\PilotP2\Phase_2_Pilot_Tubes_co.paa",
-			"16th_metal\data\custom\plt_sunton_helmet_co.paa",
+			"z\16th\addons\armor\data\custom\plt_sunton_helmet_co.paa",
 			""
 		};
 	};
@@ -434,11 +438,11 @@ class CfgWeapons
 		displayName="[16th] Fool's Helmet";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\custom\plt_Fool_helmet_co.paa",
-			"16th_metal\data\custom\plt_Fool_helmet_co.paa",
+			"z\16th\addons\armor\data\custom\plt_Fool_helmet_co.paa",
+			"z\16th\addons\armor\data\custom\plt_Fool_helmet_co.paa",
 			"",
 			"3AS\3AS_Characters\Clones\Headgear\Textures\PilotP2\Phase_2_Pilot_Tubes_co.paa",
-			"16th_metal\data\custom\plt_Fool_helmet_co.paa",
+			"z\16th\addons\armor\data\custom\plt_Fool_helmet_co.paa",
 			""
 		};
 	};
@@ -448,7 +452,7 @@ class CfgWeapons
 		displayName="[16th] Cadet Helmet";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\infantry\rifleman\cadet_helmet_co.paa"
+			"z\16th\addons\armor\data\infantry\rifleman\cadet_helmet_co.paa"
 		};
 	};
 	class helmet_16th_vttrp: helmet_16th_trp
@@ -457,7 +461,7 @@ class CfgWeapons
 		displayName="[16th] Veteran Trooper Helmet";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\infantry\vetrifleman\veteran_helmet_co.paa"
+			"z\16th\addons\armor\data\infantry\vetrifleman\veteran_helmet_co.paa"
 		};
 	};
 	class helmet_16th_special: helmet_16th_trp
@@ -466,7 +470,7 @@ class CfgWeapons
 		displayName="[16th] Specialist Helmet";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\infantry\vetrifleman\specialist_helmet_co.paa"
+			"z\16th\addons\armor\data\infantry\vetrifleman\specialist_helmet_co.paa"
 		};
 	};
 	class helmet_16th_nco: helmet_16th_trp
@@ -475,7 +479,7 @@ class CfgWeapons
 		displayName="[16th] NCO Helmet";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\infantry\ncos\nco_helmet_co.paa"
+			"z\16th\addons\armor\data\infantry\ncos\nco_helmet_co.paa"
 		};
 	};
 	class helmet_16th_snco: helmet_16th_trp
@@ -484,7 +488,7 @@ class CfgWeapons
 		displayName="[16th] SNCO Helmet";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\infantry\ncos\snco_helmet_co.paa"
+			"z\16th\addons\armor\data\infantry\ncos\snco_helmet_co.paa"
 		};
 	};
 	class helmet_16th_officer: helmet_16th_trp
@@ -493,7 +497,7 @@ class CfgWeapons
 		displayName="[16th] Officer Helmet";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\infantry\officers\officer_helmet_co.paa"
+			"z\16th\addons\armor\data\infantry\officers\officer_helmet_co.paa"
 		};
 	};
 	class helmet_16th_medic: helmet_16th_trp
@@ -502,7 +506,7 @@ class CfgWeapons
 		displayName="[16th] Medic Helmet";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\infantry\specialists\medic_helmet_co.paa"
+			"z\16th\addons\armor\data\infantry\specialists\medic_helmet_co.paa"
 		};
 	};
 	class helmet_16th_eod: helmet_16th_trp
@@ -511,7 +515,7 @@ class CfgWeapons
 		displayName="[16th] EOD Helmet";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\infantry\specialists\eod_helmet_co.paa"
+			"z\16th\addons\armor\data\infantry\specialists\eod_helmet_co.paa"
 		};
 	};
 	class helmet_16th_ronin: helmet_16th_trp
@@ -520,7 +524,7 @@ class CfgWeapons
 		displayName="[16th] Ronin's Helmet";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\custom\ronin_helmet_co.paa"
+			"z\16th\addons\armor\data\custom\ronin_helmet_co.paa"
 		};
 	};
 	class helmet_16th_ronin_barc: helmet_16th_barc
@@ -529,7 +533,7 @@ class CfgWeapons
 		displayName="[16th] Ronin's Helmet";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\custom\ronin_helmet_barc_co.paa"
+			"z\16th\addons\armor\data\custom\ronin_helmet_barc_co.paa"
 		};
 	};
 	class helmet_16th_hazmat: helmet_16th_trp
@@ -538,7 +542,7 @@ class CfgWeapons
 		displayName="[16th] Hazmat's Helmet";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\custom\hazmat_helmet_co.paa"
+			"z\16th\addons\armor\data\custom\hazmat_helmet_co.paa"
 		};
 	};
 	class helmet_16th_chetiah: helmet_16th_trp
@@ -547,7 +551,7 @@ class CfgWeapons
 		displayName="[16th] Chetiah's Helmet";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\custom\chetiah_helmet_co.paa"
+			"z\16th\addons\armor\data\custom\chetiah_helmet_co.paa"
 		};
 	};
 	class helmet_16th_arch: helmet_16th_trp
@@ -556,7 +560,7 @@ class CfgWeapons
 		displayName="[16th] Arch's Helmet";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\custom\arch_helmet_co.paa"
+			"z\16th\addons\armor\data\custom\arch_helmet_co.paa"
 		};
 	};
 	class helmet_16th_krieg: helmet_16th_trp
@@ -565,7 +569,7 @@ class CfgWeapons
 		displayName="[16th] Krieg's Helmet";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\custom\krieg_helmet_co.paa"
+			"z\16th\addons\armor\data\custom\krieg_helmet_co.paa"
 		};
 	};
 	class helmet_16th_blackrose: helmet_16th_trp
@@ -574,7 +578,7 @@ class CfgWeapons
 		displayName="[16th] Blackrose's Helmet";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\custom\blackrose_helmet_co.paa"
+			"z\16th\addons\armor\data\custom\blackrose_helmet_co.paa"
 		};
 	};
 	class helmet_16th_ab_blackrose: helmet_16th_ab_trp
@@ -583,7 +587,7 @@ class CfgWeapons
 		displayName="[16th] Blackrose's Airborne Helmet";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\custom\blackrose_ab_helmet_co.paa"
+			"z\16th\addons\armor\data\custom\blackrose_ab_helmet_co.paa"
 		};
 	};
 	class helmet_16th_ab_kick: helmet_16th_ab_trp
@@ -592,7 +596,7 @@ class CfgWeapons
 		displayName="[16th] Kick's Airborne Helmet";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\custom\kick_ab_helmet_co.paa"
+			"z\16th\addons\armor\data\custom\kick_ab_helmet_co.paa"
 		};
 	};
 	class helmet_16th_maxson: helmet_16th_trp
@@ -601,7 +605,7 @@ class CfgWeapons
 		displayName="[16th] Maxson's Helmet";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\custom\maxson_helmet_co.paa"
+			"z\16th\addons\armor\data\custom\maxson_helmet_co.paa"
 		};
 	};
 	class helmet_16th_merlin: helmet_16th_trp
@@ -610,7 +614,7 @@ class CfgWeapons
 		displayName="[16th] Merlin's Helmet";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\custom\merlin_helmet_co.paa"
+			"z\16th\addons\armor\data\custom\merlin_helmet_co.paa"
 		};
 	};
 	class helmet_16th_moldy: helmet_16th_trp
@@ -619,7 +623,7 @@ class CfgWeapons
 		displayName="[16th] Moldy's Helmet";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\custom\moldy_helmet_co.paa"
+			"z\16th\addons\armor\data\custom\moldy_helmet_co.paa"
 		};
 	};
 	class helmet_16th_william: helmet_16th_trp
@@ -628,7 +632,7 @@ class CfgWeapons
 		displayName="[16th] William's Helmet";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\custom\william_helmet_co.paa"
+			"z\16th\addons\armor\data\custom\william_helmet_co.paa"
 		};
 	};
 	class helmet_16th_wolf: helmet_16th_trp
@@ -637,7 +641,7 @@ class CfgWeapons
 		displayName="[16th] Wolf's Helmet";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\custom\wolf_helmet_co.paa"
+			"z\16th\addons\armor\data\custom\wolf_helmet_co.paa"
 		};
 	};
 	class helmet_16th_blatt: helmet_16th_trp
@@ -646,7 +650,7 @@ class CfgWeapons
 		displayName="[16th] Blatt's Helmet";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\custom\blatt_helmet_co.paa"
+			"z\16th\addons\armor\data\custom\blatt_helmet_co.paa"
 		};
 	};
 	class helmet_16th_butcher: helmet_16th_trp
@@ -655,7 +659,7 @@ class CfgWeapons
 		displayName="[16th] Butcher's Helmet";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\custom\butcher_helmet_co.paa"
+			"z\16th\addons\armor\data\custom\butcher_helmet_co.paa"
 		};
 	};
 	class helmet_16th_bravo: helmet_16th_trp
@@ -664,7 +668,7 @@ class CfgWeapons
 		displayName="[16th] Bravo's Helmet";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\custom\bravo_helmet_co.paa"
+			"z\16th\addons\armor\data\custom\bravo_helmet_co.paa"
 		};
 	};
 	class helmet_16th_winters: helmet_16th_trp
@@ -673,7 +677,7 @@ class CfgWeapons
 		displayName="[16th] Winters' Helmet";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\custom\winters_helmet_co.paa"
+			"z\16th\addons\armor\data\custom\winters_helmet_co.paa"
 		};
 	};
 	class helmet_16th_roz: helmet_16th_trp
@@ -682,7 +686,7 @@ class CfgWeapons
 		displayName="[16th] Roz's Helmet";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\custom\roz_helmet_co.paa"
+			"z\16th\addons\armor\data\custom\roz_helmet_co.paa"
 		};
 	};
 	class helmet_16th_six: helmet_16th_trp
@@ -691,7 +695,7 @@ class CfgWeapons
 		displayName="[16th] Six's Helmet";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\custom\six_helmet_co.paa"
+			"z\16th\addons\armor\data\custom\six_helmet_co.paa"
 		};
 	};
 	class helmet_16th_gambit: helmet_16th_trp
@@ -700,7 +704,7 @@ class CfgWeapons
 		displayName="[16th] Gambit's Helmet";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\custom\gambit_helmet_co.paa"
+			"z\16th\addons\armor\data\custom\gambit_helmet_co.paa"
 		};
 	};
 	class helmet_16th_frost: helmet_16th_trp
@@ -709,7 +713,7 @@ class CfgWeapons
 		displayName="[16th] Frost's Helmet";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\custom\frost_helmet_co.paa"
+			"z\16th\addons\armor\data\custom\frost_helmet_co.paa"
 		};
 	};
 	class helmet_16th_smith: helmet_16th_trp
@@ -718,7 +722,7 @@ class CfgWeapons
 		displayName="[16th] Smith's Helmet";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\custom\smith_helmet_co.paa"
+			"z\16th\addons\armor\data\custom\smith_helmet_co.paa"
 		};
 	};
 	class helmet_16th_fish: helmet_16th_trp
@@ -727,7 +731,7 @@ class CfgWeapons
 		displayName="[16th] Fish's Helmet";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\custom\fish_helmet_co.paa"
+			"z\16th\addons\armor\data\custom\fish_helmet_co.paa"
 		};
 	};
 	class helmet_16th_mace: helmet_16th_trp
@@ -736,7 +740,7 @@ class CfgWeapons
 		displayName="[16th] Mace's Helmet";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\custom\mace_helmet_co.paa"
+			"z\16th\addons\armor\data\custom\mace_helmet_co.paa"
 		};
 	};
 	class helmet_16th_kick: helmet_16th_trp
@@ -745,7 +749,7 @@ class CfgWeapons
 		displayName="[16th] Kick's Helmet";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\custom\kick_helmet_co.paa"
+			"z\16th\addons\armor\data\custom\kick_helmet_co.paa"
 		};
 	};
 	class helmet_16th_nix: helmet_16th_trp
@@ -754,7 +758,7 @@ class CfgWeapons
 		displayName="[16th] Nix's Helmet";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\custom\nix_helmet_co.paa"
+			"z\16th\addons\armor\data\custom\nix_helmet_co.paa"
 		};
 	};
 	class helmet_16th_maple: helmet_16th_trp
@@ -763,7 +767,7 @@ class CfgWeapons
 		displayName="[16th] Maple's Helmet";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\custom\maple_helmet_co.paa"
+			"z\16th\addons\armor\data\custom\maple_helmet_co.paa"
 		};
 	};
 	class helmet_16th_hood: helmet_16th_trp
@@ -772,7 +776,7 @@ class CfgWeapons
 		displayName="[16th] Hood's Helmet";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\custom\hood_helmet_co.paa"
+			"z\16th\addons\armor\data\custom\hood_helmet_co.paa"
 		};
 	};
 	class helmet_16th_sam: helmet_16th_trp
@@ -781,7 +785,7 @@ class CfgWeapons
 		displayName="[16th] Sam's Helmet";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\custom\sam_helmet_co.paa"
+			"z\16th\addons\armor\data\custom\sam_helmet_co.paa"
 		};
 	};
 	class helmet_16th_ben: helmet_16th_trp
@@ -790,7 +794,7 @@ class CfgWeapons
 		displayName="[16th] Ben's Helmet";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\custom\ben_helmet_co.paa"
+			"z\16th\addons\armor\data\custom\ben_helmet_co.paa"
 		};
 	};
 	class helmet_16th_creed: helmet_16th_trp
@@ -799,7 +803,7 @@ class CfgWeapons
 		displayName="[16th] Creed's Helmet";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\custom\creed_helmet_co.paa"
+			"z\16th\addons\armor\data\custom\creed_helmet_co.paa"
 		};
 	};
 	class helmet_16th_karma: helmet_16th_trp
@@ -808,7 +812,7 @@ class CfgWeapons
 		displayName="[16th] Karma's Helmet";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\custom\karma_helmet_co.paa"
+			"z\16th\addons\armor\data\custom\karma_helmet_co.paa"
 		};
 	};
 	class helmet_16th_prez: helmet_16th_trp
@@ -817,7 +821,7 @@ class CfgWeapons
 		displayName="[16th] Prez's Helmet";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\custom\prez_helmet_co.paa"
+			"z\16th\addons\armor\data\custom\prez_helmet_co.paa"
 		};
 	};
 	class helmet_16th_cougar: helmet_16th_trp
@@ -826,7 +830,7 @@ class CfgWeapons
 		displayName="[16th] Cougar's Helmet";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\custom\cougar_helmet_co.paa"
+			"z\16th\addons\armor\data\custom\cougar_helmet_co.paa"
 		};
 	};
 	class helmet_16th_blowfish: helmet_16th_trp
@@ -835,7 +839,7 @@ class CfgWeapons
 		displayName="[16th] Blowfish's Helmet";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\custom\blowfish_helmet_co.paa"
+			"z\16th\addons\armor\data\custom\blowfish_helmet_co.paa"
 		};
 	};
 	class helmet_16th_kix: helmet_16th_arf
@@ -844,7 +848,7 @@ class CfgWeapons
 		displayName="[16th] Kix's Helmet";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\custom\kix_helmet_co.paa"
+			"z\16th\addons\armor\data\custom\kix_helmet_co.paa"
 		};
 	};
 	class helmet_16th_convor: helmet_16th_arf
@@ -853,7 +857,7 @@ class CfgWeapons
 		displayName="[16th] Convor's Helmet";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\custom\convor_helmet_co.paa"
+			"z\16th\addons\armor\data\custom\convor_helmet_co.paa"
 		};
 	};
 	class helmet_16th_maple_arf: helmet_16th_arf
@@ -862,7 +866,7 @@ class CfgWeapons
 		displayName="[16th] Maple's ARF Helmet";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\custom\maple_arf_helmet_co.paa"
+			"z\16th\addons\armor\data\custom\maple_arf_helmet_co.paa"
 		};
 	};
 	class helmet_16th_blue_arf: helmet_16th_arf
@@ -871,7 +875,7 @@ class CfgWeapons
 		displayName="[16th] Blue's ARF Helmet";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\custom\blue_arf_helmet_co.paa"
+			"z\16th\addons\armor\data\custom\blue_arf_helmet_co.paa"
 		};
 	};
 	class helmet_16th_avalanche: helmet_16th_trp_illum
@@ -880,8 +884,8 @@ class CfgWeapons
 		displayName="[16th] Avalanche's Helmet";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\custom\dj_helmet_co.paa",
-			"16th_metal\data\custom\dj_helmet_co.paa"
+			"z\16th\addons\armor\data\custom\dj_helmet_co.paa",
+			"z\16th\addons\armor\data\custom\dj_helmet_co.paa"
 		};
 	};
 	class helmet_16th_spice: helmet_16th_trp
@@ -890,7 +894,7 @@ class CfgWeapons
 		displayName="[16th] Spice's Helmet";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\custom\spice_helmet_co.paa"
+			"z\16th\addons\armor\data\custom\spice_helmet_co.paa"
 		};
 	};
 	class helmet_16th_talk: helmet_16th_trp
@@ -899,7 +903,7 @@ class CfgWeapons
 		displayName="[16th] Talk's Helmet";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\custom\talk_helmet_co.paa",
+			"z\16th\addons\armor\data\custom\talk_helmet_co.paa",
 		};
 	};
 	class SEA_HELMET_GM_Base;
@@ -917,8 +921,8 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\snowmen\trooper\snowman_helmet_co.paa",
-			"16th_metal\data\snowmen\trooper\snowman_helmet_co_glow.paa"
+			"z\16th\addons\armor\data\snowmen\trooper\snowman_helmet_co.paa",
+			"z\16th\addons\armor\data\snowmen\trooper\snowman_helmet_co_glow.paa"
 		};
 		hiddenSelectionsMaterials[]=
 		{
@@ -968,8 +972,8 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\snowmen\nco\snowman_helmet_nco_co.paa",
-			"16th_metal\data\snowmen\trooper\snowman_helmet_co_glow.paa"
+			"z\16th\addons\armor\data\snowmen\nco\snowman_helmet_nco_co.paa",
+			"z\16th\addons\armor\data\snowmen\trooper\snowman_helmet_co_glow.paa"
 		};
 		hiddenSelectionsMaterials[]=
 		{
@@ -1020,8 +1024,8 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\snowmen\officer\snowman_helmet_off_co.paa",
-			"16th_metal\data\snowmen\trooper\snowman_helmet_co_glow.paa"
+			"z\16th\addons\armor\data\snowmen\officer\snowman_helmet_off_co.paa",
+			"z\16th\addons\armor\data\snowmen\trooper\snowman_helmet_co_glow.paa"
 		};
 		hiddenSelectionsMaterials[]=
 		{
@@ -1072,8 +1076,8 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\snowmen\trooper\snowman_helmet_rto_co.paa",
-			"16th_metal\data\snowmen\trooper\snowman_helmet_co_glow.paa"
+			"z\16th\addons\armor\data\snowmen\trooper\snowman_helmet_rto_co.paa",
+			"z\16th\addons\armor\data\snowmen\trooper\snowman_helmet_co_glow.paa"
 		};
 		hiddenSelectionsMaterials[]=
 		{
@@ -1334,7 +1338,7 @@ class CfgWeapons
 		displayname="[16th] Suspenders";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\gear\reg_vests\suspenders\trp_vest_suspenders_co.paa"
+			"z\16th\addons\armor\data\gear\reg_vests\suspenders\trp_vest_suspenders_co.paa"
 		};
 		class ItemInfo: ItemInfo
 		{
@@ -1388,7 +1392,7 @@ class CfgWeapons
 		displayname="[16th] EOD Suspenders";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\gear\reg_vests\suspenders\eod_vest_suspenders_co.paa"
+			"z\16th\addons\armor\data\gear\reg_vests\suspenders\eod_vest_suspenders_co.paa"
 		};
 		class ItemInfo: ItemInfo
 		{
@@ -1444,7 +1448,7 @@ class CfgWeapons
 		displayname="[16th] Corporal Vest";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\gear\reg_vests\trp_nco\trp_cpl_vest_co.paa"
+			"z\16th\addons\armor\data\gear\reg_vests\trp_nco\trp_cpl_vest_co.paa"
 		};
 		class ItemInfo: ItemInfo
 		{
@@ -1499,7 +1503,7 @@ class CfgWeapons
 		displayname="[16th] Sergeant Vest";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\gear\reg_vests\trp_nco\trp_sgt_vest_co.paa"
+			"z\16th\addons\armor\data\gear\reg_vests\trp_nco\trp_sgt_vest_co.paa"
 		};
 		class ItemInfo: ItemInfo
 		{
@@ -1554,8 +1558,8 @@ class CfgWeapons
 		displayname="[16th] Airborne Vest";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\gear\reg_vests\ab_nco\ab_nco_kama_co.paa",
-			"16th_metal\data\gear\reg_vests\ab_nco\ab_nco_rig_co.paa"
+			"z\16th\addons\armor\data\gear\reg_vests\ab_nco\ab_nco_kama_co.paa",
+			"z\16th\addons\armor\data\gear\reg_vests\ab_nco\ab_nco_rig_co.paa"
 		};
 		class ItemInfo: ItemInfo
 		{
@@ -1609,8 +1613,8 @@ class CfgWeapons
 		displayname="[16th] Platoon Medic Vest";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\gear\reg_vests\ab_nco\ab_nco_kama_co.paa",
-			"16th_metal\data\gear\reg_vests\ab_nco\ab_med_rig_co.paa"
+			"z\16th\addons\armor\data\gear\reg_vests\ab_nco\ab_nco_kama_co.paa",
+			"z\16th\addons\armor\data\gear\reg_vests\ab_nco\ab_med_rig_co.paa"
 		};
 		class ItemInfo: ItemInfo
 		{
@@ -1665,8 +1669,8 @@ class CfgWeapons
 		displayname="[16th] Airborne NCO Vest";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\gear\reg_vests\ab_nco\ab_nco_kama_co.paa",
-			"16th_metal\data\gear\reg_vests\ab_nco\ab_nco_rig_co.paa"
+			"z\16th\addons\armor\data\gear\reg_vests\ab_nco\ab_nco_kama_co.paa",
+			"z\16th\addons\armor\data\gear\reg_vests\ab_nco\ab_nco_rig_co.paa"
 		};
 		class ItemInfo: ItemInfo
 		{
@@ -1720,8 +1724,8 @@ class CfgWeapons
 		displayname="[16th] Platoon Senior Medic Vest";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\gear\reg_vests\ab_nco\ab_nco_kama_co.paa",
-			"16th_metal\data\gear\reg_vests\ab_nco\ab_med_rig_co.paa"
+			"z\16th\addons\armor\data\gear\reg_vests\ab_nco\ab_nco_kama_co.paa",
+			"z\16th\addons\armor\data\gear\reg_vests\ab_nco\ab_med_rig_co.paa"
 		};
 		class ItemInfo: ItemInfo
 		{
@@ -1833,7 +1837,7 @@ class CfgWeapons
 		displayname="[16th] Merlin's Vest";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\gear\reg_vests\trp_off\trp_ofc_vest_co.paa"
+			"z\16th\addons\armor\data\gear\reg_vests\trp_off\trp_ofc_vest_co.paa"
 		};
 		class ItemInfo: ItemInfo
 		{
@@ -1893,7 +1897,7 @@ class CfgWeapons
 		displayname="[16th] Commander Vest (2LT)";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\gear\reg_vests\trp_off\trp_2lt_vest_co.paa"
+			"z\16th\addons\armor\data\gear\reg_vests\trp_off\trp_2lt_vest_co.paa"
 		};
 	};
 	class 16_vest_commander_1lt: 16_vest_commander
@@ -1902,7 +1906,7 @@ class CfgWeapons
 		displayname="[16th] Commander Vest (1LT)";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\gear\reg_vests\trp_off\trp_1lt_vest_co.paa"
+			"z\16th\addons\armor\data\gear\reg_vests\trp_off\trp_1lt_vest_co.paa"
 		};
 	};
 	class 16_vest_commander_cpt: 16_vest_commander
@@ -1911,7 +1915,7 @@ class CfgWeapons
 		displayname="[16th] Commander Vest (CPT)";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\gear\reg_vests\trp_off\trp_cpt_vest_co.paa"
+			"z\16th\addons\armor\data\gear\reg_vests\trp_off\trp_cpt_vest_co.paa"
 		};
 	};
 	class JLTS_CloneVestOfficer;
@@ -1921,7 +1925,7 @@ class CfgWeapons
 		displayname="[16th] Officer Vest (Left)";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\gear\reg_vests\trp_off\trp_ofc_vest_co.paa"
+			"z\16th\addons\armor\data\gear\reg_vests\trp_off\trp_ofc_vest_co.paa"
 		};
 		class ItemInfo: ItemInfo
 		{
@@ -1981,7 +1985,7 @@ class CfgWeapons
 		displayname="[16th] Officer Vest (2LT) (Left)";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\gear\reg_vests\trp_off\trp_2lt_vest_co.paa"
+			"z\16th\addons\armor\data\gear\reg_vests\trp_off\trp_2lt_vest_co.paa"
 		};
 	};
 	class 16_vest_officer_1lt: 16_vest_officer
@@ -1990,7 +1994,7 @@ class CfgWeapons
 		displayname="[16th] Ronin's Vest";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\gear\custom_vests\ronin\ronin_officer_vest_co.paa"
+			"z\16th\addons\armor\data\gear\custom_vests\ronin\ronin_officer_vest_co.paa"
 		};
 	};
 	class 16_vest_officer_cpt: 16_vest_officer
@@ -1999,7 +2003,7 @@ class CfgWeapons
 		displayname="[16th] Cougar's Vest";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\gear\reg_vests\trp_off\trp_cpt_vest_co.paa"
+			"z\16th\addons\armor\data\gear\reg_vests\trp_off\trp_cpt_vest_co.paa"
 		};
 	};
 	class JLTS_CloneVestOfficer2;
@@ -2009,7 +2013,7 @@ class CfgWeapons
 		displayname="[16th] Officer Vest (Right)";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\gear\reg_vests\trp_off\trp_ofc_vest_co.paa"
+			"z\16th\addons\armor\data\gear\reg_vests\trp_off\trp_ofc_vest_co.paa"
 		};
 		class ItemInfo: ItemInfo
 		{
@@ -2069,7 +2073,7 @@ class CfgWeapons
 		displayname="[16th] Avalanche Vest";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\gear\custom_vests\dj\dj_vest_co.paa"
+			"z\16th\addons\armor\data\gear\custom_vests\dj\dj_vest_co.paa"
 		};
 	};
 	class JLTS_CloneVestARC;
@@ -2079,7 +2083,7 @@ class CfgWeapons
 		displayname="[16th] ARC Vest";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\gear\reg_vests\arc_vest\16th_arc_vest_co.paa"
+			"z\16th\addons\armor\data\gear\reg_vests\arc_vest\16th_arc_vest_co.paa"
 		};
 	};
 	class vest_ronin_arc: vest_16th_arc
@@ -2088,7 +2092,7 @@ class CfgWeapons
 		displayname="[16th] Ronin's ARC Vest";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\custom\ronin_arc_vest_co.paa"
+			"z\16th\addons\armor\data\custom\ronin_arc_vest_co.paa"
 		};
 	};
 	class vest_mooose_arc: vest_16th_arc
@@ -2097,7 +2101,7 @@ class CfgWeapons
 		displayname="[16th] Winter's ARC Vest";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\custom\moose_arc_vest_co.paa"
+			"z\16th\addons\armor\data\custom\moose_arc_vest_co.paa"
 		};
 	};
 	class SEA_Vest_GM_Base;
@@ -2109,7 +2113,7 @@ class CfgWeapons
 		model="\JLTS_AE_GM\SEA_Vest_GM_Base.p3d";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\snowmen\trooper\Vest_co.paa"
+			"z\16th\addons\armor\data\snowmen\trooper\Vest_co.paa"
 		};
 		class ItemInfo: VestItem
 		{
@@ -2176,7 +2180,7 @@ class CfgWeapons
 		model="\JLTS_AE_GM\SEA_Vest_GM_Base.p3d";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\snowmen\nco\snowman_vest_nco_co.paa"
+			"z\16th\addons\armor\data\snowmen\nco\snowman_vest_nco_co.paa"
 		};
 	};
 	class vest_16_ca_off: vest_16_ca_trp
@@ -2187,7 +2191,7 @@ class CfgWeapons
 		model="\JLTS_AE_GM\SEA_Vest_GM_Base.p3d";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\snowmen\officer\snowman_vest_off_co.paa"
+			"z\16th\addons\armor\data\snowmen\officer\snowman_vest_off_co.paa"
 		};
 	};
 	class JLTS_CloneArmor;
@@ -3143,7 +3147,7 @@ class CfgWeapons
 		displayName="[16th] Macrobinoculars";
 		hiddenselectionsTextures[]=
 		{
-			"16th_metal\data\gear\visors\trp_nvg_co.paa"
+			"z\16th\addons\armor\data\gear\visors\trp_nvg_co.paa"
 		};
 	};
 	class nvg_16th_macro_eod: JLTS_CloneNVG
@@ -3152,7 +3156,7 @@ class CfgWeapons
 		displayName="[16th] EOD Macrobinoculars";
 		hiddenselectionsTextures[]=
 		{
-			"16th_metal\data\gear\visors\eod_nvg_co.paa"
+			"z\16th\addons\armor\data\gear\visors\eod_nvg_co.paa"
 		};
 	};
 	class nvg_16th_macro_med: JLTS_CloneNVG
@@ -3161,7 +3165,7 @@ class CfgWeapons
 		displayName="[16th] Medic Macrobinoculars";
 		hiddenselectionsTextures[]=
 		{
-			"16th_metal\data\gear\visors\med_nvg_co.paa"
+			"z\16th\addons\armor\data\gear\visors\med_nvg_co.paa"
 		};
 	};
 	class JLTS_CloneNVG_spec;
@@ -3171,7 +3175,7 @@ class CfgWeapons
 		displayName="[16th] Macrobinoculars (Down)";
 		hiddenselectionsTextures[]=
 		{
-			"16th_metal\data\gear\visors\trp_nvg_co.paa"
+			"z\16th\addons\armor\data\gear\visors\trp_nvg_co.paa"
 		};
 	};
 	class JLTS_CloneNVGCC;
@@ -3195,7 +3199,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\snowmen\nco\snowman_rangefinder_co.paa"
+			"z\16th\addons\armor\data\snowmen\nco\snowman_rangefinder_co.paa"
 		};
 		visionMode[]=
 		{
@@ -3237,7 +3241,7 @@ class CfgWeapons
 		modelOptics="";
 		hiddenselectionsTextures[]=
 		{
-			"16th_metal\data\gear\visors\metal_nvg_range_g_w_co.paa"
+			"z\16th\addons\armor\data\gear\visors\metal_nvg_range_g_w_co.paa"
 		};
 	};
 	class nvg_16_nco_range: JLTS_CloneNVGRange
@@ -3247,7 +3251,7 @@ class CfgWeapons
 		modelOptics="";
 		hiddenselectionsTextures[]=
 		{
-			"16th_metal\data\gear\visors\metal_nvg_range_nco_co.paa"
+			"z\16th\addons\armor\data\gear\visors\metal_nvg_range_nco_co.paa"
 		};
 	};
 	class nvg_16_off_range: JLTS_CloneNVGRange
@@ -3257,7 +3261,7 @@ class CfgWeapons
 		modelOptics="";
 		hiddenselectionsTextures[]=
 		{
-			"16th_metal\data\gear\visors\metal_nvg_range_co.paa"
+			"z\16th\addons\armor\data\gear\visors\metal_nvg_range_co.paa"
 		};
 	};
 	class nvg_16_haz_range_1: JLTS_CloneNVGRange
@@ -3274,7 +3278,7 @@ class CfgWeapons
 		modelOptics="";
 		hiddenselectionsTextures[]=
 		{
-			"16th_metal\data\gear\visors\metal_nvg_range_g_b_co.paa"
+			"z\16th\addons\armor\data\gear\visors\metal_nvg_range_g_b_co.paa"
 		};
 	};
 	class nvg_16_haz_range_2: JLTS_CloneNVGRange
@@ -3291,7 +3295,7 @@ class CfgWeapons
 		modelOptics="";
 		hiddenselectionsTextures[]=
 		{
-			"16th_metal\data\gear\visors\metal_nvg_range_g_b_co.paa"
+			"z\16th\addons\armor\data\gear\visors\metal_nvg_range_g_b_co.paa"
 		};
 	};
 	class nvg_16_haz_range_3: JLTS_CloneNVGRange
@@ -3308,7 +3312,7 @@ class CfgWeapons
 		modelOptics="";
 		hiddenselectionsTextures[]=
 		{
-			"16th_metal\data\gear\visors\metal_nvg_range_g_b_co.paa"
+			"z\16th\addons\armor\data\gear\visors\metal_nvg_range_g_b_co.paa"
 		};
 	};
 	class nvg_16_haz_range_4: JLTS_CloneNVGRange
@@ -3325,7 +3329,7 @@ class CfgWeapons
 		modelOptics="";
 		hiddenselectionsTextures[]=
 		{
-			"16th_metal\data\gear\visors\metal_nvg_range_g_b_co.paa"
+			"z\16th\addons\armor\data\gear\visors\metal_nvg_range_g_b_co.paa"
 		};
 	};
 };
@@ -3339,8 +3343,8 @@ class CfgVehicles
 		uniformClass="armor_16th_trp";
 		hiddenselectionsTextures[]=
 		{
-			"16th_metal\data\infantry\rifleman\trooper_uniform1_co.paa",
-			"16th_metal\data\infantry\rifleman\trooper_uniform2_co.paa"
+			"z\16th\addons\armor\data\infantry\rifleman\trooper_uniform1_co.paa",
+			"z\16th\addons\armor\data\infantry\rifleman\trooper_uniform2_co.paa"
 		};
 		linkedItems[]=
 		{
@@ -3579,8 +3583,8 @@ class CfgVehicles
 		uniformClass="armor_16th_cadet";
 		hiddenselectionsTextures[]=
 		{
-			"16th_metal\data\infantry\rifleman\cadet_uniform1_co.paa",
-			"16th_metal\data\infantry\rifleman\cadet_uniform2_co.paa"
+			"z\16th\addons\armor\data\infantry\rifleman\cadet_uniform1_co.paa",
+			"z\16th\addons\armor\data\infantry\rifleman\cadet_uniform2_co.paa"
 		};
 		hiddenSelectionsMaterials[]=
 		{
@@ -3613,8 +3617,8 @@ class CfgVehicles
 		uniformClass="armor_16th_arf";
 		hiddenselectionsTextures[]=
 		{
-			"16th_metal\data\arf\arf_uniform1_co.paa",
-			"16th_metal\data\arf\arf_uniform2_co.paa"
+			"z\16th\addons\armor\data\arf\arf_uniform1_co.paa",
+			"z\16th\addons\armor\data\arf\arf_uniform2_co.paa"
 		};
 		linkedItems[]=
 		{
@@ -3640,8 +3644,8 @@ class CfgVehicles
 		uniformClass="armor_16th_arf_nco";
 		hiddenselectionsTextures[]=
 		{
-			"16th_metal\data\arf\arf_nco_uniform1_co.paa",
-			"16th_metal\data\arf\arf_nco_uniform2_co.paa"
+			"z\16th\addons\armor\data\arf\arf_nco_uniform1_co.paa",
+			"z\16th\addons\armor\data\arf\arf_nco_uniform2_co.paa"
 		};
 		linkedItems[]=
 		{
@@ -3667,8 +3671,8 @@ class CfgVehicles
 		uniformClass="armor_16th_arty";
 		hiddenselectionsTextures[]=
 		{
-			"16th_metal\data\artillery\arty_uniform1_co.paa",
-			"16th_metal\data\artillery\arty_uniform2_co.paa"
+			"z\16th\addons\armor\data\artillery\arty_uniform1_co.paa",
+			"z\16th\addons\armor\data\artillery\arty_uniform2_co.paa"
 		};
 		linkedItems[]=
 		{
@@ -3696,8 +3700,8 @@ class CfgVehicles
 		uniformClass="armor_16th_arty_nco";
 		hiddenselectionsTextures[]=
 		{
-			"16th_metal\data\artillery\arty_nco_uniform1_co.paa",
-			"16th_metal\data\artillery\arty_nco_uniform2_co.paa"
+			"z\16th\addons\armor\data\artillery\arty_nco_uniform1_co.paa",
+			"z\16th\addons\armor\data\artillery\arty_nco_uniform2_co.paa"
 		};
 		linkedItems[]=
 		{
@@ -3725,8 +3729,8 @@ class CfgVehicles
 		uniformClass="armor_16th_mechanized";
 		hiddenselectionsTextures[]=
 		{
-			"16th_metal\data\mechanized\reaper_uniform1_co.paa",
-			"16th_metal\data\mechanized\reaper_uniform2_co.paa"
+			"z\16th\addons\armor\data\mechanized\reaper_uniform1_co.paa",
+			"z\16th\addons\armor\data\mechanized\reaper_uniform2_co.paa"
 		};
 		linkedItems[]=
 		{
@@ -3754,8 +3758,8 @@ class CfgVehicles
 		uniformClass="armor_16th_mechanized_nco";
 		hiddenselectionsTextures[]=
 		{
-			"16th_metal\data\mechanized\reaper_nco_uniform1_co.paa",
-			"16th_metal\data\mechanized\reaper_nco_uniform2_co.paa"
+			"z\16th\addons\armor\data\mechanized\reaper_nco_uniform1_co.paa",
+			"z\16th\addons\armor\data\mechanized\reaper_nco_uniform2_co.paa"
 		};
 		linkedItems[]=
 		{
@@ -3783,8 +3787,8 @@ class CfgVehicles
 		uniformClass="armor_16th_vttrp";
 		hiddenselectionsTextures[]=
 		{
-			"16th_metal\data\infantry\vetrifleman\veteran_uniform1_co.paa",
-			"16th_metal\data\infantry\vetrifleman\veteran_uniform2_co.paa"
+			"z\16th\addons\armor\data\infantry\vetrifleman\veteran_uniform1_co.paa",
+			"z\16th\addons\armor\data\infantry\vetrifleman\veteran_uniform2_co.paa"
 		};
 		linkedItems[]=
 		{
@@ -3812,8 +3816,8 @@ class CfgVehicles
 		uniformClass="armor_16th_special";
 		hiddenselectionsTextures[]=
 		{
-			"16th_metal\data\infantry\vetrifleman\specialist_uniform1_co.paa",
-			"16th_metal\data\infantry\vetrifleman\specialist_uniform2_co.paa"
+			"z\16th\addons\armor\data\infantry\vetrifleman\specialist_uniform1_co.paa",
+			"z\16th\addons\armor\data\infantry\vetrifleman\specialist_uniform2_co.paa"
 		};
 		linkedItems[]=
 		{
@@ -3841,8 +3845,8 @@ class CfgVehicles
 		uniformClass="armor_16th_nco";
 		hiddenselectionsTextures[]=
 		{
-			"16th_metal\data\infantry\ncos\nco_uniform1_co.paa",
-			"16th_metal\data\infantry\ncos\nco_uniform2_co.paa"
+			"z\16th\addons\armor\data\infantry\ncos\nco_uniform1_co.paa",
+			"z\16th\addons\armor\data\infantry\ncos\nco_uniform2_co.paa"
 		};
 		linkedItems[]=
 		{
@@ -3870,8 +3874,8 @@ class CfgVehicles
 		uniformClass="armor_16th_snco";
 		hiddenselectionsTextures[]=
 		{
-			"16th_metal\data\infantry\ncos\snco_uniform1_co.paa",
-			"16th_metal\data\infantry\ncos\snco_uniform2_co.paa"
+			"z\16th\addons\armor\data\infantry\ncos\snco_uniform1_co.paa",
+			"z\16th\addons\armor\data\infantry\ncos\snco_uniform2_co.paa"
 		};
 		linkedItems[]=
 		{
@@ -3899,8 +3903,8 @@ class CfgVehicles
 		uniformClass="armor_16th_officer";
 		hiddenselectionsTextures[]=
 		{
-			"16th_metal\data\infantry\officers\officer_uniform1_co.paa",
-			"16th_metal\data\infantry\officers\officer_uniform2_co.paa"
+			"z\16th\addons\armor\data\infantry\officers\officer_uniform1_co.paa",
+			"z\16th\addons\armor\data\infantry\officers\officer_uniform2_co.paa"
 		};
 		linkedItems[]=
 		{
@@ -3928,8 +3932,8 @@ class CfgVehicles
 		uniformClass="armor_16th_med";
 		hiddenselectionsTextures[]=
 		{
-			"16th_metal\data\infantry\specialists\medic_uniform1_co.paa",
-			"16th_metal\data\infantry\specialists\medic_uniform2_co.paa"
+			"z\16th\addons\armor\data\infantry\specialists\medic_uniform1_co.paa",
+			"z\16th\addons\armor\data\infantry\specialists\medic_uniform2_co.paa"
 		};
 		linkedItems[]=
 		{
@@ -3957,8 +3961,8 @@ class CfgVehicles
 		uniformClass="armor_16th_eod";
 		hiddenselectionsTextures[]=
 		{
-			"16th_metal\data\infantry\specialists\eod_uniform1_co.paa",
-			"16th_metal\data\infantry\specialists\eod_uniform2_co.paa"
+			"z\16th\addons\armor\data\infantry\specialists\eod_uniform1_co.paa",
+			"z\16th\addons\armor\data\infantry\specialists\eod_uniform2_co.paa"
 		};
 		linkedItems[]=
 		{
@@ -3986,8 +3990,8 @@ class CfgVehicles
 		uniformClass="armor_16th_ab_trp";
 		hiddenselectionsTextures[]=
 		{
-			"16th_metal\data\airborne\rifleman\ab_ct_uniform1_co.paa",
-			"16th_metal\data\airborne\rifleman\ab_ct_uniform2_co.paa"
+			"z\16th\addons\armor\data\airborne\rifleman\ab_ct_uniform1_co.paa",
+			"z\16th\addons\armor\data\airborne\rifleman\ab_ct_uniform2_co.paa"
 		};
 		linkedItems[]=
 		{
@@ -4013,8 +4017,8 @@ class CfgVehicles
 		uniformClass="armor_16th_ab_vtrp";
 		hiddenselectionsTextures[]=
 		{
-			"16th_metal\data\airborne\vt\ab_vct_uniform1_co.paa",
-			"16th_metal\data\airborne\vt\ab_vct_uniform2_co.paa"
+			"z\16th\addons\armor\data\airborne\vt\ab_vct_uniform1_co.paa",
+			"z\16th\addons\armor\data\airborne\vt\ab_vct_uniform2_co.paa"
 		};
 		linkedItems[]=
 		{
@@ -4040,8 +4044,8 @@ class CfgVehicles
 		uniformClass="armor_16th_ab_cpl";
 		hiddenselectionsTextures[]=
 		{
-			"16th_metal\data\airborne\ncos\ab_cpl_uniform1_co.paa",
-			"16th_metal\data\airborne\ncos\ab_cpl_uniform2_co.paa"
+			"z\16th\addons\armor\data\airborne\ncos\ab_cpl_uniform1_co.paa",
+			"z\16th\addons\armor\data\airborne\ncos\ab_cpl_uniform2_co.paa"
 		};
 		linkedItems[]=
 		{
@@ -4067,8 +4071,8 @@ class CfgVehicles
 		uniformClass="armor_16th_ab_sgt";
 		hiddenselectionsTextures[]=
 		{
-			"16th_metal\data\airborne\ncos\ab_sgt_uniform1_co.paa",
-			"16th_metal\data\airborne\ncos\ab_sgt_uniform2_co.paa"
+			"z\16th\addons\armor\data\airborne\ncos\ab_sgt_uniform1_co.paa",
+			"z\16th\addons\armor\data\airborne\ncos\ab_sgt_uniform2_co.paa"
 		};
 		linkedItems[]=
 		{
@@ -4094,8 +4098,8 @@ class CfgVehicles
 		uniformClass="armor_16th_ab_ssgt";
 		hiddenselectionsTextures[]=
 		{
-			"16th_metal\data\airborne\ncos\ab_ssgt_uniform1_co.paa",
-			"16th_metal\data\airborne\ncos\ab_ssgt_uniform2_co.paa"
+			"z\16th\addons\armor\data\airborne\ncos\ab_ssgt_uniform1_co.paa",
+			"z\16th\addons\armor\data\airborne\ncos\ab_ssgt_uniform2_co.paa"
 		};
 		linkedItems[]=
 		{
@@ -4121,8 +4125,8 @@ class CfgVehicles
 		uniformClass="armor_16th_ab_cfs";
 		hiddenselectionsTextures[]=
 		{
-			"16th_metal\data\airborne\ncos\ab_cfs_uniform1_co.paa",
-			"16th_metal\data\airborne\ncos\ab_cfs_uniform2_co.paa"
+			"z\16th\addons\armor\data\airborne\ncos\ab_cfs_uniform1_co.paa",
+			"z\16th\addons\armor\data\airborne\ncos\ab_cfs_uniform2_co.paa"
 		};
 		linkedItems[]=
 		{
@@ -4148,8 +4152,8 @@ class CfgVehicles
 		uniformClass="armor_16th_ab_sgm";
 		hiddenselectionsTextures[]=
 		{
-			"16th_metal\data\airborne\ncos\ab_sgm_uniform1_co.paa",
-			"16th_metal\data\airborne\ncos\ab_sgm_uniform2_co.paa"
+			"z\16th\addons\armor\data\airborne\ncos\ab_sgm_uniform1_co.paa",
+			"z\16th\addons\armor\data\airborne\ncos\ab_sgm_uniform2_co.paa"
 		};
 		linkedItems[]=
 		{
@@ -4175,8 +4179,8 @@ class CfgVehicles
 		uniformClass="armor_16th_ab_medic";
 		hiddenselectionsTextures[]=
 		{
-			"16th_metal\data\airborne\medic\ab_medic_uniform1_co.paa",
-			"16th_metal\data\airborne\medic\ab_medic_uniform2_co.paa"
+			"z\16th\addons\armor\data\airborne\medic\ab_medic_uniform1_co.paa",
+			"z\16th\addons\armor\data\airborne\medic\ab_medic_uniform2_co.paa"
 		};
 		linkedItems[]=
 		{
@@ -4202,8 +4206,8 @@ class CfgVehicles
 		uniformClass="armor_16th_ronin";
 		hiddenselectionsTextures[]=
 		{
-			"16th_metal\data\custom\ronin_uniform1_co.paa",
-			"16th_metal\data\custom\ronin_uniform2_co.paa"
+			"z\16th\addons\armor\data\custom\ronin_uniform1_co.paa",
+			"z\16th\addons\armor\data\custom\ronin_uniform2_co.paa"
 		};
 		linkedItems[]=
 		{
@@ -4231,8 +4235,8 @@ class CfgVehicles
 		uniformClass="armor_16th_moldy_zeus";
 		hiddenselectionsTextures[]=
 		{
-			"16th_metal\data\custom\moldy_zeus_uniform1_co.paa",
-			"16th_metal\data\custom\moldy_zeus_uniform2_co.paa"
+			"z\16th\addons\armor\data\custom\moldy_zeus_uniform1_co.paa",
+			"z\16th\addons\armor\data\custom\moldy_zeus_uniform2_co.paa"
 		};
 		hiddenSelectionsMaterials[]=
 		{
@@ -4265,8 +4269,8 @@ class CfgVehicles
 		uniformClass="armor_16th_moldy";
 		hiddenselectionsTextures[]=
 		{
-			"16th_metal\data\custom\moldy_uniform1_co.paa",
-			"16th_metal\data\custom\moldy_uniform2_co.paa"
+			"z\16th\addons\armor\data\custom\moldy_uniform1_co.paa",
+			"z\16th\addons\armor\data\custom\moldy_uniform2_co.paa"
 		};
 		linkedItems[]=
 		{
@@ -4294,8 +4298,8 @@ class CfgVehicles
 		uniformClass="armor_16th_blatt";
 		hiddenselectionsTextures[]=
 		{
-			"16th_metal\data\custom\blatt_uniform1_co.paa",
-			"16th_metal\data\custom\blatt_uniform2_co.paa"
+			"z\16th\addons\armor\data\custom\blatt_uniform1_co.paa",
+			"z\16th\addons\armor\data\custom\blatt_uniform2_co.paa"
 		};
 		linkedItems[]=
 		{
@@ -4323,8 +4327,8 @@ class CfgVehicles
 		uniformClass="armor_16th_blackrose";
 		hiddenselectionsTextures[]=
 		{
-			"16th_metal\data\custom\blackrose_uniform1_co.paa",
-			"16th_metal\data\custom\blackrose_uniform2_co.paa"
+			"z\16th\addons\armor\data\custom\blackrose_uniform1_co.paa",
+			"z\16th\addons\armor\data\custom\blackrose_uniform2_co.paa"
 		};
 		linkedItems[]=
 		{
@@ -4352,8 +4356,8 @@ class CfgVehicles
 		uniformClass="armor_16th_prez";
 		hiddenselectionsTextures[]=
 		{
-			"16th_metal\data\custom\prez_uniform1_co.paa",
-			"16th_metal\data\custom\prez_uniform2_co.paa"
+			"z\16th\addons\armor\data\custom\prez_uniform1_co.paa",
+			"z\16th\addons\armor\data\custom\prez_uniform2_co.paa"
 		};
 		linkedItems[]=
 		{
@@ -4381,8 +4385,8 @@ class CfgVehicles
 		uniformClass="armor_16th_hood";
 		hiddenselectionsTextures[]=
 		{
-			"16th_metal\data\custom\hood_uniform1_co.paa",
-			"16th_metal\data\custom\hood_uniform2_co.paa"
+			"z\16th\addons\armor\data\custom\hood_uniform1_co.paa",
+			"z\16th\addons\armor\data\custom\hood_uniform2_co.paa"
 		};
 		linkedItems[]=
 		{
@@ -4410,8 +4414,8 @@ class CfgVehicles
 		uniformClass="armor_16th_kix";
 		hiddenselectionsTextures[]=
 		{
-			"16th_metal\data\custom\kix_uniform1_co.paa",
-			"16th_metal\data\custom\kix_uniform2_co.paa"
+			"z\16th\addons\armor\data\custom\kix_uniform1_co.paa",
+			"z\16th\addons\armor\data\custom\kix_uniform2_co.paa"
 		};
 		linkedItems[]=
 		{
@@ -4437,8 +4441,8 @@ class CfgVehicles
 		uniformClass="armor_16th_winters";
 		hiddenselectionsTextures[]=
 		{
-			"16th_metal\data\custom\winters_uniform1_co.paa",
-			"16th_metal\data\custom\winters_uniform2_co.paa"
+			"z\16th\addons\armor\data\custom\winters_uniform1_co.paa",
+			"z\16th\addons\armor\data\custom\winters_uniform2_co.paa"
 		};
 		linkedItems[]=
 		{
@@ -4464,8 +4468,8 @@ class CfgVehicles
 		uniformClass="armor_16th_six";
 		hiddenselectionsTextures[]=
 		{
-			"16th_metal\data\custom\six_uniform1_co.paa",
-			"16th_metal\data\custom\six_uniform2_co.paa"
+			"z\16th\addons\armor\data\custom\six_uniform1_co.paa",
+			"z\16th\addons\armor\data\custom\six_uniform2_co.paa"
 		};
 		linkedItems[]=
 		{
@@ -4492,8 +4496,8 @@ class CfgVehicles
 		uniformClass="armor_16th_avalanche";
 		hiddenselectionsTextures[]=
 		{
-			"16th_metal\data\custom\dj_uniform1_co.paa",
-			"16th_metal\data\custom\dj_uniform2_co.paa"
+			"z\16th\addons\armor\data\custom\dj_uniform1_co.paa",
+			"z\16th\addons\armor\data\custom\dj_uniform2_co.paa"
 		};
 		linkedItems[]=
 		{
@@ -4521,8 +4525,8 @@ class CfgVehicles
 		uniformClass="armor_16th_maxson";
 		hiddenselectionsTextures[]=
 		{
-			"16th_metal\data\custom\maxson_uniform1_co.paa",
-			"16th_metal\data\custom\maxson_uniform2_co.paa"
+			"z\16th\addons\armor\data\custom\maxson_uniform1_co.paa",
+			"z\16th\addons\armor\data\custom\maxson_uniform2_co.paa"
 		};
 		linkedItems[]=
 		{
@@ -4550,8 +4554,8 @@ class CfgVehicles
 		uniformClass="armor_16th_merlin";
 		hiddenselectionsTextures[]=
 		{
-			"16th_metal\data\custom\merlin_uniform1_co.paa",
-			"16th_metal\data\custom\merlin_uniform2_co.paa"
+			"z\16th\addons\armor\data\custom\merlin_uniform1_co.paa",
+			"z\16th\addons\armor\data\custom\merlin_uniform2_co.paa"
 		};
 		linkedItems[]=
 		{
@@ -4579,8 +4583,8 @@ class CfgVehicles
 		uniformClass="armor_16th_cooger";
 		hiddenselectionsTextures[]=
 		{
-			"16th_metal\data\custom\cougar_uniform1_co.paa",
-			"16th_metal\data\custom\cougar_uniform2_co.paa"
+			"z\16th\addons\armor\data\custom\cougar_uniform1_co.paa",
+			"z\16th\addons\armor\data\custom\cougar_uniform2_co.paa"
 		};
 		linkedItems[]=
 		{
@@ -4628,8 +4632,8 @@ class CfgVehicles
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\snowmen\trooper\snowman_uniform_1_co.paa",
-			"16th_metal\data\snowmen\trooper\snowman_uniform_2_fab_co.paa",
+			"z\16th\addons\armor\data\snowmen\trooper\snowman_uniform_1_co.paa",
+			"z\16th\addons\armor\data\snowmen\trooper\snowman_uniform_2_fab_co.paa",
 			"\JLTS_AE_GM\data\BaseTextures\Uniform\Undersuit_co.paa"
 		};
 		linkedItems[]=
@@ -4960,8 +4964,8 @@ class CfgVehicles
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\snowmen\trooper\snowman_uniform_eod_1_co.paa",
-			"16th_metal\data\snowmen\trooper\snowman_uniform_2_fab_co.paa",
+			"z\16th\addons\armor\data\snowmen\trooper\snowman_uniform_eod_1_co.paa",
+			"z\16th\addons\armor\data\snowmen\trooper\snowman_uniform_2_fab_co.paa",
 			"\JLTS_AE_GM\data\BaseTextures\Uniform\Undersuit_co.paa"
 		};
 		linkedItems[]=
@@ -5292,8 +5296,8 @@ class CfgVehicles
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\snowmen\trooper\snowman_uniform_medic_1_co.paa",
-			"16th_metal\data\snowmen\trooper\snowman_uniform_2_fab_co.paa",
+			"z\16th\addons\armor\data\snowmen\trooper\snowman_uniform_medic_1_co.paa",
+			"z\16th\addons\armor\data\snowmen\trooper\snowman_uniform_2_fab_co.paa",
 			"\JLTS_AE_GM\data\BaseTextures\Uniform\Undersuit_co.paa"
 		};
 		linkedItems[]=
@@ -5624,8 +5628,8 @@ class CfgVehicles
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\snowmen\nco\snowman_uniform_nco_1_co.paa",
-			"16th_metal\data\snowmen\nco\snowman_uniform_nco_fab_2_co.paa",
+			"z\16th\addons\armor\data\snowmen\nco\snowman_uniform_nco_1_co.paa",
+			"z\16th\addons\armor\data\snowmen\nco\snowman_uniform_nco_fab_2_co.paa",
 			"\JLTS_AE_GM\data\BaseTextures\Uniform\Undersuit_co.paa"
 		};
 		linkedItems[]=
@@ -5956,8 +5960,8 @@ class CfgVehicles
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\snowmen\officer\snowman_uniform_off_1_co.paa",
-			"16th_metal\data\snowmen\officer\snowman_uniform_off_2_fab_co.paa",
+			"z\16th\addons\armor\data\snowmen\officer\snowman_uniform_off_1_co.paa",
+			"z\16th\addons\armor\data\snowmen\officer\snowman_uniform_off_2_fab_co.paa",
 			"\JLTS_AE_GM\data\BaseTextures\Uniform\Undersuit_co.paa"
 		};
 		linkedItems[]=
@@ -6270,7 +6274,7 @@ class CfgVehicles
 		displayName="[16th] Backpack";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\gear\backpacks\trp_backpack_co.paa"
+			"z\16th\addons\armor\data\gear\backpacks\trp_backpack_co.paa"
 		};
 		maximumLoad=300;
 	};
@@ -6286,7 +6290,7 @@ class CfgVehicles
 		displayName="[16th] Heavy Backpack";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\gear\backpacks\at_backpack_co.paa"
+			"z\16th\addons\armor\data\gear\backpacks\at_backpack_co.paa"
 		};
 		maximumLoad=500;
 	};
@@ -6297,7 +6301,7 @@ class CfgVehicles
 		displayName="[16th] EOD Backpack";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\gear\backpacks\eod_backpack_co.paa"
+			"z\16th\addons\armor\data\gear\backpacks\eod_backpack_co.paa"
 		};
 		maximumLoad=400;
 	};
@@ -6308,7 +6312,7 @@ class CfgVehicles
 		displayName="[16th] Medic Backpack";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\gear\backpacks\med_backpack_co.paa"
+			"z\16th\addons\armor\data\gear\backpacks\med_backpack_co.paa"
 		};
 		maximumLoad=400;
 	};
@@ -6319,7 +6323,7 @@ class CfgVehicles
 		displayName="[16th] RO Backpack";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\gear\backpacks\rto_backpack_co.paa"
+			"z\16th\addons\armor\data\gear\backpacks\rto_backpack_co.paa"
 		};
 		maximumLoad=300;
 	};
@@ -6396,7 +6400,7 @@ class CfgVehicles
 		displayName="[16th] JT-12";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\gear\backpacks\jt12_backpack_co.paa"
+			"z\16th\addons\armor\data\gear\backpacks\jt12_backpack_co.paa"
 		};
 		maximumLoad=200;
 		BNA_KC_jetpacks_isJetpack=1;
@@ -6424,7 +6428,7 @@ class CfgVehicles
 		displayName="[16th] JT-12 Medic";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\gear\backpacks\jt12_backpack_medic_co.paa"
+			"z\16th\addons\armor\data\gear\backpacks\jt12_backpack_medic_co.paa"
 		};
 		maximumLoad=250;
 	};
@@ -6434,7 +6438,7 @@ class CfgVehicles
 		displayName="[16th] JT-12 RO";
 		hiddenSelectionsTextures[]=
 		{
-			"16th_metal\data\gear\backpacks\jt12_backpack_co.paa"
+			"z\16th\addons\armor\data\gear\backpacks\jt12_backpack_co.paa"
 		};
 		maximumLoad=200;
 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
