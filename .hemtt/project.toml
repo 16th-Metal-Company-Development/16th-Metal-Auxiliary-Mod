@@ -13,13 +13,13 @@ sign = false
 
 [files]
 include = [
-    "442_weapons.pbo",        # These files are copied to the build directory by default
-    "Indecisive_Armoury_Ammos.pbo",       # They do not need to be added to your list
-    "JMSLLTE_weapons.pbo",
-    "Kobra.pbo",
-    "SDT_Eternal.pbo",
-    "SDT_gear.pbo",
-    "WBK_HeavyWeaponsFramework.pbo",
+    "addons/442_weapons.pbo",
+    "addons/Indecisive_Armoury_Ammos.pbo",
+    "addons/JMSLLTE_weapons.pbo",
+    "addons/Kobra.pbo",
+    "addons/SDT_Eternal.pbo",
+    "addons/SDT_gear.pbo",
+    "addons/WBK_HeavyWeaponsFramework.pbo",
 ]
 
 [version]
