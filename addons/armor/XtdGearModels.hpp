@@ -8,7 +8,18 @@ class XtdGearModels {
             class camo {
                 values[] = {
                     "Trooper", "Cadet", "Veteran", "Specialist", "NCO", "SNCO",
-                    "Officer", "Medic", "EOD", "Hazmat", "Chetiah", "Arch", "Krieg",
+                    "Officer", "Medic", "EOD"
+                };
+            };
+        };
+
+        class 16th_Custom_Helmet {
+            label = "[16th] Custom Helmet";
+            author = "16th Mod Team";
+            options[] = { "camo" };
+            class camo {
+                values[] = {
+                    "Hazmat", "Chetiah", "Arch", "Krieg",
                     "Blackrose", "Merlin", "Moldy", "William", "Wolf", "Blatt",
                     "Butcher", "Winters", "Roz", "Six", "Gambit", "Frost", "Smith",
                     "Fish", "Mace", "Kick", "Nix", "Maple", "Hood", "Sam", "Ben",
@@ -17,6 +28,7 @@ class XtdGearModels {
                 };
             };
         };
+
         // [16th] Airborne Trooper Helmet Airborne helmet with all rank/unique variants
         class 16th_Airborne_Helmet {
             label = "[16th] Airborne Trooper Helmet";
