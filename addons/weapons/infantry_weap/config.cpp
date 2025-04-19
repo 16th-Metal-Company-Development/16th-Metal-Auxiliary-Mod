@@ -521,17 +521,11 @@ class CfgWeapons
 				"UGL_FlareRed_F",
 				"UGL_FlareYellow_F",
 				"UGL_FlareCIR_F",
-				"1Rnd_Smoke_Grenade_shell",
-				"1Rnd_SmokeRed_Grenade_shell",
-				"1Rnd_SmokeGreen_Grenade_shell",
-				"1Rnd_SmokeYellow_Grenade_shell",
-				"1Rnd_SmokePurple_Grenade_shell",
-				"1Rnd_SmokeBlue_Grenade_shell",
-				"1Rnd_SmokeOrange_Grenade_shell",
 			};
 			magazineWell[]=
 			{
 				"UGL_40x36",
+				"MET_GL_MagWell"
 			};
 		};
 		irLaserPos="";
@@ -1526,7 +1520,8 @@ class CfgWeapons
 			magazineWell[]=
 			{
 				"UGL_40x36",
-				"3UGL_40x36"
+				"3UGL_40x36",
+				"MET_3GL_MagWell"
 			};
 			cameraDir="OP_look";
 			discreteDistance[]={50,75,100,150,200,250,300,350,400};
@@ -4327,7 +4322,7 @@ class CfgWeapons
 		};
 		magazineWell[]=
 		{
-			"MET_EPL_MagWell"
+			"MET_3GL_MagWell"
 		};
 	};
 	class optic_MRCO;
@@ -6158,22 +6153,50 @@ class CfgMagazineWells
 			"MET_CinCar_Mag"
 		};
 	};
-	class MET_EPL_MagWell
+	class MET_3GL_MagWell
 	{
-		MET_EPL_Mags[]=
+		MET_3GL_Mags[]=
 		{
 			"MET_HE_Grenade",
 			"MET_AT_Grenade",
+			"MET_SMKW_Grenade",
+			"MET_SMKB_Grenade",
+			"MET_SMKG_Grenade",
+			"MET_SMKO_Grenade",
+			"MET_SMKP_Grenade",
+			"MET_SMKR_Grenade",
+			"MET_SMKTU_Grenade",
+			"MET_SMKTE_Grenade",
+			"MET_SMKY_Grenade",
 			"MET_3Rnd_HE_Grenade_shell",
 			"MET_3Rnd_AT_Grenade_shell",
-			"3AS_3Rnd_Smoke_Blue_shell",
-			"3AS_3Rnd_Smoke_Green_shell",
-			"3AS_3Rnd_Flare_White_shell",
-			"3AS_3Rnd_Smoke_Orange_shell",
-			"3AS_3Rnd_Smoke_Purple_shell",
-			"3AS_3Rnd_Smoke_Red_shell",
-			"3AS_3Rnd_Smoke_White_shell",
-			"3AS_3Rnd_Smoke_Yellow_shell",
+			"MET_3Rnd_SMKW_Grenade",
+			"MET_3Rnd_SMKB_Grenade",
+			"MET_3Rnd_SMKG_Grenade",
+			"MET_3Rnd_SMKO_Grenade",
+			"MET_3Rnd_SMKP_Grenade",
+			"MET_3Rnd_SMKR_Grenade",
+			"MET_3Rnd_SMKTU_Grenade",
+			"MET_3Rnd_SMKTE_Grenade",
+			"MET_3Rnd_SMKY_Grenade",
+			"ACE_HuntIR_M203"
+		};
+	};
+	class MET_GL_MagWell
+	{
+		MET_GL_Mags[]=
+		{
+			"MET_HE_Grenade",
+			"MET_AT_Grenade",
+			"MET_SMKW_Grenade",
+			"MET_SMKB_Grenade",
+			"MET_SMKG_Grenade",
+			"MET_SMKO_Grenade",
+			"MET_SMKP_Grenade",
+			"MET_SMKR_Grenade",
+			"MET_SMKTU_Grenade",
+			"MET_SMKTE_Grenade",
+			"MET_SMKY_Grenade",
 			"ACE_HuntIR_M203"
 		};
 	};
@@ -6609,6 +6632,105 @@ class CfgMagazines
 		ammo="MET_HEAT_LauncherGrenade";
 		mass=8;
 	};
+	class MET_SMKW_Grenade: 1Rnd_HE_Grenade_shell
+	{
+		author="Hazmat";
+		count=1;
+		displayName="[16th] White Smoke Grenade";
+		displayNameShort="[16th] White Smoke Grenades";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_smw.paa";
+		descriptionShort="Smoke grenade";
+		ammo="Met_Ammo_smoke_white";
+		mass=8;
+	};
+	class MET_SMKB_Grenade: 1Rnd_HE_Grenade_shell
+	{
+		author="Hazmat";
+		count=1;
+		displayName="[16th] Blue Smoke Grenade";
+		displayNameShort="[16th] Blue Smoke Grenades";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_smw.paa";
+		descriptionShort="Smoke grenade";
+		ammo="Met_Ammo_smoke_blue";
+		mass=8;
+	};
+	class MET_SMKG_Grenade: 1Rnd_HE_Grenade_shell
+	{
+		author="Hazmat";
+		count=1;
+		displayName="[16th] Green Smoke Grenade";
+		displayNameShort="[16th] Green Smoke Grenades";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_smw.paa";
+		descriptionShort="Smoke grenade";
+		ammo="Met_Ammo_smoke_green";
+		mass=8;
+	};
+	class MET_SMKO_Grenade: 1Rnd_HE_Grenade_shell
+	{
+		author="Hazmat";
+		count=1;
+		displayName="[16th] Orange Smoke Grenade";
+		displayNameShort="[16th] Orange Smoke Grenades";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_smw.paa";
+		descriptionShort="Smoke grenade";
+		ammo="Met_Ammo_smoke_orange";
+		mass=8;
+	};
+	class MET_SMKP_Grenade: 1Rnd_HE_Grenade_shell
+	{
+		author="Hazmat";
+		count=1;
+		displayName="[16th] Purple Smoke Grenade";
+		displayNameShort="[16th] Purple Smoke Grenades";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_smw.paa";
+		descriptionShort="Smoke grenade";
+		ammo="Met_Ammo_smoke_purple";
+		mass=8;
+	};
+	class MET_SMKR_Grenade: 1Rnd_HE_Grenade_shell
+	{
+		author="Hazmat";
+		count=1;
+		displayName="[16th] Red Smoke Grenade";
+		displayNameShort="[16th] Red Smoke Grenades";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_smw.paa";
+		descriptionShort="Smoke grenade";
+		ammo="Met_Ammo_smoke_red";
+		mass=8;
+	};
+	class MET_SMKTU_Grenade: 1Rnd_HE_Grenade_shell
+	{
+		author="Hazmat";
+		count=1;
+		displayName="[16th] Turquoise Smoke Grenade";
+		displayNameShort="[16th] Turquoise Smoke Grenades";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_smw.paa";
+		descriptionShort="Smoke grenade";
+		ammo="Met_Ammo_smoke_turquoise";
+		mass=8;
+	};
+	class MET_SMKTE_Grenade: 1Rnd_HE_Grenade_shell
+	{
+		author="Hazmat";
+		count=1;
+		displayName="[16th] Teal Smoke Grenade";
+		displayNameShort="[16th] Teal Smoke Grenades";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_smw.paa";
+		descriptionShort="Smoke grenade";
+		ammo="Met_Ammo_smoke_teal";
+		mass=8;
+	};
+	class MET_SMKY_Grenade: 1Rnd_HE_Grenade_shell
+	{
+		author="Hazmat";
+		count=1;
+		displayName="[16th] Yellow Smoke Grenade";
+		displayNameShort="[16th] Yellow Smoke Grenades";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_smw.paa";
+		descriptionShort="Smoke grenade";
+		ammo="Met_Ammo_smoke_yellow";
+		mass=8;
+	};
 	class 3AS_6Rnd_HE_Grenade_shell;
 	class MET_3Rnd_HE_Grenade_shell: 3AS_6Rnd_HE_Grenade_shell
 	{
@@ -6628,6 +6750,105 @@ class CfgMagazines
 		displayNameShort="[16th] HEAT Grenades";
 		descriptionShort="Impact grenade";
 		ammo="MET_HEAT_LauncherGrenade";
+		mass=12;
+	};
+	class MET_3Rnd_SMKW_Grenade: 1Rnd_HE_Grenade_shell
+	{
+		author="Hazmat";
+		count=3;
+		displayName="[16th] 3 Round White Smoke Grenade";
+		displayNameShort="[16th] White Smoke Grenades";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_smw.paa";
+		descriptionShort="Smoke grenade";
+		ammo="Met_Ammo_smoke_white";
+		mass=12;
+	};
+	class MET_3Rnd_SMKB_Grenade: 1Rnd_HE_Grenade_shell
+	{
+		author="Hazmat";
+		count=3;
+		displayName="[16th] 3 Round Blue Smoke Grenade";
+		displayNameShort="[16th] Blue Smoke Grenades";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_smw.paa";
+		descriptionShort="Smoke grenade";
+		ammo="Met_Ammo_smoke_blue";
+		mass=12;
+	};
+	class MET_3Rnd_SMKG_Grenade: 1Rnd_HE_Grenade_shell
+	{
+		author="Hazmat";
+		count=3;
+		displayName="[16th] 3 Round Green Smoke Grenade";
+		displayNameShort="[16th] Green Smoke Grenades";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_smw.paa";
+		descriptionShort="Smoke grenade";
+		ammo="Met_Ammo_smoke_green";
+		mass=12;
+	};
+	class MET_3Rnd_SMKO_Grenade: 1Rnd_HE_Grenade_shell
+	{
+		author="Hazmat";
+		count=3;
+		displayName="[16th] 3 Round Orange Smoke Grenade";
+		displayNameShort="[16th] Orange Smoke Grenades";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_smw.paa";
+		descriptionShort="Smoke grenade";
+		ammo="Met_Ammo_smoke_orange";
+		mass=12;
+	};
+	class MET_3Rnd_SMKP_Grenade: 1Rnd_HE_Grenade_shell
+	{
+		author="Hazmat";
+		count=3;
+		displayName="[16th] 3 Round Purple Smoke Grenade";
+		displayNameShort="[16th] Purple Smoke Grenades";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_smw.paa";
+		descriptionShort="Smoke grenade";
+		ammo="Met_Ammo_smoke_purple";
+		mass=12;
+	};
+	class MET_3Rnd_SMKR_Grenade: 1Rnd_HE_Grenade_shell
+	{
+		author="Hazmat";
+		count=3;
+		displayName="[16th] 3 Round Red Smoke Grenade";
+		displayNameShort="[16th] Red Smoke Grenades";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_smw.paa";
+		descriptionShort="Smoke grenade";
+		ammo="Met_Ammo_smoke_red";
+		mass=12;
+	};
+	class MET_3Rnd_SMKTU_Grenade: 1Rnd_HE_Grenade_shell
+	{
+		author="Hazmat";
+		count=3;
+		displayName="[16th] 3 Round Turquoise Smoke Grenade";
+		displayNameShort="[16th] Turquoise Smoke Grenades";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_smw.paa";
+		descriptionShort="Smoke grenade";
+		ammo="Met_Ammo_smoke_turquoise";
+		mass=12;
+	};
+	class MET_3Rnd_SMKTE_Grenade: 1Rnd_HE_Grenade_shell
+	{
+		author="Hazmat";
+		count=3;
+		displayName="[16th] 3 Round Teal Smoke Grenade";
+		displayNameShort="[16th] Teal Smoke Grenades";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_smw.paa";
+		descriptionShort="Smoke grenade";
+		ammo="Met_Ammo_smoke_teal";
+		mass=12;
+	};
+	class MET_3Rnd_SMKY_Grenade: 1Rnd_HE_Grenade_shell
+	{
+		author="Hazmat";
+		count=3;
+		displayName="[16th] 3 Round Yellow Smoke Grenade";
+		displayNameShort="[16th] Yellow Smoke Grenades";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_smw.paa";
+		descriptionShort="Smoke grenade";
+		ammo="Met_Ammo_smoke_yellow";
 		mass=12;
 	};
 	class MET_6Rnd_HE_Grenade_shell: 3AS_6Rnd_HE_Grenade_shell
