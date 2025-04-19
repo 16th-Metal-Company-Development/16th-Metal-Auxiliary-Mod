@@ -39,10 +39,10 @@ class CfgWeapons
 		author="Digital";
 		scope=1;
 		scopeArsenal=1;
-		displayName="[16th] RPS-6 Disposable";
+		displayName="[16th] RPS-6 Disposable (TESTING)";
 		picture="\3AS\3AS_Weapons\RPS6\Data\UI\3as_rps6d.paa";
-		model="\3AS\3AS_Weapons\RPS6\3AS_RPS6_F.p3d";
-		baseWeapon="HDC_NLAW_F";
+		model="\3AS\3AS_Weapons\RPS6\3AS_RPS6_G.p3d";
+		baseWeapon="NLAW_F";
 		magazines[]=
 		{
 			"HTA_NLAW_F"

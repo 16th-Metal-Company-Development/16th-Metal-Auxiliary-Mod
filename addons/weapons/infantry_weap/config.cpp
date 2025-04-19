@@ -11,7 +11,7 @@ class CfgPatches
 		};
 		magazines[]=
 		{
-			"MET_DC15A_mag"
+			"MET_DC15A_mag",
 		};
 		ammo[]=
 		{
@@ -985,7 +985,6 @@ class CfgWeapons
 		reloadAction="GestureReloadMX";
 		magazineReloadSwitchPhase=0.40000001;
 		discreteDistanceInitIndex=0;
-		recoil="MET_recoil_DC15C";
 		maxRecoilSway=0.0125;
 		swayDecaySpeed=1.25;
 		inertia=0.40000001;
@@ -1008,7 +1007,7 @@ class CfgWeapons
 				linkProxy="\A3\data_f\proxies\weapon_slots\TOP";
 				compatibleItems[]=
 				{
-					//"3AS_optic_acog_DC15C",
+					"MET_optic_acog_DC15C",
 					"3AS_optic_reflex_DC15C"
 				};
 			};
@@ -1050,7 +1049,7 @@ class CfgWeapons
 		};
 		class FullAuto: Mode_FullAuto
 		{
-			reloadTime=0.0666666667;
+			reloadTime=0.0923076923;
 			dispersion=0.00106;
 			minRange=0;
 			minRangeProbab=0.89999998;
@@ -1080,10 +1079,12 @@ class CfgWeapons
 					""
 				};
 			};
+			recoil="recoil_single_mx";
+			recoilProne="recoil_single_prone_mx";
 		};
 		class Single: Mode_SemiAuto
 		{
-			reloadTime=0.0666666667;
+			reloadTime=0.0923076923;
 			dispersion=0.00106;
 			minRange=2;
 			minRangeProbab=0.30000001;
@@ -1113,6 +1114,8 @@ class CfgWeapons
 					"3AS_DC15C_Shot_SoundSet"
 				};
 			};
+			recoil="recoil_single_mx";
+			recoilProne="recoil_single_prone_mx";
 		};
 		class 3AS_15CGL: UGL_F
 		{
@@ -1263,23 +1266,6 @@ class CfgWeapons
 				distanceZoomMin=100;
 				distanceZoomMax=100;
 				cameraDir="";
-			};
-		};
-		class WeaponSlotsInfo: WeaponSlotsInfo
-		{
-			mass=110;
-			class UnderBarrelSlot: UnderBarrelSlot
-			{
-				compatibleItems[]=
-				{
-					"JLTS_riot_shield_attachment",
-					"JLTS_riot_shield_212_attachment",
-					"JLTS_riot_shield_501_attachment",
-					"JLTS_riot_shield_101_attachment",
-					"JLTS_riot_shield_CG_attachment",
-					"JLTS_riot_shield_GD_attachment",
-					"JLTS_riot_shield_droid_attachment"
-				};
 			};
 		};
 	};
@@ -1850,7 +1836,7 @@ class CfgWeapons
 				weaponInfoType="RscWeaponEmpty";
 			};
 		};
-	};
+	}
 	class MET_rifle_base: Rifle_Long_Base_F
 	{
 		author="Schlabbie";
@@ -3361,6 +3347,109 @@ class CfgWeapons
 		ace_overpressure_range=0;
 		ace_overpressure_damage=0;
 	};
+	class 3AS_optic_acog_DC15C;
+	class MET_optic_acog_DC15C: 3AS_optic_acog_DC15C
+	{
+		scope=2;
+		displayName="[16th] DC-15C Scope";
+		weaponInfoType="RscWeaponZeroing";
+		class ItemInfo: InventoryOpticsItem_Base_F
+		{
+			mass=7;
+			modelOptics="\JMSLLTE_weapons\Scope\big_cross_blue_full.p3d";
+			class OpticsModes
+			{
+				class 3AS_16C_Optic
+				{
+					opticsID=1;
+					useModelOptics=1;
+					opticsPPEffects[]=
+					{
+						"OpticsCHAbera1",
+						"OpticsBlur1"
+					};
+					opticsZoomMin=0.03;
+					opticsZoomMax=0.0825;
+					opticsZoomInit=0.0625;					
+					distanceZoomMin=1000;
+					distanceZoomMax=100;
+					modelOptics[]=
+					{
+						"\JMSLLTE_weapons\Scope\big_cross_blue_full.p3d"
+					};
+					memoryPointCamera="opticView";
+					visionMode[]=
+					{
+						"Normal",
+						"NVG",
+						"Ti"
+					};
+					thermalMode[]={1,2};
+					opticsFlare=1;
+					opticsDisablePeripherialVision=1;
+					cameraDir="";
+				};
+			};
+		};
+	};
+	class 3AS_Optic_Cinnagaran_1_F;
+	class MET_Optic_Cinnagaran_1_F: 3AS_Optic_Cinnagaran_1_F
+	{
+		scope=2;
+		displayName="[16th] Cinnagaran Scope";
+		weaponInfoType="RscWeaponZeroing";
+		class ItemInfo: InventoryOpticsItem_Base_F
+		{
+			mass=7;
+			modelOptics="\JMSLLTE_weapons\Scope\big_cross_blue_full.p3d";
+			class OpticsModes
+			{
+				class 3AS_Green_Optic1
+				{
+					opticsID=1;
+					useModelOptics=1;
+					opticsPPEffects[]=
+					{
+						"OpticsCHAbera1",
+						"OpticsBlur1"
+					};
+					opticsZoomMin=0.107;
+					opticsZoomMax=0.2;
+					opticsZoomInit=0.2;	
+					distanceZoomMin=1000;
+					distanceZoomMax=100;
+					modelOptics[]=
+					{
+						"\JMSLLTE_weapons\Scope\big_cross_blue_full.p3d"
+					};
+					memoryPointCamera="opticView";
+					visionMode[]=
+					{
+						"Normal",
+						"NVG",
+						"Ti"
+					};
+					thermalMode[]={1,2};
+					opticsFlare=1;
+					opticsDisablePeripherialVision=1;
+					cameraDir="";
+				};
+				class 3AS_Green_Optic1_Top: 3AS_Green_Optic1
+				{
+					opticsID=2;
+					useModelOptics=0;
+					opticsFlare=0;
+					opticsDisablePeripherialVision=0;
+					opticsZoomMin=0.375;
+					opticsZoomMax=1.1;
+					opticsZoomInit=0.75;
+					memoryPointCamera="eye";
+					visionMode[]={};
+					discretefov[]={};
+				};
+			};
+		};
+	};
 	class MET_Optic_VK38X: ItemCore
 	{
 		scope=2;
@@ -3422,195 +3511,6 @@ class CfgWeapons
 	};
 	class LFP_rifle_base;
 	class WeaponSlotsInfo;
-	class LFP_dc15xs;
-	class MET_dc15xs: LFP_dc15xs
-	{
-		scope=2;
-		magazines[]=
-		{
-			"MET_DC15XS_mag",
-			"LFP_dc15xs_Mag"
-		};
-		displayname="[16th] DC-15XS";
-		descriptionShort="Battle Rifle";
-		modes[]=
-		{
-			"Single",
-			"FullAuto"
-		};
-		class Single: Mode_SemiAuto
-		{
-			sounds[]=
-			{
-				"StandardSound"
-			};
-			class BaseSoundModeType
-			{
-				weaponSoundEffect="";
-				closure1[]={};
-				closure2[]={};
-				soundClosure[]={};
-			};
-			class StandardSound: BaseSoundModeType
-			{
-				weaponSoundEffect="";
-				begin1[]=
-				{
-					"LF_Weapon_Unit\main\sounds\773_1.wss",
-					1,
-					1,
-					1800
-				};
-				begin2[]=
-				{
-					"LF_Weapon_Unit\main\sounds\773_2.wss",
-					1,
-					1,
-					1800
-				};
-				begin3[]=
-				{
-					"LF_Weapon_Unit\main\sounds\773_3.wss",
-					1,
-					1,
-					1800
-				};
-				soundBegin[]=
-				{
-					"begin1",
-					0.33000001,
-					"begin2",
-					0.33000001,
-					"begin3",
-					0.33000001
-				};
-			};
-			reloadTime=0.12;
-			dispersion=0.00001;
-			minRange=5;
-			minRangeProbab=0.30000001;
-			midRange=25;
-			midRangeProbab=0.60000002;
-			maxRange=50;
-			maxRangeProbab=0.1;
-			aiRateOfFire=2;
-			aiRateOfFireDistance=25;
-		};
-		class FullAuto: Mode_FullAuto
-		{
-			sounds[]=
-			{
-				"StandardSound"
-			};
-			class BaseSoundModeType
-			{
-				weaponSoundEffect="";
-				closure1[]={};
-				closure2[]={};
-				soundClosure[]={};
-			};
-			class StandardSound: BaseSoundModeType
-			{
-				weaponSoundEffect="";
-				begin1[]=
-				{
-					"LF_Weapon_Unit\main\sounds\773_1.wss",
-					1,
-					1,
-					1800
-				};
-				begin2[]=
-				{
-					"LF_Weapon_Unit\main\sounds\773_2.wss",
-					1,
-					1,
-					1800
-				};
-				begin3[]=
-				{
-					"LF_Weapon_Unit\main\sounds\773_3.wss",
-					1,
-					1,
-					1800
-				};
-				soundBegin[]=
-				{
-					"begin1",
-					0.33000001,
-					"begin2",
-					0.33000001,
-					"begin3",
-					0.33000001
-				};
-			};
-			reloadTime=0.12;
-			dispersion=0.00086999999;
-			minRange=0;
-			minRangeProbab=0.89999998;
-			midRange=15;
-			midRangeProbab=0.69999999;
-			maxRange=50;
-			maxRangeProbab=0.1;
-			aiRateOfFire=1e-006;
-		};
-		inertia=1.4;
-		dexterity=1.7;
-		initSpeed=-1;
-		recoil="LFP_recoil";
-		maxRecoilSway=0.015;
-		swayDecaySpeed=1;
-		modelOptics="\JMSLLTE_weapons\Scope\big_cross_blue_easy.p3d";
-		class OpticsModes
-		{
-			class 773scope_sights
-			{
-				opticsID=1;
-				useModelOptics=0;
-				opticsPPEffects[]=
-				{
-					"Default"
-				};
-				opticsFlare=0;
-				opticsDisablePeripherialVision=0;
-				opticsZoomMin=0.25;
-				opticsZoomMax=1.25;
-				opticsZoomInit=0.75;
-				memoryPointCamera="eye";
-				visionMode[]={};
-				distanceZoomMin=200;
-				distanceZoomMax=200;
-				cameraDir="";
-			};
-			class 773scope_scope: 773scope_sights
-			{
-				opticsID=2;
-				useModelOptics=1;
-				opticsPPEffects[]=
-				{
-					"OpticsCHAbera1",
-					"OpticsBlur1"
-				};
-				opticsZoomMin=0.001;
-				opticsZoomMax=0.0925;
-				opticsZoomInit=0.0625;
-				modelOptics[]=
-				{
-					"\JMSLLTE_weapons\Scope\big_cross_blue_easy.p3d"
-				};
-				memoryPointCamera="opticView";
-				visionMode[]=
-				{
-					"Normal",
-					"NVG",
-					"Ti"
-				};
-				thermalMode[]={1,2};
-				opticsFlare=1;
-				opticsDisablePeripherialVision=1;
-				cameraDir="";
-			};
-		};
-	};
 	class MET_Valken38X_Base_F: Rifle_Base_F
 	{
 		author="$STR_3as_Studio";
@@ -4289,6 +4189,145 @@ class CfgWeapons
 					"JLTS_riot_shield_droid_attachment"
 				};
 			};
+		};
+	};
+	class 3AS_Cinnagaran_Carbine_F;
+	class MET_Cinnagaran_Carbine_F: 3AS_Cinnagaran_Carbine_F
+	{
+		scope=2;
+		displayName="[16th] Cinnagaran Carbine";
+		recoil="MET_recoil_DC15C";
+		magazines[]=
+		{
+			"MET_CinCar_Mag"
+		};
+		magazineWell[]=
+		{
+			"MET_CinCar_MagWell"
+		};
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			class CowsSlot: CowsSlot
+			{
+				linkProxy="\A3\data_f\proxies\weapon_slots\TOP";
+				compatibleItems[]=
+				{
+					"MET_Optic_Cinnagaran_1_F"
+				};
+			};
+			class PointerSlot: PointerSlot
+			{
+				linkProxy="\A3\data_f\proxies\weapon_slots\SIDE";
+				compatibleItems[]=
+				{
+					"3AS_Flashlight_Cinnagaran_1_F"
+				};
+			};
+			class UnderBarrelSlot: UnderBarrelSlot
+			{
+				linkProxy="\A3\data_f_mark\proxies\weapon_slots\UNDERBARREL";
+				compatibleItems[]={};
+			};
+		};
+		modes[]=
+		{
+			"Single",
+			"Burst",
+			"FullAuto"
+		};
+		class Single: Mode_SemiAuto
+		{
+			reloadTime=0.03;
+			dispersion=0.00066000002;
+			minRange=0;
+			minRangeProbab=0.89999998;
+			midRange=15;
+			midRangeProbab=0.69999999;
+			maxRange=30;
+			maxRangeProbab=0.1;
+			soundContinuous=0;
+			soundBurst=0;
+			sounds[]=
+			{
+				"StandardSound",
+				"SilencedSound"
+			};
+			class BaseSoundModeType;
+			class StandardSound: BaseSoundModeType
+			{
+				soundSetShot[]=
+				{
+					"3AS_Cinnagaran_SoundSet"
+				};
+			};
+		};
+		class Burst: Mode_Burst
+		{
+			reloadTime=0.03;
+			dispersion=0.00066000002;
+			minRange=0;
+			minRangeProbab=0.89999998;
+			midRange=15;
+			midRangeProbab=0.69999999;
+			maxRange=30;
+			maxRangeProbab=0.1;
+			soundContinuous=0;
+			soundBurst=0;
+			burst=5;
+			sounds[]=
+			{
+				"StandardSound",
+				"SilencedSound"
+			};
+			class BaseSoundModeType;
+			class StandardSound: BaseSoundModeType
+			{
+				soundSetShot[]=
+				{
+					"3AS_Cinnagaran_SoundSet"
+				};
+			};
+		};
+		class FullAuto: Mode_FullAuto
+		{
+			reloadTime=0.05;
+			dispersion=0.00106;
+			minRange=0;
+			minRangeProbab=0.89999998;
+			midRange=15;
+			midRangeProbab=0.69999999;
+			maxRange=30;
+			maxRangeProbab=0.1;
+			soundContinuous=0;
+			soundBurst=0;
+			sounds[]=
+			{
+				"StandardSound",
+				"SilencedSound"
+			};
+			class BaseSoundModeType;
+			class StandardSound: BaseSoundModeType
+			{
+				soundSetShot[]=
+				{
+					"3AS_Cinnagaran_SoundSet"
+				};
+			};
+		};
+		
+	};
+	class JLTS_EPL2;
+	class MET_EPL2: JLTS_EPL2
+	{
+		scope=2;
+		displayName="[16th] EPL-2";
+		magazines[]=
+		{
+			"MET_3Rnd_HE_Grenade_shell"
+		};
+		magazineWell[]=
+		{
+			"MET_EPL_MagWell"
 		};
 	};
 	class optic_MRCO;
@@ -6084,8 +6123,7 @@ class CfgMagazineWells
 	{
 		MET_LightMagazines[]=
 		{
-			"MET_DC15C_mag",
-			"MET_blaster_pistol_battery"
+			"MET_DC15C_mag"
 		};
 	};
 	class MET_Z6_MagWell
@@ -6113,6 +6151,32 @@ class CfgMagazineWells
 			"Aux212_JLTS_E5_Mag"
 		};
 	};
+	class MET_CinCar_MagWell
+	{
+		MET_CinCar_Mags[]=
+		{
+			"MET_CinCar_Mag"
+		};
+	};
+	class MET_EPL_MagWell
+	{
+		MET_EPL_Mags[]=
+		{
+			"MET_HE_Grenade",
+			"MET_AT_Grenade",
+			"MET_3Rnd_HE_Grenade_shell",
+			"MET_3Rnd_AT_Grenade_shell",
+			"3AS_3Rnd_Smoke_Blue_shell",
+			"3AS_3Rnd_Smoke_Green_shell",
+			"3AS_3Rnd_Flare_White_shell",
+			"3AS_3Rnd_Smoke_Orange_shell",
+			"3AS_3Rnd_Smoke_Purple_shell",
+			"3AS_3Rnd_Smoke_Red_shell",
+			"3AS_3Rnd_Smoke_White_shell",
+			"3AS_3Rnd_Smoke_Yellow_shell",
+			"ACE_HuntIR_M203"
+		};
+	};
 	class MET_DC17M_MagWell
 	{
 		MET_DC17M_MagWell[]=
@@ -6131,7 +6195,7 @@ class CfgMagazineWells
 			"MET_dc15sa_battery",
 			"MET_dc15sa_red_battery"
 		};
-	}
+	};
 }
 class CfgMagazines
 {
@@ -6214,11 +6278,27 @@ class CfgMagazines
 		modelSpecialIsProxy=0;
 		picture="\3AS\3AS_Weapons\Data\UI\3as_ammo_b.paa";
 		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
-		count=100;
+		count=25;
 		displayName="[16th] DC-15C Energy Cell";
 		displayNameShort="Energy Cell";
 		descriptionShort="Energy cell for the DC-15A, DC-15S, and DC-15L";
-		ammo="MET_blasterbolt_low";
+		ammo="MET_blasterbolt_br";
+		tracersEvery=1;
+	};
+	class MET_CinCar_Mag: JLTS_DC15A_mag
+	{
+		JLTS_hasElectronics=1;
+		JLTS_hasEMPProtection=1;
+		author="Hazmat";
+		modelSpecial="";
+		modelSpecialIsProxy=0;
+		picture="\3AS\3AS_Weapons\Data\UI\3as_ammo_g.paa";
+		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
+		count=100;
+		displayName="[16th] Cinnagaran Energy Cell";
+		displayNameShort="Energy Cell";
+		descriptionShort="Energy cell for the DC-15A, DC-15S, and DC-15L";
+		ammo="MET_blasterbolt_low_green";
 		tracersEvery=1;
 	};
 	class MET_DC15C_Red_mag: JLTS_DC15A_mag
@@ -6270,24 +6350,6 @@ class CfgMagazines
 		tracersEvery=1;
 		initSpeed=250;
 		mass=40;
-	};
-	class MET_DC15XS_mag: MET_DC15A_mag
-	{
-		JLTS_hasElectronics=1;
-		JLTS_hasEMPProtection=1;
-		author="Hazmat";
-		modelSpecial="";
-		modelSpecialIsProxy=0;
-		picture="\3AS\3AS_Weapons\Data\UI\3as_sniper_b.paa";
-		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
-		count=30;
-		displayName="[16th] DC-15Xs Energy Cell";
-		displayNameShort="Energy Cell";
-		descriptionShort="Energy cell for the DC-15Xs";
-		ammo="MET_blasterbolt";
-		tracersEvery=1;
-		initSpeed = 1000;
-		mass=15;
 	};
 	class MET_Valken_mag: JLTS_DC15A_mag
 	{
@@ -17419,7 +17481,7 @@ class CfgAmmo
 		brightness=1000;
 		flaresize=5;
 		tracerscale=1;
-		hit=60;
+		hit=70;
 		indirectHit=0;
 		indirectHitRange=0;
 		caliber=2;
@@ -17456,7 +17518,7 @@ class CfgAmmo
 			"Direct"
 		};
 		proximityExplosionDistance=5;
-		explosive=0.2;
+		explosive=0;
 		CraterEffects="ExploAmmoCrater";
 		effectFlare="FlareShell";
 		effectFly="MET_BlasterBoltGlow_Medium_Yellow_Fly";

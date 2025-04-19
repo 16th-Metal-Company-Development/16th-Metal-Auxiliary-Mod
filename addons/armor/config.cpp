@@ -2569,7 +2569,7 @@ class CfgWeapons
 		displayName="[16th] Avalanche's Armor";
 		class ItemInfo: ItemInfo
 		{
-			uniformClass="armor_16th_avalanche";
+			uniformClass="armor_16th_avalanche_base";
 			containerClass="Supply150";
 			mass=40;
 			modelSides[]={6};
@@ -2639,7 +2639,7 @@ class CfgWeapons
 		displayName="[16th] Maxson's Armor";
 		class ItemInfo: ItemInfo
 		{
-			uniformClass="armor_16th_maxson";
+			uniformClass="armor_16th_maxson_base";
 			containerClass="Supply150";
 			mass=40;
 			modelSides[]={6};
@@ -2709,7 +2709,7 @@ class CfgWeapons
 		displayName="[16th] Merlin's Armor";
 		class ItemInfo: ItemInfo
 		{
-			uniformClass="armor_16th_merlin";
+			uniformClass="armor_16th_merlin_base";
 			containerClass="Supply150";
 			mass=40;
 			modelSides[]={6};

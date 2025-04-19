@@ -17,6 +17,8 @@ class cfgPatches
 			"MET_Smoke_Green",
 			"MET_Smoke_Blue",
 			"MET_Smoke_Orange",
+			"MET_Smoke_Turquoise",
+			"MET_Smoke_Teal",
 			"MET_LumaGreen",
 			"MET_LumaRed",
 			"MET_LumaBlue",
@@ -46,49 +48,72 @@ class CfgMagazines
 		displayName="[16th] Nacht-5 (White)";
 		displayNameShort="Nacht-5 (White)";
 		descriptionShort="Nacht-5 (White)";
-		ammo="3AS_SmokeShellBase";
+		//ammo="3AS_SmokeShellBase";
+		ammo="Met_Ammo_smoke_white";
 	};
 	class MET_Smoke_Purple: MET_Smoke_White
 	{
 		displayName="[16th] Nacht-5 (Purple)";
 		displayNameShort="Nacht-5 (Purple)";
 		descriptionShort="Nacht-5 (Purple)";
-		ammo="3AS_SmokeShellPurple";
+		//ammo="3AS_SmokeShellPurple";
+		ammo="Met_Ammo_smoke_purple";
 	};
 	class MET_Smoke_Yellow: MET_Smoke_White
 	{
 		displayName="[16th] Nacht-5 (Yellow)";
 		displayNameShort="Nacht-5 (Yellow)";
 		descriptionShort="Nacht-5 (Yellow)";
-		ammo="3AS_SmokeShellYellow";
+		//ammo="3AS_SmokeShellYellow";
+		ammo="Met_Ammo_smoke_yellow";
 	};
 	class MET_Smoke_Red: MET_Smoke_White
 	{
 		displayName="[16th] Nacht-5 (Red)";
 		displayNameShort="Nacht-5 (Red)";
 		descriptionShort="Nacht-5 (Red)";
-		ammo="3AS_SmokeShellRed";
+		//ammo="3AS_SmokeShellRed";
+		ammo="Met_Ammo_smoke_red";
 	};
 	class MET_Smoke_Green: MET_Smoke_White
 	{
 		displayName="[16th] Nacht-5 (Green)";
 		displayNameShort="Nacht-5 (Green)";
 		descriptionShort="Nacht-5 (Green)";
-		ammo="3AS_SmokeShellGreen";
+		//ammo="3AS_SmokeShellGreen";
+		ammo="Met_Ammo_smoke_green";
 	};
 	class MET_Smoke_Blue: MET_Smoke_White
 	{
 		displayName="[16th] Nacht-5 (Blue)";
 		displayNameShort="Nacht-5 (Blue)";
 		descriptionShort="Nacht-5 (Blue)";
-		ammo="3AS_SmokeShellBlue";
+		//ammo="3AS_SmokeShellBlue";
+		ammo="Met_Ammo_smoke_blue";
 	};
 	class MET_Smoke_Orange: MET_Smoke_White
 	{
 		displayName="[16th] Nacht-5 (Orange)";
 		displayNameShort="Nacht-5 (Orange)";
 		descriptionShort="Nacht-5 (Orange)";
-		ammo="3AS_SmokeShellOrange";
+		//ammo="3AS_SmokeShellOrange";
+		ammo="Met_Ammo_smoke_orange";
+	};
+	class MET_Smoke_turquoise: MET_Smoke_White
+	{
+		displayName="[16th] Nacht-5 (Turquoise)";
+		displayNameShort="Nacht-5 (Turquoise)";
+		descriptionShort="Nacht-5 (Turquoise)";
+		//ammo="3AS_SmokeShellOrange";
+		ammo="Met_Ammo_smoke_turquoise";
+	};
+	class MET_Smoke_teal: MET_Smoke_White
+	{
+		displayName="[16th] Nacht-5 (Teal)";
+		displayNameShort="Nacht-5 (Teal)";
+		descriptionShort="Nacht-5 (Teal)";
+		//ammo="3AS_SmokeShellOrange";
+		ammo="Met_Ammo_smoke_teal";
 	};
 	/*class MET_Smoke_MASH: MET_Smoke_Orange
 	{
@@ -120,11 +145,175 @@ class CfgMagazines
 		displayName="[16th] Luma Grenade (Yellow)";
 	};
 };
-/*class CfgAmmo
+class CfgCloudLets
+{
+	class Default;
+	class HTASmokeShellWhite: Default
+	{
+		animationSpeedCoef=1;
+		colorCoef[]=
+		{
+			"colorR",
+			"colorG",
+			"colorB",
+			"colorA"
+		};
+		sizeCoef=1;
+		position[]={0,0,0};
+		interval=0.029999999;
+		circleRadius=0;
+		circleVelocity[]={0,0,0};
+		particleShape="\A3\data_f\ParticleEffects\Universal\Universal";
+		particleFSNtieth=16;
+		particleFSIndex=7;
+		particleFSFrameCount=48;
+		particleFSLoop=1;
+		angleVar=0.1;
+		animationName="";
+		particleType="Billboard";
+		timerPeriod=1;
+		lifeTime=20;
+		moveVelocity[]={1.2,0.40000001,0.40000001};
+		rotationVelocity=1;
+		weight=1.2776999;
+		volume=1;
+		rubbing=0.050000001;
+		size[]={0.5,3,12};
+		color[]=
+		{
+			{0.60000002,0.60000002,0.60000002,0.2},
+			{0.60000002,0.60000002,0.60000002,0.050000001},
+			{0.60000002,0.60000002,0.60000002,0}
+		};
+		animationSpeed[]={1.5,0.5};
+		randomDirectionPeriod=1;
+		randomDirectionIntensity=0.039999999;
+		onTimerScript="";
+		beforeDestroyScript="";
+		destroyOnWaterSurface=1;
+		destroyOnWaterSurfaceOffset=-0.60000002;
+		lifeTimeVar=2;
+		positionVar[]={0,0,0};
+		MoveVelocityVar[]={0.5,0.5,0.5};
+		rotationVelocityVar=20;
+		sizeVar=1;
+		colorVar[]={0,0,0,0.34999999};
+		randomDirectionPeriodVar=0;
+		randomDirectionIntensityVar=0;
+	};
+	class HTASmokeShellWhite2: HTASmokeShellWhite
+	{
+		particleFSNtieth=16;
+		particleFSIndex=12;
+		particleFSFrameCount=4;
+		particleFSLoop=0;
+		color[]=
+		{
+			{0.60000002,0.60000002,0.60000002,1},
+			{0.60000002,0.60000002,0.60000002,0.5},
+			{0.60000002,0.60000002,0.60000002,0}
+		};
+	};
+	class MachineGunCartridge;
+	class HTA_127x99_Cartridge: MachineGunCartridge
+	{
+		particleShape="\HDC_Weapons\data\Casings\cartridge127.p3d";
+	};
+};
+class HTASmokeEffect
+{
+	class HTA_SmokeShell
+	{
+		simulation="particles";
+		type="HTASmokeShellWhite";
+		position[]={0,0,0};
+		intensity=1;
+		interval=1;
+	};
+	class HTA_SmokeShell2
+	{
+		simulation="particles";
+		type="HTASmokeShellWhite2";
+		position[]={0,0,0};
+		intensity=1;
+		interval=1;
+	};
+};
+class CfgAmmo
 {
 	class SmokeShell;
 	class SmokeShellOrange;
-	class MetAux_Weapons_Ammo_smoke_white: SmokeShell
+	class Met_Ammo_smoke_white: SmokeShell
+	{
+		model="3AS\3AS_Equipment\model\3AS_smokegrenade.p3d";
+		smokeColor[]={1,1,1,1};
+		effectsSmoke="HTASmokeEffect";
+		SmokeShellSoundHit1[]=
+		{
+			"\MetAux\Weapons\Grenades\data\sounds\smoke_explode.wss",
+			"+10db",
+			1,
+			500
+		};
+		SmokeShellSoundLoop1[]=
+		{
+			"\MetAux\Weapons\Grenades\data\sounds\smoke_loop.wss",
+			"+3db",
+			1,
+			150
+		};
+		grenadeFireSound[]=
+		{
+			"SmokeShellSoundHit1",
+			1
+		};
+		grenadeBurningSound[]=
+		{
+			"SmokeShellSoundLoop1",
+			1
+		};
+	};
+	class Met_Ammo_smoke_blue: Met_Ammo_smoke_white
+	{
+		smokeColor[]={0.1183,0.1867,1,1};
+		effectsSmoke="HTASmokeEffect";
+	};
+	class Met_Ammo_smoke_turquoise: Met_Ammo_smoke_white
+	{
+		smokeColor[]={0, 0.976, 1,1};
+		effectsSmoke="HTASmokeEffect";
+	};
+	class Met_Ammo_smoke_teal: Met_Ammo_smoke_white
+	{
+		smokeColor[]={0, 1, 0.769,1};
+		effectsSmoke="HTASmokeEffect";
+	};
+	class Met_Ammo_smoke_green: Met_Ammo_smoke_white
+	{
+		smokeColor[]={0.067, 0.89, 0.035,1};
+		effectsSmoke="HTASmokeEffect";
+	};
+	class Met_Ammo_smoke_orange: Met_Ammo_smoke_white
+	{
+		smokeColor[]={1, 0.639, 0,1};
+		effectsSmoke="HTASmokeEffect";
+	};
+	class Met_Ammo_smoke_purple: Met_Ammo_smoke_white
+	{
+		smokeColor[]={0.478, 0, 1,1};
+		effectsSmoke="HTASmokeEffect";
+	};
+	class Met_Ammo_smoke_red: Met_Ammo_smoke_white
+	{
+		smokeColor[]={0.84380001,0.1383,0.1353,1};
+		effectsSmoke="HTASmokeEffect";
+	};
+	class Met_Ammo_smoke_yellow: Met_Ammo_smoke_white
+	{
+		smokeColor[]={0.949, 0.937, 0.094,1};
+		effectsSmoke="HTASmokeEffect";
+	};
+/*	class MetAux_Weapons_Ammo_smoke_white: SmokeShell
 	{
 		simulation="shotSmokeX";
 		smokeColor[]={1,1,1,1};
@@ -190,7 +379,7 @@ class CfgMagazines
 		model="\kobra\442_weapons\explosive\basic_smoke.p3d";
 		rd501_fired_script_enabled=1;
 		rd501_fired_script="_this call RD501_fnc_internal_CRML_launchMissileFromMashGrenade;";
-	};
+	};*/
 };
 class CfgSoundShaders
 {
@@ -394,7 +583,7 @@ class MetAux_particle_effect_SmokeShellBlueWater
 	colorCoef[]={0,0,0,1};
 	interval=0.25;
 };
-class CfgCloudlets
+/*class CfgCloudlets
 {
 	class SmokeShellWhite;
 	class SmokeShellWhiteWater;
