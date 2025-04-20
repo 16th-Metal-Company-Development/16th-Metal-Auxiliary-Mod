@@ -34,6 +34,8 @@ class CfgWeapons
 			"MetAux_Weaps_smoke_green_ThrowMuzzle",
 			"MetAux_Weaps_smoke_blue_ThrowMuzzle",
 			"MetAux_Weaps_smoke_orange_ThrowMuzzle",
+			"MetAux_Weaps_smoke_turquoise_ThrowMuzzle",
+			"MetAux_Weaps_smoke_teal_ThrowMuzzle",
 			"MetAux_Weaps_luma_Green_ThrowMuzzle",
 			"MetAux_Weaps_luma_Red_ThrowMuzzle",
 			"MetAux_Weaps_luma_Blue_ThrowMuzzle",
@@ -122,6 +124,20 @@ class CfgWeapons
 			magazines[]=
 			{
 				"MET_Smoke_Orange"
+			};
+		};
+		class MetAux_Weaps_smoke_turquoise_ThrowMuzzle: ThrowMuzzle
+		{
+			magazines[]=
+			{
+				"MET_Smoke_Turquoise"
+			};
+		};
+		class MetAux_Weaps_smoke_teal_ThrowMuzzle: ThrowMuzzle
+		{
+			magazines[]=
+			{
+				"MET_Smoke_Teal"
 			};
 		};
 		class MetAux_Weaps_luma_Green_ThrowMuzzle: ThrowMuzzle

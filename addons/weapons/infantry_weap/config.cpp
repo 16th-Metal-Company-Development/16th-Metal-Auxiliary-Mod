@@ -11,7 +11,7 @@ class CfgPatches
 		};
 		magazines[]=
 		{
-			"MET_DC15A_mag"
+			"MET_DC15A_mag",
 		};
 		ammo[]=
 		{
@@ -521,17 +521,11 @@ class CfgWeapons
 				"UGL_FlareRed_F",
 				"UGL_FlareYellow_F",
 				"UGL_FlareCIR_F",
-				"1Rnd_Smoke_Grenade_shell",
-				"1Rnd_SmokeRed_Grenade_shell",
-				"1Rnd_SmokeGreen_Grenade_shell",
-				"1Rnd_SmokeYellow_Grenade_shell",
-				"1Rnd_SmokePurple_Grenade_shell",
-				"1Rnd_SmokeBlue_Grenade_shell",
-				"1Rnd_SmokeOrange_Grenade_shell",
 			};
 			magazineWell[]=
 			{
 				"UGL_40x36",
+				"MET_GL_MagWell"
 			};
 		};
 		irLaserPos="";
@@ -985,7 +979,6 @@ class CfgWeapons
 		reloadAction="GestureReloadMX";
 		magazineReloadSwitchPhase=0.40000001;
 		discreteDistanceInitIndex=0;
-		recoil="MET_recoil_DC15C";
 		maxRecoilSway=0.0125;
 		swayDecaySpeed=1.25;
 		inertia=0.40000001;
@@ -1008,7 +1001,7 @@ class CfgWeapons
 				linkProxy="\A3\data_f\proxies\weapon_slots\TOP";
 				compatibleItems[]=
 				{
-					//"3AS_optic_acog_DC15C",
+					"MET_optic_acog_DC15C",
 					"3AS_optic_reflex_DC15C"
 				};
 			};
@@ -1050,7 +1043,7 @@ class CfgWeapons
 		};
 		class FullAuto: Mode_FullAuto
 		{
-			reloadTime=0.0666666667;
+			reloadTime=0.0923076923;
 			dispersion=0.00106;
 			minRange=0;
 			minRangeProbab=0.89999998;
@@ -1080,10 +1073,12 @@ class CfgWeapons
 					""
 				};
 			};
+			recoil="recoil_single_mx";
+			recoilProne="recoil_single_prone_mx";
 		};
 		class Single: Mode_SemiAuto
 		{
-			reloadTime=0.0666666667;
+			reloadTime=0.0923076923;
 			dispersion=0.00106;
 			minRange=2;
 			minRangeProbab=0.30000001;
@@ -1113,6 +1108,8 @@ class CfgWeapons
 					"3AS_DC15C_Shot_SoundSet"
 				};
 			};
+			recoil="recoil_single_mx";
+			recoilProne="recoil_single_prone_mx";
 		};
 		class 3AS_15CGL: UGL_F
 		{
@@ -1263,23 +1260,6 @@ class CfgWeapons
 				distanceZoomMin=100;
 				distanceZoomMax=100;
 				cameraDir="";
-			};
-		};
-		class WeaponSlotsInfo: WeaponSlotsInfo
-		{
-			mass=110;
-			class UnderBarrelSlot: UnderBarrelSlot
-			{
-				compatibleItems[]=
-				{
-					"JLTS_riot_shield_attachment",
-					"JLTS_riot_shield_212_attachment",
-					"JLTS_riot_shield_501_attachment",
-					"JLTS_riot_shield_101_attachment",
-					"JLTS_riot_shield_CG_attachment",
-					"JLTS_riot_shield_GD_attachment",
-					"JLTS_riot_shield_droid_attachment"
-				};
 			};
 		};
 	};
@@ -1540,7 +1520,9 @@ class CfgWeapons
 			magazineWell[]=
 			{
 				"UGL_40x36",
-				"3UGL_40x36"
+				"3UGL_40x36",
+				"MET_GL_MagWell",
+				"MET_3GL_MagWell"
 			};
 			cameraDir="OP_look";
 			discreteDistance[]={50,75,100,150,200,250,300,350,400};
@@ -1850,7 +1832,7 @@ class CfgWeapons
 				weaponInfoType="RscWeaponEmpty";
 			};
 		};
-	};
+	}
 	class MET_rifle_base: Rifle_Long_Base_F
 	{
 		author="Schlabbie";
@@ -3105,7 +3087,8 @@ class CfgWeapons
 		};
 		modes[]=
 		{
-			"Auto"
+			"Auto",
+			"fullerAuto"
 		};
 		class Auto: Mode_FullAuto
 		{
@@ -3202,6 +3185,15 @@ class CfgWeapons
 			midRangeProbab=0.075000003;
 			maxRange=10000;
 			maxRangeProbab=0.30000001;
+		};
+		class fullerAuto: Auto
+		{
+			reloadTime=0.03;
+			dispersion=0.006;
+			textureType="fastAuto";
+			minRangeProbab=0;
+			midRangeProbab=0;
+			maxRangeProbab=0;
 		};
 		aiDispersionCoefY=24;
 		aiDispersionCoefX=21;
@@ -3361,6 +3353,109 @@ class CfgWeapons
 		ace_overpressure_range=0;
 		ace_overpressure_damage=0;
 	};
+	class 3AS_optic_acog_DC15C;
+	class MET_optic_acog_DC15C: 3AS_optic_acog_DC15C
+	{
+		scope=2;
+		displayName="[16th] DC-15C Scope";
+		weaponInfoType="RscWeaponZeroing";
+		class ItemInfo: InventoryOpticsItem_Base_F
+		{
+			mass=7;
+			modelOptics="\JMSLLTE_weapons\Scope\big_cross_blue_full.p3d";
+			class OpticsModes
+			{
+				class 3AS_16C_Optic
+				{
+					opticsID=1;
+					useModelOptics=1;
+					opticsPPEffects[]=
+					{
+						"OpticsCHAbera1",
+						"OpticsBlur1"
+					};
+					opticsZoomMin=0.03;
+					opticsZoomMax=0.0825;
+					opticsZoomInit=0.0625;					
+					distanceZoomMin=1000;
+					distanceZoomMax=100;
+					modelOptics[]=
+					{
+						"\JMSLLTE_weapons\Scope\big_cross_blue_full.p3d"
+					};
+					memoryPointCamera="opticView";
+					visionMode[]=
+					{
+						"Normal",
+						"NVG",
+						"Ti"
+					};
+					thermalMode[]={1,2};
+					opticsFlare=1;
+					opticsDisablePeripherialVision=1;
+					cameraDir="";
+				};
+			};
+		};
+	};
+	class 3AS_Optic_Cinnagaran_1_F;
+	class MET_Optic_Cinnagaran_1_F: 3AS_Optic_Cinnagaran_1_F
+	{
+		scope=2;
+		displayName="[16th] Cinnagaran Scope";
+		weaponInfoType="RscWeaponZeroing";
+		class ItemInfo: InventoryOpticsItem_Base_F
+		{
+			mass=7;
+			modelOptics="\JMSLLTE_weapons\Scope\big_cross_blue_full.p3d";
+			class OpticsModes
+			{
+				class 3AS_Green_Optic1
+				{
+					opticsID=1;
+					useModelOptics=1;
+					opticsPPEffects[]=
+					{
+						"OpticsCHAbera1",
+						"OpticsBlur1"
+					};
+					opticsZoomMin=0.107;
+					opticsZoomMax=0.2;
+					opticsZoomInit=0.2;	
+					distanceZoomMin=1000;
+					distanceZoomMax=100;
+					modelOptics[]=
+					{
+						"\JMSLLTE_weapons\Scope\big_cross_blue_full.p3d"
+					};
+					memoryPointCamera="opticView";
+					visionMode[]=
+					{
+						"Normal",
+						"NVG",
+						"Ti"
+					};
+					thermalMode[]={1,2};
+					opticsFlare=1;
+					opticsDisablePeripherialVision=1;
+					cameraDir="";
+				};
+				class 3AS_Green_Optic1_Top: 3AS_Green_Optic1
+				{
+					opticsID=2;
+					useModelOptics=0;
+					opticsFlare=0;
+					opticsDisablePeripherialVision=0;
+					opticsZoomMin=0.375;
+					opticsZoomMax=1.1;
+					opticsZoomInit=0.75;
+					memoryPointCamera="eye";
+					visionMode[]={};
+					discretefov[]={};
+				};
+			};
+		};
+	};
 	class MET_Optic_VK38X: ItemCore
 	{
 		scope=2;
@@ -3422,195 +3517,6 @@ class CfgWeapons
 	};
 	class LFP_rifle_base;
 	class WeaponSlotsInfo;
-	class LFP_dc15xs;
-	class MET_dc15xs: LFP_dc15xs
-	{
-		scope=2;
-		magazines[]=
-		{
-			"MET_DC15XS_mag",
-			"LFP_dc15xs_Mag"
-		};
-		displayname="[16th] DC-15XS";
-		descriptionShort="Battle Rifle";
-		modes[]=
-		{
-			"Single",
-			"FullAuto"
-		};
-		class Single: Mode_SemiAuto
-		{
-			sounds[]=
-			{
-				"StandardSound"
-			};
-			class BaseSoundModeType
-			{
-				weaponSoundEffect="";
-				closure1[]={};
-				closure2[]={};
-				soundClosure[]={};
-			};
-			class StandardSound: BaseSoundModeType
-			{
-				weaponSoundEffect="";
-				begin1[]=
-				{
-					"LF_Weapon_Unit\main\sounds\773_1.wss",
-					1,
-					1,
-					1800
-				};
-				begin2[]=
-				{
-					"LF_Weapon_Unit\main\sounds\773_2.wss",
-					1,
-					1,
-					1800
-				};
-				begin3[]=
-				{
-					"LF_Weapon_Unit\main\sounds\773_3.wss",
-					1,
-					1,
-					1800
-				};
-				soundBegin[]=
-				{
-					"begin1",
-					0.33000001,
-					"begin2",
-					0.33000001,
-					"begin3",
-					0.33000001
-				};
-			};
-			reloadTime=0.12;
-			dispersion=0.00001;
-			minRange=5;
-			minRangeProbab=0.30000001;
-			midRange=25;
-			midRangeProbab=0.60000002;
-			maxRange=50;
-			maxRangeProbab=0.1;
-			aiRateOfFire=2;
-			aiRateOfFireDistance=25;
-		};
-		class FullAuto: Mode_FullAuto
-		{
-			sounds[]=
-			{
-				"StandardSound"
-			};
-			class BaseSoundModeType
-			{
-				weaponSoundEffect="";
-				closure1[]={};
-				closure2[]={};
-				soundClosure[]={};
-			};
-			class StandardSound: BaseSoundModeType
-			{
-				weaponSoundEffect="";
-				begin1[]=
-				{
-					"LF_Weapon_Unit\main\sounds\773_1.wss",
-					1,
-					1,
-					1800
-				};
-				begin2[]=
-				{
-					"LF_Weapon_Unit\main\sounds\773_2.wss",
-					1,
-					1,
-					1800
-				};
-				begin3[]=
-				{
-					"LF_Weapon_Unit\main\sounds\773_3.wss",
-					1,
-					1,
-					1800
-				};
-				soundBegin[]=
-				{
-					"begin1",
-					0.33000001,
-					"begin2",
-					0.33000001,
-					"begin3",
-					0.33000001
-				};
-			};
-			reloadTime=0.12;
-			dispersion=0.00086999999;
-			minRange=0;
-			minRangeProbab=0.89999998;
-			midRange=15;
-			midRangeProbab=0.69999999;
-			maxRange=50;
-			maxRangeProbab=0.1;
-			aiRateOfFire=1e-006;
-		};
-		inertia=1.4;
-		dexterity=1.7;
-		initSpeed=-1;
-		recoil="LFP_recoil";
-		maxRecoilSway=0.015;
-		swayDecaySpeed=1;
-		modelOptics="\JMSLLTE_weapons\Scope\big_cross_blue_easy.p3d";
-		class OpticsModes
-		{
-			class 773scope_sights
-			{
-				opticsID=1;
-				useModelOptics=0;
-				opticsPPEffects[]=
-				{
-					"Default"
-				};
-				opticsFlare=0;
-				opticsDisablePeripherialVision=0;
-				opticsZoomMin=0.25;
-				opticsZoomMax=1.25;
-				opticsZoomInit=0.75;
-				memoryPointCamera="eye";
-				visionMode[]={};
-				distanceZoomMin=200;
-				distanceZoomMax=200;
-				cameraDir="";
-			};
-			class 773scope_scope: 773scope_sights
-			{
-				opticsID=2;
-				useModelOptics=1;
-				opticsPPEffects[]=
-				{
-					"OpticsCHAbera1",
-					"OpticsBlur1"
-				};
-				opticsZoomMin=0.001;
-				opticsZoomMax=0.0925;
-				opticsZoomInit=0.0625;
-				modelOptics[]=
-				{
-					"\JMSLLTE_weapons\Scope\big_cross_blue_easy.p3d"
-				};
-				memoryPointCamera="opticView";
-				visionMode[]=
-				{
-					"Normal",
-					"NVG",
-					"Ti"
-				};
-				thermalMode[]={1,2};
-				opticsFlare=1;
-				opticsDisablePeripherialVision=1;
-				cameraDir="";
-			};
-		};
-	};
 	class MET_Valken38X_Base_F: Rifle_Base_F
 	{
 		author="$STR_3as_Studio";
@@ -4289,6 +4195,146 @@ class CfgWeapons
 					"JLTS_riot_shield_droid_attachment"
 				};
 			};
+		};
+	};
+	class 3AS_Cinnagaran_Carbine_F;
+	class MET_Cinnagaran_Carbine_F: 3AS_Cinnagaran_Carbine_F
+	{
+		scope=2;
+		displayName="[16th] Cinnagaran Carbine";
+		recoil="MET_recoil_DC15C";
+		magazines[]=
+		{
+			"MET_CinCar_Mag"
+		};
+		magazineWell[]=
+		{
+			"MET_CinCar_MagWell"
+		};
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			class CowsSlot: CowsSlot
+			{
+				linkProxy="\A3\data_f\proxies\weapon_slots\TOP";
+				compatibleItems[]=
+				{
+					"MET_Optic_Cinnagaran_1_F"
+				};
+			};
+			class PointerSlot: PointerSlot
+			{
+				linkProxy="\A3\data_f\proxies\weapon_slots\SIDE";
+				compatibleItems[]=
+				{
+					"3AS_Flashlight_Cinnagaran_1_F"
+				};
+			};
+			class UnderBarrelSlot: UnderBarrelSlot
+			{
+				linkProxy="\A3\data_f_mark\proxies\weapon_slots\UNDERBARREL";
+				compatibleItems[]={};
+			};
+		};
+		modes[]=
+		{
+			"Single",
+			"Burst",
+			"FullAuto"
+		};
+		class Single: Mode_SemiAuto
+		{
+			reloadTime=0.03;
+			dispersion=0.00066000002;
+			minRange=0;
+			minRangeProbab=0.89999998;
+			midRange=15;
+			midRangeProbab=0.69999999;
+			maxRange=30;
+			maxRangeProbab=0.1;
+			soundContinuous=0;
+			soundBurst=0;
+			sounds[]=
+			{
+				"StandardSound",
+				"SilencedSound"
+			};
+			class BaseSoundModeType;
+			class StandardSound: BaseSoundModeType
+			{
+				soundSetShot[]=
+				{
+					"3AS_Cinnagaran_SoundSet"
+				};
+			};
+		};
+		class Burst: Mode_Burst
+		{
+			reloadTime=0.03;
+			dispersion=0.00066000002;
+			minRange=0;
+			minRangeProbab=0.89999998;
+			midRange=15;
+			midRangeProbab=0.69999999;
+			maxRange=30;
+			maxRangeProbab=0.1;
+			soundContinuous=0;
+			soundBurst=0;
+			burst=5;
+			sounds[]=
+			{
+				"StandardSound",
+				"SilencedSound"
+			};
+			class BaseSoundModeType;
+			class StandardSound: BaseSoundModeType
+			{
+				soundSetShot[]=
+				{
+					"3AS_Cinnagaran_SoundSet"
+				};
+			};
+		};
+		class FullAuto: Mode_FullAuto
+		{
+			reloadTime=0.05;
+			dispersion=0.00106;
+			minRange=0;
+			minRangeProbab=0.89999998;
+			midRange=15;
+			midRangeProbab=0.69999999;
+			maxRange=30;
+			maxRangeProbab=0.1;
+			soundContinuous=0;
+			soundBurst=0;
+			sounds[]=
+			{
+				"StandardSound",
+				"SilencedSound"
+			};
+			class BaseSoundModeType;
+			class StandardSound: BaseSoundModeType
+			{
+				soundSetShot[]=
+				{
+					"3AS_Cinnagaran_SoundSet"
+				};
+			};
+		};
+		
+	};
+	class JLTS_EPL2;
+	class MET_EPL2: JLTS_EPL2
+	{
+		scope=2;
+		displayName="[16th] EPL-2";
+		magazines[]=
+		{
+			"MET_3Rnd_HE_Grenade_shell"
+		};
+		magazineWell[]=
+		{
+			"MET_GL_Magwell",
+			"MET_3GL_MagWell"
 		};
 	};
 	class optic_MRCO;
@@ -6084,8 +6130,7 @@ class CfgMagazineWells
 	{
 		MET_LightMagazines[]=
 		{
-			"MET_DC15C_mag",
-			"MET_blaster_pistol_battery"
+			"MET_DC15C_mag"
 		};
 	};
 	class MET_Z6_MagWell
@@ -6093,7 +6138,6 @@ class CfgMagazineWells
 		MET_Z6Magazines[]=
 		{
 			"MET_blaster_battery",
-			"MET_DC15C_mag",
 			"MET_blaster_pistol_battery"
 		};
 	};
@@ -6111,6 +6155,92 @@ class CfgMagazineWells
 			"3AS_60Rnd_EM50_RedPlasma",
 			"DBA_58x42mm_BP87D_x40_mag",
 			"Aux212_JLTS_E5_Mag"
+		};
+	};
+	class MET_CinCar_MagWell
+	{
+		MET_CinCar_Mags[]=
+		{
+			"MET_CinCar_Mag"
+		};
+	};
+	class MET_3GL_MagWell
+	{
+		MET_3GL_Mags[]=
+		{
+			"MET_3Rnd_HE_Grenade_shell",
+			"MET_3Rnd_AT_Grenade_shell",
+			"MET_3Rnd_ILLUM_Grenade",
+			"MET_3Rnd_ILLUM_Grenade_Clust",
+			"MET_3Rnd_ILLUM_B_Grenade",
+			"MET_3Rnd_ILLUM_B_Grenade_Clust",
+			"MET_3Rnd_ILLUM_G_Grenade",
+			"MET_3Rnd_ILLUM_G_Grenade_Clust",
+			"MET_3Rnd_ILLUM_R_Grenade",
+			"MET_3Rnd_ILLUM_R_Grenade_Clust",
+			"MET_3Rnd_ILLUM_Y_Grenade",
+			"MET_3Rnd_ILLUM_Y_Grenade_Clust",
+			"MET_3Rnd_ILLUM_O_Grenade",
+			"MET_3Rnd_ILLUM_O_Grenade_Clust",
+			"MET_3Rnd_ILLUM_P_Grenade",
+			"MET_3Rnd_ILLUM_P_Grenade_Clust",
+			"MET_3Rnd_ILLUM_TU_Grenade",
+			"MET_3Rnd_ILLUM_TU_Grenade_Clust",
+			"MET_3Rnd_ILLUM_TE_Grenade",
+			"MET_3Rnd_ILLUM_TE_Grenade_Clust",
+			"MET_3Rnd_ILLUM_IR_Grenade",
+			"MET_3Rnd_ILLUM_IR_Grenade_Clust",
+			"MET_3Rnd_SMKW_Grenade",
+			"MET_3Rnd_SMKB_Grenade",
+			"MET_3Rnd_SMKG_Grenade",
+			"MET_3Rnd_SMKO_Grenade",
+			"MET_3Rnd_SMKP_Grenade",
+			"MET_3Rnd_SMKR_Grenade",
+			"MET_3Rnd_SMKTU_Grenade",
+			"MET_3Rnd_SMKTE_Grenade",
+			"MET_3Rnd_SMKY_Grenade"
+		};
+	};
+	class MET_GL_MagWell
+	{
+		MET_GL_Mags[]=
+		{
+			"MET_HE_Grenade",
+			"MET_AT_Grenade",
+			"MET_SMKW_Grenade",
+			"MET_SMKB_Grenade",
+			"MET_SMKG_Grenade",
+			"MET_SMKO_Grenade",
+			"MET_SMKP_Grenade",
+			"MET_SMKR_Grenade",
+			"MET_SMKTU_Grenade",
+			"MET_SMKTE_Grenade",
+			"MET_SMKY_Grenade",
+			"MET_SUN_Grenade",
+			"MET_SUN_Grenade_Clust",
+			"MET_RA_Grenade",
+			"MET_RA_Grenade_Clust",
+			"MET_ILLUM_Grenade",
+			"MET_ILLUM_Grenade_Clust",
+			"MET_ILLUM_B_Grenade",
+			"MET_ILLUM_B_Grenade_Clust",
+			"MET_ILLUM_G_Grenade",
+			"MET_ILLUM_G_Grenade_Clust",
+			"MET_ILLUM_R_Grenade",
+			"MET_ILLUM_R_Grenade_Clust",
+			"MET_ILLUM_Y_Grenade",
+			"MET_ILLUM_Y_Grenade_Clust",
+			"MET_ILLUM_O_Grenade",
+			"MET_ILLUM_O_Grenade_Clust",
+			"MET_ILLUM_P_Grenade",
+			"MET_ILLUM_P_Grenade_Clust",
+			"MET_ILLUM_TU_Grenade",
+			"MET_ILLUM_TU_Grenade_Clust",
+			"MET_ILLUM_TE_Grenade",
+			"MET_ILLUM_TE_Grenade_Clust",
+			"MET_ILLUM_IR_Grenade",
+			"MET_ILLUM_IR_Grenade_Clust",
+			"ACE_HuntIR_M203"
 		};
 	};
 	class MET_DC17M_MagWell
@@ -6131,8 +6261,8 @@ class CfgMagazineWells
 			"MET_dc15sa_battery",
 			"MET_dc15sa_red_battery"
 		};
-	}
-}
+	};
+};
 class CfgMagazines
 {
 	class JLTS_DC15A_mag;
@@ -6214,11 +6344,27 @@ class CfgMagazines
 		modelSpecialIsProxy=0;
 		picture="\3AS\3AS_Weapons\Data\UI\3as_ammo_b.paa";
 		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
-		count=100;
+		count=25;
 		displayName="[16th] DC-15C Energy Cell";
 		displayNameShort="Energy Cell";
 		descriptionShort="Energy cell for the DC-15A, DC-15S, and DC-15L";
-		ammo="MET_blasterbolt_low";
+		ammo="MET_blasterbolt_br";
+		tracersEvery=1;
+	};
+	class MET_CinCar_Mag: JLTS_DC15A_mag
+	{
+		JLTS_hasElectronics=1;
+		JLTS_hasEMPProtection=1;
+		author="Hazmat";
+		modelSpecial="";
+		modelSpecialIsProxy=0;
+		picture="\3AS\3AS_Weapons\Data\UI\3as_ammo_g.paa";
+		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
+		count=100;
+		displayName="[16th] Cinnagaran Energy Cell";
+		displayNameShort="Energy Cell";
+		descriptionShort="Energy cell for the DC-15A, DC-15S, and DC-15L";
+		ammo="MET_blasterbolt_low_green";
 		tracersEvery=1;
 	};
 	class MET_DC15C_Red_mag: JLTS_DC15A_mag
@@ -6270,24 +6416,6 @@ class CfgMagazines
 		tracersEvery=1;
 		initSpeed=250;
 		mass=40;
-	};
-	class MET_DC15XS_mag: MET_DC15A_mag
-	{
-		JLTS_hasElectronics=1;
-		JLTS_hasEMPProtection=1;
-		author="Hazmat";
-		modelSpecial="";
-		modelSpecialIsProxy=0;
-		picture="\3AS\3AS_Weapons\Data\UI\3as_sniper_b.paa";
-		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
-		count=30;
-		displayName="[16th] DC-15Xs Energy Cell";
-		displayNameShort="Energy Cell";
-		descriptionShort="Energy cell for the DC-15Xs";
-		ammo="MET_blasterbolt";
-		tracersEvery=1;
-		initSpeed = 1000;
-		mass=15;
 	};
 	class MET_Valken_mag: JLTS_DC15A_mag
 	{
@@ -6529,7 +6657,7 @@ class CfgMagazines
 	{
 		author="Hazmat";
 		count=1;
-		displayName="[16th] Impact Grenade";
+		displayName="[16th] HE Grenade";
 		displayNameShort="[16th] HE Grenades";
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_he.paa";
 		descriptionShort="Impact grenade";
@@ -6547,12 +6675,379 @@ class CfgMagazines
 		ammo="MET_HEAT_LauncherGrenade";
 		mass=8;
 	};
+	class MET_ILLUM_Grenade: 1Rnd_HE_Grenade_shell
+	{
+		author="Hazmat";
+		count=1;
+		displayName="[16th] Illumination Flare";
+		displayNameShort="[16th] White Flare";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_flw.paa";
+		descriptionShort="Flare";
+		ammo="MET_GL_Flare_LUM";
+		mass=8;
+	};
+	class MET_ILLUM_Grenade_Clust: 1Rnd_HE_Grenade_shell
+	{
+		author="Hazmat";
+		count=1;
+		displayName="[16th] Illumination Star Cluster";
+		displayNameShort="[16th] White Cluster";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_flw.paa";
+		descriptionShort="Flare";
+		ammo="MET_GL_Flare_LUM_Cluster";
+		mass=8;
+	};
+	class MET_SUN_Grenade: 1Rnd_HE_Grenade_shell
+	{
+		scope=1;
+		author="Hazmat";
+		count=1;
+		displayName="[16th] THE SUN";
+		displayNameShort="[16th] SUN";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_flw.paa";
+		descriptionShort="By the Emperors Light...";
+		ammo="MET_GL_Flare_SUN";
+		mass=8;
+	};
+	class MET_SUN_Grenade_Clust: 1Rnd_HE_Grenade_shell
+	{
+		scope=1;
+		author="Hazmat";
+		count=1;
+		displayName="[16th] THE SUN Star Cluster";
+		displayNameShort="[16th] SUN Cluster";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_flw.paa";
+		descriptionShort="... Light my Darkness";
+		ammo="MET_GL_Flare_SUN_Cluster";
+		mass=8;
+	};
+	class MET_RA_Grenade: 1Rnd_HE_Grenade_shell
+	{
+		scope=1;
+		author="Hazmat";
+		count=1;
+		displayName="[16th] The power of RA";
+		displayNameShort="[16th] RA";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_flw.paa";
+		descriptionShort="RA!";
+		ammo="MET_GL_Flare_RA";
+		mass=8;
+	};
+	class MET_RA_Grenade_Clust: 1Rnd_HE_Grenade_shell
+	{
+		scope=1;
+		author="Hazmat";
+		count=1;
+		displayName="[16th] The power of RA Star Cluster";
+		displayNameShort="[16th] RA Cluster";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_flw.paa";
+		descriptionShort="I SUMMON THEE";
+		ammo="MET_GL_Flare_RA_Cluster";
+		mass=8;
+	};
+	class MET_ILLUM_B_Grenade: 1Rnd_HE_Grenade_shell
+	{
+		author="Hazmat";
+		count=1;
+		displayName="[16th] Blue Illumination Flare";
+		displayNameShort="[16th] Blue Flare";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_flb.paa";
+		descriptionShort="Flare";
+		ammo="MET_GL_Flare_B_LUM";
+		mass=8;
+	};
+	class MET_ILLUM_B_Grenade_Clust: 1Rnd_HE_Grenade_shell
+	{
+		author="Hazmat";
+		count=1;
+		displayName="[16th] Blue Illumination Star Cluster";
+		displayNameShort="[16th] Blue Cluster";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_flb.paa";
+		descriptionShort="Flare";
+		ammo="MET_GL_Flare_B_LUM_Cluster";
+		mass=8;
+	};
+	class MET_ILLUM_G_Grenade: 1Rnd_HE_Grenade_shell
+	{
+		author="Hazmat";
+		count=1;
+		displayName="[16th] Green Illumination Flare";
+		displayNameShort="[16th] Green Flare";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_flg.paa";
+		descriptionShort="Flare";
+		ammo="MET_GL_Flare_G_LUM";
+		mass=8;
+	};
+	class MET_ILLUM_G_Grenade_Clust: 1Rnd_HE_Grenade_shell
+	{
+		author="Hazmat";
+		count=1;
+		displayName="[16th] Green Illumination Star Cluster";
+		displayNameShort="[16th] Green Cluster";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_flg.paa";
+		descriptionShort="Flare";
+		ammo="MET_GL_Flare_G_LUM_Cluster";
+		mass=8;
+	};
+	class MET_ILLUM_R_Grenade: 1Rnd_HE_Grenade_shell
+	{
+		author="Hazmat";
+		count=1;
+		displayName="[16th] Red Illumination Flare";
+		displayNameShort="[16th] Red Flare";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_flr.paa";
+		descriptionShort="Flare";
+		ammo="MET_GL_Flare_R_LUM";
+		mass=8;
+	};
+	class MET_ILLUM_R_Grenade_Clust: 1Rnd_HE_Grenade_shell
+	{
+		author="Hazmat";
+		count=1;
+		displayName="[16th] Red Illumination Star Cluster";
+		displayNameShort="[16th] Red Cluster";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_flr.paa";
+		descriptionShort="Flare";
+		ammo="MET_GL_Flare_R_LUM_Cluster";
+		mass=8;
+	};
+	class MET_ILLUM_Y_Grenade: 1Rnd_HE_Grenade_shell
+	{
+		author="Hazmat";
+		count=1;
+		displayName="[16th] Yellow Illumination Flare";
+		displayNameShort="[16th] Yellow Flare";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_fly.paa";
+		descriptionShort="Flare";
+		ammo="MET_GL_Flare_Y_LUM";
+		mass=8;
+	};
+	class MET_ILLUM_Y_Grenade_Clust: 1Rnd_HE_Grenade_shell
+	{
+		author="Hazmat";
+		count=1;
+		displayName="[16th] Yellow Illumination Star Cluster";
+		displayNameShort="[16th] Yellow Cluster";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_fly.paa";
+		descriptionShort="Flare";
+		ammo="MET_GL_Flare_Y_LUM_Cluster";
+		mass=8;
+	};
+	class MET_ILLUM_O_Grenade: 1Rnd_HE_Grenade_shell
+	{
+		author="Hazmat";
+		count=1;
+		displayName="[16th] Orange Illumination Flare";
+		displayNameShort="[16th] Orange Flare";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_flo.paa";
+		descriptionShort="Flare";
+		ammo="MET_GL_Flare_O_LUM";
+		mass=8;
+	};
+	class MET_ILLUM_O_Grenade_Clust: 1Rnd_HE_Grenade_shell
+	{
+		author="Hazmat";
+		count=1;
+		displayName="[16th] Orange Illumination Star Cluster";
+		displayNameShort="[16th] Orange Cluster";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_flo.paa";
+		descriptionShort="Flare";
+		ammo="MET_GL_Flare_O_LUM_Cluster";
+		mass=8;
+	};
+	class MET_ILLUM_P_Grenade: 1Rnd_HE_Grenade_shell
+	{
+		author="Hazmat";
+		count=1;
+		displayName="[16th] Purple Illumination Flare";
+		displayNameShort="[16th] Purple Flare";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_flp.paa";
+		descriptionShort="Flare";
+		ammo="MET_GL_Flare_P_LUM";
+		mass=8;
+	};
+	class MET_ILLUM_P_Grenade_Clust: 1Rnd_HE_Grenade_shell
+	{
+		author="Hazmat";
+		count=1;
+		displayName="[16th] Purple Illumination Star Cluster";
+		displayNameShort="[16th] Purple Cluster";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_flp.paa";
+		descriptionShort="Flare";
+		ammo="MET_GL_Flare_P_LUM_Cluster";
+		mass=8;
+	};
+	class MET_ILLUM_TU_Grenade: 1Rnd_HE_Grenade_shell
+	{
+		author="Hazmat";
+		count=1;
+		displayName="[16th] Turquoise Illumination Flare";
+		displayNameShort="[16th] Turquoise Flare";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_flb.paa";
+		descriptionShort="Flare";
+		ammo="MET_GL_Flare_TU_LUM";
+		mass=8;
+	};
+	class MET_ILLUM_TU_Grenade_Clust: 1Rnd_HE_Grenade_shell
+	{
+		author="Hazmat";
+		count=1;
+		displayName="[16th] Turquoise Illumination Star Cluster";
+		displayNameShort="[16th] Turquoise Cluster";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_flb.paa";
+		descriptionShort="Flare";
+		ammo="MET_GL_Flare_TU_LUM_Cluster";
+		mass=8;
+	};
+	class MET_ILLUM_TE_Grenade: 1Rnd_HE_Grenade_shell
+	{
+		author="Hazmat";
+		count=1;
+		displayName="[16th] Teal Illumination Flare";
+		displayNameShort="[16th] Teal Flare";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_flg.paa";
+		descriptionShort="Flare";
+		ammo="MET_GL_Flare_TE_LUM";
+		mass=8;
+	};
+	class MET_ILLUM_TE_Grenade_Clust: 1Rnd_HE_Grenade_shell
+	{
+		author="Hazmat";
+		count=1;
+		displayName="[16th] Teal Illumination Star Cluster";
+		displayNameShort="[16th] Teal Cluster";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_flg.paa";
+		descriptionShort="Flare";
+		ammo="MET_GL_Flare_TE_LUM_Cluster";
+		mass=8;
+	};
+	class MET_ILLUM_IR_Grenade: 1Rnd_HE_Grenade_shell
+	{
+		author="Hazmat";
+		count=1;
+		displayName="[16th] IR Illumination Flare";
+		displayNameShort="[16th] IR Flare";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_flp.paa";
+		descriptionShort="Flare";
+		ammo="MET_GL_Flare_IR_LUM";
+		mass=8;
+	};
+	class MET_ILLUM_IR_Grenade_Clust: 1Rnd_HE_Grenade_shell
+	{
+		author="Hazmat";
+		count=1;
+		displayName="[16th] IR Illumination Star Cluster";
+		displayNameShort="[16th] IR Cluster";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_flp.paa";
+		descriptionShort="Flare";
+		ammo="MET_GL_Flare_IR_LUM_Cluster";
+		mass=8;
+	};
+	class MET_SMKW_Grenade: 1Rnd_HE_Grenade_shell
+	{
+		author="Hazmat";
+		count=1;
+		displayName="[16th] White Smoke Grenade";
+		displayNameShort="[16th] White Smoke Grenades";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_smw.paa";
+		descriptionShort="Smoke grenade";
+		ammo="Met_Ammo_smoke_white";
+		mass=8;
+	};
+	class MET_SMKB_Grenade: 1Rnd_HE_Grenade_shell
+	{
+		author="Hazmat";
+		count=1;
+		displayName="[16th] Blue Smoke Grenade";
+		displayNameShort="[16th] Blue Smoke Grenades";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_smb.paa";
+		descriptionShort="Smoke grenade";
+		ammo="Met_Ammo_smoke_blue";
+		mass=8;
+	};
+	class MET_SMKG_Grenade: 1Rnd_HE_Grenade_shell
+	{
+		author="Hazmat";
+		count=1;
+		displayName="[16th] Green Smoke Grenade";
+		displayNameShort="[16th] Green Smoke Grenades";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_smg.paa";
+		descriptionShort="Smoke grenade";
+		ammo="Met_Ammo_smoke_green";
+		mass=8;
+	};
+	class MET_SMKO_Grenade: 1Rnd_HE_Grenade_shell
+	{
+		author="Hazmat";
+		count=1;
+		displayName="[16th] Orange Smoke Grenade";
+		displayNameShort="[16th] Orange Smoke Grenades";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_smo.paa";
+		descriptionShort="Smoke grenade";
+		ammo="Met_Ammo_smoke_orange";
+		mass=8;
+	};
+	class MET_SMKP_Grenade: 1Rnd_HE_Grenade_shell
+	{
+		author="Hazmat";
+		count=1;
+		displayName="[16th] Purple Smoke Grenade";
+		displayNameShort="[16th] Purple Smoke Grenades";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_smp.paa";
+		descriptionShort="Smoke grenade";
+		ammo="Met_Ammo_smoke_purple";
+		mass=8;
+	};
+	class MET_SMKR_Grenade: 1Rnd_HE_Grenade_shell
+	{
+		author="Hazmat";
+		count=1;
+		displayName="[16th] Red Smoke Grenade";
+		displayNameShort="[16th] Red Smoke Grenades";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_smr.paa";
+		descriptionShort="Smoke grenade";
+		ammo="Met_Ammo_smoke_red";
+		mass=8;
+	};
+	class MET_SMKTU_Grenade: 1Rnd_HE_Grenade_shell
+	{
+		author="Hazmat";
+		count=1;
+		displayName="[16th] Turquoise Smoke Grenade";
+		displayNameShort="[16th] Turquoise Smoke Grenades";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_smb.paa";
+		descriptionShort="Smoke grenade";
+		ammo="Met_Ammo_smoke_turquoise";
+		mass=8;
+	};
+	class MET_SMKTE_Grenade: 1Rnd_HE_Grenade_shell
+	{
+		author="Hazmat";
+		count=1;
+		displayName="[16th] Teal Smoke Grenade";
+		displayNameShort="[16th] Teal Smoke Grenades";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_smg.paa";
+		descriptionShort="Smoke grenade";
+		ammo="Met_Ammo_smoke_teal";
+		mass=8;
+	};
+	class MET_SMKY_Grenade: 1Rnd_HE_Grenade_shell
+	{
+		author="Hazmat";
+		count=1;
+		displayName="[16th] Yellow Smoke Grenade";
+		displayNameShort="[16th] Yellow Smoke Grenades";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_smy.paa";
+		descriptionShort="Smoke grenade";
+		ammo="Met_Ammo_smoke_yellow";
+		mass=8;
+	};
 	class 3AS_6Rnd_HE_Grenade_shell;
 	class MET_3Rnd_HE_Grenade_shell: 3AS_6Rnd_HE_Grenade_shell
 	{
 		author="Hazmat";
 		count=3;
-		displayName="[16th] 3 Round Impact Grenade";
+		displayName="[16th] 3 Round HE Grenade";
 		displayNameShort="[16th] HE Grenades";
 		descriptionShort="Impact grenade";
 		ammo="MET_HE_LauncherGrenade";
@@ -6568,11 +7063,214 @@ class CfgMagazines
 		ammo="MET_HEAT_LauncherGrenade";
 		mass=12;
 	};
+	class MET_3Rnd_ILLUM_Grenade: MET_ILLUM_Grenade
+	{
+		author="Hazmat";
+		count=3;
+		displayName="[16th] 3 Round Illumination Flare";
+		mass=12;
+	};
+	class MET_3Rnd_ILLUM_Grenade_Clust: MET_ILLUM_Grenade_Clust
+	{
+		author="Hazmat";
+		count=3;
+		displayName="[16th] 3 Round Illumination Star Cluster";
+		mass=12;
+	};
+	class MET_3Rnd_ILLUM_B_Grenade: MET_ILLUM_B_Grenade
+	{
+		author="Hazmat";
+		count=3;
+		displayName="[16th] 3 Round Blue Illumination Flare";
+		mass=12;
+	};
+	class MET_3Rnd_ILLUM_B_Grenade_Clust: MET_ILLUM_B_Grenade_Clust
+	{
+		author="Hazmat";
+		count=3;
+		displayName="[16th] 3 Round Blue Illumination Star Cluster";
+		mass=12;
+	};
+	class MET_3Rnd_ILLUM_G_Grenade: MET_ILLUM_G_Grenade
+	{
+		author="Hazmat";
+		count=3;
+		displayName="[16th] 3 Round Green Illumination Flare";
+		mass=12;
+	};
+	class MET_3Rnd_ILLUM_G_Grenade_Clust: MET_ILLUM_G_Grenade_Clust
+	{
+		author="Hazmat";
+		count=1;
+		displayName="[16th] 3 Round Green Illumination Star Cluster";
+		mass=12;
+	};
+	class MET_3Rnd_ILLUM_R_Grenade: MET_ILLUM_R_Grenade
+	{
+		author="Hazmat";
+		count=3;
+		displayName="[16th] 3 Round Red Illumination Flare";
+		mass=12;
+	};
+	class MET_3Rnd_ILLUM_R_Grenade_Clust: MET_ILLUM_R_Grenade_Clust
+	{
+		author="Hazmat";
+		count=3;
+		displayName="[16th] 3 Round Red Illumination Star Cluster";
+		mass=12;
+	};
+	class MET_3Rnd_ILLUM_Y_Grenade: MET_ILLUM_Y_Grenade
+	{
+		author="Hazmat";
+		count=3;
+		displayName="[16th] 3 Round Yellow Illumination Flare";
+		mass=12;
+	};
+	class MET_3Rnd_ILLUM_Y_Grenade_Clust: MET_ILLUM_Y_Grenade_Clust
+	{
+		author="Hazmat";
+		count=3;
+		displayName="[16th] 3 Round Yellow Illumination Star Cluster";
+		mass=12;
+	};
+	class MET_3Rnd_ILLUM_O_Grenade: MET_ILLUM_O_Grenade
+	{
+		author="Hazmat";
+		count=3;
+		displayName="[16th] 3 Round Orange Illumination Flare";
+		mass=12;
+	};
+	class MET_3Rnd_ILLUM_O_Grenade_Clust: MET_ILLUM_O_Grenade_Clust
+	{
+		author="Hazmat";
+		count=3;
+		displayName="[16th] 3 Round Orange Illumination Star Cluster";
+		mass=12;
+	};
+	class MET_3Rnd_ILLUM_P_Grenade: MET_ILLUM_P_Grenade
+	{
+		author="Hazmat";
+		count=3;
+		displayName="[16th] 3 Round Purple Illumination Flare";
+		mass=12;
+	};
+	class MET_3Rnd_ILLUM_P_Grenade_Clust: MET_ILLUM_P_Grenade_Clust
+	{
+		author="Hazmat";
+		count=3;
+		displayName="[16th] 3 Round Purple Illumination Star Cluster";
+		mass=12;
+	};
+	class MET_3Rnd_ILLUM_TU_Grenade: MET_ILLUM_TU_Grenade
+	{
+		author="Hazmat";
+		count=3;
+		displayName="[16th] 3 Round Turquoise Illumination Flare";
+		mass=12;
+	};
+	class MET_3Rnd_ILLUM_TU_Grenade_Clust: MET_ILLUM_TU_Grenade_Clust
+	{
+		author="Hazmat";
+		count=3;
+		displayName="[16th] 3 Round Turquoise Illumination Star Cluster";
+		mass=12;
+	};
+	class MET_3Rnd_ILLUM_TE_Grenade: MET_ILLUM_TE_Grenade
+	{
+		author="Hazmat";
+		count=3;
+		displayName="[16th] 3 Round Teal Illumination Flare";
+		mass=12;
+	};
+	class MET_3Rnd_ILLUM_TE_Grenade_Clust: MET_ILLUM_TE_Grenade_Clust
+	{
+		author="Hazmat";
+		count=3;
+		displayName="[16th] 3 Round Teal Illumination Star Cluster";
+		mass=12;
+	};
+	class MET_3Rnd_ILLUM_IR_Grenade: MET_ILLUM_IR_Grenade
+	{
+		author="Hazmat";
+		count=3;
+		displayName="[16th] 3 Round IR Illumination Flare";
+		mass=12;
+	};
+	class MET_3Rnd_ILLUM_IR_Grenade_Clust: MET_ILLUM_IR_Grenade_Clust
+	{
+		author="Hazmat";
+		count=3;
+		displayName="[16th] 3 Round IR Illumination Star Cluster";
+		mass=12;
+	};
+	class MET_3Rnd_SMKW_Grenade: MET_SMKW_Grenade
+	{
+		author="Hazmat";
+		count=3;
+		displayName="[16th] 3 Round White Smoke Grenade";
+		mass=12;
+	};
+	class MET_3Rnd_SMKB_Grenade: MET_SMKB_Grenade
+	{
+		author="Hazmat";
+		count=3;
+		displayName="[16th] 3 Round Blue Smoke Grenade";
+		mass=12;
+	};
+	class MET_3Rnd_SMKG_Grenade: MET_SMKG_Grenade
+	{
+		author="Hazmat";
+		count=3;
+		displayName="[16th] 3 Round Green Smoke Grenade";
+		mass=12;
+	};
+	class MET_3Rnd_SMKO_Grenade: MET_SMKO_Grenade
+	{
+		author="Hazmat";
+		count=3;
+		displayName="[16th] 3 Round Orange Smoke Grenade";
+		mass=12;
+	};
+	class MET_3Rnd_SMKP_Grenade: MET_SMKP_Grenade
+	{
+		author="Hazmat";
+		count=3;
+		displayName="[16th] 3 Round Purple Smoke Grenade";
+		mass=12;
+	};
+	class MET_3Rnd_SMKR_Grenade: MET_SMKR_Grenade
+	{
+		author="Hazmat";
+		count=3;
+		displayName="[16th] 3 Round Red Smoke Grenade";
+		mass=12;
+	};
+	class MET_3Rnd_SMKTU_Grenade: MET_SMKTU_Grenade
+	{
+		author="Hazmat";
+		count=3;
+		displayName="[16th] 3 Round Turquoise Smoke Grenade";
+		mass=12;
+	};
+	class MET_3Rnd_SMKTE_Grenade: MET_SMKTE_Grenade
+	{
+		author="Hazmat";
+		count=3;
+		displayName="[16th] 3 Round Teal Smoke Grenade";
+		mass=12;
+	};
+	class MET_3Rnd_SMKY_Grenade: MET_SMKY_Grenade
+	{
+		author="Hazmat";
+		count=3;
+		displayName="[16th] 3 Round Yellow Smoke Grenade";
+		mass=12;
+	};
 	class MET_6Rnd_HE_Grenade_shell: 3AS_6Rnd_HE_Grenade_shell
 	{
 		author="Hazmat";
 		count=6;
-		displayName="[16th] 6 Round Impact Grenade";
+		displayName="[16th] 6 Round HE Grenade";
 		displayNameShort="[16th] HEAT Grenades";
 		descriptionShort="Impact grenade";
 		ammo="MET_HE_LauncherGrenade";
@@ -17203,6 +17901,11 @@ class CfgAmmo
 	{
 		deflecting=2;
 	};
+	/*===================================================================================================
+	=====================================================================================================
+	===UBGL Ammo
+	=====================================================================================================
+	===================================================================================================*/
 	class GrenadeBase;
 	class G_40mm_HE;
 	class MET_HE_LauncherGrenade: G_40mm_HE
@@ -17406,6 +18109,450 @@ class CfgAmmo
 			distance=1;
 		};
 	};
+	/*===============================================
+	==White Flares
+	===============================================*/
+	class F_40mm_White;
+	class MET_GL_Flare_LUM_SubMun: F_40mm_White
+	{
+		audibleFire = 0;
+		timeToLive = 300;
+		effectFlare = "CounterMeasureFlare";
+		lightColor[] = {0.95,0.95,1,0.5};
+		smokeColor[] = {1,1,1,0.5};
+		intensity = 1500000;
+        coefGravity = 0.25;
+		size = 1;
+		triggerSpeedCoef=1;
+		brightness=12;
+	};
+	class MET_GL_Flare_LUM: MET_GL_Flare_LUM_SubMun
+	{
+		audibleFire = 1;
+	};
+	class MET_GL_Flare_LUM_Cluster: G_40mm_HE
+	{
+		submunitionAmmo[] = {"MET_GL_Flare_LUM_SubMun"};
+		submunitionInitSpeed = 100;
+		submunitionConeAngle[] = {10};
+		submunitionConeAngleHorizontal = 360;
+		submunitionConeType[] = {"randomupcone",6};
+		submunitionParentSpeedCoef = 0;
+		submunitionInitialOffset[] = {0,0,0};
+		submunitionAutoleveling = 1;
+		submunitionDirectionType = "submunitionAutoleveling";
+		directionalExplosion = 1;
+		triggerOnImpact = 1;
+		triggerDistance = 0;
+		explosionTime = 3;
+	};
+	/*===============================================
+	==The Sun
+	===============================================*/
+	class MET_GL_Flare_SUN_SubMun: F_40mm_White
+	{
+		audibleFire = 0;
+		timeToLive = 120;
+		effectFlare = "CounterMeasureFlare";
+		lightColor[] = {1, 0.839, 0.647,0.5};
+		smokeColor[] = {1,1,1,0.5};
+		intensity = 25000000;
+        coefGravity = 0.25;
+		size = 1;
+		triggerSpeedCoef=1;
+		brightness = 25000000;
+	};
+	class MET_GL_Flare_SUN: MET_GL_Flare_SUN_SubMun
+	{
+		audibleFire = 1;
+	};
+	class MET_GL_Flare_SUN_Cluster: G_40mm_HE
+	{
+		submunitionAmmo[] = {"MET_GL_Flare_SUN_SubMun"};
+		submunitionInitSpeed = 100;
+		submunitionConeAngle[] = {10};
+		submunitionConeAngleHorizontal = 360;
+		submunitionConeType[] = {"randomupcone",6};
+		submunitionParentSpeedCoef = 0;
+		submunitionInitialOffset[] = {0,0,0};
+		submunitionAutoleveling = 1;
+		submunitionDirectionType = "submunitionAutoleveling";
+		directionalExplosion = 1;
+		triggerOnImpact = 1;
+		triggerDistance = 0;
+		explosionTime = 3;
+	};
+	/*===============================================
+	==The Power of RA
+	===============================================*/
+	class MET_GL_Flare_RA_SubMun: F_40mm_White
+	{
+		audibleFire = 0;
+		timeToLive = 15;
+		effectFlare = "CounterMeasureFlare";
+		lightColor[] = {1, 1, 1,0.5};
+		smokeColor[] = {1,1,1,0.5};
+		intensity = 999999999999999999999999999999999999999999999999999999999999999999;
+        coefGravity = 0.25;
+		size = 1;
+		triggerSpeedCoef=1;
+		brightness = 999999999999999999999999999999999999999999999999999999999999999999;
+	};
+	class MET_GL_Flare_RA: MET_GL_Flare_RA_SubMun
+	{
+		audibleFire = 1;
+	};
+	class MET_GL_Flare_RA_Cluster: G_40mm_HE
+	{
+		submunitionAmmo[] = {"MET_GL_Flare_RA_SubMun"};
+		submunitionInitSpeed = 100;
+		submunitionConeAngle[] = {10};
+		submunitionConeAngleHorizontal = 360;
+		submunitionConeType[] = {"randomupcone",6};
+		submunitionParentSpeedCoef = 0;
+		submunitionInitialOffset[] = {0,0,0};
+		submunitionAutoleveling = 1;
+		submunitionDirectionType = "submunitionAutoleveling";
+		directionalExplosion = 1;
+		triggerOnImpact = 1;
+		triggerDistance = 0;
+		explosionTime = 3;
+	};
+	/*===============================================
+	==Blue Flares
+	===============================================*/
+	class MET_GL_Flare_B_LUM_SubMun: F_40mm_White
+	{
+		audibleFire = 0;
+		timeToLive = 300;
+		//effectFlare = "CounterMeasureFlare";
+		useFlare=1;
+		lightColor[] = {0.1183,0.1867,1,0.5};
+		smokeColor[] = {1,1,1,0.5};
+		intensity = 1500000;
+		//timeToLive = 45;
+        coefGravity = 0.25;
+		size = 1;
+		triggerSpeedCoef=1;
+		brightness=12;
+	};
+	class MET_GL_Flare_B_LUM: MET_GL_Flare_B_LUM_SubMun
+	{
+		audibleFire = 1;
+	};
+	class MET_GL_Flare_B_LUM_Cluster: G_40mm_HE
+	{
+		submunitionAmmo[] = {"MET_GL_Flare_B_LUM_SubMun"};
+		submunitionInitSpeed = 100;
+		submunitionConeAngle[] = {10};
+		submunitionConeAngleHorizontal = 360;
+		submunitionConeType[] = {"randomupcone",6};
+		submunitionParentSpeedCoef = 0;
+		submunitionInitialOffset[] = {0,0,0};
+		submunitionAutoleveling = 1;
+		submunitionDirectionType = "submunitionAutoleveling";
+		directionalExplosion = 1;
+		triggerOnImpact = 1;
+		triggerDistance = 0;
+		explosionTime = 3;
+	};
+	/*===============================================
+	==Green Flares
+	===============================================*/
+	class MET_GL_Flare_G_LUM_SubMun: F_40mm_White
+	{
+		audibleFire = 0;
+		timeToLive = 300;
+		effectFlare = "CounterMeasureFlare";
+		useFlare=1;
+		lightColor[] = {0.067, 0.89, 0.035,0};
+		smokeColor[] = {1,1,1,0.5};
+		intensity = 1500000;
+    	coefGravity = 0.25;
+		size = 1;
+		triggerSpeedCoef=1;
+		brightness=12;
+	};
+	class MET_GL_Flare_G_LUM: MET_GL_Flare_G_LUM_SubMun
+	{
+		audibleFire = 1;
+	};
+	class MET_GL_Flare_G_LUM_Cluster: G_40mm_HE
+	{
+		submunitionAmmo[] = {"MET_GL_Flare_G_LUM_SubMun"};
+		submunitionInitSpeed = 100;
+		submunitionConeAngle[] = {10};
+		submunitionConeAngleHorizontal = 360;
+		submunitionConeType[] = {"randomupcone",6};
+		submunitionParentSpeedCoef = 0;
+		submunitionInitialOffset[] = {0,0,0};
+		submunitionAutoleveling = 1;
+		submunitionDirectionType = "submunitionAutoleveling";
+		directionalExplosion = 1;
+		triggerOnImpact = 1;
+		triggerDistance = 0;
+		explosionTime = 3;
+	};
+	/*===============================================
+	==Red Flares
+	===============================================*/
+	class MET_GL_Flare_R_LUM_SubMun: F_40mm_White
+	{
+		audibleFire = 0;
+		timeToLive = 300;
+		effectFlare = "CounterMeasureFlare";
+		useFlare=1;
+		lightColor[] = {0.84380001,0.1383,0.1353,0};
+		smokeColor[] = {1,1,1,0.5};
+		intensity = 1500000;
+    	coefGravity = 0.25;
+		size = 1;
+		triggerSpeedCoef=1;
+		brightness=12;
+	};
+	class MET_GL_Flare_R_LUM: MET_GL_Flare_R_LUM_SubMun
+	{
+		audibleFire = 1;
+	};
+	class MET_GL_Flare_R_LUM_Cluster: G_40mm_HE
+	{
+		submunitionAmmo[] = {"MET_GL_Flare_R_LUM_SubMun"};
+		submunitionInitSpeed = 100;
+		submunitionConeAngle[] = {10};
+		submunitionConeAngleHorizontal = 360;
+		submunitionConeType[] = {"randomupcone",6};
+		submunitionParentSpeedCoef = 0;
+		submunitionInitialOffset[] = {0,0,0};
+		submunitionAutoleveling = 1;
+		submunitionDirectionType = "submunitionAutoleveling";
+		directionalExplosion = 1;
+		triggerOnImpact = 1;
+		triggerDistance = 0;
+		explosionTime = 3;
+	};
+	/*===============================================
+	==Yellow Flares
+	===============================================*/
+	class MET_GL_Flare_Y_LUM_SubMun: F_40mm_White
+	{
+		audibleFire = 0;
+		timeToLive = 300;
+		effectFlare = "CounterMeasureFlare";
+		useFlare=1;
+		lightColor[] = {0.949, 0.937, 0.094,0};
+		smokeColor[] = {1,1,1,0.5};
+		intensity = 1500000;
+    	coefGravity = 0.25;
+		size = 1;
+		triggerSpeedCoef=1;
+		brightness=12;
+	};
+	class MET_GL_Flare_Y_LUM: MET_GL_Flare_Y_LUM_SubMun
+	{
+		audibleFire = 1;
+	};
+	class MET_GL_Flare_Y_LUM_Cluster: G_40mm_HE
+	{
+		submunitionAmmo[] = {"MET_GL_Flare_Y_LUM_SubMun"};
+		submunitionInitSpeed = 100;
+		submunitionConeAngle[] = {10};
+		submunitionConeAngleHorizontal = 360;
+		submunitionConeType[] = {"randomupcone",6};
+		submunitionParentSpeedCoef = 0;
+		submunitionInitialOffset[] = {0,0,0};
+		submunitionAutoleveling = 1;
+		submunitionDirectionType = "submunitionAutoleveling";
+		directionalExplosion = 1;
+		triggerOnImpact = 1;
+		triggerDistance = 0;
+		explosionTime = 3;
+	};
+	/*===============================================
+	==Orange Flares
+	===============================================*/
+	class MET_GL_Flare_O_LUM_SubMun: F_40mm_White
+	{
+		audibleFire = 0;
+		timeToLive = 300;
+		effectFlare = "CounterMeasureFlare";
+		useFlare=1;
+		lightColor[] = {1, 0.639, 0,0};
+		smokeColor[] = {1,1,1,0.5};
+		intensity = 1500000;
+    	coefGravity = 0.25;
+		size = 1;
+		triggerSpeedCoef=1;
+		brightness=12;
+	};
+	class MET_GL_Flare_O_LUM: MET_GL_Flare_O_LUM_SubMun
+	{
+		audibleFire = 1;
+	};
+	class MET_GL_Flare_O_LUM_Cluster: G_40mm_HE
+	{
+		submunitionAmmo[] = {"MET_GL_Flare_O_LUM_SubMun"};
+		submunitionInitSpeed = 100;
+		submunitionConeAngle[] = {10};
+		submunitionConeAngleHorizontal = 360;
+		submunitionConeType[] = {"randomupcone",6};
+		submunitionParentSpeedCoef = 0;
+		submunitionInitialOffset[] = {0,0,0};
+		submunitionAutoleveling = 1;
+		submunitionDirectionType = "submunitionAutoleveling";
+		directionalExplosion = 1;
+		triggerOnImpact = 1;
+		triggerDistance = 0;
+		explosionTime = 3;
+	};
+	/*===============================================
+	==Purple Flares
+	===============================================*/
+	class MET_GL_Flare_P_LUM_SubMun: F_40mm_White
+	{
+		audibleFire = 0;
+		timeToLive = 300;
+		effectFlare = "CounterMeasureFlare";
+		useFlare=1;
+		lightColor[] = {0.478, 0, 1,0};
+		smokeColor[] = {1,1,1,0.5};
+		intensity = 1500000;
+    	coefGravity = 0.25;
+		size = 1;
+		triggerSpeedCoef=1;
+		brightness=12;
+	};
+	class MET_GL_Flare_P_LUM: MET_GL_Flare_P_LUM_SubMun
+	{
+		audibleFire = 1;
+	};
+	class MET_GL_Flare_P_LUM_Cluster: G_40mm_HE
+	{
+		submunitionAmmo[] = {"MET_GL_Flare_P_LUM_SubMun"};
+		submunitionInitSpeed = 100;
+		submunitionConeAngle[] = {10};
+		submunitionConeAngleHorizontal = 360;
+		submunitionConeType[] = {"randomupcone",6};
+		submunitionParentSpeedCoef = 0;
+		submunitionInitialOffset[] = {0,0,0};
+		submunitionAutoleveling = 1;
+		submunitionDirectionType = "submunitionAutoleveling";
+		directionalExplosion = 1;
+		triggerOnImpact = 1;
+		triggerDistance = 0;
+		explosionTime = 3;
+	};
+	/*===============================================
+	==Turquoise Flares
+	===============================================*/
+	class MET_GL_Flare_TU_LUM_SubMun: F_40mm_White
+	{
+		audibleFire = 0;
+		timeToLive = 300;
+		effectFlare = "CounterMeasureFlare";
+		useFlare=1;
+		lightColor[] = {0, 0.976, 1,0};
+		smokeColor[] = {1,1,1,0.5};
+		intensity = 1500000;
+    	coefGravity = 0.25;
+		size = 1;
+		triggerSpeedCoef=1;
+		brightness=12;
+	};
+	class MET_GL_Flare_TU_LUM: MET_GL_Flare_TU_LUM_SubMun
+	{
+		audibleFire = 1;
+	};
+	class MET_GL_Flare_TU_LUM_Cluster: G_40mm_HE
+	{
+		submunitionAmmo[] = {"MET_GL_Flare_TU_LUM_SubMun"};
+		submunitionInitSpeed = 100;
+		submunitionConeAngle[] = {10};
+		submunitionConeAngleHorizontal = 360;
+		submunitionConeType[] = {"randomupcone",6};
+		submunitionParentSpeedCoef = 0;
+		submunitionInitialOffset[] = {0,0,0};
+		submunitionAutoleveling = 1;
+		submunitionDirectionType = "submunitionAutoleveling";
+		directionalExplosion = 1;
+		triggerOnImpact = 1;
+		triggerDistance = 0;
+		explosionTime = 3;
+	};
+	/*===============================================
+	==Teal Flares
+	===============================================*/
+	class MET_GL_Flare_TE_LUM_SubMun: F_40mm_White
+	{
+		audibleFire = 0;
+		timeToLive = 300;
+		effectFlare = "CounterMeasureFlare";
+		useFlare=1;
+		lightColor[] = {0, 1, 0.769,0};
+		smokeColor[] = {1,1,1,0.5};
+		intensity = 1500000;
+    	coefGravity = 0.25;
+		size = 1;
+		triggerSpeedCoef=1;
+		brightness=12;
+	};
+	class MET_GL_Flare_TE_LUM: MET_GL_Flare_TE_LUM_SubMun
+	{
+		audibleFire = 1;
+	};
+	class MET_GL_Flare_TE_LUM_Cluster: G_40mm_HE
+	{
+		submunitionAmmo[] = {"MET_GL_Flare_TE_LUM_SubMun"};
+		submunitionInitSpeed = 100;
+		submunitionConeAngle[] = {10};
+		submunitionConeAngleHorizontal = 360;
+		submunitionConeType[] = {"randomupcone",6};
+		submunitionParentSpeedCoef = 0;
+		submunitionInitialOffset[] = {0,0,0};
+		submunitionAutoleveling = 1;
+		submunitionDirectionType = "submunitionAutoleveling";
+		directionalExplosion = 1;
+		triggerOnImpact = 1;
+		triggerDistance = 0;
+		explosionTime = 3;
+	};
+	/*===============================================
+	==IR Flares
+	===============================================*/
+	class MET_GL_Flare_IR_LUM_SubMun: F_40mm_White
+	{
+		audibleFire = 0;
+		timeToLive = 300;
+		effectFlare = "CounterMeasureFlare";
+		useFlare=1;
+		lightColor[] = {0.25,0.25,0.25,0};
+		smokeColor[] = {1,1,1,0.5};
+		intensity = 1500000;
+    	coefGravity = 0.25;
+		size = 1;
+		triggerSpeedCoef=1;
+		brightness=12;
+        nvgOnly = 1;
+	};
+	class MET_GL_Flare_IR_LUM: MET_GL_Flare_IR_LUM_SubMun
+	{
+		audibleFire = 1;
+	};
+	class MET_GL_Flare_IR_LUM_Cluster: G_40mm_HE
+	{
+		submunitionAmmo[] = {"MET_GL_Flare_IR_LUM_SubMun"};
+		submunitionInitSpeed = 100;
+		submunitionConeAngle[] = {10};
+		submunitionConeAngleHorizontal = 360;
+		submunitionConeType[] = {"randomupcone",6};
+		submunitionParentSpeedCoef = 0;
+		submunitionInitialOffset[] = {0,0,0};
+		submunitionAutoleveling = 1;
+		submunitionDirectionType = "submunitionAutoleveling";
+		directionalExplosion = 1;
+		triggerOnImpact = 1;
+		triggerDistance = 0;
+		explosionTime = 3;
+	};
 	class M_NLAW_AT_F;
 	class MET_AT_Chaingun_Ammo: M_NLAW_AT_F
 	{
@@ -17419,7 +18566,7 @@ class CfgAmmo
 		brightness=1000;
 		flaresize=5;
 		tracerscale=1;
-		hit=60;
+		hit=70;
 		indirectHit=0;
 		indirectHitRange=0;
 		caliber=2;
@@ -17456,7 +18603,7 @@ class CfgAmmo
 			"Direct"
 		};
 		proximityExplosionDistance=5;
-		explosive=0.2;
+		explosive=0;
 		CraterEffects="ExploAmmoCrater";
 		effectFlare="FlareShell";
 		effectFly="MET_BlasterBoltGlow_Medium_Yellow_Fly";
@@ -19019,4 +20166,4 @@ class CfgAmmo
 			distance=1;
 		};
 	};
-}
+};

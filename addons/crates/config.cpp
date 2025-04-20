@@ -1734,6 +1734,26 @@ class CfgVehicles
 				magazine="MET_DC19E_mag";
 				count=30;
 			};
+			class _xx_MET_SUN_Grenade
+			{
+				magazine="MET_SUN_Grenade";
+				count=10;
+			};
+			class _xx_MET_SUN_Grenade_Clust
+			{
+				magazine="MET_SUN_Grenade_Clust";
+				count=10;
+			};
+			class _xx_MET_RA_Grenade
+			{
+				magazine="MET_RA_Grenade";
+				count=10;
+			};
+			class _xx_MET_RA_Grenade_Clust
+			{
+				magazine="MET_RA_Grenade_Clust";
+				count=10;
+			};
 			class _xx_MET_3Rnd_HE_Grenade_shell
 			{
 				magazine="MET_3Rnd_HE_Grenade_shell";

@@ -8,15 +8,28 @@ class XtdGearModels {
             class camo {
                 values[] = {
                     "Trooper", "Cadet", "Veteran", "Specialist", "NCO", "SNCO",
-                    "Officer", "Medic", "EOD", "Hazmat", "Chetiah", "Arch", "Krieg",
+                    "Officer", "Medic", "EOD"
+                };
+            };
+        };
+
+        // [16th] Phase 2 Custom Helmet with all retexture variants
+        class 16th_Custom_Helmet {
+            label = "[16th] Custom Trooper Helmet";
+            author = "16th Mod Team";
+            options[] = { "camo" };
+            class camo {
+                values[] = {
+                    "Hazmat", "Chetiah", "Arch",
                     "Blackrose", "Merlin", "Moldy", "William", "Wolf", "Blatt",
                     "Butcher", "Winters", "Roz", "Six", "Gambit", "Frost", "Smith",
                     "Fish", "Mace", "Kick", "Nix", "Maple", "Hood", "Sam", "Ben",
                     "Creed", "Karma", "Prez", "Cougar", "Blowfish", "Spice", "Talk",
-                    "Avalanche", "Maxson", "Ronin"
+                    "Avalanche", "Maxson", "Ronin", "Chet", "Vergil"
                 };
             };
         };
+
         // [16th] Airborne Trooper Helmet Airborne helmet with all rank/unique variants
         class 16th_Airborne_Helmet {
             label = "[16th] Airborne Trooper Helmet";
@@ -25,8 +38,8 @@ class XtdGearModels {
             class camo {
                 values[] = {
                     "Trooper", "Veteran", "Corporal", "Sergeant",
-                    "StaffSergeant", "FirstSergeant", "SergeantMajor",
-                    "Medic", "Blackrose", "Kick"
+                    "SSG", "1SG", "SGM",
+                    "Medic", "Blackrose", "Kick", "Vergil"
                 };
             };
         };
@@ -58,7 +71,7 @@ class XtdGearModels {
             };
         };
 
-        // [16th] Trooper Armor (Phase 2) Base armor with all retexture variants
+        // [16th] Trooper Armor (Phase 2) Base armor 
         class 16th_Trooper_Armor {
             label = "[16th] Trooper Armor";
             author = "16th Mod Team";
@@ -67,12 +80,25 @@ class XtdGearModels {
                 values[] = {
                     "Trooper", "Cadet", "Dragon", "DragonNCO", "Reaper", "ReaperNCO",
                     "Veteran", "Specialist", "NCO", "SNCO", "Officer", "Medic",
-                    "EOD", "Ronin", "MoldyZeus", "Moldy", "Blatt", "Blackrose",
-                    "Prez", "Hood", "Kix", "Winters", "Six", "Cougar", "Maxson",
-                    "Merlin", "Avalanche"
+                    "EOD"
                 };
             };
         };
+
+        // [16th] Custom Armor (Phase 2) all retexture variants
+        class 16th_Custom_Armor {
+            label = "[16th] Custom Armor";
+            author = "16th Mod Team";
+            options[] = { "camo" };
+            class camo {
+                values[] = {
+                    "Ronin", "MoldyZeus", "Moldy", "Blatt", "Blackrose",
+                    "Prez", "Hood", "Kix", "Winters", "Six", "Cougar", "Maxson",
+                    "Merlin", "Avalanche", "Vergil"
+                };
+            };
+        };
+
         // [16th] Airborne Trooper Armor Airborne armor with all rank variants
         class 16th_Airborne_Armor {
             label = "[16th] Airborne Trooper Armor";
@@ -81,7 +107,7 @@ class XtdGearModels {
             class camo {
                 values[] = {
                     "Trooper", "Veteran", "Corporal", "Sergeant",
-                    "StaffSergeant", "FirstSergeant", "SergeantMajor", "Medic"
+                    "SSG", "1SG", "SGM", "Medic"
                 };
             };
         };

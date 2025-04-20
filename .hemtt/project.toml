@@ -14,6 +14,8 @@ archive = false
 
 [files]
 include = [
+    "16th_logo.paa",
+    "mod.cpp",
     "addons/442_weapons.pbo",
     "addons/Indecisive_Armoury_Ammos.pbo",
     "addons/JMSLLTE_weapons.pbo",
@@ -25,5 +27,5 @@ include = [
 
 [version]
 major = 2
-minor = 7
-patch = 5
+minor = 8
+patch = 1

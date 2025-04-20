@@ -599,6 +599,15 @@ class CfgWeapons
 			"z\16th\addons\armor\data\custom\kick_ab_helmet_co.paa"
 		};
 	};
+	class helmet_16th_ab_vergil: helmet_16th_ab_trp
+	{
+		scope=2;
+		displayName="[16th] Vergil's Airborne Helmet";
+		hiddenSelectionsTextures[]=
+		{
+			"z\16th\addons\armor\data\custom\vergil_ab_helmet_co.paa"
+		};
+	};
 	class helmet_16th_maxson: helmet_16th_trp
 	{
 		scope=2;
@@ -840,6 +849,24 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\custom\blowfish_helmet_co.paa"
+		};
+	};
+	class helmet_16th_chet: helmet_16th_trp
+	{
+		scope=2;
+		displayName="[16th] Chet's Helmet";
+		hiddenSelectionsTextures[]=
+		{
+			"z\16th\addons\armor\data\custom\chet_helmet_co.paa"
+		};
+	};
+	class helmet_16th_vergil: helmet_16th_trp
+	{
+		scope=2;
+		displayName="[16th] Vergil's Helmet";
+		hiddenSelectionsTextures[]=
+		{
+			"z\16th\addons\armor\data\custom\vergil_helmet_co.paa"
 		};
 	};
 	class helmet_16th_kix: helmet_16th_arf
@@ -2562,6 +2589,15 @@ class CfgWeapons
 			uniformclass="armor_16th_cooger_base";
 		};
 	};
+	class armor_16th_vergil: armor_16th_trp
+	{
+		scope=2;
+		displayName="[16th] Vergil's Armor";
+		class ItemInfo: ItemInfo
+		{
+			uniformclass="armor_16th_vergil_base";
+		};
+	};
 	class JLTS_CloneArmorMC;
 	class armor_16th_avalanche: JLTS_CloneArmorMC
 	{
@@ -2569,7 +2605,7 @@ class CfgWeapons
 		displayName="[16th] Avalanche's Armor";
 		class ItemInfo: ItemInfo
 		{
-			uniformClass="armor_16th_avalanche";
+			uniformClass="armor_16th_avalanche_base";
 			containerClass="Supply150";
 			mass=40;
 			modelSides[]={6};
@@ -2639,7 +2675,7 @@ class CfgWeapons
 		displayName="[16th] Maxson's Armor";
 		class ItemInfo: ItemInfo
 		{
-			uniformClass="armor_16th_maxson";
+			uniformClass="armor_16th_maxson_base";
 			containerClass="Supply150";
 			mass=40;
 			modelSides[]={6};
@@ -2709,7 +2745,7 @@ class CfgWeapons
 		displayName="[16th] Merlin's Armor";
 		class ItemInfo: ItemInfo
 		{
-			uniformClass="armor_16th_merlin";
+			uniformClass="armor_16th_merlin_base";
 			containerClass="Supply150";
 			mass=40;
 			modelSides[]={6};
@@ -4486,6 +4522,40 @@ class CfgVehicles
 			"JLTS_clone_comlink",
 			"ItemCompass",
 			"ItemWatch"
+		};
+	};
+	class armor_16th_vergil_base: armor_16th_trp_base
+	{
+		scope=1;
+		displayName="[16th] Vergils";
+		uniformClass="armor_16th_vergil";
+		hiddenselectionsTextures[]=
+		{
+			"z\16th\addons\armor\data\custom\vergil_uniform1_co.paa",
+			"z\16th\addons\armor\data\custom\vergil_uniform2_co.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"\MRC\JLTS\characters\CloneArmor\data\clone_armor1_clean.rvmat",
+			"\MRC\JLTS\characters\CloneArmor\data\clone_armor2_clean.rvmat"
+		};
+		linkedItems[]=
+		{
+			"helmet_16th_vergil",
+			"ItemMap",
+			"JLTS_clone_comlink",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_CloneNVG"
+		};
+		respawnLinkedItems[]=
+		{
+			"helmet_16th_vergil",
+			"ItemMap",
+			"JLTS_clone_comlink",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_CloneNVG"
 		};
 	};
 	class JLTS_Clone_P2_marshalcommander;
