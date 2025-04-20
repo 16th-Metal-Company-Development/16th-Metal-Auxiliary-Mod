@@ -72,8 +72,8 @@ jobs:
       uses: gruppe-adler/action-release-to-steam-ws@v1
       with:
           file_id: 1234567890
-          username: ${{ secrets.STEAM_USERNAME }}
-          password: ${{ secrets.STEAM_PASSWORD }}
+          username: ${{ secrets.STEAM_ACCOUNT_USER }}
+          password: ${{ secrets.STEAM_ACCOUNT_PASS }}
           path: ${{ steps.build.outputs.release_path }}/@${{ steps.build.outputs.mod_name }}
           name: ${{ steps.build.outputs.mod_name }}
           change_notes_title: ${{ github.event.release.name }}
