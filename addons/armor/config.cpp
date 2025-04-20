@@ -4527,7 +4527,7 @@ class CfgVehicles
 	class armor_16th_vergil_base: armor_16th_trp_base
 	{
 		scope=1;
-		displayName="[16th] Moldy Zeus";
+		displayName="[16th] Vergils";
 		uniformClass="armor_16th_vergil";
 		hiddenselectionsTextures[]=
 		{
@@ -4541,7 +4541,7 @@ class CfgVehicles
 		};
 		linkedItems[]=
 		{
-			"helmet_16th_moldy",
+			"helmet_16th_vergil",
 			"ItemMap",
 			"JLTS_clone_comlink",
 			"ItemCompass",
@@ -4550,7 +4550,7 @@ class CfgVehicles
 		};
 		respawnLinkedItems[]=
 		{
-			"helmet_16th_moldy",
+			"helmet_16th_vergil",
 			"ItemMap",
 			"JLTS_clone_comlink",
 			"ItemCompass",
