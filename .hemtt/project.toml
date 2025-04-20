@@ -8,9 +8,8 @@ addons_directory = "addons"
 [properties]
 author = "16th Modding Team"
 
-[hemtt.release]
-sign = true
-archive = false
+[release]
+sign = false
 
 [files]
 include = [
