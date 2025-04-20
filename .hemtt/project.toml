@@ -13,6 +13,8 @@ sign = false
 
 [files]
 include = [
+    "16th_logo.paa",
+    "mod.cpp",
     "addons/442_weapons.pbo",
     "addons/Indecisive_Armoury_Ammos.pbo",
     "addons/JMSLLTE_weapons.pbo",
