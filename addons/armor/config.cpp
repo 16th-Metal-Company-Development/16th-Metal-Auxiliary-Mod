@@ -599,6 +599,15 @@ class CfgWeapons
 			"z\16th\addons\armor\data\custom\kick_ab_helmet_co.paa"
 		};
 	};
+	class helmet_16th_ab_vergil: helmet_16th_ab_trp
+	{
+		scope=2;
+		displayName="[16th] Vergil's Airborne Helmet";
+		hiddenSelectionsTextures[]=
+		{
+			"z\16th\addons\armor\data\custom\vergil_ab_helmet_co.paa"
+		};
+	};
 	class helmet_16th_maxson: helmet_16th_trp
 	{
 		scope=2;
@@ -840,6 +849,24 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\custom\blowfish_helmet_co.paa"
+		};
+	};
+	class helmet_16th_chet: helmet_16th_trp
+	{
+		scope=2;
+		displayName="[16th] Chet's Helmet";
+		hiddenSelectionsTextures[]=
+		{
+			"z\16th\addons\armor\data\custom\chet_helmet_co.paa"
+		};
+	};
+	class helmet_16th_vergil: helmet_16th_trp
+	{
+		scope=2;
+		displayName="[16th] Vergil's Helmet";
+		hiddenSelectionsTextures[]=
+		{
+			"z\16th\addons\armor\data\custom\vergil_helmet_co.paa"
 		};
 	};
 	class helmet_16th_kix: helmet_16th_arf
@@ -2560,6 +2587,15 @@ class CfgWeapons
 		class ItemInfo: ItemInfo
 		{
 			uniformclass="armor_16th_cooger_base";
+		};
+	};
+	class armor_16th_vergil: armor_16th_trp
+	{
+		scope=2;
+		displayName="[16th] Vergil's Armor";
+		class ItemInfo: ItemInfo
+		{
+			uniformclass="armor_16th_vergil_base";
 		};
 	};
 	class JLTS_CloneArmorMC;
@@ -4486,6 +4522,40 @@ class CfgVehicles
 			"JLTS_clone_comlink",
 			"ItemCompass",
 			"ItemWatch"
+		};
+	};
+	class armor_16th_vergil_base: armor_16th_trp_base
+	{
+		scope=1;
+		displayName="[16th] Moldy Zeus";
+		uniformClass="armor_16th_vergil";
+		hiddenselectionsTextures[]=
+		{
+			"z\16th\addons\armor\data\custom\vergil_uniform1_co.paa",
+			"z\16th\addons\armor\data\custom\vergil_uniform2_co.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"\MRC\JLTS\characters\CloneArmor\data\clone_armor1_clean.rvmat",
+			"\MRC\JLTS\characters\CloneArmor\data\clone_armor2_clean.rvmat"
+		};
+		linkedItems[]=
+		{
+			"helmet_16th_moldy",
+			"ItemMap",
+			"JLTS_clone_comlink",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_CloneNVG"
+		};
+		respawnLinkedItems[]=
+		{
+			"helmet_16th_moldy",
+			"ItemMap",
+			"JLTS_clone_comlink",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_CloneNVG"
 		};
 	};
 	class JLTS_Clone_P2_marshalcommander;
