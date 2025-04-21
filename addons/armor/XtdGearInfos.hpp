@@ -59,17 +59,21 @@ class XtdGearInfos {
         class helmet_16th_ab_cfs       { model = "16th_Airborne_Helmet"; camo = "1SG"; };
         class helmet_16th_ab_sgm       { model = "16th_Airborne_Helmet"; camo = "SGM"; };
         class helmet_16th_ab_medic     { model = "16th_Airborne_Helmet"; camo = "Medic"; };
-        class helmet_16th_ab_blackrose { model = "16th_Airborne_Helmet"; camo = "Blackrose"; };
-        class helmet_16th_ab_kick      { model = "16th_Airborne_Helmet"; camo = "Kick"; };
-        class helmet_16th_ab_vergil    { model = "16th_Airborne_Helmet"; camo = "Vergil"; };
 
-        // [16th] Goff Helmet (ARF) variants
-        class helmet_16th_arf          { model = "16th_Goff_Helmet"; camo = "Trooper"; };
-        class helmet_16th_arf_nco      { model = "16th_Goff_Helmet"; camo = "NCO"; };
-        class helmet_16th_kix          { model = "16th_Goff_Helmet"; camo = "Kix"; };
-        class helmet_16th_convor       { model = "16th_Goff_Helmet"; camo = "Convor"; };
-        class helmet_16th_maple_arf    { model = "16th_Goff_Helmet"; camo = "Maple"; };
-        class helmet_16th_blue_arf     { model = "16th_Goff_Helmet"; camo = "Blue"; };
+        // [16th] Custom Airborne Trooper Helmet variants
+        class helmet_16th_ab_blackrose { model = "16th_Custom_Airborne_Helmet"; camo = "Blackrose"; };
+        class helmet_16th_ab_kick      { model = "16th_Custom_Airborne_Helmet"; camo = "Kick"; };
+        class helmet_16th_ab_vergil    { model = "16th_Custom_Airborne_Helmet"; camo = "Vergil"; };
+
+        // [16th] ARF variants
+        class helmet_16th_arf          { model = "16th_ARF_Helmet"; camo = "Trooper"; };
+        class helmet_16th_arf_nco      { model = "16th_ARF_Helmet"; camo = "NCO"; };
+
+        // [16th] Custom ARF variants
+        class helmet_16th_kix          { model = "16th_Custom_ARF_Helmet"; camo = "Kix"; };
+        class helmet_16th_convor       { model = "16th_Custom_ARF_Helmet"; camo = "Convor"; };
+        class helmet_16th_maple_arf    { model = "16th_Custom_ARF_Helmet"; camo = "Maple"; };
+        class helmet_16th_blue_arf     { model = "16th_Custom_ARF_Helmet"; camo = "Blue"; };
 
         // [16th] Cold Assault Helmet variants
         class helmet_16th_sm_trp        { model = "16th_CA_Helmet"; camo = "Trooper"; };

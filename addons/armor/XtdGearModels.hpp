@@ -39,17 +39,35 @@ class XtdGearModels {
                 values[] = {
                     "Trooper", "Veteran", "Corporal", "Sergeant",
                     "SSG", "1SG", "SGM",
-                    "Medic", "Blackrose", "Kick", "Vergil"
+                    "Medic"
                 };
             };
         };
-        // [16th] Goff Helmet (ARF) Scout/ARF helmet with NCO and unique variants
-        class 16th_Goff_Helmet {
+        class 16th_Airborne_Helmet {
+            label = "[16th] Airborne Trooper Helmet";
+            author = "16th Mod Team";
+            options[] = { "camo" };
+            class camo {
+                values[] = {
+                    "Blackrose", "Kick", "Vergil"
+                };
+            };
+        };
+        // [16th] ARF Helmet Scout/ARF helmet with NCO and unique variants
+        class 16th_ARF_Helmet {
             label = "[16th] Goff Helmet";
             author = "16th Mod Team";
             options[] = { "camo" };
             class camo {
-                values[] = { "Trooper", "NCO", "Kix", "Convor", "Maple", "Blue" };
+                values[] = { "Trooper", "NCO" };
+            };
+        };
+        class 16th_Custom_ARF_Helmet {
+            label = "[16th] Goff Helmet";
+            author = "16th Mod Team";
+            options[] = { "camo" };
+            class camo {
+                values[] = { "Kix", "Convor", "Maple", "Blue" };
             };
         };
         // [16th] Cold Assault Helmet Scout/ARF helmet with NCO and unique variants
