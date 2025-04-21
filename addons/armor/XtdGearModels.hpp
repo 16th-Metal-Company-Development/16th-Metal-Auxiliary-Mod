@@ -43,7 +43,7 @@ class XtdGearModels {
                 };
             };
         };
-        class 16th_Airborne_Helmet {
+        class 16th_Custom_Airborne_Helmet {
             label = "[16th] Airborne Trooper Helmet";
             author = "16th Mod Team";
             options[] = { "camo" };
