@@ -71,10 +71,10 @@ jobs:
     - name: Publish to Steam Workshop
       uses: gruppe-adler/action-release-to-steam-ws@v1
       with:
-          file_id: 1234567890
-          username: ${{ secrets.STEAM_USERNAME }}
-          password: ${{ secrets.STEAM_PASSWORD }}
-          path: ${{ steps.build.outputs.release_path }}/@${{ steps.build.outputs.mod_name }}
-          name: ${{ steps.build.outputs.mod_name }}
+          file_id: 3397302930
+          username: ${{ secrets.STEAM_ACCOUNT_USER }}
+          password: ${{ secrets.STEAM_ACCOUNT_PASS }}
+          path: ".hemttout/16th-Metal-Auxiliary-Mod"
+          name: "The 16th Metal Company Aux Mod"
           change_notes_title: ${{ github.event.release.name }}
           change_notes: ${{ github.event.release.body }}

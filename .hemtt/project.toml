@@ -10,7 +10,6 @@ author = "16th Modding Team"
 
 [hemtt.release]
 sign = true
-archive = false
 
 [files]
 include = [
@@ -27,5 +26,5 @@ include = [
 
 [version]
 major = 2
-minor = 8
-patch = 1
+minor = 9
+patch = 0
