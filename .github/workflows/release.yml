@@ -83,6 +83,6 @@ jobs:
       if: ${{ failure() || cancelled() }}
       shell: pwsh
       run: |
-        $log = Join-Path ${{ runner.workspace }} "_actions/gruppe-adler/action-release-to-steam-ws/v1/dist/logs/stderr.txt"
+        $log = "D:\a\_actions\gruppe-adler\action-release-to-steam-ws\v1\dist\logs\stderr.txt"
         Write-Host "=== SteamCMD stderr ==="
         Get-Content $log -Raw

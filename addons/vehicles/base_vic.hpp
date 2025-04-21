@@ -19,11 +19,11 @@ class MET_LAAT_Mk2: 3as_LAAT_MK2
 		};
 		hiddenSelectionsTextures[] = 
 		{
-			"vehicles_16\vics\LAAT\16th_LAAT_Base.paa",
-			"vehicles_16\vics\LAAT\16th_LAAT_wings_base.paa",
-			"vehicles_16\vics\LAAT\Weapons_CO.paa",
-			"vehicles_16\vics\LAAT\Weapon_Details_CO.paa",
-			"vehicles_16\vics\LAAT\16_Laat_Interior.paa"
+			"z\16th\addons\vehicles\vics\LAAT\16th_LAAT_Base.paa",
+			"z\16th\addons\vehicles\vics\LAAT\16th_LAAT_wings_base.paa",
+			"z\16th\addons\vehicles\vics\LAAT\Weapons_CO.paa",
+			"z\16th\addons\vehicles\vics\LAAT\Weapon_Details_CO.paa",
+			"z\16th\addons\vehicles\vics\LAAT\16_Laat_Interior.paa"
 		};
 		class EventHandlers: DefaultEventHandlers
 		{
@@ -50,11 +50,11 @@ class MET_LAAT_Mk2: 3as_LAAT_MK2
 		};
 		hiddenSelectionsTextures[] = 
 		{
-			"vehicles_16\vics\LAAT\16th_LAAT_Base.paa",
-			"vehicles_16\vics\LAAT\16th_LAAT_wings_base.paa",
-			"vehicles_16\vics\LAAT\Weapons_CO.paa",
-			"vehicles_16\vics\LAAT\Weapon_Details_CO.paa",
-			"vehicles_16\vics\LAAT\16_Laat_Interior.paa"
+			"z\16th\addons\vehicles\vics\LAAT\16th_LAAT_Base.paa",
+			"z\16th\addons\vehicles\vics\LAAT\16th_LAAT_wings_base.paa",
+			"z\16th\addons\vehicles\vics\LAAT\Weapons_CO.paa",
+			"z\16th\addons\vehicles\vics\LAAT\Weapon_Details_CO.paa",
+			"z\16th\addons\vehicles\vics\LAAT\16_Laat_Interior.paa"
 		};
 		class EventHandlers: DefaultEventHandlers
 		{
@@ -77,11 +77,11 @@ class MET_LAAT_MK1: 3as_LAAT_MK1
 		};
 		hiddenSelectionsTextures[] = 
 		{
-			"vehicles_16\vics\LAAT\16th_LAAT_Base.paa",
-			"vehicles_16\vics\LAAT\16th_LAAT_wings_base.paa",
-			"vehicles_16\vics\LAAT\Weapons_CO.paa",
-			"vehicles_16\vics\LAAT\Weapon_Details_CO.paa",
-			"vehicles_16\vics\LAAT\16_Laat_Interior.paa"
+			"z\16th\addons\vehicles\vics\LAAT\16th_LAAT_Base.paa",
+			"z\16th\addons\vehicles\vics\LAAT\16th_LAAT_wings_base.paa",
+			"z\16th\addons\vehicles\vics\LAAT\Weapons_CO.paa",
+			"z\16th\addons\vehicles\vics\LAAT\Weapon_Details_CO.paa",
+			"z\16th\addons\vehicles\vics\LAAT\16_Laat_Interior.paa"
 		};
 		class EventHandlers: DefaultEventHandlers
 		{
@@ -156,8 +156,8 @@ class MET_Tx130_Base_V1: 3as_saber_m1
 		editorSubcategory = "metal_co_EdSubCat_Reaper";
 		hiddenSelectionsTextures[] = 
 		{
-			"vehicles_16\vics\NEWTX130\16th_saber_hull_co.paa",
-			"vehicles_16\vics\NEWTX130\16th_saber_weapons_co.paa"
+			"z\16th\addons\vehicles\vics\NEWTX130\16th_saber_hull_co.paa",
+			"z\16th\addons\vehicles\vics\NEWTX130\16th_saber_weapons_co.paa"
 		};
 	};
 class MET_Tx130_Super_v1: 3as_saber_super
@@ -169,8 +169,8 @@ class MET_Tx130_Super_v1: 3as_saber_super
 		editorSubcategory = "metal_co_EdSubCat_Reaper";
 		hiddenSelectionsTextures[] = 
 		{
-			"vehicles_16\vics\NEWTX130\16th_saber_hull_co.paa",
-			"vehicles_16\vics\NEWTX130\16th_saber_weapons_co.paa"
+			"z\16th\addons\vehicles\vics\NEWTX130\16th_saber_hull_co.paa",
+			"z\16th\addons\vehicles\vics\NEWTX130\16th_saber_weapons_co.paa"
 		};
 	};
 class MET_Tx130_GL_v1: 3as_saber_m1G
@@ -182,8 +182,8 @@ class MET_Tx130_GL_v1: 3as_saber_m1G
 		editorSubcategory = "metal_co_EdSubCat_Reaper";
 		hiddenSelectionsTextures[] = 
 		{
-			"vehicles_16\vics\NEWTX130\16th_saber_hull_co.paa",
-			"vehicles_16\vics\NEWTX130\16th_saber_weapons_co.paa"
+			"z\16th\addons\vehicles\vics\NEWTX130\16th_saber_hull_co.paa",
+			"z\16th\addons\vehicles\vics\NEWTX130\16th_saber_weapons_co.paa"
 		};
 	};
 class MET_ATTE_Base: 3as_ATTE_Base
@@ -204,10 +204,10 @@ class MET_ATTE_Base: 3as_ATTE_Base
 		};
 		hiddenSelectionsTextures[] = 
 		{
-			"vehicles_16\vics\ATTE\16th_ATTE_Shell.paa",
+			"z\16th\addons\vehicles\vics\ATTE\16th_ATTE_Shell.paa",
 			"3as\3as_ATTE\data\Textures\3as_ATTE_Cockpit_co.paa",
 			"3as\3AS_ATTE\data\Textures\3AS_ATTE_Detail_co.paa",
-			"vehicles_16\vics\ATTE\16th_ATTE_Legs.paa",
+			"z\16th\addons\vehicles\vics\ATTE\16th_ATTE_Legs.paa",
 			"3as\3as_ATTE\data\Textures\3as_ATTE_Glass_ca.paa",
 			"3as\3as_ATTE\data\Textures\3as_atte_armor_co.paa"
 		};
@@ -227,10 +227,10 @@ class MET_ATTE_Base: 3as_ATTE_Base
 		crew = "MET_P2_AR";
 		hiddenSelectionsTextures[] = 
 		{
-			"vehicles_16\vics\LAAT_C\16th_LAAT_C_MK2_Hull_co.paa",
-			"vehicles_16\vics\LAAT_C\16th_LAAT_C_MK2_Wings_co.paa",
-			"vehicles_16\vics\LAAT_C\16th_LAAT_C_MK2_Top_co.paa",
-			"vehicles_16\vics\LAAT_C\LAAT_C_Detail_Front_co.paa"
+			"z\16th\addons\vehicles\vics\LAAT_C\16th_LAAT_C_MK2_Hull_co.paa",
+			"z\16th\addons\vehicles\vics\LAAT_C\16th_LAAT_C_MK2_Wings_co.paa",
+			"z\16th\addons\vehicles\vics\LAAT_C\16th_LAAT_C_MK2_Top_co.paa",
+			"z\16th\addons\vehicles\vics\LAAT_C\LAAT_C_Detail_Front_co.paa"
 		};
 		class TextureSources
 		{
@@ -240,10 +240,10 @@ class MET_ATTE_Base: 3as_ATTE_Base
 				author="Charger";
 				textures[]=
 				{
-					"vehicles_16\vics\LAAT_C\16th_LAAT_C_MK2_Hull_co.paa",
-			        "vehicles_16\vics\LAAT_C\16th_LAAT_C_MK2_Wings_co.paa",
-			        "vehicles_16\vics\LAAT_C\16th_LAAT_C_MK2_Top_co.paa",
-			        "vehicles_16\vics\LAAT_C\LAAT_C_Detail_Front_co.paa"
+					"z\16th\addons\vehicles\vics\LAAT_C\16th_LAAT_C_MK2_Hull_co.paa",
+			        "z\16th\addons\vehicles\vics\LAAT_C\16th_LAAT_C_MK2_Wings_co.paa",
+			        "z\16th\addons\vehicles\vics\LAAT_C\16th_LAAT_C_MK2_Top_co.paa",
+			        "z\16th\addons\vehicles\vics\LAAT_C\LAAT_C_Detail_Front_co.paa"
 				};
 			};
 		};
