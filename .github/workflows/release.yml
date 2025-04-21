@@ -1,4 +1,4 @@
-name: Release Mod
+﻿name: Release Mod
 
 on:
   push:
@@ -38,6 +38,10 @@ jobs:
     - name: Rename Release folder
       run: mv .hemttout/release .hemttout/16th-Metal-Auxiliary-Mod/
 
+    - name: Debug show release folder contents
+      shell: pwsh
+      run: dir .hemttout\16th‑Metal‑Auxiliary‑Mod /s
+
     - name: Zip Release Folder
       shell: pwsh
       run: |
@@ -68,6 +72,15 @@ jobs:
         asset_name: "16th-Metal-Auxiliary-Mod-v${{ steps.get_version.outputs.version }}.zip"
         asset_content_type: "application/zip"
     
+    - name: verify zip and unzipped folder
+      shell: pwsh
+      run: |
+        Write-Host "ZIP contents:"
+        Expand-Archive -Path "16th-Metal-Auxiliary-Mod-v${{ steps.get_version.outputs.version }}.zip" -DestinationPath _tmp_unpack
+        dir _tmp_unpack /s
+        Write-Host "Unzipped source folder still exists:"
+        dir .hemttout\16th‑Metal‑Auxiliary‑Mod /s
+
     - name: Publish to Steam Workshop
       uses: gruppe-adler/action-release-to-steam-ws@v1
       with:

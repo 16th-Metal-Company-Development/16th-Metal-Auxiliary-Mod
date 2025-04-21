@@ -32,7 +32,7 @@ class XtdGearModels {
 
         // [16th] Airborne Trooper Helmet Airborne helmet with all rank/unique variants
         class 16th_Airborne_Helmet {
-            label = "[16th] Airborne Trooper Helmet";
+            label = "[16th] Airborne Helmet";
             author = "16th Mod Team";
             options[] = { "camo" };
             class camo {
@@ -44,7 +44,7 @@ class XtdGearModels {
             };
         };
         class 16th_Custom_Airborne_Helmet {
-            label = "[16th] Airborne Trooper Helmet";
+            label = "[16th] Custom Airborne Helmet";
             author = "16th Mod Team";
             options[] = { "camo" };
             class camo {
@@ -62,14 +62,16 @@ class XtdGearModels {
                 values[] = { "Trooper", "NCO" };
             };
         };
+
         class 16th_Custom_ARF_Helmet {
-            label = "[16th] Goff Helmet";
+            label = "[16th] Custom Goff Helmet";
             author = "16th Mod Team";
             options[] = { "camo" };
             class camo {
                 values[] = { "Kix", "Convor", "Maple", "Blue" };
             };
         };
+
         // [16th] Cold Assault Helmet Scout/ARF helmet with NCO and unique variants
         class 16th_CA_Helmet {
             label = "[16th] Cold Assault Helmet";
@@ -79,6 +81,7 @@ class XtdGearModels {
                 values[] = { "Trooper", "NCO", "Officer", "RTO" };
             };
         };
+
         // [16th] Thunder Helmet (Pilot) Pilot helmet with unique variants
         class 16th_Thunder_Helmet {
             label = "[16th] Thunder Helmet";
