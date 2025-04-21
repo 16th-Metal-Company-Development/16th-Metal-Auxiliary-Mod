@@ -39,7 +39,7 @@ jobs:
       run: mv .hemttout/release .hemttout/16th-Metal-Auxiliary-Mod/
 
     - name: Debug Show Contents
-       run: |
+      run: |
         Write-Host "=== Listing .hemttout tree ==="
         Get-ChildItem .\.hemttout -Recurse
 
