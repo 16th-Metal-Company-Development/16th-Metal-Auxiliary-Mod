@@ -38,11 +38,6 @@ jobs:
     - name: Rename Release folder
       run: mv .hemttout/release .hemttout/16th-Metal-Auxiliary-Mod/
 
-    - name: Debug Show Contents
-      run: |
-        Write-Host "=== Listing .hemttout tree ==="
-        Get-ChildItem .\.hemttout -Recurse
-
     - name: Zip Release Folder
       shell: pwsh
       run: |
@@ -83,3 +78,11 @@ jobs:
           name: "The 16th Metal Company Aux Mod"
           change_notes_title: ${{ github.event.release.name }}
           change_notes: ${{ github.event.release.body }}
+
+    - name: Dump SteamCMD stderr on failure or cancel
+      if: ${{ failure() || cancelled() }}
+      shell: pwsh
+      run: |
+        $log = Join-Path ${{ runner.workspace }} "_actions/gruppe-adler/action-release-to-steam-ws/v1/dist/logs/stderr.txt"
+        Write-Host "=== SteamCMD stderr ==="
+        Get-Content $log -Raw
