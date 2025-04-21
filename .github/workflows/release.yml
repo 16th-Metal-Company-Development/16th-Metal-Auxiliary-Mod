@@ -1,4 +1,4 @@
-﻿name: Release Mod
+name: Release Mod
 
 on:
   push:
@@ -38,9 +38,9 @@ jobs:
     - name: Rename Release folder
       run: mv .hemttout/release .hemttout/16th-Metal-Auxiliary-Mod/
 
-    - name: Debug show release folder contents
+    - name: Debug Show Contents
       shell: pwsh
-      run: dir .hemttout\16th‑Metal‑Auxiliary‑Mod /s
+      run: dir .hemttout /s
 
     - name: Zip Release Folder
       shell: pwsh
