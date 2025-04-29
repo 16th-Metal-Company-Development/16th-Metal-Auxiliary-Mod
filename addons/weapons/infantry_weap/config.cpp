@@ -29,9 +29,15 @@ class CfgRecoils
 		kickBack[]={0.059999999,0.090000004};
 		temporary=0.0060000001;
 	};
-	class MET_recoil_DC15C: recoil_default
+	class MET_recoil_CinCar: recoil_default
 	{
 		muzzleOuter[]={0,0.6,0.40000001,0.40000001};
+		kickBack[]={0.059999999,0.150000004};
+		temporary=0.0060000001;
+	};
+	class MET_recoil_DC15C: recoil_default
+	{
+		muzzleOuter[]={0,0.8,0.40000001,0.40000001};
 		kickBack[]={0.059999999,0.150000004};
 		temporary=0.0060000001;
 	};
@@ -980,6 +986,7 @@ class CfgWeapons
 		magazineReloadSwitchPhase=0.40000001;
 		discreteDistanceInitIndex=0;
 		maxRecoilSway=0.0125;
+		recoil = "MET_recoil_DC15C";
 		swayDecaySpeed=1.25;
 		inertia=0.40000001;
 		dexterity=1.6;
@@ -1044,7 +1051,7 @@ class CfgWeapons
 		class FullAuto: Mode_FullAuto
 		{
 			reloadTime=0.0923076923;
-			dispersion=0.00106;
+			dispersion=0.00026;
 			minRange=0;
 			minRangeProbab=0.89999998;
 			midRange=15;
@@ -1073,13 +1080,11 @@ class CfgWeapons
 					""
 				};
 			};
-			recoil="recoil_single_mx";
-			recoilProne="recoil_single_prone_mx";
 		};
 		class Single: Mode_SemiAuto
 		{
 			reloadTime=0.0923076923;
-			dispersion=0.00106;
+			dispersion=0.000056;
 			minRange=2;
 			minRangeProbab=0.30000001;
 			midRange=150;
@@ -1108,8 +1113,6 @@ class CfgWeapons
 					"3AS_DC15C_Shot_SoundSet"
 				};
 			};
-			recoil="recoil_single_mx";
-			recoilProne="recoil_single_prone_mx";
 		};
 		class 3AS_15CGL: UGL_F
 		{
@@ -3407,7 +3410,7 @@ class CfgWeapons
 		class ItemInfo: InventoryOpticsItem_Base_F
 		{
 			mass=7;
-			modelOptics="\JMSLLTE_weapons\Scope\big_cross_blue_full.p3d";
+			modelOptics="\JMSLLTE_weapons\Scope\big_cross_green_full.p3d";
 			class OpticsModes
 			{
 				class 3AS_Green_Optic1
@@ -3426,7 +3429,7 @@ class CfgWeapons
 					distanceZoomMax=100;
 					modelOptics[]=
 					{
-						"\JMSLLTE_weapons\Scope\big_cross_blue_full.p3d"
+						"\JMSLLTE_weapons\Scope\big_cross_green_full.p3d"
 					};
 					memoryPointCamera="opticView";
 					visionMode[]=
@@ -4202,7 +4205,7 @@ class CfgWeapons
 	{
 		scope=2;
 		displayName="[16th] Cinnagaran Carbine";
-		recoil="MET_recoil_DC15C";
+		recoil="MET_recoil_CinCar";
 		magazines[]=
 		{
 			"MET_CinCar_Mag"
@@ -18376,7 +18379,7 @@ class CfgAmmo
 		timeToLive = 300;
 		effectFlare = "CounterMeasureFlare";
 		useFlare=1;
-		lightColor[] = {1, 0.639, 0,0};
+		lightColor[] = {1, 0.565, 0,0};
 		smokeColor[] = {1,1,1,0.5};
 		intensity = 1500000;
     	coefGravity = 0.25;
