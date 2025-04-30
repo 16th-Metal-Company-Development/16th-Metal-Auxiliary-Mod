@@ -23,10 +23,17 @@ class CfgRecoils
 {
 	class recoil_default;
 	class Default;
+	class 3AS_recoil_default;
 	class MET_recoil_Z6: recoil_default
 	{
 		muzzleOuter[]={0,0.1,0.40000001,0.40000001};
 		kickBack[]={0.059999999,0.090000004};
+		temporary=0.0060000001;
+	};
+	class MET_recoil_CinCar: recoil_default
+	{
+		muzzleOuter[]={0,0.5,0.40000001,0.40000001};
+		kickBack[]={0.059999999,0.150000004};
 		temporary=0.0060000001;
 	};
 	class MET_recoil_DC15C: recoil_default
@@ -54,6 +61,12 @@ class CfgRecoils
 		kickBack[]={0.02,0.039999999};
 		permanent=0.1;
 		temporary=0.0099999998;
+	};
+	class MET_recoil_DC15X: 3AS_recoil_default
+	{
+		kickBack[]={0.1,0.12};
+		muzzleOuter[]={0.5,1.5,0.80000001,0.80000001};
+		temporary=0.079999998;
 	};
 };
 class CBA_DisposableLaunchers
@@ -114,7 +127,10 @@ class CfgWeapons
 		class GunParticles;
 		class WeaponSlotsInfo;
 	};
-	class MET_DC15A: JLTS_DC15A
+	/*==============================================================================
+	==DC-15A Legacy
+	==============================================================================*/
+	class MET_DC15A_LEG: JLTS_DC15A
 	{
 		JLTS_hasElectronics=1;
 		JLTS_hasEMPProtection=1;
@@ -122,7 +138,7 @@ class CfgWeapons
 		JLTS_repairTime=33;
 		author="MrClock";
 		scope=2;
-		displayName="[16th] DC-15A (Wood Stock)";
+		displayName="[16th] DC-15A (Legacy) (Wood Stock)";
 		descriptionShort="$STR_JLTS_descs_BlasterRifle";
 		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_ui_ca.paa";
 		model="\MRC\JLTS\weapons\DC15A\DC15A.p3d";
@@ -466,11 +482,11 @@ class CfgWeapons
 			};
 		};
 	};
-	class MET_DC15A_ugl: MET_DC15A
+	class MET_DC15A_LEG_ugl: MET_DC15A_LEG
 	{
 		JLTS_friedItem="JLTS_DC15A_UGL_fried";
 		JLTS_repairTime=35;
-		displayName="[16th] DC-15A UBGL (Wood Stock)";
+		displayName="[16th] DC-15A UBGL (LEGACY) (Wood Stock)";
 		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_ugl_ui_ca.paa";	
 		model="\MRC\JLTS\weapons\DC15A\DC15A_ugl.p3d";
 		hiddenSelections[]=
@@ -552,27 +568,621 @@ class CfgWeapons
 			};
 		};
 	};
-	class MET_DC15A_PLASTIC: MET_DC15A
+	/*==============================================================================
+	==DC-15A
+	==============================================================================*/
+	class MET_DC15A_Base_F: Rifle_Base_F
 	{
-		JLTS_friedItem="JLTS_DC15A_plastic_fried";
-		displayName="[16th] DC-15A";
-		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_plastic_ui_ca.paa";
-		model="\MRC\JLTS\weapons\DC15A\DC15A_plastic.p3d";
-		hiddenSelectionsTextures[]=
+		JLTS_hasElectronics=1;
+		JLTS_hasEMPProtection=0;
+		//JLTS_friedItem="JLTS_DC15A_fried";
+		JLTS_repairTime=33;
+		author="$STR_3as_Studio";
+		magazines[]=
 		{
-			"\MRC\JLTS\weapons\DC15A\data\DC15A_plastic_co.paa"
+			"MET_DC15A_mag"
+		};
+		magazineWell[]={};
+		magazineReloadSwitchPhase=0.5;
+		class Library
+		{
+			libTextDesc="$STR_3AS_Weapons_Republic_DC15A_Library";
+		};
+		reloadAction="GestureReloadMX";
+		maxZeroing=0;
+		discreteDistanceInitIndex=0;
+		maxRecoilSway=0.0125;
+		swayDecaySpeed=1.25;
+		inertia=0.60000002;
+		aimTransitionSpeed=0.80000001;
+		dexterity=1.4;
+		initSpeed=-1;
+		class GunParticles: GunParticles
+		{
+		};
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			mass=90;
+			class CowsSlot: CowsSlot
+			{
+				compatibleItems[]={};
+				iconPicture="";
+			};
+			class MuzzleSlot: MuzzleSlot
+			{
+				compatibleItems[]={};
+			};
+			class PointerSlot: PointerSlot
+			{
+				compatibleItems[]={};
+			};
+			class UnderBarrelSlot: UnderBarrelSlot
+			{
+				compatibleItems[]={};
+			};
+		};
+		distanceZoomMin=300;
+		distanceZoomMax=300;
+		descriptionShort="$STR_3AS_Weapons_Republic_DC15A_DesShort";
+		handAnim[]=
+		{
+			"OFP2_ManSkeleton",
+			"3as\3AS_Weapons\Republic\DC15A\Data\Anim\New_DC15a_Handanim.rtm"
+		};
+		modes[]=
+		{
+			"Single",
+			"FullAuto"
+		};
+		class FullAuto: Mode_FullAuto
+		{
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				closure1[]={};
+				closure2[]={};
+				soundClosure[]={};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				begin1[]=
+				{
+					"MRC\JLTS\weapons\DC15A\sounds\dc15a_fire",
+					1,
+					1,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+			};
+			class SilencedSound: BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				begin1[]=
+				{
+					"MRC\JLTS\weapons\DC15A\sounds\dc15a_fire",
+					1,
+					1,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+			};
+			recoil="recoil_single_mx";
+			recoilProne="recoil_single_prone_mx";
+			reloadTime=0.15;
+			dispersion=0.00058;
+			minRange=0;
+			minRangeProbab=0.89999998;
+			midRange=15;
+			midRangeProbab=0.69999999;
+			maxRange=30;
+			maxRangeProbab=0.1;
+			aiRateOfFire=1e-006;
+		};
+		class Burst: Mode_Burst
+		{
+			burst=3;
+			reloadTime=0.15;
+			dispersion=0.00058;
+			minRange=0;
+			minRangeProbab=0.89999998;
+			midRange=50;
+			midRangeProbab=0.69999999;
+			maxRange=100;
+			maxRangeProbab=0.1;
+			recoil="recoil_single_mx";
+			recoilProne="recoil_single_prone_mx";
+			soundContinuous=0;
+			soundBurst=0;
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class BaseSoundModeType;
+			class StandardSound: BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				begin1[]=
+				{
+					"MRC\JLTS\weapons\DC15A\sounds\dc15a_fire",
+					1,
+					1,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+			};
+			class SilencedSound: BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				begin1[]=
+				{
+					"MRC\JLTS\weapons\DC15A\sounds\dc15a_fire",
+					1,
+					1,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+			};
+		};
+		class Single: Mode_SemiAuto
+		{
+			reloadTime=0.15;
+			dispersion=0.00058;
+			minRange=2;
+			minRangeProbab=0.5;
+			midRange=250;
+			midRangeProbab=0.69999999;
+			maxRange=450;
+			maxRangeProbab=0.30000001;
+			recoil="recoil_single_mx";
+			recoilProne="recoil_single_prone_mx";
+			soundContinuous=0;
+			soundBurst=0;
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class BaseSoundModeType;
+			class StandardSound: BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				begin1[]=
+				{
+					"MRC\JLTS\weapons\DC15A\sounds\dc15a_fire",
+					1,
+					1,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+			};
+			class SilencedSound: BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				begin1[]=
+				{
+					"MRC\JLTS\weapons\DC15A\sounds\dc15a_fire",
+					1,
+					1,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+			};
+		};
+		class EGLM: UGL_F
+		{
+			displayName="[16th] UBGL";
+			descriptionShort="Under Barrel Grenade Launcher";
+			useModelOptics=0;
+			useExternalOptic=0;
+			magazines[]=
+			{
+				"MET_HE_Grenade"
+			};
+			magazineWell[]=
+			{
+				"UGL_40x36",
+				"MET_GL_MagWell"
+			};
+			cameraDir="OP_look";
+			discreteDistance[]={50,75,100,150,200,250,300,350,400};
+			discreteDistanceCameraPoint[]=
+			{
+				"OP_eye_50",
+				"OP_eye_75",
+				"OP_eye_100",
+				"OP_eye_150",
+				"OP_eye_200",
+				"OP_eye_250",
+				"OP_eye_300",
+				"OP_eye_350",
+				"OP_eye_400"
+			};
+			discreteDistanceInitIndex=1;
+			reloadAction="GestureReloadMXUGL";
+			reloadMagazineSound[]=
+			{
+				"A3\Sounds_F\arsenal\weapons\Rifles\MX\Mx_UGL_reload",
+				1,
+				1,
+				10
+			};
+		};
+		aiDispersionCoefY=6;
+		aiDispersionCoefX=4;
+		modelOptics="\JMSLLTE_weapons\Scope\big_cross_blue_full.p3d";
+		class OpticsModes
+		{
+			class HoloSight
+			{
+				opticsID=1;
+				useModelOptics=0;
+				opticsFlare=0;
+				opticsPPEffects[]=
+				{
+					"Default"
+				};
+				opticsDisablePeripherialVision=0;
+				opticsZoomMin=0.25;
+				opticsZoomMax=1.25;
+				opticsZoomInit=0.75;
+				memoryPointCamera="eye";
+				visionMode[]={};
+				distanceZoomMin=200;
+				distanceZoomMax=200;
+				cameraDir="";
+			};
+			class HoloScope: HoloSight
+			{
+				opticsID=2;
+				useModelOptics=1;
+				opticsPPEffects[]=
+				{
+					"OpticsCHAbera5",
+					"OpticsBlur5"
+				};
+				visionMode[]=
+				{
+					"Normal",
+					"NVG"
+				};
+				opticsZoomMin=0.050000001;
+				opticsZoomMax=0.107;
+				opticsZoomInit=0.107;
+				memoryPointCamera="opticView";
+				opticsFlare=1;
+				opticsDisablePeripherialVision=1;
+				distanceZoomMin=400;
+				distanceZoomMax=550;
+				weaponInfoType="RscWeaponEmpty";
+			};
+		};
+		caseless[]=
+		{
+			"",
+			1,
+			1,
+			1
+		};
+		soundBullet[]=
+		{
+			"caseless",
+			1
+		};
+		drySound[]=
+		{
+			"\3AS\3AS_Main\Sounds\Blaster_empty",
+			2,
+			1,
+			20
+		};
+		reloadMagazineSound[]=
+		{
+			"\3AS\3AS_Main\Sounds\DC15A\DC15aReload",
+			1,
+			1,
+			30
+		};
+		ace_overheating_mrbs=3000;
+		ace_overheating_slowdownFactor=1;
+		ace_overheating_allowSwapBarrel=0;
+		ace_overheating_dispersion=0.75;
+	};
+	class MET_DC15A_F: MET_DC15A_Base_F
+	{
+		author="$STR_3as_Studio";
+		baseWeapon="MET_DC15A_F";
+		//JLTS_friedItem="JLTS_DC15A_fried";
+		scope=2;
+		displayName="[16th] DC-15A";
+		model="\3AS\3AS_Weapons\Republic\DC15A\3AS_DC15A_F.p3d";
+		picture="\3AS\3AS_Weapons\Republic\DC15A\Data\UI\3as_dc15a.paa";
+		UiPicture="\A3\weapons_f\data\UI\icon_regular_CA.paa";
+	};
+	/*==============================================================================
+	==DC-15LE
+	==============================================================================*/
+	class MET_DC15LE: MET_DC15A_Base_F
+	{
+		author="$STR_3as_Studio";
+		baseWeapon="MET_DC15LE";
+		//JLTS_friedItem="JLTS_DC15A_fried";
+		scope=2;
+		displayName="[16th] DC-15LE";
+		model="\3AS\3AS_Weapons\Republic\DC15A\3AS_DC15A_F.p3d";
+		picture="\3AS\3AS_Weapons\Republic\DC15A\Data\UI\3as_dc15a.paa";
+		UiPicture="\A3\weapons_f\data\UI\icon_regular_CA.paa";
+		magazines[]=
+		{
+			"MET_DC15LE_mag"
+		};
+		magazineWell[]=
+		{
+			"MET_DC15LE_MagWell"
+		};
+		modes[]=
+		{
+			"Single",
+			"Burst"
+		};
+		class FullAuto: Mode_FullAuto
+		{
+			sounds[]=
+			{
+				"StandardSound",
+				"SilencedSound"
+			};
+			class BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				closure1[]={};
+				closure2[]={};
+				soundClosure[]={};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				begin1[]=
+				{
+					"MRC\JLTS\weapons\DC15A\sounds\dc15a_fire",
+					1,
+					1,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+			};
+			class SilencedSound: BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				begin1[]=
+				{
+					"MRC\JLTS\weapons\DC15A\sounds\dc15a_fire",
+					1,
+					1,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+			};
+			reloadTime=0.15;
+			recoil="recoil_auto_mx";
+			recoilProne="recoil_auto_prone_mx";
+			dispersion=0.00058;
+			minRange=0;
+			minRangeProbab=0.89999998;
+			midRange=15;
+			midRangeProbab=0.69999999;
+			maxRange=30;
+			maxRangeProbab=0.1;
+			aiRateOfFire=1e-006;
+		};
+		class Burst: Mode_Burst
+		{
+			textureType="dual";
+			burst=2;
+			reloadTime=0.03;
+			dispersion=0.00058;
+			minRange=0;
+			minRangeProbab=0.89999998;
+			midRange=50;
+			midRangeProbab=0.69999999;
+			maxRange=100;
+			maxRangeProbab=0.1;
+			recoil="recoil_auto_mx";
+			recoilProne="recoil_auto_prone_mx";
+			soundContinuous=0;
+			soundBurst=0;
+			sounds[]=
+			{
+				"StandardSound",
+				"SilencedSound"
+			};
+			class BaseSoundModeType;
+			class StandardSound: BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				begin1[]=
+				{
+					"MRC\JLTS\weapons\DC15A\sounds\dc15a_fire",
+					1,
+					1,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+			};
+			class SilencedSound: BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				begin1[]=
+				{
+					"MRC\JLTS\weapons\DC15A\sounds\dc15a_fire",
+					1,
+					1,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+			};
+		};
+		class Single: Mode_SemiAuto
+		{
+			reloadTime=0.15;
+			dispersion=0.00058;
+			minRange=2;
+			minRangeProbab=0.5;
+			midRange=250;
+			midRangeProbab=0.69999999;
+			maxRange=450;
+			maxRangeProbab=0.30000001;
+			recoil="recoil_auto_mx";
+			recoilProne="recoil_auto_prone_mx";
+			soundContinuous=0;
+			soundBurst=0;
+			sounds[]=
+			{
+				"StandardSound",
+				"SilencedSound"
+			};
+			class BaseSoundModeType;
+			class StandardSound: BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				begin1[]=
+				{
+					"MRC\JLTS\weapons\DC15A\sounds\dc15a_fire",
+					1,
+					1,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+			};
+			class SilencedSound: BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				begin1[]=
+				{
+					"MRC\JLTS\weapons\DC15A\sounds\dc15a_fire",
+					1,
+					1,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+			};
+		};
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			mass=95;
+			class CowsSlot: CowsSlot
+			{
+				compatibleItems[]=
+				{
+					"MET_optic_DC15LE_F"
+				};
+			};
+			class MuzzleSlot: MuzzleSlot
+			{
+				compatibleItems[]=
+				{
+					"3AS_muzzle_DC15LE_F"
+				};
+			};
+			class PointerSlot: PointerSlot
+			{
+				compatibleItems[]={};
+			};
+			class UnderBarrelSlot: UnderBarrelSlot
+			{
+				compatibleItems[]={};
+			};
+		};
+		class LinkedItems
+		{
+			class LinkedItemsOptic
+			{
+				slot="CowsSlot";
+				item="MET_optic_DC15LE_F";
+			};
+			class LinkedItemsMuzzle
+			{
+				slot="MuzzleSlot";
+				item="3AS_muzzle_DC15LE_F";
+			};
 		};
 	};
-	class MET_DC15A_ugl_plastic: MET_DC15A_ugl
+	/*==============================================================================
+	==DC-15A GL
+	==============================================================================*/
+	class MET_DC15A_GL: MET_DC15A_Base_F
 	{
-		JLTS_friedItem="JLTS_DC15A_ugl_plastic_fried";
-		displayName="[16th] DC-15A UBGL";
-		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_ugl_plastic_ui_ca.paa";
-		model="\MRC\JLTS\weapons\DC15A\DC15A_ugl_plastic.p3d";
-		hiddenSelectionsTextures[]=
+		author="$STR_3as_Studio";
+		baseWeapon="MET_DC15A_GL";
+		scope=2;
+		displayName="[16th] DC-15A GL";
+		model="\3AS\3AS_Weapons\Republic\DC15A\3AS_DC15A_GL.p3d";
+		picture="\3AS\3AS_Weapons\Republic\DC15A\Data\UI\3as_dc15a.paa";
+		UiPicture="\A3\weapons_f\data\UI\icon_regular_CA.paa";
+		handAnim[]=
 		{
-			"\MRC\JLTS\weapons\DC15A\data\DC15A_plastic_co.paa",
-			"\MRC\JLTS\weapons\DC15A\data\DC15A_ugl_co.paa"
+			"OFP2_ManSkeleton",
+			"3as\3AS_Weapons\Republic\DC15A\Data\Anim\New_DC15aGL_Handanim.rtm"
+		};
+		muzzles[]=
+		{
+			"this",
+			"EGLM"
+		};
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			mass=110;
 		};
 	};
 	class JLTS_DC15S: arifle_MX_Base_F
@@ -580,6 +1190,9 @@ class CfgWeapons
 		class GunParticles;
 		class WeaponSlotsInfo;
 	};
+	/*==============================================================================
+	==DC-15S LEGACY
+	==============================================================================*/
 	class MET_DC15S: JLTS_DC15S
 	{
 		JLTS_hasElectronics=1;
@@ -589,7 +1202,7 @@ class CfgWeapons
 		JLTS_canHaveShield=1;
 		JLTS_shieldedWeapon="MET_DC15S_shield";
 		author="MrClock";
-		scope=2;
+		scope=0;
 		displayName="[16th] DC-15S";
 		descriptionShort="$STR_JLTS_descs_BlasterCarbine";
 		picture="\MRC\JLTS\weapons\DC15S\data\ui\DC15S_ui_ca.paa";
@@ -610,9 +1223,12 @@ class CfgWeapons
 		reloadAction="GestureReload_JLTS_DC15S";
 		magazines[]=
 		{
-			"MET_DC15A_mag"
+			"MET_DC15S_mag"
 		};
-		magazineWell[]={};
+		magazineWell[]=
+		{
+			"MET_DC15S_MagWell"
+		};
 		fireLightDiffuse[]={0,0,1};
 		drySound[]=
 		{
@@ -965,127 +1581,119 @@ class CfgWeapons
 			};
 		};
 	};
-	class MET_DC15C_Base_F: Rifle_Base_F
+	/*==============================================================================
+	==DC-15S
+	==============================================================================*/
+	class MET_DC15S_Base_F: Rifle_Base_F
 	{
+		JLTS_hasElectronics=1;
+		JLTS_hasEMPProtection=1;
+		JLTS_friedItem="JLTS_DC15S_fried";
+		JLTS_repairTime=20;
 		author="$STR_3as_Studio";
 		magazines[]=
 		{
-			"MET_DC15C_Mag"
+			"MET_DC15S_mag"
 		};
 		magazineWell[]=
 		{
-			"MET_DC15C_MagWell"
+			"MET_DC15S_MagWell"
+		};
+		magazineReloadSwitchPhase=0.5;
+		class Library
+		{
+			libTextDesc="$STR_3AS_Weapons_Republic_DC15S_Library";
 		};
 		reloadAction="GestureReloadMX";
-		magazineReloadSwitchPhase=0.40000001;
+		recoil="3AS_recoil_DC15S";
+		maxZeroing=0;
 		discreteDistanceInitIndex=0;
 		maxRecoilSway=0.0125;
 		swayDecaySpeed=1.25;
 		inertia=0.40000001;
+		aimTransitionSpeed=0.80000001;
 		dexterity=1.6;
 		initSpeed=-1;
-		maxZeroing=100;
 		class GunParticles: GunParticles
 		{
-			class SecondEffect
-			{
-				positionName="Nabojnicestart";
-				directionName="Nabojniceend";
-				effectName="CaselessAmmoCloud";
-			};
 		};
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
+			mass=50;
 			class CowsSlot: CowsSlot
 			{
-				linkProxy="\A3\data_f\proxies\weapon_slots\TOP";
-				compatibleItems[]=
-				{
-					"MET_optic_acog_DC15C",
-					"3AS_optic_reflex_DC15C"
-				};
+				compatibleItems[]={};
+			};
+			class MuzzleSlot: MuzzleSlot
+			{
+				compatibleItems[]={};
 			};
 			class PointerSlot: PointerSlot
 			{
-				linkProxy="\A3\data_f\proxies\weapon_slots\SIDE";
-				compatibleItems[]=
-				{
-					"acc_flashlight",
-					"acc_pointer_IR"
-				};
+				compatibleItems[]={};
 			};
 			class UnderBarrelSlot: UnderBarrelSlot
 			{
-				linkProxy="\A3\data_f_mark\proxies\weapon_slots\UNDERBARREL";
 				compatibleItems[]={};
 			};
 		};
-		opticsZoomMin=0.25;
-		opticsZoomMax=1.25;
-		opticsZoomInit=0.75;
-		distanceZoomMin=400;
-		distanceZoomMax=400;
-		descriptionShort="DC-15C, 3rd Army Studios";
+		distanceZoomMin=300;
+		distanceZoomMax=300;
+		descriptionShort="$STR_3AS_Weapons_Republic_DC15S_DesShort";
 		handAnim[]=
 		{
 			"OFP2_ManSkeleton",
-			"\3AS\3AS_Weapons\DC15C\Data\Anim\DC15C_handanim.rtm"
+			"3as\3AS_Weapons\Republic\DC15S\Data\Anim\New_DC15S_Handanim.rtm"
 		};
-		selectionFireAnim="zasleh";
-		fireLightDiffuse[]={7,36,190,1};
-		fireLightIntensity=0.02;
-		flash="gunfire";
-		flashSize=0.1;
 		modes[]=
 		{
 			"FullAuto",
-			"Single"
+			"Single",
+			"single_medium_optics1",
+			"single_far_optics2"
 		};
 		class FullAuto: Mode_FullAuto
 		{
-			reloadTime=0.0923076923;
-			dispersion=0.00106;
+			sounds[]=
+			{
+				"StandardSound",
+				"SilencedSound"
+			};
+			class BaseSoundModeType;
+			class StandardSound: BaseSoundModeType
+			{
+				soundSetShot[]=
+				{
+					"3AS_DC15S_Shot_SoundSet"
+				};
+			};
+			class SilencedSound: BaseSoundModeType
+			{
+				soundSetShot[]=
+				{
+					"3AS_DC15S_Shot_SoundSet"
+				};
+			};
+			reloadTime=0.075;
+			dispersion=0.00116;
 			minRange=0;
 			minRangeProbab=0.89999998;
 			midRange=15;
 			midRangeProbab=0.69999999;
-			maxRange=30;
-			maxRangeProbab=0.1;
-			soundContinuous=0;
-			soundBurst=0;
-			sounds[]=
-			{
-				"StandardSound",
-				"SilencedSound"
-			};
-			class BaseSoundModeType;
-			class StandardSound: BaseSoundModeType
-			{
-				soundSetShot[]=
-				{
-					"3AS_DC15C_Shot_SoundSet"
-				};
-			};
-			class SilencedSound: BaseSoundModeType
-			{
-				soundSetShot[]=
-				{
-					""
-				};
-			};
-			recoil="recoil_single_mx";
-			recoilProne="recoil_single_prone_mx";
+			maxRange=50;
+			maxRangeProbab=0.050000001;
+			aiRateOfFire=1e-006;
 		};
 		class Single: Mode_SemiAuto
 		{
-			reloadTime=0.0923076923;
-			dispersion=0.00106;
+			reloadTime=0.075;
+			dispersion=0.00116;
 			minRange=2;
-			minRangeProbab=0.30000001;
+			minRangeProbab=0.5;
 			midRange=150;
 			midRangeProbab=0.69999999;
 			maxRange=350;
-			maxRangeProbab=0.1;
+			maxRangeProbab=0.30000001;
 			soundContinuous=0;
 			soundBurst=0;
 			sounds[]=
@@ -1098,59 +1706,57 @@ class CfgWeapons
 			{
 				soundSetShot[]=
 				{
-					"3AS_DC15C_Shot_SoundSet"
+					"3AS_DC15S_Shot_SoundSet"
 				};
 			};
 			class SilencedSound: BaseSoundModeType
 			{
 				soundSetShot[]=
 				{
-					"3AS_DC15C_Shot_SoundSet"
+					"3AS_DC15S_Shot_SoundSet"
 				};
 			};
-			recoil="recoil_single_mx";
-			recoilProne="recoil_single_prone_mx";
 		};
-		class 3AS_15CGL: UGL_F
+		class single_medium_optics1: Single
 		{
-			displayName="3AS DC15C GL";
-			descriptionShort="DC15CGL";
+			requiredOpticType=1;
+			showToPlayer=0;
+			minRange=5;
+			minRangeProbab=0.2;
+			midRange=300;
+			midRangeProbab=0.69999999;
+			maxRange=450;
+			maxRangeProbab=0.2;
+			aiRateOfFire=6;
+			aiRateOfFireDistance=500;
+		};
+		class single_far_optics2: Single
+		{
+			requiredOpticType=2;
+			showToPlayer=0;
+			minRange=100;
+			minRangeProbab=0.2;
+			midRange=400;
+			midRangeProbab=0.69999999;
+			maxRange=600;
+			maxRangeProbab=0.050000001;
+			aiRateOfFire=8;
+			aiRateOfFireDistance=800;
+		};
+		class GL_1GL_F: UGL_F
+		{
+			displayName="UBGL";
+			descriptionShort="Underbarrel Grenade Launcher";
 			useModelOptics=0;
 			useExternalOptic=0;
 			magazines[]=
 			{
-				"MET_HE_Grenade",
-				"1Rnd_HE_Grenade_shell",
-				"UGL_FlareWhite_F",
-				"UGL_FlareGreen_F",
-				"UGL_FlareRed_F",
-				"UGL_FlareYellow_F",
-				"UGL_FlareCIR_F",
-				"1Rnd_Smoke_Grenade_shell",
-				"1Rnd_SmokeRed_Grenade_shell",
-				"1Rnd_SmokeGreen_Grenade_shell",
-				"1Rnd_SmokeYellow_Grenade_shell",
-				"1Rnd_SmokePurple_Grenade_shell",
-				"1Rnd_SmokeBlue_Grenade_shell",
-				"1Rnd_SmokeOrange_Grenade_shell",
-				"3Rnd_HE_Grenade_shell",
-				"3Rnd_UGL_FlareWhite_F",
-				"3Rnd_UGL_FlareGreen_F",
-				"3Rnd_UGL_FlareRed_F",
-				"3Rnd_UGL_FlareYellow_F",
-				"3Rnd_UGL_FlareCIR_F",
-				"3Rnd_Smoke_Grenade_shell",
-				"3Rnd_SmokeRed_Grenade_shell",
-				"3Rnd_SmokeGreen_Grenade_shell",
-				"3Rnd_SmokeYellow_Grenade_shell",
-				"3Rnd_SmokePurple_Grenade_shell",
-				"3Rnd_SmokeBlue_Grenade_shell",
-				"3Rnd_SmokeOrange_Grenade_shell"
+				"MET_HE_Grenade"
 			};
 			magazineWell[]=
 			{
 				"UGL_40x36",
-				"3UGL_40x36"
+				"MET_GL_MagWell"
 			};
 			cameraDir="OP_look";
 			discreteDistance[]={50,75,100,150,200,250,300,350,400};
@@ -1178,6 +1784,409 @@ class CfgWeapons
 		};
 		aiDispersionCoefY=6;
 		aiDispersionCoefX=4;
+		modelOptics="\JMSLLTE_weapons\Scope\big_cross_blue_full.p3d";
+		class OpticsModes
+		{
+			class Holosights
+			{
+				opticsID=1;
+				useModelOptics=0;
+				opticsFlare=0;
+				opticsPPEffects[]=
+				{
+					"Default"
+				};
+				opticsDisablePeripherialVision=0;
+				opticsZoomMin=0.25;
+				opticsZoomMax=1.25;
+				opticsZoomInit=0.75;
+				memoryPointCamera="eye";
+				visionMode[]={};
+				distanceZoomMin=100;
+				distanceZoomMax=100;
+			};
+			class Holoscope: Holosights
+			{
+				opticsID=2;
+				useModelOptics=1;
+				opticsPPEffects[]=
+				{
+					"OpticsCHAbera5",
+					"OpticsBlur5"
+				};
+				visionMode[]=
+				{
+					"Normal",
+					"NVG"
+				};
+				opticsZoomMin=0.107;
+				opticsZoomMax=0.107;
+				opticsZoomInit=0.107;
+				memoryPointCamera="opticView";
+				opticsFlare=1;
+				opticsDisablePeripherialVision=1;
+				distanceZoomMin=400;
+				distanceZoomMax=400;
+				weaponInfoType="RscWeaponEmpty";
+			};
+		};
+		caseless[]=
+		{
+			"",
+			1,
+			1,
+			1
+		};
+		soundBullet[]=
+		{
+			"caseless",
+			1
+		};
+		drySound[]=
+		{
+			"\3AS\3AS_Main\Sounds\Blaster_empty",
+			2,
+			1,
+			20
+		};
+		reloadMagazineSound[]=
+		{
+			"\3AS\3AS_Main\Sounds\Old\Blaster_reload.wss",
+			1,
+			1,
+			30
+		};
+		ace_overheating_mrbs=3000;
+		ace_overheating_slowdownFactor=1;
+		ace_overheating_allowSwapBarrel=0;
+		ace_overheating_dispersion=0.75;
+	};
+	class MET_DC15S_F: MET_DC15S_Base_F
+	{
+		author="$STR_3as_Studio";
+		baseWeapon="MET_DC15S_F";
+		scope=2;
+		displayName="[16th] DC-15S";
+		model="\3AS\3AS_Weapons\Republic\DC15S\3AS_DC15S_F.p3d";
+		picture="\3AS\3AS_Weapons\Republic\DC15S\Data\UI\3as_dc15s.paa";
+		UiPicture="\A3\weapons_f\data\UI\icon_regular_CA.paa";
+	};
+	/*==============================================================================
+	==DC-15S GL
+	==============================================================================*/
+	class MET_DC15S_GL: MET_DC15S_Base_F
+	{
+		JLTS_hasElectronics=1;
+		JLTS_hasEMPProtection=1;
+		//JLTS_friedItem="JLTS_DP23_fried";
+		JLTS_repairTime=25;
+		author="$STR_3as_Studio";
+		baseWeapon="MET_DC15S_GL";
+		scope=2;
+		displayName="[16th] DC-15S GL";
+		model="\3AS\3AS_Weapons\Republic\DC15S\3AS_DC15S_GL.p3d";
+		picture="\3AS\3AS_Weapons\Republic\DC15S\Data\UI\3as_dc15s.paa";
+		UiPicture="\A3\weapons_f\data\UI\icon_regular_CA.paa";
+		handAnim[]=
+		{
+			"OFP2_ManSkeleton",
+			"3as\3AS_Weapons\Republic\DC15S\Data\Anim\New_DC15SGL_Handanim.rtm"
+		};
+		muzzles[]=
+		{
+			"this",
+			"GL_1GL_F"
+		};
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			mass=70;
+		};
+	};
+	/*==============================================================================
+	==DC-15C
+	==============================================================================*/
+	class MET_DC15C_Base_F: Rifle_Base_F
+	{
+		JLTS_hasElectronics=1;
+		JLTS_hasEMPProtection=1;
+		//JLTS_friedItem="JLTS_DP23_fried";
+		JLTS_repairTime=25;
+		author="$STR_3as_Studio";
+		magazines[]=
+		{
+			"MET_DC15S_mag"
+		};
+		magazineWell[]=
+		{
+			"MET_DC15S_MagWell"
+		};
+		magazineReloadSwitchPhase=0.5;
+		class Library
+		{
+			libTextDesc="$STR_3AS_Weapons_Republic_DC15C_Library";
+		};
+		reloadAction="GestureReloadMX";
+		recoil="MET_recoil_DC15C";
+		maxZeroing=0;
+		discreteDistanceInitIndex=0;
+		maxRecoilSway=0.0125;
+		swayDecaySpeed=1.25;
+		inertia=0.60000002;
+		aimTransitionSpeed=0.80000001;
+		dexterity=1.4;
+		initSpeed=-1;
+		class GunParticles: GunParticles
+		{
+		};
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			mass=70;
+			class CowsSlot: CowsSlot
+			{
+				compatibleItems[]=
+				{
+					"MET_optic_DC15C_F"
+				};
+			};
+			class MuzzleSlot: MuzzleSlot
+			{
+				compatibleItems[]={};
+			};
+			class PointerSlot: PointerSlot
+			{
+				compatibleItems[]={};
+			};
+			class UnderBarrelSlot: UnderBarrelSlot
+			{
+				compatibleItems[]={};
+			};
+		};
+		distanceZoomMin=300;
+		distanceZoomMax=300;
+		descriptionShort="$STR_3AS_Weapons_Republic_DC15C_DesShort";
+		handAnim[]=
+		{
+			"OFP2_ManSkeleton",
+			"3as\3AS_Weapons\Republic\DC15C\Data\Anim\New_DC15C_Handanim.rtm"
+		};
+		modes[]=
+		{
+			"Single",
+			"Burst",
+			//"FullAuto",
+			"single_medium_optics1",
+			"single_far_optics2"
+		};
+		class FullAuto: Mode_FullAuto
+		{
+			sounds[]=
+			{
+				"StandardSound",
+				"SilencedSound"
+			};
+			class BaseSoundModeType;
+			class StandardSound: BaseSoundModeType
+			{
+				soundSetShot[]=
+				{
+					"3AS_DC15C_Shot_SoundSet"
+				};
+			};
+			class SilencedSound: BaseSoundModeType
+			{
+				soundSetShot[]=
+				{
+					"3AS_DC15C_Shot_SoundSet"
+				};
+			};
+			reloadTime=0.12;
+			dispersion=0.00029;
+			minRange=0;
+			minRangeProbab=0.89999998;
+			midRange=15;
+			midRangeProbab=0.69999999;
+			maxRange=50;
+			maxRangeProbab=0.050000001;
+			aiRateOfFire=1e-006;
+		};
+		class Burst: Mode_Burst
+		{
+			sounds[]=
+			{
+				"StandardSound",
+				"SilencedSound"
+			};
+			class BaseSoundModeType;
+			class StandardSound: BaseSoundModeType
+			{
+				soundSetShot[]=
+				{
+					"3AS_DC15C_Shot_SoundSet"
+				};
+			};
+			class SilencedSound: BaseSoundModeType
+			{
+				soundSetShot[]=
+				{
+					"3AS_DC15C_Shot_SoundSet"
+				};
+			};
+			reloadTime=0.075;
+			dispersion=0.00029;
+			minRange=0;
+			minRangeProbab=0.89999998;
+			midRange=15;
+			midRangeProbab=0.69999999;
+			maxRange=50;
+			maxRangeProbab=0.050000001;
+			aiRateOfFire=1e-006;
+		};
+		class Single: Mode_SemiAuto
+		{
+			reloadTime=0.12;
+			dispersion=0.00029;
+			minRange=2;
+			minRangeProbab=0.5;
+			midRange=150;
+			midRangeProbab=0.69999999;
+			maxRange=350;
+			maxRangeProbab=0.30000001;
+			soundContinuous=0;
+			soundBurst=0;
+			sounds[]=
+			{
+				"StandardSound",
+				"SilencedSound"
+			};
+			class BaseSoundModeType;
+			class StandardSound: BaseSoundModeType
+			{
+				soundSetShot[]=
+				{
+					"3AS_DC15C_Shot_SoundSet"
+				};
+			};
+			class SilencedSound: BaseSoundModeType
+			{
+				soundSetShot[]=
+				{
+					"3AS_DC15C_Shot_SoundSet"
+				};
+			};
+		};
+		class single_medium_optics1: Single
+		{
+			requiredOpticType=1;
+			showToPlayer=0;
+			minRange=5;
+			minRangeProbab=0.2;
+			midRange=300;
+			midRangeProbab=0.69999999;
+			maxRange=450;
+			maxRangeProbab=0.2;
+			aiRateOfFire=6;
+			aiRateOfFireDistance=500;
+		};
+		class single_far_optics2: Single
+		{
+			requiredOpticType=2;
+			showToPlayer=0;
+			minRange=100;
+			minRangeProbab=0.2;
+			midRange=400;
+			midRangeProbab=0.69999999;
+			maxRange=600;
+			maxRangeProbab=0.050000001;
+			aiRateOfFire=8;
+			aiRateOfFireDistance=800;
+		};
+		class ELGM: UGL_F
+		{
+			displayName="UBGL";
+			descriptionShort="Underbarrel Grenade Launcher";
+			useModelOptics=0;
+			useExternalOptic=0;
+			magazines[]=
+			{
+				"MET_HE_Grenade"
+			};
+			magazineWell[]=
+			{
+				"UGL_40x36",
+				"MET_GL_MagWell"
+			};
+			cameraDir="OP_look";
+			discreteDistance[]={50,75,100,150,200,250,300,350,400};
+			discreteDistanceCameraPoint[]=
+			{
+				"OP_eye_50",
+				"OP_eye_75",
+				"OP_eye_100",
+				"OP_eye_150",
+				"OP_eye_200",
+				"OP_eye_250",
+				"OP_eye_300",
+				"OP_eye_350",
+				"OP_eye_400"
+			};
+			discreteDistanceInitIndex=1;
+			reloadAction="GestureReloadMXUGL";
+			reloadMagazineSound[]=
+			{
+				"A3\Sounds_F\arsenal\weapons\Rifles\MX\Mx_UGL_reload",
+				1,
+				1,
+				10
+			};
+		};
+		aiDispersionCoefY=6;
+		aiDispersionCoefX=4;
+		modelOptics="\JMSLLTE_weapons\Scope\big_cross_blue_full.p3d";
+		class OpticsModes
+		{
+			class Ironsights
+			{
+				opticsID=1;
+				useModelOptics=0;
+				opticsFlare=0;
+				opticsPPEffects[]=
+				{
+					"Default"
+				};
+				opticsDisablePeripherialVision=0;
+				opticsZoomMin=0.25;
+				opticsZoomMax=1.25;
+				opticsZoomInit=0.75;
+				memoryPointCamera="eye";
+				visionMode[]={};
+				distanceZoomMin=100;
+				distanceZoomMax=100;
+			};
+			class HoloScope: Ironsights
+			{
+				opticsID=2;
+				useModelOptics=1;
+				opticsPPEffects[]=
+				{
+					"OpticsCHAbera5",
+					"OpticsBlur5"
+				};
+				visionMode[]=
+				{
+					"Normal",
+					"NVG"
+				};
+				opticsZoomMin=0.107;
+				opticsZoomMax=0.107;
+				opticsZoomInit=0.107;
+				memoryPointCamera="opticView";
+				opticsFlare=1;
+				opticsDisablePeripherialVision=1;
+				distanceZoomMin=400;
+				distanceZoomMax=400;
+				weaponInfoType="RscWeaponEmpty";
+			};
+		};
 		caseless[]=
 		{
 			"",
@@ -1211,58 +2220,1304 @@ class CfgWeapons
 	};
 	class MET_DC15C_F: MET_DC15C_Base_F
 	{
+		author="$STR_3as_Studio";
+		baseWeapon="MET_DC15C_F";
 		scope=2;
 		displayName="[16th] DC-15C";
-		weaponInfoType="RscWeaponZeroing";
-		model="3AS\3AS_Weapons\DC15C\3AS_DC15C_f";
-		picture="\3AS\3AS_Weapons\DC15C\Data\UI\3as_dc15c.paa";
+		model="\3AS\3AS_Weapons\Republic\DC15C\3AS_DC15C_F.p3d";
+		picture="\3AS\3AS_Weapons\Republic\DC15C\Data\UI\3as_dc15c.paa";
+		UiPicture="\A3\weapons_f\data\UI\icon_regular_CA.paa";
+	};
+	/*==============================================================================
+	==DC-15C GL
+	==============================================================================*/
+	class MET_DC15C_GL: MET_DC15C_Base_F
+	{
+		JLTS_hasElectronics=1;
+		JLTS_hasEMPProtection=1;
+		//JLTS_friedItem="JLTS_DP23_fried";
+		JLTS_repairTime=25;
+		author="$STR_3as_Studio";
+		baseWeapon="MET_DC15C_GL";
+		scope=2;
+		displayName="[16th] DC-15C GL";
+		model="\3AS\3AS_Weapons\Republic\DC15C\3AS_DC15C_GL.p3d";
+		picture="\3AS\3AS_Weapons\Republic\DC15C\Data\UI\3as_dc15c.paa";
+		UiPicture="\A3\weapons_f\data\UI\icon_regular_CA.paa";
+		muzzles[]=
+		{
+			"this",
+			"ELGM"
+		};
+		handAnim[]=
+		{
+			"OFP2_ManSkeleton",
+			"3as\3AS_Weapons\Republic\DC15C\Data\Anim\New_DC15CGL_Handanim.rtm"
+		};
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			mass=90;
+		};
+	};
+	/*==============================================================================
+	==DC-15L
+	==============================================================================*/
+	class MET_DC15L_Base_F: Rifle_Base_F
+	{
+		JLTS_hasElectronics=1;
+		JLTS_hasEMPProtection=1;
+		//JLTS_friedItem="JLTS_DP23_fried";
+		JLTS_repairTime=25;
+		author="$STR_3as_Studio";
+		magazines[]=
+		{
+			"MET_DC15L_mag"
+		};
+		magazineWell[]=
+		{
+			"MET_DC15L_MagWell"
+		};
+		magazineReloadSwitchPhase=0.5;
+		class Library
+		{
+			libTextDesc="$STR_3AS_Weapons_Republic_DC15L_Library";
+		};
+		handAnim[]=
+		{
+			"OFP2_ManSkeleton",
+			"3as\3AS_Weapons\Republic\DC15L\Data\Anims\New_DC15L_Handanim.rtm"
+		};
+		reloadAction="GestureReloadMX";
+		recoil="MET_recoil_DC15L";
+		maxZeroing=1400;
+		discreteDistanceInitIndex=0;
+		maxRecoilSway=0.0125;
+		swayDecaySpeed=1.25;
+		inertia=0.60000002;
+		aimTransitionSpeed=0.80000001;
+		dexterity=1.4;
+		initSpeed=-1;
+		class GunParticles: GunParticles
+		{
+		};
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			mass=170;
+			class CowsSlot: CowsSlot
+			{
+				compatibleItems[]=
+				{
+					"MET_optic_DC15L_F"
+				};
+			};
+			class PointerSlot: PointerSlot
+			{
+				compatibleItems[]={};
+			};
+			class UnderBarrelSlot: UnderBarrelSlot
+			{
+				compatibleItems[]=
+				{
+					"3AS_bipod_DC15L_F"
+				};
+			};
+		};
+		class LinkedItems
+		{
+			class LinkedItemsUnderBarrel
+			{
+				slot="UnderBarrelSlot";
+				item="3AS_bipod_DC15L_F";
+			};
+		};
+		distanceZoomMin=300;
+		distanceZoomMax=300;
+		descriptionShort="$STR_3AS_Weapons_Republic_DC15L_DesShort";
+		modes[]=
+		{
+			"FullAuto",
+			"FullerAuto",
+			"close",
+			"short",
+			"medium",
+			"far_optic1",
+			"far_optic2"
+		};
+		class FullAuto: Mode_FullAuto
+		{
+			reloadTime=0.12;
+			dispersion=0.00079000002;
+			minRange=0;
+			minRangeProbab=0.89999998;
+			midRange=15;
+			midRangeProbab=0.69999999;
+			maxRange=30;
+			maxRangeProbab=0.1;
+			soundContinuous=0;
+			soundBurst=0;
+			textureType="burst";
+			sounds[]=
+			{
+				"StandardSound",
+				"SilencedSound"
+			};
+			class BaseSoundModeType;
+			class StandardSound: BaseSoundModeType
+			{
+				soundSetShot[]=
+				{
+					"3AS_DC15L_Shot_SoundSet"
+				};
+			};
+			class SilencedSound: BaseSoundModeType
+			{
+				soundSetShot[]=
+				{
+					""
+				};
+			};
+		};
+		class FullerAuto: FullAuto
+		{
+			reloadTime=0.0545454545454545;
+			dispersion=0.00079000002;
+			minRange=0;
+			minRangeProbab=0.89999998;
+			midRange=15;
+			midRangeProbab=0.69999999;
+			maxRange=30;
+			maxRangeProbab=0.1;
+			soundContinuous=0;
+			soundBurst=0;
+			textureType="fullAuto";
+			sounds[]=
+			{
+				"StandardSound",
+				"SilencedSound"
+			};
+			class BaseSoundModeType;
+			class StandardSound: BaseSoundModeType
+			{
+				soundSetShot[]=
+				{
+					"3AS_DC15L_Shot_SoundSet"
+				};
+			};
+			class SilencedSound: BaseSoundModeType
+			{
+				soundSetShot[]=
+				{
+					""
+				};
+			};
+		};
+		class close: FullAuto
+		{
+			burst=10;
+			aiRateOfFire=0.5;
+			aiRateOfFireDistance=50;
+			minRange=10;
+			minRangeProbab=0.050000001;
+			midRange=20;
+			midRangeProbab=0.69999999;
+			maxRange=50;
+			maxRangeProbab=0.039999999;
+			showToPlayer=0;
+		};
+		class short: close
+		{
+			burst=8;
+			aiRateOfFire=2;
+			aiRateOfFireDistance=300;
+			minRange=50;
+			minRangeProbab=0.050000001;
+			midRange=150;
+			midRangeProbab=0.69999999;
+			maxRange=300;
+			maxRangeProbab=0.039999999;
+		};
+		class medium: close
+		{
+			burst=7;
+			aiRateOfFire=4;
+			aiRateOfFireDistance=600;
+			minRange=200;
+			minRangeProbab=0.050000001;
+			midRange=300;
+			midRangeProbab=0.69999999;
+			maxRange=500;
+			maxRangeProbab=0.1;
+		};
+		class far_optic1: medium
+		{
+			requiredOpticType=1;
+			showToPlayer=0;
+			burst=3;
+			aiRateOfFire=10;
+			aiRateOfFireDistance=1000;
+			minRange=300;
+			minRangeProbab=0.050000001;
+			midRange=500;
+			midRangeProbab=0.40000001;
+			maxRange=650;
+			maxRangeProbab=0.0099999998;
+		};
+		class far_optic2: far_optic1
+		{
+			burst=3;
+			requiredOpticType=2;
+			minRange=400;
+			minRangeProbab=0.050000001;
+			midRange=750;
+			midRangeProbab=0.69999999;
+			maxRange=900;
+			maxRangeProbab=0.0099999998;
+			aiRateOfFire=10;
+			aiRateOfFireDistance=900;
+		};
+		aiDispersionCoefY=24;
+		aiDispersionCoefX=21;
 		class OpticsModes
 		{
 			class Ironsights
 			{
 				opticsID=1;
 				useModelOptics=0;
-				opticsFlare="true";
+				opticsFlare=0;
 				opticsPPEffects[]=
 				{
-					"OpticsCHAbera5",
-					"OpticsBlur5"
+					"Default"
 				};
-				opticsDisablePeripherialVision=0.67000002;
-				opticsZoomMin=0.375;
-				opticsZoomMax=1.1;
+				opticsDisablePeripherialVision=0;
+				opticsZoomMin=0.25;
+				opticsZoomMax=1.25;
 				opticsZoomInit=0.75;
 				memoryPointCamera="eye";
 				visionMode[]={};
 				distanceZoomMin=100;
 				distanceZoomMax=100;
 			};
-			class Scope: Ironsights
+		};
+		caseless[]=
+		{
+			"",
+			1,
+			1,
+			1
+		};
+		soundBullet[]=
+		{
+			"caseless",
+			1
+		};
+		drySound[]=
+		{
+			"\3AS\3AS_Main\Sounds\Blaster_empty",
+			2,
+			1,
+			20
+		};
+		reloadMagazineSound[]=
+		{
+			"\3AS\3AS_Main\Sounds\Old\Blaster_reload.wss",
+			1,
+			1,
+			30
+		};
+		ace_overheating_mrbs=3000;
+		ace_overheating_slowdownFactor=1;
+		ace_overheating_allowSwapBarrel=0;
+		ace_overheating_dispersion=0.75;
+	};
+	class MET_DC15L_F: MET_DC15L_Base_F
+	{
+		author="$STR_3as_Studio";
+		baseWeapon="MET_DC15L_F";
+		scope=2;
+		displayName="[16th] DC-15L";
+		model="\3AS\3AS_Weapons\Republic\DC15L\3AS_DC15L_F.p3d";
+		picture="\3AS\3AS_Weapons\Republic\DC15L\Data\UI\3as_dc15l.paa";
+		UiPicture="\A3\weapons_f\data\UI\icon_regular_CA.paa";
+	};
+	/*==============================================================================
+	==Z6
+	==============================================================================*/
+	class MET_Z6: LMG_Mk200_F
+	{
+		JLTS_hasElectronics=1;
+		JLTS_hasEMPProtection=1;
+		JLTS_friedItem="JLTS_DP23_fried";
+		JLTS_repairTime=25;
+		ace_overheating_mrbs=40000;
+		ace_overheating_slowdownFactor=0;
+		ace_overheating_allowSwapBarrel=0;
+		ace_overheating_dispersion=1;
+		ace_overheating_closedBolt=0;
+		ace_overheating_barrelMass=1;
+		ace_overheating_jamTypesAllowed[]=
+		{
+			"Fire",
+			"Dud"
+		};
+		author="Hazmat";
+		inertia=0;
+		canShootInWater=1;
+		scope=2;
+		autoReload="true";
+		baseWeapon="MET_Z6";
+		displayName="[16th] Z6 rotary cannon";
+		displayNameShort="A big weapon for big battles";
+		descriptionShort="Rapid Fire. Reloads automatically.";
+		picture="\MRC\JLTS\weapons\Z6\data\ui\Z6_ui_ca.paa";
+		model="\MRC\JLTS\weapons\Z6\Z6.p3d";
+		WBK_UseHeavyWeaponFramework = true;	
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+			"camo3"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"z\16th\addons\weapons\infantry_weap\data\Z6_co.paa",
+			"z\16th\addons\weapons\infantry_weap\data\Z6_Barrel_co.paa",
+			"z\16th\addons\weapons\infantry_weap\data\Z6_Mag_co.paa"
+		};
+		magazines[]=
+		{
+			"MET_blaster_battery",
+			"MET_blaster_battery_Red",
+			"MET_blaster_battery_Green",
+			"MET_blaster_battery_Yellow"
+		};
+		recoil="MET_recoil_Z6";
+		maxZeroing=1200;
+		handAnim[]=
+		{
+			"OFP2_ManSkeleton",
+			"\MRC\JLTS\weapons\Z6\anims\Z6_handanim.rtm"
+		};
+		reloadAction="";
+		ace_clearJamAction="";
+		magazineWell[]={
+			"MET_Z6_MagWell"
+		};
+		fireLightDiffuse[]={0.1,0.25,1};
+		drySound[]=
+		{
+			"z\16th\addons\weapons\infantry_weap\sounds\weapon_dry.ogg",
+			5,
+			1,
+			10
+		};
+		reloadMagazineSound[]=
+		{
+			"z\16th\addons\weapons\infantry_weap\sounds\republic\z-6\Z6_reload.ogg",
+			1.5,
+			1,
+			100
+		};
+		muzzles[]=
+		{
+			"this"
+		};
+		modes[]=
+		{
+			"Auto",
+			"fullerAuto"
+		};
+		class Auto: Mode_FullAuto
+		{
+			sounds[]=
 			{
-				opticsID=2;
-				useModelOptics=1;
-				opticsPPEffects[]=
+				"StandardSound"
+			};
+			class BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				closure1[]={};
+				closure2[]={};
+				soundClosure[]={};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				begin1[]=
 				{
-					"OpticsCHAbera5",
-					"OpticsBlur5"
+					"z\16th\addons\weapons\infantry_weap\sounds\republic\z-6\z6.ogg",
+					1,
+					1,
+					1800
 				};
-				opticsDisablePeripherialVision=0.67000002;
-				opticsZoomMin=0.122173;
-				opticsZoomMax=0.122173;
-				opticsZoomInit=0.122173;
-				memoryPointCamera="opticView";
-				visionMode[]=
+				begin2[]=
 				{
-					"Normal",
-					"NVG"
+					"z\16th\addons\weapons\infantry_weap\sounds\republic\z-6\z6.ogg",
+					1,
+					1.015,
+					1800
 				};
-				opticsFlare="true";
-				distanceZoomMin=100;
-				distanceZoomMax=100;
-				cameraDir="";
+				begin3[]=
+				{
+					"z\16th\addons\weapons\infantry_weap\sounds\republic\z-6\z6.ogg",
+					1,
+					0.98500001,
+					1800
+				};
+				begin4[]=
+				{
+					"z\16th\addons\weapons\infantry_weap\sounds\republic\z-6\z6.ogg",
+					1,
+					1.01,
+					1800
+				};
+				begin5[]=
+				{
+					"z\16th\addons\weapons\infantry_weap\sounds\republic\z-6\z6.ogg",
+					1,
+					0.995,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					0.2,
+					"begin2",
+					0.2,
+					"begin3",
+					0.2,
+					"begin4",
+					0.2,
+					"begin5",
+					0.2
+				};
+				beginwater1[]=
+				{
+					"z\16th\addons\weapons\infantry_weap\sounds\republic\z-6\z6.ogg",
+					1,
+					1,
+					400
+				};
+				soundBeginWater[]=
+				{
+					"beginwater1",
+					1
+				};
+			};
+			reloadTime=0.05;
+			magazines[]=
+			{
+				"MET_blaster_battery",
+				"MET_blaster_battery_Red",
+				"MET_blaster_battery_Green",
+				"MET_blaster_battery_Yellow"
+			};
+			dispersion=0.0049999999;
+			burst=1;
+			soundContinuous="false";
+			soundBurst="true";
+			minRange=2;
+			minRangeProbab=0.5;
+			midRange=100;
+			midRangeProbab=0.075000003;
+			maxRange=10000;
+			maxRangeProbab=0.30000001;
+		};
+		class fullerAuto: Auto
+		{
+			reloadTime=0.03;
+			dispersion=0.006;
+			textureType="fastAuto";
+			minRangeProbab=0;
+			midRangeProbab=0;
+			maxRangeProbab=0;
+		};
+		aiDispersionCoefY=24;
+		aiDispersionCoefX=21;
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			mass=100;
+			class CowsSlot: CowsSlot
+			{
+				compatibleItems[]={};
+			};
+			class MuzzleSlot: MuzzleSlot
+			{
+				compatibleItems[]={};
+			};
+			class PointerSlot: PointerSlot
+			{
+				compatibleItems[]={};
+			};
+			class UnderBarrelSlot: UnderBarrelSlot
+			{
+				compatibleItems[]={};
+			};
+		};
+		class GunParticles
+		{
+			class FirstEffect
+			{
+				directionName="Konec hlavne";
+				effectName="RifleAssaultCloud";
+				positionName="Usti hlavne";
 			};
 		};
 	};
+	class METAL_Z6_Dumb: MET_Z6
+	{
+		baseWeapon="MET_Z6_Dumb";
+		scope=0;
+	};
+	/*==============================================================================
+	==DP-23
+	==============================================================================*/
+	class MET_DP23_Base_F: Rifle_Base_F
+	{
+		JLTS_hasElectronics=1;
+		JLTS_hasEMPProtection=1;
+		//JLTS_friedItem="JLTS_DP23_fried";
+		JLTS_repairTime=25;
+		author="$STR_3as_Studio";
+		magazines[]=
+		{
+			"MET_pellet_mag",
+			"MET_slug_mag"
+		};
+		magazineWell[]=	{};
+		magazineReloadSwitchPhase=0.5;
+		class Library
+		{
+			libTextDesc="$STR_3AS_Weapons_Republic_DP23_Library";
+		};
+		reloadAction="GestureReloadMX";
+		recoil="3as_recoil_heavy";
+		maxZeroing=1400;
+		discreteDistanceInitIndex=0;
+		maxRecoilSway=0.0125;
+		swayDecaySpeed=1.25;
+		inertia=0.60000002;
+		aimTransitionSpeed=0.80000001;
+		dexterity=1.4;
+		initSpeed=-1;
+		class GunParticles: GunParticles
+		{
+		};
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			mass=60;
+			class CowsSlot: CowsSlot
+			{
+				compatibleItems[]={};
+			};
+			class MuzzleSlot: MuzzleSlot
+			{
+				compatibleItems[]={};
+			};
+			class PointerSlot: PointerSlot
+			{
+				compatibleItems[]={};
+			};
+			class UnderBarrelSlot: UnderBarrelSlot
+			{
+				compatibleItems[]={};
+			};
+		};
+		distanceZoomMin=300;
+		distanceZoomMax=300;
+		descriptionShort="$STR_3AS_Weapons_Republic_DP23_DesShort";
+		handAnim[]=
+		{
+			"OFP2_ManSkeleton",
+			"3as\3AS_Weapons\Republic\DP23\Data\Anim\New_DP23_handanim.rtm"
+		};
+		modes[]=
+		{
+			"Single",
+			"Single_close",
+			"Single_far"
+		};
+		class Single: Mode_SemiAuto
+		{
+			reloadTime=0.15;
+			dispersion=0.0001;
+			minRange=1;
+			minRangeProbab=0.1;
+			midRange=10;
+			midRangeProbab=0.80000001;
+			maxRange=50;
+			maxRangeProbab=0.15000001;
+			soundContinuous=0;
+			soundBurst=0;
+			sounds[]=
+			{
+				"StandardSound",
+				"SilencedSound"
+			};
+			class BaseSoundModeType;
+			class StandardSound: BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				begin1[]=
+				{
+					"z\16th\addons\weapons\infantry_weap\sounds\dp23.ogg",
+					1,
+					1,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+			};
+			class SilencedSound: BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				begin1[]=
+				{
+					"z\16th\addons\weapons\infantry_weap\sounds\dp23.ogg",
+					1,
+					1,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+			};
+			aiRateOfFire=1;
+			aiRateOfFireDistance=20;
+		};
+		class Single_Close: Single
+		{
+			showToPlayer=0;
+			minRange=50;
+			minRangeProbab=0.1;
+			midRange=170;
+			midRangeProbab=0.80000001;
+			maxRange=250;
+			maxRangeProbab=0.15000001;
+			aiRateOfFire=2;
+			aiRateOfFireDistance=200;
+		};
+		class Single_Far: Single_Close
+		{
+			minRange=220;
+			minRangeProbab=0.1;
+			midRange=250;
+			midRangeProbab=0.69999999;
+			maxRange=350;
+			maxRangeProbab=0.15000001;
+			aiRateOfFire=4;
+			aiRateOfFireDistance=300;
+		};
+		class 3AS_FL_F: Rifle_Base_F
+		{
+			displayName="UBGL";
+			cursor="srifle";
+			reloadAction="GestureReloadARX2";
+			magazines[]=
+			{
+				//"3AS_1Rnd_EC80_Flechette"
+			};
+			magazineWell[]=
+			{
+				"MET_GL_MagWell_Pacifist"
+			};
+			recoil="3as_recoil_heavy";
+			maxZeroing=100;
+			class GunParticles: GunParticles
+			{
+			};
+			modes[]=
+			{
+				"Single"
+			};
+			class Single: Mode_SemiAuto
+			{
+				reloadTime=0.1;
+				dispersion=0.00133;
+				minRange=1;
+				minRangeProbab=0.1;
+				midRange=25;
+				midRangeProbab=0.80000001;
+				maxRange=50;
+				maxRangeProbab=0.15000001;
+				soundContinuous=0;
+				soundBurst=0;
+				sounds[]=
+				{
+					"StandardSound",
+					"SilencedSound"
+				};
+				class BaseSoundModeType;
+				class StandardSound: BaseSoundModeType
+				{
+					soundSetShot[]=
+					{
+						"3AS_DP23_Shot_SoundSet"
+					};
+				};
+				class SilencedSound: BaseSoundModeType
+				{
+					soundSetShot[]=
+					{
+						"3AS_DP23_Shot_SoundSet"
+					};
+				};
+				aiRateOfFire=1;
+				aiRateOfFireDistance=20;
+			};
+		};
+		aiDispersionCoefY=6;
+		aiDispersionCoefX=4;
+		class OpticsModes
+		{
+			class Ironsights
+			{
+				opticsID=1;
+				useModelOptics=0;
+				opticsFlare=0;
+				opticsPPEffects[]=
+				{
+					"Default"
+				};
+				opticsDisablePeripherialVision=0;
+				opticsZoomMin=0.25;
+				opticsZoomMax=1.25;
+				opticsZoomInit=0.75;
+				memoryPointCamera="eye";
+				visionMode[]={};
+				distanceZoomMin=100;
+				distanceZoomMax=100;
+			};
+		};
+		caseless[]=
+		{
+			"",
+			1,
+			1,
+			1
+		};
+		soundBullet[]=
+		{
+			"caseless",
+			1
+		};
+		drySound[]=
+		{
+			"\3AS\3AS_Main\Sounds\Blaster_empty",
+			2,
+			1,
+			20
+		};
+		reloadMagazineSound[]=
+		{
+			"\3AS\3AS_Main\Sounds\DC15A\DC15aReload",
+			1,
+			1,
+			30
+		};
+		ace_overheating_mrbs=3000;
+		ace_overheating_slowdownFactor=1;
+		ace_overheating_allowSwapBarrel=0;
+		ace_overheating_dispersion=0.75;
+	};
+	class MET_DP23_F: MET_DP23_Base_F
+	{
+		author="$STR_3as_Studio";
+		baseWeapon="MET_DP23_F";
+		scope=2;
+		displayName="[16th] DP-23";
+		model="\3AS\3AS_Weapons\Republic\DP23\3AS_DP23_F.p3d";
+		picture="\3AS\3AS_Weapons\Republic\DP23\Data\UI\3as_dp23.paa";
+		UiPicture="\A3\weapons_f\data\UI\icon_regular_CA.paa";
+	};
+	/*==============================================================================
+	==DC-15X
+	==============================================================================*/
+	class MET_DC15X_Base_F: Rifle_Base_F
+	{
+		author="$STR_3as_Studio";
+		magazines[]=
+		{
+			"MET_DC15x_mag",
+			"MET_DC15x_at_mag"
+		};
+		magazineWell[]={};
+		magazineReloadSwitchPhase=0.5;
+		class Library
+		{
+			libTextDesc="$STR_3AS_Weapons_Republic_DC15X_Library";
+		};
+		reloadAction="GestureReloadMX";
+		recoil="MET_recoil_DC15X";
+		maxZeroing=1400;
+		discreteDistanceInitIndex=0;
+		maxRecoilSway=0.0125;
+		swayDecaySpeed=1.25;
+		inertia=1.1;
+		aimTransitionSpeed=0.5;
+		dexterity=1.1;
+		initSpeed=-1;
+		class GunParticles: GunParticles
+		{
+		};
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			mass=297;
+			class CowsSlot: CowsSlot
+			{
+				compatibleItems[]=
+				{
+					"MET_optic_DC15X_F"
+				};
+			};
+			class PointerSlot: PointerSlot
+			{
+				compatibleItems[]={};
+			};
+			class UnderBarrelSlot: UnderBarrelSlot
+			{
+				compatibleItems[]=
+				{
+					"3AS_bipod_DC15X_F"
+				};
+			};
+		};
+		distanceZoomMin=300;
+		distanceZoomMax=300;
+		descriptionShort="$STR_3AS_Weapons_Republic_DC15X_DesShort";
+		handAnim[]=
+		{
+			"OFP2_ManSkeleton",
+			"3as\3AS_Weapons\Republic\DC15X\Data\Anim\New_DC15X_handanim.rtm"
+		};
+		modes[]=
+		{
+			"Single",
+			"far_optic1",
+			"medium_optic2",
+			"far_optic2"
+		};
+		class Single: Mode_SemiAuto
+		{
+			reloadTime=0.80000001;
+			dispersion=0.000000000000000001;
+			minRange=2;
+			minRangeProbab=0.1;
+			midRange=250;
+			midRangeProbab=0.69999999;
+			maxRange=350;
+			maxRangeProbab=0.050000001;
+			soundContinuous=0;
+			soundBurst=0;
+			sounds[]=
+			{
+				"StandardSound",
+				"SilencedSound"
+			};
+			class BaseSoundModeType;
+			class StandardSound: BaseSoundModeType
+			{
+				soundSetShot[]=
+				{
+					"3AS_DLT19X_Shot_SoundSet"
+				};
+			};
+			class SilencedSound: BaseSoundModeType
+			{
+				soundSetShot[]=
+				{
+					"3AS_DLT19X_Shot_SoundSet"
+				};
+			};
+			aiRateOfFire=3;
+			aiRateOfFireDistance=500;
+		};
+		class far_optic1: Single
+		{
+			showToPlayer=0;
+			minRange=150;
+			minRangeProbab=0.1;
+			midRange=500;
+			midRangeProbab=0.69999999;
+			maxRange=1000;
+			maxRangeProbab=0.30000001;
+			aiRateOfFire=5;
+			aiRateOfFireDistance=700;
+			requiredOpticType=1;
+		};
+		class medium_optic2: Single
+		{
+			showToPlayer=0;
+			minRange=250;
+			minRangeProbab=0.1;
+			midRange=750;
+			midRangeProbab=0.69999999;
+			maxRange=1000;
+			maxRangeProbab=0.30000001;
+			aiRateOfFire=6;
+			aiRateOfFireDistance=1000;
+			requiredOpticType=2;
+		};
+		class far_optic2: far_optic1
+		{
+			minRange=500;
+			minRangeProbab=0.1;
+			midRange=1050;
+			midRangeProbab=0.69999999;
+			maxRange=2000;
+			maxRangeProbab=0.30000001;
+			aiRateOfFire=8;
+			aiRateOfFireDistance=2000;
+			requiredOpticType=2;
+		};
+		aiDispersionCoefY=6;
+		aiDispersionCoefX=4;
+		class OpticsModes
+		{
+			class Ironsights
+			{
+				opticsID=1;
+				useModelOptics=0;
+				opticsFlare=0;
+				opticsPPEffects[]=
+				{
+					"Default"
+				};
+				opticsDisablePeripherialVision=0;
+				opticsZoomMin=0.25;
+				opticsZoomMax=1.25;
+				opticsZoomInit=0.75;
+				memoryPointCamera="eye";
+				visionMode[]={};
+				distanceZoomMin=100;
+				distanceZoomMax=100;
+			};
+		};
+		caseless[]=
+		{
+			"",
+			1,
+			1,
+			1
+		};
+		soundBullet[]=
+		{
+			"caseless",
+			1
+		};
+		drySound[]=
+		{
+			"\3AS\3AS_Main\Sounds\Blaster_empty",
+			2,
+			1,
+			20
+		};
+		reloadMagazineSound[]=
+		{
+			"\3AS\3AS_Main\Sounds\DC15A\DC15aReload",
+			1,
+			1,
+			30
+		};
+		ace_overheating_mrbs=3000;
+		ace_overheating_slowdownFactor=1;
+		ace_overheating_allowSwapBarrel=0;
+		ace_overheating_dispersion=0.75;
+	};
+	class MET_DC15X_F: MET_DC15X_Base_F
+	{
+		author="$STR_3as_Studio";
+		baseWeapon="MET_DC15X_F";
+		scope=2;
+		displayName="[16th] DC-15X";
+		model="\3AS\3AS_Weapons\Republic\DC15X\3AS_DC15X_F.p3d";
+		picture="\3AS\3AS_Weapons\Republic\DC15X\Data\UI\3as_dc15x.paa";
+		UiPicture="\A3\weapons_f\data\UI\icon_regular_CA.paa";
+		class LinkedItems
+		{
+			class LinkedItemsOptic
+			{
+				slot="CowsSlot";
+				item="MET_optic_DC15X_F";
+			};
+			class LinkedItemsUnderBarrel
+			{
+				slot="UnderBarrelSlot";
+				item="3AS_bipod_DC15X_F";
+			};
+		};
+	};
+	/*==============================================================================
+	==Valken-38X
+	==============================================================================*/
+	class MET_Valken38X_Base_F: Rifle_Base_F
+	{
+		author="$STR_3as_Studio";
+		magazines[]=
+		{
+			"MET_Valken_mag"
+		};
+		magazineWell[]={};
+		magazineReloadSwitchPhase=0.5;
+		class Library
+		{
+			libTextDesc="$STR_3AS_Weapons_Republic_VK38X_Library";
+		};
+		reloadAction="GestureReloadMX";
+		recoil="3as_recoil_VK38X";
+		maxZeroing=1400;
+		discreteDistanceInitIndex=0;
+		maxRecoilSway=0.0125;
+		swayDecaySpeed=1.25;
+		inertia=0.60000002;
+		aimTransitionSpeed=0.80000001;
+		dexterity=1.2;
+		initSpeed=-1;
+		class GunParticles: GunParticles
+		{
+		};
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			mass=231;
+			class CowsSlot: CowsSlot
+			{
+				linkProxy="\A3\data_f\proxies\weapon_slots\TOP";
+				compatibleItems[]=
+				{
+					"MET_optic_VK38X_F"
+				};
+			};
+			class PointerSlot: PointerSlot
+			{
+				linkProxy="\A3\data_f\proxies\weapon_slots\SIDE";
+				compatibleItems[]={};
+			};
+			class UnderBarrelSlot: UnderBarrelSlot
+			{
+				linkProxy="\A3\data_f_mark\proxies\weapon_slots\UNDERBARREL";
+				compatibleItems[]=
+				{
+					"3AS_bipod_VK38X_F"
+				};
+			};
+		};
+		distanceZoomMin=400;
+		distanceZoomMax=400;
+		descriptionShort="$STR_3AS_Weapons_Republic_VK38X_DesShort";
+		handAnim[]=
+		{
+			"OFP2_ManSkeleton",
+			"\A3\Weapons_F_Mark\LongRangeRifles\DMR_02\data\Anim\DMR_02.rtm"
+		};
+		modes[]=
+		{
+			"Single",
+			"single_close_optics1",
+			"single_medium_optics1",
+			"single_far_optics2"
+		};
+		class Single: Mode_SemiAuto
+		{
+			reloadTime=0.2;
+			dispersion=0.00000000001;
+			minRange=2;
+			minRangeProbab=0.30000001;
+			midRange=350;
+			midRangeProbab=0.69999999;
+			maxRange=500;
+			maxRangeProbab=0.050000001;
+			soundContinuous=0;
+			soundBurst=0;
+			sounds[]=
+			{
+				"StandardSound",
+				"SilencedSound"
+			};
+			class BaseSoundModeType;
+			class StandardSound: BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				begin1[]=
+				{
+					"z\16th\addons\weapons\infantry_weap\sounds\valken.ogg",
+					1,
+					1,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+			};
+			class SilencedSound: BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				begin1[]=
+				{
+					"z\16th\addons\weapons\infantry_weap\sounds\valken.ogg",
+					1,
+					1,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+			};
+		};
+		class single_close_optics1: Single
+		{
+			showToPlayer=0;
+			requiredOpticType=1;
+			minRange=2;
+			minRangeProbab=0.050000001;
+			midRange=300;
+			midRangeProbab=0.80000001;
+			maxRange=500;
+			maxRangeProbab=0.0099999998;
+			aiRateOfFire=2;
+			aiRateOfFireDistance=300;
+		};
+		class single_medium_optics1: Single
+		{
+			showToPlayer=0;
+			requiredOpticType=1;
+			minRange=300;
+			minRangeProbab=0.050000001;
+			midRange=500;
+			midRangeProbab=0.69999999;
+			maxRange=700;
+			maxRangeProbab=0.050000001;
+			aiRateOfFire=2;
+			aiRateOfFireDistance=500;
+		};
+		class single_far_optics2: Single
+		{
+			showToPlayer=0;
+			requiredOpticType=2;
+			minRange=300;
+			minRangeProbab=0.050000001;
+			midRange=600;
+			midRangeProbab=0.40000001;
+			maxRange=900;
+			maxRangeProbab=0.050000001;
+			aiRateOfFire=4;
+			aiRateOfFireDistance=600;
+		};
+		aiDispersionCoefY=3;
+		aiDispersionCoefX=2;
+		modelOptics="3AS\3AS_Weapons\Data\3AS_2D_Optic.p3d";
+		class OpticsModes
+		{
+			class Ironsights
+			{
+				opticsID=1;
+				useModelOptics=0;
+				opticsFlare=0;
+				opticsPPEffects[]=
+				{
+					"Default"
+				};
+				opticsDisablePeripherialVision=0;
+				opticsZoomMin=0.25;
+				opticsZoomMax=1.25;
+				opticsZoomInit=0.75;
+				memoryPointCamera="eye";
+				visionMode[]={};
+				distanceZoomMin=100;
+				distanceZoomMax=100;
+			};
+		};
+		caseless[]=
+		{
+			"",
+			1,
+			1,
+			1
+		};
+		soundBullet[]=
+		{
+			"caseless",
+			1
+		};
+		drySound[]=
+		{
+			"\3AS\3AS_Main\Sounds\Blaster_empty",
+			2,
+			1,
+			20
+		};
+		reloadMagazineSound[]=
+		{
+			"\3AS\3AS_Main\Sounds\Old\Blaster_reload.wss",
+			1,
+			1,
+			30
+		};
+		ace_overheating_mrbs=3000;
+		ace_overheating_slowdownFactor=1;
+		ace_overheating_allowSwapBarrel=0;
+		ace_overheating_dispersion=0.75;
+	};
+	class MET_Valken38X_F: MET_Valken38X_Base_F
+	{
+		author="$STR_3as_Studio";
+		baseWeapon="MET_Valken38X_F";
+		scope=2;
+		displayName="[16th] Valken-38X";
+		model="\3AS\3AS_Weapons\Republic\Valken38X\3AS_Valken38X_F.p3d";
+		picture="\3AS\3AS_Weapons\Republic\Valken38X\Data\UI\3as_valken38x.paa";
+		UiPicture="\A3\weapons_f\data\UI\icon_regular_CA.paa";
+		class LinkedItems
+		{
+			class LinkedItemsOptic
+			{
+				slot="CowsSlot";
+				item="MET_optic_VK38X_F";
+			};
+			class LinkedItemsUnderBarrel
+			{
+				slot="UnderBarrelSlot";
+				item="3AS_bipod_VK38X_F";
+			};
+		};
+	};
+	/*==============================================================================
+	==DP-23 GL
+	==============================================================================*/
+	class MET_DP23_GL: MET_DP23_Base_F
+	{
+		author="$STR_3as_Studio";
+		baseWeapon="MET_DP23_GL";
+		scope=2;
+		displayName="[16th] DP-23 GL";
+		model="\3AS\3AS_Weapons\Republic\DP23\3AS_DP23_GL.p3d";
+		picture="\3AS\3AS_Weapons\Republic\DP23\Data\UI\3as_dp23.paa";
+		UiPicture="\A3\weapons_f\data\UI\icon_regular_CA.paa";
+		handAnim[]=
+		{
+			"OFP2_ManSkeleton",
+			"3as\3AS_Weapons\Republic\DP23\Data\Anim\New_DP23GL_handanim.rtm"
+		};
+		muzzles[]=
+		{
+			"this",
+			"3AS_FL_F"
+		};
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			mass=80;
+		};
+	};
+	/*==============================================================================
+	==Westar M-5
+	==============================================================================*/
 	class MET_WestarM5_Base_F: Rifle_Base_F
 	{
 		author="$STR_3as_Studio";
@@ -1300,8 +3555,7 @@ class CfgWeapons
 				linkProxy="\A3\data_f\proxies\weapon_slots\TOP";
 				compatibleItems[]=
 				{
-					"MET_Optic_Scope_WestarM5",
-					"3AS_optic_reflex_DC15C"
+					"MET_Optic_Scope_WestarM5"
 				};
 			};
 			class PointerSlot: PointerSlot
@@ -1642,6 +3896,9 @@ class CfgWeapons
 		ace_overheating_allowSwapBarrel=0;
 		ace_overheating_dispersion=0.75;
 	};
+	/*==============================================================================
+	==Westar M-5 GL
+	==============================================================================*/
 	class MET_WestarM5_GL: MET_WestarM5_Base_F
 	{
 		scope=2;
@@ -1710,6 +3967,9 @@ class CfgWeapons
 	};
 	class ItemCore;
 	class InventoryOpticsItem_Base_F;
+	/*==============================================================================
+	==Westar M-5 Scope
+	==============================================================================*/
 	class MET_Optic_Scope_WestarM5: ItemCore
 	{
 		scope=2;
@@ -1769,6 +4029,9 @@ class CfgWeapons
 			};
 		};
 	};
+	/*==============================================================================
+	==DC-19E
+	==============================================================================*/
 	class LFP_DC19;
 	class MET_DC19: LFP_DC19
 	{
@@ -1833,6 +4096,9 @@ class CfgWeapons
 			};
 		};
 	}
+	/*==============================================================================
+	==DC-19A Family
+	==============================================================================*/
 	class MET_rifle_base: Rifle_Long_Base_F
 	{
 		author="Schlabbie";
@@ -2773,465 +5039,9 @@ class CfgWeapons
 			"\SDT_Eternal\data\tex\dc19x_wood\DC19x_wood_brown_CO.paa"
 		};
 	};
-	class MET_DC15L_Base_F: Rifle_Base_F
-	{
-		author="$STR_3as_Studio";
-		magazines[]=
-		{
-			"MET_DC15L_mag",
-		};
-		magazineWell[]=
-		{
-			"MET_DC15L_MagWell"
-		};
-		reloadAction="GestureReloadMX";
-		magazineReloadSwitchPhase=0.40000001;
-		discreteDistanceInitIndex=0;
-		recoil="MET_recoil_DC15L";
-		maxRecoilSway=0.0125;
-		swayDecaySpeed=1.25;
-		inertia=0.5;
-		dexterity=1.5;
-		initSpeed=-1;
-		maxZeroing=100;
-		class GunParticles: GunParticles
-		{
-			class SecondEffect
-			{
-				positionName="Nabojnicestart";
-				directionName="Nabojniceend";
-				effectName="CaselessAmmoCloud";
-			};
-		};
-		class WeaponSlotsInfo: WeaponSlotsInfo
-		{
-			class CowsSlot: CowsSlot
-			{
-				linkProxy="\A3\data_f\proxies\weapon_slots\TOP";
-				compatibleItems[]=
-				{
-				};
-			};
-			class PointerSlot: PointerSlot
-			{
-				linkProxy="\A3\data_f\proxies\weapon_slots\SIDE";
-				compatibleItems[]=
-				{
-					"acc_flashlight",
-					"acc_pointer_IR"
-				};
-			};
-			class UnderBarrelSlot: UnderBarrelSlot
-			{
-				linkProxy="\A3\data_f_mark\proxies\weapon_slots\UNDERBARREL";
-				compatibleItems[]=
-				{
-					"3AS_Bipod_DC15L_f"
-				};
-			};
-		};
-		opticsZoomMin=0.25;
-		opticsZoomMax=1.25;
-		opticsZoomInit=0.75;
-		distanceZoomMin=400;
-		distanceZoomMax=400;
-		descriptionShort="DC-15L, 3rd Army Studios";
-		handAnim[]=
-		{
-			"OFP2_ManSkeleton",
-			"\3AS\3AS_Weapons\DC15L\Data\Anim\DC15L_handanim.rtm"
-		};
-		selectionFireAnim="zasleh";
-		fireLightDiffuse[]={7,110,176};
-		fireLightIntensity=0.02;
-		flash="gunfire";
-		flashSize=0.1;
-		modes[]=
-		{
-			"FullAuto",
-			"FullerAuto"
-		};
-		class FullAuto: Mode_FullAuto
-		{
-			reloadTime=0.12;
-			dispersion=0.00079000002;
-			minRange=0;
-			minRangeProbab=0.89999998;
-			midRange=15;
-			midRangeProbab=0.69999999;
-			maxRange=30;
-			maxRangeProbab=0.1;
-			soundContinuous=0;
-			soundBurst=0;
-			textureType="burst";
-			sounds[]=
-			{
-				"StandardSound",
-				"SilencedSound"
-			};
-			class BaseSoundModeType;
-			class StandardSound: BaseSoundModeType
-			{
-				soundSetShot[]=
-				{
-					"3AS_DC15L_Shot_SoundSet"
-				};
-			};
-			class SilencedSound: BaseSoundModeType
-			{
-				soundSetShot[]=
-				{
-					""
-				};
-			};
-		};
-		class FullerAuto: FullAuto
-		{
-			reloadTime=0.0545454545454545;
-			dispersion=0.00079000002;
-			minRange=0;
-			minRangeProbab=0.89999998;
-			midRange=15;
-			midRangeProbab=0.69999999;
-			maxRange=30;
-			maxRangeProbab=0.1;
-			soundContinuous=0;
-			soundBurst=0;
-			textureType="fullAuto";
-			sounds[]=
-			{
-				"StandardSound",
-				"SilencedSound"
-			};
-			class BaseSoundModeType;
-			class StandardSound: BaseSoundModeType
-			{
-				soundSetShot[]=
-				{
-					"3AS_DC15L_Shot_SoundSet"
-				};
-			};
-			class SilencedSound: BaseSoundModeType
-			{
-				soundSetShot[]=
-				{
-					""
-				};
-			};
-		};
-		aiDispersionCoefY=6;
-		aiDispersionCoefX=4;
-		caseless[]=
-		{
-			"",
-			1,
-			1,
-			1
-		};
-		soundBullet[]=
-		{
-			"caseless",
-			1
-		};
-		drySound[]=
-		{
-			"\3AS\3AS_Main\Sounds\Blaster_empty",
-			2,
-			1,
-			20
-		};
-		reloadMagazineSound[]=
-		{
-			"\3AS\3AS_Main\Sounds\Old\Blaster_reload.wss",
-			1,
-			1,
-			30
-		};
-	};
-	class MET_DC15L_F: MET_DC15L_Base_F
-	{
-		scope=2;
-		displayName="[16th] DC-15L";
-		model="3AS\3AS_Weapons\DC15L\3AS_DC15L_f.p3d";
-		picture="\3AS\3AS_Weapons\DC15L\Data\UI\3as_dc15l.paa";
-		weaponInfoType="RscWeaponZeroing";
-		class OpticsModes
-		{
-			class Ironsights
-			{
-				opticsID=1;
-				useModelOptics=0;
-				opticsFlare="true";
-				opticsPPEffects[]=
-				{
-					"OpticsCHAbera5",
-					"OpticsBlur5"
-				};
-				opticsDisablePeripherialVision=0.67000002;
-				opticsZoomMin=0.375;
-				opticsZoomMax=1.1;
-				opticsZoomInit=0.75;
-				memoryPointCamera="eye";
-				visionMode[]={};
-				distanceZoomMin=100;
-				distanceZoomMax=100;
-			};
-			class Scope: Ironsights
-			{
-				opticsID=2;
-				useModelOptics=1;
-				opticsPPEffects[]=
-				{
-					"OpticsCHAbera5",
-					"OpticsBlur5"
-				};
-				opticsDisablePeripherialVision=0.67000002;
-				opticsZoomMin=0.122173;
-				opticsZoomMax=0.122173;
-				opticsZoomInit=0.122173;
-				memoryPointCamera="opticView";
-				visionMode[]=
-				{
-					"Normal",
-					"NVG"
-				};
-				opticsFlare="true";
-				distanceZoomMin=100;
-				distanceZoomMax=100;
-				cameraDir="";
-			};
-		};
-		class WeaponSlotsInfo: WeaponSlotsInfo
-		{
-			mass=60;
-		};
-		ace_overheating_mrbs=3000;
-		ace_overheating_slowdownFactor=1;
-		ace_overheating_allowSwapBarrel=1;
-		ace_overheating_dispersion=0.75;
-	};
-	class MET_Z6: LMG_Mk200_F
-	{
-		ace_overheating_mrbs=40000;
-		ace_overheating_slowdownFactor=0;
-		ace_overheating_allowSwapBarrel=0;
-		ace_overheating_dispersion=1;
-		ace_overheating_closedBolt=0;
-		ace_overheating_barrelMass=1;
-		ace_overheating_jamTypesAllowed[]=
-		{
-			"Fire",
-			"Dud"
-		};
-		author="Hazmat";
-		inertia=0;
-		canShootInWater=1;
-		scope=2;
-		autoReload="true";
-		baseWeapon="MET_Z6";
-		displayName="[16th] Z6 rotary cannon";
-		displayNameShort="A big weapon for big battles";
-		descriptionShort="Rapid Fire. Reloads automatically.";
-		picture="\MRC\JLTS\weapons\Z6\data\ui\Z6_ui_ca.paa";
-		model="\MRC\JLTS\weapons\Z6\Z6.p3d";
-		WBK_UseHeavyWeaponFramework = true;	
-		hiddenSelections[]=
-		{
-			"camo1",
-			"camo2",
-			"camo3"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"z\16th\addons\weapons\infantry_weap\data\Z6_co.paa",
-			"z\16th\addons\weapons\infantry_weap\data\Z6_Barrel_co.paa",
-			"z\16th\addons\weapons\infantry_weap\data\Z6_Mag_co.paa"
-		};
-		magazines[]=
-		{
-			"MET_blaster_battery",
-			"MET_blaster_battery_Red",
-			"MET_blaster_battery_Green",
-			"MET_blaster_battery_Yellow"
-		};
-		recoil="MET_recoil_Z6";
-		maxZeroing=1200;
-		handAnim[]=
-		{
-			"OFP2_ManSkeleton",
-			"\MRC\JLTS\weapons\Z6\anims\Z6_handanim.rtm"
-		};
-		reloadAction="";
-		ace_clearJamAction="";
-		magazineWell[]={
-			"MET_Z6_MagWell"
-		};
-		fireLightDiffuse[]={0.1,0.25,1};
-		drySound[]=
-		{
-			"z\16th\addons\weapons\infantry_weap\sounds\weapon_dry.ogg",
-			5,
-			1,
-			10
-		};
-		reloadMagazineSound[]=
-		{
-			"z\16th\addons\weapons\infantry_weap\sounds\republic\z-6\Z6_reload.ogg",
-			1.5,
-			1,
-			100
-		};
-		muzzles[]=
-		{
-			"this"
-		};
-		modes[]=
-		{
-			"Auto",
-			"fullerAuto"
-		};
-		class Auto: Mode_FullAuto
-		{
-			sounds[]=
-			{
-				"StandardSound"
-			};
-			class BaseSoundModeType
-			{
-				weaponSoundEffect="";
-				closure1[]={};
-				closure2[]={};
-				soundClosure[]={};
-			};
-			class StandardSound: BaseSoundModeType
-			{
-				weaponSoundEffect="";
-				begin1[]=
-				{
-					"z\16th\addons\weapons\infantry_weap\sounds\republic\z-6\z6.ogg",
-					1,
-					1,
-					1800
-				};
-				begin2[]=
-				{
-					"z\16th\addons\weapons\infantry_weap\sounds\republic\z-6\z6.ogg",
-					1,
-					1.015,
-					1800
-				};
-				begin3[]=
-				{
-					"z\16th\addons\weapons\infantry_weap\sounds\republic\z-6\z6.ogg",
-					1,
-					0.98500001,
-					1800
-				};
-				begin4[]=
-				{
-					"z\16th\addons\weapons\infantry_weap\sounds\republic\z-6\z6.ogg",
-					1,
-					1.01,
-					1800
-				};
-				begin5[]=
-				{
-					"z\16th\addons\weapons\infantry_weap\sounds\republic\z-6\z6.ogg",
-					1,
-					0.995,
-					1800
-				};
-				soundBegin[]=
-				{
-					"begin1",
-					0.2,
-					"begin2",
-					0.2,
-					"begin3",
-					0.2,
-					"begin4",
-					0.2,
-					"begin5",
-					0.2
-				};
-				beginwater1[]=
-				{
-					"z\16th\addons\weapons\infantry_weap\sounds\republic\z-6\z6.ogg",
-					1,
-					1,
-					400
-				};
-				soundBeginWater[]=
-				{
-					"beginwater1",
-					1
-				};
-			};
-			reloadTime=0.05;
-			magazines[]=
-			{
-				"MET_blaster_battery",
-				"MET_blaster_battery_Red",
-				"MET_blaster_battery_Green",
-				"MET_blaster_battery_Yellow"
-			};
-			dispersion=0.0049999999;
-			burst=1;
-			soundContinuous="false";
-			soundBurst="true";
-			minRange=2;
-			minRangeProbab=0.5;
-			midRange=100;
-			midRangeProbab=0.075000003;
-			maxRange=10000;
-			maxRangeProbab=0.30000001;
-		};
-		class fullerAuto: Auto
-		{
-			reloadTime=0.03;
-			dispersion=0.006;
-			textureType="fastAuto";
-			minRangeProbab=0;
-			midRangeProbab=0;
-			maxRangeProbab=0;
-		};
-		aiDispersionCoefY=24;
-		aiDispersionCoefX=21;
-		class WeaponSlotsInfo: WeaponSlotsInfo
-		{
-			mass=100;
-			class CowsSlot: CowsSlot
-			{
-				compatibleItems[]={};
-			};
-			class MuzzleSlot: MuzzleSlot
-			{
-				compatibleItems[]={};
-			};
-			class PointerSlot: PointerSlot
-			{
-				compatibleItems[]={};
-			};
-			class UnderBarrelSlot: UnderBarrelSlot
-			{
-				compatibleItems[]={};
-			};
-		};
-		class GunParticles
-		{
-			class FirstEffect
-			{
-				directionName="Konec hlavne";
-				effectName="RifleAssaultCloud";
-				positionName="Usti hlavne";
-			};
-		};
-	};
-	class METAL_Z6_Dumb: MET_Z6
-	{
-		baseWeapon="MET_Z6_Dumb";
-		scope=0;
-	};
+	/*==============================================================================
+	==Chaingun
+	==============================================================================*/
 	class MET_Chaingun: Launcher_Base_F
 	{
 		author="3AS";
@@ -3353,714 +5163,9 @@ class CfgWeapons
 		ace_overpressure_range=0;
 		ace_overpressure_damage=0;
 	};
-	class 3AS_optic_acog_DC15C;
-	class MET_optic_acog_DC15C: 3AS_optic_acog_DC15C
-	{
-		scope=2;
-		displayName="[16th] DC-15C Scope";
-		weaponInfoType="RscWeaponZeroing";
-		class ItemInfo: InventoryOpticsItem_Base_F
-		{
-			mass=7;
-			modelOptics="\JMSLLTE_weapons\Scope\big_cross_blue_full.p3d";
-			class OpticsModes
-			{
-				class 3AS_16C_Optic
-				{
-					opticsID=1;
-					useModelOptics=1;
-					opticsPPEffects[]=
-					{
-						"OpticsCHAbera1",
-						"OpticsBlur1"
-					};
-					opticsZoomMin=0.03;
-					opticsZoomMax=0.0825;
-					opticsZoomInit=0.0625;					
-					distanceZoomMin=1000;
-					distanceZoomMax=100;
-					modelOptics[]=
-					{
-						"\JMSLLTE_weapons\Scope\big_cross_blue_full.p3d"
-					};
-					memoryPointCamera="opticView";
-					visionMode[]=
-					{
-						"Normal",
-						"NVG",
-						"Ti"
-					};
-					thermalMode[]={1,2};
-					opticsFlare=1;
-					opticsDisablePeripherialVision=1;
-					cameraDir="";
-				};
-			};
-		};
-	};
-	class 3AS_Optic_Cinnagaran_1_F;
-	class MET_Optic_Cinnagaran_1_F: 3AS_Optic_Cinnagaran_1_F
-	{
-		scope=2;
-		displayName="[16th] Cinnagaran Scope";
-		weaponInfoType="RscWeaponZeroing";
-		class ItemInfo: InventoryOpticsItem_Base_F
-		{
-			mass=7;
-			modelOptics="\JMSLLTE_weapons\Scope\big_cross_blue_full.p3d";
-			class OpticsModes
-			{
-				class 3AS_Green_Optic1
-				{
-					opticsID=1;
-					useModelOptics=1;
-					opticsPPEffects[]=
-					{
-						"OpticsCHAbera1",
-						"OpticsBlur1"
-					};
-					opticsZoomMin=0.107;
-					opticsZoomMax=0.2;
-					opticsZoomInit=0.2;	
-					distanceZoomMin=1000;
-					distanceZoomMax=100;
-					modelOptics[]=
-					{
-						"\JMSLLTE_weapons\Scope\big_cross_blue_full.p3d"
-					};
-					memoryPointCamera="opticView";
-					visionMode[]=
-					{
-						"Normal",
-						"NVG",
-						"Ti"
-					};
-					thermalMode[]={1,2};
-					opticsFlare=1;
-					opticsDisablePeripherialVision=1;
-					cameraDir="";
-				};
-				class 3AS_Green_Optic1_Top: 3AS_Green_Optic1
-				{
-					opticsID=2;
-					useModelOptics=0;
-					opticsFlare=0;
-					opticsDisablePeripherialVision=0;
-					opticsZoomMin=0.375;
-					opticsZoomMax=1.1;
-					opticsZoomInit=0.75;
-					memoryPointCamera="eye";
-					visionMode[]={};
-					discretefov[]={};
-				};
-			};
-		};
-	};
-	class MET_Optic_VK38X: ItemCore
-	{
-		scope=2;
-		displayName="[16th] VK-38X Optic";
-		picture="\3AS\3AS_Weapons\Data\Textures\Energy_Cell_Arsenal.paa";
-		model="3AS\3AS_Weapons\Valken38X\3AS_VK38X_Scope_f.p3d";
-		weaponInfoType="RscWeaponZeroing";
-		class ItemInfo: InventoryOpticsItem_Base_F
-		{
-			mass=7;
-			modelOptics="\JMSLLTE_weapons\Scope\big_cross_blue_easy.p3d";
-			class OpticsModes
-			{
-				class 3AS_VK38X_Optic
-				{
-					opticsID=1;
-					useModelOptics=1;
-					opticsPPEffects[]=
-					{
-						"OpticsCHAbera1",
-						"OpticsBlur1"
-					};
-					opticsZoomMin=0.02;
-					opticsZoomMax=0.0625;
-					opticsZoomInit=0.0625;					
-					distanceZoomMin=1000;
-					distanceZoomMax=100;
-					modelOptics[]=
-					{
-						"\JMSLLTE_weapons\Scope\big_cross_blue_easy.p3d"
-					};
-					memoryPointCamera="opticView";
-					visionMode[]=
-					{
-						"Normal",
-						"NVG",
-						"Ti"
-					};
-					thermalMode[]={1,2};
-					opticsFlare=1;
-					opticsDisablePeripherialVision=1;
-					cameraDir="";
-				};
-				class IronOnTopOfMyOptics: 3AS_VK38X_Optic
-				{
-					opticsID=2;
-					useModelOptics=0;
-					opticsFlare=0;
-					opticsDisablePeripherialVision=0;
-					opticsZoomMin=0.375;
-					opticsZoomMax=1.1;
-					opticsZoomInit=0.75;
-					memoryPointCamera="eye";
-					visionMode[]={};
-					discretefov[]={};
-				};
-			};
-		};
-	};
 	class LFP_rifle_base;
 	class WeaponSlotsInfo;
-	class MET_Valken38X_Base_F: Rifle_Base_F
-	{
-		author="$STR_3as_Studio";
-		magazines[]=
-		{
-			"MET_Valken_mag"
-		};
-		magazineWell[]=
-		{
-			"3AS_VK38X_MagWell"
-		};
-		reloadAction="GestureReloadMX";
-		magazineReloadSwitchPhase=0.40000001;
-		discreteDistanceInitIndex=0;
-		recoil="3AS_recoil_DC15A";
-		maxRecoilSway=0.0125;
-		swayDecaySpeed=1.25;
-		inertia=0.5;
-		dexterity=1.5;
-		initSpeed=-1;
-		maxZeroing=100;
-		class GunParticles: GunParticles
-		{
-			class SecondEffect
-			{
-				positionName="Nabojnicestart";
-				directionName="Nabojniceend";
-				effectName="CaselessAmmoCloud";
-			};
-		};
-		class WeaponSlotsInfo: WeaponSlotsInfo
-		{
-			class CowsSlot: CowsSlot
-			{
-				linkProxy="\A3\data_f\proxies\weapon_slots\TOP";
-				compatibleItems[]=
-				{
-					"MET_Optic_VK38X"
-				};
-			};
-			class PointerSlot: PointerSlot
-			{
-				linkProxy="\A3\data_f\proxies\weapon_slots\SIDE";
-				compatibleItems[]=
-				{
-					"acc_flashlight",
-					"acc_pointer_IR"
-				};
-			};
-			class UnderBarrelSlot: UnderBarrelSlot
-			{
-				linkProxy="\A3\data_f_mark\proxies\weapon_slots\UNDERBARREL";
-				compatibleItems[]=
-				{
-					"3AS_Bipod_VK38X_f"
-				};
-			};
-		};
-		opticsZoomMin=0.25;
-		opticsZoomMax=1.25;
-		opticsZoomInit=0.75;
-		distanceZoomMin=400;
-		distanceZoomMax=400;
-		descriptionShort="Valken-38X, 3rd Army Studios";
-		handAnim[]=
-		{
-			"OFP2_ManSkeleton",
-			"\A3\Weapons_F_Mark\LongRangeRifles\DMR_02\data\Anim\DMR_02.rtm"
-		};
-		selectionFireAnim="zasleh";
-		fireLightDiffuse[]={7,36,190,1};
-		fireLightIntensity=0.02;
-		flash="gunfire";
-		flashSize=0.1;
-		modes[]=
-		{
-			"Single"
-		};
-		class Single: Mode_SemiAuto
-		{
-			reloadTime=0.2;
-			dispersion=0.00000000001;
-			minRange=2;
-			minRangeProbab=0.5;
-			midRange=200;
-			midRangeProbab=0.69999999;
-			maxRange=400;
-			maxRangeProbab=0.30000001;
-			soundContinuous=0;
-			soundBurst=0;
-			sounds[]=
-			{
-				"StandardSound",
-				"SilencedSound"
-			};
-			class BaseSoundModeType;
-			class StandardSound: BaseSoundModeType
-			{
-				soundSetShot[]=
-				{
-					"3AS_Sniper_SoundSet"
-				};
-			};
-			class SilencedSound: BaseSoundModeType
-			{
-				soundSetShot[]=
-				{
-					"3AS_Sniper_SoundSet"
-				};
-			};
-		};
-		aiDispersionCoefY=6;
-		aiDispersionCoefX=4;
-		caseless[]=
-		{
-			"",
-			1,
-			1,
-			1
-		};
-		soundBullet[]=
-		{
-			"caseless",
-			1
-		};
-		drySound[]=
-		{
-			"\3AS\3AS_Main\Sounds\Blaster_empty",
-			2,
-			1,
-			20
-		};
-		reloadMagazineSound[]=
-		{
-			"\3AS\3AS_Main\Sounds\Old\Blaster_reload.wss",
-			1,
-			1,
-			30
-		};
-	};
-	class MET_Valken38X_F: MET_Valken38X_Base_F
-	{
-		scope=2;
-		displayName="[16th] Valken-38X";
-		model="3AS\3AS_Weapons\Valken38X\3AS_Valken38X.p3d";
-		picture="\3AS\3AS_Weapons\Valken38X\Data\UI\3as_valken.paa";
-		weaponInfoType="RscWeaponZeroing";
-		modelOptics="3AS\3AS_Weapons\Data\3AS_2D_Optic.p3d";
-		magazineWell[]=
-		{
-		};
-		class OpticsModes
-		{
-			class Ironsights
-			{
-				opticsID=1;
-				useModelOptics=0;
-				opticsFlare="true";
-				opticsPPEffects[]=
-				{
-					"OpticsCHAbera5",
-					"OpticsBlur5"
-				};
-				opticsDisablePeripherialVision=0.67000002;
-				opticsZoomMin=0.375;
-				opticsZoomMax=1.1;
-				opticsZoomInit=0.75;
-				memoryPointCamera="eye";
-				visionMode[]={};
-				distanceZoomMin=100;
-				distanceZoomMax=100;
-			};
-		};
-		class WeaponSlotsInfo: WeaponSlotsInfo
-		{
-			mass=60;
-		};
-		ace_overheating_mrbs=3000;
-		ace_overheating_slowdownFactor=1;
-		ace_overheating_allowSwapBarrel=0;
-		ace_overheating_dispersion=0.75;
-	};
-	class 16th_dc15x_base: Rifle_Long_Base_F
-	{
-		author="South";
-		scope=1;
-		class WeaponSlotsInfo
-		{
-			class SlotInfo;
-		};
-		class GunParticles;
-		class AnimationSources;
-	};
-	class 16th_DC15XM: 16th_dc15x_base
-	{
-		author="Hazmat";
-		displayName="[16th] DC-15XM";
-		scope=2;
-		scopeArsenal=2;
-		baseWeapon="16th_DC15XM";
-		model="\212th\Weapons\212th_dc15x\dc15x.p3d";
-		class GunParticles: GunParticles
-		{
-			class FirstEffect
-			{
-				effectName="BluePlasmaAssaultCloud";
-				positionName="Usti hlavne";
-				directionName="Konec hlavne";
-			};
-			class SecondEffect
-			{
-				positionName="Nabojnicestart";
-				directionName="Nabojniceend";
-				effectName="PlasmaAmmoCloud";
-			};
-		};
-		picture="212th\Weapons\212th_valken38a\Data\Textures\Valken38_Arsenal.paa";
-		handAnim[]=
-		{
-			"\212th\Weapons\212th_DC15x\anims\dc15x_handanim.rtm"
-		};
-		magazines[]=
-		{
-			"MET_DC15x_mag",
-			"MET_DC15x_at_mag"
-		};
-		recoil="recoil_dc15XM";
-		class WeaponSlotsInfo: WeaponSlotsInfo
-		{
-			mass=100;
-			class CowsSlot: CowsSlot
-			{
-				compatibleItems[]={};
-			};
-			class PointerSlot: PointerSlot
-			{
-				linkProxy="\A3\data_f\proxies\weapon_slots\SIDE";
-				compatibleItems[]={};
-			};
-			class UnderBarrelSlot: UnderBarrelSlot
-			{
-				linkProxy="\A3\data_f_mark\proxies\weapon_slots\UNDERBARREL";
-				compatibleItems[]={};
-			};
-		};
-		descriptionShort="DC15XM General Purpose Anti-Material Rifle";
-		modelOptics="\JMSLLTE_weapons\Scope\big_cross_blue_med.p3d";
-		maxZeroing=2000;
-		opticsZoomMin=0.0037499999;
-		opticsZoomMax=0.1;
-		opticsZoomInit=0.75;
-		distanceZoomMin=100;
-		distanceZoomMax=2000;
-		visionMode[]=
-		{
-			"Normal",
-			"NVG",
-			"TI"
-		};
-		thermalMode[]={0,2};
-		opticsFlare=1;
-		hasbipod=1;
-		dexterity=0.5;
-		caseless[]=
-		{
-			"",
-			1,
-			1,
-			1
-		};
-		soundBullet[]=
-		{
-			"caseless",
-			1
-		};
-		selectionFireAnim="zasleh";
-		flash="gunfire";
-		flashSize=0.5;
-		fireLightIntensity=0.02;
-		fireLightDuration=0.050000001;
-		modes[]=
-		{
-			"Single"
-		};
-		class Single: Mode_SemiAuto
-		{
-			sounds[]=
-			{
-				"StandardSound"
-			};
-			class BaseSoundModeType;
-			class StandardSound: BaseSoundModeType
-			{
-				begin1[]=
-				{
-					"212th\Weapons\212th_weaponsMain\Sound\sniper2.wss",
-					1,
-					1,
-					500
-				};
-				soundBegin[]=
-				{
-					"begin1",
-					1
-				};
-			};
-			reloadTime=0.80000001;
-			dispersion=0.000000000000000001;
-			minRange=1;
-			minRangeProbab=0.30000001;
-			midRange=150;
-			midRangeProbab=0.57999998;
-			maxRange=1000;
-			maxRangeProbab=0.039999999;
-		};
-		aiDispersionCoefY=6;
-		aiDispersionCoefX=6;
-		drySound[]=
-		{
-			"212th\Weapons\212th_weaponsMain\Sound\blaster_S_empty.wss",
-			2,
-			1,
-			20
-		};
-		reloadMagazineSound[]=
-		{
-			"212th\Weapons\212th_weaponsMain\Sound\blaster_S_reload.wss",
-			1,
-			1,
-			30
-		};
-		reloadSound[]=
-		{
-			"Blaster_S_Reload",
-			1,
-			1
-		};
-	};
-	class optic_lrps;
-	class MET_DC15X_scope: optic_lrps
-	{
-		displayName="$STR_JLTS_names_DC15X_scope";
-		picture="\MRC\JLTS\weapons\DC15X\data\ui\DC15X_scope_ui_ca.paa";
-		descriptionShort="$STR_JLTS_descs_DC15X_scope";
-		model="\MRC\JLTS\weapons\DC15X\DC15X_scope.p3d";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\MRC\JLTS\weapons\DC15X\data\DC15X_scope_co.paa"
-		};
-		class ItemInfo: InventoryOpticsItem_Base_F
-		{
-			mass=16;
-			opticType=2;
-			weaponInfoType="RscWeaponRangeZeroingFOV";
-			optics=1;
-			modelOptics="\JMSLLTE_weapons\Scope\big_cross_blue_med.p3d";
-			class OpticsModes
-			{
-				class Snip
-				{
-					opticsID=1;
-					opticsDisplayName="WFOV";
-					useModelOptics=1;
-					opticsPPEffects[]=
-					{
-						"OpticsCHAbera1",
-						"OpticsBlur1"
-					};
-					maxZeroing=2000;
-					opticsZoomMin=0.0037499999;
-					opticsZoomMax=0.1;
-					opticsZoomInit=0.75;
-					distanceZoomMin=100;
-					distanceZoomMax=2000;
-					visionMode[]=
-					{
-						"Normal",
-						"NVG",
-						"TI"
-					};
-					thermalMode[]={0,1};
-					memoryPointCamera="opticView";
-					modelOptics[]=
-					{
-						"\JMSLLTE_weapons\Scope\big_cross_blue_med.p3d"
-					};
-					opticsFlare=1;
-					opticsDisablePeripherialVision=1;
-					cameraDir="";
-				};
-			};
-		};
-	};
-	class 16th_DC15X: 16th_dc15x_base
-	{
-		author="Hazmat";
-		displayName="[16th] DC-15X";
-		scope=2;
-		scopeArsenal=2;
-		baseWeapon="16th_DC15X";
-		JLTS_hasElectronics=1;
-		JLTS_hasEMPProtection=0;
-		JLTS_friedItem="JLTS_DC15X_fried";
-		JLTS_repairTime=33;
-		picture="\MRC\JLTS\weapons\DC15X\data\ui\DC15X_ui_ca.paa";
-		model="\MRC\JLTS\weapons\DC15X\DC15X.p3d";
-		class GunParticles: GunParticles
-		{
-			class FirstEffect
-			{
-				effectName="BluePlasmaAssaultCloud";
-				positionName="Usti hlavne";
-				directionName="Konec hlavne";
-			};
-			class SecondEffect
-			{
-				positionName="Nabojnicestart";
-				directionName="Nabojniceend";
-				effectName="PlasmaAmmoCloud";
-			};
-		};
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\MRC\JLTS\weapons\DC15X\data\DC15X_co.paa"
-		};
-		handAnim[]=
-		{
-			"OFP2_ManSkeleton",
-			"\MRC\JLTS\weapons\DC15X\anims\DC15X_handanim.rtm"
-		};
-		recoil="recoil_dc15XM";
-		class WeaponSlotsInfo: WeaponSlotsInfo
-		{
-			mass=100;
-			class CowsSlot: CowsSlot
-			{
-				compatibleItems[]=
-				{
-					"MET_DC15X_scope"
-				};
-			};
-			class PointerSlot: PointerSlot
-			{
-				linkProxy="\A3\data_f\proxies\weapon_slots\SIDE";
-				compatibleItems[]={};
-			};
-			class UnderBarrelSlot: UnderBarrelSlot
-			{
-				linkProxy="\A3\data_f_mark\proxies\weapon_slots\UNDERBARREL";
-				compatibleItems[]={};
-			};
-		};
-		magazines[]=
-		{
-			"MET_DC15x_mag",
-			"MET_DC15x_at_mag"
-		};
-		descriptionShort="DC15X General Purpose Anti-Material Rifle";
-		hasbipod=1;
-		dexterity=0.5;
-		caseless[]=
-		{
-			"",
-			1,
-			1,
-			1
-		};
-		soundBullet[]=
-		{
-			"caseless",
-			1
-		};
-		selectionFireAnim="zasleh";
-		flash="gunfire";
-		flashSize=0.5;
-		fireLightIntensity=0.02;
-		fireLightDuration=0.050000001;
-		modes[]=
-		{
-			"Single"
-		};
-		class Single: Mode_SemiAuto
-		{
-			sounds[]=
-			{
-				"StandardSound"
-			};
-			class BaseSoundModeType;
-			class StandardSound: BaseSoundModeType
-			{
-				begin1[]=
-				{
-					"MRC\JLTS\weapons\DC15X\sounds\dc15x_fire",
-					1,
-					1,
-					500
-				};
-				soundBegin[]=
-				{
-					"begin1",
-					1
-				};
-			};
-			reloadTime=0.80000001;
-			dispersion=0.000000000000000001;
-			minRange=1;
-			minRangeProbab=0.30000001;
-			midRange=150;
-			midRangeProbab=0.57999998;
-			maxRange=1000;
-			maxRangeProbab=0.039999999;
-		};
-		aiDispersionCoefY=6;
-		aiDispersionCoefX=6;
-		drySound[]=
-		{
-			"212th\Weapons\212th_weaponsMain\Sound\blaster_S_empty.wss",
-			2,
-			1,
-			20
-		};
-		reloadMagazineSound[]=
-		{
-			"212th\Weapons\212th_weaponsMain\Sound\blaster_S_reload.wss",
-			1,
-			1,
-			30
-		};
-		reloadSound[]=
-		{
-			"Blaster_S_Reload",
-			1,
-			1
-		};
-	};
-	class JLTS_DP23: arifle_MX_Base_F
+	/*class JLTS_DP23: arifle_MX_Base_F
 	{
 		class WeaponSlotsInfo;
 		class Single;
@@ -4068,7 +5173,7 @@ class CfgWeapons
 	class MET_JLTS_DP23: JLTS_DP23
 	{
 		scope=2;
-		displayName="[16th] DP-23 Scattergun";
+		displayName="[16th] DP-23 Scattergun (Legacy)";
 		JLTS_hasElectronics=1;
 		JLTS_hasEMPProtection=1;
 		JLTS_friedItem="JLTS_DP23_fried";
@@ -4155,7 +5260,7 @@ class CfgWeapons
 	};
 	class MET_DP23_shield: MET_JLTS_DP23
 	{
-		displayName="[16th] DP-23 (Shield)";
+		displayName="[16th] DP-23 (Shield) (Legacy)";
 		baseWeapon="MET_DP23_shield";
 		scope=1;
 		JLTS_isShielded=1;
@@ -4196,13 +5301,13 @@ class CfgWeapons
 				};
 			};
 		};
-	};
+	};*/
 	class 3AS_Cinnagaran_Carbine_F;
 	class MET_Cinnagaran_Carbine_F: 3AS_Cinnagaran_Carbine_F
 	{
 		scope=2;
 		displayName="[16th] Cinnagaran Carbine";
-		recoil="MET_recoil_DC15C";
+		recoil="MET_recoil_CinCar";
 		magazines[]=
 		{
 			"MET_CinCar_Mag"
@@ -4339,6 +5444,328 @@ class CfgWeapons
 	};
 	class optic_MRCO;
 	class ItemInfo;
+	/*==============================================================================
+	==Optics
+	==============================================================================*/
+	class InventoryMuzzleItem_Base_F;
+	class MET_optic_DC15X_F: ItemCore
+	{
+		author="$STR_3as_Studio";
+		scope=2;
+		displayName="[16th] DC-15X Scope";
+		picture="\A3\Weapons_F_EPB\Acc\Data\UI\gear_acco_sniper02_CA.paa";
+		model="\3AS\3AS_Weapons\Republic\ACC\3AS_acco_DC15X_Scope_F.p3d";
+		descriptionShort="$STR_3AS_Weapons_Republic_Optic_DC15X_Scope_DesShort";
+		class ItemInfo: InventoryOpticsItem_Base_F
+		{
+			mass=16;
+			opticType=2;
+			weaponInfoType="RscWeaponRangeZeroingFOV";
+			optics=1;
+			modelOptics="\JMSLLTE_weapons\Scope\big_cross_blue_med.p3d";
+			class OpticsModes
+			{
+				class Snip
+				{
+					opticsID=1;
+					opticsDisplayName="WFOV";
+					useModelOptics=1;
+					opticsPPEffects[]=
+					{
+						"OpticsCHAbera1",
+						"OpticsBlur1"
+					};
+					maxZeroing=2000;
+					opticsZoomMin=0.0037499999;
+					opticsZoomMax=0.1;
+					opticsZoomInit=0.75;
+					distanceZoomMin=100;
+					distanceZoomMax=2000;
+					visionMode[]=
+					{
+						"Normal",
+						"NVG",
+						"TI"
+					};
+					thermalMode[]={0,1};
+					memoryPointCamera="opticView";
+					modelOptics[]=
+					{
+						"\JMSLLTE_weapons\Scope\big_cross_blue_med.p3d"
+					};
+					opticsFlare=1;
+					opticsDisablePeripherialVision=1;
+					cameraDir="";
+				};
+			};
+		};
+		inertia=0.2;
+	};
+	class MET_optic_DC15L_F: ItemCore
+	{
+		author="$STR_3as_Studio";
+		scope=2;
+		displayName="[16th] DC-15L MG Scope";
+		picture="\a3\Weapons_F\acc\Data\UI\icon_optic_MRCO_ca.paa";
+		model="\3AS\3AS_Weapons\Republic\ACC\3AS_acco_DC15L_Scope_F.p3d";
+		descriptionShort="$STR_3AS_Weapons_Republic_Optic_DC15L_Scope_DesShort";
+		weaponInfoType="RscOptics_sos";
+		class ItemInfo: InventoryOpticsItem_Base_F
+		{
+			mass=8;
+			opticType=1;
+			optics=1;
+			modelOptics="\a3\weapons_f\acc\reticle_mrco_f";
+			class OpticsModes
+			{
+				class cq
+				{
+					opticsID=1;
+					useModelOptics=0;
+					opticsPPEffects[]=
+					{
+						"Default"
+					};
+					opticsFlare=0;
+					opticsDisablePeripherialVision=0;
+					opticsZoomMin=0.25;
+					opticsZoomMax=1.25;
+					opticsZoomInit=0.75;
+					memoryPointCamera="eye";
+					visionMode[]={};
+					distanceZoomMin=300;
+					distanceZoomMax=300;
+				};
+				class scope
+				{
+					opticsID=2;
+					useModelOptics=0;
+					opticsPPEffects[]=
+					{
+						"OpticsRadialBlur1",
+						"OpticsBlur1"
+					};
+					opticsFlare=1;
+					opticsDisablePeripherialVision=1;
+					opticsZoomMin="0.25/3";
+					opticsZoomMax="0.25/3";
+					opticsZoomInit="0.25/3";
+					memoryPointCamera="opticView";
+					visionMode[]={};
+					distanceZoomMin=300;
+					distanceZoomMax=300;
+				};
+			};
+		};
+		inertia=0.1;
+	};
+	class MET_optic_DC15C_F: ItemCore
+	{
+		author="$STR_3as_Studio";
+		scope=2;
+		displayName="$STR_3AS_Weapons_Republic_Optic_DC15C_Scope_Display";
+		picture="\a3\Weapons_F\acc\Data\UI\icon_optic_MRCO_ca.paa";
+		model="\3AS\3AS_Weapons\Republic\ACC\3AS_acco_DC15C_Scope_F.p3d";
+		descriptionShort="$STR_3AS_Weapons_Republic_Optic_DC15C_Scope_DesShort";
+		weaponInfoType="RscOptics_sos";
+		class ItemInfo: InventoryOpticsItem_Base_F
+		{
+			mass=7;
+			opticType=1;
+			optics=1;
+			modelOptics="\a3\weapons_f\acc\reticle_mrco_f";
+			class OpticsModes
+			{
+				class cq
+				{
+					opticsID=1;
+					useModelOptics=0;
+					opticsPPEffects[]=
+					{
+						"Default"
+					};
+					opticsFlare=0;
+					opticsDisablePeripherialVision=0;
+					opticsZoomMin=0.25;
+					opticsZoomMax=1.25;
+					opticsZoomInit=0.75;
+					memoryPointCamera="eye";
+					visionMode[]={};
+					distanceZoomMin=300;
+					distanceZoomMax=300;
+				};
+				class scope
+				{
+					opticsID=2;
+					useModelOptics=0;
+					opticsPPEffects[]=
+					{
+						"OpticsRadialBlur1",
+						"OpticsBlur1"
+					};
+					opticsFlare=1;
+					opticsDisablePeripherialVision=1;
+					opticsZoomMin=0.050000001;
+					opticsZoomMax=0.107;
+					opticsZoomInit=0.107;
+					memoryPointCamera="opticView";
+					visionMode[]={};
+					distanceZoomMin=300;
+					distanceZoomMax=300;
+				};
+				/*class HoloScope: HoloSight
+				{
+					opticsID=3;
+					useModelOptics=1;
+					opticsPPEffects[]=
+					{
+						"OpticsCHAbera5",
+						"OpticsBlur5"
+					};
+					visionMode[]=
+					{
+						"Normal",
+						"NVG"
+					};
+					opticsZoomMin=0.050000001;
+					opticsZoomMax=0.107;
+					opticsZoomInit=0.107;
+					memoryPointCamera="opticView";
+					opticsFlare=1;
+					opticsDisablePeripherialVision=1;
+					distanceZoomMin=400;
+					distanceZoomMax=550;
+					weaponInfoType="RscWeaponEmpty";
+				};*/
+			};
+		};
+		inertia=0.1;
+	};
+	class MET_optic_DC15LE_F: ItemCore
+	{
+		author="$STR_3as_Studio";
+		scope=2;
+		displayName="[16th] DC-15LE Scope";
+		picture="\A3\Weapons_F_EPB\Acc\Data\UI\gear_acco_sniper02_CA.paa";
+		model="\3AS\3AS_Weapons\Republic\ACC\3AS_acco_DC15LE_Scope_F.p3d";
+		descriptionShort="$STR_3AS_Weapons_Republic_Optic_DC15LE_Scope_DesShort";
+		class ItemInfo: InventoryOpticsItem_Base_F
+		{
+			mass=30;
+			opticType=2;
+			weaponInfoType="RscWeaponRangeZeroingFOV";
+			optics=1;
+			modelOptics="\JMSLLTE_weapons\Scope\big_cross_blue_easy.p3d";
+			class OpticsModes
+			{
+				class Scope
+				{
+					opticsID=1;
+					opticsDisplayName="Scope";
+					useModelOptics=1;
+					opticsPPEffects[]=
+					{
+						"OpticsCHAbera1",
+						"OpticsBlur1"
+					};
+					opticsZoomMin=0.035;
+					opticsZoomMax=0.1;
+					opticsZoomInit=0.1;
+					memoryPointCamera="opticView";
+					modelOptics[]=
+					{
+						"\JMSLLTE_weapons\Scope\big_cross_blue_easy.p3d"
+					};
+					visionMode[]=
+					{
+						"Normal",
+						"NVG"
+					};
+					opticsFlare=1;
+					distanceZoomMin=400;
+					distanceZoomMax=400;
+					opticsDisablePeripherialVision=1;
+					cameraDir="";
+				};
+				/*class HoloScope: HoloSight
+				{
+					opticsID=2;
+					useModelOptics=1;
+					opticsPPEffects[]=
+					{
+						"OpticsCHAbera5",
+						"OpticsBlur5"
+					};
+					visionMode[]=
+					{
+						"Normal",
+						"NVG"
+					};
+					opticsZoomMin=0.050000001;
+					opticsZoomMax=0.107;
+					opticsZoomInit=0.107;
+					memoryPointCamera="opticView";
+					opticsFlare=1;
+					opticsDisablePeripherialVision=1;
+					distanceZoomMin=400;
+					distanceZoomMax=550;
+					weaponInfoType="RscWeaponEmpty";
+				};*/
+			};
+		};
+		inertia=0.2;
+	};
+	class MET_optic_VK38X_F: ItemCore
+	{
+		author="$STR_3as_Studio";
+		scope=2;
+		displayName="[16th] Valken 38x Scope";
+		picture="\A3\Weapons_F_EPB\Acc\Data\UI\gear_acco_sniper02_CA.paa";
+		model="\3AS\3AS_Weapons\Republic\ACC\3AS_acco_VK38X_Scope_F.p3d";
+		descriptionShort="$STR_3AS_Weapons_Republic_Optic_VK38X_Scope_DesShort";
+		class ItemInfo: InventoryOpticsItem_Base_F
+		{
+			mass=14;
+			opticType=2;
+			weaponInfoType="RscWeaponRangeZeroingFOV";
+			optics=1;
+			modelOptics="\JMSLLTE_weapons\Scope\big_cross_blue_easy.p3d";
+			class OpticsModes
+			{
+				class Snip
+				{
+					opticsDisplayName="WFOV";
+					useModelOptics=1;
+					opticsPPEffects[]=
+					{
+						"OpticsCHAbera3",
+						"OpticsBlur2"
+					};
+					opticsZoomMin=0.02;
+					opticsZoomMax=0.0625;
+					opticsZoomInit=0.0625;					
+					distanceZoomMin=1000;
+					distanceZoomMax=100;
+					modelOptics[]=
+					{
+						"\JMSLLTE_weapons\Scope\big_cross_blue_easy.p3d"
+					};
+					discreteInitIndex=0;
+					memoryPointCamera="opticView";
+					visionMode[]=
+					{
+						"Normal",
+						"NVG",
+						"Ti"
+					};
+					thermalMode[]={1,2};
+					opticsFlare=1;
+					opticsDisablePeripherialVision=1;
+				}
+			};
+		};
+		inertia=0.2;
+	};
 	class MET_holo_optic: optic_MRCO
 	{
 		author="Hazmat";
@@ -4440,6 +5867,64 @@ class CfgWeapons
 					distanceZoomMin=400;
 					distanceZoomMax=400;
 					weaponInfoType="RscWeaponEmpty";
+				};
+			};
+		};
+	};
+	class 3AS_Optic_Cinnagaran_1_F;
+	class MET_Optic_Cinnagaran_1_F: 3AS_Optic_Cinnagaran_1_F
+	{
+		scope=2;
+		displayName="[16th] Cinnagaran Scope";
+		weaponInfoType="RscWeaponZeroing";
+		class ItemInfo: InventoryOpticsItem_Base_F
+		{
+			mass=7;
+			modelOptics="\JMSLLTE_weapons\Scope\big_cross_green_full.p3d";
+			class OpticsModes
+			{
+				class 3AS_Green_Optic1
+				{
+					opticsID=1;
+					useModelOptics=1;
+					opticsPPEffects[]=
+					{
+						"OpticsCHAbera1",
+						"OpticsBlur1"
+					};
+					opticsZoomMin=0.107;
+					opticsZoomMax=0.2;
+					opticsZoomInit=0.2;	
+					distanceZoomMin=1000;
+					distanceZoomMax=100;
+					modelOptics[]=
+					{
+						"\JMSLLTE_weapons\Scope\big_cross_green_full.p3d"
+					};
+					memoryPointCamera="opticView";
+					visionMode[]=
+					{
+						"Normal",
+						"NVG",
+						"Ti"
+					};
+					thermalMode[]={1,2};
+					opticsFlare=1;
+					opticsDisablePeripherialVision=1;
+					cameraDir="";
+				};
+				class 3AS_Green_Optic1_Top: 3AS_Green_Optic1
+				{
+					opticsID=2;
+					useModelOptics=0;
+					opticsFlare=0;
+					opticsDisablePeripherialVision=0;
+					opticsZoomMin=0.375;
+					opticsZoomMax=1.1;
+					opticsZoomInit=0.75;
+					memoryPointCamera="eye";
+					visionMode[]={};
+					discretefov[]={};
 				};
 			};
 		};
@@ -4981,6 +6466,9 @@ class CfgWeapons
 		};
 		inertia=0;
 	};
+	/*==============================================================================
+	==RPS-6
+	==============================================================================*/
 	class 3AS_RPS6_Base;
 	class MET_RPS6_Base: 3AS_RPS6_Base
 	{
@@ -5144,6 +6632,9 @@ class CfgWeapons
 		picture="\MRC\JLTS\weapons\DC17SA\data\ui\DC17SA_flash_ui_ca.paa";
 		model="\MRC\JLTS\weapons\DC17SA\DC17SA_flash.p3d";
 	};
+	/*==============================================================================
+	==DC-17
+	==============================================================================*/
 	class Pistol_Base_F;
 	class hgun_P07_F: Pistol_Base_F
 	{
@@ -5811,6 +7302,9 @@ class CfgWeapons
 			};
 		};
 	};
+	/*==============================================================================
+	==DC-17M
+	==============================================================================*/
 	class MET_DC17M_Base_F: Rifle_Base_F
 	{
 		author="$STR_3as_Studio";
@@ -6044,6 +7538,9 @@ class CfgWeapons
 		ace_overheating_allowSwapBarrel=0;
 		ace_overheating_dispersion=0.75;
 	};
+	/*==============================================================================
+	==DC-15SA
+	==============================================================================*/
 	class 3AS_pistol_DC15SA_F;
 	class MET_pistol_DC15SA_F:3AS_pistol_DC15SA_F
 	{
@@ -6126,11 +7623,25 @@ class CfgMagazineWells
 			"MET_DC15A_mag"
 		};
 	};
-	class MET_DC15C_MagWell
+	class MET_DC15S_MagWell
 	{
 		MET_LightMagazines[]=
 		{
-			"MET_DC15C_mag"
+			"MET_DC15S_mag"
+		};
+	};
+	class MET_DC15A_MagWell
+	{
+		MET_Magazines[]=
+		{
+			"MET_DC15A_mag"
+		};
+	};
+	class MET_DC15LE_MagWell
+	{
+		MET_HeavyMagazines[]=
+		{
+			"MET_DC15LE_mag"
 		};
 	};
 	class MET_Z6_MagWell
@@ -6138,6 +7649,8 @@ class CfgMagazineWells
 		MET_Z6Magazines[]=
 		{
 			"MET_blaster_battery",
+			"MET_blaster_pistol_battery",
+			"MET_DC15S_mag",
 			"MET_blaster_pistol_battery"
 		};
 	};
@@ -6147,8 +7660,6 @@ class CfgMagazineWells
 		{
 			"MET_DC15A_mag",
 			"MET_DC15A_Red_mag",
-			"MET_DC15C_mag",
-			"MET_DC15C_Red_mag",
 			"MET_blaster_pistol_battery",
 			"MET_blaster_pistol_Red_battery",
 			"JLTS_E5_mag",
@@ -6243,6 +7754,46 @@ class CfgMagazineWells
 			"ACE_HuntIR_M203"
 		};
 	};
+	class MET_GL_MagWell_Pacifist
+	{
+		MET_GL_Mags[]=
+		{
+			"MET_SMKW_Grenade",
+			"MET_SMKB_Grenade",
+			"MET_SMKG_Grenade",
+			"MET_SMKO_Grenade",
+			"MET_SMKP_Grenade",
+			"MET_SMKR_Grenade",
+			"MET_SMKTU_Grenade",
+			"MET_SMKTE_Grenade",
+			"MET_SMKY_Grenade",
+			"MET_SUN_Grenade",
+			"MET_SUN_Grenade_Clust",
+			"MET_RA_Grenade",
+			"MET_RA_Grenade_Clust",
+			"MET_ILLUM_Grenade",
+			"MET_ILLUM_Grenade_Clust",
+			"MET_ILLUM_B_Grenade",
+			"MET_ILLUM_B_Grenade_Clust",
+			"MET_ILLUM_G_Grenade",
+			"MET_ILLUM_G_Grenade_Clust",
+			"MET_ILLUM_R_Grenade",
+			"MET_ILLUM_R_Grenade_Clust",
+			"MET_ILLUM_Y_Grenade",
+			"MET_ILLUM_Y_Grenade_Clust",
+			"MET_ILLUM_O_Grenade",
+			"MET_ILLUM_O_Grenade_Clust",
+			"MET_ILLUM_P_Grenade",
+			"MET_ILLUM_P_Grenade_Clust",
+			"MET_ILLUM_TU_Grenade",
+			"MET_ILLUM_TU_Grenade_Clust",
+			"MET_ILLUM_TE_Grenade",
+			"MET_ILLUM_TE_Grenade_Clust",
+			"MET_ILLUM_IR_Grenade",
+			"MET_ILLUM_IR_Grenade_Clust",
+			"ACE_HuntIR_M203"
+		};
+	};
 	class MET_DC17M_MagWell
 	{
 		MET_DC17M_MagWell[]=
@@ -6278,10 +7829,10 @@ class CfgMagazines
 		modelSpecialIsProxy=0;
 		picture="\3AS\3AS_Weapons\Data\UI\3as_ammo_b.paa";
 		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
-		count=50;
-		displayName="[16th] Energy Cell";
+		count=40;
+		displayName="[16th] DC-15A Energy Cell";
 		displayNameShort="Energy Cell";
-		descriptionShort="Energy cell for the DC-15A, DC-15S, and DC-15L";
+		descriptionShort="Energy cell for the DC-15A, and DC-15L";
 		ammo="MET_blasterbolt";
 		tracersEvery=1;
 	};
@@ -6299,6 +7850,22 @@ class CfgMagazines
 		displayNameShort="Energy Cell";
 		descriptionShort="Energy cell for the DC-15A, DC-15S, and DC-15L";
 		ammo="MET_blasterbolt_Red";
+		tracersEvery=1;
+	};
+	class MET_DC15S_mag: JLTS_DC15A_mag
+	{
+		JLTS_hasElectronics=1;
+		JLTS_hasEMPProtection=1;
+		author="Hazmat";
+		modelSpecial="";
+		modelSpecialIsProxy=0;
+		picture="\3AS\3AS_Weapons\Data\UI\3as_ammo_b.paa";
+		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
+		count=60;
+		displayName="[16th] Light Energy Cell";
+		displayNameShort="Energy Cell";
+		descriptionShort="Energy cell for the DC-15S, DC-15C, and Z6";
+		ammo="MET_blasterbolt_low";
 		tracersEvery=1;
 	};
 	class MET_DC19E_mag: JLTS_DC15A_mag
@@ -6335,7 +7902,7 @@ class CfgMagazines
 		mass = 40;
 		tracersEvery=1;
 	};
-	class MET_DC15C_mag: JLTS_DC15A_mag
+	class MET_DC15LE_mag: JLTS_DC15A_mag
 	{
 		JLTS_hasElectronics=1;
 		JLTS_hasEMPProtection=1;
@@ -6344,10 +7911,10 @@ class CfgMagazines
 		modelSpecialIsProxy=0;
 		picture="\3AS\3AS_Weapons\Data\UI\3as_ammo_b.paa";
 		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
-		count=25;
-		displayName="[16th] DC-15C Energy Cell";
+		count=30;
+		displayName="[16th] DC-15LE Energy Cell";
 		displayNameShort="Energy Cell";
-		descriptionShort="Energy cell for the DC-15A, DC-15S, and DC-15L";
+		descriptionShort="Energy cell for the DC-15LE";
 		ammo="MET_blasterbolt_br";
 		tracersEvery=1;
 	};
@@ -6391,31 +7958,23 @@ class CfgMagazines
 		modelSpecialIsProxy=0;
 		picture="\3AS\3AS_Weapons\Data\UI\3as_box_b.paa";
 		model="\MRC\JLTS\weapons\z6\z6_mag.p3d";
-		count=400;
+		count=300;
 		displayName="[16th] Z6 Energy Cell";
 		displayNameShort="Z6 Energy Cell";
 		descriptionShort="Energy cell for the Z6";
 		ammo="MET_blasterbolt_low";
 		tracersEvery=1;
 		initSpeed=250;
-		mass=40;
+		mass=50;
 	};
-	class MET_blaster_battery_green: 100Rnd_65x39_caseless_mag
+	class MET_blaster_battery_green: MET_blaster_battery
 	{
 		author="Hazmat";
 		scope=2;
-		modelSpecial="";
-		modelSpecialIsProxy=0;
 		picture="\3AS\3AS_Weapons\Data\UI\3as_box_g.paa";
-		model="\MRC\JLTS\weapons\z6\z6_mag.p3d";
-		count=400;
 		displayName="[16th] Z6 Energy Cell (Green)";
 		displayNameShort="Z6 Energy Cell (Green)";
-		descriptionShort="Energy cell for the Z6";
 		ammo="MET_blasterbolt_low_green";
-		tracersEvery=1;
-		initSpeed=250;
-		mass=40;
 	};
 	class MET_Valken_mag: JLTS_DC15A_mag
 	{
@@ -18376,7 +19935,7 @@ class CfgAmmo
 		timeToLive = 300;
 		effectFlare = "CounterMeasureFlare";
 		useFlare=1;
-		lightColor[] = {1, 0.639, 0,0};
+		lightColor[] = {1, 0.565, 0,0};
 		smokeColor[] = {1,1,1,0.5};
 		intensity = 1500000;
     	coefGravity = 0.25;

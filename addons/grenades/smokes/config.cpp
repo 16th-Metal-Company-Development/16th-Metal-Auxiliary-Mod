@@ -295,7 +295,7 @@ class CfgAmmo
 	};
 	class Met_Ammo_smoke_orange: Met_Ammo_smoke_white
 	{
-		smokeColor[]={1, 0.639, 0,1};
+		smokeColor[]={1, 0.565, 0,1};
 		effectsSmoke="HTASmokeEffect";
 	};
 	class Met_Ammo_smoke_purple: Met_Ammo_smoke_white
