@@ -420,7 +420,7 @@ class CfgWeapons
 	};
 	class helmet_16th_plt_sunto: helmet_16th_plt
 	{
-		scope=2;
+		scope=0;
 		displayName="[16th] Sunto's Helmet";
 		hiddenSelectionsTextures[]=
 		{
@@ -931,6 +931,15 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\custom\talk_helmet_co.paa",
+		};
+	};
+	class helmet_16th_sunto: helmet_16th_trp
+	{
+		scope=2;
+		displayName="[16th] Sunto's Helmet";
+		hiddenSelectionsTextures[]=
+		{
+			"z\16th\addons\armor\data\custom\sunto_helmet_co.paa"
 		};
 	};
 	class SEA_HELMET_GM_Base;
@@ -2596,6 +2605,15 @@ class CfgWeapons
 		class ItemInfo: ItemInfo
 		{
 			uniformclass="armor_16th_vergil_base";
+		};
+	};
+	class armor_16th_fool: armor_16th_trp
+	{
+		scope=2;
+		displayName="[16th] Fool's Armor";
+		class ItemInfo: ItemInfo
+		{
+			uniformclass="armor_16th_fool_base";
 		};
 	};
 	class JLTS_CloneArmorMC;
@@ -4668,6 +4686,35 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"helmet_16th_merlin",
+			"ItemMap",
+			"JLTS_clone_comlink",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_CloneNVG"
+		};
+	};
+	class armor_16th_fool_base: armor_16th_trp_base
+	{
+		scope=1;
+		displayName="[16th] Fool";
+		uniformClass="armor_16th_nco";
+		hiddenselectionsTextures[]=
+		{
+			"z\16th\addons\armor\data\custom\fool_uniform1_co.paa",
+			"z\16th\addons\armor\data\custom\fool_uniform1_co.paa"
+		};
+		linkedItems[]=
+		{
+			"helmet_16th_nco",
+			"ItemMap",
+			"JLTS_clone_comlink",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_CloneNVG"
+		};
+		respawnLinkedItems[]=
+		{
+			"helmet_16th_nco",
 			"ItemMap",
 			"JLTS_clone_comlink",
 			"ItemCompass",
