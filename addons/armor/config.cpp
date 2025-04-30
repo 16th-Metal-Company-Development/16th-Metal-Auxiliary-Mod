@@ -1149,7 +1149,7 @@ class CfgWeapons
 		class ItemInfo: ItemInfo
 		{
 			uniformModel="\SWLB_clones\SWLB_clone_basic_armor.p3d";
-			containerClass="Supply90";
+			containerClass="Supply100";
 			mass=10;
 			class HitpointsProtectionInfo
 			{
@@ -1260,7 +1260,7 @@ class CfgWeapons
 		class ItemInfo: VestItem
 		{
 			uniformModel="\212th\Armor\212th_Armor\212th_Vests\Aux212_Backpack_Racks\Aux212_Backpack_Rack_CLS\Backpack_Rack_CLS.p3d";
-			containerClass="Supply90";
+			containerClass="Supply100";
 			mass=10;
 			class HitpointsProtectionInfo
 			{
@@ -1315,7 +1315,7 @@ class CfgWeapons
 		class ItemInfo: VestItem
 		{
 			uniformModel="\212th\Armor\212th_Armor\212th_Vests\Aux212_Backpack_Racks\Aux212_Backpack_Rack_AT\Backpack_Rack_AT.p3d";
-			containerClass="Supply90";
+			containerClass="Supply100";
 			mass=10;
 			class HitpointsProtectionInfo
 			{
@@ -1369,7 +1369,7 @@ class CfgWeapons
 		};
 		class ItemInfo: ItemInfo
 		{
-			containerClass="Supply90";
+			containerClass="Supply100";
 			mass=10;
 			class HitpointsProtectionInfo
 			{
@@ -1423,7 +1423,7 @@ class CfgWeapons
 		};
 		class ItemInfo: ItemInfo
 		{
-			containerClass="Supply90";
+			containerClass="Supply100";
 			mass=10;
 			class HitpointsProtectionInfo
 			{
@@ -1479,7 +1479,7 @@ class CfgWeapons
 		};
 		class ItemInfo: ItemInfo
 		{
-			containerClass="Supply90";
+			containerClass="Supply100";
 			mass=10;
 			class HitpointsProtectionInfo
 			{
@@ -1534,7 +1534,7 @@ class CfgWeapons
 		};
 		class ItemInfo: ItemInfo
 		{
-			containerClass="Supply90";
+			containerClass="Supply100";
 			mass=10;
 			class HitpointsProtectionInfo
 			{
@@ -1590,7 +1590,7 @@ class CfgWeapons
 		};
 		class ItemInfo: ItemInfo
 		{
-			containerClass="Supply90";
+			containerClass="Supply100";
 			mass=10;
 			class HitpointsProtectionInfo
 			{
@@ -1645,7 +1645,7 @@ class CfgWeapons
 		};
 		class ItemInfo: ItemInfo
 		{
-			containerClass="Supply90";
+			containerClass="Supply100";
 			mass=10;
 			class HitpointsProtectionInfo
 			{
@@ -1701,7 +1701,7 @@ class CfgWeapons
 		};
 		class ItemInfo: ItemInfo
 		{
-			containerClass="Supply90";
+			containerClass="Supply100";
 			mass=10;
 			class HitpointsProtectionInfo
 			{
@@ -1756,7 +1756,7 @@ class CfgWeapons
 		};
 		class ItemInfo: ItemInfo
 		{
-			containerClass="Supply90";
+			containerClass="Supply100";
 			mass=10;
 			class HitpointsProtectionInfo
 			{
@@ -1807,7 +1807,7 @@ class CfgWeapons
 		displayname="[16th] Staff NCO Vest";
 		class ItemInfo: ItemInfo
 		{
-			containerClass="Supply90";
+			containerClass="Supply100";
 			mass=10;
 			class HitpointsProtectionInfo
 			{
@@ -1868,7 +1868,7 @@ class CfgWeapons
 		};
 		class ItemInfo: ItemInfo
 		{
-			containerClass="Supply90";
+			containerClass="Supply100";
 			mass=10;
 			class HitpointsProtectionInfo
 			{
@@ -1956,7 +1956,7 @@ class CfgWeapons
 		};
 		class ItemInfo: ItemInfo
 		{
-			containerClass="Supply90";
+			containerClass="Supply100";
 			mass=10;
 			class HitpointsProtectionInfo
 			{
@@ -2044,7 +2044,7 @@ class CfgWeapons
 		};
 		class ItemInfo: ItemInfo
 		{
-			containerClass="Supply90";
+			containerClass="Supply100";
 			mass=10;
 			class HitpointsProtectionInfo
 			{
@@ -2145,7 +2145,7 @@ class CfgWeapons
 		class ItemInfo: VestItem
 		{
 			uniformModel="JLTS_AE_GM\SEA_Vest_GM_Base.p3d";
-			containerClass="Supply90";
+			containerClass="Supply100";
 			hiddenSelections[]=
 			{
 				"camo1"
