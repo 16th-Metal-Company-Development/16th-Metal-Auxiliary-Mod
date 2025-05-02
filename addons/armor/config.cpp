@@ -6785,7 +6785,7 @@ class CfgVehicles
 			}
 		};
 	};
-	class jumppack_16th: JLTS_Clone_jumppack_mc
+	class jumppack_16th_med: JLTS_Clone_jumppack_mc
 	{
 		author="Hazmat";
 		scope=2;
