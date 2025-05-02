@@ -1001,7 +1001,7 @@ class CfgWeapons
 			reloadTime=0.15;
 			recoil="recoil_auto_mx";
 			recoilProne="recoil_auto_prone_mx";
-			dispersion=0.00058;
+			dispersion=0.00029;
 			minRange=0;
 			minRangeProbab=0.89999998;
 			midRange=15;
@@ -1015,7 +1015,7 @@ class CfgWeapons
 			textureType="dual";
 			burst=2;
 			reloadTime=0.03;
-			dispersion=0.00058;
+			dispersion=0.00029;
 			minRange=0;
 			minRangeProbab=0.89999998;
 			midRange=50;
@@ -1068,7 +1068,7 @@ class CfgWeapons
 		class Single: Mode_SemiAuto
 		{
 			reloadTime=0.15;
-			dispersion=0.00058;
+			dispersion=0.00029;
 			minRange=2;
 			minRangeProbab=0.5;
 			midRange=250;
@@ -3322,7 +3322,7 @@ class CfgWeapons
 		};
 		class Single: Mode_SemiAuto
 		{
-			reloadTime=0.2;
+			reloadTime=0.3;
 			dispersion=0.00000000001;
 			minRange=2;
 			minRangeProbab=0.30000001;
@@ -5479,7 +5479,7 @@ class CfgWeapons
 					opticsZoomMin=0.0037499999;
 					opticsZoomMax=0.1;
 					opticsZoomInit=0.75;
-					distanceZoomMin=100;
+					distanceZoomMin=2000;
 					distanceZoomMax=2000;
 					visionMode[]=
 					{
