@@ -25,7 +25,7 @@ class XtdGearModels {
                     "Butcher", "Winters", "Roz", "Six", "Gambit", "Frost", "Smith",
                     "Fish", "Mace", "Kick", "Nix", "Maple", "Hood", "Sam", "Ben",
                     "Creed", "Karma", "Prez", "Cougar", "Blowfish", "Spice", "Talk",
-                    "Avalanche", "Maxson", "Ronin", "Chet", "Vergil"
+                    "Avalanche", "Maxson", "Ronin", "Chet", "Vergil", "Sunto"
                 };
             };
         };
@@ -115,7 +115,7 @@ class XtdGearModels {
                 values[] = {
                     "Ronin", "MoldyZeus", "Moldy", "Blatt", "Blackrose",
                     "Prez", "Hood", "Kix", "Winters", "Six", "Cougar", "Maxson",
-                    "Merlin", "Avalanche", "Vergil"
+                    "Merlin", "Avalanche", "Vergil", "Fool"
                 };
             };
         };

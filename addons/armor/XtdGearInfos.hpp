@@ -49,6 +49,7 @@ class XtdGearInfos {
         class helmet_16th_ronin_barc   { model = "16th_Custom_Helmet"; camo = "Ronin"; };
         class helmet_16th_vergil       { model = "16th_Custom_Helmet"; camo = "Vergil"; };
         class helmet_16th_chet         { model = "16th_Custom_Helmet"; camo = "Chet"; };
+        class helmet_16th_sunto        { model = "16th_Custom_Helmet"; camo = "Sunto"; };
 
         // [16th] Airborne Trooper Helmet variants
         class helmet_16th_ab_trp       { model = "16th_Airborne_Helmet"; camo = "Trooper"; };
@@ -117,6 +118,7 @@ class XtdGearInfos {
         class armor_16th_merlin         { model = "16th_Custom_Armor"; camo = "Merlin"; };
         class armor_16th_avalanche      { model = "16th_Custom_Armor"; camo = "Avalanche"; };
         class armor_16th_vergil         { model = "16th_Custom_Armor"; camo = "Vergil"; };
+        class armor_16th_fool           { model = "16th_Custom_Armor"; camo = "Fool"; };
 
         // [16th] Airborne Trooper Armor variants
         class armor_16th_ab_trp        { model = "16th_Airborne_Armor"; camo = "Trooper"; };
