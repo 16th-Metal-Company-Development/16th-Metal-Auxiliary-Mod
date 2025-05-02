@@ -6579,7 +6579,227 @@ class CfgVehicles
 		{
 			"\MRC\JLTS\characters\CloneArmor\data\Clone_jumppack_mc_co.paa"
 		};
-		maximumLoad=200;
+		maximumLoad=250;
+		tf_dialog="JLTS_clone_lr_programmer_radio_dialog";
+		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
+		tf_encryptionCode="tf_west_radio_code";
+		tf_hasLRradio=0;
+		tf_range=10000;
+		tf_subtype="digital_lr";
+		sc_jumppack=1;
+		sc_particles[]=
+		{
+			{0,-0.175,-0.15}
+		};
+		RD501_jumppack_is_jumppack=0;
+		RD501_jumppack_spam_delay=1;
+		RD501_jumppack_energy_capacity=100;
+		RD501_jumppack_recharge=4;
+		RD501_jumppack_jump_effect_script="RD501_jumppack_fnc_effect_jt_21";
+		RD501_jumppack_effect_points[]=
+		{
+			
+			{
+				"spine3",
+				{0,-0.30000001,-0.1}
+			}
+		};
+		RD501_jumppack_sound_ignite[]=
+		{
+			"RD501_Jumppack\sounds\cdv21Start.ogg"
+		};
+		RD501_jumppack_sound_land[]=
+		{
+			"RD501_Jumppack\sounds\cdv21End.ogg"
+		};
+		RD501_jumppack_sound_idle[]=
+		{
+			"RD501_Jumppack\sounds\cdv21Idle.ogg"
+		};
+		RD501_jumppack_skin_group[]=
+		{
+			"default_texture_group"
+		};
+		RD501_jumppack_jump_types[]=
+		{
+			
+			{
+				"Forward Jump",
+				{12,20,50,0,0,0}
+			},
+			
+			{
+				"Short Jump",
+				{12,5,30,0,1,0}
+			}
+		};
+		NSM_jumppack_is_jumppack=0;
+		NSM_jumppack_spam_delay=1;
+		NSM_jumppack_energy_capacity=100;
+		NSM_jumppack_recharge=4;
+		NSM_jumppack_jump_effect_script="NSM_jumppack_effect_fnc_jt_21";
+		NSM_jumppack_effect_points[]=
+		{
+			
+			{
+				
+				{
+					"spine3",
+					{0,-0.30000001,-0.1}
+				}
+			}
+		};
+		NSM_jumppack_sound_ignite[]=
+		{
+			"NSM_Main\sounds\cdv21Start.ogg"
+		};
+		NSM_jumppack_sound_land[]=
+		{
+			"NSM_Main\sounds\cdv21End.ogg"
+		};
+		NSM_jumppack_sound_idle[]=
+		{
+			"NSM_Main\sounds\cdv21Idle.ogg"
+		};
+		NSM_jumppack_jump_types[]=
+		{
+			
+			{
+				"Forward Jump",
+				{12,20,50,0,0,0}
+			},
+			
+			{
+				"Short Jump",
+				{12,5,30,0,1,0}
+			}
+		};
+	};
+	class jumppack_16th_RTO: JLTS_Clone_jumppack_mc
+	{
+		author="Hazmat";
+		scope=2;
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
+		displayName="[16th] Jump Pack (RTO)";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\MRC\JLTS\characters\CloneArmor\data\Clone_jumppack_mc_co.paa"
+		};
+		maximumLoad=250;
+		tf_dialog="JLTS_clone_lr_programmer_radio_dialog";
+		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
+		tf_encryptionCode="tf_west_radio_code";
+		tf_hasLRradio=1;
+		tf_range=10000;
+		tf_subtype="digital_lr";
+		sc_jumppack=1;
+		sc_particles[]=
+		{
+			{0,-0.175,-0.15}
+		};
+		RD501_jumppack_is_jumppack=0;
+		RD501_jumppack_spam_delay=1;
+		RD501_jumppack_energy_capacity=100;
+		RD501_jumppack_recharge=4;
+		RD501_jumppack_jump_effect_script="RD501_jumppack_fnc_effect_jt_21";
+		RD501_jumppack_effect_points[]=
+		{
+			
+			{
+				"spine3",
+				{0,-0.30000001,-0.1}
+			}
+		};
+		RD501_jumppack_sound_ignite[]=
+		{
+			"RD501_Jumppack\sounds\cdv21Start.ogg"
+		};
+		RD501_jumppack_sound_land[]=
+		{
+			"RD501_Jumppack\sounds\cdv21End.ogg"
+		};
+		RD501_jumppack_sound_idle[]=
+		{
+			"RD501_Jumppack\sounds\cdv21Idle.ogg"
+		};
+		RD501_jumppack_skin_group[]=
+		{
+			"default_texture_group"
+		};
+		RD501_jumppack_jump_types[]=
+		{
+			
+			{
+				"Forward Jump",
+				{12,20,50,0,0,0}
+			},
+			
+			{
+				"Short Jump",
+				{12,5,30,0,1,0}
+			}
+		};
+		NSM_jumppack_is_jumppack=0;
+		NSM_jumppack_spam_delay=1;
+		NSM_jumppack_energy_capacity=100;
+		NSM_jumppack_recharge=4;
+		NSM_jumppack_jump_effect_script="NSM_jumppack_effect_fnc_jt_21";
+		NSM_jumppack_effect_points[]=
+		{
+			
+			{
+				
+				{
+					"spine3",
+					{0,-0.30000001,-0.1}
+				}
+			}
+		};
+		NSM_jumppack_sound_ignite[]=
+		{
+			"NSM_Main\sounds\cdv21Start.ogg"
+		};
+		NSM_jumppack_sound_land[]=
+		{
+			"NSM_Main\sounds\cdv21End.ogg"
+		};
+		NSM_jumppack_sound_idle[]=
+		{
+			"NSM_Main\sounds\cdv21Idle.ogg"
+		};
+		NSM_jumppack_jump_types[]=
+		{
+			
+			{
+				"Forward Jump",
+				{12,20,50,0,0,0}
+			},
+			
+			{
+				"Short Jump",
+				{12,5,30,0,1,0}
+			}
+		};
+	};
+	class jumppack_16th: JLTS_Clone_jumppack_mc
+	{
+		author="Hazmat";
+		scope=2;
+		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
+		displayName="[16th] Jump Pack (Medic)";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\MRC\JLTS\characters\CloneArmor\data\Clone_jumppack_mc_co.paa"
+		};
+		maximumLoad=300;
 		tf_dialog="JLTS_clone_lr_programmer_radio_dialog";
 		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
 		tf_encryptionCode="tf_west_radio_code";
