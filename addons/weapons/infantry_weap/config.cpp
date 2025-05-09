@@ -3066,7 +3066,7 @@ class CfgWeapons
 		};
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
-			mass=297;
+			mass=170;
 			class CowsSlot: CowsSlot
 			{
 				compatibleItems[]=
@@ -3282,7 +3282,7 @@ class CfgWeapons
 		};
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
-			mass=231;
+			mass=120;
 			class CowsSlot: CowsSlot
 			{
 				linkProxy="\A3\data_f\proxies\weapon_slots\TOP";
@@ -8935,6 +8935,36 @@ class ACE_Medical_Injuries
                 sizeMultiplier = 0.9;
             };
         };
+	};
+};
+class CfgLights
+{
+	class 3AS_RocketLight;
+	class MET_ATRocket_Green: 3AS_RocketLight
+	{
+		color[]={0.22, 0.984, 0.11};
+		diffuse[]={56,251,28,1};
+		intensity=30000;
+		dayLight=1;
+		useFlare=1;
+		flareSize=1.5;
+		flareMaxDistance=6000;
+	};
+};
+class MET_Rocket_effect_Green_fly
+{
+	class Light
+	{
+		simulation="light";
+		type="3AS_ATRocket_Green";
+		position[]={0,0,0};
+	};
+	class Smoke
+	{
+		simulation="particles";
+		type="Missile3";
+		position[]={0,0,0};
+		qualityLevel=-1;
 	};
 };
 class CfgAmmo
@@ -19467,6 +19497,53 @@ class CfgAmmo
 	===================================================================================================*/
 	class GrenadeBase;
 	class G_40mm_HE;
+	/*class G_40mm_HE: GrenadeBase
+	{
+		hit = 100;
+		indirectHit = 50;
+		indirectHitRange = 10;
+		explosive = 1;
+		cost = 100;
+		timeToLive = 30;
+		fuseDistance = 5;
+		model = "\A3\Weapons_F\ammo\UGL_slug";
+		CraterEffects = "GrenadeCrater";
+		ExplosionEffects = "GrenadeExplosion";
+		whistleDist = 10;
+		soundHit1[] = {"A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_01", 3.1622777, 1, 1500};
+		soundHit2[] = {"A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_02", 3.1622777, 1, 1500};
+		soundHit3[] = {"A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_03", 3.1622777, 1, 1500};
+		soundHit4[] = {"A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_04", 3.1622777, 1, 1500};
+		multiSoundHit[] = {"soundHit1", 0.25, "soundHit2", 0.25, "soundHit3", 0.25, "soundHit4", 0.25};
+		class CamShakeExplode
+		{
+			power = 5;
+			duration = 1;
+			frequency = 20;
+			distance = 100;
+		};
+		class CamShakeHit
+		{
+			power = 20;
+			duration = 0.5;
+			frequency = 20;
+			distance = 1;
+		};
+		class CamShakeFire
+		{
+			power = 0;
+			duration = 0.2;
+			frequency = 20;
+			distance = 0;
+		};
+		class CamShakePlayerFire
+		{
+			power = 0;
+			duration = 0.1;
+			frequency = 20;
+			distance = 1;
+		};
+	};*/
 	class MET_HE_LauncherGrenade: G_40mm_HE
 	{
 		ace_frag_enabled=1;
@@ -19482,14 +19559,15 @@ class CfgAmmo
 	};
 	class MET_HEAT_LauncherGrenade: MET_HE_LauncherGrenade
 	{
+		ace_frag_enabled=0;
 		explosionSoundEffect="DefaultExplosion";
 		simulation="shotShell";
 		model="Indecisive_Armoury_Ammos\Data\40mm_Grenade\IDA_40mm_Grenade.p3d";
 		effectflare="FlareShell";
 		effectfly="MET_BlasterBoltGlow_Yellow_Fly";
 		lightcolor[]={1,1,0};
-		hit=120;
-		indirectHit=6;
+		hit=150;
+		indirectHit=9;
 		indirectHitRange=2;
 		warheadName="HEAT";
 		visibleFire=1;
@@ -19582,7 +19660,7 @@ class CfgAmmo
 		effectflare="FlareShell";
 		effectfly="MET_BlasterBoltGlow_Green_Fly";
 		lightcolor[]={0,1,0};
-		coefGravity=0.1;
+		//coefGravity=1;
 		hit=80;
 		indirectHit=20;
 		indirectHitRange=6;
@@ -19600,6 +19678,7 @@ class CfgAmmo
 		whistleDist=16;
 		typicalSpeed=185;
 		caliber=2;
+		timeToLive = 30;
 		soundHit1[]=
 		{
 			"A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_01",
@@ -19675,7 +19754,7 @@ class CfgAmmo
 	class MET_GL_Flare_LUM_SubMun: F_40mm_White
 	{
 		audibleFire = 0;
-		timeToLive = 300;
+		timeToLive = 90;
 		effectFlare = "CounterMeasureFlare";
 		lightColor[] = {0.95,0.95,1,0.5};
 		smokeColor[] = {1,1,1,0.5};
@@ -19711,7 +19790,7 @@ class CfgAmmo
 	class MET_GL_Flare_SUN_SubMun: F_40mm_White
 	{
 		audibleFire = 0;
-		timeToLive = 120;
+		timeToLive = 60;
 		effectFlare = "CounterMeasureFlare";
 		lightColor[] = {1, 0.839, 0.647,0.5};
 		smokeColor[] = {1,1,1,0.5};
@@ -19780,20 +19859,13 @@ class CfgAmmo
 	/*===============================================
 	==Blue Flares
 	===============================================*/
-	class MET_GL_Flare_B_LUM_SubMun: F_40mm_White
+	class MET_GL_Flare_B_LUM_SubMun: MET_GL_Flare_LUM_SubMun
 	{
 		audibleFire = 0;
-		timeToLive = 300;
 		//effectFlare = "CounterMeasureFlare";
 		useFlare=1;
 		lightColor[] = {0.1183,0.1867,1,0.5};
 		smokeColor[] = {1,1,1,0.5};
-		intensity = 1500000;
-		//timeToLive = 45;
-        coefGravity = 0.25;
-		size = 1;
-		triggerSpeedCoef=1;
-		brightness=12;
 	};
 	class MET_GL_Flare_B_LUM: MET_GL_Flare_B_LUM_SubMun
 	{
@@ -19818,19 +19890,13 @@ class CfgAmmo
 	/*===============================================
 	==Green Flares
 	===============================================*/
-	class MET_GL_Flare_G_LUM_SubMun: F_40mm_White
+	class MET_GL_Flare_G_LUM_SubMun: MET_GL_Flare_LUM_SubMun
 	{
 		audibleFire = 0;
-		timeToLive = 300;
 		effectFlare = "CounterMeasureFlare";
 		useFlare=1;
 		lightColor[] = {0.067, 0.89, 0.035,0};
 		smokeColor[] = {1,1,1,0.5};
-		intensity = 1500000;
-    	coefGravity = 0.25;
-		size = 1;
-		triggerSpeedCoef=1;
-		brightness=12;
 	};
 	class MET_GL_Flare_G_LUM: MET_GL_Flare_G_LUM_SubMun
 	{
@@ -19855,19 +19921,13 @@ class CfgAmmo
 	/*===============================================
 	==Red Flares
 	===============================================*/
-	class MET_GL_Flare_R_LUM_SubMun: F_40mm_White
+	class MET_GL_Flare_R_LUM_SubMun: MET_GL_Flare_LUM_SubMun
 	{
 		audibleFire = 0;
-		timeToLive = 300;
 		effectFlare = "CounterMeasureFlare";
 		useFlare=1;
 		lightColor[] = {0.84380001,0.1383,0.1353,0};
 		smokeColor[] = {1,1,1,0.5};
-		intensity = 1500000;
-    	coefGravity = 0.25;
-		size = 1;
-		triggerSpeedCoef=1;
-		brightness=12;
 	};
 	class MET_GL_Flare_R_LUM: MET_GL_Flare_R_LUM_SubMun
 	{
@@ -19892,19 +19952,13 @@ class CfgAmmo
 	/*===============================================
 	==Yellow Flares
 	===============================================*/
-	class MET_GL_Flare_Y_LUM_SubMun: F_40mm_White
+	class MET_GL_Flare_Y_LUM_SubMun: MET_GL_Flare_LUM_SubMun
 	{
 		audibleFire = 0;
-		timeToLive = 300;
 		effectFlare = "CounterMeasureFlare";
 		useFlare=1;
 		lightColor[] = {0.949, 0.937, 0.094,0};
 		smokeColor[] = {1,1,1,0.5};
-		intensity = 1500000;
-    	coefGravity = 0.25;
-		size = 1;
-		triggerSpeedCoef=1;
-		brightness=12;
 	};
 	class MET_GL_Flare_Y_LUM: MET_GL_Flare_Y_LUM_SubMun
 	{
@@ -19929,19 +19983,13 @@ class CfgAmmo
 	/*===============================================
 	==Orange Flares
 	===============================================*/
-	class MET_GL_Flare_O_LUM_SubMun: F_40mm_White
+	class MET_GL_Flare_O_LUM_SubMun: MET_GL_Flare_LUM_SubMun
 	{
 		audibleFire = 0;
-		timeToLive = 300;
 		effectFlare = "CounterMeasureFlare";
 		useFlare=1;
 		lightColor[] = {1, 0.565, 0,0};
 		smokeColor[] = {1,1,1,0.5};
-		intensity = 1500000;
-    	coefGravity = 0.25;
-		size = 1;
-		triggerSpeedCoef=1;
-		brightness=12;
 	};
 	class MET_GL_Flare_O_LUM: MET_GL_Flare_O_LUM_SubMun
 	{
@@ -19966,19 +20014,13 @@ class CfgAmmo
 	/*===============================================
 	==Purple Flares
 	===============================================*/
-	class MET_GL_Flare_P_LUM_SubMun: F_40mm_White
+	class MET_GL_Flare_P_LUM_SubMun: MET_GL_Flare_LUM_SubMun
 	{
 		audibleFire = 0;
-		timeToLive = 300;
 		effectFlare = "CounterMeasureFlare";
 		useFlare=1;
 		lightColor[] = {0.478, 0, 1,0};
 		smokeColor[] = {1,1,1,0.5};
-		intensity = 1500000;
-    	coefGravity = 0.25;
-		size = 1;
-		triggerSpeedCoef=1;
-		brightness=12;
 	};
 	class MET_GL_Flare_P_LUM: MET_GL_Flare_P_LUM_SubMun
 	{
@@ -20003,19 +20045,13 @@ class CfgAmmo
 	/*===============================================
 	==Turquoise Flares
 	===============================================*/
-	class MET_GL_Flare_TU_LUM_SubMun: F_40mm_White
+	class MET_GL_Flare_TU_LUM_SubMun: MET_GL_Flare_LUM_SubMun
 	{
 		audibleFire = 0;
-		timeToLive = 300;
 		effectFlare = "CounterMeasureFlare";
 		useFlare=1;
 		lightColor[] = {0, 0.976, 1,0};
 		smokeColor[] = {1,1,1,0.5};
-		intensity = 1500000;
-    	coefGravity = 0.25;
-		size = 1;
-		triggerSpeedCoef=1;
-		brightness=12;
 	};
 	class MET_GL_Flare_TU_LUM: MET_GL_Flare_TU_LUM_SubMun
 	{
@@ -20040,19 +20076,13 @@ class CfgAmmo
 	/*===============================================
 	==Teal Flares
 	===============================================*/
-	class MET_GL_Flare_TE_LUM_SubMun: F_40mm_White
+	class MET_GL_Flare_TE_LUM_SubMun: MET_GL_Flare_LUM_SubMun
 	{
 		audibleFire = 0;
-		timeToLive = 300;
 		effectFlare = "CounterMeasureFlare";
 		useFlare=1;
 		lightColor[] = {0, 1, 0.769,0};
 		smokeColor[] = {1,1,1,0.5};
-		intensity = 1500000;
-    	coefGravity = 0.25;
-		size = 1;
-		triggerSpeedCoef=1;
-		brightness=12;
 	};
 	class MET_GL_Flare_TE_LUM: MET_GL_Flare_TE_LUM_SubMun
 	{
@@ -20077,19 +20107,13 @@ class CfgAmmo
 	/*===============================================
 	==IR Flares
 	===============================================*/
-	class MET_GL_Flare_IR_LUM_SubMun: F_40mm_White
+	class MET_GL_Flare_IR_LUM_SubMun: MET_GL_Flare_LUM_SubMun
 	{
 		audibleFire = 0;
-		timeToLive = 300;
 		effectFlare = "CounterMeasureFlare";
 		useFlare=1;
 		lightColor[] = {0.25,0.25,0.25,0};
 		smokeColor[] = {1,1,1,0.5};
-		intensity = 1500000;
-    	coefGravity = 0.25;
-		size = 1;
-		triggerSpeedCoef=1;
-		brightness=12;
         nvgOnly = 1;
 	};
 	class MET_GL_Flare_IR_LUM: MET_GL_Flare_IR_LUM_SubMun

@@ -13,9 +13,98 @@ class CfgPatches
 			"helmet_16th_ab_trp",
 			"helmet_16th_arf",
 			"helmet_16th_plt",
+			"helmet_16th_ab_vtrp",
+			"helmet_16th_ab_cpl",
+			"helmet_16th_ab_sgt",
+			"helmet_16th_ab_ssgt",
+			"helmet_16th_ab_cfs",
+			"helmet_16th_ab_sgm",
+			"helmet_16th_ab_medic",
+			"helmet_16th_ab_blackrose",
+			"helmet_16th_ab_kick",
+			"helmet_16th_ab_vergil",
+			"helmet_16th_arf_nco",
+			"helmet_16th_tavion_arf",
+			"helmet_16th_cadet",
+			"helmet_16th_vttrp",
+			"helmet_16th_special",
+			"helmet_16th_nco",
+			"helmet_16th_snco",
+			"helmet_16th_officer",
+			"helmet_16th_medic",
+			"helmet_16th_eod",
+			"helmet_16th_arch",
+			"helmet_16th_avalanche",
+			"helmet_16th_ben",
+			"helmet_16th_blackrose",
+			"helmet_16th_blat",
+			"helmet_16th_blowfish",
+			"helmet_16th_blue_arf",
+			"helmet_16th_bravo",
+			"helmet_16th_butcher",
+			"helmet_16th_chet",
+			"helmet_16th_chetiah",
+			"helmet_16th_convor",
+			"helmet_16th_cougar",
+			"helmet_16th_creed",
+			"helmet_16th_fish",
+			"helmet_16th_frost",
+			"helmet_16th_gambit",
+			"helmet_16th_hazmat",
+			"helmet_16th_hood",
+			"helmet_16th_karma",
+			"helmet_16th_kick",
+			"helmet_16th_kix",
+			"helmet_16th_krieg",
+			"helmet_16th_mace",
+			"helmet_16th_maple",
+			"helmet_16th_maple_arf",
+			"helmet_16th_maxson",
+			"helmet_16th_merlin",
+			"helmet_16th_moldy",
+			"helmet_16th_nix",
+			"helmet_16th_noble",
+			"helmet_16th_prez",
+			"helmet_16th_ronin",
+			"helmet_16th_ronin_barc",
+			"helmet_16th_roz",
+			"helmet_16th_sam",
+			"helmet_16th_six",
+			"helmet_16th_smith",
+			"helmet_16th_spice",
+			"helmet_16th_sunto",
+			"helmet_16th_talk",
+			"helmet_16th_vergil",
+			"helmet_16th_william",
+			"helmet_16th_winters",
+			"helmet_16th_wolf",
 			"vest_16_backpack_rack_ammo_bearer",
 			"vest_16_backpack_rack_cls",
-			"vest_16_backpack_rack_at"
+			"vest_16_backpack_rack_at",
+			"vest_16_vest_suspenders",
+			"vest_16_eod_vest_suspenders",
+			"vest_16_vest_recon_nco",
+			"vest_16_vest_nco",
+			"vest_16_vest_ab",
+			"vest_16_vest_ab_med",
+			"vest_16_vest_ab_nco",
+			"vest_16_vest_ab_med_nco",
+			"vest_16_vest_recon_officer",
+			"vest_16_vest_commander",
+			"vest_16_vest_commander_2lt",
+			"vest_16_vest_commander_1lt",
+			"vest_16_vest_commander_cpt",
+			"vest_16_vest_officer",
+			"vest_16_vest_officer_2lt",
+			"vest_16_vest_officer_1lt",
+			"vest_16_vest_officer_cpt",
+			"vest_16_vest_avalanche",
+			"vest_16_vest_arc",
+			"vest_16_vest_ronin_arc",
+			"vest_16_vest_mooose_arc",
+			"vest_16_ca_trp",
+			"vest_16_ca_nco",
+			"vest_16_ca_off"
 		};
 		requiredVersion=0.1;
 		requiredAddons[]=
@@ -362,6 +451,15 @@ class CfgWeapons
 			"z\16th\addons\armor\data\arf\arf_nco_helmet_co.paa"
 		};
 	};
+	class helmet_16th_tavion_arf: helmet_16th_arf
+	{
+		scope=2;
+		displayName="[16th] Tavion's ARF Helmet";
+		hiddenSelectionsTextures[]=
+		{
+			"z\16th\addons\armor\data\custom\tavion_helmet_co.paa"
+		};
+	};
 	class helmet_16th_plt: 3as_P2_Pilot_helmet
 	{
 		scope=2;
@@ -518,69 +616,6 @@ class CfgWeapons
 			"z\16th\addons\armor\data\infantry\specialists\eod_helmet_co.paa"
 		};
 	};
-	class helmet_16th_ronin: helmet_16th_trp
-	{
-		scope=1;
-		displayName="[16th] Ronin's Helmet";
-		hiddenSelectionsTextures[]=
-		{
-			"z\16th\addons\armor\data\custom\ronin_helmet_co.paa"
-		};
-	};
-	class helmet_16th_ronin_barc: helmet_16th_barc
-	{
-		scope=2;
-		displayName="[16th] Ronin's Helmet";
-		hiddenSelectionsTextures[]=
-		{
-			"z\16th\addons\armor\data\custom\ronin_helmet_barc_co.paa"
-		};
-	};
-	class helmet_16th_hazmat: helmet_16th_trp
-	{
-		scope=2;
-		displayName="[16th] Hazmat's Helmet";
-		hiddenSelectionsTextures[]=
-		{
-			"z\16th\addons\armor\data\custom\hazmat_helmet_co.paa"
-		};
-	};
-	class helmet_16th_chetiah: helmet_16th_trp
-	{
-		scope=2;
-		displayName="[16th] Chetiah's Helmet";
-		hiddenSelectionsTextures[]=
-		{
-			"z\16th\addons\armor\data\custom\chetiah_helmet_co.paa"
-		};
-	};
-	class helmet_16th_arch: helmet_16th_trp
-	{
-		scope=2;
-		displayName="[16th] Arch's Helmet";
-		hiddenSelectionsTextures[]=
-		{
-			"z\16th\addons\armor\data\custom\arch_helmet_co.paa"
-		};
-	};
-	class helmet_16th_krieg: helmet_16th_trp
-	{
-		scope=2;
-		displayName="[16th] Krieg's Helmet";
-		hiddenSelectionsTextures[]=
-		{
-			"z\16th\addons\armor\data\custom\krieg_helmet_co.paa"
-		};
-	};
-	class helmet_16th_blackrose: helmet_16th_trp
-	{
-		scope=2;
-		displayName="[16th] Blackrose's Helmet";
-		hiddenSelectionsTextures[]=
-		{
-			"z\16th\addons\armor\data\custom\blackrose_helmet_co.paa"
-		};
-	};
 	class helmet_16th_ab_blackrose: helmet_16th_ab_trp
 	{
 		scope=2;
@@ -606,6 +641,241 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\custom\vergil_ab_helmet_co.paa"
+		};
+	};
+	class helmet_16th_arch: helmet_16th_trp
+	{
+		scope=2;
+		displayName="[16th] Arch's Helmet";
+		hiddenSelectionsTextures[]=
+		{
+			"z\16th\addons\armor\data\custom\arch_helmet_co.paa"
+		};
+	};
+	class helmet_16th_avalanche: helmet_16th_trp_illum
+	{
+		scope=2;
+		displayName="[16th] Avalanche's Helmet";
+		hiddenSelectionsTextures[]=
+		{
+			"z\16th\addons\armor\data\custom\dj_helmet_co.paa",
+			"z\16th\addons\armor\data\custom\dj_helmet_co.paa"
+		};
+	};
+	class helmet_16th_ben: helmet_16th_trp
+	{
+		scope=2;
+		displayName="[16th] Ben's Helmet";
+		hiddenSelectionsTextures[]=
+		{
+			"z\16th\addons\armor\data\custom\ben_helmet_co.paa"
+		};
+	};
+	class helmet_16th_blackrose: helmet_16th_trp
+	{
+		scope=2;
+		displayName="[16th] Blackrose's Helmet";
+		hiddenSelectionsTextures[]=
+		{
+			"z\16th\addons\armor\data\custom\blackrose_helmet_co.paa"
+		};
+	};
+	class helmet_16th_blat: helmet_16th_trp
+	{
+		scope=2;
+		displayName="[16th] Blatt's Helmet";
+		hiddenSelectionsTextures[]=
+		{
+			"z\16th\addons\armor\data\custom\blatt_helmet_co.paa"
+		};
+	};
+	class helmet_16th_blowfish: helmet_16th_trp
+	{
+		scope=2;
+		displayName="[16th] Blowfish's Helmet";
+		hiddenSelectionsTextures[]=
+		{
+			"z\16th\addons\armor\data\custom\blowfish_helmet_co.paa"
+		};
+	};
+	class helmet_16th_blue_arf: helmet_16th_arf
+	{
+		scope=2;
+		displayName="[16th] Blue's ARF Helmet";
+		hiddenSelectionsTextures[]=
+		{
+			"z\16th\addons\armor\data\custom\blue_arf_helmet_co.paa"
+		};
+	};
+	class helmet_16th_bravo: helmet_16th_trp
+	{
+		scope=1;
+		displayName="[16th] Bravo's Helmet";
+		hiddenSelectionsTextures[]=
+		{
+			"z\16th\addons\armor\data\custom\bravo_helmet_co.paa"
+		};
+	};
+	class helmet_16th_butcher: helmet_16th_trp
+	{
+		scope=2;
+		displayName="[16th] Butcher's Helmet";
+		hiddenSelectionsTextures[]=
+		{
+			"z\16th\addons\armor\data\custom\butcher_helmet_co.paa"
+		};
+	};
+	class helmet_16th_chet: helmet_16th_trp
+	{
+		scope=2;
+		displayName="[16th] Chet's Helmet";
+		hiddenSelectionsTextures[]=
+		{
+			"z\16th\addons\armor\data\custom\chet_helmet_co.paa"
+		};
+	};
+	class helmet_16th_chetiah: helmet_16th_trp
+	{
+		scope=2;
+		displayName="[16th] Chetiah's Helmet";
+		hiddenSelectionsTextures[]=
+		{
+			"z\16th\addons\armor\data\custom\chetiah_helmet_co.paa"
+		};
+	};
+	class helmet_16th_convor: helmet_16th_arf
+	{
+		scope=2;
+		displayName="[16th] Convor's Helmet";
+		hiddenSelectionsTextures[]=
+		{
+			"z\16th\addons\armor\data\custom\convor_helmet_co.paa"
+		};
+	};
+	class helmet_16th_cougar: helmet_16th_trp
+	{
+		scope=2;
+		displayName="[16th] Cougar's Helmet";
+		hiddenSelectionsTextures[]=
+		{
+			"z\16th\addons\armor\data\custom\cougar_helmet_co.paa"
+		};
+	};
+	class helmet_16th_creed: helmet_16th_trp
+	{
+		scope=2;
+		displayName="[16th] Creed's Helmet";
+		hiddenSelectionsTextures[]=
+		{
+			"z\16th\addons\armor\data\custom\creed_helmet_co.paa"
+		};
+	};
+	class helmet_16th_fish: helmet_16th_trp
+	{
+		scope=2;
+		displayName="[16th] Fish's Helmet";
+		hiddenSelectionsTextures[]=
+		{
+			"z\16th\addons\armor\data\custom\fish_helmet_co.paa"
+		};
+	};
+	class helmet_16th_frost: helmet_16th_trp
+	{
+		scope=2;
+		displayName="[16th] Frost's Helmet";
+		hiddenSelectionsTextures[]=
+		{
+			"z\16th\addons\armor\data\custom\frost_helmet_co.paa"
+		};
+	};
+	class helmet_16th_gambit: helmet_16th_trp
+	{
+		scope=2;
+		displayName="[16th] Gambit's Helmet";
+		hiddenSelectionsTextures[]=
+		{
+			"z\16th\addons\armor\data\custom\gambit_helmet_co.paa"
+		};
+	};
+	class helmet_16th_hazmat: helmet_16th_trp
+	{
+		scope=2;
+		displayName="[16th] Hazmat's Helmet";
+		hiddenSelectionsTextures[]=
+		{
+			"z\16th\addons\armor\data\custom\hazmat_helmet_co.paa"
+		};
+	};
+	class helmet_16th_hood: helmet_16th_trp
+	{
+		scope=2;
+		displayName="[16th] Hood's Helmet";
+		hiddenSelectionsTextures[]=
+		{
+			"z\16th\addons\armor\data\custom\hood_helmet_co.paa"
+		};
+	};
+	class helmet_16th_karma: helmet_16th_trp
+	{
+		scope=2;
+		displayName="[16th] Karma's Helmet";
+		hiddenSelectionsTextures[]=
+		{
+			"z\16th\addons\armor\data\custom\karma_helmet_co.paa"
+		};
+	};
+	class helmet_16th_kick: helmet_16th_trp
+	{
+		scope=2;
+		displayName="[16th] Kick's Helmet";
+		hiddenSelectionsTextures[]=
+		{
+			"z\16th\addons\armor\data\custom\kick_helmet_co.paa"
+		};
+	};
+	class helmet_16th_kix: helmet_16th_arf
+	{
+		scope=2;
+		displayName="[16th] Kix's Helmet";
+		hiddenSelectionsTextures[]=
+		{
+			"z\16th\addons\armor\data\custom\kix_helmet_co.paa"
+		};
+	};
+	class helmet_16th_krieg: helmet_16th_trp
+	{
+		scope=2;
+		displayName="[16th] Krieg's Helmet";
+		hiddenSelectionsTextures[]=
+		{
+			"z\16th\addons\armor\data\custom\krieg_helmet_co.paa"
+		};
+	};
+	class helmet_16th_mace: helmet_16th_trp
+	{
+		scope=2;
+		displayName="[16th] Mace's Helmet";
+		hiddenSelectionsTextures[]=
+		{
+			"z\16th\addons\armor\data\custom\mace_helmet_co.paa"
+		};
+	};
+	class helmet_16th_maple: helmet_16th_trp
+	{
+		scope=2;
+		displayName="[16th] Maple's Helmet";
+		hiddenSelectionsTextures[]=
+		{
+			"z\16th\addons\armor\data\custom\maple_helmet_co.paa"
+		};
+	};
+	class helmet_16th_maple_arf: helmet_16th_arf
+	{
+		scope=2;
+		displayName="[16th] Maple's ARF Helmet";
+		hiddenSelectionsTextures[]=
+		{
+			"z\16th\addons\armor\data\custom\maple_arf_helmet_co.paa"
 		};
 	};
 	class helmet_16th_maxson: helmet_16th_trp
@@ -635,132 +905,6 @@ class CfgWeapons
 			"z\16th\addons\armor\data\custom\moldy_helmet_co.paa"
 		};
 	};
-	class helmet_16th_william: helmet_16th_trp
-	{
-		scope=2;
-		displayName="[16th] William's Helmet";
-		hiddenSelectionsTextures[]=
-		{
-			"z\16th\addons\armor\data\custom\william_helmet_co.paa"
-		};
-	};
-	class helmet_16th_wolf: helmet_16th_trp
-	{
-		scope=2;
-		displayName="[16th] Wolf's Helmet";
-		hiddenSelectionsTextures[]=
-		{
-			"z\16th\addons\armor\data\custom\wolf_helmet_co.paa"
-		};
-	};
-	class helmet_16th_blatt: helmet_16th_trp
-	{
-		scope=2;
-		displayName="[16th] Blatt's Helmet";
-		hiddenSelectionsTextures[]=
-		{
-			"z\16th\addons\armor\data\custom\blatt_helmet_co.paa"
-		};
-	};
-	class helmet_16th_butcher: helmet_16th_trp
-	{
-		scope=2;
-		displayName="[16th] Butcher's Helmet";
-		hiddenSelectionsTextures[]=
-		{
-			"z\16th\addons\armor\data\custom\butcher_helmet_co.paa"
-		};
-	};
-	class helmet_16th_bravo: helmet_16th_trp
-	{
-		scope=1;
-		displayName="[16th] Bravo's Helmet";
-		hiddenSelectionsTextures[]=
-		{
-			"z\16th\addons\armor\data\custom\bravo_helmet_co.paa"
-		};
-	};
-	class helmet_16th_winters: helmet_16th_trp
-	{
-		scope=2;
-		displayName="[16th] Winters' Helmet";
-		hiddenSelectionsTextures[]=
-		{
-			"z\16th\addons\armor\data\custom\winters_helmet_co.paa"
-		};
-	};
-	class helmet_16th_roz: helmet_16th_trp
-	{
-		scope=2;
-		displayName="[16th] Roz's Helmet";
-		hiddenSelectionsTextures[]=
-		{
-			"z\16th\addons\armor\data\custom\roz_helmet_co.paa"
-		};
-	};
-	class helmet_16th_six: helmet_16th_trp
-	{
-		scope=2;
-		displayName="[16th] Six's Helmet";
-		hiddenSelectionsTextures[]=
-		{
-			"z\16th\addons\armor\data\custom\six_helmet_co.paa"
-		};
-	};
-	class helmet_16th_gambit: helmet_16th_trp
-	{
-		scope=2;
-		displayName="[16th] Gambit's Helmet";
-		hiddenSelectionsTextures[]=
-		{
-			"z\16th\addons\armor\data\custom\gambit_helmet_co.paa"
-		};
-	};
-	class helmet_16th_frost: helmet_16th_trp
-	{
-		scope=2;
-		displayName="[16th] Frost's Helmet";
-		hiddenSelectionsTextures[]=
-		{
-			"z\16th\addons\armor\data\custom\frost_helmet_co.paa"
-		};
-	};
-	class helmet_16th_smith: helmet_16th_trp
-	{
-		scope=2;
-		displayName="[16th] Smith's Helmet";
-		hiddenSelectionsTextures[]=
-		{
-			"z\16th\addons\armor\data\custom\smith_helmet_co.paa"
-		};
-	};
-	class helmet_16th_fish: helmet_16th_trp
-	{
-		scope=2;
-		displayName="[16th] Fish's Helmet";
-		hiddenSelectionsTextures[]=
-		{
-			"z\16th\addons\armor\data\custom\fish_helmet_co.paa"
-		};
-	};
-	class helmet_16th_mace: helmet_16th_trp
-	{
-		scope=2;
-		displayName="[16th] Mace's Helmet";
-		hiddenSelectionsTextures[]=
-		{
-			"z\16th\addons\armor\data\custom\mace_helmet_co.paa"
-		};
-	};
-	class helmet_16th_kick: helmet_16th_trp
-	{
-		scope=2;
-		displayName="[16th] Kick's Helmet";
-		hiddenSelectionsTextures[]=
-		{
-			"z\16th\addons\armor\data\custom\kick_helmet_co.paa"
-		};
-	};
 	class helmet_16th_nix: helmet_16th_trp
 	{
 		scope=2;
@@ -770,58 +914,13 @@ class CfgWeapons
 			"z\16th\addons\armor\data\custom\nix_helmet_co.paa"
 		};
 	};
-	class helmet_16th_maple: helmet_16th_trp
+	class helmet_16th_noble: helmet_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Maple's Helmet";
+		displayName="[16th] Nobles's Helmet";
 		hiddenSelectionsTextures[]=
 		{
-			"z\16th\addons\armor\data\custom\maple_helmet_co.paa"
-		};
-	};
-	class helmet_16th_hood: helmet_16th_trp
-	{
-		scope=2;
-		displayName="[16th] Hood's Helmet";
-		hiddenSelectionsTextures[]=
-		{
-			"z\16th\addons\armor\data\custom\hood_helmet_co.paa"
-		};
-	};
-	class helmet_16th_sam: helmet_16th_trp
-	{
-		scope=2;
-		displayName="[16th] Sam's Helmet";
-		hiddenSelectionsTextures[]=
-		{
-			"z\16th\addons\armor\data\custom\sam_helmet_co.paa"
-		};
-	};
-	class helmet_16th_ben: helmet_16th_trp
-	{
-		scope=2;
-		displayName="[16th] Ben's Helmet";
-		hiddenSelectionsTextures[]=
-		{
-			"z\16th\addons\armor\data\custom\ben_helmet_co.paa"
-		};
-	};
-	class helmet_16th_creed: helmet_16th_trp
-	{
-		scope=2;
-		displayName="[16th] Creed's Helmet";
-		hiddenSelectionsTextures[]=
-		{
-			"z\16th\addons\armor\data\custom\creed_helmet_co.paa"
-		};
-	};
-	class helmet_16th_karma: helmet_16th_trp
-	{
-		scope=2;
-		displayName="[16th] Karma's Helmet";
-		hiddenSelectionsTextures[]=
-		{
-			"z\16th\addons\armor\data\custom\karma_helmet_co.paa"
+			"z\16th\addons\armor\data\custom\noble_helmet_co.paa"
 		};
 	};
 	class helmet_16th_prez: helmet_16th_trp
@@ -833,86 +932,58 @@ class CfgWeapons
 			"z\16th\addons\armor\data\custom\prez_helmet_co.paa"
 		};
 	};
-	class helmet_16th_cougar: helmet_16th_trp
+	class helmet_16th_ronin: helmet_16th_trp
 	{
-		scope=2;
-		displayName="[16th] Cougar's Helmet";
+		scope=1;
+		displayName="[16th] Ronin's Helmet";
 		hiddenSelectionsTextures[]=
 		{
-			"z\16th\addons\armor\data\custom\cougar_helmet_co.paa"
+			"z\16th\addons\armor\data\custom\ronin_helmet_co.paa"
 		};
 	};
-	class helmet_16th_blowfish: helmet_16th_trp
+	class helmet_16th_ronin_barc: helmet_16th_barc
 	{
 		scope=2;
-		displayName="[16th] Blowfish's Helmet";
+		displayName="[16th] Ronin's Helmet";
 		hiddenSelectionsTextures[]=
 		{
-			"z\16th\addons\armor\data\custom\blowfish_helmet_co.paa"
+			"z\16th\addons\armor\data\custom\ronin_helmet_barc_co.paa"
 		};
 	};
-	class helmet_16th_chet: helmet_16th_trp
+	class helmet_16th_roz: helmet_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Chet's Helmet";
+		displayName="[16th] Roz's Helmet";
 		hiddenSelectionsTextures[]=
 		{
-			"z\16th\addons\armor\data\custom\chet_helmet_co.paa"
+			"z\16th\addons\armor\data\custom\roz_helmet_co.paa"
 		};
 	};
-	class helmet_16th_vergil: helmet_16th_trp
+	class helmet_16th_sam: helmet_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Vergil's Helmet";
+		displayName="[16th] Sam's Helmet";
 		hiddenSelectionsTextures[]=
 		{
-			"z\16th\addons\armor\data\custom\vergil_helmet_co.paa"
+			"z\16th\addons\armor\data\custom\sam_helmet_co.paa"
 		};
 	};
-	class helmet_16th_kix: helmet_16th_arf
+	class helmet_16th_six: helmet_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Kix's Helmet";
+		displayName="[16th] Six's Helmet";
 		hiddenSelectionsTextures[]=
 		{
-			"z\16th\addons\armor\data\custom\kix_helmet_co.paa"
+			"z\16th\addons\armor\data\custom\six_helmet_co.paa"
 		};
 	};
-	class helmet_16th_convor: helmet_16th_arf
+	class helmet_16th_smith: helmet_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Convor's Helmet";
+		displayName="[16th] Smith's Helmet";
 		hiddenSelectionsTextures[]=
 		{
-			"z\16th\addons\armor\data\custom\convor_helmet_co.paa"
-		};
-	};
-	class helmet_16th_maple_arf: helmet_16th_arf
-	{
-		scope=2;
-		displayName="[16th] Maple's ARF Helmet";
-		hiddenSelectionsTextures[]=
-		{
-			"z\16th\addons\armor\data\custom\maple_arf_helmet_co.paa"
-		};
-	};
-	class helmet_16th_blue_arf: helmet_16th_arf
-	{
-		scope=2;
-		displayName="[16th] Blue's ARF Helmet";
-		hiddenSelectionsTextures[]=
-		{
-			"z\16th\addons\armor\data\custom\blue_arf_helmet_co.paa"
-		};
-	};
-	class helmet_16th_avalanche: helmet_16th_trp_illum
-	{
-		scope=2;
-		displayName="[16th] Avalanche's Helmet";
-		hiddenSelectionsTextures[]=
-		{
-			"z\16th\addons\armor\data\custom\dj_helmet_co.paa",
-			"z\16th\addons\armor\data\custom\dj_helmet_co.paa"
+			"z\16th\addons\armor\data\custom\smith_helmet_co.paa"
 		};
 	};
 	class helmet_16th_spice: helmet_16th_trp
@@ -924,15 +995,6 @@ class CfgWeapons
 			"z\16th\addons\armor\data\custom\spice_helmet_co.paa"
 		};
 	};
-	class helmet_16th_talk: helmet_16th_trp
-	{
-		scope=2;
-		displayName="[16th] Talk's Helmet";
-		hiddenSelectionsTextures[]=
-		{
-			"z\16th\addons\armor\data\custom\talk_helmet_co.paa",
-		};
-	};
 	class helmet_16th_sunto: helmet_16th_trp
 	{
 		scope=2;
@@ -940,6 +1002,51 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\custom\sunto_helmet_co.paa"
+		};
+	};
+	class helmet_16th_talk: helmet_16th_trp
+	{
+		scope=2;
+		displayName="[16th] Talk's Helmet";
+		hiddenSelectionsTextures[]=
+		{
+			"z\16th\addons\armor\data\custom\talk_helmet_co.paa"
+		};
+	};
+	class helmet_16th_vergil: helmet_16th_trp
+	{
+		scope=2;
+		displayName="[16th] Vergil's Helmet";
+		hiddenSelectionsTextures[]=
+		{
+			"z\16th\addons\armor\data\custom\vergil_helmet_co.paa"
+		};
+	};
+	class helmet_16th_william: helmet_16th_trp
+	{
+		scope=2;
+		displayName="[16th] William's Helmet";
+		hiddenSelectionsTextures[]=
+		{
+			"z\16th\addons\armor\data\custom\william_helmet_co.paa"
+		};
+	};
+	class helmet_16th_winters: helmet_16th_trp
+	{
+		scope=2;
+		displayName="[16th] Winters' Helmet";
+		hiddenSelectionsTextures[]=
+		{
+			"z\16th\addons\armor\data\custom\winters_helmet_co.paa"
+		};
+	};
+	class helmet_16th_wolf: helmet_16th_trp
+	{
+		scope=2;
+		displayName="[16th] Wolf's Helmet";
+		hiddenSelectionsTextures[]=
+		{
+			"z\16th\addons\armor\data\custom\wolf_helmet_co.paa"
 		};
 	};
 	class SEA_HELMET_GM_Base;
@@ -2499,31 +2606,13 @@ class CfgWeapons
 			uniformclass="armor_16th_ab_medic_base";
 		};
 	};
-	class armor_16th_ronin: armor_16th_trp
+	class armor_16th_blackrose: armor_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Ronin's Armor";
+		displayName="[16th] Blackrose's Armor";
 		class ItemInfo: ItemInfo
 		{
-			uniformclass="armor_16th_ronin_base";
-		};
-	};
-	class armor_16th_moldy_zeus: armor_16th_cadet
-	{
-		scope=2;
-		displayName="[16th] Moldy Zeus Armor";
-		class ItemInfo: ItemInfo
-		{
-			uniformclass="armor_16th_moldyz_base";
-		};
-	};
-	class armor_16th_moldy: armor_16th_trp
-	{
-		scope=2;
-		displayName="[16th] Moldy Armor";
-		class ItemInfo: ItemInfo
-		{
-			uniformclass="armor_16th_moldy_base";
+			uniformclass="armor_16th_blackrose_base";
 		};
 	};
 	class armor_16th_blatt: armor_16th_trp
@@ -2535,22 +2624,31 @@ class CfgWeapons
 			uniformclass="armor_16th_blatt_base";
 		};
 	};
-	class armor_16th_blackrose: armor_16th_trp
+	class armor_16th_cooger: armor_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Blackrose's Armor";
+		displayName="[16th] Cougar's Armor";
 		class ItemInfo: ItemInfo
 		{
-			uniformclass="armor_16th_blackrose_base";
+			uniformclass="armor_16th_cooger_base";
 		};
 	};
-	class armor_16th_prez: armor_16th_trp
+	class armor_16th_fool: armor_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Prez's Armor";
+		displayName="[16th] Fool's Armor";
 		class ItemInfo: ItemInfo
 		{
-			uniformclass="armor_16th_prez_base";
+			uniformclass="armor_16th_fool_base";
+		};
+	};
+	class armor_16th_hazmat: armor_16th_trp
+	{
+		scope=2;
+		displayName="[16th] Hazmat's Armor";
+		class ItemInfo: ItemInfo
+		{
+			uniformclass="armor_16th_hazmat_base";
 		};
 	};
 	class armor_16th_hood: armor_16th_trp
@@ -2571,13 +2669,49 @@ class CfgWeapons
 			uniformclass="armor_16th_kix_base";
 		};
 	};
-	class armor_16th_winters: armor_16th_trp
+	class armor_16th_moldy: armor_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Winters's Armor";
+		displayName="[16th] Moldy Armor";
 		class ItemInfo: ItemInfo
 		{
-			uniformclass="armor_16th_winters_base";
+			uniformclass="armor_16th_moldy_base";
+		};
+	};
+	class armor_16th_moldy_zeus: armor_16th_cadet
+	{
+		scope=2;
+		displayName="[16th] Moldy Zeus Armor";
+		class ItemInfo: ItemInfo
+		{
+			uniformclass="armor_16th_moldyz_base";
+		};
+	};
+	class armor_16th_Noble: armor_16th_trp
+	{
+		scope=2;
+		displayName="[16th] Noble's Armor";
+		class ItemInfo: ItemInfo
+		{
+			uniformclass="armor_16th_noble_base";
+		};
+	};
+	class armor_16th_prez: armor_16th_trp
+	{
+		scope=2;
+		displayName="[16th] Prez's Armor";
+		class ItemInfo: ItemInfo
+		{
+			uniformclass="armor_16th_prez_base";
+		};
+	};
+	class armor_16th_ronin: armor_16th_trp
+	{
+		scope=2;
+		displayName="[16th] Ronin's Armor";
+		class ItemInfo: ItemInfo
+		{
+			uniformclass="armor_16th_ronin_base";
 		};
 	};
 	class armor_16th_six: armor_16th_trp
@@ -2589,13 +2723,13 @@ class CfgWeapons
 			uniformclass="armor_16th_six_base";
 		};
 	};
-	class armor_16th_cooger: armor_16th_trp
+	class armor_16th_sunto: armor_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Cougar's Armor";
+		displayName="[16th] Sunto's Armor";
 		class ItemInfo: ItemInfo
 		{
-			uniformclass="armor_16th_cooger_base";
+			uniformclass="armor_16th_sunto_base";
 		};
 	};
 	class armor_16th_vergil: armor_16th_trp
@@ -2607,13 +2741,13 @@ class CfgWeapons
 			uniformclass="armor_16th_vergil_base";
 		};
 	};
-	class armor_16th_fool: armor_16th_trp
+	class armor_16th_winters: armor_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Fool's Armor";
+		displayName="[16th] Winters's Armor";
 		class ItemInfo: ItemInfo
 		{
-			uniformclass="armor_16th_fool_base";
+			uniformclass="armor_16th_winters_base";
 		};
 	};
 	class JLTS_CloneArmorMC;
@@ -4432,6 +4566,35 @@ class CfgVehicles
 			"JLTS_CloneNVG"
 		};
 	};
+	class armor_16th_hazmat_base: armor_16th_trp_base
+	{
+		scope=1;
+		displayName="[16th] Hazmat";
+		uniformClass="armor_16th_hazmat";
+		hiddenselectionsTextures[]=
+		{
+			"z\16th\addons\armor\data\custom\hazmat_uniform1_co.paa",
+			"z\16th\addons\armor\data\custom\hazmat_uniform2_co.paa"
+		};
+		linkedItems[]=
+		{
+			"helmet_16th_hamat",
+			"ItemMap",
+			"JLTS_clone_comlink",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_CloneNVG"
+		};
+		respawnLinkedItems[]=
+		{
+			"helmet_16th_hamat",
+			"ItemMap",
+			"JLTS_clone_comlink",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_CloneNVG"
+		};
+	};
 	class armor_16th_hood_base: armor_16th_trp_base
 	{
 		scope=1;
@@ -4697,11 +4860,69 @@ class CfgVehicles
 	{
 		scope=1;
 		displayName="[16th] Fool";
-		uniformClass="armor_16th_nco";
+		uniformClass="armor_16th_fool";
 		hiddenselectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\custom\fool_uniform1_co.paa",
 			"z\16th\addons\armor\data\custom\fool_uniform1_co.paa"
+		};
+		linkedItems[]=
+		{
+			"helmet_16th_nco",
+			"ItemMap",
+			"JLTS_clone_comlink",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_CloneNVG"
+		};
+		respawnLinkedItems[]=
+		{
+			"helmet_16th_nco",
+			"ItemMap",
+			"JLTS_clone_comlink",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_CloneNVG"
+		};
+	};
+	class armor_16th_sunto_base: armor_16th_trp_base
+	{
+		scope=1;
+		displayName="[16th] Sunto";
+		uniformClass="armor_16th_sunto";
+		hiddenselectionsTextures[]=
+		{
+			"z\16th\addons\armor\data\custom\sunto_uniform1_co.paa",
+			"z\16th\addons\armor\data\custom\sunto_uniform1_co.paa"
+		};
+		linkedItems[]=
+		{
+			"helmet_16th_nco",
+			"ItemMap",
+			"JLTS_clone_comlink",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_CloneNVG"
+		};
+		respawnLinkedItems[]=
+		{
+			"helmet_16th_nco",
+			"ItemMap",
+			"JLTS_clone_comlink",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_CloneNVG"
+		};
+	};
+	class armor_16th_noble_base: armor_16th_trp_base
+	{
+		scope=1;
+		displayName="[16th] Noble";
+		uniformClass="armor_16th_noble";
+		hiddenselectionsTextures[]=
+		{
+			"z\16th\addons\armor\data\custom\noble_uniform1_co.paa",
+			"z\16th\addons\armor\data\custom\noble_uniform1_co.paa"
 		};
 		linkedItems[]=
 		{
