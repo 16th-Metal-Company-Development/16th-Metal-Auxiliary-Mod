@@ -167,7 +167,7 @@ class CfgWeapons
 		};
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
-			mass=250;
+			mass=100;
 		};
 	};
 };

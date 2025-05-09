@@ -7,8 +7,8 @@ class XtdGearModels {
             options[] = { "camo" };
             class camo {
                 values[] = {
-                    "Trooper", "Cadet", "Veteran", "Specialist", "NCO", "SNCO",
-                    "Officer", "Medic", "EOD"
+                    "Cadet", "Trooper", "Veteran", "Specialist", "NCO",
+                    "SNCO", "Officer", "Medic", "EOD"
                 };
             };
         };
@@ -20,12 +20,14 @@ class XtdGearModels {
             options[] = { "camo" };
             class camo {
                 values[] = {
-                    "Hazmat", "Chetiah", "Arch",
-                    "Blackrose", "Merlin", "Moldy", "William", "Wolf", "Blatt",
-                    "Butcher", "Winters", "Roz", "Six", "Gambit", "Frost", "Smith",
-                    "Fish", "Mace", "Kick", "Nix", "Maple", "Hood", "Sam", "Ben",
-                    "Creed", "Karma", "Prez", "Cougar", "Blowfish", "Spice", "Talk",
-                    "Avalanche", "Maxson", "Ronin", "Chet", "Vergil", "Sunto"
+                    "Arch", "Avalanche", "Ben", "Blackrose", "Blatt",
+                    "Blowfish", "Butcher", "Chet", "Chetiah", "Cougar",
+                    "Creed", "Fish", "Frost", "Gambit", "Hazmat",
+                    "Hood", "Karma", "Kick", "Maple", "Mace",
+                    "Maxson", "Merlin", "Moldy", "Nix", "Noble",
+                    "Prez", "Ronin", "Roz", "Sam", "Six",
+                    "Smith", "Spice", "Sunto", "Talk", "Vergil",
+                    "William", "Winters", "Wolf"
                 };
             };
         };
@@ -68,7 +70,7 @@ class XtdGearModels {
             author = "16th Mod Team";
             options[] = { "camo" };
             class camo {
-                values[] = { "Kix", "Convor", "Maple", "Blue" };
+                values[] = { "Blue", "Convor", "Kix", "Maple", "Tavion" };
             };
         };
 
@@ -99,9 +101,9 @@ class XtdGearModels {
             options[] = { "camo" };
             class camo {
                 values[] = {
-                    "Trooper", "Cadet", "Dragon", "DragonNCO", "Reaper", "ReaperNCO",
-                    "Veteran", "Specialist", "NCO", "SNCO", "Officer", "Medic",
-                    "EOD"
+                    "Cadet", "Trooper", "Veteran", "Specialist", "NCO",
+                    "SNCO", "Officer", "Medic", "EOD", "Dragon",
+                    "DragonNCO", "Reaper", "ReaperNCO"
                 };
             };
         };
@@ -113,9 +115,10 @@ class XtdGearModels {
             options[] = { "camo" };
             class camo {
                 values[] = {
-                    "Ronin", "MoldyZeus", "Moldy", "Blatt", "Blackrose",
-                    "Prez", "Hood", "Kix", "Winters", "Six", "Cougar", "Maxson",
-                    "Merlin", "Avalanche", "Vergil", "Fool"
+                    "Avalanche", "Ben", "Blackrose", "Blatt", "Cougar",
+                    "Fool", "Hazmat", "Hood", "Kix", "Maxson",
+                    "Merlin", "Moldy", "MoldyZeus", "Noble", "Prez",
+                    "Ronin", "Six", "Sunto", "Vergil", "Winters"
                 };
             };
         };

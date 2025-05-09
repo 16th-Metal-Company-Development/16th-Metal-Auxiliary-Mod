@@ -7,20 +7,20 @@ class CfgPatches
 		units[]={};
 		weapons[]=
 		{
-			"plx_16th",
+			"plx_16th"
 		};
 		magazines[]=
 		{
 			"metal_at_mag",
 			"metal_aa_mag",
-			"metal_ap_mag",
+			"metal_ap_mag"
 		};
 		ammo[]=
 		{
 			"metal_Penetrator",
 			"metal_at_missile",
 			"metal_aa_missile",
-			"metal_ap_missile",
+			"metal_ap_missile"
 		};
 	};
 };
@@ -44,6 +44,7 @@ class CowsSlot;
 class PointerSlot;
 class UnderBarrelSlot;
 class GunParticles;
+class WeaponSlotsInfo;
 class CfgWeapons
 {
 	class launch_B_Titan_Short_F;
@@ -83,12 +84,11 @@ class CfgWeapons
 		{
 			"metal_at_mag",
 			"metal_aa_mag",
-			"metal_ap_mag",
-			"MET_AA_SINGLE"
+			"metal_ap_mag"
 		};
 		ace_overpressure_angle=45;
 		ace_overpressure_damage=0.69999999;
-		ace_overpresssure_priority=1;
+		ace_overpressure_priority=1;
 		ace_overpressure_range=10;
 		ace_reloadlaunchers_enabled=1;
 		ace_javelin_enabled=1;
@@ -126,6 +126,10 @@ class CfgWeapons
 		{
 			libtextdesc="";
 		};
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			mass=200;
+		};
 	};
 	class 3AS_PLX1_F;
 	class MET_PLX1_AA: 3AS_PLX1_F
@@ -133,9 +137,13 @@ class CfgWeapons
 		displayName="[16th] PLX-1 AA Missile Launcher Platform";
 		magazines[]=
 		{
-			"3AS_JLTS_MK39_AA"
+			"metal_aa_alt_mag"
 		};
 		lockAcquire=1;
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			mass=200;
+		};
 	};
 	class MET_RPS6_AA: 3AS_PLX1_F
 	{
@@ -167,6 +175,10 @@ class CfgWeapons
 		{
 			"\MRC\JLTS\weapons\RPS6\data\rps6_co.paa"
 		};
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			mass=150;
+		};
 	};
 };
 class CfgMagazines
@@ -177,6 +189,7 @@ class CfgMagazines
 	{
 		displayName="RPS-6 AA Rocket";
 		picture="\3AS\3AS_Weapons\Data\UI\3as_rocket_aa.paa";
+		ammo = "metal_aa_missile_van";
 		count=1;
 		mass=40;
 		initSpeed=40;
@@ -187,7 +200,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_rocket_he.paa";
 		ammo="metal_ap_missile";
 		count=1;
-		mass=30;
+		mass=40;
 		initSpeed=40;
 	};
 	class MET_AT_SINGLE: 3AS_JLTS_MK39_AA
@@ -196,7 +209,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_rocket_at.paa";
 		ammo="metal_at_wire_missile";
 		count=1;
-		mass=40;
+		mass=50;
 		initSpeed=40;
 	};
 	class metal_at_mag: ls_mag_base
@@ -210,7 +223,7 @@ class CfgMagazines
 		initSpeed=20;
 		maxLeadSpeed=27.7778;
 		type=256;
-		mass=70;
+		mass=100;
 	};
 	class metal_ap_mag: metal_at_mag
 	{
@@ -218,7 +231,7 @@ class CfgMagazines
 		ammo="metal_ap_missile";
 		picture="\3AS\3AS_Weapons\Data\UI\3as_rocket_he.paa";
 		initSpeed=50;		
-		mass=60;
+		mass=80;
 	};
 	class metal_aa_mag: metal_at_mag
 	{
@@ -227,6 +240,16 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_rocket_aa.paa";
 		initSpeed=40;
 		count=4;
+		mass=100;
+	};
+	class metal_aa_alt_mag: 3AS_JLTS_MK39_AA
+	{
+		displayName="PLX AA Rack";
+		ammo="metal_aa_missile_van";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_rocket_aa.paa";
+		initSpeed=40;
+		count=4;
+		mass=100;
 	};
 };
 class CfgAmmo
@@ -236,6 +259,7 @@ class CfgAmmo
 	class ammo_Penetrator_Base;
 	class M_Titan_AT;
 	class M_Titan_AP;
+	class 3AS_M_MK39_AA;
 	class metal_Penetrator: ammo_Penetrator_Base
 	{
 		hit=900;
@@ -416,7 +440,7 @@ class CfgAmmo
 		explosionEffects="ATRocketExplosion";
 		explosionSoundEffect="DefaultExplosion";
 		effectsMissileInit="RocketBackEffectsRPG";
-		effectsMissile="missile2";
+		effectsMissile="MET_ATRocket_Green_fly";
 		muzzleEffect="";
 		whistleDist=4;
 		maxControlRange=10000;
@@ -511,4 +535,31 @@ class CfgAmmo
 			};
 		};
 	};
+	class metal_aa_missile_van: 3AS_M_MK39_AA
+	{
+		hit=550;
+		indirectHit=120;
+		indirectHitRange=12;
+		warheadName="AA";
+		proximityExplosionDistance=10;
+		maneuvrability=22;
+		simulationStep=0.0020000001;
+		trackOversteer=1;
+		trackLead=0.94999999;
+		aiAmmoUsageFlags=256;
+		irLock=1;
+		cost=1000;
+		timeToLive=30;
+		airFriction=0.145;
+		sideAirFriction=0.1;
+		maxSpeed=850;
+		initTime=0.25;
+		thrustTime=10;
+		thrust=380;
+		fuseDistance=50;
+		CraterEffects="AAMissileCrater";
+		explosionEffects="AAMissileExplosion";
+		effectsMissileInit="";
+		effectsMissile="MET_Rocket_effect_Green_fly";
+	}
 };

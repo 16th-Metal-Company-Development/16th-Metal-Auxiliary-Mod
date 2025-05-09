@@ -192,6 +192,28 @@ class CfgAmmo
 			};
 		};
 	};
+	class MET_Weapons_Ammo_Grenades_Base: grenade
+	{
+		ace_frag_enabled = 1;
+		ace_frag_skip = 0;
+		ace_frag_force = 1;
+		ace_frag_classes[] = { "ACE_frag_tiny", "ACE_frag_small", "ACE_frag_medium" };
+		ace_frag_metal = 50;
+		ace_frag_charge = 100;
+		ace_frag_gurney_c = 2843;
+		ace_frag_gurney_k = "3/5";
+		hit = 10;
+		indirectHit = 8;
+		indirectHitRange = 5;
+		typicalspeed = 20;
+		fuseDistance = 0;
+		explosionEffects = "GrenadeExplosion";
+		CraterEffects = "GrenadeCrater";
+		soundFly[] = { "A3\sounds_f\weapons\explosions\explosion_grenade_1", 1, 1, 200 };
+		SoundSetExplosion[] = { "Grenade_Exp_SoundSet", "Grenade_Tail_SoundSet", "Explosion_Debris_SoundSet" };
+		model = "\A3\Weapons_F\ammo\handgrenade.p3d";
+		timeToLive = 10;
+	};
 	class MET_Weapons_Ammo_Grenades_Imploder: grenade
 	{
 		ace_advanced_throwing_torqueDirection[]={1,1,0};
@@ -226,14 +248,14 @@ class CfgAmmo
 	};
 	class MET_Weapons_Ammo_Grenades_Impacter: MET_Weapons_Ammo_Grenades_Detonator
 	{
-		hit=50;
-		indirectHit=45;
-		indirectHitRange=2;
-		fuseDistance=0.5;
-		explosionTime=0;
-		simulation="shotShell";
-		model="\kobra\442_weapons\explosive\impact_grenade.p3d";
-		SoundSetExplosion[]=
+		hit = 200;
+		indirectHit = 45;
+		indirectHitRange = 2;
+		fuseDistance = 0.5;
+		explosionTime = 0;
+		simulation = "shotShell";
+		model = "\kobra\442_weapons\explosive\impact_grenade.p3d";
+		SoundSetExplosion[] =
 		{
 			"GrenadeHe_Exp_SoundSet",
 			"GrenadeHe_Tail_SoundSet",

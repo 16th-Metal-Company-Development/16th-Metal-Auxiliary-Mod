@@ -59,7 +59,7 @@ class CfgWeapons
 		};
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
-			mass=100;
+			mass=50;
 		};
 	};
 	class HDC_NLAW_Loaded: HDC_NLAW_F
@@ -74,7 +74,7 @@ class CfgWeapons
 		};
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
-			mass=280;
+			mass=50;
 		};
 	};
 	class HDC_NLAW_Used: HDC_NLAW_F
@@ -90,7 +90,7 @@ class CfgWeapons
 		};
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
-			mass=100;
+			mass=10;
 		};
 	};
 };
