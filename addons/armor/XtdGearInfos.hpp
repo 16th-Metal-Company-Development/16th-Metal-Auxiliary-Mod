@@ -29,7 +29,6 @@ class XtdGearInfos {
         class helmet_16th_hazmat       { model = "16th_Custom_Helmet"; camo = "Hazmat"; };
         class helmet_16th_hood         { model = "16th_Custom_Helmet"; camo = "Hood"; };
         class helmet_16th_karma        { model = "16th_Custom_Helmet"; camo = "Karma"; };
-        class helmet_16th_kick         { model = "16th_Custom_Helmet"; camo = "Kick"; };
         class helmet_16th_krieg        { model = "16th_Custom_Helmet"; camo = "Krieg"; };
         class helmet_16th_mace         { model = "16th_Custom_Helmet"; camo = "Mace"; };
         class helmet_16th_maple        { model = "16th_Custom_Helmet"; camo = "Maple"; };
@@ -64,7 +63,6 @@ class XtdGearInfos {
 
         // [16th] Custom Airborne Trooper Helmet variants
         class helmet_16th_ab_blackrose { model = "16th_Custom_Airborne_Helmet"; camo = "Blackrose"; };
-        class helmet_16th_ab_kick      { model = "16th_Custom_Airborne_Helmet"; camo = "Kick"; };
         class helmet_16th_ab_vergil    { model = "16th_Custom_Airborne_Helmet"; camo = "Vergil"; };
 
         // [16th] ARF variants
@@ -115,7 +113,12 @@ class XtdGearInfos {
         class armor_16th_kix            { model = "16th_Custom_Armor"; camo = "Kix"; };
         class armor_16th_maxson         { model = "16th_Custom_Armor"; camo = "Maxson"; };
         class armor_16th_merlin         { model = "16th_Custom_Armor"; camo = "Merlin"; };
+        class armor_16th_moldy          { model = "16th_Custom_Armor"; camo = "Moldy"; };
+        class armor_16th_moldy_zeus     { model = "16th_Custom_Armor"; camo = "Moldy Zeus"; };
+        class armor_16th_nix            { model = "16th_Custom_Armor"; camo = "Nix"; };
         class armor_16th_noble          { model = "16th_Custom_Armor"; camo = "Noble"; };
+        class armor_16th_prez           { model = "16th_Custom_Armor"; camo = "Prez"; };
+        class armor_16th_ronin          { model = "16th_Custom_Armor"; camo = "Ronin"; };
         class armor_16th_six            { model = "16th_Custom_Armor"; camo = "Six"; };
         class armor_16th_sunto          { model = "16th_Custom_Armor"; camo = "Sunto"; };
         class armor_16th_vergil         { model = "16th_Custom_Armor"; camo = "Vergil"; };

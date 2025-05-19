@@ -541,7 +541,7 @@ class CfgLights
 	};
 	class MET_BlasterboltLight_Yellow: MET_BlasterboltLight_Blue
 	{
-		diffuse[]={255,255,0,1};
+		diffuse[]={214,191,124,1};
 	};
 	class MET_BlasterboltLight_Stun
 	{

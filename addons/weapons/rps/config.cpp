@@ -318,7 +318,7 @@ class CfgAmmo
 		submunitionInitialOffset[]={0,0,-0.1};
 		triggerOnImpact=1;
 		deleteParentWhenTriggered=0;
-		hit=150;
+		hit=1500;
 		indirectHit=20;
 		indirectHitRange=2.5;
 		explosive=1;
@@ -460,9 +460,9 @@ class CfgAmmo
 		ace_frag_force=1;
 		triggerOnImpact=1;
 		deleteParentWhenTriggered=0;
-		hit=150;
-		indirectHit=60;
-		indirectHitRange=4;
+		hit=650;
+		indirectHit=350;
+		indirectHitRange=8;
 		explosive=1;
 		cost=30;
 		aiAmmoUsageFlags="128 + 512";
@@ -536,8 +536,8 @@ class CfgAmmo
 		ace_frag_skip=0;
 		ace_frag_force=1;
 		hit=50;
-		indirectHit=30;
-		indirectHitRange=5.5;
+		indirectHit=90;
+		indirectHitRange=10;
 		explosive=0.80000001;
 		cost=30;
 		aiAmmoUsageFlags="128 + 512";
