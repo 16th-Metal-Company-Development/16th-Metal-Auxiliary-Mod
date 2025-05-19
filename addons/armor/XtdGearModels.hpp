@@ -117,8 +117,9 @@ class XtdGearModels {
                 values[] = {
                     "Avalanche", "Ben", "Blackrose", "Blatt", "Cougar",
                     "Fool", "Hazmat", "Hood", "Kix", "Maxson",
-                    "Merlin", "Moldy", "MoldyZeus", "Noble", "Prez",
-                    "Ronin", "Six", "Sunto", "Vergil", "Winters"
+                    "Merlin", "Moldy", "MoldyZeus", "Nix", "Noble",
+                    "Prez", "Ronin", "Six", "Sunto", "Vergil",
+                    "Winters"
                 };
             };
         };
