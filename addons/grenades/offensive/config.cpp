@@ -50,7 +50,7 @@ class CfgMagazines
 		maxLeadSpeed=7;
 		ammo="MET_Weapons_Ammo_Grenades_Detonator";
 		model="\kobra\442_weapons\explosive\thermal_det.p3d";
-		picture="z\16th\addons\grenades\data\UI\MET_icon_mag_rep_nade_thermal_det_ui_ca.paa";
+		picture="z\16th\addons\grenades\data\UI\met_icon_mag_rep_nade_thermal_det_ui_ca.paa";
 	};
 	class MET_Weapons_Mags_Thermal_Imploder: MET_Weapons_Mags_Thermal_Detonator
 	{

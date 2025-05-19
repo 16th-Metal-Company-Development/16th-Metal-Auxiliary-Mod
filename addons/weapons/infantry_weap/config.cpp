@@ -7414,7 +7414,7 @@ class CfgWeapons
 		class Single: Mode_SemiAuto
 		{
 			reloadTime=0.1;
-			dispersion=0.0000000025000001;
+			dispersion=0.0000000000000001;
 			minRange=2;
 			minRangeProbab=0.30000001;
 			midRange=150;
@@ -8843,6 +8843,7 @@ class CfgMagazines
 		displayNameShort="[16th] Rocket Grenades";
 		descriptionShort="Impact grenade";
 		ammo="MET_RocketGrenade_HE";
+		initSpeed=300;
 		mass=16;
 	};
 	class MET_6Rnd_AT_Grenade_shell: 3AS_6Rnd_HE_Grenade_shell
@@ -8956,7 +8957,7 @@ class MET_Rocket_effect_Green_fly
 	class Light
 	{
 		simulation="light";
-		type="3AS_ATRocket_Green";
+		type="MET_ATRocket_Green";
 		position[]={0,0,0};
 	};
 	class Smoke
@@ -10467,7 +10468,7 @@ class CfgAmmo
 	{
 		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Yellow.p3d";
 		effectfly="MET_BlasterBoltGlow_Yellow_Fly";
-		lightcolor[]={1,1,0};
+		lightcolor[]={.839,0.749,0.486};
 	};
 	class MET_blasterbolt_Stealth: MET_blasterbolt
 	{
@@ -11973,7 +11974,7 @@ class CfgAmmo
 	{
 		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Yellow.p3d";
 		effectfly="MET_BlasterBoltGlow_Yellow_Fly";
-		lightcolor[]={1,1,0};
+		lightcolor[]={.839,0.749,0.486};
 	};
 	class MET_blasterbolt_br_Stealth: MET_blasterbolt_br
 	{
@@ -13479,7 +13480,7 @@ class CfgAmmo
 	{
 		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Yellow.p3d";
 		effectfly="MET_BlasterBoltGlow_Yellow_Fly";
-		lightcolor[]={1,1,0};
+		lightcolor[]={.839,0.749,0.486};
 	};
 	class B_408_Ball;
 	class MET_blasterbolt_dmr: B_408_Ball
@@ -14980,7 +14981,7 @@ class CfgAmmo
 	{
 		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Yellow.p3d";
 		effectfly="MET_BlasterBoltGlow_Yellow_Fly";
-		lightcolor[]={1,1,0};
+		lightcolor[]={.839,0.749,0.486};
 	};
 	class MET_blasterbolt_snp: B_408_Ball
 	{
@@ -16480,7 +16481,7 @@ class CfgAmmo
 	{
 		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Yellow.p3d";
 		effectfly="MET_BlasterBoltGlow_Yellow_Fly";
-		lightcolor[]={1,1,0};
+		lightcolor[]={.839,0.749,0.486};
 	};
 	class MET_blasterbolt_snp_STLTH: MET_blasterbolt_snp
 	{
@@ -17986,7 +17987,7 @@ class CfgAmmo
 	{
 		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Yellow.p3d";
 		effectfly="MET_BlasterBoltGlow_Medium_Yellow_Fly";
-		lightcolor[]={1,1,0};
+		lightcolor[]={.839,0.749,0.486};
 	};
 	class 3AS_PlasmaBase;
 	class MET_slug_blue: 3AS_PlasmaBase
@@ -19565,10 +19566,10 @@ class CfgAmmo
 		model="Indecisive_Armoury_Ammos\Data\40mm_Grenade\IDA_40mm_Grenade.p3d";
 		effectflare="FlareShell";
 		effectfly="MET_BlasterBoltGlow_Yellow_Fly";
-		lightcolor[]={1,1,0};
-		hit=150;
+		lightcolor[]={.839,0.749,0.486};
+		hit=650;
 		indirectHit=9;
-		indirectHitRange=2;
+		indirectHitRange=1;
 		warheadName="HEAT";
 		visibleFire=1;
 		audibleFire=30;
@@ -19660,7 +19661,7 @@ class CfgAmmo
 		effectflare="FlareShell";
 		effectfly="MET_BlasterBoltGlow_Green_Fly";
 		lightcolor[]={0,1,0};
-		//coefGravity=1;
+		coefGravity=0.1;
 		hit=80;
 		indirectHit=20;
 		indirectHitRange=6;
@@ -20140,7 +20141,7 @@ class CfgAmmo
 	class MET_AT_Chaingun_Ammo: M_NLAW_AT_F
 	{
 		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Yellow.p3d";
-		lightcolor[]={1,1,0};
+		lightcolor[]={.839,0.749,0.486};
 		tracerstarttime=0.050000001;
 		tracerendtime=10;
 		nvgonly=0;
