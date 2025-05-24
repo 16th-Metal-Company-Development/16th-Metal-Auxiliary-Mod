@@ -17,6 +17,7 @@ class cfgPatches
 			"MET_Weapons_Mags_Thermal_Detonator",
 			"MET_Weapons_Mags_Thermal_Imploder",
 			"MET_Weapons_Mags_Thermal_Impacter"
+			
 		};
 		ammo[]=
 		{
@@ -50,7 +51,8 @@ class CfgMagazines
 		maxLeadSpeed=7;
 		ammo="MET_Weapons_Ammo_Grenades_Detonator";
 		model="\kobra\442_weapons\explosive\thermal_det.p3d";
-		picture="z\16th\addons\grenades\data\UI\met_icon_mag_rep_nade_thermal_det_ui_ca.paa";
+		picture="z\16th\addons\grenades\data\ui\met_thermal_det_ui_ca";
+		uipicture="z\16th\addons\grenades\data\ui\met_thermal_det_ui_ca";
 	};
 	class MET_Weapons_Mags_Thermal_Imploder: MET_Weapons_Mags_Thermal_Detonator
 	{
@@ -58,7 +60,8 @@ class CfgMagazines
 		displayNameShort="Thermal Imploder";
 		descriptionShort="Defense Grenade";
 		picture="\3AS\3AS_Equipment\UI\Baradium_Core_UI_ca.paa";
-		model="\3AS\3AS_Equipment\model\3AS_coredetonator.p3d";
+		uiPicture="\3AS\3AS_Equipment\UI\Baradium_Core_UI_ca.paa";
+    	model="\3AS\3AS_Equipment\model\3AS_coredetonator.p3d";
 		ammo="MET_Weapons_Ammo_Grenades_Imploder";
 		initSpeed=16;
 		mass=10;
@@ -70,7 +73,8 @@ class CfgMagazines
 		descriptionShort="Clone Impact Grenade";
 		ammo="MET_Weapons_Ammo_Grenades_Impacter";
 		model="\kobra\442_weapons\explosive\impact_grenade.p3d";
-		picture="z\16th\addons\grenades\data\UI\MET_icon_mag_rep_nade_thermal_impacter_ui_ca.paa";
+		picture="z\16th\addons\grenades\data\ui\MET_icon_mag_rep_nade_thermal_impacter_ui_ca.paa";
+		UiPicture="\3AS\3AS_Equipment\UI\Baradium_Core_UI_ca.paa";
 		initSpeed=25;
 	};
 	class MET_Weapons_Mags_Ctype: MET_Weapons_Mags_Thermal_Detonator
@@ -92,8 +96,8 @@ class CfgMagazines
 			10
 		};
 		ammo="MET_Weapons_Ammo_Grenades_Ctype";
-		picture="z\16th\addons\grenades\data\UI\MET_icon_mag_rep_nade_dtype_ui_ca.paa";
-		uiPicture="z\16th\addons\grenades\data\UI\MET_icon_mag_rep_nade_dtype_ui_ca.paa";
+		picture="z\16th\addons\grenades\data\ui\met_icon_mag_rep_nade_dtype_ui_ca.paa";
+		uiPicture="z\16th\addons\grenades\data\ui\met_icon_mag_rep_nade_dtype_ui_ca.paa";
 		model="ls_weapons\explosives\detPack\ls_explosives_detpack";
 	};
 	/*class MET_Weapons_Mags_CISDetonator: MET_Weapons_Mags_Thermal_Detonator

@@ -16,7 +16,7 @@ class XtdGearInfos {
         class helmet_16th_avalanche    { model = "16th_Custom_Helmet"; camo = "Avalanche"; };
         class helmet_16th_ben          { model = "16th_Custom_Helmet"; camo = "Ben"; };
         class helmet_16th_blackrose    { model = "16th_Custom_Helmet"; camo = "Blackrose"; };
-        class helmet_16th_blatt        { model = "16th_Custom_Helmet"; camo = "Blatt"; };
+        class helmet_16th_blat         { model = "16th_Custom_Helmet"; camo = "Blatt"; };
         class helmet_16th_blowfish     { model = "16th_Custom_Helmet"; camo = "Blowfish"; };
         class helmet_16th_butcher      { model = "16th_Custom_Helmet"; camo = "Butcher"; };
         class helmet_16th_chet         { model = "16th_Custom_Helmet"; camo = "Chet"; };
