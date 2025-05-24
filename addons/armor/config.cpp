@@ -616,6 +616,9 @@ class CfgWeapons
 			"z\16th\addons\armor\data\infantry\specialists\eod_helmet_co.paa"
 		};
 	};
+	/*==================================================================================================================================================
+	==Custom Helmets Start
+	==================================================================================================================================================*/
 	class helmet_16th_ab_blackrose: helmet_16th_ab_trp
 	{
 		scope=2;
@@ -806,6 +809,15 @@ class CfgWeapons
 			"z\16th\addons\armor\data\custom\hazmat_helmet_co.paa"
 		};
 	};
+	class helmet_16th_hellwolf: helmet_16th_trp
+	{
+		scope=2;
+		displayName="[16th] Hellwolf's Helmet";
+		hiddenSelectionsTextures[]=
+		{
+			"z\16th\addons\armor\data\custom\hellwolf_helmet_co.paa"
+		};
+	};
 	class helmet_16th_hood: helmet_16th_trp
 	{
 		scope=2;
@@ -849,6 +861,15 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\custom\krieg_helmet_co.paa"
+		};
+	};
+	class helmet_16th_maia: helmet_16th_trp
+	{
+		scope=2;
+		displayName="[16th] Maia's Helmet";
+		hiddenSelectionsTextures[]=
+		{
+			"z\16th\addons\armor\data\custom\maia_helmet_co.paa"
 		};
 	};
 	class helmet_16th_mace: helmet_16th_trp
@@ -1049,6 +1070,9 @@ class CfgWeapons
 			"z\16th\addons\armor\data\custom\wolf_helmet_co.paa"
 		};
 	};
+	/*==================================================================================================================================================
+	==Custom Helmets End
+	==================================================================================================================================================*/
 	class SEA_HELMET_GM_Base;
 	class SEA_HELMET_GM_IllumBase;
 	class helmet_16th_sm_trp: SEA_HELMET_GM_IllumBase
@@ -2655,6 +2679,15 @@ class CfgWeapons
 		class ItemInfo: ItemInfo
 		{
 			uniformclass="armor_16th_ab_medic_base";
+		};
+	};
+	class armor_16th_ben: armor_16th_trp
+	{
+		scope=2;
+		displayName="[16th] Ben's Armor";
+		class ItemInfo: ItemInfo
+		{
+			uniformclass="armor_16th_ben_base";
 		};
 	};
 	class armor_16th_blackrose: armor_16th_trp
@@ -4561,6 +4594,35 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"helmet_16th_blatt",
+			"ItemMap",
+			"JLTS_clone_comlink",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_CloneNVG"
+		};
+	};
+	class armor_16th_ben_base: armor_16th_trp_base
+	{
+		scope=1;
+		displayName="[16th] Ben";
+		uniformClass="armor_16th_ben";
+		hiddenselectionsTextures[]=
+		{
+			"z\16th\addons\armor\data\custom\ben_uniform1_co.paa",
+			"z\16th\addons\armor\data\custom\ben_uniform2_co.paa"
+		};
+		linkedItems[]=
+		{
+			"helmet_16th_ben",
+			"ItemMap",
+			"JLTS_clone_comlink",
+			"ItemCompass",
+			"ItemWatch",
+			"JLTS_CloneNVG"
+		};
+		respawnLinkedItems[]=
+		{
+			"helmet_16th_ben",
 			"ItemMap",
 			"JLTS_clone_comlink",
 			"ItemCompass",

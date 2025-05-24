@@ -27,10 +27,12 @@ class XtdGearInfos {
         class helmet_16th_frost        { model = "16th_Custom_Helmet"; camo = "Frost"; };
         class helmet_16th_gambit       { model = "16th_Custom_Helmet"; camo = "Gambit"; };
         class helmet_16th_hazmat       { model = "16th_Custom_Helmet"; camo = "Hazmat"; };
+        class helmet_16th_hellwolf     { model = "16th_Custom_Helmet"; camo = "Hellwolf"; };
         class helmet_16th_hood         { model = "16th_Custom_Helmet"; camo = "Hood"; };
         class helmet_16th_karma        { model = "16th_Custom_Helmet"; camo = "Karma"; };
         class helmet_16th_krieg        { model = "16th_Custom_Helmet"; camo = "Krieg"; };
         class helmet_16th_mace         { model = "16th_Custom_Helmet"; camo = "Mace"; };
+        class helmet_16th_maia         { model = "16th_Custom_Helmet"; camo = "Maia"; };
         class helmet_16th_maple        { model = "16th_Custom_Helmet"; camo = "Maple"; };
         class helmet_16th_maxson       { model = "16th_Custom_Helmet"; camo = "Maxson"; };
         class helmet_16th_merlin       { model = "16th_Custom_Helmet"; camo = "Merlin"; };
@@ -104,6 +106,7 @@ class XtdGearInfos {
 
         // [16th] Custom Armor variants (Phase 2)
         class armor_16th_avalanche      { model = "16th_Custom_Armor"; camo = "Avalanche"; };
+        class armor_16th_ben            { model = "16th_Custom_Armor"; camo = "Ben"; };
         class armor_16th_blackrose      { model = "16th_Custom_Armor"; camo = "Blackrose"; };
         class armor_16th_blatt          { model = "16th_Custom_Armor"; camo = "Blatt"; };
         class armor_16th_cooger         { model = "16th_Custom_Armor"; camo = "Cougar"; };

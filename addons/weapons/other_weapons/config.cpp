@@ -64,7 +64,7 @@ class CfgWeapons
 	class MET_D200: hgun_Pistol_heavy_02_F
 	{
 		scope=2;
-		scopeArsenal=0;
+		scopeArsenal=2;
 		baseWeapon="MET_D200";
 		model="\SFA_Main\SFA_Weapons_S\D200\D200.p3d";
 		reloadAction="ReloadMagazine";
@@ -235,7 +235,7 @@ class CfgWeapons
 		author="16th Aux Team";
 		model="SFA_Main\SFA_Weapons_S\DLA13\DLA13_scope.p3d";
 		scope=2;
-		scopeArsenal=0;
+		scopeArsenal=2;
 		descriptionShort="";
 		weaponInfoType="RscWeaponZeroing";
 		class ItemInfo: InventoryOpticsItem_Base_F
@@ -281,7 +281,7 @@ class CfgWeapons
 	class MET_DLA13: SFA_rifle_base
 	{
 		scope=2;
-		scopeArsenal=0;
+		scopeArsenal=2;
 		author="16th Aux Team";
 		canShootInWater=1;
 		picture="\SFA_Main\SFA_Weapons_S\DLA13\data\ui\DLA13_ui.paa";
@@ -509,7 +509,7 @@ class CfgWeapons
 	class MET_DLA13_C: SFA_rifle_base
 	{
 		scope=2;
-		scopeArsenal=0;
+		scopeArsenal=2;
 		author="16th Aux Team";
 		canShootInWater=1;
 		model="\SFA_Main\SFA_Weapons_S\DLA13\DLA13_c.p3d";
@@ -732,7 +732,7 @@ class CfgWeapons
 	class MET_DLA13_C2: SFA_rifle_base
 	{
 		scope=2;
-		scopeArsenal=0;
+		scopeArsenal=2;
 		author="16th Aux Team";
 		canShootInWater=1;
 		model="\SFA_Main\SFA_Weapons_S\DLA13\DLA13_c2.p3d";
@@ -954,7 +954,7 @@ class CfgWeapons
 	};
 	class MET_DLA13_ugl: MET_DLA13
 	{
-		scopeArsenal=0;
+		scopeArsenal=2;
 		muzzles[]=
 		{
 			"this",
@@ -1005,7 +1005,7 @@ class CfgWeapons
 	class MET_T20_rifle: SFA_rifle_base
 	{
 		scope=2;
-		scopeArsenal=0;
+		scopeArsenal=2;
 		author="16th Aux Team";
 		canShootInWater=1;
 		model="SFA_Main\SFA_Weapons_N\T20\T20_Rifle.p3d";
@@ -1238,7 +1238,7 @@ class CfgWeapons
 	{
 		author="16th Aux Team";
 		scope=2;
-		scopeArsenal=0;
+		scopeArsenal=2;
 		baseWeapon="MET_T20_AC";
 		displayName="[BHA] T-20 Assault cannon";
 		descriptionShort="assault cannon";
@@ -1425,7 +1425,7 @@ class CfgWeapons
 	{
 		author="16th Aux Team";
 		scope=2;
-		scopeArsenal=0;
+		scopeArsenal=2;
 		baseWeapon="MET_E403";
 		displayName="[BHA] E-403 Assault cannon";
 		picture="\SFA_Main\SFA_Weapons_R\E403\data\ui\E403_ui.paa";
@@ -1738,7 +1738,7 @@ class CfgWeapons
 	{
 		author="16th Aux Team";
 		scope=2;
-		scopeArsenal=0;
+		scopeArsenal=2;
 		baseWeapon="MET_EL34";
 		displayName="[BHA] EL-34 Assault cannon";
 		picture="\SFA_Main\SFA_Weapons_S\EL34\data\ui\EL34_ui.paa";
@@ -1923,7 +1923,7 @@ class CfgWeapons
 	{
 		author="16th AUX Team";
 		scope=2;
-		scopeArsenal=0;
+		scopeArsenal=2;
 		displayName="[BHA] X-300";
 		descriptionShort="";
 		picture="";
@@ -2252,7 +2252,7 @@ class CfgWeapons
 	{
 		author="16th AUX Team";
 		scope=2;
-		scopeArsenal=0;
+		scopeArsenal=2;
 		displayName="[BHA] HH-12 Smart Launcher";
 		_generalMacro="launch_Titan_short_base";
 		class Library
