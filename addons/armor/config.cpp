@@ -2341,7 +2341,7 @@ class CfgWeapons
 			{
 				"camo1"
 			};
-			mass=80;
+			mass=10;
 			class HitpointsProtectionInfo
 			{
 				class Neck
@@ -3547,7 +3547,8 @@ class CfgWeapons
 	};
 	class nvg_16_haz_range_1: JLTS_CloneNVGRange
 	{
-		scope=1;
+		scope=2;
+		scopeArsenal=1;
 		displayName="[16th] Hazmat's Rangefinder (W)";
 		visionMode[]=
 		{
@@ -3564,7 +3565,8 @@ class CfgWeapons
 	};
 	class nvg_16_haz_range_2: JLTS_CloneNVGRange
 	{
-		scope=1;
+		scope=2;
+		scopeArsenal=1;
 		displayName="[16th] Hazmat's Rangefinder (G)";
 		visionMode[]=
 		{
@@ -3581,7 +3583,8 @@ class CfgWeapons
 	};
 	class nvg_16_haz_range_3: JLTS_CloneNVGRange
 	{
-		scope=1;
+		scope=2;
+		scopeArsenal=1;
 		displayName="[16th] Hazmat's Rangefinder (O)";
 		visionMode[]=
 		{
@@ -3598,7 +3601,8 @@ class CfgWeapons
 	};
 	class nvg_16_haz_range_4: JLTS_CloneNVGRange
 	{
-		scope=1;
+		scope=2;
+		scopeArsenal=1;
 		displayName="[16th] Hazmat's Rangefinder (M)";
 		visionMode[]=
 		{
@@ -6881,6 +6885,14 @@ class CfgVehicles
 			"\JLTS_AE_GM\data\BaseTextures\Backpack\RTO\Backpack_RTO_ca.paa"
 		};
 		maximumLoad=300;
+	};
+	class Aux212_ARC_Backpack;
+	class MET_ARC_Backpack: Aux212_ARC_Backpack
+	{
+		author="Hazmat";
+		displayName="[16th] ARC Backpack";
+		scope=2;
+		maximumLoad=800;
 	};
 	class JLTS_Clone_jumppack_JT12;
 	class jetpack_16th: JLTS_Clone_jumppack_JT12

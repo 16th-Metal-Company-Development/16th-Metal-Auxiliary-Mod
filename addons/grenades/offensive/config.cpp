@@ -51,8 +51,8 @@ class CfgMagazines
 		maxLeadSpeed=7;
 		ammo="MET_Weapons_Ammo_Grenades_Detonator";
 		model="\kobra\442_weapons\explosive\thermal_det.p3d";
-		picture="z\16th\addons\grenades\data\ui\met_thermal_det_ui_ca";
-		uipicture="z\16th\addons\grenades\data\ui\met_thermal_det_ui_ca";
+		picture="z\16th\addons\grenades\data\ui\met_thermal_det_ui_ca.paa";
+		uipicture="z\16th\addons\grenades\data\ui\met_thermal_det_ui_ca.paa";
 	};
 	class MET_Weapons_Mags_Thermal_Imploder: MET_Weapons_Mags_Thermal_Detonator
 	{
@@ -74,7 +74,7 @@ class CfgMagazines
 		ammo="MET_Weapons_Ammo_Grenades_Impacter";
 		model="\kobra\442_weapons\explosive\impact_grenade.p3d";
 		picture="z\16th\addons\grenades\data\ui\MET_icon_mag_rep_nade_thermal_impacter_ui_ca.paa";
-		UiPicture="\3AS\3AS_Equipment\UI\Baradium_Core_UI_ca.paa";
+		UiPicture="z\16th\addons\grenades\data\ui\MET_icon_mag_rep_nade_thermal_impacter_ui_ca.paa";
 		initSpeed=25;
 	};
 	class MET_Weapons_Mags_Ctype: MET_Weapons_Mags_Thermal_Detonator
