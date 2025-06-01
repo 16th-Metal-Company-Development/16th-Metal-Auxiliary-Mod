@@ -64,7 +64,7 @@ class CfgWeapons
 	class MET_D200: hgun_Pistol_heavy_02_F
 	{
 		scope=2;
-		scopeArsenal=2;
+		scopeArsenal=0;
 		baseWeapon="MET_D200";
 		model="\SFA_Main\SFA_Weapons_S\D200\D200.p3d";
 		reloadAction="ReloadMagazine";
@@ -235,7 +235,7 @@ class CfgWeapons
 		author="16th Aux Team";
 		model="SFA_Main\SFA_Weapons_S\DLA13\DLA13_scope.p3d";
 		scope=2;
-		scopeArsenal=2;
+		scopeArsenal=0;
 		descriptionShort="";
 		weaponInfoType="RscWeaponZeroing";
 		class ItemInfo: InventoryOpticsItem_Base_F
@@ -281,7 +281,7 @@ class CfgWeapons
 	class MET_DLA13: SFA_rifle_base
 	{
 		scope=2;
-		scopeArsenal=2;
+		scopeArsenal=0;
 		author="16th Aux Team";
 		canShootInWater=1;
 		picture="\SFA_Main\SFA_Weapons_S\DLA13\data\ui\DLA13_ui.paa";
@@ -479,6 +479,14 @@ class CfgWeapons
 				};
 			};
 		};
+		class LinkedItems
+		{
+			class LinkedItemsOptic
+			{
+				slot="CowsSlot";
+				item="MET_DLA13_scope";
+			};
+		};
 		class FlashLight
 		{
 			color[]={180,160,130};
@@ -509,7 +517,7 @@ class CfgWeapons
 	class MET_DLA13_C: SFA_rifle_base
 	{
 		scope=2;
-		scopeArsenal=2;
+		scopeArsenal=0;
 		author="16th Aux Team";
 		canShootInWater=1;
 		model="\SFA_Main\SFA_Weapons_S\DLA13\DLA13_c.p3d";
@@ -732,7 +740,7 @@ class CfgWeapons
 	class MET_DLA13_C2: SFA_rifle_base
 	{
 		scope=2;
-		scopeArsenal=2;
+		scopeArsenal=0;
 		author="16th Aux Team";
 		canShootInWater=1;
 		model="\SFA_Main\SFA_Weapons_S\DLA13\DLA13_c2.p3d";
@@ -954,7 +962,7 @@ class CfgWeapons
 	};
 	class MET_DLA13_ugl: MET_DLA13
 	{
-		scopeArsenal=2;
+		scopeArsenal=0;
 		muzzles[]=
 		{
 			"this",
@@ -1005,7 +1013,7 @@ class CfgWeapons
 	class MET_T20_rifle: SFA_rifle_base
 	{
 		scope=2;
-		scopeArsenal=2;
+		scopeArsenal=0;
 		author="16th Aux Team";
 		canShootInWater=1;
 		model="SFA_Main\SFA_Weapons_N\T20\T20_Rifle.p3d";
@@ -1238,7 +1246,7 @@ class CfgWeapons
 	{
 		author="16th Aux Team";
 		scope=2;
-		scopeArsenal=2;
+		scopeArsenal=0;
 		baseWeapon="MET_T20_AC";
 		displayName="[BHA] T-20 Assault cannon";
 		descriptionShort="assault cannon";
@@ -1425,7 +1433,7 @@ class CfgWeapons
 	{
 		author="16th Aux Team";
 		scope=2;
-		scopeArsenal=2;
+		scopeArsenal=0;
 		baseWeapon="MET_E403";
 		displayName="[BHA] E-403 Assault cannon";
 		picture="\SFA_Main\SFA_Weapons_R\E403\data\ui\E403_ui.paa";
@@ -1465,6 +1473,7 @@ class CfgWeapons
 		{
 			"Single",
 			"FullAuto",
+			"fullerAuto",
 			"close",
 			"short",
 			"medium"
@@ -1598,6 +1607,15 @@ class CfgWeapons
 			maxRangeProbab=0.1;
 			aiRateOfFire=2;
 			aiRateOfFireDistance=25;
+		};
+		class fullerAuto: FullAuto
+		{
+			reloadTime=0.1;
+			dispersion=0.006;
+			textureType="fastAuto";
+			minRangeProbab=0;
+			midRangeProbab=0;
+			maxRangeProbab=0;
 		};
 		class close: Single
 		{
@@ -1738,7 +1756,7 @@ class CfgWeapons
 	{
 		author="16th Aux Team";
 		scope=2;
-		scopeArsenal=2;
+		scopeArsenal=0;
 		baseWeapon="MET_EL34";
 		displayName="[BHA] EL-34 Assault cannon";
 		picture="\SFA_Main\SFA_Weapons_S\EL34\data\ui\EL34_ui.paa";
@@ -1923,7 +1941,7 @@ class CfgWeapons
 	{
 		author="16th AUX Team";
 		scope=2;
-		scopeArsenal=2;
+		scopeArsenal=0;
 		displayName="[BHA] X-300";
 		descriptionShort="";
 		picture="";
@@ -2252,7 +2270,7 @@ class CfgWeapons
 	{
 		author="16th AUX Team";
 		scope=2;
-		scopeArsenal=2;
+		scopeArsenal=0;
 		displayName="[BHA] HH-12 Smart Launcher";
 		_generalMacro="launch_Titan_short_base";
 		class Library
@@ -2354,6 +2372,8 @@ class CfgMagazines
 	};*/
 	class MET_D200_Pistol_mag: MET_blaster_pistol_battery
 	{
+		scope=2;
+		scopeArsenal=0;
 		author="16th Aux Team";
 		picture="\3AS\3AS_Weapons\Data\UI\3as_pistol_o.paa";
 		modelSpecialIsProxy=0;
@@ -2367,6 +2387,8 @@ class CfgMagazines
 	};
 	class MET_DLA13_mag: MET_DC15A_mag
 	{
+		scope=2;
+		scopeArsenal=0;
 		author="16th Aux Team";
 		picture="\3AS\3AS_Weapons\Data\UI\3as_ammo_o.paa";
 		modelSpecialIsProxy=0;
@@ -2378,6 +2400,8 @@ class CfgMagazines
 	};
 	class MET_T20_mag: MET_DC15A_mag
 	{
+		scope=2;
+		scopeArsenal=0;
 		author="16th Aux Team";
 		picture="\3AS\3AS_Weapons\Data\UI\3as_ammo_o.paa";
 		modelSpecialIsProxy=0;
@@ -2389,6 +2413,8 @@ class CfgMagazines
 	};
 	class MET_T20AC_mag: MET_DC15A_mag
 	{
+		scope=2;
+		scopeArsenal=0;
 		author="16th Aux Team";
 		picture="\3AS\3AS_Weapons\Data\UI\3as_box_o.paa";
 		modelSpecialIsProxy=0;
@@ -2400,6 +2426,8 @@ class CfgMagazines
 	};
 	class MET_Test_proton_mag: SFA_Base_mag
 	{
+		scope=2;
+		scopeArsenal=0;
 		author="Starforge Armory";
 		picture="\SFA_Main\SFA_Weapons_R\ammo\icon\SFA_icon_mag.paa";
 		modelSpecialIsProxy=0;
@@ -2414,6 +2442,8 @@ class CfgMagazines
 	};
 	class MET_light_proton_mag: SFA_Base_mag
 	{
+		scope=2;
+		scopeArsenal=0;
 		author="16th Aux Team";
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_he.paa";
 		modelSpecialIsProxy=0;
@@ -2428,6 +2458,8 @@ class CfgMagazines
 	};
 	class MET_medium_proton_mag: SFA_Base_mag
 	{
+		scope=2;
+		scopeArsenal=0;
 		author="16th Aux Team";
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_he.paa";
 		modelSpecialIsProxy=0;
@@ -2442,6 +2474,8 @@ class CfgMagazines
 	};
 	class MET_heavy_proton_mag: SFA_Base_mag
 	{
+		scope=2;
+		scopeArsenal=0;
 		author="16th Aux Team";
 		picture="\3AS\3AS_Weapons\Data\UI\3as_box_o.paa";
 		modelSpecialIsProxy=0;
@@ -2456,6 +2490,8 @@ class CfgMagazines
 	};
 	class MET_EL34_mag: MET_DC15L_mag
 	{
+		scope=2;
+		scopeArsenal=0;
 		author="16th Aux Team";
 		picture="\3AS\3AS_Weapons\Data\UI\3as_box_o.paa";
 		modelSpecialIsProxy=0;
@@ -2470,6 +2506,8 @@ class CfgMagazines
 	};
 	class MET_X300_Sniper_mag: MET_DC15x_mag
 	{
+		scope=2;
+		scopeArsenal=0;
 		author="16th AUX Team";
 		picture="\3AS\3AS_Weapons\Data\UI\3as_sniper_o.paa";
 		modelSpecialIsProxy=0;
@@ -2481,6 +2519,8 @@ class CfgMagazines
 	};
 	class BHA_AA_SINGLE: 3AS_JLTS_MK39_AA
 	{
+		scope=2;
+		scopeArsenal=0;
 		displayName="HH-12 AA Rocket";
 		picture="\3AS\3AS_Weapons\Data\UI\3as_rocket_aa.paa";
 		ammo = "bha_aa_missile_van";
@@ -2491,6 +2531,8 @@ class CfgMagazines
 	};
 	class BHA_AP_SINGLE: 3AS_JLTS_MK39_AA
 	{
+		scope=2;
+		scopeArsenal=0;
 		displayName="HH-12 AP Rocket";
 		picture="\3AS\3AS_Weapons\Data\UI\3as_rocket_he.paa";
 		ammo="bha_ap_missile";
@@ -2501,6 +2543,8 @@ class CfgMagazines
 	};
 	class BHA_AT_SINGLE: 3AS_JLTS_MK39_AA
 	{
+		scope=2;
+		scopeArsenal=0;
 		displayName="HH-12 AT Rocket";
 		picture="\3AS\3AS_Weapons\Data\UI\3as_rocket_at.paa";
 		ammo="bha_at_wire_missile";
