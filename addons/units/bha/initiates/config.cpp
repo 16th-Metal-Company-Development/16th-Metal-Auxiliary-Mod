@@ -644,7 +644,7 @@ class CfgGroups
 		};
 	};
 };
-class Extended_PreInit_EventHandlers
+/*class Extended_PreInit_EventHandlers
 {
 	class IMS_PreInit
 	{
@@ -657,10 +657,10 @@ class Extended_PostInit_EventHandlers
 	{
 		init="call compile preprocessFileLineNumbers '\WebKnight_StarWars_Mechanic\bootstrap\XEH_postInit.sqf'";
 	};
-};
+};*/
 class Extended_InitPost_EventHandlers
 {
-	class CAManBase
+	/*class CAManBase
 	{
 		class SW_Soldier_initMelee_eh
 		{
@@ -673,7 +673,7 @@ class Extended_InitPost_EventHandlers
 		{
 			init="[_this select 0] spawn varsToUnitLoad; _unit = _this select 0; _unit setVariable [""actualSwordBlock"",0, true]; _unit setVariable [""canMakeAttack"",0, true]; _unit setVariable [""canDeflectBullets"",0, true]; _unit setVariable [""concentrationParam"",0.5, true];";
 		};
-	};
+	};*/
 	class BHA_Initiates_Melee
 	{
 		class AI_Melee_O_Default_init
