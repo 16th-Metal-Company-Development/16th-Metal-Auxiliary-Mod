@@ -442,7 +442,7 @@ class CfgWeapons
     class MET_Warbot_Uniform: Uniform_Base
 	{
 		scope=2;
-		scopeArsenal=2;
+		scopeArsenal=1;
 		scopeCurator=2;
 		author="Moose (Scion Conflict Mod Team)";
 		picture="sc_newequipment2\icon_sc_ca.paa";
@@ -565,7 +565,7 @@ class CfgWeapons
 	{
 		_generalMacro="MEt_EliminatorUpArmorVest";
 		scope=2;
-		scopeArsenal=2;
+		scopeArsenal=1;
 		scopeCurator=2;
 		weaponPoolAvailable=1;
 		author="Moose (Scion Conflict Mod Team)";
@@ -950,7 +950,7 @@ class CfgVehicles
     class MET_Backpack_Warbot: Bag_Base
 	{
 		scope=1;
-		scopeArsenal=2;
+		scopeArsenal=1;
 		scopeCurator=2;
 		author="Scion Conflict Mod Team";
 		displayName="Warbot Backpack Extension";
