@@ -78,6 +78,7 @@ class CfgPatches
 			"helmet_16th_william",
 			"helmet_16th_winters",
 			"helmet_16th_wolf",
+			"OPTRE_Metal_CH252D_Helmet",
 			"vest_16_backpack_rack_ammo_bearer",
 			"vest_16_backpack_rack_cls",
 			"vest_16_backpack_rack_at",
@@ -808,6 +809,13 @@ class CfgWeapons
 		{
 			"z\16th\addons\armor\data\custom\hazmat_helmet_co.paa"
 		};
+		optreHUDStyle="Phase_2";
+		optreVarietys[]=
+		{
+			"_dp",
+			"",
+			"_broken"
+		};
 	};
 	class helmet_16th_hellwolf: helmet_16th_trp
 	{
@@ -1288,7 +1296,7 @@ class CfgWeapons
 		model="\SWLB_clones\SWLB_clone_basic_armor.p3d";
 		class ItemInfo: ItemInfo
 		{
-			uniformModel="\SWLB_clones\SWLB_clone_basic_armor.p3d";
+			uniformModel="\ls\core\addons\characters_clone_legacy\vests\clone\ls_gar_clone_vest.p3d";
 			containerClass="Supply100";
 			mass=10;
 			class HitpointsProtectionInfo
@@ -1561,6 +1569,61 @@ class CfgWeapons
 		{
 			"z\16th\addons\armor\data\gear\reg_vests\suspenders\eod_vest_suspenders_co.paa"
 		};
+		class ItemInfo: ItemInfo
+		{
+			containerClass="Supply100";
+			mass=10;
+			class HitpointsProtectionInfo
+			{
+				class Neck
+				{
+					hitpointName="HitNeck";
+					armor=7;
+					passThrough=.3;
+				};
+				class Chest
+				{
+					hitpointName="HitChest";
+					armor=8;
+					passThrough=.3;
+				};
+				class Diaphragm
+				{
+					hitpointName="HitDiaphragm";
+					armor=8;
+					passThrough=.3;
+				};
+				class Abdomen
+				{
+					hitpointName="HitAbdomen";
+					armor=8;
+					passThrough=.3;
+				};
+				class Pelvis
+				{
+					hitpointName="HitPelvis";
+					armor=8;
+					passThrough=.3;
+				};
+				class Body
+				{
+					hitpointName="HitBody";
+					armor=8;
+					passThrough=.3;
+					depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
+				};
+			};
+		};
+	};
+	class JLTS_CloneVestHolster;
+	class met_vest_holster: JLTS_CloneVestHolster
+	{
+		scope=2;
+		displayname="[16th] Holster";
+		/*hiddenSelectionsTextures[]=
+		{
+			"z\16th\addons\armor\data\gear\reg_vests\suspenders\trp_vest_suspenders_co.paa"
+		};*/
 		class ItemInfo: ItemInfo
 		{
 			containerClass="Supply100";
