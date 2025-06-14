@@ -667,6 +667,15 @@ class CfgWeapons
 			"z\16th\addons\armor\data\custom\dj_helmet_co.paa"
 		};
 	};
+	class helmet_16th_beige: helmet_16th_trp
+	{
+		scope=2;
+		displayName="[16th] Beige's Helmet";
+		hiddenSelectionsTextures[]=
+		{
+			"z\16th\addons\armor\data\custom\beige_helmet_co.paa"
+		};
+	};
 	class helmet_16th_ben: helmet_16th_trp
 	{
 		scope=2;
@@ -710,6 +719,15 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\custom\blue_arf_helmet_co.paa"
+		};
+	};
+	class helmet_16th_bopit: helmet_16th_trp
+	{
+		scope=2;
+		displayName="[16th] Bopit's Helmet";
+		hiddenSelectionsTextures[]=
+		{
+			"z\16th\addons\armor\data\custom\bopit_helmet_co.paa"
 		};
 	};
 	class helmet_16th_bravo: helmet_16th_trp
@@ -1005,6 +1023,15 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\custom\six_helmet_co.paa"
+		};
+	};
+	class helmet_16th_ska: helmet_16th_trp
+	{
+		scope=2;
+		displayName="[16th] Ska's Helmet";
+		hiddenSelectionsTextures[]=
+		{
+			"z\16th\addons\armor\data\custom\ska_helmet_co.paa"
 		};
 	};
 	class helmet_16th_smith: helmet_16th_trp
