@@ -51,29 +51,13 @@ class CfgMagazines
 		//ammo="3AS_SmokeShellBase";
 		ammo="Met_Ammo_smoke_white";
 	};
-	class MET_Smoke_Purple: MET_Smoke_White
+	class MET_Smoke_Blue: MET_Smoke_White
 	{
-		displayName="[16th] Nacht-5 (Purple)";
-		displayNameShort="Nacht-5 (Purple)";
-		descriptionShort="Nacht-5 (Purple)";
-		//ammo="3AS_SmokeShellPurple";
-		ammo="Met_Ammo_smoke_purple";
-	};
-	class MET_Smoke_Yellow: MET_Smoke_White
-	{
-		displayName="[16th] Nacht-5 (Yellow)";
-		displayNameShort="Nacht-5 (Yellow)";
-		descriptionShort="Nacht-5 (Yellow)";
-		//ammo="3AS_SmokeShellYellow";
-		ammo="Met_Ammo_smoke_yellow";
-	};
-	class MET_Smoke_Red: MET_Smoke_White
-	{
-		displayName="[16th] Nacht-5 (Red)";
-		displayNameShort="Nacht-5 (Red)";
-		descriptionShort="Nacht-5 (Red)";
-		//ammo="3AS_SmokeShellRed";
-		ammo="Met_Ammo_smoke_red";
+		displayName="[16th] Nacht-5 (Blue)";
+		displayNameShort="Nacht-5 (Blue)";
+		descriptionShort="Nacht-5 (Blue)";
+		//ammo="3AS_SmokeShellBlue";
+		ammo="Met_Ammo_smoke_blue";
 	};
 	class MET_Smoke_Green: MET_Smoke_White
 	{
@@ -83,14 +67,6 @@ class CfgMagazines
 		//ammo="3AS_SmokeShellGreen";
 		ammo="Met_Ammo_smoke_green";
 	};
-	class MET_Smoke_Blue: MET_Smoke_White
-	{
-		displayName="[16th] Nacht-5 (Blue)";
-		displayNameShort="Nacht-5 (Blue)";
-		descriptionShort="Nacht-5 (Blue)";
-		//ammo="3AS_SmokeShellBlue";
-		ammo="Met_Ammo_smoke_blue";
-	};
 	class MET_Smoke_Orange: MET_Smoke_White
 	{
 		displayName="[16th] Nacht-5 (Orange)";
@@ -98,6 +74,30 @@ class CfgMagazines
 		descriptionShort="Nacht-5 (Orange)";
 		//ammo="3AS_SmokeShellOrange";
 		ammo="Met_Ammo_smoke_orange";
+	};
+	class MET_Smoke_Purple: MET_Smoke_White
+	{
+		displayName="[16th] Nacht-5 (Purple)";
+		displayNameShort="Nacht-5 (Purple)";
+		descriptionShort="Nacht-5 (Purple)";
+		//ammo="3AS_SmokeShellPurple";
+		ammo="Met_Ammo_smoke_purple";
+	};
+	class MET_Smoke_Red: MET_Smoke_White
+	{
+		displayName="[16th] Nacht-5 (Red)";
+		displayNameShort="Nacht-5 (Red)";
+		descriptionShort="Nacht-5 (Red)";
+		//ammo="3AS_SmokeShellRed";
+		ammo="Met_Ammo_smoke_red";
+	};
+	class MET_Smoke_teal: MET_Smoke_White
+	{
+		displayName="[16th] Nacht-5 (Teal)";
+		displayNameShort="Nacht-5 (Teal)";
+		descriptionShort="Nacht-5 (Teal)";
+		//ammo="3AS_SmokeShellOrange";
+		ammo="Met_Ammo_smoke_teal";
 	};
 	class MET_Smoke_turquoise: MET_Smoke_White
 	{
@@ -107,13 +107,13 @@ class CfgMagazines
 		//ammo="3AS_SmokeShellOrange";
 		ammo="Met_Ammo_smoke_turquoise";
 	};
-	class MET_Smoke_teal: MET_Smoke_White
+	class MET_Smoke_Yellow: MET_Smoke_White
 	{
-		displayName="[16th] Nacht-5 (Teal)";
-		displayNameShort="Nacht-5 (Teal)";
-		descriptionShort="Nacht-5 (Teal)";
-		//ammo="3AS_SmokeShellOrange";
-		ammo="Met_Ammo_smoke_teal";
+		displayName="[16th] Nacht-5 (Yellow)";
+		displayNameShort="Nacht-5 (Yellow)";
+		descriptionShort="Nacht-5 (Yellow)";
+		//ammo="3AS_SmokeShellYellow";
+		ammo="Met_Ammo_smoke_yellow";
 	};
 	/*class MET_Smoke_MASH: MET_Smoke_Orange
 	{
@@ -272,6 +272,63 @@ class CfgAmmo
 			"SmokeShellSoundLoop1",
 			1
 		};
+		/*soundHit[]=
+		{
+			"",
+			0,
+			1
+		};
+		SmokeShellSoundHit1[]=
+		{
+			"A3\Sounds_F\weapons\smokeshell\smoke_1",
+			1.2589254,
+			1,
+			100
+		};
+		SmokeShellSoundHit2[]=
+		{
+			"A3\Sounds_F\weapons\smokeshell\smoke_2",
+			1.2589254,
+			1,
+			100
+		};
+		SmokeShellSoundHit3[]=
+		{
+			"A3\Sounds_F\weapons\smokeshell\smoke_3",
+			1.2589254,
+			1,
+			100
+		};
+		SmokeShellSoundLoop1[]=
+		{
+			"A3\Sounds_F\weapons\smokeshell\smoke_loop1",
+			0.12589253,
+			1,
+			70
+		};
+		SmokeShellSoundLoop2[]=
+		{
+			"A3\Sounds_F\weapons\smokeshell\smoke_loop2",
+			0.12589253,
+			1,
+			70
+		};
+		grenadeFireSound[]=
+		{
+			"SmokeShellSoundHit1",
+			0.25,
+			"SmokeShellSoundHit2",
+			0.25,
+			"SmokeShellSoundHit3",
+			0.5
+		};
+		grenadeBurningSound[]=
+		{
+			"SmokeShellSoundLoop1",
+			0.5,
+			"SmokeShellSoundLoop2",
+			0.5
+		};*/
 	};
 	class Met_Ammo_smoke_blue: Met_Ammo_smoke_white
 	{
@@ -290,7 +347,7 @@ class CfgAmmo
 	};
 	class Met_Ammo_smoke_green: Met_Ammo_smoke_white
 	{
-		smokeColor[]={0.067, 0.89, 0.035,1};
+		smokeColor[]={0.03, 0.8, 0.02,1};
 		effectsSmoke="HTASmokeEffect";
 	};
 	class Met_Ammo_smoke_orange: Met_Ammo_smoke_white

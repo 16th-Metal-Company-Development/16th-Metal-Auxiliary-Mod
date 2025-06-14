@@ -51,8 +51,8 @@ class CfgMagazines
 		maxLeadSpeed=7;
 		ammo="MET_Weapons_Ammo_Grenades_Detonator";
 		model="\kobra\442_weapons\explosive\thermal_det.p3d";
-		picture="z\16th\addons\grenades\data\ui\met_thermal_det_ui_ca.paa";
-		uipicture="z\16th\addons\grenades\data\ui\met_thermal_det_ui_ca.paa";
+		picture="\3AS\3AS_Equipment\UI\Thermal_Detonator_UI_ca.paa";
+		uipicture="\3AS\3AS_Equipment\UI\Thermal_Detonator_UI_ca.paa";
 	};
 	class MET_Weapons_Mags_Thermal_Imploder: MET_Weapons_Mags_Thermal_Detonator
 	{
@@ -131,7 +131,7 @@ class CfgAmmo
 		indirectHitRange=8;
 		ace_grenades_pullPinSound[]=
 		{
-			"\ls_sounds\weapons\grenade\pin.wss",
+			"\ls\core\addons\sounds\weapons\grenade\pin.wss",
 			3,
 			1,
 			10
@@ -146,10 +146,10 @@ class CfgAmmo
 		fuseDistance=0;
 		soundFly[]=
 		{
-			"\ls_sounds\weapons\grenade\thermalDet_classC_fuse.wss",
-			20,
+			"212th\Weapons\212th_Grenades\aux212_thermal_detonators\data\sounds\thermal_detonator_armed.ogg",
+			2,
 			1,
-			200
+			1300
 		};
 		SoundSetExplosion[]=
 		{
@@ -167,6 +167,18 @@ class CfgAmmo
 		class NVGMarkers
 		{
 			class Blinking1
+			{
+			};
+			/*class IRMarker
+			{
+				name = "IR_marker";
+				color[] = {0, 1, 0, 1};
+				ambient[] = {0, 1, 0, 1};
+				brightness = 0.05;
+				onlyInNvg = 1;
+				blinking = 1;
+			};*/
+			/*class Blinking1
 			{
 				name="blinkpos1";
 				color[]={0.0099999998,0.0099999998,0.0099999998,1};
@@ -193,6 +205,34 @@ class CfgAmmo
 				drawLight=1;
 				activeLight=0;
 				useFlare=0;
+			};*/
+		};
+	};
+	class MET_Weapons_Ammo_Grenades_IR: grenade
+	{
+		author = "16th Aux Team";
+		displayName = "[16th] IR Grenade";
+		scope = 0;
+		hit = 0;
+		indirectHit = 0;
+		indirectHitRange = 0;
+		simulation = "shotSmokeX";
+		model = "\A3\Weapons_F\ammo\smokegrenade_white.p3d";
+		timeToLive = 25;
+		fuseDistance = 0;
+		smokeColor[] = {0.1, 1, 0.1, 1}; // Greenish for IR, adjust as needed
+		effectsSmoke = "SmokeShellWhite";
+		SoundSetExplosion[] = {};
+		class NVGMarkers
+		{
+			class IRMarker
+			{
+				name = "IR_marker";
+				color[] = {0, 1, 0, 1};
+				ambient[] = {0, 1, 0, 1};
+				brightness = 0.05;
+				onlyInNvg = 1;
+				blinking = 1;
 			};
 		};
 	};
@@ -226,10 +266,17 @@ class CfgAmmo
 		indirectHit=40;
 		indirectHitRange=16;
 		simulation="shotGrenade";
+		ace_grenades_pullPinSound[]=
+		{
+			"\ls\core\addons\sounds\weapons\grenade\pin_long.wss",
+			1.5,
+			1,
+			10
+		};
 		soundFly[]=
 		{
 			"z\16th\addons\grenades\data\sounds\imploder_flyby.wss",
-			1.5,
+			2,
 			1,
 			90
 		};

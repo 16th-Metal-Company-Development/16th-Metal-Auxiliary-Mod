@@ -84,6 +84,7 @@ class CfgPatches
 			"vest_16_backpack_rack_at",
 			"vest_16_vest_suspenders",
 			"vest_16_eod_vest_suspenders",
+			"met_vest_holster",
 			"vest_16_vest_recon_nco",
 			"vest_16_vest_nco",
 			"vest_16_vest_ab",
