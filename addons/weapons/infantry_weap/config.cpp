@@ -21931,7 +21931,7 @@ class CfgAmmo
 	class MET_GL_Flare_LUM_Cluster: G_40mm_HE
 	{
 		submunitionAmmo[] = {"MET_GL_Flare_LUM_SubMun"};
-		submunitionInitSpeed = 200;
+		submunitionInitSpeed = 300;
 		submunitionConeAngle[] = {10};
 		submunitionConeAngleHorizontal = 360;
 		submunitionConeType[] = {"randomupcone",6};
@@ -21967,7 +21967,7 @@ class CfgAmmo
 	class MET_GL_Flare_SUN_Cluster: G_40mm_HE
 	{
 		submunitionAmmo[] = {"MET_GL_Flare_SUN_SubMun"};
-		submunitionInitSpeed = 100;
+		submunitionInitSpeed = 300;
 		submunitionConeAngle[] = {10};
 		submunitionConeAngleHorizontal = 360;
 		submunitionConeType[] = {"randomupcone",6};
@@ -22003,7 +22003,7 @@ class CfgAmmo
 	class MET_GL_Flare_RA_Cluster: G_40mm_HE
 	{
 		submunitionAmmo[] = {"MET_GL_Flare_RA_SubMun"};
-		submunitionInitSpeed = 100;
+		submunitionInitSpeed = 300;
 		submunitionConeAngle[] = {10};
 		submunitionConeAngleHorizontal = 360;
 		submunitionConeType[] = {"randomupcone",6};
@@ -22034,7 +22034,7 @@ class CfgAmmo
 	class MET_GL_Flare_B_LUM_Cluster: G_40mm_HE
 	{
 		submunitionAmmo[] = {"MET_GL_Flare_B_LUM_SubMun"};
-		submunitionInitSpeed = 100;
+		submunitionInitSpeed = 300;
 		submunitionConeAngle[] = {10};
 		submunitionConeAngleHorizontal = 360;
 		submunitionConeType[] = {"randomupcone",6};
@@ -22065,7 +22065,7 @@ class CfgAmmo
 	class MET_GL_Flare_G_LUM_Cluster: G_40mm_HE
 	{
 		submunitionAmmo[] = {"MET_GL_Flare_G_LUM_SubMun"};
-		submunitionInitSpeed = 100;
+		submunitionInitSpeed = 300;
 		submunitionConeAngle[] = {10};
 		submunitionConeAngleHorizontal = 360;
 		submunitionConeType[] = {"randomupcone",6};
@@ -22096,7 +22096,7 @@ class CfgAmmo
 	class MET_GL_Flare_R_LUM_Cluster: G_40mm_HE
 	{
 		submunitionAmmo[] = {"MET_GL_Flare_R_LUM_SubMun"};
-		submunitionInitSpeed = 100;
+		submunitionInitSpeed = 300;
 		submunitionConeAngle[] = {10};
 		submunitionConeAngleHorizontal = 360;
 		submunitionConeType[] = {"randomupcone",6};
@@ -22127,7 +22127,7 @@ class CfgAmmo
 	class MET_GL_Flare_Y_LUM_Cluster: G_40mm_HE
 	{
 		submunitionAmmo[] = {"MET_GL_Flare_Y_LUM_SubMun"};
-		submunitionInitSpeed = 100;
+		submunitionInitSpeed = 300;
 		submunitionConeAngle[] = {10};
 		submunitionConeAngleHorizontal = 360;
 		submunitionConeType[] = {"randomupcone",6};
@@ -22158,7 +22158,7 @@ class CfgAmmo
 	class MET_GL_Flare_O_LUM_Cluster: G_40mm_HE
 	{
 		submunitionAmmo[] = {"MET_GL_Flare_O_LUM_SubMun"};
-		submunitionInitSpeed = 100;
+		submunitionInitSpeed = 300;
 		submunitionConeAngle[] = {10};
 		submunitionConeAngleHorizontal = 360;
 		submunitionConeType[] = {"randomupcone",6};
@@ -22189,7 +22189,7 @@ class CfgAmmo
 	class MET_GL_Flare_P_LUM_Cluster: G_40mm_HE
 	{
 		submunitionAmmo[] = {"MET_GL_Flare_P_LUM_SubMun"};
-		submunitionInitSpeed = 100;
+		submunitionInitSpeed = 300;
 		submunitionConeAngle[] = {10};
 		submunitionConeAngleHorizontal = 360;
 		submunitionConeType[] = {"randomupcone",6};
@@ -22220,7 +22220,7 @@ class CfgAmmo
 	class MET_GL_Flare_TU_LUM_Cluster: G_40mm_HE
 	{
 		submunitionAmmo[] = {"MET_GL_Flare_TU_LUM_SubMun"};
-		submunitionInitSpeed = 100;
+		submunitionInitSpeed = 300;
 		submunitionConeAngle[] = {10};
 		submunitionConeAngleHorizontal = 360;
 		submunitionConeType[] = {"randomupcone",6};
@@ -22251,7 +22251,7 @@ class CfgAmmo
 	class MET_GL_Flare_TE_LUM_Cluster: G_40mm_HE
 	{
 		submunitionAmmo[] = {"MET_GL_Flare_TE_LUM_SubMun"};
-		submunitionInitSpeed = 100;
+		submunitionInitSpeed = 300;
 		submunitionConeAngle[] = {10};
 		submunitionConeAngleHorizontal = 360;
 		submunitionConeType[] = {"randomupcone",6};
@@ -22283,7 +22283,7 @@ class CfgAmmo
 	class MET_GL_Flare_IR_LUM_Cluster: G_40mm_HE
 	{
 		submunitionAmmo[] = {"MET_GL_Flare_IR_LUM_SubMun"};
-		submunitionInitSpeed = 100;
+		submunitionInitSpeed = 300;
 		submunitionConeAngle[] = {10};
 		submunitionConeAngleHorizontal = 360;
 		submunitionConeType[] = {"randomupcone",6};
