@@ -15,9 +15,11 @@ class XtdGearInfos {
         class helmet_16th_arch         { model = "16th_Custom_Helmet"; camo = "Arch"; };
         class helmet_16th_avalanche    { model = "16th_Custom_Helmet"; camo = "Avalanche"; };
         class helmet_16th_ben          { model = "16th_Custom_Helmet"; camo = "Ben"; };
+        class helmet_16th_beige        { model = "16th_Custom_Helmet"; camo = "Beige"; };
         class helmet_16th_blackrose    { model = "16th_Custom_Helmet"; camo = "Blackrose"; };
         class helmet_16th_blat         { model = "16th_Custom_Helmet"; camo = "Blatt"; };
         class helmet_16th_blowfish     { model = "16th_Custom_Helmet"; camo = "Blowfish"; };
+        class helmet_16th_bopit        { model = "16th_Custom_Helmet"; camo = "Bopit"; };
         class helmet_16th_butcher      { model = "16th_Custom_Helmet"; camo = "Butcher"; };
         class helmet_16th_chet         { model = "16th_Custom_Helmet"; camo = "Chet"; };
         class helmet_16th_chetiah      { model = "16th_Custom_Helmet"; camo = "Chetiah"; };
@@ -44,6 +46,7 @@ class XtdGearInfos {
         class helmet_16th_roz          { model = "16th_Custom_Helmet"; camo = "Roz"; };
         class helmet_16th_sam          { model = "16th_Custom_Helmet"; camo = "Sam"; };
         class helmet_16th_six          { model = "16th_Custom_Helmet"; camo = "Six"; };
+        class helmet_16th_ska          { model = "16th_Custom_Helmet"; camo = "Ska"; };
         class helmet_16th_smith        { model = "16th_Custom_Helmet"; camo = "Smith"; };
         class helmet_16th_spice        { model = "16th_Custom_Helmet"; camo = "Spice"; };
         class helmet_16th_sunto        { model = "16th_Custom_Helmet"; camo = "Sunto"; };

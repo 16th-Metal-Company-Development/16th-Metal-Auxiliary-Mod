@@ -2017,6 +2017,406 @@ class CfgVehicles
 				magazine="MET_DC15A_mag";
 				count=50;
 			};
+			class _xx_MET_DC15S_mag
+			{
+				magazine="MET_DC15S_mag";
+				count=50;
+			};
+			class _xx_MET_DC15L_mag
+			{
+				magazine="MET_DC15L_mag";
+				count=50;
+			};
+			class _xx_MET_DC15LE_mag
+			{
+				magazine="MET_DC15LE_mag";
+				count=50;
+			};
+			class _xx_MET_CinCar_Mag
+			{
+				magazine="MET_CinCar_Mag";
+				count=50;
+			};
+			class _xx_MET_DC15SMG_Mag
+			{
+				magazine="MET_DC15SMG_Mag";
+				count=50;
+			};
+			class _xx_MET_blaster_battery
+			{
+				magazine="MET_blaster_battery";
+				count=50;
+			};
+			class _xx_MET_blaster_battery_green
+			{
+				magazine="MET_blaster_battery_green";
+				count=50;
+			};
+			class _xx_MET_Valken_mag
+			{
+				magazine="MET_Valken_mag";
+				count=50;
+			};
+			class _xx_MET_DC15x_mag
+			{
+				magazine="MET_DC15x_mag";
+				count=50;
+			};
+			class _xx_MET_DC15x_at_mag
+			{
+				magazine="MET_DC15x_at_mag";
+				count=50;
+			};
+			class _xx_MET_slug_mag
+			{
+				magazine="MET_slug_mag";
+				count=50;
+			};
+			class _xx_MET_pellet_mag
+			{
+				magazine="MET_pellet_mag";
+				count=50;
+			};
+			class _xx_MET_blaster_pistol_battery
+			{
+				magazine="MET_blaster_pistol_battery";
+				count=50;
+			};
+			class _xx_MET_dual_blaster_pistol_battery
+			{
+				magazine="MET_dual_blaster_pistol_battery";
+				count=50;
+			};
+			class _xx_MET_HE_Grenade
+			{
+				magazine="MET_HE_Grenade";
+				count=50;
+			};
+			class _xx_MET_Nuclear_Grenade
+			{
+				magazine="MET_Nuclear_Grenade";
+				count=20;
+			};
+			class _xx_MET_AT_Grenade
+			{
+				magazine="MET_AT_Grenade";
+				count=50;
+			};
+			class _xx_MET_ILLUM_Grenade
+			{
+				magazine="MET_ILLUM_Grenade";
+				count=50;
+			};
+			class _xx_MET_ILLUM_Grenade_Clust
+			{
+				magazine="MET_ILLUM_Grenade_Clust";
+				count=50;
+			};
+			class _xx_MET_ILLUM_B_Grenade
+			{
+				magazine="MET_ILLUM_B_Grenade";
+				count=50;
+			};
+			class _xx_MET_ILLUM_B_Grenade_Clust
+			{
+				magazine="MET_ILLUM_B_Grenade_Clust";
+				count=50;
+			};
+			class _xx_MET_ILLUM_G_Grenade
+			{
+				magazine="MET_ILLUM_G_Grenade";
+				count=50;
+			};
+			class _xx_MET_ILLUM_G_Grenade_Clust
+			{
+				magazine="MET_ILLUM_G_Grenade_Clust";
+				count=50;
+			};
+			class _xx_MET_ILLUM_R_Grenade
+			{
+				magazine="MET_ILLUM_R_Grenade";
+				count=50;
+			};
+			class _xx_MET_ILLUM_R_Grenade_Clust
+			{
+				magazine="MET_ILLUM_R_Grenade_Clust";
+				count=50;
+			};
+			class _xx_MET_ILLUM_Y_Grenade
+			{
+				magazine="MET_ILLUM_Y_Grenade";
+				count=50;
+			};
+			class _xx_MET_ILLUM_Y_Grenade_Clust
+			{
+				magazine="MET_ILLUM_Y_Grenade_Clust";
+				count=50;
+			};
+			class _xx_MET_ILLUM_O_Grenade
+			{
+				magazine="MET_ILLUM_O_Grenade";
+				count=50;
+			};
+			class _xx_MET_ILLUM_O_Grenade_Clust
+			{
+				magazine="MET_ILLUM_O_Grenade_Clust";
+				count=50;
+			};
+			class _xx_MET_ILLUM_P_Grenade
+			{
+				magazine="MET_ILLUM_P_Grenade";
+				count=50;
+			};
+			class _xx_MET_ILLUM_P_Grenade_Clust
+			{
+				magazine="MET_ILLUM_P_Grenade_Clust";
+				count=50;
+			};
+			class _xx_MET_ILLUM_TU_Grenade
+			{
+				magazine="MET_ILLUM_TU_Grenade";
+				count=50;
+			};
+			class _xx_MET_ILLUM_TU_Grenade_Clust
+			{
+				magazine="MET_ILLUM_TU_Grenade_Clust";
+				count=50;
+			};
+			class _xx_MET_ILLUM_TE_Grenade
+			{
+				magazine="MET_ILLUM_TE_Grenade";
+				count=50;
+			};
+			class _xx_MET_ILLUM_TE_Grenade_Clust
+			{
+				magazine="MET_ILLUM_TE_Grenade_Clust";
+				count=50;
+			};
+			class _xx_MET_ILLUM_IR_Grenade
+			{
+				magazine="MET_ILLUM_IR_Grenade";
+				count=50;
+			};
+			class _xx_MET_ILLUM_IR_Grenade_Clust
+			{
+				magazine="MET_ILLUM_IR_Grenade_Clust";
+				count=50;
+			};
+			class _xx_MET_SMKW_Grenade
+			{
+				magazine="MET_SMKW_Grenade";
+				count=50;
+			};
+			class _xx_MET_SMKB_Grenade
+			{
+				magazine="MET_SMKB_Grenade";
+				count=50;
+			};
+			class _xx_MET_SMKG_Grenade
+			{
+				magazine="MET_SMKG_Grenade";
+				count=50;
+			};
+			class _xx_MET_SMKO_Grenade
+			{
+				magazine="MET_SMKO_Grenade";
+				count=50;
+			};
+			class _xx_MET_SMKP_Grenade
+			{
+				magazine="MET_SMKP_Grenade";
+				count=50;
+			};
+			class _xx_MET_SMKR_Grenade
+			{
+				magazine="MET_SMKR_Grenade";
+				count=50;
+			};
+			class _xx_MET_SMKTU_Grenade
+			{
+				magazine="MET_SMKTU_Grenade";
+				count=50;
+			};
+			class _xx_MET_SMKTE_Grenade
+			{
+				magazine="MET_SMKTE_Grenade";
+				count=50;
+			};
+			class _xx_MET_SMKY_Grenade
+			{
+				magazine="MET_SMKY_Grenade";
+				count=50;
+			};
+            class _xx_MET_3Rnd_HE_Grenade
+			{
+				magazine="MET_3Rnd_HE_Grenade";
+				count=50;
+			};
+			class _xx_MET_3Rnd_AT_Grenade
+			{
+				magazine="MET_3Rnd_AT_Grenade";
+				count=50;
+			};
+			class _xx_MET_3Rnd_ILLUM_Grenade
+			{
+				magazine="MET_3Rnd_ILLUM_Grenade";
+				count=50;
+			};
+			class _xx_MET_3Rnd_ILLUM_Grenade_Clust
+			{
+				magazine="MET_3Rnd_ILLUM_Grenade_Clust";
+				count=50;
+			};
+			class _xx_MET_3Rnd_ILLUM_B_Grenade
+			{
+				magazine="MET_3Rnd_ILLUM_B_Grenade";
+				count=50;
+			};
+			class _xx_MET_3Rnd_ILLUM_B_Grenade_Clust
+			{
+				magazine="MET_3Rnd_ILLUM_B_Grenade_Clust";
+				count=50;
+			};
+			class _xx_MET_3Rnd_ILLUM_G_Grenade
+			{
+				magazine="MET_3Rnd_ILLUM_G_Grenade";
+				count=50;
+			};
+			class _xx_MET_3Rnd_ILLUM_G_Grenade_Clust
+			{
+				magazine="MET_3Rnd_ILLUM_G_Grenade_Clust";
+				count=50;
+			};
+			class _xx_MET_3Rnd_ILLUM_R_Grenade
+			{
+				magazine="MET_3Rnd_ILLUM_R_Grenade";
+				count=50;
+			};
+			class _xx_MET_3Rnd_ILLUM_R_Grenade_Clust
+			{
+				magazine="MET_3Rnd_ILLUM_R_Grenade_Clust";
+				count=50;
+			};
+			class _xx_MET_3Rnd_ILLUM_Y_Grenade
+			{
+				magazine="MET_3Rnd_ILLUM_Y_Grenade";
+				count=50;
+			};
+			class _xx_MET_3Rnd_ILLUM_Y_Grenade_Clust
+			{
+				magazine="MET_3Rnd_ILLUM_Y_Grenade_Clust";
+				count=50;
+			};
+			class _xx_MET_3Rnd_ILLUM_O_Grenade
+			{
+				magazine="MET_3Rnd_ILLUM_O_Grenade";
+				count=50;
+			};
+			class _xx_MET_3Rnd_ILLUM_O_Grenade_Clust
+			{
+				magazine="MET_3Rnd_ILLUM_O_Grenade_Clust";
+				count=50;
+			};
+			class _xx_MET_3Rnd_ILLUM_P_Grenade
+			{
+				magazine="MET_3Rnd_ILLUM_P_Grenade";
+				count=50;
+			};
+			class _xx_MET_3Rnd_ILLUM_P_Grenade_Clust
+			{
+				magazine="MET_3Rnd_ILLUM_P_Grenade_Clust";
+				count=50;
+			};
+			class _xx_MET_3Rnd_ILLUM_TU_Grenade
+			{
+				magazine="MET_3Rnd_ILLUM_TU_Grenade";
+				count=50;
+			};
+			class _xx_MET_3Rnd_ILLUM_TU_Grenade_Clust
+			{
+				magazine="MET_3Rnd_ILLUM_TU_Grenade_Clust";
+				count=50;
+			};
+			class _xx_MET_3Rnd_ILLUM_TE_Grenade
+			{
+				magazine="MET_3Rnd_ILLUM_TE_Grenade";
+				count=50;
+			};
+			class _xx_MET_3Rnd_ILLUM_TE_Grenade_Clust
+			{
+				magazine="MET_3Rnd_ILLUM_TE_Grenade_Clust";
+				count=50;
+			};
+			class _xx_MET_3Rnd_ILLUM_IR_Grenade
+			{
+				magazine="MET_3Rnd_ILLUM_IR_Grenade";
+				count=50;
+			};
+			class _xx_MET_3Rnd_ILLUM_IR_Grenade_Clust
+			{
+				magazine="MET_3Rnd_ILLUM_IR_Grenade_Clust";
+				count=50;
+			};
+			class _xx_MET_3Rnd_SMKW_Grenade
+			{
+				magazine="MET_3Rnd_SMKW_Grenade";
+				count=50;
+			};
+			class _xx_MET_3Rnd_SMKB_Grenade
+			{
+				magazine="MET_3Rnd_SMKB_Grenade";
+				count=50;
+			};
+			class _xx_MET_3Rnd_SMKG_Grenade
+			{
+				magazine="MET_3Rnd_SMKG_Grenade";
+				count=50;
+			};
+			class _xx_MET_3Rnd_SMKO_Grenade
+			{
+				magazine="MET_3Rnd_SMKO_Grenade";
+				count=50;
+			};
+			class _xx_MET_3Rnd_SMKP_Grenade
+			{
+				magazine="MET_3Rnd_SMKP_Grenade";
+				count=50;
+			};
+			class _xx_MET_3Rnd_SMKR_Grenade
+			{
+				magazine="MET_3Rnd_SMKR_Grenade";
+				count=50;
+			};
+			class _xx_MET_3Rnd_SMKTU_Grenade
+			{
+				magazine="MET_3Rnd_SMKTU_Grenade";
+				count=50;
+			};
+			class _xx_MET_3Rnd_SMKTE_Grenade
+			{
+				magazine="MET_3Rnd_SMKTE_Grenade";
+				count=50;
+			};
+			class _xx_MET_3Rnd_SMKY_Grenade
+			{
+				magazine="MET_3Rnd_SMKY_Grenade";
+				count=50;
+			};
+			class _xx_MET_60mm_HE_mag
+			{
+				magazine="MET_60mm_HE_mag";
+				count=50;
+			};
+			class _xx_MET_60mm_HEAT_mag
+			{
+				magazine="MET_60mm_HEAT_mag";
+				count=50;
+			};
+			class _xx_MET_Chaingun_Light_Drum_Mag
+			{
+				magazine="MET_Chaingun_Light_Drum_Mag";
+				count=20;
+			};
 			class _xx_MET_Chaingun_AT_Drum_Mag
 			{
 				magazine="MET_Chaingun_AT_Drum_Mag";
@@ -2110,46 +2510,61 @@ class CfgVehicles
 			class _xx_SquadShieldMagazine
 			{
 				magazine="SquadShieldMagazine";
-				count=2;
+				count=10;
 			};
 			class _xx_ShieldGrenade_Mag
 			{
 				magazine="ShieldGrenade_Mag";
-				count=10;
+				count=50;
 			};
 			class _xx_MET_Smoke_Blue
 			{
 				magazine="MET_Smoke_Blue";
-				count=10;
+				count=20;
 			};
 			class _xx_MET_Smoke_Green
 			{
 				magazine="MET_Smoke_Green";
-				count=10;
+				count=20;
 			};
 			class _xx_MET_Smoke_Orange
 			{
 				magazine="MET_Smoke_Orange";
-				count=10;
+				count=20;
 			};
 			class _xx_MET_Smoke_Purple
 			{
 				magazine="MET_Smoke_Purple";
-				count=10;
+				count=20;
 			};
 			class _xx_MET_Smoke_Red
 			{
 				magazine="MET_Smoke_Red";
-				count=10;
+				count=20;
 			};
 			class _xx_MET_Smoke_White
 			{
 				magazine="MET_Smoke_White";
-				count=30;
+				count=50;
 			};
 			class _xx_MET_Smoke_Yellow
 			{
 				magazine="MET_Smoke_Yellow";
+				count=20;
+			};
+			class _xx_MET_Smoke_Turquoise
+			{
+				magazine="MET_Smoke_Turquoise";
+				count=20;
+			};
+			class _xx_MET_Smoke_Teal
+			{
+				magazine="MET_Smoke_Teal";
+				count=20;
+			};
+			class _xx_MET_Smoke_Black
+			{
+				magazine="MET_Smoke_Black";
 				count=10;
 			};
 			class _xx_MET_LumaBlue
@@ -2177,6 +2592,51 @@ class CfgVehicles
 				magazine="C12_Remote_Mag";
 				count=5;
 			};
+			class _xx_DBA_90mm_IK55_HEAT_x1_mag
+			{
+				magazine="DBA_90mm_IK55_HEAT_x1_mag";
+				count=20;
+			};
+			class _xx_DBA_90mm_IK60_HEP_x1_mag
+			{
+				magazine="DBA_90mm_IK60_HEP_x1_mag";
+				count=20;
+			};
+			class _xx_DBA_90mm_IK40_FRAG_x1_mag
+			{
+				magazine="DBA_90mm_IK40_FRAG_x1_mag";
+				count=20;
+			};
+			class _xx_metal_at_mag
+			{
+				magazine="metal_at_mag";
+				count=20;
+			};
+			class _xx_metal_aa_mag
+			{
+				magazine="metal_aa_mag";
+				count=20;
+			};
+			class _xx_metal_ap_mag
+			{
+				magazine="metal_ap_mag";
+				count=20;
+			};
+			class _xx_MET_AA_SINGLE
+			{
+				magazine="MET_AA_SINGLE";
+				count=20;
+			};
+			class _xx_MET_AP_SINGLE
+			{
+				magazine="MET_AP_SINGLE";
+				count=20;
+			};
+			class _xx_MET_AT_Single
+			{
+				magazine="MET_AT_Single";
+				count=20;
+			};
 		};
         class TransportWeapons
 		{
@@ -2200,21 +2660,21 @@ class CfgVehicles
                 weapon = "MET_WestarM5_GL"; // Weapon class name
                 count = 5; // Number of weapons
             };
-            class _xx_MET_DC19A
+            /*class _xx_MET_DC19A
             {
                 weapon = "MET_DC19A"; // Weapon class name
                 count = 5; // Number of weapons
-            };
+            };*/
             class _xx_MET_DC19
             {
                 weapon = "MET_DC19"; // Weapon class name
                 count = 5; // Number of weapons
             };
-            class _xx_MET_DC19X
+            /*class _xx_MET_DC19X
             {
                 weapon = "MET_DC19X"; // Weapon class name
                 count = 5; // Number of weapons
-            };
+            };*/
             class _xx_MET_Chaingun
             {
                 weapon = "MET_Chaingun"; // Weapon class name
@@ -2228,6 +2688,156 @@ class CfgVehicles
             class _xx_MET_Z6_SOF
             {
                 weapon = "MET_Z6_SOF"; // Weapon class name
+                count = 5; // Number of weapons
+            };
+            class _xx_MET_DC15A_PLASTIC
+            {
+                weapon = "MET_DC15A_PLASTIC"; // Weapon class name
+                count = 5; // Number of weapons
+            };
+            class _xx_MET_DC15A_ugl_plastic
+            {
+                weapon = "MET_DC15A_ugl_plastic"; // Weapon class name
+                count = 5; // Number of weapons
+            };
+            class _xx_MET_DC15A_F
+            {
+                weapon = "MET_DC15A_F"; // Weapon class name
+                count = 5; // Number of weapons
+            };
+            class _xx_MET_DC15LE
+            {
+                weapon = "MET_DC15LE"; // Weapon class name
+                count = 5; // Number of weapons
+            };
+            class _xx_MET_DC15A_GL
+            {
+                weapon = "MET_DC15A_GL"; // Weapon class name
+                count = 5; // Number of weapons
+            };
+            class _xx_MET_DC15S
+            {
+                weapon = "MET_DC15S"; // Weapon class name
+                count = 5; // Number of weapons
+            };
+            class _xx_MET_DC15S_F
+            {
+                weapon = "MET_DC15S_F"; // Weapon class name
+                count = 5; // Number of weapons
+            };
+            class _xx_MET_DC15S_GL
+            {
+                weapon = "MET_DC15S_GL"; // Weapon class name
+                count = 5; // Number of weapons
+            };
+            class _xx_MET_DC15C_F
+            {
+                weapon = "MET_DC15C_F"; // Weapon class name
+                count = 5; // Number of weapons
+            };
+            class _xx_MET_DC15C_GL
+            {
+                weapon = "MET_DC15S_GL"; // Weapon class name
+                count = 5; // Number of weapons
+            };
+            class _xx_MET_DC15L_F
+            {
+                weapon = "MET_DC15L_F"; // Weapon class name
+                count = 5; // Number of weapons
+            };
+            class _xx_MET_Z6
+            {
+                weapon = "MET_Z6"; // Weapon class name
+                count = 5; // Number of weapons
+            };
+            class _xx_MET_DC15X_F
+            {
+                weapon = "MET_DC15X_F"; // Weapon class name
+                count = 5; // Number of weapons
+            };
+            class _xx_MET_Valken38X_F
+            {
+                weapon = "MET_Valken38X_F"; // Weapon class name
+                count = 5; // Number of weapons
+            };
+            class _xx_MET_DP23_F
+            {
+                weapon = "MET_DP23_F"; // Weapon class name
+                count = 5; // Number of weapons
+            };
+            class _xx_MET_DP23_GL
+            {
+                weapon = "MET_DP23_GL"; // Weapon class name
+                count = 5; // Number of weapons
+            };
+            class _xx_MET_JLTS_DP23
+            {
+                weapon = "MET_JLTS_DP23"; // Weapon class name
+                count = 5; // Number of weapons
+            };
+            class _xx_MET_Chaingun_mkii
+            {
+                weapon = "MET_Chaingun_mkii"; // Weapon class name
+                count = 5; // Number of weapons
+            };
+            class _xx_MET_Cinnagaran_Carbine_F
+            {
+                weapon = "MET_Cinnagaran_Carbine_F"; // Weapon class name
+                count = 5; // Number of weapons
+            };
+            class _xx_MET_DC15SMG
+            {
+                weapon = "MET_DC15SMG"; // Weapon class name
+                count = 5; // Number of weapons
+            };
+            class _xx_MET_MPL_F
+            {
+                weapon = "MET_MPL_F"; // Weapon class name
+                count = 5; // Number of weapons
+            };
+            class _xx_MET_MPL60A_HM
+            {
+                weapon = "MET_MPL60A_HM"; // Weapon class name
+                count = 5; // Number of weapons
+            };
+            class _xx_MET_EPL2
+            {
+                weapon = "MET_EPL2"; // Weapon class name
+                count = 5; // Number of weapons
+            };
+            class _xx_MET_RPS6_F
+            {
+                weapon = "MET_RPS6_F"; // Weapon class name
+                count = 5; // Number of weapons
+            };
+            class _xx_MET_DC17SA
+            {
+                weapon = "MET_DC17SA"; // Weapon class name
+                count = 5; // Number of weapons
+            };
+            class _xx_MET_DC17S_F
+            {
+                weapon = "MET_DC17S_F"; // Weapon class name
+                count = 5; // Number of weapons
+            };
+            class _xx_MET_DC17S_Dual_F
+            {
+                weapon = "MET_DC17S_Dual_F"; // Weapon class name
+                count = 5; // Number of weapons
+            };
+            class _xx_rps_16th
+            {
+                weapon = "rps_16th"; // Weapon class name
+                count = 5; // Number of weapons
+            };
+            class _xx_plx_16th
+            {
+                weapon = "plx_16th"; // Weapon class name
+                count = 5; // Number of weapons
+            };
+            class _xx_MET_RPS6_AA
+            {
+                weapon = "MET_RPS6_AA"; // Weapon class name
                 count = 5; // Number of weapons
             };
         };
@@ -2307,6 +2917,41 @@ class CfgVehicles
             {
                 count=15;
                 name="ACE_splint";
+            };
+			class _xx_MET_Optic_Scope_WestarM5
+            {
+                count=10;
+                name="MET_Optic_Scope_WestarM5";
+            };
+			class _xx_MET_optic_DC15L_F
+            {
+                count=5;
+                name="MET_optic_DC15L_F";
+            };
+			class _xx_MET_optic_DC15C_F
+            {
+                count=5;
+                name="MET_optic_DC15C_F";
+            };
+			class _xx_MET_optic_DC15LE_F
+            {
+                count=5;
+                name="MET_optic_DC15LE_F";
+            };
+			class _xx_MET_optic_VK38X_F
+            {
+                count=5;
+                name="MET_optic_VK38X_F";
+            };
+			class _xx_MET_optic_DC15X_F
+            {
+                count=5;
+                name="MET_optic_DC15X_F";
+            };
+			class _xx_MET_Optic_Cinnagaran_1_F
+            {
+                count=5;
+                name="MET_Optic_Cinnagaran_1_F";
             };
 		};
 	};

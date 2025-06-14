@@ -19,12 +19,10 @@ include = [
     "addons/Indecisive_Armoury_Ammos.pbo",
     "addons/JMSLLTE_weapons.pbo",
     "addons/Kobra.pbo",
-    "addons/SDT_Eternal.pbo",
-    "addons/SDT_gear.pbo",
     "addons/WBK_HeavyWeaponsFramework.pbo",
 ]
 
 [version]
 major = 3
-minor = 4
-patch = 1
+minor = 5
+patch = 3

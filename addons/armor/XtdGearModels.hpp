@@ -20,14 +20,15 @@ class XtdGearModels {
             options[] = { "camo" };
             class camo {
                 values[] = {
-                    "Arch", "Avalanche", "Ben", "Blackrose", "Blatt",
-                    "Blowfish", "Butcher", "Chet", "Chetiah", "Cougar",
-                    "Creed", "Fish", "Frost", "Gambit", "Hazmat",
-                    "Hellwolf", "Hood", "Karma", "Maia", "Maple",
-                    "Mace", "Maxson", "Merlin", "Moldy", "Nix",
-                    "Noble", "Prez", "Ronin", "Roz", "Sam",
-                    "Six", "Smith", "Spice", "Sunto", "Talk",
-                    "Vergil", "William", "Winters", "Wolf"
+                    "Arch", "Avalanche", "Beige", "Ben", "Blackrose",
+                    "Blatt", "Blowfish", "Bopit", "Butcher", "Chet",
+                    "Chetiah", "Cougar", "Creed", "Fish", "Frost",
+                    "Gambit", "Hazmat", "Hellwolf", "Hood", "Karma",
+                    "Maia", "Mace", "Maple", "Maxson", "Merlin",
+                    "Moldy", "Nix", "Noble", "Prez", "Ronin",
+                    "Roz", "Sam", "Ska", "Six", "Smith",
+                    "Spice", "Sunto", "Talk", "Vergil", "William",
+                    "Winters", "Wolf"
                 };
             };
         };
