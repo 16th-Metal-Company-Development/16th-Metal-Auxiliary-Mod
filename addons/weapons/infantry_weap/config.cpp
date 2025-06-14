@@ -10512,7 +10512,7 @@ class CfgMagazines
 		displayNameMFDFormat="60mm HE";
 		displayNameShort="60mm HE";
 		count=1;
-		mass=30;
+		mass=20;
 		initspeed=100;
 		tracersevery=1;
 	};
@@ -10528,7 +10528,7 @@ class CfgMagazines
 		displayNameMFDFormat="60mm HEAT";
 		displayNameShort="60mm HEAT";
 		count=1;
-		mass=30;
+		mass=20;
 		initspeed=100;
 		tracersevery=1;
 	};
