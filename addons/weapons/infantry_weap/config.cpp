@@ -9748,7 +9748,7 @@ class CfgMagazines
 	class MET_Clust_Grenade_shell: 1Rnd_HE_Grenade_shell
 	{
 		author="Hazmat";
-		count=6;
+		count=1;
 		displayName="[16th] Cluster Grenade";
 		displayNameShort="[16th] Cluster Grenades";
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_he.paa";
@@ -9799,7 +9799,7 @@ class CfgMagazines
 	class MET_12Rnd_Grape_Grenade: MET_Grape_Grenade
 	{
 		count = 12;
-		displayName = "[16th] 6 Round Grapeshot";
+		displayName = "[16th] 12 Round Grapeshot";
 		mass = 16;
 	};
 	class MET_ILLUM_Grenade: 1Rnd_HE_Grenade_shell
@@ -21932,7 +21932,7 @@ class CfgAmmo
 	{
 		submunitionAmmo[] = {"MET_GL_Flare_LUM_SubMun"};
 		submunitionInitSpeed = 300;
-		submunitionConeAngle[] = {10};
+		submunitionConeAngle[] = {90};
 		submunitionConeAngleHorizontal = 360;
 		submunitionConeType[] = {"randomupcone",6};
 		submunitionParentSpeedCoef = 0;
