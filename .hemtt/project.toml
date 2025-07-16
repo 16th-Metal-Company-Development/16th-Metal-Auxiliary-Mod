@@ -17,12 +17,11 @@ include = [
     "mod.cpp",
     "addons/442_weapons.pbo",
     "addons/Indecisive_Armoury_Ammos.pbo",
-    "addons/JMSLLTE_weapons.pbo",
     "addons/Kobra.pbo",
     "addons/WBK_HeavyWeaponsFramework.pbo",
 ]
 
 [version]
 major = 3
-minor = 5
+minor = 6
 patch = 6
