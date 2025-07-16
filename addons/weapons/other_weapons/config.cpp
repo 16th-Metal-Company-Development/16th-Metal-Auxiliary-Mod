@@ -243,7 +243,7 @@ class CfgWeapons
 			mass=8;
 			opticType=1;
 			optics=1;
-			modelOptics="\JMSLLTE_weapons\Scope\big_cross_red_full.p3d";
+			modelOptics="z\16th\addons\weapons\scopes\big_cross_orange_full.p3d";
 			class OpticsModes
 			{
 				class nctalkep
@@ -2184,7 +2184,7 @@ class CfgWeapons
 			aiRateOfFireDistance=800;
 		};
 		weaponInfoType="RscOptics_nightstalker";
-		modelOptics="\JMSLLTE_weapons\Scope\big_cross_red_full.p3d";
+		modelOptics="z\16th\addons\weapons\scopes\big_cross_orange_med.p3d";
 		class OpticsModes
 		{
 			class nctalkep

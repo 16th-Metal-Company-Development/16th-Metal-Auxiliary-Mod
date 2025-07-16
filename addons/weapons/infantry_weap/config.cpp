@@ -440,7 +440,7 @@ class CfgWeapons
 				compatibleItems[]={};
 			};
 		};
-		modelOptics="\JMSLLTE_weapons\Scope\big_cross_blue_full.p3d";
+		modelOptics="z\16th\addons\weapons\scopes\big_cross_blue_full.p3d";
 		class OpticsModes
 		{
 			class DC19scope_sights
@@ -878,7 +878,7 @@ class CfgWeapons
 		};
 		aiDispersionCoefY=6;
 		aiDispersionCoefX=4;
-		modelOptics="\JMSLLTE_weapons\Scope\big_cross_blue_full.p3d";
+		modelOptics="z\16th\addons\weapons\scopes\big_cross_blue_full.p3d";
 		class OpticsModes
 		{
 			class HoloSight
@@ -1488,7 +1488,7 @@ class CfgWeapons
 			aiRateOfFire=8;
 			aiRateOfFireDistance=700;
 		};
-		modelOptics="\JMSLLTE_weapons\Scope\big_cross_blue_full.p3d";
+		modelOptics="z\16th\addons\weapons\scopes\big_cross_blue_full.p3d";
 		class OpticsModes
 		{
 			class DC15scope_sights
@@ -1542,8 +1542,9 @@ class CfgWeapons
 			{
 				compatibleItems[]={
 					"MET_holo_optic",
-					"3AS_optic_holo_DC15S",
+					//"3AS_optic_holo_DC15S",
 					"MET_optic_holo_scope",
+					//"MET_optic_holo_test",
 					"MET_Optic_Holo_Two_Blue",
 					"MET_Optic_Holo_Two_Red",
 					"MET_Optic_Holo_Two_Yellow",
@@ -1825,7 +1826,7 @@ class CfgWeapons
 		};
 		aiDispersionCoefY=6;
 		aiDispersionCoefX=4;
-		modelOptics="\JMSLLTE_weapons\Scope\big_cross_blue_full.p3d";
+		modelOptics="z\16th\addons\weapons\scopes\big_cross_blue_full.p3d";
 		class OpticsModes
 		{
 			class Holosights
@@ -2182,7 +2183,7 @@ class CfgWeapons
 		};
 		aiDispersionCoefY=6;
 		aiDispersionCoefX=4;
-		modelOptics="\JMSLLTE_weapons\Scope\big_cross_blue_full.p3d";
+		modelOptics="z\16th\addons\weapons\scopes\big_cross_blue_full.p3d";
 		class OpticsModes
 		{
 			class Ironsights
@@ -3783,7 +3784,7 @@ class CfgWeapons
 				compatibleItems[]=
 				{
 					"MET_holo_optic",
-					"3AS_optic_holo_DC15S",
+					//"3AS_optic_holo_DC15S",
 					"MET_optic_holo_scope",
 					"MET_Optic_Holo_Two_Blue",
 					"MET_Optic_Holo_Two_Red",
@@ -4217,7 +4218,7 @@ class CfgWeapons
 		model="3AS\3AS_Weapons\WestarM5\3AS_Westar_M5_F.p3d";
 		picture="\3AS\3AS_Weapons\WestarM5\Data\UI\3as_westar.paa";
 		weaponInfoType="RscWeaponZeroing";
-		modelOptics="\JMSLLTE_weapons\Scope\big_cross_blue_full.p3d";
+		modelOptics="z\16th\addons\weapons\scopes\big_cross_blue_full.p3d";
 		class OpticsModes
 		{
 			class Ironsights
@@ -4285,7 +4286,7 @@ class CfgWeapons
 		model="3AS\3AS_Weapons\WestarM5\3AS_Westar_M5_GL.p3d";
 		picture="\3AS\3AS_Weapons\WestarM5\Data\UI\3as_westargl.paa";
 		weaponInfoType="RscWeaponZeroing";
-		modelOptics="\JMSLLTE_weapons\Scope\big_cross_blue_full.p3d";
+		modelOptics="z\16th\addons\weapons\scopes\big_cross_blue_full.p3d";
 		muzzles[]=
 		{
 			"this",
@@ -4363,7 +4364,7 @@ class CfgWeapons
 		class ItemInfo: InventoryOpticsItem_Base_F
 		{
 			mass=7;
-			modelOptics="\JMSLLTE_weapons\Scope\big_cross_blue_easy.p3d";
+			modelOptics="z\16th\addons\weapons\scopes\big_cross_blue_easy.p3d";
 			class OpticsModes
 			{
 				class 3AS_Scope_Optics
@@ -4390,7 +4391,7 @@ class CfgWeapons
 					opticsFlare=1;
 					modelOptics[]=
 					{
-						"\JMSLLTE_weapons\Scope\big_cross_blue_easy.p3d"
+						"z\16th\addons\weapons\scopes\big_cross_blue_easy.p3d"
 					};
 					memoryPointCamera="opticView";
 					opticsDisablePeripherialVision=1;
@@ -4432,7 +4433,7 @@ class CfgWeapons
 			"MET_DC19E_mag"
 		};
 		magazineWell[]={};
-		modelOptics="\JMSLLTE_weapons\Scope\big_cross_blue_full.p3d";
+		modelOptics="z\16th\addons\weapons\scopes\big_cross_blue_full.p3d";
 		class OpticsModes
 		{
 			class DC19scope_sights
@@ -4825,7 +4826,7 @@ class CfgWeapons
 			};
 			scale[]={0};
 		};
-		modelOptics="\JMSLLTE_weapons\Scope\big_cross_blue_full.p3d";
+		modelOptics="z\16th\addons\weapons\scopes\big_cross_blue_full.p3d";
 		class OpticsModes
 		{
 			class DC15scope_sights
@@ -5147,7 +5148,7 @@ class CfgWeapons
 		{
 			mass=90;
 		};
-		modelOptics="\JMSLLTE_weapons\Scope\big_cross_blue_full.p3d";
+		modelOptics="z\16th\addons\weapons\scopes\big_cross_blue_full.p3d";
 		class OpticsModes
 		{
 			class Ironsights
@@ -5382,7 +5383,7 @@ class CfgWeapons
 		dexterity=1.7;
 		initspeed=800;
 		inertia=1.4;
-		modelOptics="\JMSLLTE_weapons\Scope\big_cross_blue_med.p3d";
+		modelOptics="z\16th\addons\weapons\scopes\big_cross_blue_med.p3d";
 		maxZeroing=2000;
 		opticsZoomMin=0.0037499999;
 		opticsZoomMax=0.1;
@@ -5471,7 +5472,7 @@ class CfgWeapons
 		class GunParticles
 		{
 		};
-		modelOptics="\JMSLLTE_weapons\Scope\big_cross_blue_full.p3d";
+		modelOptics="z\16th\addons\weapons\scopes\big_cross_blue_full.p3d";
 		class OpticsModes
 		{
 			class HoloScope
@@ -5643,7 +5644,7 @@ class CfgWeapons
 		class GunParticles
 		{
 		};
-		modelOptics="\JMSLLTE_weapons\Scope\big_cross_blue_full.p3d";
+		modelOptics="z\16th\addons\weapons\scopes\big_cross_blue_full.p3d";
 		class OpticsModes
 		{
 			class HoloScope
@@ -6192,7 +6193,7 @@ class CfgWeapons
 			aiRateOfFire=8;
 			aiRateOfFireDistance=700;
 		};
-		modelOptics="\JMSLLTE_weapons\Scope\big_cross_blue_full.p3d";
+		modelOptics="z\16th\addons\weapons\scopes\big_cross_blue_full.p3d";
 		class OpticsModes
 		{
 			class DC15scope_sights
@@ -6246,7 +6247,7 @@ class CfgWeapons
 			{
 				compatibleItems[]={
 					"MET_holo_optic",
-					"3AS_optic_holo_DC15S",
+					//"3AS_optic_holo_DC15S",
 					"MET_optic_holo_scope",
 					"MET_Optic_Holo_Two_Blue",
 					"MET_Optic_Holo_Two_Red",
@@ -6562,7 +6563,7 @@ class CfgWeapons
 			opticType=2;
 			weaponInfoType="RscWeaponRangeZeroingFOV";
 			optics=1;
-			modelOptics="\JMSLLTE_weapons\Scope\big_cross_blue_med.p3d";
+			modelOptics="z\16th\addons\weapons\scopes\big_cross_blue_med.p3d";
 			class OpticsModes
 			{
 				class Snip
@@ -6591,7 +6592,7 @@ class CfgWeapons
 					memoryPointCamera="opticView";
 					modelOptics[]=
 					{
-						"\JMSLLTE_weapons\Scope\big_cross_blue_med.p3d"
+						"z\16th\addons\weapons\scopes\big_cross_blue_med.p3d"
 					};
 					opticsFlare=1;
 					opticsDisablePeripherialVision=1;
@@ -6755,7 +6756,7 @@ class CfgWeapons
 			mass=15;
 			opticType=2;
 			optics=1;
-			modelOptics="\JMSLLTE_weapons\Scope\big_cross_blue_easy.p3d";
+			modelOptics="z\16th\addons\weapons\scopes\big_cross_blue_easy.p3d";
 			class OpticsModes
 			{
 				class Scope
@@ -6774,7 +6775,7 @@ class CfgWeapons
 					memoryPointCamera="opticView";
 					modelOptics[]=
 					{
-						"\JMSLLTE_weapons\Scope\big_cross_blue_easy.p3d"
+						"z\16th\addons\weapons\scopes\big_cross_blue_easy.p3d"
 					};
 					visionMode[]=
 					{
@@ -6862,12 +6863,13 @@ class CfgWeapons
 			opticType=2;
 			weaponInfoType="RscWeaponRangeZeroingFOV";
 			optics=1;
-			modelOptics="\JMSLLTE_weapons\Scope\big_cross_blue_easy.p3d";
+			modelOptics="z\16th\addons\weapons\scopes\big_cross_blue_easy.p3d";
 			class OpticsModes
 			{
 				class Snip
 				{
 					opticsDisplayName="WFOV";
+					opticsID=1;
 					useModelOptics=1;
 					opticsPPEffects[]=
 					{
@@ -6881,7 +6883,7 @@ class CfgWeapons
 					distanceZoomMax=100;
 					modelOptics[]=
 					{
-						"\JMSLLTE_weapons\Scope\big_cross_blue_easy.p3d"
+						"z\16th\addons\weapons\scopes\big_cross_blue_easy.p3d"
 					};
 					discreteInitIndex=0;
 					memoryPointCamera="opticView";
@@ -6939,14 +6941,17 @@ class CfgWeapons
 		inertia=0.1;
 	};
 	class 3AS_optic_holo_DC15S;
-	class MET_optic_holo_scope: 3AS_optic_holo_DC15S
+	class MET_optic_holo_scope: MET_holo_optic
 	{
 		displayName="[16th] Holo Scope";
-		modelOptics="\JMSLLTE_weapons\Scope\big_cross_blue_full.p3d";
+		picture="\3AS\3AS_Weapons\Data\Textures\Energy_Cell_Arsenal.paa";
+		model="z\16th\addons\weapons\holos\3AS_DC15S_Holo_f.p3d";
+		modelOptics="z\16th\addons\weapons\scopes\big_cross_blue_full.p3d";
+		weaponInfoType="RscWeaponZeroing";
 		class ItemInfo: InventoryOpticsItem_Base_F
 		{
 			mass=6;
-			modelOptics="\3AS\3AS_Weapons\DC15S\3AS_DC15S_Holo_f.p3d";
+			modelOptics="z\16th\addons\weapons\holos\3AS_DC15S_Holo_f.p3d";
 			optics=1;
 			class OpticsModes
 			{
@@ -6962,7 +6967,7 @@ class CfgWeapons
 					opticsDisablePeripherialVision=0;	
 					modelOptics[]=
 					{
-						"\3AS\3AS_Weapons\DC15S\3AS_DC15S_Holo_f.p3d",
+						"z\16th\addons\weapons\holos\3AS_DC15S_Holo_f.p3d",
 					};
 					opticsZoomMin=0.25;
 					opticsZoomMax=1.25;
@@ -6993,7 +6998,75 @@ class CfgWeapons
 					memoryPointCamera="opticView";
 					modelOptics[]=
 					{
-						"\JMSLLTE_weapons\Scope\big_cross_blue_full.p3d",
+						"z\16th\addons\weapons\scopes\big_cross_blue_full.p3d",
+					};
+					opticsFlare=1;
+					opticsDisablePeripherialVision=1;
+					distanceZoomMin=400;
+					distanceZoomMax=400;
+					weaponInfoType="RscWeaponEmpty";
+				};
+			};
+		};
+	};
+	class MET_optic_holo_test: MET_holo_optic
+	{
+		displayName="[16th] Holo Scope";
+		picture="\3AS\3AS_Weapons\Data\Textures\Energy_Cell_Arsenal.paa";
+		model="z\16th\addons\weapons\holos\met_holo_1.p3d";
+		modelOptics="z\16th\addons\weapons\scopes\big_cross_blue_full.p3d";
+		weaponInfoType="RscWeaponZeroing";
+		class ItemInfo: InventoryOpticsItem_Base_F
+		{
+			mass=6;
+			modelOptics="z\16th\addons\weapons\holos\3AS_DC15S_Holo_f.p3d";
+			optics=1;
+			class OpticsModes
+			{
+				class DC15scope_sights
+				{
+					opticsID=1;
+					useModelOptics=0;
+					opticsPPEffects[]=
+					{
+						"Default"
+					};
+					opticsFlare=0;
+					opticsDisablePeripherialVision=0;	
+					modelOptics[]=
+					{
+						"z\16th\addons\weapons\holos\3AS_DC15S_Holo_f.p3d",
+					};
+					opticsZoomMin=0.25;
+					opticsZoomMax=1.25;
+					opticsZoomInit=0.75;
+					memoryPointCamera="eye";
+					visionMode[]={};
+					distanceZoomMin=200;
+					distanceZoomMax=200;
+					cameraDir="";
+				};
+				class DC15scope_scope: DC15scope_sights
+				{
+					opticsID=2;
+					useModelOptics=1;
+					opticsPPEffects[]=
+					{
+						"OpticsCHAbera1",
+						"OpticsBlur1"
+					};
+					visionMode[]=
+					{
+						"Normal",
+						"NVG"
+					};
+					opticsZoomMin=0.107;
+					opticsZoomMax=0.107;
+					opticsZoomInit=0.107;
+					memoryPointCamera="opticView";
+					modelOptics[]=
+					{
+						"z\16th\addons\weapons\scopes\big_cross_blue_full.p3d",
 					};
 					opticsFlare=1;
 					opticsDisablePeripherialVision=1;
@@ -7013,7 +7086,7 @@ class CfgWeapons
 		class ItemInfo: InventoryOpticsItem_Base_F
 		{
 			mass=7;
-			modelOptics="\JMSLLTE_weapons\Scope\big_cross_green_full.p3d";
+			modelOptics="z\16th\addons\weapons\scopes\big_cross_green_full.p3d";
 			class OpticsModes
 			{
 				class 3AS_Green_Optic1
@@ -7032,7 +7105,7 @@ class CfgWeapons
 					distanceZoomMax=100;
 					modelOptics[]=
 					{
-						"\JMSLLTE_weapons\Scope\big_cross_green_full.p3d"
+						"z\16th\addons\weapons\scopes\big_cross_green_full.p3d"
 					};
 					memoryPointCamera="opticView";
 					visionMode[]=
@@ -7118,7 +7191,7 @@ class CfgWeapons
 					memoryPointCamera="opticView";
 					modelOptics[]=
 					{
-						"\JMSLLTE_weapons\Scope\big_cross_blue_full.p3d",
+						"z\16th\addons\weapons\scopes\big_cross_blue_full.p3d",
 					};
 					opticsFlare=1;
 					opticsDisablePeripherialVision=1;
@@ -7185,7 +7258,7 @@ class CfgWeapons
 					memoryPointCamera="opticView";
 					modelOptics[]=
 					{
-						"\JMSLLTE_weapons\Scope\big_cross_red_full.p3d",
+						"z\16th\addons\weapons\scopes\big_cross_red2_full.p3d",
 					};
 					opticsFlare=1;
 					opticsDisablePeripherialVision=1;
@@ -7252,7 +7325,7 @@ class CfgWeapons
 					memoryPointCamera="opticView";
 					modelOptics[]=
 					{
-						"\JMSLLTE_weapons\Scope\big_cross_green_full.p3d",
+						"z\16th\addons\weapons\scopes\big_cross_green_full.p3d",
 					};
 					opticsFlare=1;
 					opticsDisablePeripherialVision=1;
@@ -7319,7 +7392,7 @@ class CfgWeapons
 					memoryPointCamera="opticView";
 					modelOptics[]=
 					{
-						"\JMSLLTE_weapons\Scope\big_cross_blue_full.p3d",
+						"z\16th\addons\weapons\scopes\big_cross_yellow_full.p3d",
 					};
 					opticsFlare=1;
 					opticsDisablePeripherialVision=1;
@@ -7386,7 +7459,7 @@ class CfgWeapons
 					memoryPointCamera="opticView";
 					modelOptics[]=
 					{
-						"\JMSLLTE_weapons\Scope\big_cross_blue_full.p3d",
+						"z\16th\addons\weapons\scopes\big_cross_blue_full.p3d",
 					};
 					opticsFlare=1;
 					opticsDisablePeripherialVision=1;
@@ -7453,7 +7526,7 @@ class CfgWeapons
 					memoryPointCamera="opticView";
 					modelOptics[]=
 					{
-						"\JMSLLTE_weapons\Scope\big_cross_red_full.p3d",
+						"z\16th\addons\weapons\scopes\big_cross_red2_full.p3d",
 					};
 					opticsFlare=1;
 					opticsDisablePeripherialVision=1;
@@ -7520,7 +7593,7 @@ class CfgWeapons
 					memoryPointCamera="opticView";
 					modelOptics[]=
 					{
-						"\JMSLLTE_weapons\Scope\big_cross_blue_full.p3d",
+						"z\16th\addons\weapons\scopes\big_cross_yellow_full.p3d",
 					};
 					opticsFlare=1;
 					opticsDisablePeripherialVision=1;
@@ -7587,7 +7660,7 @@ class CfgWeapons
 					memoryPointCamera="opticView";
 					modelOptics[]=
 					{
-						"\JMSLLTE_weapons\Scope\big_cross_green_full.p3d",
+						"z\16th\addons\weapons\scopes\big_cross_green_full.p3d",
 					};
 					opticsFlare=1;
 					opticsDisablePeripherialVision=1;
@@ -8905,7 +8978,7 @@ class CfgWeapons
 		model="3AS\3AS_Weapons\DC17M\3AS_DC17M_f";
 		picture="\3AS\3AS_Weapons\DC17M\data\UI\3as_dc17m.paa";
 		weaponInfoType="RscWeaponZeroing";
-		modelOptics="\JMSLLTE_weapons\Scope\big_cross_blue_easy.p3d";
+		modelOptics="z\16th\addons\weapons\scopes\big_cross_blue_easy.p3d";
 		class OpticsModes
 		{
 			class Ironsights
@@ -8983,7 +9056,7 @@ class CfgWeapons
 		model="3AS\3AS_Weapons\DC15SA\3AS_DC15SA_F.p3d";
 		picture="\3AS\3AS_Weapons\DC15SA\data\UI\3as_dc15sa.paa";
 		weaponInfoType="RscWeaponZeroing";
-		modelOptics="\JMSLLTE_weapons\Scope\big_cross_blue_full.p3d";
+		modelOptics="z\16th\addons\weapons\scopes\big_cross_blue_full.p3d";
 		class OpticsModes
 		{
 			class Ironsights
@@ -9748,7 +9821,7 @@ class CfgMagazines
 	class MET_Clust_Grenade_shell: 1Rnd_HE_Grenade_shell
 	{
 		author="Hazmat";
-		count=6;
+		count=1;
 		displayName="[16th] Cluster Grenade";
 		displayNameShort="[16th] Cluster Grenades";
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_he.paa";
@@ -9799,7 +9872,7 @@ class CfgMagazines
 	class MET_12Rnd_Grape_Grenade: MET_Grape_Grenade
 	{
 		count = 12;
-		displayName = "[16th] 6 Round Grapeshot";
+		displayName = "[16th] 12 Round Grapeshot";
 		mass = 16;
 	};
 	class MET_ILLUM_Grenade: 1Rnd_HE_Grenade_shell
@@ -21932,7 +22005,7 @@ class CfgAmmo
 	{
 		submunitionAmmo[] = {"MET_GL_Flare_LUM_SubMun"};
 		submunitionInitSpeed = 300;
-		submunitionConeAngle[] = {10};
+		submunitionConeAngle[] = {90};
 		submunitionConeAngleHorizontal = 360;
 		submunitionConeType[] = {"randomupcone",6};
 		submunitionParentSpeedCoef = 0;

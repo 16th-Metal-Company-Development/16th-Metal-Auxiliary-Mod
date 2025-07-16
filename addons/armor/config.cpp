@@ -831,9 +831,9 @@ class CfgWeapons
 		optreHUDStyle="Phase_2";
 		optreVarietys[]=
 		{
-			"_dp",
 			"",
-			"_broken"
+			"",
+			""
 		};
 	};
 	class helmet_16th_hellwolf: helmet_16th_trp
