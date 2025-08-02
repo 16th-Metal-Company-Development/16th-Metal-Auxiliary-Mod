@@ -10697,6 +10697,25 @@ class CfgMagazines
 		mass=60;
 		count=600;
 	};
+
+	class MET_BARC_Mag : JLTS_DC15A_mag
+	{
+		JLTS_hasElectronics = 1;
+		JLTS_hasEMPProtection = 1;
+		author = "Chet";
+		scope = 1;
+		modelSpecial = "";
+		modelSpecialIsProxy = 0;
+		picture = "\3AS\3AS_Weapons\Data\UI\3as_box_b.paa";
+		model = "\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
+		count = 1000;
+		displayName = "[16th] BARC Repeater Cell";
+		displayNameShort = "BARC Repeater";
+		descriptionShort = "Energy cell for the BARC";
+		ammo = "MET_blasterbolt";
+		mass = 250;
+		tracersEvery = 1;
+	};
 };
 class ACE_Medical_Injuries
 {

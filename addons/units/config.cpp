@@ -54,7 +54,22 @@ class CfgEditorSubcategories
 	{
 		displayName = "Reaper Vehicles"; // Name visible in the list
 	};
-	
+	class metal_co_EdSubCat_Hammer // Category class, you point to it in editorSubcategory property
+	{
+		displayName = "Hammer Vehicles"; // Name visible in the list
+	};
+	class metal_co_EdSubCat_Dragon // Category class, you point to it in editorSubcategory property
+	{
+		displayName = "Dragon Vehicles"; // Name visible in the list
+	};
+	class metal_co_EdSubCat_Infantry // Category class, you point to it in editorSubcategory property
+	{
+		displayName = "Infantry Vehicles"; // Name visible in the list
+	};
+	class metal_co_EdSubCat_Goff // Category class, you point to it in editorSubcategory property
+	{
+		displayName = "Goff Vehicles"; // Name visible in the list
+	};
 };
 class cfgFactionClasses
 {

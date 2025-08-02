@@ -38,12 +38,24 @@ class CfgPatches
 			"MET_ATAP_Base",
 			"MET_Uber_LAAT",
 			"MET_LAATCMK2",
-			"MET_Bantha_Morter",
+			"MET_Bantha_Mortar",
 			"MET_Bantha_IFV",
 			"MET_Bantha_Transport",
-			"MET_ATTE_Rommel"
+			"MET_Bantha_MSV",
+			"MET_Bantha_Assault",
+			"MET_Bantha_Cargo",
+			"MET_ATTE_Rommel",
+			"MET_BARC",
+			"MET_BARC_SideCar"
 		};
-		weapons[] = {};
+		weapons[] = 
+		{
+
+		};
+		magazines[] =
+		{
+			
+		};
 		requiredAddons[] = 
 		{
 			"A3_Data_F",
@@ -135,6 +147,11 @@ class cfgvehicles
 	class Aux212_Bantha_C_IFV;
 	class Aux212_Bantha_C_Mortar;
 	class Aux212_Bantha_C_Unarmed;
+	class Aux212_Bantha_E_MSV;
+	class Aux212_Bantha_T_Assault;
+	class Aux212_Bantha_T_Cargo;
+	class 3AS_Barc_501;
+	class 3AS_BarcSideCar;
 
 	#include "base_vic.hpp"
 	#include "custom_vic.hpp"
@@ -160,6 +177,135 @@ class CfgFunctions {
 		class Resupply {
 			file = "z\16th\addons\vehicles\resupply";
 			class addCrates {};
+		};
+	};
+};
+
+class CfgWeapons 
+{
+	class CannonCore;
+
+	class MET_BARC_Repeater : CannonCore
+	{
+		scope = 1;
+		displayName = "BARC Repeater";
+		nameSound = "cannon";
+		cursor = "EmptyCursor";
+		cursorAim = "mg";
+		magazines[] =
+		{
+			"MET_BARC_Mag"
+		};
+		canLock = 2;
+		ballisticsComputer = 2;
+		modes[] =
+		{
+			"manual",
+			"close",
+			"short",
+			"medium",
+			"far"
+		};
+		class manual : CannonCore
+		{
+			displayName = "BARC Repeater";
+			autoFire = 1;
+			sounds[] =
+			{
+				"StandardSound"
+			};
+			class StandardSound
+			{
+				begin1[] =
+				{
+					"3AS\3AS_LightVics\3AS_BARC\Sounds\canon",
+					1.1220185,
+					1,
+					1100
+				};
+				soundBegin[] =
+				{
+					"begin1",
+					1
+				};
+				closure1[] = {};
+				soundClosure[] =
+				{
+					"closure1",
+					0.5
+				};
+			};
+			reloadTime = 0.30000001;
+			dispersion = 0.0022;
+			soundContinuous = 0;
+			soundBurst = 0;
+			showToPlayer = 1;
+			burst = 1;
+			aiRateOfFire = 0.5;
+			aiRateOfFireDistance = 50;
+			minRange = 1;
+			minRangeProbab = 0.0099999998;
+			midRange = 2;
+			midRangeProbab = 0.0099999998;
+			maxRange = 3;
+			maxRangeProbab = 0.0099999998;
+			textureType = "fullAuto";
+		};
+		class close : manual
+		{
+			showToPlayer = 0;
+			burst = 15;
+			aiRateOfFire = 0.25;
+			aiRateOfFireDistance = 400;
+			minRange = 0;
+			minRangeProbab = 0.050000001;
+			midRange = 200;
+			midRangeProbab = 0.69999999;
+			maxRange = 400;
+			maxRangeProbab = 0.2;
+		};
+		class short : close
+		{
+			burst = 10;
+			aiRateOfFire = 0.5;
+			aiRateOfFireDistance = 500;
+			minRange = 300;
+			minRangeProbab = 0.2;
+			midRange = 400;
+			midRangeProbab = 0.69999999;
+			maxRange = 500;
+			maxRangeProbab = 0.2;
+		};
+		class medium : close
+		{
+			burst = 7;
+			aiRateOfFire = 1;
+			aiRateOfFireDistance = 900;
+			minRange = 400;
+			minRangeProbab = 0.2;
+			midRange = 700;
+			midRangeProbab = 0.69999999;
+			maxRange = 900;
+			maxRangeProbab = 0.2;
+		};
+		class far : close
+		{
+			burst = 4;
+			aiRateOfFire = 1.5;
+			aiRateOfFireDistance = 1500;
+			minRange = 800;
+			minRangeProbab = 0.2;
+			midRange = 1000;
+			midRangeProbab = 0.40000001;
+			maxRange = 1500;
+			maxRangeProbab = 0.0099999998;
+		};
+	};
+	class MET_BARC_SideCar_Repeater : MET_BARC_Repeater
+	{
+		class manual : manual
+		{
+			reloadTime = 0.1;
 		};
 	};
 };
