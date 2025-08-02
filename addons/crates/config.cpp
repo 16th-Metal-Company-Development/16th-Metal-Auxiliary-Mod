@@ -1773,55 +1773,50 @@ class CfgVehicles
 		};
 		class TransportMagazines
 		{
-			class _xx_metal_aa_mag
-			{
-				magazine="metal_aa_mag";
-				count=15;
-			};
-			class _xx_metal_ap_mag
-			{
-				magazine="metal_ap_mag";
-				count=15;
-			};
-			class _xx_metal_at_mag
-			{
-				magazine="metal_at_mag";
-				count=20;
-			};
-			class _xx_3AS_JLTS_MK39_AA
-			{
-				magazine="3AS_JLTS_MK39_AA";
-				count=15;
-			};
-			class _xx_DBA_90mm_IK40_FRAG_x1_mag
-			{
-				magazine="DBA_90mm_IK40_FRAG_x1_mag";
-				count=20;
-			};
 			class _xx_DBA_90mm_IK55_HEAT_x1_mag
 			{
 				magazine="DBA_90mm_IK55_HEAT_x1_mag";
-				count=30;
+				count=20;
 			};
 			class _xx_DBA_90mm_IK60_HEP_x1_mag
 			{
 				magazine="DBA_90mm_IK60_HEP_x1_mag";
 				count=20;
 			};
+			class _xx_DBA_90mm_IK40_FRAG_x1_mag
+			{
+				magazine="DBA_90mm_IK40_FRAG_x1_mag";
+				count=20;
+			};
+			class _xx_metal_at_mag
+			{
+				magazine="metal_at_mag";
+				count=20;
+			};
+			class _xx_metal_aa_mag
+			{
+				magazine="metal_aa_mag";
+				count=20;
+			};
+			class _xx_metal_ap_mag
+			{
+				magazine="metal_ap_mag";
+				count=20;
+			};
 			class _xx_MET_AA_SINGLE
 			{
 				magazine="MET_AA_SINGLE";
-				count=10;
+				count=20;
 			};
 			class _xx_MET_AP_SINGLE
 			{
 				magazine="MET_AP_SINGLE";
-				count=10;
+				count=20;
 			};
-			class _xx_MET_AT_SINGLE
+			class _xx_MET_AT_Single
 			{
-				magazine="MET_AT_SINGLE";
-				count=10;
+				magazine="MET_AT_Single";
+				count=20;
 			};
 		};
         class TransportWeapons
