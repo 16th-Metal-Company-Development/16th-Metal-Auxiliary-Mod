@@ -439,10 +439,11 @@ class CfgWeapons
 				};
 			};
 		};
-		subItems[]=
+		/*subItems[]=
 		{
 			"nvg_16_arf_int"
-		};
+		};*/
+		subItems[]={};
 	};
 	class helmet_16th_arf_nco: helmet_16th_arf
 	{
@@ -3545,10 +3546,101 @@ class CfgWeapons
 	{
 		scope=2;
 		displayName="[16th] Macrobinoculars (Down)";
+		modelOptics="\MRC\JLTS\characters\CloneArmor\CloneNVG_regular_optic.p3d";
 		hiddenselectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\gear\visors\trp_nvg_co.paa"
 		};
+		visionMode[]=
+		{
+			"Normal",
+			"NVG"
+		};
+	};
+	class JLTS_NVG_droid_chip_1;
+	class nvg_16th_chip: JLTS_NVG_droid_chip_1
+	{
+		scope=2;
+		displayName="[16th] Clone NV Chip";
+		modelOptics="\MRC\JLTS\characters\CloneArmor\CloneNVG_regular_optic.p3d";
+		hiddenselectionsTextures[]=
+		{
+			"z\16th\addons\armor\data\gear\visors\trp_nvg_co.paa"
+		};
+		visionMode[]=
+		{
+			"Normal",
+			"NVG"
+		};
+	};
+	class JLTS_NVG_droid_chip_2;
+	class nvg_16th_adv_chip_1: JLTS_NVG_droid_chip_2
+	{
+		scope=2;
+		displayName="[16th] Clone Thermal Chip (White Hot)";
+		modelOptics="\MRC\JLTS\characters\CloneArmor\CloneNVG_regular_optic.p3d";
+		hiddenselectionsTextures[]=
+		{
+			"z\16th\addons\armor\data\gear\visors\trp_nvg_co.paa"
+		};
+		visionMode[]=
+		{
+			"Normal",
+			"NVG",
+			"TI"
+		};
+		thermalMode[]={0,1};
+	};
+	class nvg_16th_adv_chip_2: JLTS_NVG_droid_chip_2
+	{
+		scope=2;
+		displayName="[16th] Clone Thermal Chip (Green Hot)";
+		modelOptics="\MRC\JLTS\characters\CloneArmor\CloneNVG_regular_optic.p3d";
+		hiddenselectionsTextures[]=
+		{
+			"z\16th\addons\armor\data\gear\visors\trp_nvg_co.paa"
+		};
+		visionMode[]=
+		{
+			"Normal",
+			"NVG",
+			"TI"
+		};
+		thermalMode[]={2,3};
+	};
+	class nvg_16th_adv_chip_3: JLTS_NVG_droid_chip_2
+	{
+		scope=2;
+		displayName="[16th] Clone Thermal Chip (Red Hot)";
+		modelOptics="\MRC\JLTS\characters\CloneArmor\CloneNVG_regular_optic.p3d";
+		hiddenselectionsTextures[]=
+		{
+			"z\16th\addons\armor\data\gear\visors\trp_nvg_co.paa"
+		};
+		visionMode[]=
+		{
+			"Normal",
+			"NVG",
+			"TI"
+		};
+		thermalMode[]={4,5};
+	};
+	class nvg_16th_adv_chip_4: JLTS_NVG_droid_chip_2
+	{
+		scope=2;
+		displayName="[16th] Clone Thermal Chip (Multi)";
+		modelOptics="\MRC\JLTS\characters\CloneArmor\CloneNVG_regular_optic.p3d";
+		hiddenselectionsTextures[]=
+		{
+			"z\16th\addons\armor\data\gear\visors\trp_nvg_co.paa"
+		};
+		visionMode[]=
+		{
+			"Normal",
+			"NVG",
+			"TI"
+		};
+		thermalMode[]={6,7};
 	};
 	class JLTS_CloneNVGCC;
 	class nvg_16th_cc: JLTS_CloneNVGCC
@@ -6904,11 +6996,32 @@ class CfgVehicles
 	class backpack_16th_rto: JLTS_Clone_backpack_RTO
 	{
 		scope=2;
-		displayName="[16th] RO Backpack";
+		displayName="[16th] RTO Backpack";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\gear\backpacks\rto_backpack_co.paa"
 		};
+		maximumLoad=300;
+	};
+	class JLTS_Clone_LR_attachment;
+	class backpack_16th_mini_rto_1: JLTS_Clone_LR_attachment
+	{
+		scope=2;
+		displayName="[16th] RTO Mini Backpack Mk1";
+		maximumLoad=300;
+	};
+	class JLTS_Clone_RTO_pack;
+	class backpack_16th_mini_rto_2: JLTS_Clone_RTO_pack
+	{
+		scope=2;
+		displayName="[16th] RTO Mini Backpack Mk2";
+		maximumLoad=300;
+	};
+	class Aux212_Clone_Radio_LR;
+	class backpack_16th_mini_rto_3: Aux212_Clone_Radio_LR
+	{
+		scope=2;
+		displayName="[16th] RTO Mini Backpack Mk3";
 		maximumLoad=300;
 	};
 	class backpack_16_ca_base: JLTS_Clone_backpack

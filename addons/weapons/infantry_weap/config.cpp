@@ -107,6 +107,7 @@ class 3AS_MuzzleSlot_DC17S;
 class 3AS_CowsSlot_DC17S;
 class CfgWeapons
 {
+	class LFP_rifle_base;
 	class Launcher_Base_F
 	{
 		class WeaponSlotsInfo;
@@ -1544,7 +1545,7 @@ class CfgWeapons
 					"MET_holo_optic",
 					//"3AS_optic_holo_DC15S",
 					"MET_optic_holo_scope",
-					//"MET_optic_holo_test",
+					"MET_optic_holo_test",
 					"MET_Optic_Holo_Two_Blue",
 					"MET_Optic_Holo_Two_Red",
 					"MET_Optic_Holo_Two_Yellow",
@@ -3210,6 +3211,188 @@ class CfgWeapons
 				slot="UnderBarrelSlot";
 				item="3AS_bipod_DC15X_F";
 			};
+		};
+	};
+	/*==============================================================================
+	==DC-15XM
+	==============================================================================*/
+	class WeaponSlotsInfo;
+	class MET_DC15xm: LFP_rifle_base
+	{
+		scope=2;
+		model="LF_Weapon_Unit\dc15xm\dc15xm.p3d";
+		handAnim[]=
+		{
+			"OFP2_ManSkeleton",
+			"LF_Weapon_Unit\dc15xm\anim\dc15xm.rtm"
+		};
+		reloadAction="ReloadMagazine";
+		picture="\LF_Weapon_Unit\dc15xm\ui\dc15xm_co.paa";
+		magazines[]=
+		{
+			"MET_DC15xm_mag",
+			"MET_DC15xm_at_mag"
+		};
+		WBK_UseDisintegrate = "true";
+		displayname="[16th] DC-15XM";
+		descriptionShort="Anti Material Rifle";
+		selectionFireAnim="zasleh";
+		class Library
+		{
+			libTextDesc="";
+		};
+		drySound[]=
+		{
+			"LF_Weapon_Unit\main\sounds\dc15_empty.wss",
+			1,
+			1,
+			50
+		};
+		reloadMagazineSound[]=
+		{
+			"LF_Weapon_Unit\main\sounds\dc15_reload.wss",
+			0.80000001,
+			1,
+			10
+		};
+		soundBullet[]={};
+		modes[]=
+		{
+			"Single",
+			"close",
+			"short",
+			"medium"
+		};
+		fireLightDuration=0.050000001;
+		fireLightIntensity=0.40000001;
+		fireLightDiffuse[]={0,0,0.0099999998};
+		fireLightAmbient[]={0,0,0};
+		class Single: Mode_SemiAuto
+		{
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				closure1[]={};
+				closure2[]={};
+				soundClosure[]={};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				begin1[]=
+				{
+					"z\16th\addons\weapons\infantry_weap\sounds\dc15xm.ogg",
+					1,
+					1,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+			};
+			reloadTime=0.9;
+			dispersion=0.00000000000001;
+			minRange=5;
+			minRangeProbab=0.30000001;
+			midRange=20;
+			midRangeProbab=0.60000002;
+			maxRange=50;
+			maxRangeProbab=0.1;
+			aiRateOfFire=2;
+			aiRateOfFireDistance=25;
+		};
+		class close: Single
+		{
+			showToPlayer=0;
+			aiRateOfFire=0.25;
+			aiRateOfFireDistance=400;
+			minRange=0;
+			minRangeProbab=0.050000001;
+			midRange=200;
+			midRangeProbab=0.69999999;
+			maxRange=400;
+			maxRangeProbab=0.2;
+		};
+		class short: close
+		{
+			aiRateOfFire=0.5;
+			aiRateOfFireDistance=500;
+			minRange=300;
+			minRangeProbab=0.2;
+			midRange=400;
+			midRangeProbab=0.69999999;
+			maxRange=500;
+			maxRangeProbab=0.2;
+		};
+		class medium: close
+		{
+			aiRateOfFire=1;
+			aiRateOfFireDistance=900;
+			minRange=400;
+			minRangeProbab=0.2;
+			midRange=700;
+			midRangeProbab=0.69999999;
+			maxRange=900;
+			maxRangeProbab=0.2;
+		};
+		inertia=1.4;
+		dexterity=1.7;
+		initSpeed=-1;
+		recoil="LFP_recoil";
+		maxRecoilSway=0.015;
+		swayDecaySpeed=1;
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			mass=60;
+			class CowsSlot: Cowsslot
+			{
+				compatibleItems[]=
+				{
+					""
+				};
+			};
+		};
+		modelOptics="z\16th\addons\weapons\scopes\big_cross_blue_med.p3d";
+		class OpticsModes
+		{
+			class Snip
+				{
+					opticsID=1;
+					opticsDisplayName="WFOV";
+					useModelOptics=1;
+					opticsPPEffects[]=
+					{
+						"OpticsCHAbera1",
+						"OpticsBlur1"
+					};
+					maxZeroing=2000;
+					opticsZoomMin=0.0037499999;
+					opticsZoomMax=0.1;
+					opticsZoomInit=0.75;
+					distanceZoomMin=2000;
+					distanceZoomMax=2000;
+					visionMode[]=
+					{
+						"Normal",
+						"NVG",
+						"TI"
+					};
+					thermalMode[]={0,1};
+					memoryPointCamera="opticView";
+					modelOptics[]=
+					{
+						"z\16th\addons\weapons\scopes\big_cross_blue_med.p3d"
+					};
+					opticsFlare=1;
+					opticsDisablePeripherialVision=1;
+					cameraDir="";
+				};
 		};
 	};
 	/*==============================================================================
@@ -5761,8 +5944,6 @@ class CfgWeapons
 			mass=300;
 		};
 	};
-	class LFP_rifle_base;
-	class WeaponSlotsInfo;
 	/*==============================================================================
 	==SMGs
 	==============================================================================*/
@@ -6559,7 +6740,7 @@ class CfgWeapons
 		descriptionShort="$STR_3AS_Weapons_Republic_Optic_DC15X_Scope_DesShort";
 		class ItemInfo: InventoryOpticsItem_Base_F
 		{
-			mass=20;
+			mass=15;
 			opticType=2;
 			weaponInfoType="RscWeaponRangeZeroingFOV";
 			optics=1;
@@ -6780,8 +6961,10 @@ class CfgWeapons
 					visionMode[]=
 					{
 						"Normal",
-						"NVG"
+						"NVG",
+						"Ti"
 					};
+					thermalMode[] = {2, 3};
 					opticsFlare=1;
 					distanceZoomMin=400;
 					distanceZoomMax=400;
@@ -7013,7 +7196,7 @@ class CfgWeapons
 	{
 		displayName="[16th] Holo Scope";
 		picture="\3AS\3AS_Weapons\Data\Textures\Energy_Cell_Arsenal.paa";
-		model="z\16th\addons\weapons\holos\met_holo_1.p3d";
+		model="z\16th\addons\weapons\holos\met_holo_2.p3d";
 		modelOptics="z\16th\addons\weapons\scopes\big_cross_blue_full.p3d";
 		weaponInfoType="RscWeaponZeroing";
 		class ItemInfo: InventoryOpticsItem_Base_F
@@ -8049,7 +8232,16 @@ class CfgWeapons
 			{
 				compatibleItems[]={
 					"MET_holo_optic",
-					"3AS_optic_holo_DC15S"
+					//"3AS_optic_holo_DC15S",
+					"MET_optic_holo_scope",
+					"MET_Optic_Holo_Two_Blue",
+					"MET_Optic_Holo_Two_Red",
+					"MET_Optic_Holo_Two_Yellow",
+					"MET_Optic_Holo_Two_Green",
+					"MET_Optic_Holo_One_Blue",
+					"MET_Optic_Holo_One_Green",
+					"MET_Optic_Holo_One_Red",
+					"MET_Optic_Holo_One_Yellow"
 				};
 			};
 			class PointerSlot: PointerSlot
@@ -9583,11 +9775,29 @@ class CfgMagazines
 		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
 		count=10;
 		displayName="[16th] DC-15X Energy Cell";
-		displayNameShort="DC-15XM Energy Cell";
-		descriptionShort="Energy Cell for the DC-15XM";
+		displayNameShort="DC-15X Energy Cell";
+		descriptionShort="Energy Cell for the DC-15X";
 		ammo="MET_blasterbolt_snp";
 		tracersEvery=1;
 		initSpeed = 1650;
+		mass=20;
+	};
+	class MET_DC15xm_mag: JLTS_DC15A_mag
+	{
+		JLTS_hasElectronics=1;
+		JLTS_hasEMPProtection=1;
+		author="Hazmat";
+		modelSpecial="";
+		modelSpecialIsProxy=0;
+		picture="\3AS\3AS_Weapons\Data\UI\3as_sniper_b.paa";
+		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
+		count=5;
+		displayName="[16th] DC-15XM Energy Cell";
+		displayNameShort="DC-15XM Energy Cell";
+		descriptionShort="Energy Cell for the DC-15XM";
+		ammo="MET_blasterbolt_antimat";
+		tracersEvery=1;
+		initSpeed = 2650;
 		mass=20;
 	};
 	class MET_DC19X_Mag: JLTS_DC15A_mag
@@ -9602,7 +9812,7 @@ class CfgMagazines
 		count=10;
 		displayName="[16th] DC-15X Stealth Energy Cell";
 		displayNameShort="DC-15X Stealth Energy Cell";
-		descriptionShort="Energy Cell for the DC-15XM";
+		descriptionShort="Energy Cell for the DC-19X";
 		ammo="MET_blasterbolt_snp_STLTH";
 		tracersEvery=1;
 		initSpeed = 1650;
@@ -9624,6 +9834,24 @@ class CfgMagazines
 		ammo="MET_blasterbolt_at_green";
 		tracersEvery=1;
 		initSpeed = 1650;
+		mass=50;
+	};
+	class MET_DC15xm_at_mag: JLTS_DC15A_mag
+	{
+		JLTS_hasElectronics=1;
+		JLTS_hasEMPProtection=1;
+		author="Hazmat";
+		modelSpecial="";
+		modelSpecialIsProxy=0;
+		picture="\3AS\3AS_Weapons\Data\UI\3as_sniper_g.paa";
+		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
+		count=2;
+		displayName="[16th] DC-15XM Ionized Energy Cell";
+		displayNameShort="Ionized Energy Cell";
+		descriptionShort="Ionized Energy Cell for the DC-15XM";
+		ammo="MET_blasterbolt_antimatat_Green";
+		tracersEvery=1;
+		initSpeed = 3000;
 		mass=50;
 	};
 	class MET_slug_mag: CA_Magazine
@@ -9779,7 +10007,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_ap.paa";
 		descriptionShort="Impact grenade";
 		ammo="MET_HEAT_LauncherGrenade";
-		mass=8;
+		mass=6;
 	};
 	class MET_dc15sa_battery: 100Rnd_65x39_caseless_mag
 	{
@@ -9816,7 +10044,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_he.paa";
 		descriptionShort="Impact grenade";
 		ammo="MET_HE_LauncherGrenade";
-		mass=8;
+		mass=6;
 	};
 	class MET_Clust_Grenade_shell: 1Rnd_HE_Grenade_shell
 	{
@@ -9850,7 +10078,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_ap.paa";
 		descriptionShort="Impact grenade";
 		ammo="MET_HEAT_LauncherGrenade";
-		mass=8;
+		mass=6;
 	};
 	class MET_Grape_Grenade: 1Rnd_HE_Grenade_shell
 	{
@@ -9861,7 +10089,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_ap.paa";
 		descriptionShort="Fuck that Direction";
 		ammo="MET_GrapeShot_blue";
-		mass=8;
+		mass=6;
 	};
 	class MET_6Rnd_Grape_Grenade: MET_Grape_Grenade
 	{
@@ -9884,7 +10112,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_flw.paa";
 		descriptionShort="Flare";
 		ammo="MET_GL_Flare_LUM";
-		mass=8;
+		mass=6;
 	};
 	class MET_ILLUM_Grenade_Clust: 1Rnd_HE_Grenade_shell
 	{
@@ -9895,7 +10123,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_flw.paa";
 		descriptionShort="Flare";
 		ammo="MET_GL_Flare_LUM_Cluster";
-		mass=8;
+		mass=6;
 	};
 	class MET_SUN_Grenade: 1Rnd_HE_Grenade_shell
 	{
@@ -9907,7 +10135,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_flw.paa";
 		descriptionShort="By the Emperors Light...";
 		ammo="MET_GL_Flare_SUN";
-		mass=8;
+		mass=6;
 	};
 	class MET_SUN_Grenade_Clust: 1Rnd_HE_Grenade_shell
 	{
@@ -9919,7 +10147,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_flw.paa";
 		descriptionShort="... Light my Darkness";
 		ammo="MET_GL_Flare_SUN_Cluster";
-		mass=8;
+		mass=6;
 	};
 	class MET_RA_Grenade: 1Rnd_HE_Grenade_shell
 	{
@@ -9931,7 +10159,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_flw.paa";
 		descriptionShort="RA!";
 		ammo="MET_GL_Flare_RA";
-		mass=8;
+		mass=6;
 	};
 	class MET_RA_Grenade_Clust: 1Rnd_HE_Grenade_shell
 	{
@@ -9943,7 +10171,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_flw.paa";
 		descriptionShort="I SUMMON THEE";
 		ammo="MET_GL_Flare_RA_Cluster";
-		mass=8;
+		mass=6;
 	};
 	class MET_ILLUM_B_Grenade: 1Rnd_HE_Grenade_shell
 	{
@@ -9954,7 +10182,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_flb.paa";
 		descriptionShort="Flare";
 		ammo="MET_GL_Flare_B_LUM";
-		mass=8;
+		mass=6;
 	};
 	class MET_ILLUM_B_Grenade_Clust: 1Rnd_HE_Grenade_shell
 	{
@@ -9965,7 +10193,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_flb.paa";
 		descriptionShort="Flare";
 		ammo="MET_GL_Flare_B_LUM_Cluster";
-		mass=8;
+		mass=6;
 	};
 	class MET_ILLUM_G_Grenade: 1Rnd_HE_Grenade_shell
 	{
@@ -9976,7 +10204,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_flg.paa";
 		descriptionShort="Flare";
 		ammo="MET_GL_Flare_G_LUM";
-		mass=8;
+		mass=6;
 	};
 	class MET_ILLUM_G_Grenade_Clust: 1Rnd_HE_Grenade_shell
 	{
@@ -9987,7 +10215,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_flg.paa";
 		descriptionShort="Flare";
 		ammo="MET_GL_Flare_G_LUM_Cluster";
-		mass=8;
+		mass=6;
 	};
 	class MET_ILLUM_R_Grenade: 1Rnd_HE_Grenade_shell
 	{
@@ -9998,7 +10226,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_flr.paa";
 		descriptionShort="Flare";
 		ammo="MET_GL_Flare_R_LUM";
-		mass=8;
+		mass=6;
 	};
 	class MET_ILLUM_R_Grenade_Clust: 1Rnd_HE_Grenade_shell
 	{
@@ -10009,7 +10237,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_flr.paa";
 		descriptionShort="Flare";
 		ammo="MET_GL_Flare_R_LUM_Cluster";
-		mass=8;
+		mass=6;
 	};
 	class MET_ILLUM_Y_Grenade: 1Rnd_HE_Grenade_shell
 	{
@@ -10020,7 +10248,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_fly.paa";
 		descriptionShort="Flare";
 		ammo="MET_GL_Flare_Y_LUM";
-		mass=8;
+		mass=6;
 	};
 	class MET_ILLUM_Y_Grenade_Clust: 1Rnd_HE_Grenade_shell
 	{
@@ -10031,7 +10259,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_fly.paa";
 		descriptionShort="Flare";
 		ammo="MET_GL_Flare_Y_LUM_Cluster";
-		mass=8;
+		mass=6;
 	};
 	class MET_ILLUM_O_Grenade: 1Rnd_HE_Grenade_shell
 	{
@@ -10042,7 +10270,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_flo.paa";
 		descriptionShort="Flare";
 		ammo="MET_GL_Flare_O_LUM";
-		mass=8;
+		mass=6;
 	};
 	class MET_ILLUM_O_Grenade_Clust: 1Rnd_HE_Grenade_shell
 	{
@@ -10053,7 +10281,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_flo.paa";
 		descriptionShort="Flare";
 		ammo="MET_GL_Flare_O_LUM_Cluster";
-		mass=8;
+		mass=6;
 	};
 	class MET_ILLUM_P_Grenade: 1Rnd_HE_Grenade_shell
 	{
@@ -10064,7 +10292,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_flp.paa";
 		descriptionShort="Flare";
 		ammo="MET_GL_Flare_P_LUM";
-		mass=8;
+		mass=6;
 	};
 	class MET_ILLUM_P_Grenade_Clust: 1Rnd_HE_Grenade_shell
 	{
@@ -10075,7 +10303,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_flp.paa";
 		descriptionShort="Flare";
 		ammo="MET_GL_Flare_P_LUM_Cluster";
-		mass=8;
+		mass=6;
 	};
 	class MET_ILLUM_TU_Grenade: 1Rnd_HE_Grenade_shell
 	{
@@ -10086,7 +10314,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_flb.paa";
 		descriptionShort="Flare";
 		ammo="MET_GL_Flare_TU_LUM";
-		mass=8;
+		mass=6;
 	};
 	class MET_ILLUM_TU_Grenade_Clust: 1Rnd_HE_Grenade_shell
 	{
@@ -10097,7 +10325,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_flb.paa";
 		descriptionShort="Flare";
 		ammo="MET_GL_Flare_TU_LUM_Cluster";
-		mass=8;
+		mass=6;
 	};
 	class MET_ILLUM_TE_Grenade: 1Rnd_HE_Grenade_shell
 	{
@@ -10108,7 +10336,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_flg.paa";
 		descriptionShort="Flare";
 		ammo="MET_GL_Flare_TE_LUM";
-		mass=8;
+		mass=6;
 	};
 	class MET_ILLUM_TE_Grenade_Clust: 1Rnd_HE_Grenade_shell
 	{
@@ -10119,7 +10347,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_flg.paa";
 		descriptionShort="Flare";
 		ammo="MET_GL_Flare_TE_LUM_Cluster";
-		mass=8;
+		mass=6;
 	};
 	class MET_ILLUM_IR_Grenade: 1Rnd_HE_Grenade_shell
 	{
@@ -10130,7 +10358,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_flp.paa";
 		descriptionShort="Flare";
 		ammo="MET_GL_Flare_IR_LUM";
-		mass=8;
+		mass=6;
 	};
 	class MET_ILLUM_IR_Grenade_Clust: 1Rnd_HE_Grenade_shell
 	{
@@ -10141,7 +10369,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_flp.paa";
 		descriptionShort="Flare";
 		ammo="MET_GL_Flare_IR_LUM_Cluster";
-		mass=8;
+		mass=6;
 	};
 	class MET_SMKW_Grenade: 1Rnd_HE_Grenade_shell
 	{
@@ -10152,7 +10380,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_smw.paa";
 		descriptionShort="Smoke grenade";
 		ammo="Met_Ammo_smoke_white";
-		mass=8;
+		mass=6;
 	};
 	class MET_SMKB_Grenade: 1Rnd_HE_Grenade_shell
 	{
@@ -10163,7 +10391,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_smb.paa";
 		descriptionShort="Smoke grenade";
 		ammo="Met_Ammo_smoke_blue";
-		mass=8;
+		mass=6;
 	};
 	class MET_SMKG_Grenade: 1Rnd_HE_Grenade_shell
 	{
@@ -10174,7 +10402,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_smg.paa";
 		descriptionShort="Smoke grenade";
 		ammo="Met_Ammo_smoke_green";
-		mass=8;
+		mass=6;
 	};
 	class MET_SMKO_Grenade: 1Rnd_HE_Grenade_shell
 	{
@@ -10185,7 +10413,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_smo.paa";
 		descriptionShort="Smoke grenade";
 		ammo="Met_Ammo_smoke_orange";
-		mass=8;
+		mass=6;
 	};
 	class MET_SMKP_Grenade: 1Rnd_HE_Grenade_shell
 	{
@@ -10196,7 +10424,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_smp.paa";
 		descriptionShort="Smoke grenade";
 		ammo="Met_Ammo_smoke_purple";
-		mass=8;
+		mass=6;
 	};
 	class MET_SMKR_Grenade: 1Rnd_HE_Grenade_shell
 	{
@@ -10207,7 +10435,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_smr.paa";
 		descriptionShort="Smoke grenade";
 		ammo="Met_Ammo_smoke_red";
-		mass=8;
+		mass=6;
 	};
 	class MET_SMKTU_Grenade: 1Rnd_HE_Grenade_shell
 	{
@@ -10218,7 +10446,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_smb.paa";
 		descriptionShort="Smoke grenade";
 		ammo="Met_Ammo_smoke_turquoise";
-		mass=8;
+		mass=6;
 	};
 	class MET_SMKTE_Grenade: 1Rnd_HE_Grenade_shell
 	{
@@ -10229,7 +10457,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_smg.paa";
 		descriptionShort="Smoke grenade";
 		ammo="Met_Ammo_smoke_teal";
-		mass=8;
+		mass=6;
 	};
 	class MET_SMKY_Grenade: 1Rnd_HE_Grenade_shell
 	{
@@ -10240,7 +10468,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_smy.paa";
 		descriptionShort="Smoke grenade";
 		ammo="Met_Ammo_smoke_yellow";
-		mass=8;
+		mass=6;
 	};
 	class MET_SMKW_Clust_Grenade: MET_SMKW_Grenade
 	{
@@ -19823,6 +20051,3000 @@ class CfgAmmo
 		effectfly="MET_BlasterBoltGlow_Medium_Yellow_Fly";
 		lightcolor[]={.839,0.749,0.486};
 	};
+	class MET_blasterbolt_antimat: MET_blasterbolt_at
+	{
+		ACE_damageType="bullet";
+		hit=250;
+		indirectHit=6;
+		explosive=1;
+		indirectHitRange=0.5;
+		caliber=40;
+		coefGravity=0;
+		timetolive=80;
+		waterFriction=-0.0099999998;
+		deflecting=0;
+		airfriction=0;
+		tracerstarttime=0.050000001;
+		tracerendtime=22;
+		nvgonly=0;
+		airlock=1;
+		irtarget=1;
+		brightness=1000;
+		flaresize=5;
+		tracerscale=1;
+		effectflare="FlareShell";
+		effectfly="MET_BlasterBoltGlow_Blue_Fly";
+		ExplosionEffects="MET_ImpactEffect";
+		cratereffects="";
+		maxSpeed=2650;
+		class HitEffects
+		{
+			Hit_Foliage_Green="MET_ImpactEffect";
+			Hit_Foliage_Dead="MET_ImpactEffect";
+			Hit_Foliage_Green_big="MET_ImpactEffect";
+			Hit_Foliage_Palm="MET_ImpactEffect";
+			Hit_Foliage_Pine="MET_ImpactEffect";
+			hitFoliage="MET_ImpactEffect";
+			hitGlass="MET_ImpactEffect";
+			hitGlassArmoRed="MET_ImpactEffect";
+			hitWood="MET_ImpactEffect";
+			hitMetal="MET_ImpactEffect";
+			hitMetalPlate="MET_ImpactEffect";
+			hitBuilding="MET_ImpactEffect";
+			hitPlastic="MET_ImpactEffect";
+			hitRubber="MET_ImpactEffect";
+			hitTyre="MET_ImpactEffect";
+			hitConcrete="MET_ImpactEffect";
+			hitMan="MET_ImpactEffect";
+			hitGroundSoft="MET_ImpactEffect";
+			hitGroundRed="MET_ImpactEffect";
+			hitGroundHard="MET_ImpactEffect";
+			hitWater="MET_ImpactEffect";
+			hitVirtual="MET_ImpactEffect";
+			default_mat="MET_ImpactEffect";
+		};
+		soundHitBody1[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\Body_Impact_1.ogg",
+			3,
+			1,
+			200
+		};
+		soundHitBody2[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\Body_Impact_2.ogg",
+			3,
+			1,
+			200
+		};
+		soundHitBody3[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\Body_Impact_3.ogg",
+			3,
+			1,
+			200
+		};
+		soundHitBody4[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\Body_Impact_4.ogg",
+			3,
+			1,
+			200
+		};
+		soundHitBody5[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\Body_Impact_5.ogg",
+			3,
+			1,
+			200
+		};
+		soundHitBody6[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\Body_Impact_1.ogg",
+			3,
+			1.5,
+			200
+		};
+		soundHitBody7[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\Body_Impact_2.ogg",
+			3,
+			1.5,
+			200
+		};
+		soundHitBody8[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\Body_Impact_3.ogg",
+			3,
+			1.5,
+			200
+		};
+		soundHitBody9[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\Body_Impact_4.ogg",
+			3,
+			1.5,
+			200
+		};
+		soundHitBody10[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\Body_Impact_5.ogg",
+			3,
+			1.5,
+			200
+		};
+		hitMan[]=
+		{
+			"soundHitBody1",
+			0.1,
+			"soundHitBody2",
+			0.1,
+			"soundHitBody3",
+			0.1,
+			"soundHitBody4",
+			0.1,
+			"soundHitBody5",
+			0.1,
+			"soundHitBody6",
+			0.1,
+			"soundHitBody7",
+			0.1,
+			"soundHitBody8",
+			0.1,
+			"soundHitBody9",
+			0.1,
+			"soundHitBody10",
+			0.1
+		};
+		soundDefault1[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Default_Impact_1.ogg",
+			2,
+			1,
+			165
+		};
+		soundDefault2[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Default_Impact_2.ogg",
+			2,
+			1,
+			165
+		};
+		soundDefault3[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Default_Impact_3.ogg",
+			2,
+			1,
+			165
+		};
+		soundDefault4[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Default_Impact_4.ogg",
+			2,
+			1,
+			165
+		};
+		soundDefault5[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Default_Impact_5.ogg",
+			2,
+			1,
+			165
+		};
+		soundDefault6[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Default_Impact_6.ogg",
+			2,
+			1,
+			165
+		};
+		soundDefault7[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Default_Impact_7.ogg",
+			2,
+			1,
+			165
+		};
+		soundDefault8[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Default_Impact_8.ogg",
+			2,
+			1,
+			165
+		};
+		soundDefault9[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Default_Impact_9.ogg",
+			2,
+			1,
+			165
+		};
+		soundDefault10[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Default_Impact_10.ogg",
+			2,
+			1,
+			165
+		};
+		soundDefault11[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Default_Impact_11.ogg",
+			2,
+			1,
+			165
+		};
+		soundDefault12[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Default_Impact_12.ogg",
+			2,
+			1,
+			165
+		};
+		soundDefault13[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Default_Impact_13.ogg",
+			2,
+			1,
+			165
+		};
+		soundDefault14[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Default_Impact_14.ogg",
+			2,
+			1,
+			165
+		};
+		soundDefault15[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Default_Impact_15.ogg",
+			2,
+			1,
+			165
+		};
+		soundDefault16[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Default_Impact_16.ogg",
+			2,
+			1,
+			165
+		};
+		soundDefault17[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Default_Impact_17.ogg",
+			2,
+			1,
+			165
+		};
+		soundDefault18[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Default_Impact_18.ogg",
+			2,
+			1,
+			165
+		};
+		soundDefault19[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Default_Impact_19.ogg",
+			2,
+			1,
+			165
+		};
+		soundDefault20[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Default_Impact_20.ogg",
+			2,
+			1,
+			165
+		};
+		soundDefault21[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Default_Impact_21.ogg",
+			2,
+			1,
+			165
+		};
+		soundDefault22[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Default_Impact_22.ogg",
+			2,
+			1,
+			165
+		};
+		soundDefault23[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Default_Impact_23.ogg",
+			2,
+			1,
+			165
+		};
+		soundDefault24[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Default_Impact_24.ogg",
+			2,
+			1,
+			165
+		};
+		soundDefault25[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Default_Impact_25.ogg",
+			2,
+			1,
+			165
+		};
+		soundDefault26[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Default_Impact_26.ogg",
+			2,
+			1,
+			165
+		};
+		soundDefault27[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Default_Impact_27.ogg",
+			2,
+			1,
+			165
+		};
+		soundDefault28[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Default_Impact_28.ogg",
+			2,
+			1,
+			165
+		};
+		soundDefault29[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Default_Impact_29.ogg",
+			2,
+			1,
+			165
+		};
+		soundDefault30[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Default_Impact_30.ogg",
+			2,
+			1,
+			165
+		};
+		soundDefault31[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Default_Impact_31.ogg",
+			2,
+			1,
+			165
+		};
+		soundDefault32[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Default_Impact_32.ogg",
+			2,
+			1,
+			165
+		};
+		soundDefault33[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Default_Impact_33.ogg",
+			2,
+			1,
+			165
+		};
+		soundDefault34[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Default_Impact_34.ogg",
+			2,
+			1,
+			165
+		};
+		soundDefault35[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Default_Impact_35.ogg",
+			2,
+			1,
+			165
+		};
+		soundDefault36[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Default_Impact_36.ogg",
+			2,
+			1,
+			165
+		};
+		soundDefault37[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Default_Impact_37.ogg",
+			2,
+			1,
+			165
+		};
+		hitDefault[]=
+		{
+			"soundDefault1",
+			0.027000001,
+			"soundDefault2",
+			0.027000001,
+			"soundDefault3",
+			0.027000001,
+			"soundDefault4",
+			0.027000001,
+			"soundDefault5",
+			0.027000001,
+			"soundDefault6",
+			0.027000001,
+			"soundDefault7",
+			0.027000001,
+			"soundDefault8",
+			0.027000001,
+			"soundDefault9",
+			0.027000001,
+			"soundDefault10",
+			0.027000001,
+			"soundDefault11",
+			0.027000001,
+			"soundDefault12",
+			0.027000001,
+			"soundDefault13",
+			0.027000001,
+			"soundDefault14",
+			0.027000001,
+			"soundDefault15",
+			0.027000001,
+			"soundDefault16",
+			0.027000001,
+			"soundDefault17",
+			0.027000001,
+			"soundDefault18",
+			0.027000001,
+			"soundDefault19",
+			0.027000001,
+			"soundDefault20",
+			0.027000001,
+			"soundDefault21",
+			0.027000001,
+			"soundDefault22",
+			0.027000001,
+			"soundDefault23",
+			0.027000001,
+			"soundDefault24",
+			0.027000001,
+			"soundDefault25",
+			0.027000001,
+			"soundDefault26",
+			0.027000001,
+			"soundDefault37",
+			0.027000001,
+			"soundDefault27",
+			0.027000001,
+			"soundDefault28",
+			0.027000001,
+			"soundDefault29",
+			0.027000001,
+			"soundDefault30",
+			0.027000001,
+			"soundDefault31",
+			0.027000001,
+			"soundDefault32",
+			0.027000001,
+			"soundDefault33",
+			0.027000001,
+			"soundDefault34",
+			0.027000001,
+			"soundDefault35",
+			0.027000001,
+			"soundDefault36",
+			0.027000001
+		};
+		hitFoliage[]=
+		{
+			"soundDefault1",
+			0.027000001,
+			"soundDefault2",
+			0.027000001,
+			"soundDefault3",
+			0.027000001,
+			"soundDefault4",
+			0.027000001,
+			"soundDefault5",
+			0.027000001,
+			"soundDefault6",
+			0.027000001,
+			"soundDefault7",
+			0.027000001,
+			"soundDefault8",
+			0.027000001,
+			"soundDefault9",
+			0.027000001,
+			"soundDefault10",
+			0.027000001,
+			"soundDefault11",
+			0.027000001,
+			"soundDefault12",
+			0.027000001,
+			"soundDefault13",
+			0.027000001,
+			"soundDefault14",
+			0.027000001,
+			"soundDefault15",
+			0.027000001,
+			"soundDefault16",
+			0.027000001,
+			"soundDefault17",
+			0.027000001,
+			"soundDefault18",
+			0.027000001,
+			"soundDefault19",
+			0.027000001,
+			"soundDefault20",
+			0.027000001,
+			"soundDefault21",
+			0.027000001,
+			"soundDefault22",
+			0.027000001,
+			"soundDefault23",
+			0.027000001,
+			"soundDefault24",
+			0.027000001,
+			"soundDefault25",
+			0.027000001,
+			"soundDefault26",
+			0.027000001,
+			"soundDefault37",
+			0.027000001,
+			"soundDefault27",
+			0.027000001,
+			"soundDefault28",
+			0.027000001,
+			"soundDefault29",
+			0.027000001,
+			"soundDefault30",
+			0.027000001,
+			"soundDefault31",
+			0.027000001,
+			"soundDefault32",
+			0.027000001,
+			"soundDefault33",
+			0.027000001,
+			"soundDefault34",
+			0.027000001,
+			"soundDefault35",
+			0.027000001,
+			"soundDefault36",
+			0.027000001
+		};
+		hitPlastic[]=
+		{
+			"soundDefault1",
+			0.027000001,
+			"soundDefault2",
+			0.027000001,
+			"soundDefault3",
+			0.027000001,
+			"soundDefault4",
+			0.027000001,
+			"soundDefault5",
+			0.027000001,
+			"soundDefault6",
+			0.027000001,
+			"soundDefault7",
+			0.027000001,
+			"soundDefault8",
+			0.027000001,
+			"soundDefault9",
+			0.027000001,
+			"soundDefault10",
+			0.027000001,
+			"soundDefault11",
+			0.027000001,
+			"soundDefault12",
+			0.027000001,
+			"soundDefault13",
+			0.027000001,
+			"soundDefault14",
+			0.027000001,
+			"soundDefault15",
+			0.027000001,
+			"soundDefault16",
+			0.027000001,
+			"soundDefault17",
+			0.027000001,
+			"soundDefault18",
+			0.027000001,
+			"soundDefault19",
+			0.027000001,
+			"soundDefault20",
+			0.027000001,
+			"soundDefault21",
+			0.027000001,
+			"soundDefault22",
+			0.027000001,
+			"soundDefault23",
+			0.027000001,
+			"soundDefault24",
+			0.027000001,
+			"soundDefault25",
+			0.027000001,
+			"soundDefault26",
+			0.027000001,
+			"soundDefault37",
+			0.027000001,
+			"soundDefault27",
+			0.027000001,
+			"soundDefault28",
+			0.027000001,
+			"soundDefault29",
+			0.027000001,
+			"soundDefault30",
+			0.027000001,
+			"soundDefault31",
+			0.027000001,
+			"soundDefault32",
+			0.027000001,
+			"soundDefault33",
+			0.027000001,
+			"soundDefault34",
+			0.027000001,
+			"soundDefault35",
+			0.027000001,
+			"soundDefault36",
+			0.027000001
+		};
+		hitRubber[]=
+		{
+			"soundDefault1",
+			0.027000001,
+			"soundDefault2",
+			0.027000001,
+			"soundDefault3",
+			0.027000001,
+			"soundDefault4",
+			0.027000001,
+			"soundDefault5",
+			0.027000001,
+			"soundDefault6",
+			0.027000001,
+			"soundDefault7",
+			0.027000001,
+			"soundDefault8",
+			0.027000001,
+			"soundDefault9",
+			0.027000001,
+			"soundDefault10",
+			0.027000001,
+			"soundDefault11",
+			0.027000001,
+			"soundDefault12",
+			0.027000001,
+			"soundDefault13",
+			0.027000001,
+			"soundDefault14",
+			0.027000001,
+			"soundDefault15",
+			0.027000001,
+			"soundDefault16",
+			0.027000001,
+			"soundDefault17",
+			0.027000001,
+			"soundDefault18",
+			0.027000001,
+			"soundDefault19",
+			0.027000001,
+			"soundDefault20",
+			0.027000001,
+			"soundDefault21",
+			0.027000001,
+			"soundDefault22",
+			0.027000001,
+			"soundDefault23",
+			0.027000001,
+			"soundDefault24",
+			0.027000001,
+			"soundDefault25",
+			0.027000001,
+			"soundDefault26",
+			0.027000001,
+			"soundDefault37",
+			0.027000001,
+			"soundDefault27",
+			0.027000001,
+			"soundDefault28",
+			0.027000001,
+			"soundDefault29",
+			0.027000001,
+			"soundDefault30",
+			0.027000001,
+			"soundDefault31",
+			0.027000001,
+			"soundDefault32",
+			0.027000001,
+			"soundDefault33",
+			0.027000001,
+			"soundDefault34",
+			0.027000001,
+			"soundDefault35",
+			0.027000001,
+			"soundDefault36",
+			0.027000001
+		};
+		hitTyre[]=
+		{
+			"soundDefault1",
+			0.027000001,
+			"soundDefault2",
+			0.027000001,
+			"soundDefault3",
+			0.027000001,
+			"soundDefault4",
+			0.027000001,
+			"soundDefault5",
+			0.027000001,
+			"soundDefault6",
+			0.027000001,
+			"soundDefault7",
+			0.027000001,
+			"soundDefault8",
+			0.027000001,
+			"soundDefault9",
+			0.027000001,
+			"soundDefault10",
+			0.027000001,
+			"soundDefault11",
+			0.027000001,
+			"soundDefault12",
+			0.027000001,
+			"soundDefault13",
+			0.027000001,
+			"soundDefault14",
+			0.027000001,
+			"soundDefault15",
+			0.027000001,
+			"soundDefault16",
+			0.027000001,
+			"soundDefault17",
+			0.027000001,
+			"soundDefault18",
+			0.027000001,
+			"soundDefault19",
+			0.027000001,
+			"soundDefault20",
+			0.027000001,
+			"soundDefault21",
+			0.027000001,
+			"soundDefault22",
+			0.027000001,
+			"soundDefault23",
+			0.027000001,
+			"soundDefault24",
+			0.027000001,
+			"soundDefault25",
+			0.027000001,
+			"soundDefault26",
+			0.027000001,
+			"soundDefault37",
+			0.027000001,
+			"soundDefault27",
+			0.027000001,
+			"soundDefault28",
+			0.027000001,
+			"soundDefault29",
+			0.027000001,
+			"soundDefault30",
+			0.027000001,
+			"soundDefault31",
+			0.027000001,
+			"soundDefault32",
+			0.027000001,
+			"soundDefault33",
+			0.027000001,
+			"soundDefault34",
+			0.027000001,
+			"soundDefault35",
+			0.027000001,
+			"soundDefault36",
+			0.027000001
+		};
+		hitWood[]=
+		{
+			"soundDefault1",
+			0.027000001,
+			"soundDefault2",
+			0.027000001,
+			"soundDefault3",
+			0.027000001,
+			"soundDefault4",
+			0.027000001,
+			"soundDefault5",
+			0.027000001,
+			"soundDefault6",
+			0.027000001,
+			"soundDefault7",
+			0.027000001,
+			"soundDefault8",
+			0.027000001,
+			"soundDefault9",
+			0.027000001,
+			"soundDefault10",
+			0.027000001,
+			"soundDefault11",
+			0.027000001,
+			"soundDefault12",
+			0.027000001,
+			"soundDefault13",
+			0.027000001,
+			"soundDefault14",
+			0.027000001,
+			"soundDefault15",
+			0.027000001,
+			"soundDefault16",
+			0.027000001,
+			"soundDefault17",
+			0.027000001,
+			"soundDefault18",
+			0.027000001,
+			"soundDefault19",
+			0.027000001,
+			"soundDefault20",
+			0.027000001,
+			"soundDefault21",
+			0.027000001,
+			"soundDefault22",
+			0.027000001,
+			"soundDefault23",
+			0.027000001,
+			"soundDefault24",
+			0.027000001,
+			"soundDefault25",
+			0.027000001,
+			"soundDefault26",
+			0.027000001,
+			"soundDefault37",
+			0.027000001,
+			"soundDefault27",
+			0.027000001,
+			"soundDefault28",
+			0.027000001,
+			"soundDefault29",
+			0.027000001,
+			"soundDefault30",
+			0.027000001,
+			"soundDefault31",
+			0.027000001,
+			"soundDefault32",
+			0.027000001,
+			"soundDefault33",
+			0.027000001,
+			"soundDefault34",
+			0.027000001,
+			"soundDefault35",
+			0.027000001,
+			"soundDefault36",
+			0.027000001
+		};
+		hitBuilding[]=
+		{
+			"soundDefault1",
+			0.027000001,
+			"soundDefault2",
+			0.027000001,
+			"soundDefault3",
+			0.027000001,
+			"soundDefault4",
+			0.027000001,
+			"soundDefault5",
+			0.027000001,
+			"soundDefault6",
+			0.027000001,
+			"soundDefault7",
+			0.027000001,
+			"soundDefault8",
+			0.027000001,
+			"soundDefault9",
+			0.027000001,
+			"soundDefault10",
+			0.027000001,
+			"soundDefault11",
+			0.027000001,
+			"soundDefault12",
+			0.027000001,
+			"soundDefault13",
+			0.027000001,
+			"soundDefault14",
+			0.027000001,
+			"soundDefault15",
+			0.027000001,
+			"soundDefault16",
+			0.027000001,
+			"soundDefault17",
+			0.027000001,
+			"soundDefault18",
+			0.027000001,
+			"soundDefault19",
+			0.027000001,
+			"soundDefault20",
+			0.027000001,
+			"soundDefault21",
+			0.027000001,
+			"soundDefault22",
+			0.027000001,
+			"soundDefault23",
+			0.027000001,
+			"soundDefault24",
+			0.027000001,
+			"soundDefault25",
+			0.027000001,
+			"soundDefault26",
+			0.027000001,
+			"soundDefault37",
+			0.027000001,
+			"soundDefault27",
+			0.027000001,
+			"soundDefault28",
+			0.027000001,
+			"soundDefault29",
+			0.027000001,
+			"soundDefault30",
+			0.027000001,
+			"soundDefault31",
+			0.027000001,
+			"soundDefault32",
+			0.027000001,
+			"soundDefault33",
+			0.027000001,
+			"soundDefault34",
+			0.027000001,
+			"soundDefault35",
+			0.027000001,
+			"soundDefault36",
+			0.027000001
+		};
+		soundHit1[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Dirt_Impact_1.ogg",
+			2,
+			1,
+			165
+		};
+		soundHit2[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Dirt_Impact_2.ogg",
+			2,
+			1,
+			165
+		};
+		soundHit3[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Dirt_Impact_3.ogg",
+			2,
+			1,
+			165
+		};
+		soundHit4[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Dirt_Impact_4.ogg",
+			2,
+			1,
+			165
+		};
+		soundHit5[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Dirt_Impact_5.ogg",
+			2,
+			1,
+			165
+		};
+		soundHit6[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Dirt_Impact_6.ogg",
+			2,
+			1,
+			165
+		};
+		soundHit7[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Dirt_Impact_7.ogg",
+			2,
+			1,
+			165
+		};
+		soundHit8[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Dirt_Impact_8.ogg",
+			2,
+			1,
+			165
+		};
+		soundHit9[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Dirt_Impact_9.ogg",
+			2,
+			1,
+			165
+		};
+		soundHit10[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Dirt_Impact_10.ogg",
+			2,
+			1,
+			165
+		};
+		soundHit11[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Dirt_Impact_11.ogg",
+			2,
+			1,
+			165
+		};
+		hitGround[]=
+		{
+			"soundHit1",
+			0.090899996,
+			"soundHit2",
+			0.090899996,
+			"soundHit3",
+			0.090899996,
+			"soundHit4",
+			0.090899996,
+			"soundHit5",
+			0.090899996,
+			"soundHit6",
+			0.090899996,
+			"soundHit7",
+			0.090899996,
+			"soundHit8",
+			0.090899996,
+			"soundHit9",
+			0.090899996,
+			"soundHit10",
+			0.090899996,
+			"soundHit11",
+			0.090899996
+		};
+		hitGroundHard[]=
+		{
+			"soundHit1",
+			0.090899996,
+			"soundHit2",
+			0.090899996,
+			"soundHit3",
+			0.090899996,
+			"soundHit4",
+			0.090899996,
+			"soundHit5",
+			0.090899996,
+			"soundHit6",
+			0.090899996,
+			"soundHit7",
+			0.090899996,
+			"soundHit8",
+			0.090899996,
+			"soundHit9",
+			0.090899996,
+			"soundHit10",
+			0.090899996,
+			"soundHit11",
+			0.090899996
+		};
+		hitGroundSoft[]=
+		{
+			"soundHit1",
+			0.090899996,
+			"soundHit2",
+			0.090899996,
+			"soundHit3",
+			0.090899996,
+			"soundHit4",
+			0.090899996,
+			"soundHit5",
+			0.090899996,
+			"soundHit6",
+			0.090899996,
+			"soundHit7",
+			0.090899996,
+			"soundHit8",
+			0.090899996,
+			"soundHit9",
+			0.090899996,
+			"soundHit10",
+			0.090899996,
+			"soundHit11",
+			0.090899996
+		};
+		hitConcrete[]=
+		{
+			"soundHit1",
+			0.090899996,
+			"soundHit2",
+			0.090899996,
+			"soundHit3",
+			0.090899996,
+			"soundHit4",
+			0.090899996,
+			"soundHit5",
+			0.090899996,
+			"soundHit6",
+			0.090899996,
+			"soundHit7",
+			0.090899996,
+			"soundHit8",
+			0.090899996,
+			"soundHit9",
+			0.090899996,
+			"soundHit10",
+			0.090899996,
+			"soundHit11",
+			0.090899996
+		};
+		soundMetal1[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Metal_Impact_1.ogg",
+			2,
+			1,
+			165
+		};
+		soundMetal2[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Metal_Impact_2.ogg",
+			2,
+			1,
+			165
+		};
+		soundMetal3[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Metal_Impact_3.ogg",
+			2,
+			1,
+			165
+		};
+		soundMetal4[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Metal_Impact_4.ogg",
+			2,
+			1,
+			165
+		};
+		soundMetal5[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Metal_Impact_5.ogg",
+			2,
+			1,
+			165
+		};
+		soundMetal6[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Metal_Impact_6.ogg",
+			2,
+			1,
+			165
+		};
+		soundMetal7[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Metal_Impact_7.ogg",
+			2,
+			1,
+			165
+		};
+		soundMetal8[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Metal_Impact_8.ogg",
+			2,
+			1,
+			165
+		};
+		soundMetal9[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Metal_Impact_9.ogg",
+			2,
+			1,
+			165
+		};
+		soundMetal10[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Metal_Impact_10.ogg",
+			2,
+			1,
+			165
+		};
+		soundMetal11[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Metal_Impact_11.ogg",
+			2,
+			1,
+			165
+		};
+		soundMetal12[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Metal_Impact_12.ogg",
+			2,
+			1,
+			165
+		};
+		soundMetal13[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Metal_Impact_13.ogg",
+			2,
+			1,
+			165
+		};
+		soundMetal14[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Metal_Impact_14.ogg",
+			2,
+			1,
+			165
+		};
+		soundMetal15[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Metal_Impact_15.ogg",
+			2,
+			1,
+			165
+		};
+		hitMetal[]=
+		{
+			"soundMetal1",
+			0.066600002,
+			"soundMetal2",
+			0.066600002,
+			"soundMetal3",
+			0.066600002,
+			"soundMetal4",
+			0.066600002,
+			"soundMetal5",
+			0.066600002,
+			"soundMetal6",
+			0.066600002,
+			"soundMetal7",
+			0.066600002,
+			"soundMetal8",
+			0.066600002,
+			"soundMetal9",
+			0.066600002,
+			"soundMetal10",
+			0.066600002,
+			"soundMetal11",
+			0.066600002,
+			"soundMetal12",
+			0.066600002,
+			"soundMetal13",
+			0.066600002,
+			"soundMetal14",
+			0.066600002,
+			"soundMetal15",
+			0.066600002
+		};
+		hitIron[]=
+		{
+			"soundMetal1",
+			0.066600002,
+			"soundMetal2",
+			0.066600002,
+			"soundMetal3",
+			0.066600002,
+			"soundMetal4",
+			0.066600002,
+			"soundMetal5",
+			0.066600002,
+			"soundMetal6",
+			0.066600002,
+			"soundMetal7",
+			0.066600002,
+			"soundMetal8",
+			0.066600002,
+			"soundMetal9",
+			0.066600002,
+			"soundMetal10",
+			0.066600002,
+			"soundMetal11",
+			0.066600002,
+			"soundMetal12",
+			0.066600002,
+			"soundMetal13",
+			0.066600002,
+			"soundMetal14",
+			0.066600002,
+			"soundMetal15",
+			0.066600002
+		};
+		hitMetalInt[]=
+		{
+			"soundMetal1",
+			0.066600002,
+			"soundMetal2",
+			0.066600002,
+			"soundMetal3",
+			0.066600002,
+			"soundMetal4",
+			0.066600002,
+			"soundMetal5",
+			0.066600002,
+			"soundMetal6",
+			0.066600002,
+			"soundMetal7",
+			0.066600002,
+			"soundMetal8",
+			0.066600002,
+			"soundMetal9",
+			0.066600002,
+			"soundMetal10",
+			0.066600002,
+			"soundMetal11",
+			0.066600002,
+			"soundMetal12",
+			0.066600002,
+			"soundMetal13",
+			0.066600002,
+			"soundMetal14",
+			0.066600002,
+			"soundMetal15",
+			0.066600002
+		};
+		hitMetalPlate[]=
+		{
+			"soundMetal1",
+			0.066600002,
+			"soundMetal2",
+			0.066600002,
+			"soundMetal3",
+			0.066600002,
+			"soundMetal4",
+			0.066600002,
+			"soundMetal5",
+			0.066600002,
+			"soundMetal6",
+			0.066600002,
+			"soundMetal7",
+			0.066600002,
+			"soundMetal8",
+			0.066600002,
+			"soundMetal9",
+			0.066600002,
+			"soundMetal10",
+			0.066600002,
+			"soundMetal11",
+			0.066600002,
+			"soundMetal12",
+			0.066600002,
+			"soundMetal13",
+			0.066600002,
+			"soundMetal14",
+			0.066600002,
+			"soundMetal15",
+			0.066600002
+		};
+		hitArmor[]=
+		{
+			"soundMetal1",
+			0.066600002,
+			"soundMetal2",
+			0.066600002,
+			"soundMetal3",
+			0.066600002,
+			"soundMetal4",
+			0.066600002,
+			"soundMetal5",
+			0.066600002,
+			"soundMetal6",
+			0.066600002,
+			"soundMetal7",
+			0.066600002,
+			"soundMetal8",
+			0.066600002,
+			"soundMetal9",
+			0.066600002,
+			"soundMetal10",
+			0.066600002,
+			"soundMetal11",
+			0.066600002,
+			"soundMetal12",
+			0.066600002,
+			"soundMetal13",
+			0.066600002,
+			"soundMetal14",
+			0.066600002,
+			"soundMetal15",
+			0.066600002
+		};
+		hitArmorInt[]=
+		{
+			"soundMetal1",
+			0.066600002,
+			"soundMetal2",
+			0.066600002,
+			"soundMetal3",
+			0.066600002,
+			"soundMetal4",
+			0.066600002,
+			"soundMetal5",
+			0.066600002,
+			"soundMetal6",
+			0.066600002,
+			"soundMetal7",
+			0.066600002,
+			"soundMetal8",
+			0.066600002,
+			"soundMetal9",
+			0.066600002,
+			"soundMetal10",
+			0.066600002,
+			"soundMetal11",
+			0.066600002,
+			"soundMetal12",
+			0.066600002,
+			"soundMetal13",
+			0.066600002,
+			"soundMetal14",
+			0.066600002,
+			"soundMetal15",
+			0.066600002
+		};
+		bulletFly1[]=
+		{
+			"\infantry_weap\sounds\plasma_flyby_1.wss",
+			2.2387211,
+			1,
+			100
+		};
+		bulletFly2[]=
+		{
+			"\infantry_weap\sounds\plasma_flyby_2.wss",
+			2.2387211,
+			1,
+			100
+		};
+		bulletFly3[]=
+		{
+			"\infantry_weap\sounds\plasma_flyby_3.wss",
+			2.2387211,
+			1,
+			100
+		};
+		bulletFly4[]=
+		{
+			"\infantry_weap\sounds\plasma_flyby_4.wss",
+			2.2387211,
+			1,
+			100
+		};
+		bulletFly5[]=
+		{
+			"\infantry_weap\sounds\plasma_flyby_5.wss",
+			2.2387211,
+			1,
+			100
+		};
+		bulletFly[]=
+		{
+			"bulletFly1",
+			0.2,
+			"bulletFly2",
+			0.2,
+			"bulletFly3",
+			0.2,
+			"bulletFly4",
+			0.2,
+			"bulletFly5",
+			0.2
+		};
+		soundSetBulletFly[]=
+		{
+			"MET_plasma_bullet_flyby_soundSet"
+		};
+		supersoniccracknear[]={};
+		supersoniccrackfar[]={};
+		soundSetSonicCrack[]={};
+	};
+	class MET_blasterbolt_antimat_Red: MET_blasterbolt_antimat
+	{
+		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Red.p3d";
+		effectfly="MET_BlasterBoltGlow_Medium_Red_Fly";
+		lightcolor[]={1,0,0};
+	};
+	class MET_blasterbolt_antimat_Green: MET_blasterbolt_antimat
+	{
+		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Green.p3d";
+		effectfly="MET_BlasterBoltGlow_Medium_Green_Fly";
+		lightcolor[]={0,1,0};
+	};
+	class MET_blasterbolt_antimat_Yellow: MET_blasterbolt_antimat
+	{
+		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Yellow.p3d";
+		effectfly="MET_BlasterBoltGlow_Medium_Yellow_Fly";
+		lightcolor[]={.839,0.749,0.486};
+	};
+	class MET_blasterbolt_antimatat: MET_blasterbolt_at
+	{
+		ACE_damageType="bullet";
+		hit=750;
+		indirectHit=6;
+		explosive=1;
+		indirectHitRange=0.5;
+		caliber=90;
+		coefGravity=0;
+		timetolive=80;
+		waterFriction=-0.0099999998;
+		deflecting=0;
+		airfriction=0;
+		tracerstarttime=0.050000001;
+		tracerendtime=22;
+		nvgonly=0;
+		airlock=1;
+		irtarget=1;
+		brightness=1000;
+		flaresize=5;
+		tracerscale=1;
+		effectflare="FlareShell";
+		effectfly="MET_BlasterBoltGlow_Blue_Fly";
+		ExplosionEffects="MET_ImpactEffect";
+		cratereffects="";
+		maxSpeed=3000;
+		class HitEffects
+		{
+			Hit_Foliage_Green="MET_ImpactEffect";
+			Hit_Foliage_Dead="MET_ImpactEffect";
+			Hit_Foliage_Green_big="MET_ImpactEffect";
+			Hit_Foliage_Palm="MET_ImpactEffect";
+			Hit_Foliage_Pine="MET_ImpactEffect";
+			hitFoliage="MET_ImpactEffect";
+			hitGlass="MET_ImpactEffect";
+			hitGlassArmoRed="MET_ImpactEffect";
+			hitWood="MET_ImpactEffect";
+			hitMetal="MET_ImpactEffect";
+			hitMetalPlate="MET_ImpactEffect";
+			hitBuilding="MET_ImpactEffect";
+			hitPlastic="MET_ImpactEffect";
+			hitRubber="MET_ImpactEffect";
+			hitTyre="MET_ImpactEffect";
+			hitConcrete="MET_ImpactEffect";
+			hitMan="MET_ImpactEffect";
+			hitGroundSoft="MET_ImpactEffect";
+			hitGroundRed="MET_ImpactEffect";
+			hitGroundHard="MET_ImpactEffect";
+			hitWater="MET_ImpactEffect";
+			hitVirtual="MET_ImpactEffect";
+			default_mat="MET_ImpactEffect";
+		};
+		soundHitBody1[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\Body_Impact_1.ogg",
+			3,
+			1,
+			200
+		};
+		soundHitBody2[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\Body_Impact_2.ogg",
+			3,
+			1,
+			200
+		};
+		soundHitBody3[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\Body_Impact_3.ogg",
+			3,
+			1,
+			200
+		};
+		soundHitBody4[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\Body_Impact_4.ogg",
+			3,
+			1,
+			200
+		};
+		soundHitBody5[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\Body_Impact_5.ogg",
+			3,
+			1,
+			200
+		};
+		soundHitBody6[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\Body_Impact_1.ogg",
+			3,
+			1.5,
+			200
+		};
+		soundHitBody7[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\Body_Impact_2.ogg",
+			3,
+			1.5,
+			200
+		};
+		soundHitBody8[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\Body_Impact_3.ogg",
+			3,
+			1.5,
+			200
+		};
+		soundHitBody9[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\Body_Impact_4.ogg",
+			3,
+			1.5,
+			200
+		};
+		soundHitBody10[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\Body_Impact_5.ogg",
+			3,
+			1.5,
+			200
+		};
+		hitMan[]=
+		{
+			"soundHitBody1",
+			0.1,
+			"soundHitBody2",
+			0.1,
+			"soundHitBody3",
+			0.1,
+			"soundHitBody4",
+			0.1,
+			"soundHitBody5",
+			0.1,
+			"soundHitBody6",
+			0.1,
+			"soundHitBody7",
+			0.1,
+			"soundHitBody8",
+			0.1,
+			"soundHitBody9",
+			0.1,
+			"soundHitBody10",
+			0.1
+		};
+		soundDefault1[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Default_Impact_1.ogg",
+			2,
+			1,
+			165
+		};
+		soundDefault2[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Default_Impact_2.ogg",
+			2,
+			1,
+			165
+		};
+		soundDefault3[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Default_Impact_3.ogg",
+			2,
+			1,
+			165
+		};
+		soundDefault4[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Default_Impact_4.ogg",
+			2,
+			1,
+			165
+		};
+		soundDefault5[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Default_Impact_5.ogg",
+			2,
+			1,
+			165
+		};
+		soundDefault6[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Default_Impact_6.ogg",
+			2,
+			1,
+			165
+		};
+		soundDefault7[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Default_Impact_7.ogg",
+			2,
+			1,
+			165
+		};
+		soundDefault8[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Default_Impact_8.ogg",
+			2,
+			1,
+			165
+		};
+		soundDefault9[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Default_Impact_9.ogg",
+			2,
+			1,
+			165
+		};
+		soundDefault10[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Default_Impact_10.ogg",
+			2,
+			1,
+			165
+		};
+		soundDefault11[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Default_Impact_11.ogg",
+			2,
+			1,
+			165
+		};
+		soundDefault12[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Default_Impact_12.ogg",
+			2,
+			1,
+			165
+		};
+		soundDefault13[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Default_Impact_13.ogg",
+			2,
+			1,
+			165
+		};
+		soundDefault14[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Default_Impact_14.ogg",
+			2,
+			1,
+			165
+		};
+		soundDefault15[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Default_Impact_15.ogg",
+			2,
+			1,
+			165
+		};
+		soundDefault16[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Default_Impact_16.ogg",
+			2,
+			1,
+			165
+		};
+		soundDefault17[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Default_Impact_17.ogg",
+			2,
+			1,
+			165
+		};
+		soundDefault18[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Default_Impact_18.ogg",
+			2,
+			1,
+			165
+		};
+		soundDefault19[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Default_Impact_19.ogg",
+			2,
+			1,
+			165
+		};
+		soundDefault20[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Default_Impact_20.ogg",
+			2,
+			1,
+			165
+		};
+		soundDefault21[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Default_Impact_21.ogg",
+			2,
+			1,
+			165
+		};
+		soundDefault22[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Default_Impact_22.ogg",
+			2,
+			1,
+			165
+		};
+		soundDefault23[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Default_Impact_23.ogg",
+			2,
+			1,
+			165
+		};
+		soundDefault24[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Default_Impact_24.ogg",
+			2,
+			1,
+			165
+		};
+		soundDefault25[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Default_Impact_25.ogg",
+			2,
+			1,
+			165
+		};
+		soundDefault26[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Default_Impact_26.ogg",
+			2,
+			1,
+			165
+		};
+		soundDefault27[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Default_Impact_27.ogg",
+			2,
+			1,
+			165
+		};
+		soundDefault28[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Default_Impact_28.ogg",
+			2,
+			1,
+			165
+		};
+		soundDefault29[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Default_Impact_29.ogg",
+			2,
+			1,
+			165
+		};
+		soundDefault30[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Default_Impact_30.ogg",
+			2,
+			1,
+			165
+		};
+		soundDefault31[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Default_Impact_31.ogg",
+			2,
+			1,
+			165
+		};
+		soundDefault32[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Default_Impact_32.ogg",
+			2,
+			1,
+			165
+		};
+		soundDefault33[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Default_Impact_33.ogg",
+			2,
+			1,
+			165
+		};
+		soundDefault34[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Default_Impact_34.ogg",
+			2,
+			1,
+			165
+		};
+		soundDefault35[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Default_Impact_35.ogg",
+			2,
+			1,
+			165
+		};
+		soundDefault36[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Default_Impact_36.ogg",
+			2,
+			1,
+			165
+		};
+		soundDefault37[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Default_Impact_37.ogg",
+			2,
+			1,
+			165
+		};
+		hitDefault[]=
+		{
+			"soundDefault1",
+			0.027000001,
+			"soundDefault2",
+			0.027000001,
+			"soundDefault3",
+			0.027000001,
+			"soundDefault4",
+			0.027000001,
+			"soundDefault5",
+			0.027000001,
+			"soundDefault6",
+			0.027000001,
+			"soundDefault7",
+			0.027000001,
+			"soundDefault8",
+			0.027000001,
+			"soundDefault9",
+			0.027000001,
+			"soundDefault10",
+			0.027000001,
+			"soundDefault11",
+			0.027000001,
+			"soundDefault12",
+			0.027000001,
+			"soundDefault13",
+			0.027000001,
+			"soundDefault14",
+			0.027000001,
+			"soundDefault15",
+			0.027000001,
+			"soundDefault16",
+			0.027000001,
+			"soundDefault17",
+			0.027000001,
+			"soundDefault18",
+			0.027000001,
+			"soundDefault19",
+			0.027000001,
+			"soundDefault20",
+			0.027000001,
+			"soundDefault21",
+			0.027000001,
+			"soundDefault22",
+			0.027000001,
+			"soundDefault23",
+			0.027000001,
+			"soundDefault24",
+			0.027000001,
+			"soundDefault25",
+			0.027000001,
+			"soundDefault26",
+			0.027000001,
+			"soundDefault37",
+			0.027000001,
+			"soundDefault27",
+			0.027000001,
+			"soundDefault28",
+			0.027000001,
+			"soundDefault29",
+			0.027000001,
+			"soundDefault30",
+			0.027000001,
+			"soundDefault31",
+			0.027000001,
+			"soundDefault32",
+			0.027000001,
+			"soundDefault33",
+			0.027000001,
+			"soundDefault34",
+			0.027000001,
+			"soundDefault35",
+			0.027000001,
+			"soundDefault36",
+			0.027000001
+		};
+		hitFoliage[]=
+		{
+			"soundDefault1",
+			0.027000001,
+			"soundDefault2",
+			0.027000001,
+			"soundDefault3",
+			0.027000001,
+			"soundDefault4",
+			0.027000001,
+			"soundDefault5",
+			0.027000001,
+			"soundDefault6",
+			0.027000001,
+			"soundDefault7",
+			0.027000001,
+			"soundDefault8",
+			0.027000001,
+			"soundDefault9",
+			0.027000001,
+			"soundDefault10",
+			0.027000001,
+			"soundDefault11",
+			0.027000001,
+			"soundDefault12",
+			0.027000001,
+			"soundDefault13",
+			0.027000001,
+			"soundDefault14",
+			0.027000001,
+			"soundDefault15",
+			0.027000001,
+			"soundDefault16",
+			0.027000001,
+			"soundDefault17",
+			0.027000001,
+			"soundDefault18",
+			0.027000001,
+			"soundDefault19",
+			0.027000001,
+			"soundDefault20",
+			0.027000001,
+			"soundDefault21",
+			0.027000001,
+			"soundDefault22",
+			0.027000001,
+			"soundDefault23",
+			0.027000001,
+			"soundDefault24",
+			0.027000001,
+			"soundDefault25",
+			0.027000001,
+			"soundDefault26",
+			0.027000001,
+			"soundDefault37",
+			0.027000001,
+			"soundDefault27",
+			0.027000001,
+			"soundDefault28",
+			0.027000001,
+			"soundDefault29",
+			0.027000001,
+			"soundDefault30",
+			0.027000001,
+			"soundDefault31",
+			0.027000001,
+			"soundDefault32",
+			0.027000001,
+			"soundDefault33",
+			0.027000001,
+			"soundDefault34",
+			0.027000001,
+			"soundDefault35",
+			0.027000001,
+			"soundDefault36",
+			0.027000001
+		};
+		hitPlastic[]=
+		{
+			"soundDefault1",
+			0.027000001,
+			"soundDefault2",
+			0.027000001,
+			"soundDefault3",
+			0.027000001,
+			"soundDefault4",
+			0.027000001,
+			"soundDefault5",
+			0.027000001,
+			"soundDefault6",
+			0.027000001,
+			"soundDefault7",
+			0.027000001,
+			"soundDefault8",
+			0.027000001,
+			"soundDefault9",
+			0.027000001,
+			"soundDefault10",
+			0.027000001,
+			"soundDefault11",
+			0.027000001,
+			"soundDefault12",
+			0.027000001,
+			"soundDefault13",
+			0.027000001,
+			"soundDefault14",
+			0.027000001,
+			"soundDefault15",
+			0.027000001,
+			"soundDefault16",
+			0.027000001,
+			"soundDefault17",
+			0.027000001,
+			"soundDefault18",
+			0.027000001,
+			"soundDefault19",
+			0.027000001,
+			"soundDefault20",
+			0.027000001,
+			"soundDefault21",
+			0.027000001,
+			"soundDefault22",
+			0.027000001,
+			"soundDefault23",
+			0.027000001,
+			"soundDefault24",
+			0.027000001,
+			"soundDefault25",
+			0.027000001,
+			"soundDefault26",
+			0.027000001,
+			"soundDefault37",
+			0.027000001,
+			"soundDefault27",
+			0.027000001,
+			"soundDefault28",
+			0.027000001,
+			"soundDefault29",
+			0.027000001,
+			"soundDefault30",
+			0.027000001,
+			"soundDefault31",
+			0.027000001,
+			"soundDefault32",
+			0.027000001,
+			"soundDefault33",
+			0.027000001,
+			"soundDefault34",
+			0.027000001,
+			"soundDefault35",
+			0.027000001,
+			"soundDefault36",
+			0.027000001
+		};
+		hitRubber[]=
+		{
+			"soundDefault1",
+			0.027000001,
+			"soundDefault2",
+			0.027000001,
+			"soundDefault3",
+			0.027000001,
+			"soundDefault4",
+			0.027000001,
+			"soundDefault5",
+			0.027000001,
+			"soundDefault6",
+			0.027000001,
+			"soundDefault7",
+			0.027000001,
+			"soundDefault8",
+			0.027000001,
+			"soundDefault9",
+			0.027000001,
+			"soundDefault10",
+			0.027000001,
+			"soundDefault11",
+			0.027000001,
+			"soundDefault12",
+			0.027000001,
+			"soundDefault13",
+			0.027000001,
+			"soundDefault14",
+			0.027000001,
+			"soundDefault15",
+			0.027000001,
+			"soundDefault16",
+			0.027000001,
+			"soundDefault17",
+			0.027000001,
+			"soundDefault18",
+			0.027000001,
+			"soundDefault19",
+			0.027000001,
+			"soundDefault20",
+			0.027000001,
+			"soundDefault21",
+			0.027000001,
+			"soundDefault22",
+			0.027000001,
+			"soundDefault23",
+			0.027000001,
+			"soundDefault24",
+			0.027000001,
+			"soundDefault25",
+			0.027000001,
+			"soundDefault26",
+			0.027000001,
+			"soundDefault37",
+			0.027000001,
+			"soundDefault27",
+			0.027000001,
+			"soundDefault28",
+			0.027000001,
+			"soundDefault29",
+			0.027000001,
+			"soundDefault30",
+			0.027000001,
+			"soundDefault31",
+			0.027000001,
+			"soundDefault32",
+			0.027000001,
+			"soundDefault33",
+			0.027000001,
+			"soundDefault34",
+			0.027000001,
+			"soundDefault35",
+			0.027000001,
+			"soundDefault36",
+			0.027000001
+		};
+		hitTyre[]=
+		{
+			"soundDefault1",
+			0.027000001,
+			"soundDefault2",
+			0.027000001,
+			"soundDefault3",
+			0.027000001,
+			"soundDefault4",
+			0.027000001,
+			"soundDefault5",
+			0.027000001,
+			"soundDefault6",
+			0.027000001,
+			"soundDefault7",
+			0.027000001,
+			"soundDefault8",
+			0.027000001,
+			"soundDefault9",
+			0.027000001,
+			"soundDefault10",
+			0.027000001,
+			"soundDefault11",
+			0.027000001,
+			"soundDefault12",
+			0.027000001,
+			"soundDefault13",
+			0.027000001,
+			"soundDefault14",
+			0.027000001,
+			"soundDefault15",
+			0.027000001,
+			"soundDefault16",
+			0.027000001,
+			"soundDefault17",
+			0.027000001,
+			"soundDefault18",
+			0.027000001,
+			"soundDefault19",
+			0.027000001,
+			"soundDefault20",
+			0.027000001,
+			"soundDefault21",
+			0.027000001,
+			"soundDefault22",
+			0.027000001,
+			"soundDefault23",
+			0.027000001,
+			"soundDefault24",
+			0.027000001,
+			"soundDefault25",
+			0.027000001,
+			"soundDefault26",
+			0.027000001,
+			"soundDefault37",
+			0.027000001,
+			"soundDefault27",
+			0.027000001,
+			"soundDefault28",
+			0.027000001,
+			"soundDefault29",
+			0.027000001,
+			"soundDefault30",
+			0.027000001,
+			"soundDefault31",
+			0.027000001,
+			"soundDefault32",
+			0.027000001,
+			"soundDefault33",
+			0.027000001,
+			"soundDefault34",
+			0.027000001,
+			"soundDefault35",
+			0.027000001,
+			"soundDefault36",
+			0.027000001
+		};
+		hitWood[]=
+		{
+			"soundDefault1",
+			0.027000001,
+			"soundDefault2",
+			0.027000001,
+			"soundDefault3",
+			0.027000001,
+			"soundDefault4",
+			0.027000001,
+			"soundDefault5",
+			0.027000001,
+			"soundDefault6",
+			0.027000001,
+			"soundDefault7",
+			0.027000001,
+			"soundDefault8",
+			0.027000001,
+			"soundDefault9",
+			0.027000001,
+			"soundDefault10",
+			0.027000001,
+			"soundDefault11",
+			0.027000001,
+			"soundDefault12",
+			0.027000001,
+			"soundDefault13",
+			0.027000001,
+			"soundDefault14",
+			0.027000001,
+			"soundDefault15",
+			0.027000001,
+			"soundDefault16",
+			0.027000001,
+			"soundDefault17",
+			0.027000001,
+			"soundDefault18",
+			0.027000001,
+			"soundDefault19",
+			0.027000001,
+			"soundDefault20",
+			0.027000001,
+			"soundDefault21",
+			0.027000001,
+			"soundDefault22",
+			0.027000001,
+			"soundDefault23",
+			0.027000001,
+			"soundDefault24",
+			0.027000001,
+			"soundDefault25",
+			0.027000001,
+			"soundDefault26",
+			0.027000001,
+			"soundDefault37",
+			0.027000001,
+			"soundDefault27",
+			0.027000001,
+			"soundDefault28",
+			0.027000001,
+			"soundDefault29",
+			0.027000001,
+			"soundDefault30",
+			0.027000001,
+			"soundDefault31",
+			0.027000001,
+			"soundDefault32",
+			0.027000001,
+			"soundDefault33",
+			0.027000001,
+			"soundDefault34",
+			0.027000001,
+			"soundDefault35",
+			0.027000001,
+			"soundDefault36",
+			0.027000001
+		};
+		hitBuilding[]=
+		{
+			"soundDefault1",
+			0.027000001,
+			"soundDefault2",
+			0.027000001,
+			"soundDefault3",
+			0.027000001,
+			"soundDefault4",
+			0.027000001,
+			"soundDefault5",
+			0.027000001,
+			"soundDefault6",
+			0.027000001,
+			"soundDefault7",
+			0.027000001,
+			"soundDefault8",
+			0.027000001,
+			"soundDefault9",
+			0.027000001,
+			"soundDefault10",
+			0.027000001,
+			"soundDefault11",
+			0.027000001,
+			"soundDefault12",
+			0.027000001,
+			"soundDefault13",
+			0.027000001,
+			"soundDefault14",
+			0.027000001,
+			"soundDefault15",
+			0.027000001,
+			"soundDefault16",
+			0.027000001,
+			"soundDefault17",
+			0.027000001,
+			"soundDefault18",
+			0.027000001,
+			"soundDefault19",
+			0.027000001,
+			"soundDefault20",
+			0.027000001,
+			"soundDefault21",
+			0.027000001,
+			"soundDefault22",
+			0.027000001,
+			"soundDefault23",
+			0.027000001,
+			"soundDefault24",
+			0.027000001,
+			"soundDefault25",
+			0.027000001,
+			"soundDefault26",
+			0.027000001,
+			"soundDefault37",
+			0.027000001,
+			"soundDefault27",
+			0.027000001,
+			"soundDefault28",
+			0.027000001,
+			"soundDefault29",
+			0.027000001,
+			"soundDefault30",
+			0.027000001,
+			"soundDefault31",
+			0.027000001,
+			"soundDefault32",
+			0.027000001,
+			"soundDefault33",
+			0.027000001,
+			"soundDefault34",
+			0.027000001,
+			"soundDefault35",
+			0.027000001,
+			"soundDefault36",
+			0.027000001
+		};
+		soundHit1[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Dirt_Impact_1.ogg",
+			2,
+			1,
+			165
+		};
+		soundHit2[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Dirt_Impact_2.ogg",
+			2,
+			1,
+			165
+		};
+		soundHit3[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Dirt_Impact_3.ogg",
+			2,
+			1,
+			165
+		};
+		soundHit4[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Dirt_Impact_4.ogg",
+			2,
+			1,
+			165
+		};
+		soundHit5[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Dirt_Impact_5.ogg",
+			2,
+			1,
+			165
+		};
+		soundHit6[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Dirt_Impact_6.ogg",
+			2,
+			1,
+			165
+		};
+		soundHit7[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Dirt_Impact_7.ogg",
+			2,
+			1,
+			165
+		};
+		soundHit8[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Dirt_Impact_8.ogg",
+			2,
+			1,
+			165
+		};
+		soundHit9[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Dirt_Impact_9.ogg",
+			2,
+			1,
+			165
+		};
+		soundHit10[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Dirt_Impact_10.ogg",
+			2,
+			1,
+			165
+		};
+		soundHit11[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Dirt_Impact_11.ogg",
+			2,
+			1,
+			165
+		};
+		hitGround[]=
+		{
+			"soundHit1",
+			0.090899996,
+			"soundHit2",
+			0.090899996,
+			"soundHit3",
+			0.090899996,
+			"soundHit4",
+			0.090899996,
+			"soundHit5",
+			0.090899996,
+			"soundHit6",
+			0.090899996,
+			"soundHit7",
+			0.090899996,
+			"soundHit8",
+			0.090899996,
+			"soundHit9",
+			0.090899996,
+			"soundHit10",
+			0.090899996,
+			"soundHit11",
+			0.090899996
+		};
+		hitGroundHard[]=
+		{
+			"soundHit1",
+			0.090899996,
+			"soundHit2",
+			0.090899996,
+			"soundHit3",
+			0.090899996,
+			"soundHit4",
+			0.090899996,
+			"soundHit5",
+			0.090899996,
+			"soundHit6",
+			0.090899996,
+			"soundHit7",
+			0.090899996,
+			"soundHit8",
+			0.090899996,
+			"soundHit9",
+			0.090899996,
+			"soundHit10",
+			0.090899996,
+			"soundHit11",
+			0.090899996
+		};
+		hitGroundSoft[]=
+		{
+			"soundHit1",
+			0.090899996,
+			"soundHit2",
+			0.090899996,
+			"soundHit3",
+			0.090899996,
+			"soundHit4",
+			0.090899996,
+			"soundHit5",
+			0.090899996,
+			"soundHit6",
+			0.090899996,
+			"soundHit7",
+			0.090899996,
+			"soundHit8",
+			0.090899996,
+			"soundHit9",
+			0.090899996,
+			"soundHit10",
+			0.090899996,
+			"soundHit11",
+			0.090899996
+		};
+		hitConcrete[]=
+		{
+			"soundHit1",
+			0.090899996,
+			"soundHit2",
+			0.090899996,
+			"soundHit3",
+			0.090899996,
+			"soundHit4",
+			0.090899996,
+			"soundHit5",
+			0.090899996,
+			"soundHit6",
+			0.090899996,
+			"soundHit7",
+			0.090899996,
+			"soundHit8",
+			0.090899996,
+			"soundHit9",
+			0.090899996,
+			"soundHit10",
+			0.090899996,
+			"soundHit11",
+			0.090899996
+		};
+		soundMetal1[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Metal_Impact_1.ogg",
+			2,
+			1,
+			165
+		};
+		soundMetal2[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Metal_Impact_2.ogg",
+			2,
+			1,
+			165
+		};
+		soundMetal3[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Metal_Impact_3.ogg",
+			2,
+			1,
+			165
+		};
+		soundMetal4[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Metal_Impact_4.ogg",
+			2,
+			1,
+			165
+		};
+		soundMetal5[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Metal_Impact_5.ogg",
+			2,
+			1,
+			165
+		};
+		soundMetal6[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Metal_Impact_6.ogg",
+			2,
+			1,
+			165
+		};
+		soundMetal7[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Metal_Impact_7.ogg",
+			2,
+			1,
+			165
+		};
+		soundMetal8[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Metal_Impact_8.ogg",
+			2,
+			1,
+			165
+		};
+		soundMetal9[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Metal_Impact_9.ogg",
+			2,
+			1,
+			165
+		};
+		soundMetal10[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Metal_Impact_10.ogg",
+			2,
+			1,
+			165
+		};
+		soundMetal11[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Metal_Impact_11.ogg",
+			2,
+			1,
+			165
+		};
+		soundMetal12[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Metal_Impact_12.ogg",
+			2,
+			1,
+			165
+		};
+		soundMetal13[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Metal_Impact_13.ogg",
+			2,
+			1,
+			165
+		};
+		soundMetal14[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Metal_Impact_14.ogg",
+			2,
+			1,
+			165
+		};
+		soundMetal15[]=
+		{
+			"\3AS\3AS_Weapons\Data\Impacts\3AS_Metal_Impact_15.ogg",
+			2,
+			1,
+			165
+		};
+		hitMetal[]=
+		{
+			"soundMetal1",
+			0.066600002,
+			"soundMetal2",
+			0.066600002,
+			"soundMetal3",
+			0.066600002,
+			"soundMetal4",
+			0.066600002,
+			"soundMetal5",
+			0.066600002,
+			"soundMetal6",
+			0.066600002,
+			"soundMetal7",
+			0.066600002,
+			"soundMetal8",
+			0.066600002,
+			"soundMetal9",
+			0.066600002,
+			"soundMetal10",
+			0.066600002,
+			"soundMetal11",
+			0.066600002,
+			"soundMetal12",
+			0.066600002,
+			"soundMetal13",
+			0.066600002,
+			"soundMetal14",
+			0.066600002,
+			"soundMetal15",
+			0.066600002
+		};
+		hitIron[]=
+		{
+			"soundMetal1",
+			0.066600002,
+			"soundMetal2",
+			0.066600002,
+			"soundMetal3",
+			0.066600002,
+			"soundMetal4",
+			0.066600002,
+			"soundMetal5",
+			0.066600002,
+			"soundMetal6",
+			0.066600002,
+			"soundMetal7",
+			0.066600002,
+			"soundMetal8",
+			0.066600002,
+			"soundMetal9",
+			0.066600002,
+			"soundMetal10",
+			0.066600002,
+			"soundMetal11",
+			0.066600002,
+			"soundMetal12",
+			0.066600002,
+			"soundMetal13",
+			0.066600002,
+			"soundMetal14",
+			0.066600002,
+			"soundMetal15",
+			0.066600002
+		};
+		hitMetalInt[]=
+		{
+			"soundMetal1",
+			0.066600002,
+			"soundMetal2",
+			0.066600002,
+			"soundMetal3",
+			0.066600002,
+			"soundMetal4",
+			0.066600002,
+			"soundMetal5",
+			0.066600002,
+			"soundMetal6",
+			0.066600002,
+			"soundMetal7",
+			0.066600002,
+			"soundMetal8",
+			0.066600002,
+			"soundMetal9",
+			0.066600002,
+			"soundMetal10",
+			0.066600002,
+			"soundMetal11",
+			0.066600002,
+			"soundMetal12",
+			0.066600002,
+			"soundMetal13",
+			0.066600002,
+			"soundMetal14",
+			0.066600002,
+			"soundMetal15",
+			0.066600002
+		};
+		hitMetalPlate[]=
+		{
+			"soundMetal1",
+			0.066600002,
+			"soundMetal2",
+			0.066600002,
+			"soundMetal3",
+			0.066600002,
+			"soundMetal4",
+			0.066600002,
+			"soundMetal5",
+			0.066600002,
+			"soundMetal6",
+			0.066600002,
+			"soundMetal7",
+			0.066600002,
+			"soundMetal8",
+			0.066600002,
+			"soundMetal9",
+			0.066600002,
+			"soundMetal10",
+			0.066600002,
+			"soundMetal11",
+			0.066600002,
+			"soundMetal12",
+			0.066600002,
+			"soundMetal13",
+			0.066600002,
+			"soundMetal14",
+			0.066600002,
+			"soundMetal15",
+			0.066600002
+		};
+		hitArmor[]=
+		{
+			"soundMetal1",
+			0.066600002,
+			"soundMetal2",
+			0.066600002,
+			"soundMetal3",
+			0.066600002,
+			"soundMetal4",
+			0.066600002,
+			"soundMetal5",
+			0.066600002,
+			"soundMetal6",
+			0.066600002,
+			"soundMetal7",
+			0.066600002,
+			"soundMetal8",
+			0.066600002,
+			"soundMetal9",
+			0.066600002,
+			"soundMetal10",
+			0.066600002,
+			"soundMetal11",
+			0.066600002,
+			"soundMetal12",
+			0.066600002,
+			"soundMetal13",
+			0.066600002,
+			"soundMetal14",
+			0.066600002,
+			"soundMetal15",
+			0.066600002
+		};
+		hitArmorInt[]=
+		{
+			"soundMetal1",
+			0.066600002,
+			"soundMetal2",
+			0.066600002,
+			"soundMetal3",
+			0.066600002,
+			"soundMetal4",
+			0.066600002,
+			"soundMetal5",
+			0.066600002,
+			"soundMetal6",
+			0.066600002,
+			"soundMetal7",
+			0.066600002,
+			"soundMetal8",
+			0.066600002,
+			"soundMetal9",
+			0.066600002,
+			"soundMetal10",
+			0.066600002,
+			"soundMetal11",
+			0.066600002,
+			"soundMetal12",
+			0.066600002,
+			"soundMetal13",
+			0.066600002,
+			"soundMetal14",
+			0.066600002,
+			"soundMetal15",
+			0.066600002
+		};
+		bulletFly1[]=
+		{
+			"\infantry_weap\sounds\plasma_flyby_1.wss",
+			2.2387211,
+			1,
+			100
+		};
+		bulletFly2[]=
+		{
+			"\infantry_weap\sounds\plasma_flyby_2.wss",
+			2.2387211,
+			1,
+			100
+		};
+		bulletFly3[]=
+		{
+			"\infantry_weap\sounds\plasma_flyby_3.wss",
+			2.2387211,
+			1,
+			100
+		};
+		bulletFly4[]=
+		{
+			"\infantry_weap\sounds\plasma_flyby_4.wss",
+			2.2387211,
+			1,
+			100
+		};
+		bulletFly5[]=
+		{
+			"\infantry_weap\sounds\plasma_flyby_5.wss",
+			2.2387211,
+			1,
+			100
+		};
+		bulletFly[]=
+		{
+			"bulletFly1",
+			0.2,
+			"bulletFly2",
+			0.2,
+			"bulletFly3",
+			0.2,
+			"bulletFly4",
+			0.2,
+			"bulletFly5",
+			0.2
+		};
+		soundSetBulletFly[]=
+		{
+			"MET_plasma_bullet_flyby_soundSet"
+		};
+		supersoniccracknear[]={};
+		supersoniccrackfar[]={};
+		soundSetSonicCrack[]={};
+	};
+	class MET_blasterbolt_antimatat_Red: MET_blasterbolt_antimatat
+	{
+		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Red.p3d";
+		effectfly="MET_BlasterBoltGlow_Medium_Red_Fly";
+		lightcolor[]={1,0,0};
+	};
+	class MET_blasterbolt_antimatat_Green: MET_blasterbolt_antimat
+	{
+		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Green.p3d";
+		effectfly="MET_BlasterBoltGlow_Medium_Green_Fly";
+		lightcolor[]={0,1,0};
+	};
+	class MET_blasterbolt_antimatat_Yellow: MET_blasterbolt_antimat
+	{
+		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Yellow.p3d";
+		effectfly="MET_BlasterBoltGlow_Medium_Yellow_Fly";
+		lightcolor[]={.839,0.749,0.486};
+	};
 	class 3AS_PlasmaBase;
 	class MET_slug_blue: 3AS_PlasmaBase
 	{
@@ -22011,7 +25233,7 @@ class CfgAmmo
 		lightColor[] = {0.95,0.95,1,0.5};
 		smokeColor[] = {1,1,1,0.5};
 		intensity = 1500000;
-        coefGravity = 0.25;
+        coefGravity = 1.5;
 		size = 1;
 		triggerSpeedCoef=1;
 		brightness=12;
@@ -22019,14 +25241,16 @@ class CfgAmmo
 	class MET_GL_Flare_LUM: MET_GL_Flare_LUM_SubMun
 	{
 		audibleFire = 1;
+        coefGravity = 0.25;
 	};
 	class MET_GL_Flare_LUM_Cluster: G_40mm_HE
 	{
 		submunitionAmmo[] = {"MET_GL_Flare_LUM_SubMun"};
-		submunitionInitSpeed = 300;
-		submunitionConeAngle[] = {90};
+		submunitionInitSpeed = 250;
+		submunitionConeAngle[] = {360};
 		submunitionConeAngleHorizontal = 360;
 		submunitionConeType[] = {"randomupcone",6};
+		//submunitionConeType[] = {"randomverticalcone", 6};
 		submunitionParentSpeedCoef = 0;
 		submunitionInitialOffset[] = {0,0,0};
 		submunitionAutoleveling = 1;
@@ -22047,7 +25271,7 @@ class CfgAmmo
 		lightColor[] = {1, 0.839, 0.647,0.5};
 		smokeColor[] = {1,1,1,0.5};
 		intensity = 25000000;
-        coefGravity = 0.25;
+        coefGravity = 1;
 		size = 1;
 		triggerSpeedCoef=1;
 		brightness = 25000000;
@@ -22055,6 +25279,7 @@ class CfgAmmo
 	class MET_GL_Flare_SUN: MET_GL_Flare_SUN_SubMun
 	{
 		audibleFire = 1;
+        coefGravity = 0.25;
 	};
 	class MET_GL_Flare_SUN_Cluster: G_40mm_HE
 	{
@@ -22122,6 +25347,7 @@ class CfgAmmo
 	class MET_GL_Flare_B_LUM: MET_GL_Flare_B_LUM_SubMun
 	{
 		audibleFire = 1;
+        coefGravity = 0.25;
 	};
 	class MET_GL_Flare_B_LUM_Cluster: G_40mm_HE
 	{
@@ -22153,6 +25379,7 @@ class CfgAmmo
 	class MET_GL_Flare_G_LUM: MET_GL_Flare_G_LUM_SubMun
 	{
 		audibleFire = 1;
+        coefGravity = 0.25;
 	};
 	class MET_GL_Flare_G_LUM_Cluster: G_40mm_HE
 	{
@@ -22184,6 +25411,7 @@ class CfgAmmo
 	class MET_GL_Flare_R_LUM: MET_GL_Flare_R_LUM_SubMun
 	{
 		audibleFire = 1;
+        coefGravity = 0.25;
 	};
 	class MET_GL_Flare_R_LUM_Cluster: G_40mm_HE
 	{
@@ -22215,6 +25443,7 @@ class CfgAmmo
 	class MET_GL_Flare_Y_LUM: MET_GL_Flare_Y_LUM_SubMun
 	{
 		audibleFire = 1;
+        coefGravity = 0.25;
 	};
 	class MET_GL_Flare_Y_LUM_Cluster: G_40mm_HE
 	{
@@ -22246,6 +25475,7 @@ class CfgAmmo
 	class MET_GL_Flare_O_LUM: MET_GL_Flare_O_LUM_SubMun
 	{
 		audibleFire = 1;
+        coefGravity = 0.25;
 	};
 	class MET_GL_Flare_O_LUM_Cluster: G_40mm_HE
 	{
@@ -22277,6 +25507,7 @@ class CfgAmmo
 	class MET_GL_Flare_P_LUM: MET_GL_Flare_P_LUM_SubMun
 	{
 		audibleFire = 1;
+        coefGravity = 0.25;
 	};
 	class MET_GL_Flare_P_LUM_Cluster: G_40mm_HE
 	{
@@ -22308,6 +25539,7 @@ class CfgAmmo
 	class MET_GL_Flare_TU_LUM: MET_GL_Flare_TU_LUM_SubMun
 	{
 		audibleFire = 1;
+        coefGravity = 0.25;
 	};
 	class MET_GL_Flare_TU_LUM_Cluster: G_40mm_HE
 	{
@@ -22339,6 +25571,7 @@ class CfgAmmo
 	class MET_GL_Flare_TE_LUM: MET_GL_Flare_TE_LUM_SubMun
 	{
 		audibleFire = 1;
+        coefGravity = 0.25;
 	};
 	class MET_GL_Flare_TE_LUM_Cluster: G_40mm_HE
 	{
@@ -22367,10 +25600,12 @@ class CfgAmmo
 		lightColor[] = {0.25,0.25,0.25,0};
 		smokeColor[] = {1,1,1,0.5};
         nvgOnly = 1;
+		intensity = 2000000;
 	};
 	class MET_GL_Flare_IR_LUM: MET_GL_Flare_IR_LUM_SubMun
 	{
 		audibleFire = 1;
+        coefGravity = 0.25;
 	};
 	class MET_GL_Flare_IR_LUM_Cluster: G_40mm_HE
 	{
@@ -24331,10 +27566,10 @@ class CfgAmmo
 		cartridge="";
 		lightcolor[]={0,0.30000001,1};
 		hit=45;
-		indirectHit=0;
+		indirectHit=2;
 		explosive=0;
 		indirectHitRange=0.5;
-		caliber=0.8;
+		caliber=80;
 		coefGravity=0;
 		timetolive=20;
 		waterFriction=-0.0099999998;
