@@ -6740,7 +6740,7 @@ class CfgWeapons
 		descriptionShort="$STR_3AS_Weapons_Republic_Optic_DC15X_Scope_DesShort";
 		class ItemInfo: InventoryOpticsItem_Base_F
 		{
-			mass=20;
+			mass=15;
 			opticType=2;
 			weaponInfoType="RscWeaponRangeZeroingFOV";
 			optics=1;
@@ -10007,7 +10007,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_ap.paa";
 		descriptionShort="Impact grenade";
 		ammo="MET_HEAT_LauncherGrenade";
-		mass=8;
+		mass=6;
 	};
 	class MET_dc15sa_battery: 100Rnd_65x39_caseless_mag
 	{
@@ -10044,7 +10044,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_he.paa";
 		descriptionShort="Impact grenade";
 		ammo="MET_HE_LauncherGrenade";
-		mass=8;
+		mass=6;
 	};
 	class MET_Clust_Grenade_shell: 1Rnd_HE_Grenade_shell
 	{
@@ -10078,7 +10078,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_ap.paa";
 		descriptionShort="Impact grenade";
 		ammo="MET_HEAT_LauncherGrenade";
-		mass=8;
+		mass=6;
 	};
 	class MET_Grape_Grenade: 1Rnd_HE_Grenade_shell
 	{
@@ -10089,7 +10089,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_ap.paa";
 		descriptionShort="Fuck that Direction";
 		ammo="MET_GrapeShot_blue";
-		mass=8;
+		mass=6;
 	};
 	class MET_6Rnd_Grape_Grenade: MET_Grape_Grenade
 	{
@@ -10112,7 +10112,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_flw.paa";
 		descriptionShort="Flare";
 		ammo="MET_GL_Flare_LUM";
-		mass=8;
+		mass=6;
 	};
 	class MET_ILLUM_Grenade_Clust: 1Rnd_HE_Grenade_shell
 	{
@@ -10123,7 +10123,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_flw.paa";
 		descriptionShort="Flare";
 		ammo="MET_GL_Flare_LUM_Cluster";
-		mass=8;
+		mass=6;
 	};
 	class MET_SUN_Grenade: 1Rnd_HE_Grenade_shell
 	{
@@ -10135,7 +10135,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_flw.paa";
 		descriptionShort="By the Emperors Light...";
 		ammo="MET_GL_Flare_SUN";
-		mass=8;
+		mass=6;
 	};
 	class MET_SUN_Grenade_Clust: 1Rnd_HE_Grenade_shell
 	{
@@ -10147,7 +10147,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_flw.paa";
 		descriptionShort="... Light my Darkness";
 		ammo="MET_GL_Flare_SUN_Cluster";
-		mass=8;
+		mass=6;
 	};
 	class MET_RA_Grenade: 1Rnd_HE_Grenade_shell
 	{
@@ -10159,7 +10159,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_flw.paa";
 		descriptionShort="RA!";
 		ammo="MET_GL_Flare_RA";
-		mass=8;
+		mass=6;
 	};
 	class MET_RA_Grenade_Clust: 1Rnd_HE_Grenade_shell
 	{
@@ -10171,7 +10171,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_flw.paa";
 		descriptionShort="I SUMMON THEE";
 		ammo="MET_GL_Flare_RA_Cluster";
-		mass=8;
+		mass=6;
 	};
 	class MET_ILLUM_B_Grenade: 1Rnd_HE_Grenade_shell
 	{
@@ -10182,7 +10182,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_flb.paa";
 		descriptionShort="Flare";
 		ammo="MET_GL_Flare_B_LUM";
-		mass=8;
+		mass=6;
 	};
 	class MET_ILLUM_B_Grenade_Clust: 1Rnd_HE_Grenade_shell
 	{
@@ -10193,7 +10193,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_flb.paa";
 		descriptionShort="Flare";
 		ammo="MET_GL_Flare_B_LUM_Cluster";
-		mass=8;
+		mass=6;
 	};
 	class MET_ILLUM_G_Grenade: 1Rnd_HE_Grenade_shell
 	{
@@ -10204,7 +10204,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_flg.paa";
 		descriptionShort="Flare";
 		ammo="MET_GL_Flare_G_LUM";
-		mass=8;
+		mass=6;
 	};
 	class MET_ILLUM_G_Grenade_Clust: 1Rnd_HE_Grenade_shell
 	{
@@ -10215,7 +10215,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_flg.paa";
 		descriptionShort="Flare";
 		ammo="MET_GL_Flare_G_LUM_Cluster";
-		mass=8;
+		mass=6;
 	};
 	class MET_ILLUM_R_Grenade: 1Rnd_HE_Grenade_shell
 	{
@@ -10226,7 +10226,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_flr.paa";
 		descriptionShort="Flare";
 		ammo="MET_GL_Flare_R_LUM";
-		mass=8;
+		mass=6;
 	};
 	class MET_ILLUM_R_Grenade_Clust: 1Rnd_HE_Grenade_shell
 	{
@@ -10237,7 +10237,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_flr.paa";
 		descriptionShort="Flare";
 		ammo="MET_GL_Flare_R_LUM_Cluster";
-		mass=8;
+		mass=6;
 	};
 	class MET_ILLUM_Y_Grenade: 1Rnd_HE_Grenade_shell
 	{
@@ -10248,7 +10248,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_fly.paa";
 		descriptionShort="Flare";
 		ammo="MET_GL_Flare_Y_LUM";
-		mass=8;
+		mass=6;
 	};
 	class MET_ILLUM_Y_Grenade_Clust: 1Rnd_HE_Grenade_shell
 	{
@@ -10259,7 +10259,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_fly.paa";
 		descriptionShort="Flare";
 		ammo="MET_GL_Flare_Y_LUM_Cluster";
-		mass=8;
+		mass=6;
 	};
 	class MET_ILLUM_O_Grenade: 1Rnd_HE_Grenade_shell
 	{
@@ -10270,7 +10270,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_flo.paa";
 		descriptionShort="Flare";
 		ammo="MET_GL_Flare_O_LUM";
-		mass=8;
+		mass=6;
 	};
 	class MET_ILLUM_O_Grenade_Clust: 1Rnd_HE_Grenade_shell
 	{
@@ -10281,7 +10281,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_flo.paa";
 		descriptionShort="Flare";
 		ammo="MET_GL_Flare_O_LUM_Cluster";
-		mass=8;
+		mass=6;
 	};
 	class MET_ILLUM_P_Grenade: 1Rnd_HE_Grenade_shell
 	{
@@ -10292,7 +10292,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_flp.paa";
 		descriptionShort="Flare";
 		ammo="MET_GL_Flare_P_LUM";
-		mass=8;
+		mass=6;
 	};
 	class MET_ILLUM_P_Grenade_Clust: 1Rnd_HE_Grenade_shell
 	{
@@ -10303,7 +10303,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_flp.paa";
 		descriptionShort="Flare";
 		ammo="MET_GL_Flare_P_LUM_Cluster";
-		mass=8;
+		mass=6;
 	};
 	class MET_ILLUM_TU_Grenade: 1Rnd_HE_Grenade_shell
 	{
@@ -10314,7 +10314,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_flb.paa";
 		descriptionShort="Flare";
 		ammo="MET_GL_Flare_TU_LUM";
-		mass=8;
+		mass=6;
 	};
 	class MET_ILLUM_TU_Grenade_Clust: 1Rnd_HE_Grenade_shell
 	{
@@ -10325,7 +10325,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_flb.paa";
 		descriptionShort="Flare";
 		ammo="MET_GL_Flare_TU_LUM_Cluster";
-		mass=8;
+		mass=6;
 	};
 	class MET_ILLUM_TE_Grenade: 1Rnd_HE_Grenade_shell
 	{
@@ -10336,7 +10336,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_flg.paa";
 		descriptionShort="Flare";
 		ammo="MET_GL_Flare_TE_LUM";
-		mass=8;
+		mass=6;
 	};
 	class MET_ILLUM_TE_Grenade_Clust: 1Rnd_HE_Grenade_shell
 	{
@@ -10347,7 +10347,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_flg.paa";
 		descriptionShort="Flare";
 		ammo="MET_GL_Flare_TE_LUM_Cluster";
-		mass=8;
+		mass=6;
 	};
 	class MET_ILLUM_IR_Grenade: 1Rnd_HE_Grenade_shell
 	{
@@ -10358,7 +10358,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_flp.paa";
 		descriptionShort="Flare";
 		ammo="MET_GL_Flare_IR_LUM";
-		mass=8;
+		mass=6;
 	};
 	class MET_ILLUM_IR_Grenade_Clust: 1Rnd_HE_Grenade_shell
 	{
@@ -10369,7 +10369,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_flp.paa";
 		descriptionShort="Flare";
 		ammo="MET_GL_Flare_IR_LUM_Cluster";
-		mass=8;
+		mass=6;
 	};
 	class MET_SMKW_Grenade: 1Rnd_HE_Grenade_shell
 	{
@@ -10380,7 +10380,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_smw.paa";
 		descriptionShort="Smoke grenade";
 		ammo="Met_Ammo_smoke_white";
-		mass=8;
+		mass=6;
 	};
 	class MET_SMKB_Grenade: 1Rnd_HE_Grenade_shell
 	{
@@ -10391,7 +10391,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_smb.paa";
 		descriptionShort="Smoke grenade";
 		ammo="Met_Ammo_smoke_blue";
-		mass=8;
+		mass=6;
 	};
 	class MET_SMKG_Grenade: 1Rnd_HE_Grenade_shell
 	{
@@ -10402,7 +10402,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_smg.paa";
 		descriptionShort="Smoke grenade";
 		ammo="Met_Ammo_smoke_green";
-		mass=8;
+		mass=6;
 	};
 	class MET_SMKO_Grenade: 1Rnd_HE_Grenade_shell
 	{
@@ -10413,7 +10413,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_smo.paa";
 		descriptionShort="Smoke grenade";
 		ammo="Met_Ammo_smoke_orange";
-		mass=8;
+		mass=6;
 	};
 	class MET_SMKP_Grenade: 1Rnd_HE_Grenade_shell
 	{
@@ -10424,7 +10424,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_smp.paa";
 		descriptionShort="Smoke grenade";
 		ammo="Met_Ammo_smoke_purple";
-		mass=8;
+		mass=6;
 	};
 	class MET_SMKR_Grenade: 1Rnd_HE_Grenade_shell
 	{
@@ -10435,7 +10435,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_smr.paa";
 		descriptionShort="Smoke grenade";
 		ammo="Met_Ammo_smoke_red";
-		mass=8;
+		mass=6;
 	};
 	class MET_SMKTU_Grenade: 1Rnd_HE_Grenade_shell
 	{
@@ -10446,7 +10446,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_smb.paa";
 		descriptionShort="Smoke grenade";
 		ammo="Met_Ammo_smoke_turquoise";
-		mass=8;
+		mass=6;
 	};
 	class MET_SMKTE_Grenade: 1Rnd_HE_Grenade_shell
 	{
@@ -10457,7 +10457,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_smg.paa";
 		descriptionShort="Smoke grenade";
 		ammo="Met_Ammo_smoke_teal";
-		mass=8;
+		mass=6;
 	};
 	class MET_SMKY_Grenade: 1Rnd_HE_Grenade_shell
 	{
@@ -10468,7 +10468,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_smy.paa";
 		descriptionShort="Smoke grenade";
 		ammo="Met_Ammo_smoke_yellow";
-		mass=8;
+		mass=6;
 	};
 	class MET_SMKW_Clust_Grenade: MET_SMKW_Grenade
 	{
