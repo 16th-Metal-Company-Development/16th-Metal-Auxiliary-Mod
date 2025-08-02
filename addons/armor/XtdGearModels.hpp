@@ -155,5 +155,21 @@ class XtdGearModels {
                 values[] = { "Trooper", "NCO", "Officer", "Medic", "EOD" };
             };
         };
+        class 16th_Advanced_Vision_Chip {
+            label = "[16th] Advanced Vision Chip";
+            author = "16th Mod Team";
+            options[] = { "camo" };
+            class camo {
+                values[] = { "White Hot", "Green Hot", "Red Hot", "Multi" };
+            };
+        };
+        class 16th_Macrobinoculars {
+            label = "[16th] Macrobinoculars";
+            author = "16th Mod Team";
+            options[] = { "camo" };
+            class camo {
+                values[] = { "Normal", "Down", "EOD", "Medic" };
+            };
+        };
     };
 };

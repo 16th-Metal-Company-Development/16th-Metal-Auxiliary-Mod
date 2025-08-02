@@ -150,5 +150,17 @@ class XtdGearInfos {
         class armor_16_ca_off          { model = "16th_CA_Armor"; camo = "Officer"; };
         class armor_16_ca_med          { model = "16th_CA_Armor"; camo = "Medic"; };
         class armor_16_ca_eod          { model = "16th_CA_Armor"; camo = "EOD"; };
+
+        // [16th] Advanced Vision Chips
+        class nvg_16th_adv_chip_1      { model = "16th_Advanced_Vision_Chip"; camo = "White Hot"; };
+        class nvg_16th_adv_chip_2      { model = "16th_Advanced_Vision_Chip"; camo = "Green Hot"; };
+        class nvg_16th_adv_chip_3      { model = "16th_Advanced_Vision_Chip"; camo = "Red Hot"; };
+        class nvg_16th_adv_chip_4      { model = "16th_Advanced_Vision_Chip"; camo = "Multi"; };
+
+        // [16th] Macrobinoculars
+        class nvg_16th_macro          { model = "16th_Macrobinoculars"; camo = "Normal"; };
+        class nvg_16th_macro_down     { model = "16th_Macrobinoculars"; camo = "Down"; };
+        class nvg_16th_macro_eod      { model = "16th_Macrobinoculars"; camo = "EOD"; };
+        class nvg_16th_macro_med      { model = "16th_Macrobinoculars"; camo = "Medic"; };
     };
 };
