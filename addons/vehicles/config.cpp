@@ -46,7 +46,9 @@ class CfgPatches
 			"MET_Bantha_Cargo",
 			"MET_ATTE_Rommel",
 			"MET_BARC",
-			"MET_BARC_SideCar"
+			"MET_BARC_SideCar",
+			"MET_ISP",
+			"MET_ISP_Transport"
 		};
 		weapons[] = 
 		{
@@ -152,6 +154,8 @@ class cfgvehicles
 	class Aux212_Bantha_T_Cargo;
 	class 3AS_Barc_501;
 	class 3AS_BarcSideCar;
+	class 3AS_ISP;
+	class 3AS_ISP_Transport;
 
 	#include "base_vic.hpp"
 	#include "custom_vic.hpp"
@@ -218,7 +222,7 @@ class CfgWeapons
 			{
 				begin1[] =
 				{
-					"3AS\3AS_LightVics\3AS_BARC\Sounds\canon",
+					"z\16th\addons\vehicles\vics\BARC\BARC_Repeater_SideCar",
 					1.1220185,
 					1,
 					1100
@@ -306,6 +310,7 @@ class CfgWeapons
 		class manual : manual
 		{
 			reloadTime = 0.1;
+			dispersion = 0.0011;
 		};
 	};
 };

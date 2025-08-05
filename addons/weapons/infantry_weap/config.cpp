@@ -75,6 +75,12 @@ class CfgRecoils
 		muzzleOuter[]={0.5,1.5,0.80000001,0.80000001};
 		temporary=0.079999998;
 	};
+	class MET_recoil_VK38X : 3AS_recoil_default
+	{
+		kickBack[] = {0.025,0.095};
+		muzzleOuter[] = {0.525,1.675,0.65,0.65};
+		temporary = 0.0095;
+	};
 };
 class CBA_DisposableLaunchers
 {
@@ -3416,7 +3422,7 @@ class CfgWeapons
 		};
 		reloadAction="GestureReloadMX";
 		cursor="srifle";
-		recoil="3as_recoil_VK38X";
+		recoil="MET_recoil_VK38X";
 		maxZeroing=1400;
 		discreteDistanceInitIndex=0;
 		maxRecoilSway=0.0125;

@@ -1066,6 +1066,11 @@ class CfgVehicles
 				magazine="MET_DC15x_mag";
 				count=10;
 			};
+            class _xx_MET_DC15LE_mag
+            {
+                magazine = "MET_DC15LE_mag";
+                count = 30;
+            };
 			class _xx_MET_DC15x_at_mag
 			{
 				magazine="MET_DC15x_at_mag";
@@ -1918,6 +1923,11 @@ class CfgVehicles
 				magazine="MET_DC15x_mag";
 				count=10;
 			};
+            class _xx_MET_DC15LE_mag
+            {
+                magazine = "MET_DC15LE_mag";
+                count = 30;
+            };
 			class _xx_MET_DC15x_at_mag
 			{
 				magazine="MET_DC15x_at_mag";

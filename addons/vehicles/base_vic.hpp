@@ -273,10 +273,10 @@ class MET_Bantha_IFV: Aux212_Bantha_C_IFV
 	crew="MET_P2_TRP2";
     typicalCargo[]={"MET_P2_TRP2"};
 
+	armor = 350;
+
 	#include "vics\Bantha\Bantha_StandardInventory.hpp"
 	#include "vics\Bantha\Bantha_Intercoms.hpp"
-
-
 };
 class MET_Bantha_Transport: Aux212_Bantha_C_Unarmed
 {
@@ -297,6 +297,8 @@ class MET_Bantha_Transport: Aux212_Bantha_C_Unarmed
 	};
 	crew="MET_P2_TRP2";
     typicalCargo[]={"MET_P2_TRP2"};
+
+	armor = 350;
 
 	#include "vics\Bantha\Bantha_StandardInventory.hpp"
 	#include "vics\Bantha\Bantha_Intercoms.hpp"
@@ -325,6 +327,8 @@ class MET_Bantha_Assault: Aux212_Bantha_T_Assault
 	crew="MET_P2_TRP2";
     typicalCargo[]={"MET_P2_TRP2"};
 
+	armor = 350;
+
 	#include "vics\Bantha\Bantha_StandardInventory.hpp"
 	#include "vics\Bantha\Bantha_Intercoms.hpp"
 };
@@ -351,6 +355,8 @@ class MET_Bantha_Mortar: Aux212_Bantha_C_Mortar
 	};
 	crew="MET_P2_TRP2";
     typicalCargo[]={"MET_P2_TRP2"};
+
+	armor = 350;
 
 	#include "vics\Bantha\Bantha_MortarInventory.hpp"
 	#include "vics\Bantha\Bantha_Intercoms.hpp"
@@ -385,6 +391,8 @@ class MET_Bantha_MSV: Aux212_Bantha_E_MSV
 	crew="MET_P2_TRP2";
     typicalCargo[]={"MET_P2_TRP2"};
 
+	armor = 350;
+
 	#include "vics\Bantha\Bantha_MSVInventory.hpp"
 	#include "vics\Bantha\Bantha_Intercoms.hpp"
 };
@@ -407,6 +415,8 @@ class MET_Bantha_Cargo: Aux212_Bantha_T_Cargo
 	};
 	crew="MET_P2_TRP2";
     typicalCargo[]={"MET_P2_TRP2"};
+
+	armor = 350;
 
 	class TransportMagazines 
 	{
@@ -1037,4 +1047,53 @@ class MET_BARC_SideCar: 3AS_BarcSideCar
 	{
 
 	};
+};
+
+// ISPs
+class MET_ISP: 3AS_ISP
+{
+	scope=2;
+	scopeCurator=2;
+	displayName="[16th] Swamp Speeder";
+	faction="metal_company";
+	editorSubcategory="metal_co_EdSubCat_Infantry";
+	hiddenselections[]= 
+	{
+		"camo1",
+		"camo2"
+	};
+	hiddenselectionstextures[] = 
+	{
+		"z\16th\addons\vehicles\vics\ISP\ISP_Base_New_co.paa",
+		"3as\3AS_LightVics\3AS_ISP\textures\ISP_Screens_co.paa",
+	};
+	crew="MET_P2_TRP2";
+    typicalCargo[]={"MET_P2_TRP2"};
+
+	#include "vics\Bantha\Bantha_StandardInventory.hpp"
+	#include "vics\Bantha\Bantha_Intercoms.hpp"
+};
+
+class MET_ISP_Transport: 3AS_ISP_Transport
+{
+	scope=2;
+	scopeCurator=2;
+	displayName="[16th] Swamp Speeder [Unarmed]";
+	faction="metal_company";
+	editorSubcategory="metal_co_EdSubCat_Infantry";
+	hiddenselections[]= 
+	{
+		"camo1",
+		"camo2"
+	};
+	hiddenselectionstextures[] = 
+	{
+		"z\16th\addons\vehicles\vics\ISP\ISP_Base_New_Logo_co.paa",
+		"3as\3AS_LightVics\3AS_ISP\textures\ISP_Screens_co.paa",
+	};
+	crew="MET_P2_TRP2";
+    typicalCargo[]={"MET_P2_TRP2"};
+
+	#include "vics\Bantha\Bantha_StandardInventory.hpp"
+	#include "vics\Bantha\Bantha_Intercoms.hpp"
 };
