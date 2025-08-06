@@ -326,6 +326,111 @@ class CfgWeapons
 		};
 	};
     /*==================================================================================================================================================
+	==Honor Guard
+	==================================================================================================================================================*/
+	class SC_MDF_Helmet_SSD;
+	class MET_MDF_Helmet_PHOBOS: SC_MDF_Helmet_SSD
+	{
+		scope=2;
+		scopeArsenal=0;
+		scopeCurator=0;
+		displayName="Honor Guard Helmet";
+        class ItemInfo: HeadgearItem
+		{
+			mass=10;
+			uniformModel="MDF\MDFHelmet.p3d";
+			hiddenSelections[]=
+			{
+				"camo"
+			};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitPointName="HitHead";
+					armor=50;
+					passThrough=0.2;
+				};
+				class Face
+				{
+					hitPointName="HitFace";
+					armor=40;
+					passThrough=0.2;
+				};
+			};
+		};
+	};
+    class SC_MDF_Heavy_SSD;
+	class MET_MDF_Heavy_PHOBOS: SC_MDF_Heavy_SSD
+	{
+		scope=2;
+		scopeArsenal=0;
+		scopeCurator=0;
+		displayName="Honor Guard Armor";
+        class ItemInfo: ItemInfo
+		{
+			uniformModel="MDF\MDFHeavy.p3d";
+			containerClass="Supply200";
+			mass=110;
+			modelsides[]={0,1,2,3};
+			hiddenSelections[]=
+			{
+				"camo",
+				"camo1"
+			};
+			class HitpointsProtectionInfo
+			{
+				class Neck
+				{
+					hitpointName="HitNeck";
+					armor=32;
+					passThrough=0.3;
+				};
+				class Arms
+				{
+					hitpointName="HitArms";
+					armor=40;
+					passThrough=0.2;
+				};
+				class Chest
+				{
+					hitpointName="HitChest";
+					armor=118;
+					passThrough=0.1;
+				};
+				class Diaphragm
+				{
+					hitpointName="HitDiaphragm";
+					armor=110;
+					passThrough=0.1;
+				};
+				class Abdomen
+				{
+					hitpointName="HitAbdomen";
+					armor=110;
+					passThrough=0.1;
+				};
+				class Pelvis
+				{
+					hitpointName="HitPelvis";
+					armor=40;
+					passThrough=0.2;
+				};
+				class Body
+				{
+					hitpointName="HitBody";
+					passThrough=0.1;
+				};
+				class Legs
+				{
+					hitpointName="HitLegs";
+					armor=40;
+					passThrough=0.1;
+				};
+			};
+		};
+	};
+    /*==================================================================================================================================================
 	==Apostles
 	==================================================================================================================================================*/
     class SC_Helmet_SEN_Night_SL;
@@ -744,7 +849,7 @@ class CfgVehicles
 			};
             class _xx_Medikit
 			{
-				count=1;
+				count=3;
 				magazine="Medikit";
 			};
 		};
@@ -831,6 +936,36 @@ class CfgVehicles
 			{
 				count=1;
 				magazine="BHA_AP_SINGLE";
+			};
+		};
+	};
+    /*==================================================================================================================================================
+	==Honor Guard
+	==================================================================================================================================================*/
+	class SC_MDFBackpack_SSD;
+	class MET_MDFBackpack_SSD: SC_MDFBackpack_SSD
+	{
+		scope=1;
+		scopeArsenal=0;
+		scopeCurator=0;
+		displayName="Honor Guard Backpack";
+		descriptionshort="Backpack used by the BHA Honor Guard.";
+		maximumLoad=300;
+	};
+	class MET_MDFBackpack_SSD_MG: SC_MDFBackpack_SSD
+	{
+		scope=1;
+		scopeArsenal=0;
+		scopeCurator=0;
+		displayName="Honor Guard Backpack";
+		descriptionshort="Backpack used by the BHA Honor Guard.";
+		maximumLoad=300;
+        class TransportMagazines
+		{
+			class _xx_MET_FHR1_mag
+			{
+				count=5;
+				magazine="MET_FHR1_mag";
 			};
 		};
 	};

@@ -12,7 +12,11 @@ class CfgPatches
 			"BHA_Acolytes_Mender",
 			"BHA_Acolytes_Annihilator",
 			"BHA_Acolytes_Obliterator",
-			"BHA_Acolytes_Bishop"
+			"BHA_Acolytes_Bishop",
+			"BHA_Acolytes_HonorGuard",
+			"BHA_Acolytes_HonorGuardLeader",
+			"BHA_Acolytes_HonorGuard_Immortal",
+			"BHA_Acolytes_HonorGuard_Pacifier"
 		};
 		weapons[]={};
 	};
@@ -148,6 +152,150 @@ class CfgVehicles
 			"ItemWatch",
 			"MET_MDF_Helmet_Black",
 			"MET_MDF_Heavy_Black"
+		};
+		class EventHandlers
+		{
+			init = "_unit = _this select 0; if (local _unit) then { {_unit setSkill [_x, 0.8]; } forEach ['aimingAccuracy','aimingShake','aimingSpeed','commanding','courage','general','reloadSpeed','spotDistance','spotTime']; };";
+		};
+	};
+	class BHA_HonorGuard_Base: I_Soldier_base_F
+	{
+		side=2;
+		scope=0;
+		scopeCurator=0;
+		faction="BHA_Units";
+		editorSubCategory="BHA_HG";
+		uniformClass="SC_Undersuit_Black";
+		backpack="MET_MDFBackpack_SSD";
+		identityTypes[]=
+		{
+			"LanguageENG_F",
+			"Head_NATO",
+			"G_NATO_default"
+		};
+		Weapons[]=
+		{
+			"Put",
+			"Throw"
+		};
+		respawnWeapons[]=
+		{
+			"Put",
+			"Throw"
+		};
+		Magazines[]=
+		{
+			"MET_T20_mag",
+			"MET_T20_mag",
+			"MET_T20_mag",
+			"MET_T20_mag",
+			"MET_T20_mag",
+			"MET_T20_mag",
+			"MET_T20_mag",
+			"MET_T20_mag",
+			"MET_D200_Pistol_mag",
+			"MET_D200_Pistol_mag",
+			"MET_D200_Pistol_mag",
+			"MET_D200_Pistol_mag",
+			"MET_Smoke_Black",
+			"MET_Smoke_Black",
+			"MET_Smoke_Black",
+			"MET_Weapons_Mags_Thermal_Detonator",
+			"MET_Weapons_Mags_Thermal_Detonator",
+			"MET_Weapons_Mags_Thermal_Detonator",
+			"MET_Weapons_Mags_Thermal_Detonator",
+			"MET_Weapons_Mags_Thermal_Detonator"
+		};
+		respawnMagazines[]=
+		{
+			"MET_T20_mag",
+			"MET_T20_mag",
+			"MET_T20_mag",
+			"MET_T20_mag",
+			"MET_T20_mag",
+			"MET_T20_mag",
+			"MET_T20_mag",
+			"MET_T20_mag",
+			"MET_D200_Pistol_mag",
+			"MET_D200_Pistol_mag",
+			"MET_D200_Pistol_mag",
+			"MET_D200_Pistol_mag",
+			"MET_Smoke_Black",
+			"MET_Smoke_Black",
+			"MET_Smoke_Black",
+			"MET_Weapons_Mags_Thermal_Detonator",
+			"MET_Weapons_Mags_Thermal_Detonator",
+			"MET_Weapons_Mags_Thermal_Detonator",
+			"MET_Weapons_Mags_Thermal_Detonator",
+			"MET_Weapons_Mags_Thermal_Detonator"
+		};
+		Items[]=
+		{
+			"LFP_item_bacta_bandage",
+			"LFP_item_bacta_bandage",
+			"LFP_item_bacta_bandage",
+			"LFP_item_bacta_bandage",
+			"LFP_item_bacta_bandage",
+			"LFP_item_bacta_bandage",
+			"LFP_item_bacta_bandage",
+			"LFP_item_bacta_bandage",
+			"LFP_item_bacta_bandage",
+			"LFP_item_bacta_bandage",
+			"LFP_item_bacta_bandage",
+			"LFP_item_bacta_bandage",
+			"LFP_item_bacta_bandage",
+			"LFP_item_bacta_bandage",
+			"LFP_item_bacta_bandage",
+			"ACE_CableTie",
+			"ACE_CableTie",
+			"ACE_CableTie",
+			"LFP_Skirata_Knife"
+		};
+		respawnItems[]=
+		{
+			"LFP_item_bacta_bandage",
+			"LFP_item_bacta_bandage",
+			"LFP_item_bacta_bandage",
+			"LFP_item_bacta_bandage",
+			"LFP_item_bacta_bandage",
+			"LFP_item_bacta_bandage",
+			"LFP_item_bacta_bandage",
+			"LFP_item_bacta_bandage",
+			"LFP_item_bacta_bandage",
+			"LFP_item_bacta_bandage",
+			"LFP_item_bacta_bandage",
+			"LFP_item_bacta_bandage",
+			"LFP_item_bacta_bandage",
+			"LFP_item_bacta_bandage",
+			"LFP_item_bacta_bandage",
+			"ACE_CableTie",
+			"ACE_CableTie",
+			"ACE_CableTie",
+			"LFP_Skirata_Knife"
+		};
+		linkedItems[]=
+		{
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemRadio",
+			"ItemWatch",
+			"MET_MDF_Helmet_PHOBOS",
+			"MET_MDF_Heavy_PHOBOS"
+		};
+		respawnLinkedItems[]=
+		{
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemRadio",
+			"ItemWatch",
+			"MET_MDF_Helmet_PHOBOS",
+			"MET_MDF_Heavy_PHOBOS"
+		};
+		class EventHandlers
+		{
+			init = "_unit = _this select 0; if (local _unit) then { {_unit setSkill [_x, 1]; } forEach ['aimingAccuracy','aimingShake','aimingSpeed','commanding','courage','general','reloadSpeed','spotDistance','spotTime']; };";
 		};
 	};
 	class BHA_Acolytes_Acolyte: BHA_Acolytes_Base
@@ -655,6 +803,199 @@ class CfgVehicles
 			"MET_Weapons_Mags_Thermal_Detonator"
 		};
 	};
+	class BHA_Acolytes_HonorGuard: BHA_HonorGuard_Base
+	{
+		displayName="Honor Guard";
+		scope=2;
+		scopeCurator=2;
+		//editorPreview="\HDC_Units_mod\data\Editor Previews\BHA\Apostles\BHA_Apostles_Apostle.jpg";
+		Weapons[]=
+		{
+			"MET_T20_rifle",
+			"MET_D200",
+			"Put",
+			"Throw"
+		};
+		respawnWeapons[]=
+		{
+			"MET_T20_rifle",
+			"MET_D200",
+			"Put",
+			"Throw"
+		};
+	};
+	class BHA_Acolytes_HonorGuardLeader: BHA_HonorGuard_Base
+	{
+		displayName="Honor Guard Honorable";
+		scope=2;
+		scopeCurator=2;
+		icon="iconManLeader";
+		//editorPreview="\HDC_Units_mod\data\Editor Previews\BHA\Apostles\BHA_Apostles_Apostle.jpg";
+		Weapons[]=
+		{
+			"MET_T20_rifle",
+			"MET_D200",
+			"Put",
+			"Throw"
+		};
+		respawnWeapons[]=
+		{
+			"MET_T20_rifle",
+			"MET_D200",
+			"Put",
+			"Throw"
+		};
+	};
+	class BHA_Acolytes_HonorGuard_Immortal: BHA_HonorGuard_Base
+	{
+		displayName="Honor Guard Immortal";
+		scope=2;
+		scopeCurator=2;
+		icon="iconManLeader";
+		backpack="MET_MDFBackpack_SSD_MG";
+		//editorPreview="\HDC_Units_mod\data\Editor Previews\BHA\Apostles\BHA_Apostles_Apostle.jpg";
+		Weapons[]=
+		{
+			"met_FHR1",
+			"MET_D200",
+			"Put",
+			"Throw"
+		};
+		respawnWeapons[]=
+		{
+			"met_FHR1",
+			"MET_D200",
+			"Put",
+			"Throw"
+		};
+		Magazines[]=
+		{
+			"MET_FHR1_mag",
+			"MET_FHR1_mag",
+			"MET_FHR1_mag",
+			"MET_FHR1_mag",
+			"MET_FHR1_mag",
+			"MET_FHR1_mag",
+			"MET_FHR1_mag",
+			"MET_FHR1_mag",
+			"MET_D200_Pistol_mag",
+			"MET_D200_Pistol_mag",
+			"MET_D200_Pistol_mag",
+			"MET_D200_Pistol_mag",
+			"BHA_AT_Single",
+			"BHA_AT_Single",
+			"BHA_AA_Single",
+			"BHA_AP_SINGLE",
+			"MET_Smoke_Black",
+			"MET_Smoke_Black",
+			"MET_Smoke_Black",
+			"MET_Weapons_Mags_Thermal_Detonator",
+			"MET_Weapons_Mags_Thermal_Detonator",
+			"MET_Weapons_Mags_Thermal_Detonator",
+			"MET_Weapons_Mags_Thermal_Detonator",
+			"MET_Weapons_Mags_Thermal_Detonator"
+		};
+		respawnMagazines[]=
+		{
+			"MET_FHR1_mag",
+			"MET_FHR1_mag",
+			"MET_FHR1_mag",
+			"MET_FHR1_mag",
+			"MET_FHR1_mag",
+			"MET_FHR1_mag",
+			"MET_FHR1_mag",
+			"MET_FHR1_mag",
+			"MET_D200_Pistol_mag",
+			"MET_D200_Pistol_mag",
+			"MET_D200_Pistol_mag",
+			"MET_D200_Pistol_mag",
+			"BHA_AT_Single",
+			"BHA_AT_Single",
+			"BHA_AP_SINGLE",
+			"MET_Smoke_Black",
+			"MET_Smoke_Black",
+			"MET_Smoke_Black",
+			"MET_Weapons_Mags_Thermal_Detonator",
+			"MET_Weapons_Mags_Thermal_Detonator",
+			"MET_Weapons_Mags_Thermal_Detonator",
+			"MET_Weapons_Mags_Thermal_Detonator",
+			"MET_Weapons_Mags_Thermal_Detonator"
+		};
+	};
+	class BHA_Acolytes_HonorGuard_Pacifier: BHA_HonorGuard_Base
+	{
+		displayName="Honor Guard Pacifier";
+		scope=2;
+		scopeCurator=2;
+		//editorPreview="\HDC_Units_mod\data\Editor Previews\BHA\Apostles\BHA_Apostles_Apostle.jpg";
+		Weapons[]=
+		{
+			"MET_BHA_SBB3",
+			"MET_D200",
+			"Put",
+			"Throw"
+		};
+		respawnWeapons[]=
+		{
+			"MET_BHA_SBB3",
+			"MET_D200",
+			"Put",
+			"Throw"
+		};
+		Magazines[]=
+		{
+			"MET_SBB3_mag",
+			"MET_SBB3_mag",
+			"MET_SBB3_mag",
+			"MET_SBB3_mag",
+			"MET_SBB3_mag",
+			"MET_SBB3_mag",
+			"MET_SBB3_mag",
+			"MET_SBB3_mag",
+			"MET_D200_Pistol_mag",
+			"MET_D200_Pistol_mag",
+			"MET_D200_Pistol_mag",
+			"MET_D200_Pistol_mag",
+			"BHA_AT_Single",
+			"BHA_AT_Single",
+			"BHA_AA_Single",
+			"BHA_AP_SINGLE",
+			"MET_Smoke_Black",
+			"MET_Smoke_Black",
+			"MET_Smoke_Black",
+			"MET_Weapons_Mags_Thermal_Detonator",
+			"MET_Weapons_Mags_Thermal_Detonator",
+			"MET_Weapons_Mags_Thermal_Detonator",
+			"MET_Weapons_Mags_Thermal_Detonator",
+			"MET_Weapons_Mags_Thermal_Detonator"
+		};
+		respawnMagazines[]=
+		{
+			"MET_SBB3_mag",
+			"MET_SBB3_mag",
+			"MET_SBB3_mag",
+			"MET_SBB3_mag",
+			"MET_SBB3_mag",
+			"MET_SBB3_mag",
+			"MET_SBB3_mag",
+			"MET_SBB3_mag",
+			"MET_D200_Pistol_mag",
+			"MET_D200_Pistol_mag",
+			"MET_D200_Pistol_mag",
+			"MET_D200_Pistol_mag",
+			"BHA_AT_Single",
+			"BHA_AT_Single",
+			"BHA_AP_SINGLE",
+			"MET_Smoke_Black",
+			"MET_Smoke_Black",
+			"MET_Smoke_Black",
+			"MET_Weapons_Mags_Thermal_Detonator",
+			"MET_Weapons_Mags_Thermal_Detonator",
+			"MET_Weapons_Mags_Thermal_Detonator",
+			"MET_Weapons_Mags_Thermal_Detonator",
+			"MET_Weapons_Mags_Thermal_Detonator"
+		};
+	};
 };
 class CfgGroups
 {
@@ -733,6 +1074,81 @@ class CfgGroups
 					{
 						side=2;
 						vehicle="BHA_Acolytes_Acolyte";
+						rank="CORPORAL";
+						position[]={-1,-5,0};
+					};
+				};
+			};
+			class BHA_Acolytes_hg_Groups
+			{
+				name="Acolyte Honor Guard Groups";
+				class BHA_HG_Squad
+				{
+					name="Team";
+					scope=2;
+					side=2;
+					faction="BHA_Units";
+					icon="\A3\ui_f\data\map\markers\nato\b_inf.paa";
+					class Unit0
+					{
+						side=2;
+						vehicle="BHA_Acolytes_HonorGuardLeader";
+						rank="SERGEANT";
+						position[]={0,0,0};
+					};
+					class Unit1
+					{
+						side=2;
+						vehicle="BHA_Acolytes_HonorGuard";
+						rank="PRIVATE";
+						position[]={1,-2,0};
+					};
+					class Unit2
+					{
+						side=2;
+						vehicle="BHA_Acolytes_HonorGuard";
+						rank="CORPORAL";
+						position[]={-1,-2,0};
+					};
+					class Unit3
+					{
+						side=2;
+						vehicle="BHA_Acolytes_HonorGuard";
+						rank="CORPORAL";
+						position[]={1,-3,0};
+					};
+					class Unit4
+					{
+						side=2;
+						vehicle="BHA_Acolytes_HonorGuard_Immortal";
+						rank="CORPORAL";
+						position[]={-1,-3,0};
+					};
+					class Unit5
+					{
+						side=2;
+						vehicle="BHA_Acolytes_HonorGuard_Immortal";
+						rank="CORPORAL";
+						position[]={1,-4,0};
+					};
+					class Unit6
+					{
+						side=2;
+						vehicle="BHA_Acolytes_HonorGuard_Pacifier";
+						rank="CORPORAL";
+						position[]={-1,-4,0};
+					};
+					class Unit7
+					{
+						side=2;
+						vehicle="BHA_Acolytes_HonorGuard_Pacifier";
+						rank="CORPORAL";
+						position[]={1,-5,0};
+					};
+					class Unit8
+					{
+						side=2;
+						vehicle="BHA_Acolytes_HonorGuard_Pacifier";
 						rank="CORPORAL";
 						position[]={-1,-5,0};
 					};

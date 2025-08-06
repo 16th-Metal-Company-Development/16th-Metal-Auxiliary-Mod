@@ -63,23 +63,24 @@ class CfgRecoils
 	};
 	class recoil_dc15XM: Default
 	{
-		muzzleOuter[]={0.30000001,0.75,0.30000001,0.30000001};
+		muzzleOuter[]={0.5,2,0.8,1};
 		muzzleInner[]={0,0,0.1,0.1};
-		kickBack[]={0.02,0.039999999};
+		kickBack[]={0.1,0.12};
 		permanent=0.1;
-		temporary=0.0099999998;
+		temporary=0.01;
 	};
 	class MET_recoil_DC15X: 3AS_recoil_default
 	{
+		muzzleOuter[]={0.4,1.5,0.80000001,0.80000001};
 		kickBack[]={0.1,0.12};
-		muzzleOuter[]={0.5,1.5,0.80000001,0.80000001};
-		temporary=0.079999998;
+		temporary=0.08;
 	};
 	class MET_recoil_VK38X : 3AS_recoil_default
 	{
-		kickBack[] = {0.025,0.095};
-		muzzleOuter[] = {0.525,1.675,0.65,0.65};
-		temporary = 0.0095;
+		muzzleOuter[] 	= {0.3,1.4,0.4,0.7};
+		kickBack[] 		= {0.05,0.09};
+		permanent		= 0.1;
+		temporary 		= 0.05;
 	};
 };
 class CBA_DisposableLaunchers
@@ -3239,7 +3240,10 @@ class CfgWeapons
 			"MET_DC15xm_mag",
 			"MET_DC15xm_at_mag"
 		};
+		recoil="recoil_dc15XM";
 		WBK_UseDisintegrate = "true";
+		//WBK_UseMelting = "true";
+		cursor="srifle";
 		displayname="[16th] DC-15XM";
 		descriptionShort="Anti Material Rifle";
 		selectionFireAnim="zasleh";
@@ -3292,7 +3296,7 @@ class CfgWeapons
 				begin1[]=
 				{
 					"z\16th\addons\weapons\infantry_weap\sounds\dc15xm.ogg",
-					1,
+					200,
 					1,
 					1800
 				};
@@ -3302,7 +3306,7 @@ class CfgWeapons
 					1
 				};
 			};
-			reloadTime=0.9;
+			reloadTime=1.2;
 			dispersion=0.00000000000001;
 			minRange=5;
 			minRangeProbab=0.30000001;
@@ -3350,12 +3354,11 @@ class CfgWeapons
 		inertia=1.4;
 		dexterity=1.7;
 		initSpeed=-1;
-		recoil="LFP_recoil";
 		maxRecoilSway=0.015;
 		swayDecaySpeed=1;
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
-			mass=60;
+			mass=380;
 			class CowsSlot: Cowsslot
 			{
 				compatibleItems[]=
@@ -20060,11 +20063,11 @@ class CfgAmmo
 	class MET_blasterbolt_antimat: MET_blasterbolt_at
 	{
 		ACE_damageType="bullet";
-		hit=250;
-		indirectHit=6;
+		hit=300;
+		indirectHit=12;
 		explosive=1;
-		indirectHitRange=0.5;
-		caliber=40;
+		indirectHitRange=1;
+		caliber=50;
 		coefGravity=0;
 		timetolive=80;
 		waterFriction=-0.0099999998;
@@ -21557,11 +21560,11 @@ class CfgAmmo
 	class MET_blasterbolt_antimatat: MET_blasterbolt_at
 	{
 		ACE_damageType="bullet";
-		hit=750;
+		hit=950;
 		indirectHit=6;
 		explosive=1;
 		indirectHitRange=0.5;
-		caliber=90;
+		caliber=200;
 		coefGravity=0;
 		timetolive=80;
 		waterFriction=-0.0099999998;
