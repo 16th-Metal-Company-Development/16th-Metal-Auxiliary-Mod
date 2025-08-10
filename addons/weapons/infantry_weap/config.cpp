@@ -5806,6 +5806,7 @@ class CfgWeapons
 		model="3AS\3AS_Weapons\Chaingun\Chaingun.p3d";
 		picture="\3AS\3AS_Weapons\Chaingun\data\UI\3as_chaingun.paa";
 		UiPicture="\3AS\3AS_Weapons\Chaingun\data\UI\3as_chaingun.paa";
+        magazineReloadTime = 0;
 		handAnim[]=
 		{
 			"OFP2_ManSkeleton",

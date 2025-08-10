@@ -459,6 +459,48 @@ class CfgLights
 		flareMaxDistance=6000;
 		position[]={0,0,-1};
 	};
+	class MET_Large_BlasterboltLight_Blue_Green
+	{
+		color[]={0,0,0,0};
+		diffuse[]={34,206,233,1};
+		ambient[]={0,0,0,0.5};
+		intensity=200000;
+		class Attenuation
+		{
+			start=0;
+			constant=0;
+			linear=0;
+			quadratic=255;
+			hardLimitStart="1e20 * 0.7";
+			hardLimitEnd=1e+020;
+		};
+		dayLight=1;
+		useFlare=1;
+		flareSize=5;
+		flareMaxDistance=6000;
+		position[]={0,0,-1};
+	};
+	class MET_Large_BlasterboltLight_Green2
+	{
+		color[]={0,0,0,0};
+		diffuse[]={34,206,147,1};
+		ambient[]={0,0,0,0.5};
+		intensity=200000;
+		class Attenuation
+		{
+			start=0;
+			constant=0;
+			linear=0;
+			quadratic=255;
+			hardLimitStart="1e20 * 0.7";
+			hardLimitEnd=1e+020;
+		};
+		dayLight=1;
+		useFlare=1;
+		flareSize=5;
+		flareMaxDistance=6000;
+		position[]={0,0,-1};
+	};
 	class MET_Large_BlasterboltLight_Red: MET_Large_BlasterboltLight_Blue
 	{
 		diffuse[]={255,0,0,1};
@@ -473,7 +515,7 @@ class CfgLights
 	};
 	class MET_Large_BlasterboltLight_Yellow: MET_Large_BlasterboltLight_Blue
 	{
-		diffuse[]={255,255,0,1};
+		diffuse[]={214,191,124,1};
 		ambient[]={0,0,0,0.5};
 		intensity=200000;
 	};
@@ -502,13 +544,17 @@ class CfgLights
 	{
 		diffuse[]={255,0,0,1};
 	};
+	class MET_Medium_BlasterBoltLight_White: MET_Medium_BlasterBoltLight_Blue
+	{
+		diffuse[]={255,255,200,1};
+	};
 	class MET_Medium_BlasterBoltLight_Green: MET_Medium_BlasterBoltLight_Blue
 	{
 		diffuse[]={0,255,0,1};
 	};
 	class MET_Medium_BlasterBoltLight_Yellow: MET_Medium_BlasterBoltLight_Blue
 	{
-		diffuse[]={255,255,0,1};
+		diffuse[]={214,191,124,1};
 	};
 	class MET_BlasterboltLight_Blue
 	{
@@ -1116,12 +1162,39 @@ class MET_BlasterBoltGlow_Medium_Yellow_Fly
 		position[]={0,0,1};
 	};
 };
+class MET_BlasterBoltGlow_Medium_White_Fly
+{
+	class Light
+	{
+		simulation="light";
+		type="MET_Medium_BlasterboltLight_White";
+		position[]={0,0,1};
+	};
+};
 class MET_BlasterBoltGlow_Large_Blue_Fly
 {
 	class Light
 	{
 		simulation="light";
 		type="MET_Large_BlasterBoltLight_Blue";
+		position[]={0,0,1};
+	};
+};
+class MET_BlasterBoltGlow_Large_Blue_Green_Fly
+{
+	class Light
+	{
+		simulation="light";
+		type="MET_Large_BlasterBoltLight_Blue_Green";
+		position[]={0,0,1};
+	};
+};
+class MET_BlasterBoltGlow_Large_Green2_Fly
+{
+	class Light
+	{
+		simulation="light";
+		type="MET_Large_BlasterBoltLight_Green2";
 		position[]={0,0,1};
 	};
 };

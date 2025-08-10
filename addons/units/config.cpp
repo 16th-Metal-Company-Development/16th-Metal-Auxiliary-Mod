@@ -70,6 +70,10 @@ class CfgEditorSubcategories
 	{
 		displayName = "Goff Vehicles"; // Name visible in the list
 	};
+	class metal_co_EdSubCat_Turrets // Category class, you point to it in editorSubcategory property
+	{
+		displayName = "Turrets"; // Name visible in the list
+	};
 };
 class cfgFactionClasses
 {
