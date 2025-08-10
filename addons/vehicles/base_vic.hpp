@@ -292,7 +292,7 @@ class MET_Bantha_Transport: Aux212_Bantha_C_Unarmed
 	};
 	hiddenselectionstextures[] = 
 	{
-		"z\16th\addons\vehicles\vics\Bantha\Unarmed\Bantha_C_Unarmed_Body_New_2_co.paa",
+		"z\16th\addons\vehicles\vics\Bantha\Unarmed\Bantha_C_Unarmed_Body_New_co.paa",
 		"212th\Vehicles\212th_APC02\Data\Textures\Bantha_Master\Bantha_Wheel_Co.paa",
 	};
 	crew="MET_P2_TRP2";
