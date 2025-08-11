@@ -79,8 +79,8 @@ class CfgRecoils
 	{
 		muzzleOuter[] 	= {0.3,1.4,0.4,0.7};
 		kickBack[] 		= {0.05,0.09};
-		permanent		= 0.1;
-		temporary 		= 0.05;
+		permanent		= 0.05;
+		temporary 		= 0.005;
 	};
 };
 class CBA_DisposableLaunchers

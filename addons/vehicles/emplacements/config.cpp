@@ -5,18 +5,36 @@ class CfgPatches
 	{
 		units[] = 
 		{
-			
+			"MET_AU_44_Mortar",
+			"MET_AU_44_Mortar_Bag",
+			"MET_Republic_Mortar",
+			"MET_Republic_Mortar_Bag"
 		};
 		weapons[] = 
 		{
-
+			"MET_SGM120_Mortar_120mm",
+			"MET_SGM120_Twin_Mortar_120mm",
+			"MET_mortar_60mm"
 		};
 		magazines[] =
 		{
 			"MET_20Rnd_82mm_Mo_shells",
-            "MET_20Rnd_82mm_Mo_Flare_white",
-            "MET_20Rnd_82mm_Mo_Flare_Red",
-            "MET_20Rnd_82mm_Mo_Smoke_white"
+			"MET_20Rnd_82mm_Mo_Flare_white",
+			"MET_20Rnd_82mm_Mo_Flare_Red",
+			"MET_20Rnd_82mm_Mo_Smoke_white",
+			"MET_10Rnd_120mm_Mo_shells",
+			"MET_10Rnd_120mm_Mo_Flare_white",
+			"MET_10Rnd_120mm_Mo_IR_Flare_white",
+			"MET_10Rnd_120mm_Mo_Smoke_white",
+			"MET_10Rnd_120mm_Mo_guided",
+			"MET_10Rnd_120mm_Mo_LG",
+			"MET_5Rnd_120mm_Mo_Cluster_HE",
+			"MET_2Rnd_120mm_Mo_Extra_Cluster_HE",
+			"MET_2Rnd_120mm_Mo_shells",
+			"MET_2Rnd_120mm_Mo_Flare_white",
+			"MET_2Rnd_120mm_Mo_IR_Flare_white",
+			"MET_2Rnd_120mm_Mo_Smoke_white",
+			"MET_2Rnd_120mm_Mo_guided"
 		};
 		requiredAddons[] = 
 		{
@@ -26,7 +44,7 @@ class CfgPatches
 			"A3_Characters_F_Proxies",
 			"3AS_Main",
 			"3AS_VehicleWeapons",
-            "3AS_Static"
+			"3AS_Static"
 		};
 	};
 };
@@ -521,7 +539,57 @@ class CfgMagazines
 		ammo = "MET_M_Mo_ExtraCluster_HE";
 		displayName = "Double Cluster HE Mortar Shells";
 		displayNameShort = "Cluster HE";
-		displayNameMFDFormat = "CLST";
+		displayNameMFDFormat = "Oopsies";
+		picture = "\OPTRE_Weapons_Turrets\AU_44_Mortar\data\icons\shell.paa";
+	};
+	class MET_2Rnd_120mm_Mo_shells: 8Rnd_82mm_Mo_shells
+	{
+		author = "Hazmat";
+		count = 2;
+		ammo = "MET_Sh_120mm_AMOS";
+		displayName = "HE Mortar Shells (2rnd)";
+		displayNameShort = "HE";
+		displayNameMFDFormat = "HE";
+		picture = "\OPTRE_Weapons_Turrets\AU_44_Mortar\data\icons\shell.paa";
+	};
+	class MET_2Rnd_120mm_Mo_Flare_white: 8Rnd_82mm_Mo_shells
+	{
+		author = "Hazmat";
+		count = 2;
+		ammo = "MET_Flare_120mm_AMOS_White";
+		displayName = "Flare Mortar Shells (White, 2rnd)";
+		displayNameShort = "White Flare";
+		displayNameMFDFormat = "FLR";
+		picture = "\OPTRE_Weapons_Turrets\AU_44_Mortar\data\icons\shell.paa";
+	};
+	class MET_2Rnd_120mm_Mo_IR_Flare_white: 8Rnd_82mm_Mo_shells
+	{
+		author = "Hazmat";
+		count = 2;
+		ammo = "MET_IR_Flare_120mm_AMOS_White";
+		displayName = "IR Flare Mortar Shells (2rnd)";
+		displayNameShort = "IR Flare";
+		displayNameMFDFormat = "IR";
+		picture = "\OPTRE_Weapons_Turrets\AU_44_Mortar\data\icons\shell.paa";
+	};
+	class MET_2Rnd_120mm_Mo_Smoke_white: 8Rnd_82mm_Mo_shells
+	{
+		author = "Hazmat";
+		count = 2;
+		ammo = "MET_Smoke_120mm_AMOS_White";
+		displayName = "Smoke Mortar Shells (White, 2rnd)";
+		displayNameShort = "White Smoke";
+		displayNameMFDFormat = "SMK";
+		picture = "\OPTRE_Weapons_Turrets\AU_44_Mortar\data\icons\shell.paa";
+	};
+	class MET_2Rnd_120mm_Mo_guided: 8Rnd_82mm_Mo_shells
+	{
+		author = "Hazmat";
+		count = 2;
+		ammo = "MET_Sh_120mm_AMOS_guided";
+		displayName = "AT Guided Mortar Shells (2rnd)";
+		displayNameShort = "AT Guided";
+		displayNameMFDFormat = "ATG";
 		picture = "\OPTRE_Weapons_Turrets\AU_44_Mortar\data\icons\shell.paa";
 	};
 	class MET_20Rnd_82mm_Mo_shells: VehicleMagazine
@@ -560,12 +628,33 @@ class CfgMagazines
 		displayName="Smoke Mortar Shell (White)";
 		displayNameShort="White Smoke";
 	};
+	class JLTS_DC15A_mag;
+	class MET_DC15L_Heavy_mag: JLTS_DC15A_mag
+	{
+		JLTS_hasElectronics=1;
+		JLTS_hasEMPProtection=1;
+		author="Hazmat";
+		modelSpecial="";
+		modelSpecialIsProxy=0;
+		picture="\3AS\3AS_Weapons\Data\UI\3as_box_b.paa";
+		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
+		count=500;
+		displayName="[16th] DC-15L Energy Cell";
+		displayNameShort="DC-15L Energy Cell";
+		descriptionShort="Energy cell for the DC-15L";
+		ammo="MET_blasterbolt";
+		mass = 125;
+		tracersEvery=1;
+	};
 };
 class Mode_SemiAuto;
 class Mode_Burst;
 class CfgWeapons
 {
-    class CannonCore;
+    class CannonCore
+    {
+		class Mode_SemiAuto;
+	};
     class mortar_82mm: CannonCore
     {
         class Single1;
@@ -660,6 +749,158 @@ class CfgWeapons
             reloadTime = 2;
         };
     };
+	class MET_SGM120_Twin_Mortar_120mm: CannonCore
+	{
+		scope=1;
+        displayname = "SGMT-120 120MW Twin Mortar";
+        //Maybe we change sound if we get
+            reloadMagazineSound[] = {"A3\Sounds_F\arsenal\weapons_static\Mortar\reload_magazine_Mortar", 1, 1, 20};
+            soundServo[] = {"", 0.0001, 1};
+        //
+		nameSound="cannon";
+		cursor="mortar";
+		cursorAim="EmptyCursor";
+		sounds[]=
+		{
+			"StandardSound"
+		};
+		class StandardSound
+		{
+			begin1[]=
+			{
+				"z\16th\addons\vehicles\sounds\big_nuetron_3.ogg",
+				2.5118864,
+				1,
+				1500
+			};
+			soundBegin[]=
+			{
+				"begin1",
+				1
+			};
+		};
+		reloadSound[]=
+		{
+			"A3\Sounds_F\vehicles\armor\noises\reload_tank_cannon_2",
+			31.622778,
+			1,
+			15
+		};
+		reloadTime=0.3;
+		magazineReloadTime=3;
+		autoReload=1;
+		canLock=0;
+        magazines[] = {
+			"MET_2Rnd_120mm_Mo_shells",
+			"MET_2Rnd_120mm_Mo_Flare_white",
+			"MET_2Rnd_120mm_Mo_IR_Flare_white",
+			"MET_2Rnd_120mm_Mo_Smoke_white",
+			"MET_2Rnd_120mm_Mo_guided"
+        };
+		
+        modes[] = {"Single1", "Single2", "Single3", "Single4", "Single5"/*, "Burst1", "Burst2", "Burst3"*/};
+        class Single1: Mode_SemiAuto
+        {
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class StandardSound
+			{
+				begin1[]=
+				{
+					"z\16th\addons\vehicles\sounds\big_nuetron_3.ogg",
+					2.5118864,
+					1,
+					1500
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+			};
+			reloadSound[]=
+			{
+				"A3\sounds_f\dummysound",
+				1,
+				1,
+				20
+			};
+			displayName="Single (Close)";
+            artilleryDispersion = 1;
+            reloadTime = 0.3;
+			artilleryCharge=0.5;
+			aiRateOfFire=1;
+			aiRateOfFireDistance=10;
+			minRange=0;
+			minRangeProbab=0.0099999998;
+			midRange=1;
+			midRangeProbab=0.0099999998;
+			maxRange=2;
+			maxRangeProbab=0.0099999998;
+        };
+        class Single2: Single1
+        {
+			displayName="Single (Medium)";
+            artilleryDispersion = 0.9;
+			artilleryCharge=0.8;
+        };
+        class Single3: Single1
+        {
+			displayName="Single (Far)";
+            artilleryDispersion = 0.9;
+			artilleryCharge=1.1;
+        };
+        class Single4: Single1
+        {
+			displayName="Single (Farther)";
+            artilleryDispersion = 0.9;
+			artilleryCharge=1.4;
+        };
+        class Single5: Single1
+        {
+			displayName="Single (Extreme)";
+            artilleryDispersion = 0.9;
+			artilleryCharge=1.6;
+        };
+        /*class Burst1: Burst1
+        {
+            artilleryDispersion = 1;
+            reloadTime = 2;
+        };
+        class Burst2: Burst2
+        {
+            artilleryDispersion = 1;
+            reloadTime = 2;
+        };
+        class Burst3: Burst3
+        {
+            artilleryDispersion = 1;
+            reloadTime = 2;
+        };*/
+		class GunParticles
+		{
+			class Effect1
+			{
+				effectName="ArtilleryFired1";
+				positionName="Usti hlavne3";
+				directionName="Konec hlavne3";
+			};
+			class Effect2
+			{
+				effectName="ArtilleryFiredL";
+				positionName="Usti hlavne";
+				directionName="Usti hlavne b";
+			};
+			class Effect3
+			{
+				effectName="ArtilleryFiredR";
+				positionName="Usti hlavne";
+				directionName="Usti hlavne b";
+			};
+		};
+	};
 	class MET_mortar_60mm: CannonCore
 	{
 		scope=1;
@@ -856,6 +1097,105 @@ class CfgWeapons
 			maxRangeProbab=0.30000001;
 		};
 	};
+	class MGun;
+	class LMG_RCWS;
+	class MET_Bantha_Commander_Turret: LMG_RCWS
+	{
+		displayName="[16th] DC-15L";
+		scope=1;
+		magazines[]=
+		{
+			"MET_DC15L_Heavy_mag"
+		};
+		maxZeroing=2000;
+		class GunParticles
+		{
+		};
+		autoReload=1;
+		magazineReloadTime=3;
+		showAimCursorInternal=0;
+		class manual: MGun
+		{
+			displayName="[16th] DC-15L";
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class StandardSound
+			{
+				soundsetshot[]=
+				{
+					"3AS_DC15L_Shot_SoundSet"
+				};
+			};
+			reloadTime=0.06;
+			dispersion=0.00079;
+		};
+		class close: manual
+		{
+			aiBurstTerminable=1;
+			showToPlayer=0;
+			burst=8;
+			burstRangeMax=16;
+			aiRateOfFire=0.5;
+			aiRateOfFireDispersion=1.5;
+			aiRateOfFireDistance=50;
+			minRange=0;
+			minRangeProbab=0.69999999;
+			midRange=100;
+			midRangeProbab=0.69999999;
+			maxRange=200;
+			maxRangeProbab=0.2;
+		};
+		class short: close
+		{
+			aiBurstTerminable=1;
+			showToPlayer=0;
+			burst=6;
+			burstRangeMax=16;
+			aiRateOfFire=1;
+			aiRateOfFireDispersion=2;
+			aiRateOfFireDistance=150;
+			minRange=100;
+			minRangeProbab=0.69999999;
+			midRange=400;
+			midRangeProbab=0.75;
+			maxRange=800;
+			maxRangeProbab=0.2;
+		};
+		class medium: close
+		{
+			aiBurstTerminable=1;
+			showToPlayer=0;
+			burst=4;
+			burstRangeMax=12;
+			aiRateOfFire=2;
+			aiRateOfFireDispersion=2;
+			aiRateOfFireDistance=400;
+			minRange=400;
+			minRangeProbab=0.75;
+			midRange=800;
+			midRangeProbab=0.69999999;
+			maxRange=1500;
+			maxRangeProbab=0.1;
+		};
+		class far: close
+		{
+			aiBurstTerminable=1;
+			showToPlayer=0;
+			burst=3;
+			burstRangeMax=12;
+			aiRateOfFire=4;
+			aiRateOfFireDispersion=4;
+			aiRateOfFireDistance=800;
+			minRange=800;
+			minRangeProbab=0.60000002;
+			midRange=1500;
+			midRangeProbab=0.25;
+			maxRange=2000;
+			maxRangeProbab=0.050000001;
+		};
+	};
 };
 class Bag_Base;
 class Weapon_Bag_Base: Bag_Base
@@ -866,7 +1206,6 @@ class Weapon_Bag_Base: Bag_Base
 };
 class CfgVehicles
 {
-    
 	class LandVehicle;
 	class StaticWeapon: LandVehicle
 	{
@@ -920,7 +1259,7 @@ class CfgVehicles
         editorPreview = "\OPTRE_Misc\Image\OPTRE\Turrets\OPTRE_AU_44_Mortar.jpg";
         scope = 2;
         side = 1;
-        faction = "metal_EdCat_co";
+        faction = "metal_company";
         crew = "OPTRE_UNSC_Army_Soldier_Crewman_WDL";
         availableForSupportTypes[] = {"Artillery"};
         class Turrets: Turrets
@@ -1095,7 +1434,7 @@ class CfgVehicles
 			"\3as\3as_static\Mortar\data\base.rvmat",
 			"\3as\3as_static\Mortar\data\tube.rvmat"
 		};
-		faction="metal_EdCat_co";
+		faction="metal_company";
 		scopeCurator=2;
 		class TextureSources
 		{
@@ -1133,7 +1472,7 @@ class CfgVehicles
 	};
 	class MET_Republic_Mortar_Bag: Weapon_Bag_Base
 	{
-		faction="metal_EdCat_co";
+		faction="metal_company";
 		model="\3as\3as_static\Mortar\model\mortarpack.p3d";
 		author="$STR_3AS_Studio";
 		_generalMacro="B_Mortar_01_weapon_F";

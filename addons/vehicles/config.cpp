@@ -148,6 +148,140 @@ class cfgvehicles
 	class 3AS_ATAP_Base;
 	class Aux212_Bantha_C_IFV;
 	class Aux212_Bantha_C_Mortar;
+	class Car;
+	class Car_F: Car
+	{
+		class NewTurret;
+		class Sounds;
+		class HitPoints
+		{
+			class HitBody;
+			class HitEngine;
+			class HitFuel;
+			class HitHull;
+		};
+	};
+	class Wheeled_APC_F: Car_F
+	{
+		class ViewPilot;
+		class ViewOptics;
+		class ViewCargo;
+		class Sounds: Sounds
+		{
+			class Engine;
+			class Movement;
+		};
+		class NewTurret;
+		class Turrets
+		{
+			class MainTurret: NewTurret
+			{
+				class ViewOptics;
+				class ViewGunner;
+				class Turrets
+				{
+					class CommanderOptics;
+				};
+			};
+		};
+	};
+	class Aux212_Bantha_Base_F: Wheeled_APC_F
+	{
+		class ViewPilot;
+		class ViewOptics;
+		class ViewCargo;
+		class Sounds: Sounds
+		{
+			class Engine;
+			class Movement;
+		};
+		class NewTurret;
+		class Turrets
+		{
+			class MainTurret: NewTurret
+			{
+				class ViewOptics;
+				class ViewGunner;
+				class Turrets
+				{
+					class CommanderOptics;
+				};
+			};
+		};
+	};
+	class Aux212_Bantha_Base: Aux212_Bantha_Base_F
+	{
+		class ViewPilot;
+		class ViewOptics;
+		class ViewCargo;
+		class Sounds: Sounds
+		{
+			class Engine;
+			class Movement;
+		};
+		class NewTurret;
+		class Turrets
+		{
+			class MainTurret: NewTurret
+			{
+				class ViewOptics;
+				class ViewGunner;
+				class Turrets
+				{
+					class CommanderOptics;
+				};
+			};
+		};
+	};
+	class Aux212_Bantha_C_IFV_Base: Aux212_Bantha_Base
+	{
+		class ViewPilot;
+		class ViewOptics;
+		class ViewCargo;
+		class Sounds: Sounds
+		{
+			class Engine;
+			class Movement;
+		};
+		class NewTurret;
+		class Turrets
+		{
+			class MainTurret: NewTurret
+			{
+				class ViewOptics;
+				class ViewGunner;
+				class Turrets
+				{
+					class CommanderOptics;
+				};
+			};
+		};
+	};
+	class Aux212_Bantha_C_Mortar_Base: Aux212_Bantha_C_IFV_Base
+	{
+		class ViewPilot;
+		class ViewOptics;
+		class ViewCargo;
+		class Sounds: Sounds
+		{
+			class Engine;
+			class Movement;
+		};
+		class NewTurret;
+		class Turrets
+		{
+			class MainTurret: NewTurret
+			{
+				class ViewOptics;
+				class ViewGunner;
+				class Optics_Gunner_APC_01
+				{
+					class Wide;
+				};
+				class CommanderOptics;
+			};
+		};
+	};
 	class Aux212_Bantha_C_Unarmed;
 	class Aux212_Bantha_E_MSV;
 	class Aux212_Bantha_T_Assault;
