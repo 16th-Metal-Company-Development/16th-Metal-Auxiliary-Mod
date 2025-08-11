@@ -214,6 +214,64 @@ class CfgCloudLets
 			{0.60000002,0.60000002,0.60000002,0}
 		};
 	};
+	class HTASmokeShellWhite120: HTASmokeShellWhite
+	{
+		particleFSNtieth=16;
+		particleFSIndex=12;
+		particleFSFrameCount=4;
+		interval=0.3;
+		particleFSLoop=0;
+		size[]={0.8,8,20};
+		lifeTime=50;
+		color[]=
+		{
+			{0.60000002,0.60000002,0.60000002,1},
+			{0.60000002,0.60000002,0.60000002,0.5},
+			{0.60000002,0.60000002,0.60000002,0}
+		};
+	};
+	class HTASmokeShellWhite1202: HTASmokeShellWhite120
+	{
+		particleFSNtieth=16;
+		particleFSIndex=12;
+		particleFSFrameCount=4;
+		particleFSLoop=0;
+		color[]=
+		{
+			{0.60000002,0.60000002,0.60000002,1},
+			{0.60000002,0.60000002,0.60000002,0.5},
+			{0.60000002,0.60000002,0.60000002,0}
+		};
+	};
+	class HTASmokeShellWhite300: HTASmokeShellWhite
+	{
+		particleFSNtieth=16;
+		particleFSIndex=12;
+		particleFSFrameCount=4;
+		interval=0.9;
+		particleFSLoop=0;
+		size[]={0.8,15,20};
+		lifeTime=70;
+		color[]=
+		{
+			{0.60000002,0.60000002,0.60000002,1},
+			{0.60000002,0.60000002,0.60000002,0.5},
+			{0.60000002,0.60000002,0.60000002,0}
+		};
+	};
+	class HTASmokeShellWhite3002: HTASmokeShellWhite300
+	{
+		particleFSNtieth=16;
+		particleFSIndex=12;
+		particleFSFrameCount=4;
+		particleFSLoop=0;
+		color[]=
+		{
+			{0.60000002,0.60000002,0.60000002,1},
+			{0.60000002,0.60000002,0.60000002,0.5},
+			{0.60000002,0.60000002,0.60000002,0}
+		};
+	};
 	class MachineGunCartridge;
 	class HTA_127x99_Cartridge: MachineGunCartridge
 	{
@@ -235,8 +293,46 @@ class HTASmokeEffect
 		simulation="particles";
 		type="HTASmokeShellWhite2";
 		position[]={0,0,0};
+		intensity=2;
+		interval=0.5;
+	};
+};
+class HTASmokeEffect2
+{
+	class HTA_SmokeShell
+	{
+		simulation="particles";
+		type="HTASmokeShellWhite120";
+		position[]={0,0,0};
 		intensity=1;
+		interval=3;
+	};
+	class HTA_SmokeShell2
+	{
+		simulation="particles";
+		type="HTASmokeShellWhite1202";
+		position[]={0,0,0};
+		intensity=2;
 		interval=1;
+	};
+};
+class HTASmokeEffect3
+{
+	class HTA_SmokeShell
+	{
+		simulation="particles";
+		type="HTASmokeShellWhite300";
+		position[]={0,0,0};
+		intensity=1;
+		interval=10;
+	};
+	class HTA_SmokeShell2
+	{
+		simulation="particles";
+		type="HTASmokeShellWhite3002";
+		position[]={0,0,0};
+		intensity=2;
+		interval=5;
 	};
 };
 class CfgAmmo

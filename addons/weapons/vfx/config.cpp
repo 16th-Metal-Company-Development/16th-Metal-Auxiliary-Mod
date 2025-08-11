@@ -438,6 +438,43 @@ class CfgLights
 		};
 		position[]={0,0,0};
 	};
+	class MET_Giant_BlasterboltLight_PaleBlue
+	{
+		color[]={0,0,0,0};
+		diffuse[]={130, 199, 255,1};
+		ambient[]={0,0,0,0.5};
+		intensity=400000;
+		class Attenuation
+		{
+			start=0;
+			constant=0;
+			linear=0;
+			quadratic=255;
+			hardLimitStart="1e20 * 0.7";
+			hardLimitEnd=1e+020;
+		};
+		dayLight=1;
+		useFlare=1;
+		flareSize=5;
+		flareMaxDistance=6000;
+		position[]={0,0,-1};
+	};
+	class MET_Giant_BlasterBoltLight_White: MET_Giant_BlasterboltLight_PaleBlue
+	{
+		diffuse[]={255,255,200,1};
+	};
+	class MET_Giant_BlasterboltLight_PaleGreen: MET_Giant_BlasterboltLight_PaleBlue
+	{
+		diffuse[]={106, 250, 106,1};
+	};
+	class MET_Giant_BlasterboltLight_PaleRed: MET_Giant_BlasterboltLight_PaleBlue
+	{
+		diffuse[]={255, 115, 123,1};
+	};
+	class MET_Giant_BlasterboltLight_PaleYellow: MET_Giant_BlasterboltLight_PaleBlue
+	{
+		diffuse[]={255, 253, 123,1};
+	};
 	class MET_Large_BlasterboltLight_Blue
 	{
 		color[]={0,0,0,0};
@@ -1168,6 +1205,51 @@ class MET_BlasterBoltGlow_Medium_White_Fly
 	{
 		simulation="light";
 		type="MET_Medium_BlasterboltLight_White";
+		position[]={0,0,1};
+	};
+};
+class MET_BlasterBoltGlow_Giant_PaleBlue_Fly
+{
+	class Light
+	{
+		simulation="light";
+		type="MET_Giant_BlasterboltLight_PaleBlue";
+		position[]={0,0,1};
+	};
+};
+class MET_BlasterBoltGlow_Giant_PaleGreen_Fly
+{
+	class Light
+	{
+		simulation="light";
+		type="MET_Giant_BlasterboltLight_PaleGreen";
+		position[]={0,0,1};
+	};
+};
+class MET_BlasterBoltGlow_Giant_PaleRed_Fly
+{
+	class Light
+	{
+		simulation="light";
+		type="MET_Giant_BlasterboltLight_PaleRed";
+		position[]={0,0,1};
+	};
+};
+class MET_BlasterBoltGlow_Giant_PaleYellow_Fly
+{
+	class Light
+	{
+		simulation="light";
+		type="MET_Giant_BlasterboltLight_PaleYellow";
+		position[]={0,0,1};
+	};
+};
+class MET_BlasterBoltGlow_Giant_White_Fly
+{
+	class Light
+	{
+		simulation="light";
+		type="MET_Giant_BlasterBoltLight_White";
 		position[]={0,0,1};
 	};
 };
