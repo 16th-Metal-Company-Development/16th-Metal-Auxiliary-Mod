@@ -471,7 +471,7 @@ class MET_Bantha_Mortar: Aux212_Bantha_C_Mortar_Base
 				1,
 				30
 			};
-			/*class Turrets: Turrets
+			class Turrets: Turrets
 			{
 				class CommanderOptics: CommanderOptics
 				{
@@ -611,7 +611,7 @@ class MET_Bantha_Mortar: Aux212_Bantha_C_Mortar_Base
 					gunnerHasFlares=1;
 					viewGunnerInExternal=1;
 				};
-			};*/
+			};
 		};
 	};
 
