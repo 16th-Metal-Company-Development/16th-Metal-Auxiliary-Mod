@@ -72,6 +72,53 @@ class CfgAmmo
 	class SubmunitionBase;
 	class ShellBase;
     class SmokeShellArty;
+	class B_20mm;
+    //------------------------------- Blasters
+	class MET_B_GreenPlasma_127_GPR: B_20mm
+	{
+		typicalSpeed=1000;
+		coefGravity=0;
+		/*hit=20;
+		indirectHit=0;
+		explosive=0;
+		indirectHitRange=0.5;
+		caliber=1.4;*/
+		bulletFly[]=
+		{
+			"bulletFly1",
+			1
+		};
+		bulletFly1[]=
+		{
+			"",
+			1.58489,
+			1,
+			30
+		};
+		timeToLive=10;
+		tracerScale=3;
+		tracerStartTime=0;
+		tracerEndTime=10;
+		deflecting=0;
+		model="3AS\3as_Weapons\Data\tracer_green";
+		effectFly="3AS_PlasmaBolt_Medium_Green_Fly";
+	};
+	class MET_greenPlasma_aa_he: MET_B_GreenPlasma_127_GPR
+	{
+		hit=160;
+		explosive=1;
+		typicalSpeed=1500;
+		tracerScale=1;
+		effectFly="3AS_PlasmaBolt_Green_Fly";
+	};
+    //------------------------------- Missiles
+	class M_PG_AT;
+	class MET_Bantha_DAGR_Missile: M_PG_AT
+	{
+		scope=2;
+		displayName="Bantha DAGR Missile";
+		effectsMissile="Aux212_particle_effect_DAGR_fly";
+	};
     //------------------------------- HE
 	class MET_300mm_AMOS: ShellBase
 	{
@@ -277,6 +324,7 @@ class CfgAmmo
     {
         ace_rearm_caliber = 300;
 		effectFly="MET_BlasterBoltGlow_Large_Yellow_Fly";
+		effectsMissile="3AS_Rocket_effect_Yellow_fly";
 
 		submunitionAmmo="MET_300HEAT_Penetrator";
 		submunitionDirectionType="SubmunitionModelDirection";
@@ -832,6 +880,7 @@ class CfgAmmo
     {
         ace_rearm_caliber = 120;
 		effectFly="MET_BlasterBoltGlow_Large_Yellow_Fly";
+		effectsMissile="3AS_Rocket_effect_Yellow_fly";
 
 		submunitionAmmo="MET_120HEAT_Penetrator";
 		submunitionDirectionType="SubmunitionModelDirection";
@@ -1111,6 +1160,52 @@ class CfgMagazines
 {
     class VehicleMagazine;
     class 8Rnd_82mm_Mo_shells;
+	class MET_500Rnd_Z20_HBB: VehicleMagazine
+	{
+		scope=2;
+		displayName="Bantha Z20 Heavy Blaster Bolt";
+		displayNameShort="Z20 H.B.B";
+		picture="";
+		ammo="MET_B_GreenPlasma_127_GPR";
+		mass=8;
+		count=500;
+		tracersEvery=1;
+		lastRoundsTracer=60;
+		timeToLive=10;
+		tracerScale=2;
+		tracerStartTime=0;
+	};
+	class MET_1000Rnd_Z60_HAA: VehicleMagazine
+	{
+		scope=2;
+		displayName="Bantha Z60 Heavy Blaster Bolt";
+		displayNameShort="Z60 H.A.A";
+		picture="";
+		ammo="MET_greenPlasma_aa_he";
+		mass=8;
+		count=1000;
+		tracersEvery=1;
+		lastRoundsTracer=60;
+		timeToLive=10;
+		tracerScale=2;
+		tracerStartTime=0;
+	};
+	class 12Rnd_PG_missiles;
+	class MET_Bantha_DAGR_Magazine: 12Rnd_PG_missiles
+	{
+		scope=2;
+		displayName="Bantha DAGR Missiles";
+		displayNameShort="DAGR";
+		ammo="MET_Bantha_DAGR_Missile";
+	};
+	class MET_blaster_battery;
+	class MET_Bantha_T_Assault_MG_Mag: MET_blaster_battery
+	{
+		scope=2;
+		displayName="[16th] Bantha-T Assault (MG Mag)";
+		ammo="MET_blasterbolt_low";
+		count=300;
+	};
 	class MET_30Rnd_300mm_Mo_shells: VehicleMagazine
 	{
 		author="Hazmat";
@@ -1434,13 +1529,12 @@ class CfgMagazines
 	};
 };
 class Mode_SemiAuto;
+class Mode_FullAuto;
 class Mode_Burst;
+class MGun;
 class CfgWeapons
 {
-    class CannonCore
-    {
-		class Mode_SemiAuto;
-	};
+    class CannonCore;
     class mortar_82mm: CannonCore
     {
         class Single1;
@@ -1450,6 +1544,518 @@ class CfgWeapons
         class Burst2;
         class Burst3;
     };
+	class LMG_RCWS;
+	class MET_autocannon_Base_F: CannonCore
+	{
+		scope=1;
+		cursor="EmptyCursor";
+		cursorAim="cannon";
+		nameSound="cannon";
+		sound[]=
+		{
+			"A3\sounds_f\dummysound",
+			2.5118864,
+			1,
+			1800
+		};
+		soundContinuous=0;
+		reloadTime=0.30000001;
+		aiRateOfFire=0.60000002;
+		magazineReloadTime=2;
+		autoReload=1;
+		ballisticsComputer="2 + 16";
+		FCSMaxLeadSpeed=27.778;
+		FCSZeroingDelay=1;
+		canLock=0;
+		autoFire=1;
+		modes[]=
+		{
+			"player",
+			"close",
+			"short",
+			"medium",
+			"far"
+		};
+		shotFromTurret=0;
+		showAimCursorInternal=0;
+		class player: Mode_FullAuto
+		{
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class StandardSound
+			{
+				begin1[]=
+				{
+					"212th\Vehicles\212th_vehicleMain\data\Sound\bantha.wss",
+					1,
+					1,
+					1500
+				};
+				begin2[]=
+				{
+					"212th\Vehicles\212th_vehicleMain\data\Sound\bantha.wss",
+					1.5,
+					1,
+					1500
+				};
+				begin3[]=
+				{
+					"212th\Vehicles\212th_vehicleMain\data\Sound\bantha.wss",
+					0.80000001,
+					1,
+					1500
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					0.33000001,
+					"begin2",
+					0.33000001,
+					"begin3",
+					0.34
+				};
+			};
+			soundContinuous=0;
+			reloadTime=0.30000001;
+			dispersion=0.00089999998;
+			aiRateOfFire=1;
+			aiRateOfFireDistance=10;
+			minRange=0;
+			minRangeProbab=0.0099999998;
+			midRange=1;
+			midRangeProbab=0.0099999998;
+			maxRange=2;
+			maxRangeProbab=0.0099999998;
+		};
+		class close: player
+		{
+			aiBurstTerminable=1;
+			showToPlayer=0;
+			burst=3;
+			burstRangeMax=6;
+			aiRateOfFire=1;
+			aiRateOfFireDispersion=2;
+			aiRateOfFireDistance=200;
+			minRange=0;
+			minRangeProbab=0.1;
+			midRange=400;
+			midRangeProbab=0.69999999;
+			maxRange=800;
+			maxRangeProbab=0.80000001;
+		};
+		class short: close
+		{
+			aiBurstTerminable=1;
+			showToPlayer=0;
+			burst=1;
+			burstRangeMax=5;
+			aiRateOfFire=2;
+			aiRateOfFireDispersion=2;
+			aiRateOfFireDistance=600;
+			minRange=600;
+			minRangeProbab=0.75;
+			midRange=800;
+			midRangeProbab=0.80000001;
+			maxRange=1200;
+			maxRangeProbab=0.80000001;
+		};
+		class medium: close
+		{
+			aiBurstTerminable=1;
+			showToPlayer=0;
+			burst=1;
+			burstRangeMax=3;
+			aiRateOfFire=2;
+			aiRateOfFireDispersion=3;
+			aiRateOfFireDistance=1000;
+			minRange=1000;
+			minRangeProbab=0.80000001;
+			midRange=1500;
+			midRangeProbab=0.80000001;
+			maxRange=2000;
+			maxRangeProbab=0.69999999;
+		};
+		class far: close
+		{
+			aiBurstTerminable=1;
+			showToPlayer=0;
+			burst=1;
+			burstRangeMax=1;
+			aiRateOfFire=2;
+			aiRateOfFireDispersion=4;
+			aiRateOfFireDistance=1800;
+			minRange=1800;
+			minRangeProbab=0.74000001;
+			midRange=2400;
+			midRangeProbab=0.64999998;
+			maxRange=3000;
+			maxRangeProbab=0.050000001;
+		};
+	};
+	class MET_autocannon_Z20_HBB: MET_autocannon_Base_F
+	{
+		displayName="Z20 H.B.B";
+		muzzles[]=
+		{
+			"HE"
+		};
+		class HE: MET_autocannon_Base_F
+		{
+			displayName="Z20 H.B.B";
+			magazines[]=
+			{
+				"MET_500Rnd_Z20_HBB",
+				"sci_500Rnd_Z20_HBB"
+			};
+			class player: player
+			{
+				dispersion=0;
+				reloadTime=0.2;
+				sounds[]=
+				{
+					"StandardSound"
+				};
+				class StandardSound
+				{
+					begin1[]=
+					{
+						"212th\Vehicles\212th_vehicleMain\data\Sound\bantha.wss",
+						1,
+						1,
+						1500
+					};
+					begin2[]=
+					{
+						"212th\Vehicles\212th_vehicleMain\data\Sound\bantha.wss",
+						1.5,
+						1,
+						1500
+					};
+					begin3[]=
+					{
+						"212th\Vehicles\212th_vehicleMain\data\Sound\bantha.wss",
+						0.80000001,
+						1,
+						1500
+					};
+					soundBegin[]=
+					{
+						"begin1",
+						0.33000001,
+						"begin2",
+						0.33000001,
+						"begin3",
+						0.34
+					};
+				};
+			};
+			class close: player
+			{
+				aiBurstTerminable=1;
+				showToPlayer=0;
+				burst=3;
+				burstRangeMax=6;
+				aiRateOfFire=1;
+				aiRateOfFireDispersion=2;
+				aiRateOfFireDistance=200;
+				minRange=0;
+				minRangeProbab=0.1;
+				midRange=400;
+				midRangeProbab=0.69999999;
+				maxRange=800;
+				maxRangeProbab=0.80000001;
+			};
+			class short: close
+			{
+				aiBurstTerminable=1;
+				showToPlayer=0;
+				burst=1;
+				burstRangeMax=5;
+				aiRateOfFire=2;
+				aiRateOfFireDispersion=2;
+				aiRateOfFireDistance=600;
+				minRange=600;
+				minRangeProbab=0.75;
+				midRange=800;
+				midRangeProbab=0.80000001;
+				maxRange=1200;
+				maxRangeProbab=0.80000001;
+			};
+			class medium: close
+			{
+				aiBurstTerminable=1;
+				showToPlayer=0;
+				burst=1;
+				burstRangeMax=3;
+				aiRateOfFire=2;
+				aiRateOfFireDispersion=3;
+				aiRateOfFireDistance=1000;
+				minRange=1000;
+				minRangeProbab=0.80000001;
+				midRange=1500;
+				midRangeProbab=0.80000001;
+				maxRange=2000;
+				maxRangeProbab=0.69999999;
+			};
+			class far: close
+			{
+				aiBurstTerminable=1;
+				showToPlayer=0;
+				burst=1;
+				burstRangeMax=1;
+				aiRateOfFire=2;
+				aiRateOfFireDispersion=4;
+				aiRateOfFireDistance=1800;
+				minRange=1800;
+				minRangeProbab=0.74000001;
+				midRange=2400;
+				midRangeProbab=0.64999998;
+				maxRange=3000;
+				maxRangeProbab=0.050000001;
+			};
+		};
+	};
+	class MET_autocannon_Z60_EAA: MET_autocannon_Z20_HBB
+	{
+		displayName="Z60 H.A.A";
+		muzzles[]=
+		{
+			"HE"
+		};
+		class HE: MET_autocannon_Base_F
+		{
+			displayName="Z60 H.A.A";
+			magazines[]=
+			{
+				"MET_1000Rnd_Z60_HAA"
+			};
+			ballisticsComputer="2+4+8";
+			class player: player
+			{
+				dispersion=0.0001;
+				reloadTime=0.075000003;
+				sounds[]=
+				{
+					"StandardSound"
+				};
+				class StandardSound
+				{
+					begin1[]=
+					{
+						"212th\Vehicles\212th_vehicleMain\data\Sound\bantha.wss",
+						1,
+						1,
+						1500
+					};
+					begin2[]=
+					{
+						"212th\Vehicles\212th_vehicleMain\data\Sound\bantha.wss",
+						1.5,
+						1,
+						1500
+					};
+					begin3[]=
+					{
+						"212th\Vehicles\212th_vehicleMain\data\Sound\bantha.wss",
+						0.80000001,
+						1,
+						1500
+					};
+					soundBegin[]=
+					{
+						"begin1",
+						0.33000001,
+						"begin2",
+						0.33000001,
+						"begin3",
+						0.34
+					};
+				};
+			};
+		};
+		scope=1;
+		soundContinuous=0;
+		magazineReloadTime=5;
+		autoReload=1;
+		canLock=2;
+		ballisticsComputer="2+4+8";
+	};
+	class MET_Bantha_T_Assault_MG: LMG_RCWS
+	{
+		displayName="[16th] MSM MK-II Blaster Cannon";
+		scope=1;
+		magazines[]=
+		{
+			"MET_Bantha_T_Assault_MG_Mag"
+		};
+		maxZeroing=2000;
+		class GunParticles
+		{
+		};
+		autoReload=1;
+		magazineReloadTime=5;
+		showAimCursorInternal=0;
+		class manual: MGun
+		{
+			displayName="[16th] MSM MK-II Blaster Cannon";
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				closure1[]={};
+				closure2[]={};
+				soundClosure[]={};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				begin1[]=
+				{
+					"z\16th\addons\weapons\infantry_weap\sounds\republic\z-6\z6.ogg",
+					1,
+					1,
+					1800
+				};
+				begin2[]=
+				{
+					"z\16th\addons\weapons\infantry_weap\sounds\republic\z-6\z6.ogg",
+					1,
+					1.015,
+					1800
+				};
+				begin3[]=
+				{
+					"z\16th\addons\weapons\infantry_weap\sounds\republic\z-6\z6.ogg",
+					1,
+					0.98500001,
+					1800
+				};
+				begin4[]=
+				{
+					"z\16th\addons\weapons\infantry_weap\sounds\republic\z-6\z6.ogg",
+					1,
+					1.01,
+					1800
+				};
+				begin5[]=
+				{
+					"z\16th\addons\weapons\infantry_weap\sounds\republic\z-6\z6.ogg",
+					1,
+					0.995,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					0.2,
+					"begin2",
+					0.2,
+					"begin3",
+					0.2,
+					"begin4",
+					0.2,
+					"begin5",
+					0.2
+				};
+				beginwater1[]=
+				{
+					"z\16th\addons\weapons\infantry_weap\sounds\republic\z-6\z6.ogg",
+					1,
+					1,
+					400
+				};
+				soundBeginWater[]=
+				{
+					"beginwater1",
+					1
+				};
+			};
+			reloadTime=0.03;
+			dispersion=0.006;
+		};
+		class close: manual
+		{
+			aiBurstTerminable=1;
+			showToPlayer=0;
+			burst=8;
+			burstRangeMax=16;
+			aiRateOfFire=0.5;
+			aiRateOfFireDispersion=1.5;
+			aiRateOfFireDistance=50;
+			minRange=0;
+			minRangeProbab=0.69999999;
+			midRange=100;
+			midRangeProbab=0.69999999;
+			maxRange=200;
+			maxRangeProbab=0.2;
+		};
+		class short: close
+		{
+			aiBurstTerminable=1;
+			showToPlayer=0;
+			burst=6;
+			burstRangeMax=16;
+			aiRateOfFire=1;
+			aiRateOfFireDispersion=2;
+			aiRateOfFireDistance=150;
+			minRange=100;
+			minRangeProbab=0.69999999;
+			midRange=400;
+			midRangeProbab=0.75;
+			maxRange=800;
+			maxRangeProbab=0.2;
+		};
+		class medium: close
+		{
+			aiBurstTerminable=1;
+			showToPlayer=0;
+			burst=4;
+			burstRangeMax=12;
+			aiRateOfFire=2;
+			aiRateOfFireDispersion=2;
+			aiRateOfFireDistance=400;
+			minRange=400;
+			minRangeProbab=0.75;
+			midRange=800;
+			midRangeProbab=0.69999999;
+			maxRange=1500;
+			maxRangeProbab=0.1;
+		};
+		class far: close
+		{
+			aiBurstTerminable=1;
+			showToPlayer=0;
+			burst=3;
+			burstRangeMax=12;
+			aiRateOfFire=4;
+			aiRateOfFireDispersion=4;
+			aiRateOfFireDistance=800;
+			minRange=800;
+			minRangeProbab=0.60000002;
+			midRange=1500;
+			midRangeProbab=0.25;
+			maxRange=2000;
+			maxRangeProbab=0.050000001;
+		};
+	};
+	class missiles_DAGR;
+	class MET_Bantha_missiles_DAGR: missiles_DAGR
+	{
+		magazineReloadTime=2;
+		autoReload=1;
+		magazines[]=
+		{
+			"Aux212_Bantha_DAGR_Magazine",
+			"24Rnd_PG_missiles",
+			"12Rnd_PG_missiles",
+			"PylonRack_12Rnd_PG_missiles"
+		};
+	};
 	class MET_AV7_300mm_AMOS: CannonCore
 	{
 		scope=1;
@@ -2108,8 +2714,6 @@ class CfgWeapons
 			maxRangeProbab=0.30000001;
 		};
 	};
-	class MGun;
-	class LMG_RCWS;
 	class MET_Bantha_Commander_Turret: LMG_RCWS
 	{
 		displayName="[16th] DC-15L";

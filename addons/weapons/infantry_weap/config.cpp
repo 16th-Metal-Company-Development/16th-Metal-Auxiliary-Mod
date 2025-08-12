@@ -9739,7 +9739,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_box_b.paa";
 		model="\MRC\JLTS\weapons\z6\z6_mag.p3d";
 		count=10000;
-		displayName="[16th] Z6 Energy Cell";
+		displayName="[16th] Z6 Heavy Energy Cell";
 		displayNameShort="Z6 Energy Cell";
 		descriptionShort="Energy cell for the Z6";
 		ammo="MET_blasterbolt_low";
