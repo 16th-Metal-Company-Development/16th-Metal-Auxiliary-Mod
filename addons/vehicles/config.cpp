@@ -75,6 +75,52 @@ class CfgMods
 		logo = "z\16th\addons\vehicles\16th_logo.paa";
 	};
 };
+class DefaultEventHandlers;
+class EventHandlers;
+class Components;
+class SensorTemplateIR;
+class SensorTemplateNV;
+class SensorTemplateLaser;
+class SensorTemplateActiveRadar;
+class SensorTemplatePassiveRadar;
+class SensorTemplateVisual;
+class SensorTemplateMan;
+class SensorTemplateDataLink;
+class DefaultVehicleSystemsDisplayManagerLeft
+{
+	class components;
+};
+class DefaultVehicleSystemsDisplayManagerRight
+{
+	class components;
+};
+class VehicleSystemsTemplateLeftGunner: DefaultVehicleSystemsDisplayManagerLeft
+{
+	class components;
+};
+class VehicleSystemsTemplateRightGunner: DefaultVehicleSystemsDisplayManagerRight
+{
+	class components;
+};
+class AnimationSources;
+class WeaponFireGun;
+class WeaponCloudsGun;
+class WeaponFireMGun;
+class WeaponCloudsMGun;
+class RCWSOptics;
+class Optics_Armored;
+class Optics_Commander_01: Optics_Armored
+{
+	class Wide;
+	class Medium;
+	class Narrow;
+};
+class Optics_Gunner_APC_01: Optics_Armored
+{
+	class Wide;
+	class Medium;
+	class Narrow;
+};
 class cfgvehicles
 {
 	class O_APC_Tracked_02_cannon_F;
@@ -257,7 +303,7 @@ class cfgvehicles
 			};
 		};
 	};
-	class Aux212_Bantha_C_Mortar_Base: Aux212_Bantha_C_IFV_Base
+	class Aux212_Bantha_C_Mortar_Base: Aux212_Bantha_Base_F
 	{
 		class ViewPilot;
 		class ViewOptics;
@@ -274,11 +320,10 @@ class cfgvehicles
 			{
 				class ViewOptics;
 				class ViewGunner;
-				class Optics_Gunner_APC_01
+				class Turrets
 				{
-					class Wide;
+					class CommanderOptics;
 				};
-				class CommanderOptics;
 			};
 		};
 	};
