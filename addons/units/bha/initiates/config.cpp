@@ -7,7 +7,8 @@ class CfgPatches
 			"BHA_Initiates_Initiate",
 			"BHA_Initiates_Trutheseeker",
 			"BHA_Initiates_Annihilator",
-			"BHA_warbot"
+			"BHA_warbot",
+			"BHA_SuicideBot_Soldier_Base"
 		};
 		weapons[]={};
 	};
@@ -61,7 +62,7 @@ class CfgEditorSubcategories
 	};
 	class BHA_Helis
 	{
-		displayName="Helicopters";
+		displayName="Transports";
 	};
 	class BHA_Statics
 	{
@@ -185,6 +186,19 @@ class CfgVehicles
 			"MET_Gen2WarbotHead_NoFS",
 			"MET_EliminatorUpArmorVest"
 		};
+		/*aimingAccuracy[] = { 0.9, 1, 1, 1 }; // Higher accuracy for elite units
+		aimingShake[] = { 0.5, 0.5, 0.5, 0.5 }; // Less shaking, more stable aim
+		aimingSpeed[] = { 1, 1.5, 1, 1 }; // Faster aiming speed
+		commanding[] = { 1, 1, 1, 1 }; // Quick command responses
+		courage[] = { 1, 1, 1, 1 }; // High courage
+		general[] = { 1, 1, 1, 1 }; // General skill (includes things like awareness)
+		reloadSpeed[] = { 0.9, 0.8, 1, 1 }; // Faster reload
+		spotDistance[] = { 1, 1, 1, 1 }; // Good spotting range
+		spotTime[] = { 0.7, 0.8, 1, 1 }; // Faster spotting response*/
+		class EventHandlers
+		{
+			init = "_unit = _this select 0; if (local _unit) then { {_unit setSkill [_x, 1]; } forEach ['aimingAccuracy','aimingShake','aimingSpeed','commanding','courage','general','reloadSpeed','spotDistance','spotTime']; };";
+		};
 	};
 	class BHA_Initiate_Soldier_Base: I_Soldier_base_F
 	{
@@ -293,6 +307,68 @@ class CfgVehicles
 			"MET_Helmet_WD_Black_VU",
 			"MET_Vest_WD_Medium_Black",
 			"SC_TacGlass"
+		};
+		class EventHandlers
+		{
+			init = "_unit = _this select 0; if (local _unit) then { {_unit setSkill [_x, 0.3]; } forEach ['aimingAccuracy','aimingShake','aimingSpeed','commanding','courage','general','reloadSpeed','spotDistance','spotTime']; };";
+		};
+	};
+	class BHA_SuicideBot_Soldier_Base: I_Soldier_base_F
+	{
+		side=2;
+		scope=2;
+		scopeCurator=2;
+		faction="BHA_Units";
+		displayName="Suicide Bot";
+		editorSubCategory="BHA_Initiates";
+		backpack="SC_Workerbot_Powerpack";
+		uniformClass="SC_Workerbot_Uniform";
+		identityTypes[]=
+		{
+			"LanguageENG_F",
+			"Head_NATO",
+			"G_NATO_default"
+		};
+		Weapons[]=
+		{
+			"Put",
+			"Throw"
+		};
+		respawnWeapons[]=
+		{
+			"Put",
+			"Throw"
+		};
+		Magazines[]=
+		{
+			"MET_Smoke_Black",
+			"MET_Smoke_Black",
+			"MET_Smoke_Black",
+		};
+		respawnMagazines[]=
+		{
+			
+			"MET_Smoke_Black",
+			"MET_Smoke_Black",
+			"MET_Smoke_Black",
+		};
+		Items[]=
+		{};
+		respawnItems[]=
+		{};
+		linkedItems[]=
+		{
+			"ItemRadio",
+			"SC_Workerbot_Head"
+		};
+		respawnLinkedItems[]=
+		{
+			"ItemRadio",
+			"SC_Workerbot_Head"
+		};
+		class EventHandlers
+		{
+			init = "_unit = _this select 0; if (local _unit) then { _unit spawn { params['_unit']; while {alive _unit} do { private _nearest = objNull; private _minDist = 1e10; { if (side _x isEqualTo west) then { private _dist = _unit distance _x; if (_dist < _minDist) then { _minDist = _dist; _nearest = _x; }; }; } forEach allPlayers; if (!isNull _nearest) then { _unit doMove getPosASL _nearest; _unit forceSpeed 12; }; sleep 1; }; }; _unit addEventHandler ['Killed', { params['_unit']; _pos = getPosATL _unit; 'Bo_GBU12_LGB' createVehicle _pos; }]; };"
 		};
 	};
 	class BHA_Initiates_Initiate: BHA_Initiate_Soldier_Base
@@ -638,6 +714,91 @@ class CfgGroups
 						vehicle="BHA_Initiates_Annihilator";
 						rank="PRIVATE";
 						position[]={0,-4,0};
+					};
+				};
+				class BHA_Initiates_Melee_Squad
+				{
+					name="Melee Squad";
+					scope=2;
+					side=2;
+					faction="BHA_Units";
+					icon="\A3\ui_f\data\map\markers\nato\b_inf.paa";
+					class Unit0
+					{
+						side=2;
+						vehicle="BHA_Initiates_Trutheseeker";
+						rank="SERGEANT";
+						position[]={0,0,0};
+					};
+					class Unit1
+					{
+						side=2;
+						vehicle="BHA_Initiates_Trutheseeker";
+						rank="PRIVATE";
+						position[]={1,-2,0};
+					};
+					class Unit2
+					{
+						side=2;
+						vehicle="BHA_Initiates_Trutheseeker";
+						rank="PRIVATE";
+						position[]={-1,-2,0};
+					};
+					class Unit3
+					{
+						side=2;
+						vehicle="BHA_Initiates_Trutheseeker";
+						rank="PRIVATE";
+						position[]={1,-3,0};
+					};
+					class Unit4
+					{
+						side=2;
+						vehicle="BHA_Initiates_Trutheseeker";
+						rank="PRIVATE";
+						position[]={-1,-3,0};
+					};
+					class Unit5
+					{
+						side=2;
+						vehicle="BHA_Initiates_Trutheseeker";
+						rank="PRIVATE";
+						position[]={0,-4,0};
+					};
+					class Unit6
+					{
+						side=2;
+						vehicle="BHA_Initiates_Trutheseeker";
+						rank="PRIVATE";
+						position[]={1,-5,0};
+					};
+					class Unit7
+					{
+						side=2;
+						vehicle="BHA_Initiates_Trutheseeker";
+						rank="PRIVATE";
+						position[]={-1,-5,0};
+					};
+					class Unit8
+					{
+						side=2;
+						vehicle="BHA_Initiates_Trutheseeker";
+						rank="PRIVATE";
+						position[]={1,-7,0};
+					};
+					class Unit9
+					{
+						side=2;
+						vehicle="BHA_Initiates_Trutheseeker";
+						rank="PRIVATE";
+						position[]={-1,-7,0};
+					};
+					class Unit10
+					{
+						side=2;
+						vehicle="BHA_Initiates_Trutheseeker";
+						rank="PRIVATE";
+						position[]={0,-8,0};
 					};
 				};
 			};

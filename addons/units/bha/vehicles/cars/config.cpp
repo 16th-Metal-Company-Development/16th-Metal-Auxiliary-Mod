@@ -4,9 +4,14 @@ class CfgPatches
 	{
 		units[]=
 		{
-			"BHA_mrap_03_f",
-			"BHA_mrap_03_gmg_f",
-			"BHA_mrap_03_hmg_f"
+			"BHA_Gator_TO",
+			"BHA_Gator_FB",
+			"BHA_Gator_TC",
+			"BHA_Ferret_ATGM",
+			"BHA_Ferret_AA",
+			"BHA_Ferret_AUTOGUN",
+			"BHA_SaurusAPC_SE",
+			"BHA_Mantis"
 		};
 		weapons[]={};
 	};
@@ -44,143 +49,185 @@ class VehicleSystemsTemplateRightGunner: DefaultVehicleSystemsDisplayManagerRigh
 	class components;
 };
 class RCWSOptics;
+class AnimationSources;
 class CfgVehicles
 {
-	class I_MRAP_03_F;
-	class I_MRAP_03_gmg_F;
-	class BHA_mrap_03_f: I_MRAP_03_F
-	{
-		displayName="Fennek (Unarmed)";
-		scope=2;
-		faction="BHA_Units";
-		editorSubCategory="BHA_Cars";
-		crew="BHA_Acolytes_Acolyte";
-		editorPreview="\HDC_Units_mod\data\Editor Previews\BHA\BHA_mrap_03_f.jpg";
-		hiddenSelections[]=
-		{
-			"Camo1",
-			"Camo2"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\HDC_Units_mod\Faction\BHA\Vehicles\Cars\data\mrap_03_ext_co.paa",
-			"\HDC_Units_mod\Faction\BHA\Vehicles\Drones\Data\turret_black_co.paa"
-		};
-	};
-	class BHA_mrap_03_gmg_f: I_MRAP_03_gmg_F
-	{
-		displayName="Fennek (GMG)";
-		scope=2;
-		faction="BHA_Units";
-		editorSubCategory="BHA_Cars";
-		crew="BHA_Acolytes_Acolyte";
-		editorPreview="\HDC_Units_mod\data\Editor Previews\BHA\BHA_mrap_03_gmg_f.jpg";
-		hiddenSelections[]=
-		{
-			"Camo1",
-			"Camo2"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\HDC_Units_mod\Faction\BHA\Vehicles\Cars\data\mrap_03_ext_co.paa",
-			"\HDC_Units_mod\Faction\BHA\Vehicles\Drones\Data\turret_black_co.paa"
-		};
-	};
-	class LandVehicle;
-	class Car: LandVehicle
-	{
-		class NewTurret;
-	};
-	class Car_F: Car
+	class SC_Gator_TO_AR;
+	class SC_Gator_FB_AR;
+	class SC_Gator_TC_AR;
+	class SC_Ferret_Base
 	{
 		class Turrets
 		{
-			class MainTurret: NewTurret
+			class MainTurret
 			{
-				disableSoundAttenuation=0;
 				class ViewOptics;
-				class Components;
-				class ViewGunner;
+				class HitPoints
+				{
+					class HitTurret;
+					class HitGun;
+				};
 			};
 		};
-		class HitPoints
-		{
-			class HitLFWheel;
-			class HitLF2Wheel;
-			class HitRFWheel;
-			class HitRF2Wheel;
-			class HitGlass1;
-			class HitGlass2;
-			class HitGlass3;
-			class HitGlass4;
-			class HitGlass5;
-		};
-		class ViewPilot;
-		class AnimationSources;
-		class Components;
 	};
-	class MRAP_03_base_F: Car_F
+	class SC_Ferret_AA_AR
 	{
+		class Turrets
+		{
+			class MainTurret
+			{
+				class ViewOptics;
+				class HitPoints
+				{
+					class HitTurret;
+					class HitGun;
+				};
+			};
+		};
+	};
+	class SC_Ferret_Autocannon_AR
+	{
+		class Turrets
+		{
+			class MainTurret
+			{
+				class ViewOptics;
+				class HitPoints
+				{
+					class HitTurret;
+					class HitGun;
+				};
+			};
+		};
+	};
+	class BHA_Gator_TO: SC_Gator_TO_AR
+	{
+		author="Scion Conflict Mod Team and Hazmat";
+		side=2;
+		faction="BHA_Units";
+		editorSubcategory="BHA_Cars";
+		crew="BHA_Initiates_Initiate";
+		hiddenSelectionsTextures[]=
+		{
+			"\sc_wheeled\data\gator\body_black_co.paa",
+			"\sc_wheeled\data\gator\doors_co.paa",
+			"\sc_wheeled\data\gator\frame_co.paa"
+		};
+	};
+	class BHA_Gator_FB: SC_Gator_FB_AR
+	{
+		author="Scion Conflict Mod Team and Hazmat";
+		side=2;
+		faction="BHA_Units";
+		editorSubcategory="BHA_Cars";
+		crew="BHA_Initiates_Initiate";
+		hiddenSelectionsTextures[]=
+		{
+			"\sc_wheeled\data\gator\body_black_co.paa",
+			"\sc_wheeled\data\gator\doors_co.paa"
+		};
+	};
+	class BHA_Gator_TC: SC_Gator_TC_AR
+	{
+		author="Scion Conflict Mod Team and Hazmat";
+		side=2;
+		faction="BHA_Units";
+		editorSubcategory="BHA_Cars";
+		crew="BHA_Initiates_Initiate";
+		hiddenSelectionsTextures[]=
+		{
+			"\sc_wheeled\data\gator\body_black_co.paa",
+			"\sc_wheeled\data\gator\doors_co.paa",
+			"\sc_wheeled\data\gator\compartment_co.paa"
+		};
+	};
+	class BHA_Ferret_ATGM: SC_Ferret_Base
+	{
+		scope=2;
+		scopeCurator=2;
+		author="Scion Conflict Mod Team";
+		displayName="Ferret Scout Car ATGM";
+		side=2;
+		faction="BHA_Units";
+		editorSubcategory="BHA_Cars";
+		crew="BHA_Initiates_Initiate";
+		hiddenSelections[]=
+		{
+			"camo",
+			"camo1",
+			"camo2"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\sc_wheeled\data\ferret\body_black_co.paa",
+			"\sc_wheeled\data\ferret\details_black_co.paa",
+			"\sc_wheeled\data\ferret\wheels_black_co.paa"
+		};
+		armor = 275;
 		class Turrets: Turrets
 		{
-			class CommanderTurret: MainTurret
+			class MainTurret: MainTurret
 			{
-				gunnerName="$STR_POSITION_COMMANDER";
-				proxyType="CPCommander";
-				commanding=2;
-				primaryGunner=0;
-				primaryObserver=1;
-				body="obsTurret";
-				gun="obsGun";
-				animationSourceBody="obsTurret";
-				animationSourceGun="obsGun";
-				animationSourceElevation="obsElevation";
-				gunBeg="PIP0_dir";
-				gunEnd="PIP0_pos";
-				memoryPointGunnerOptics="PIP0_dir";
+				body="mainTurret";
+				gun="mainGun";
+				gunBeg="usti hlavne";
+				gunEnd="konec hlavne";
 				weapons[]=
 				{
-					"Laserdesignator_vehicle",
+					"BHA_MG",
+					"BHA_missiles_TOW",
 					"SmokeLauncher"
 				};
 				magazines[]=
 				{
-					"Laserbatteries",
+					"MET_T20AC_vic_mag",
+					"MET_T20AC_vic_mag",
+					"MET_T20AC_vic_mag",
+					"MET_T20AC_vic_mag",
+					"MET_T20AC_vic_mag",
+					"MET_T20AC_vic_mag",
+					"MET_T20AC_vic_mag",
+					"MET_T20AC_vic_mag",
+					"MET_T20AC_vic_mag",
+					"MET_T20AC_vic_mag",
+					"BHA_AT_DUB",
+					"BHA_AT_DUB",
+					"BHA_AP_DUB",
+					"SmokeLauncherMag",
 					"SmokeLauncherMag"
 				};
 				soundServo[]=
 				{
-					"A3\Sounds_F\vehicles\soft\noises\servo_turret_MRAP03",
+					"A3\Sounds_F\vehicles\soft\noises\servo_turret_MRAP01",
 					0.17782794,
 					1,
 					10
 				};
 				soundServoVertical[]=
 				{
-					"A3\Sounds_F\vehicles\soft\noises\servo_turret_MRAP03",
+					"A3\Sounds_F\vehicles\soft\noises\servo_turret_MRAP01",
 					0.17782794,
 					1,
 					10
 				};
-				soundElevation[]=
-				{
-					"A3\Sounds_F\vehicles\soft\noises\servo_turret_MRAP03_elevation",
-					0.31622776,
-					1,
-					10
-				};
-				gunnerAction="commander_MRAP_03";
-				usePip=1;
-				gunnerOpticsModel="\A3\Weapons_F_Beta\Reticle\Optics_Commander_01_F.p3d";
-				Laser=1;
-				turretInfoType="RscOptics_Strider_commander";
-				gunnerForceOptics=0;
-				minElev=-18;
-				maxElev=40;
-				memoryPointsGetInGunner="pos commander";
-				memoryPointsGetInGunnerDir="pos commander dir";
-				gunnerGetInAction="GetInMRAP_03";
-				gunnerGetOutAction="GetOutLow";
+				gunnerAction="driver_hemtt";
+				viewGunnerInExternal=1;
+				castGunnerShadow=1;
+				stabilizedInAxes=1;
+				memoryPointGunnerOptics="gunnerview";
+				gunnerOpticsModel="\A3\weapons_f\reticle\Optics_Gunner_02_F";
+				discreteDistance[]={100,200,300,400,500};
+				discreteDistanceInitIndex=0;
+				turretInfoType="RscOptics_crows";
+				usePip=0;
+				minElev=-10;
+				maxElev=25;
+				initElev=0;
+				minTurn=-360;
+				maxTurn=360;
+				initTurn=0;
+				gunnerForceOptics=1;
+				commanding=1;
 				class ViewOptics: ViewOptics
 				{
 					initAngleX=0;
@@ -189,228 +236,320 @@ class CfgVehicles
 					initAngleY=0;
 					minAngleY=-100;
 					maxAngleY=100;
-					initFov=0.155;
-					minFov=0.034000002;
-					maxFov=0.155;
+					initFov=0.30000001;
+					minFov=0.30000001;
+					maxFov=0.30000001;
 					visionMode[]=
 					{
 						"Normal",
 						"NVG",
 						"Ti"
 					};
-					thermalMode[]={2,3};
+					thermalMode[]={4,5,6};
 				};
-				class ViewGunner: ViewGunner
+				class OpticsIn
 				{
-					initAngleX=-10;
-					initFov=0.89999998;
+					class Wide: ViewOptics
+					{
+						initAngleX=0;
+						minAngleX=-30;
+						maxAngleX=30;
+						initAngleY=0;
+						minAngleY=-100;
+						maxAngleY=100;
+						initFov=0.30000001;
+						minFov=0.30000001;
+						maxFov=0.30000001;
+						visionMode[]=
+						{
+							"Normal",
+							"NVG",
+							"Ti"
+						};
+						gunnerOpticsModel="\A3\Weapons_F\Reticle\Optics_Gunner_02_F.p3d";
+						gunnerOpticsEffect[]={};
+					};
+					class Medium: Wide
+					{
+						gunnerOpticsModel="\A3\Weapons_F\Reticle\Optics_Gunner_02_F.p3d";
+						initFov=0.07;
+						minFov=0.07;
+						maxFov=0.07;
+					};
+					class Narrow: Wide
+					{
+						gunnerOpticsModel="\A3\Weapons_F\Reticle\Optics_Gunner_02_F.p3d";
+						initFov=0.028000001;
+						minFov=0.028000001;
+						maxFov=0.028000001;
+					};
+				};
+				class ViewGunner: ViewOptics
+				{
+					initAngleX=0;
+					minAngleX=-30;
+					maxAngleX=15;
+					initAngleY=0;
+					minAngleY=-100;
+					maxAngleY=100;
 					minFov=0.25;
 					maxFov=1.25;
+					initFov=0.75;
+					visionMode[]={};
 				};
-				class HitPoints
+				class HitPoints: HitPoints
 				{
-					class HitTurret
+					class HitTurret: HitTurret
 					{
-						armor=0.2;
-						material=-1;
-						name="commander_turret_hit";
-						visual="commander_turret_hit";
-						passThrough=0;
-						minimalHit=0.1;
-						explosionShielding=1;
-						radius=0.25;
+						armor="2*(19+2*19+19)/((18+2*9+9) + (19+2*19+19))";
+						name="vez";
+						visual="OtocVez";
 					};
-					class HitGun
+					class HitGun: HitGun
 					{
-						armor=0.2;
-						material=-1;
-						name="commander_gun_hit";
-						visual="commander_gun_hit";
-						passThrough=0;
-						minimalHit=0.1;
-						explosionShielding=1;
-						radius=0.25;
+						armor="4*100/((18+2*9+9) + (19+2*19+19))";
+						name="zbranVelitele";
+						visual="OtocHlaven";
 					};
 				};
 				gunnerDoor="";
-				class Components
+			};
+		};
+	};
+	class BHA_Ferret_AA: SC_Ferret_AA_AR
+	{
+		scope=2;
+		scopeCurator=2;
+		author="Scion Conflict Mod Team";
+		displayName="Ferret Scout Car AA";
+		side=2;
+		faction="BHA_Units";
+		editorSubcategory="BHA_Cars";
+		crew="BHA_Initiates_Initiate";
+		hiddenSelections[]=
+		{
+			"camo",
+			"camo1",
+			"camo2",
+			"camo3"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\sc_wheeled\data\ferret\body_black_co.paa",
+			"\sc_wheeled\data\ferret\details_black_co.paa",
+			"\sc_wheeled\data\ferret\wheels_black_co.paa",
+			"\sc_wheeled\data\saurus_apc\textures\turret_black_co.paa"
+		};
+		armor = 275;
+		class Turrets: Turrets
+		{
+			class MainTurret: MainTurret
+			{
+				weapons[]=
 				{
-					class VehicleSystemsDisplayManagerComponentLeft: DefaultVehicleSystemsDisplayManagerLeft
+					"BHA_EL34_Gatling",
+					"BHA_Missiles_SAAMI",
+					"SmokeLauncher"
+				};
+				magazines[]=
+				{
+					"MET_EL34_vic_mag",
+					"MET_EL34_vic_mag",
+					"BHA_AA_Dub",
+					"BHA_AA_Dub",
+					"SmokeLauncherMag",
+					"SmokeLauncherMag"
+				};
+				class ViewOptics: ViewOptics
+				{
+					initAngleX=0;
+					minAngleX=-30;
+					maxAngleX=30;
+					initAngleY=0;
+					minAngleY=-100;
+					maxAngleY=100;
+					initFov=0.30000001;
+					minFov=0.30000001;
+					maxFov=0.30000001;
+					visionMode[]=
 					{
+						"Normal",
+						"NVG",
+						"Ti"
 					};
-					class VehicleSystemsDisplayManagerComponentRight: DefaultVehicleSystemsDisplayManagerRight
+					thermalMode[]={4,5,6};
+				};
+			};
+		};
+		class AnimationSources: AnimationSources
+		{
+			class Minigun
+			{
+				source="revolving";
+				weapon="BHA_EL34_Gatling";
+			};
+		};
+	};
+	class BHA_Ferret_AUTOGUN: SC_Ferret_Autocannon_AR
+	{
+		scope=2;
+		scopeCurator=2;
+		author="Scion Conflict Mod Team";
+		displayName="Ferret Scout Car Auto Cannon";
+		side=2;
+		faction="BHA_Units";
+		editorSubcategory="BHA_Cars";
+		crew="BHA_Initiates_Initiate";
+		hiddenSelections[]=
+		{
+			"camo",
+			"camo1",
+			"camo2",
+			"camo3"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\sc_wheeled\data\ferret\body_black_co.paa",
+			"\sc_wheeled\data\ferret\details_black_co.paa",
+			"\sc_wheeled\data\ferret\wheels_black_co.paa",
+			"\sc_wheeled\data\saurus_apc\textures\turret_auto_co.paa"
+		};
+		armor = 275;
+		class Turrets: Turrets
+		{
+			class MainTurret: MainTurret
+			{
+				minElev=-5;
+				maxElev=40;
+				memoryPointGun="usti hlavne1";
+				selectionFireAnim="zasleh1";
+				weapons[]=
+				{
+					"MET_autocannon_Z36_HBC",
+					"BHA_MG2",
+					"SmokeLauncher"
+				};
+				magazines[]=
+				{
+					"MET_500Rnd_Z36_HBC",
+					"MET_500Rnd_Z36_HBC",
+					"MET_500Rnd_Z36_HBC",
+					"MET_500Rnd_Z36_HBC",
+					"MET_500Rnd_Z36_HBC_AP",
+					"MET_T20AC_vic_mag",
+					"MET_T20AC_vic_mag",
+					"MET_T20AC_vic_mag",
+					"MET_T20AC_vic_mag",
+					"MET_T20AC_vic_mag",
+					"SmokeLauncherMag",
+					"SmokeLauncherMag"
+				};
+				class ViewOptics: ViewOptics
+				{
+					initAngleX=0;
+					minAngleX=-30;
+					maxAngleX=30;
+					initAngleY=0;
+					minAngleY=-100;
+					maxAngleY=100;
+					initFov=0.30000001;
+					minFov=0.30000001;
+					maxFov=0.30000001;
+					visionMode[]=
 					{
+						"Normal",
+						"NVG",
+						"Ti"
 					};
+					thermalMode[]={4,5,6};
 				};
 			};
 		};
 	};
-	class MRAP_03_hmg_base_F: MRAP_03_base_F
+	class SC_SaurusAPC_SE
 	{
+		class AnimationSources;
+		class Turrets
+		{
+			class MainTurret
+			{
+				class ViewOptics;
+			};
+		};
 	};
-	class I_MRAP_03_hmg_F: MRAP_03_hmg_base_F
+	class BHA_SaurusAPC_SE: SC_SaurusAPC_SE
 	{
-	};
-	class BHA_mrap_03_hmg_f: I_MRAP_03_hmg_F
-	{
-		displayName="Fennek (HMG)";
 		scope=2;
+		scopeCurator=2;
+		author="Scion Conflict Mod Team";
+		displayName="Saurus APC";
+		side=2;
 		faction="BHA_Units";
-		editorSubCategory="BHA_Cars";
-		crew="BHA_Acolytes_Acolyte";
-		editorPreview="\HDC_Units_mod\data\Editor Previews\BHA\BHA_mrap_03_hmg_f.jpg";
+		editorSubcategory="BHA_IFVs";
+		crew="BHA_Initiates_Initiate";
 		hiddenSelections[]=
 		{
-			"Camo1",
-			"Camo2"
+			"camo1",
+			"camo2",
+			"camo3"
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\HDC_Units_mod\Faction\BHA\Vehicles\Cars\data\mrap_03_ext_co.paa",
-			"\HDC_Units_mod\Faction\BHA\Vehicles\Drones\Data\turret_black_co.paa"
+			"z\16th\addons\vehicles\data\body_co.paa",
+			"z\16th\addons\vehicles\data\details_co.paa",
+			"z\16th\addons\vehicles\data\turret_auto_co.paa"
 		};
 		class Turrets: Turrets
 		{
 			class MainTurret: MainTurret
 			{
-				memoryPointsGetInGunner="pos gunner";
-				memoryPointsGetInGunnerDir="pos gunner dir";
-				body="mainTurret";
-				gun="mainGun";
 				weapons[]=
 				{
-					"BHA_HMG_127"
+					//"BHA_autocannon_40mm_AP",
+					"BHA_autocannon_40mm_HE"
 				};
 				magazines[]=
 				{
-					"200Rnd_127x99_mag_Tracer_Orange",
-					"200Rnd_127x99_mag_Tracer_Orange"
+					"MET_500Rnd_Z38_HBC",
+					"MET_500Rnd_Z38_HBC",
+					"MET_500Rnd_Z38_HBC",
+					"MET_500Rnd_Z38_HBC",
+					"MET_500Rnd_Z38_HBC",
+					"MET_500Rnd_Z38_HBC_AP",
+					"MET_500Rnd_Z38_HBC_AP",
+					"MET_500Rnd_Z38_HBC_AP",
+					"MET_500Rnd_Z38_HBC_AP"
+				};
+				minElev=-10;
+				maxElev=85;
+				maxHorizontalRotSpeed=1.2;
+				maxVerticalRotSpeed=1.2;
+				discreteDistance[]={100,200,300,400,500,600,700,800,900,1000,1100,1200};
+				discreteDistanceInitIndex=2;
+				memoryPointGun[]=
+				{
+					"usti hlavne1",
+					"usti hlavne"
 				};
 				selectionFireAnim="zasleh";
-				gunnerAction="gunner_MRAP_03";
-				viewGunnerInExternal=1;
-				castGunnerShadow=1;
-				soundServo[]=
+				class ViewOptics: ViewOptics
 				{
-					"A3\Sounds_F\vehicles\soft\noises\servo_turret_MRAP03",
-					0.17782794,
-					1,
-					10
-				};
-				soundServoVertical[]=
-				{
-					"A3\Sounds_F\vehicles\soft\noises\servo_turret_MRAP03",
-					0.17782794,
-					1,
-					10
-				};
-				stabilizedInAxes=3;
-				animationSourceStickX="joystick_gunner_x";
-				animationSourceStickY="joystick_gunner_y";
-				gunnerLeftHandAnimName="";
-				gunnerRightHandAnimName="joystick_gunner";
-				memoryPointGunnerOptics="gunnerview";
-				gunnerOpticsModel="\A3\weapons_f\reticle\Optics_Gunner_02_F";
-				discreteDistance[]={100,200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500};
-				discreteDistanceInitIndex=2;
-				turretInfoType="RscOptics_crows";
-				usePip=1;
-				commanding=1;
-				minElev=-20;
-				maxElev=20;
-				headAimDown=10;
-				class ViewOptics: RCWSOptics
-				{
-				};
-				class ViewGunner: ViewGunner
-				{
-					initAngleX=-10;
-					initFov=0.89999998;
-					minFov=0.25;
-					maxFov=1.25;
-				};
-				class HitPoints: HitPoints
-				{
-					class HitTurret
+					initAngleX=0;
+					minAngleX=-30;
+					maxAngleX=30;
+					initAngleY=0;
+					minAngleY=-100;
+					maxAngleY=100;
+					initFov=0.30000001;
+					minFov=0.30000001;
+					maxFov=0.30000001;
+					visionMode[]=
 					{
-						armor=-250;
-						material=-1;
-						armorComponent="hit_main_turret";
-						name="hit_main_turret_point";
-						visual="otocvez";
-						passThrough=0;
-						minimalHit=0.029999999;
-						explosionShielding=0.40000001;
-						radius=0.25;
-						isTurret=1;
+						"Normal",
+						"NVG",
+						"Ti"
 					};
-					class HitGun
-					{
-						armor=-250;
-						material=-1;
-						armorComponent="hit_main_gun";
-						name="hit_main_gun_point";
-						visual="otochlaven";
-						passThrough=0;
-						minimalHit=0.029999999;
-						explosionShielding=0.2;
-						radius=0.2;
-						isGun=1;
-					};
-				};
-				gunnerDoor="";
-				class Components
-				{
-					class VehicleSystemsDisplayManagerComponentLeft: DefaultVehicleSystemsDisplayManagerLeft
-					{
-						class Components: components
-						{
-							class VehicleCommanderDisplay
-							{
-								componentType="TransportFeedDisplayComponent";
-								source="Commander";
-							};
-						};
-					};
-					class VehicleSystemsDisplayManagerComponentRight: DefaultVehicleSystemsDisplayManagerRight
-					{
-						class Components: components
-						{
-							class VehicleCommanderDisplay
-							{
-								componentType="TransportFeedDisplayComponent";
-								source="Commander";
-							};
-						};
-					};
-				};
-			};
-			class CommanderTurret: CommanderTurret
-			{
-				class Components
-				{
-					class VehicleSystemsDisplayManagerComponentLeft: DefaultVehicleSystemsDisplayManagerLeft
-					{
-						class Components: components
-						{
-							class VehiclePrimaryGunnerDisplay
-							{
-								componentType="TransportFeedDisplayComponent";
-								source="PrimaryGunner";
-							};
-						};
-					};
-					class VehicleSystemsDisplayManagerComponentRight: DefaultVehicleSystemsDisplayManagerRight
-					{
-						class Components: components
-						{
-							class VehiclePrimaryGunnerDisplay
-							{
-								componentType="TransportFeedDisplayComponent";
-								source="PrimaryGunner";
-							};
-						};
-					};
+					thermalMode[]={4,5,6};
 				};
 			};
 		};
@@ -419,18 +558,348 @@ class CfgVehicles
 			class muzzle_rot
 			{
 				source="ammorandom";
-				weapon="BHA_HMG_127";
+				weapon="BHA_autocannon_40mm_AP";
 			};
-			class muzzle_hide
+			class muzzle_rot1
 			{
-				source="reload";
-				weapon="BHA_HMG_127";
+				source="ammorandom";
+				weapon="BHA_autocannon_40mm_HE";
 			};
 		};
 	};
-};
-class cfgMods
-{
-	author="";
-	timepacked="1664364859";
+	class SC_Mantis_Base
+	{
+		class Turrets
+		{
+			class MainTurret
+			{
+				class Turrets
+				{
+					class CommanderOptics;
+					class ViewOptics;
+				};
+				class CommanderOptics;
+				class ViewOptics;
+				class HitPoints
+				{
+					class HitTurret;
+					class HitGun;
+				};
+			};
+		};
+		class AnimationSources;
+	};
+	class BHA_Mantis: SC_Mantis_Base
+	{
+		scope=2;
+		scopeCurator=2;
+		author="Scion Conflict Mod Team";
+		displayName="Mantis Tank";
+		side=2;
+		faction="BHA_Units";
+		editorSubcategory="BHA_Tanks";
+		crew="BHA_warbot";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+			"camo3"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"sc_tracked\data\mantis\textures\body_black_co.paa",
+			"sc_tracked\data\mantis\textures\turret_black_co.paa",
+			"sc_tracked\data\mantis\textures\brace_black_co.paa"
+		};
+		armor = 950;
+		class Turrets: Turrets
+		{
+			class MainTurret: MainTurret
+			{
+				class Turrets: Turrets
+				{
+					class CommanderOptics: CommanderOptics
+					{
+						body="ObsTurret";
+						gun="ObsGun";
+						animationSourceBody="obsTurret";
+						animationSourceGun="obsGun";
+						maxHorizontalRotSpeed=1.8;
+						maxVerticalRotSpeed=1.8;
+						stabilizedInAxes=3;
+						soundServo[]=
+						{
+							"A3\Sounds_F\vehicles\armor\noises\servo_armor_comm",
+							1,
+							1,
+							30
+						};
+						soundServoVertical[]=
+						{
+							"A3\Sounds_F\vehicles\armor\noises\servo_armor_comm",
+							1,
+							1,
+							30
+						};
+						minElev=-5;
+						maxElev=60;
+						initElev=0;
+						initTurn=0;
+						memoryPointGun="commander_end";
+						gunBeg="commander_beg";
+						gunEnd="commander_end";
+						weapons[]=
+						{
+							"BHA_MG3",
+							"SmokeLauncher"
+						};
+						magazines[]=
+						{
+							"MET_T20AC_vic_mag",
+							"MET_T20AC_vic_mag",
+							"MET_T20AC_vic_mag",
+							"MET_T20AC_vic_mag",
+							"SmokeLauncherMag"
+						};
+						turretInfoType="RscOptics_crows";
+						discreteDistance[]={100,200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500};
+						discreteDistanceInitIndex=2;
+						memoryPointGunnerOutOptics="commanderview";
+						memoryPointGunnerOptics="commanderview";
+						gunnerOpticsModel="\A3\weapons_f\reticle\Optics_Commander_02_F";
+						gunnerOutOpticsModel="";
+						gunnerOpticsEffect[]={};
+						gunnerHasFlares=1;
+						class ViewOptics: ViewOptics
+						{
+							initAngleX=0;
+							minAngleX=-30;
+							maxAngleX=30;
+							initAngleY=0;
+							minAngleY=-100;
+							maxAngleY=100;
+							initFov=0.30000001;
+							minFov=0.30000001;
+							maxFov=0.30000001;
+							visionMode[]=
+							{
+								"Normal",
+								"NVG",
+								"Ti"
+							};
+						};
+						class OpticsIn
+						{
+							class Wide: ViewOptics
+							{
+								initAngleX=0;
+								minAngleX=-30;
+								maxAngleX=30;
+								initAngleY=0;
+								minAngleY=-100;
+								maxAngleY=100;
+								initFov=0.30000001;
+								minFov=0.30000001;
+								maxFov=0.30000001;
+								visionMode[]=
+								{
+									"Normal",
+									"NVG",
+									"Ti"
+								};
+								thermalMode[]={4,5,6};
+								gunnerOpticsModel="\A3\Weapons_F\Reticle\Optics_Gunner_02_F.p3d";
+								gunnerOpticsEffect[]={};
+							};
+							class Medium: Wide
+							{
+								gunnerOpticsModel="\A3\Weapons_F\Reticle\Optics_Gunner_02_F.p3d";
+								initFov=0.07;
+								minFov=0.07;
+								maxFov=0.07;
+							};
+							class Narrow: Wide
+							{
+								gunnerOpticsModel="\A3\Weapons_F\Reticle\Optics_Gunner_02_F.p3d";
+								initFov=0.028000001;
+								minFov=0.028000001;
+								maxFov=0.028000001;
+							};
+						};
+						gunnerAction="mbt2_slot2b_out";
+						gunnerInAction="mbt2_slot2b_in";
+						gunnerGetInAction="GetInLow";
+						gunnerGetOutAction="GetOutLow";
+						forceHideGunner=1;
+						gunnerForceOptics=1;
+						startEngine=0;
+						viewGunnerInExternal=1;
+						outGunnerMayFire=1;
+						inGunnerMayFire=1;
+						class HitPoints
+						{
+							class HitTurret
+							{
+								armor=0.30000001;
+								material=-1;
+								name="vez";
+								visual="vez";
+								passThrough=0;
+								minimalHit=0.029999999;
+								explosionShielding=0.60000002;
+								radius=0.25;
+							};
+							class HitGun
+							{
+								armor=0.30000001;
+								material=-1;
+								name="zbranVelitele";
+								visual="zbranVelitele";
+								passThrough=0;
+								minimalHit=0.029999999;
+								explosionShielding=0.60000002;
+								radius=0.25;
+							};
+						};
+						selectionFireAnim="zasleh3";
+					};
+				};
+				memoryPointGun="usti hlavne1";
+				selectionFireAnim="zasleh1";
+				body="mainTurret";
+				gun="mainGun";
+				gunBeg="usti hlavne";
+				gunEnd="konec hlavne";
+				weapons[]=
+				{
+					"BHA_Mass_Driver_Cannon",
+					"BHA_E403_Vic",
+					"BHA_Rockets_Mantis"
+				};
+				magazines[]=
+				{
+					"BHA_30Rnd_Mass_Driver_shells",
+					"BHA_30Rnd_Mass_Driver_shells",
+					"BHA_AP_OCT",
+					"MET_vic_proton_mag",
+					"MET_vic_proton_mag"
+				};
+				memoryPointLRocket="L raketa";
+				memoryPointRRocket="P raketa";
+				missileBeg="missleEnd";
+				missileEnd="missleBeg";
+				minElev=-5;
+				maxElev=20;
+				initElev=5;
+				soundServo[]=
+				{
+					"A3\Sounds_F\vehicles\armor\noises\servo_armor_gunner",
+					0.56234133,
+					1,
+					50
+				};
+				soundServoVertical[]=
+				{
+					"A3\Sounds_F\vehicles\armor\noises\servo_armor_gunner_vertical",
+					0.56234133,
+					1,
+					50
+				};
+				startEngine=0;
+				maxHorizontalRotSpeed=0.44999999;
+				maxVerticalRotSpeed=0.44999999;
+				turretInfoType="RscWeaponRangeZeroing";
+				discreteDistance[]={100,200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600,1700,1800,1900,2000,2100,2200,2300,2400};
+				discreteDistanceInitIndex=2;
+				memoryPointGunnerOptics="usti hlavne";
+				gunnerOutOpticsModel="";
+				gunnerOutOpticsEffect[]={};
+				gunnerOpticsEffect[]={};
+				gunnerForceOptics=1;
+				class OpticsIn
+				{
+					class Wide: ViewOptics
+					{
+						initAngleX=0;
+						minAngleX=-30;
+						maxAngleX=30;
+						initAngleY=0;
+						minAngleY=-100;
+						maxAngleY=100;
+						initFov=0.30000001;
+						minFov=0.30000001;
+						maxFov=0.30000001;
+						visionMode[]=
+						{
+							"Normal",
+							"NVG",
+							"TI"
+						};
+						thermalMode[]={4,5,6};
+						gunnerOpticsModel="\A3\Weapons_F\Reticle\Optics_Gunner_MTB_02_w_F.p3d";
+						gunnerOpticsEffect[]={};
+					};
+					class Medium: Wide
+					{
+						gunnerOpticsModel="\A3\Weapons_F\Reticle\Optics_Gunner_MTB_02_m_F.p3d";
+						initFov=0.07;
+						minFov=0.07;
+						maxFov=0.07;
+					};
+					class Narrow: Wide
+					{
+						gunnerOpticsModel="\A3\Weapons_F\Reticle\Optics_Gunner_MTB_02_n_F.p3d";
+						initFov=0.028000001;
+						minFov=0.028000001;
+						maxFov=0.028000001;
+					};
+				};
+				gunnerAction="mbt2_slot2a_out";
+				gunnerInAction="mbt2_slot2a_in";
+				gunnerGetInAction="GetInLow";
+				gunnerGetOutAction="GetOutLow";
+				forceHideGunner=1;
+				inGunnerMayFire=1;
+				viewGunnerInExternal=1;
+				class HitPoints
+				{
+					class HitTurret
+					{
+						armor=0.80000001;
+						material=-1;
+						name="vez";
+						visual="vez";
+						passThrough=0;
+						minimalHit=0.02;
+						explosionShielding=0.30000001;
+						radius=0.25;
+					};
+					class HitGun
+					{
+						armor=0.30000001;
+						material=-1;
+						name="zbran";
+						visual="";
+						passThrough=0;
+						minimalHit=0;
+						explosionShielding=1;
+						radius=0.25;
+					};
+				};
+			};
+		};
+		class AnimationSources: AnimationSources
+		{
+			class recoil_source
+			{
+				source="reload";
+				weapon="BHA_Mass_Driver_Cannon";
+			};
+			class Revolving
+			{
+				source="revolving";
+				weapon="BHA_Rockets_Mantis";
+			};
+		};
+	};
 };

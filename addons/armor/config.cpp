@@ -8,6 +8,7 @@ class CfgPatches
 		};
 		weapons[]=
 		{
+			"Metal_UNSC_CH252D_Helmet",
 			"armor_16th_trp",
 			"helmet_16th_trp",
 			"helmet_16th_ab_trp",
@@ -836,6 +837,57 @@ class CfgWeapons
 			"",
 			""
 		};
+	};
+	class OPTRE_UNSC_CH252D_Helmet_Base;
+	class Metal_UNSC_CH252D_Helmet: OPTRE_UNSC_CH252D_Helmet_Base
+	{
+		dlc="OPTRE";
+		scope=2;
+		scopeArsenal=2;
+		author="Article 2 Studios";
+		displayName="[16th] CH252D Helmet [Basic]";
+		hiddenSelections[]=
+		{
+			"camo",
+			"camo2",
+			"camo3",
+			"camo4",
+			"H_Ghillie"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"optre_unsc_units\army\data\odst_helmet_co.paa",
+			"optre_unsc_units\army\data\odst_helmet_visor_co.paa",
+			"optre_unsc_units\army\data\ghillie_woodland_co.paa",
+			"optre_unsc_units\army\data\soft_packs_co.paa"
+		};
+		//optreHUDStyle="Phase_2";
+		class ItemInfo: ItemInfo
+		{
+			hiddenSelections[]=
+			{
+				"camo",
+				"camo2",
+				"camo3",
+				"camo4",
+				"H_Ghillie"
+			};
+			hiddenSelectionsTextures[]=
+			{
+				"optre_unsc_units\army\data\odst_helmet_co.paa",
+				"optre_unsc_units\army\data\odst_helmet_visor_co.paa",
+				"optre_unsc_units\army\data\ghillie_woodland_co.paa",
+				"optre_unsc_units\army\data\soft_packs_co.paa"
+			};
+		};
+	};
+	class OPTRE_UNSC_CH252D_Helmet_Stripes;
+	class Metal_UNSC_CH252D_Helmet_Stripes: OPTRE_UNSC_CH252D_Helmet_Stripes
+	{
+		dlc="";
+		author="Article 2 Studios";
+		displayName="CH252D Helmet [Stripes]";
+		optreHUDStyle="Phase_2";
 	};
 	class helmet_16th_hellwolf: helmet_16th_trp
 	{

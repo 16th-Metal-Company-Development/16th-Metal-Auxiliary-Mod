@@ -21,6 +21,10 @@ class CfgEditorSubcategories
 	{
 		displayName="Men (Apostles)";
 	};
+	class BHA_HG
+	{
+		displayName="Men (Honor Guard)";
+	};
 	class BHA_Acolytes
 	{
 		displayName="Men (Acolytes)";

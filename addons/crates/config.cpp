@@ -42,24 +42,28 @@ class ACEX_Fortify_Presets
     class sixteenth
     {
         displayName = "16th Engineers";
-        objects[] = 
-        {
+        objects[] = {
+            {"3AS_Barricade_2_C_Prop",8},
+            {"3as_hbarrier_3",8},
+            {"3as_hbarricade",8},
+            {"3as_hbarrierWall_4",18},
+            {"3as_hbarrierWall_6",18},
+            {"3as_hbarrierWall_corner3",18},
+            {"3as_hbarrier_big4",18},
+            {"3as_hbarrier_big4",18},
+            {"3as_hbarrier_big6",18},
+            {"3as_hbarrier_bunker",18},
+            {"3as_hbarrier_big_corner",18},
+            {"3as_hbarrier_Tower",28},
+            {"land_3AS_Imperial_Tower",38},
+            {"3AS_HeavyRepeater_Unarmoured",8},
             {"3AS_HeavyRepeater_Armoured",8},
-            {"33AS_Shield_3_Prop",8},
-            {"3AS_Shield_5_Prop",8},
-            {"3AS_Shield_C_Prop",8},
-            {"Land_lsb_fob_hBarrier_3",13},
-            {"Land_lsb_fob_hBarrier_5",13},
-            {"Land_lsb_fob_hBarrierWall_4",28},
-            {"Land_lsb_fob_hBarrierWall_7",28},
-            {"Land_lsb_fob_hBarrier_corridor",28},
-            {"Land_lsb_fob_hBarrier_tower",28},
-            {"land_3AS_gar_tall",8},
-            {"ls_flag_republic",1},
-            {"land_3AS_Imperial_Checkpoint_Long_Green",8},
-            {"land_3AS_Imperial_Checkpoint_Green",8},
-            {"Land_SignCommand_01_stop_F",1},
-            {"RoadCone_F",1}};
+            {"land_3AS_Imperial_Checkpoint",3},
+            {"land_3AS_Imperial_Checkpoint_Long",3},
+            {"land_3as_Dragonsteeth",8},
+            {"land_3AS_fob_light_reb_tall",8},
+            {"ls_flag_republic",1}
+        };
     };
 };
 class CfgEditorCategories
@@ -1066,6 +1070,11 @@ class CfgVehicles
 				magazine="MET_DC15x_mag";
 				count=10;
 			};
+            class _xx_MET_DC15LE_mag
+            {
+                magazine = "MET_DC15LE_mag";
+                count = 30;
+            };
 			class _xx_MET_DC15x_at_mag
 			{
 				magazine="MET_DC15x_at_mag";
@@ -1918,6 +1927,11 @@ class CfgVehicles
 				magazine="MET_DC15x_mag";
 				count=10;
 			};
+            class _xx_MET_DC15LE_mag
+            {
+                magazine = "MET_DC15LE_mag";
+                count = 30;
+            };
 			class _xx_MET_DC15x_at_mag
 			{
 				magazine="MET_DC15x_at_mag";

@@ -63,17 +63,24 @@ class CfgRecoils
 	};
 	class recoil_dc15XM: Default
 	{
-		muzzleOuter[]={0.30000001,0.75,0.30000001,0.30000001};
+		muzzleOuter[]={0.5,2,0.8,1};
 		muzzleInner[]={0,0,0.1,0.1};
-		kickBack[]={0.02,0.039999999};
+		kickBack[]={0.1,0.12};
 		permanent=0.1;
-		temporary=0.0099999998;
+		temporary=0.01;
 	};
 	class MET_recoil_DC15X: 3AS_recoil_default
 	{
+		muzzleOuter[]={0.4,1.5,0.80000001,0.80000001};
 		kickBack[]={0.1,0.12};
-		muzzleOuter[]={0.5,1.5,0.80000001,0.80000001};
-		temporary=0.079999998;
+		temporary=0.08;
+	};
+	class MET_recoil_VK38X : 3AS_recoil_default
+	{
+		muzzleOuter[] 	= {0.3,1.4,0.4,0.7};
+		kickBack[] 		= {0.05,0.09};
+		permanent		= 0.05;
+		temporary 		= 0.005;
 	};
 };
 class CBA_DisposableLaunchers
@@ -3233,7 +3240,10 @@ class CfgWeapons
 			"MET_DC15xm_mag",
 			"MET_DC15xm_at_mag"
 		};
+		recoil="recoil_dc15XM";
 		WBK_UseDisintegrate = "true";
+		//WBK_UseMelting = "true";
+		cursor="srifle";
 		displayname="[16th] DC-15XM";
 		descriptionShort="Anti Material Rifle";
 		selectionFireAnim="zasleh";
@@ -3286,7 +3296,7 @@ class CfgWeapons
 				begin1[]=
 				{
 					"z\16th\addons\weapons\infantry_weap\sounds\dc15xm.ogg",
-					1,
+					200,
 					1,
 					1800
 				};
@@ -3296,7 +3306,7 @@ class CfgWeapons
 					1
 				};
 			};
-			reloadTime=0.9;
+			reloadTime=1.2;
 			dispersion=0.00000000000001;
 			minRange=5;
 			minRangeProbab=0.30000001;
@@ -3344,12 +3354,11 @@ class CfgWeapons
 		inertia=1.4;
 		dexterity=1.7;
 		initSpeed=-1;
-		recoil="LFP_recoil";
 		maxRecoilSway=0.015;
 		swayDecaySpeed=1;
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
-			mass=60;
+			mass=380;
 			class CowsSlot: Cowsslot
 			{
 				compatibleItems[]=
@@ -3416,7 +3425,7 @@ class CfgWeapons
 		};
 		reloadAction="GestureReloadMX";
 		cursor="srifle";
-		recoil="3as_recoil_VK38X";
+		recoil="MET_recoil_VK38X";
 		maxZeroing=1400;
 		discreteDistanceInitIndex=0;
 		maxRecoilSway=0.0125;
@@ -5797,6 +5806,7 @@ class CfgWeapons
 		model="3AS\3AS_Weapons\Chaingun\Chaingun.p3d";
 		picture="\3AS\3AS_Weapons\Chaingun\data\UI\3as_chaingun.paa";
 		UiPicture="\3AS\3AS_Weapons\Chaingun\data\UI\3as_chaingun.paa";
+        magazineReloadTime = 0;
 		handAnim[]=
 		{
 			"OFP2_ManSkeleton",
@@ -8991,6 +9001,199 @@ class CfgWeapons
 			};
 		};
 	};
+
+	/*
+	* RK3
+	*/
+	class MET_C_RK3_Base_F : Pistol_Base_F
+	{
+		author = "$STR_3AS_Studio";
+		reloadAction = "3AS_Vent_Reload_Pistol";
+		magazines[] =
+		{
+			"MET_blaster_pistol_battery"
+		};
+		magazineWell[] =
+		{
+			"MET_DC17SA_MagWell"
+		};
+		magazineReloadSwitchPhase = 0.40000001;
+		discreteDistanceInitIndex = 0;
+		maxRecoilSway = 0.0125;
+		swayDecaySpeed = 1.25;
+		inertia = 0.5;
+		dexterity = 1.5;
+		initSpeed = -1;
+		maxZeroing = 100;
+		class GunParticles : GunParticles
+		{
+			class SecondEffect
+			{
+				positionName = "Nabojnicestart";
+				directionName = "Nabojniceend";
+				effectName = "CaselessAmmoCloud";
+			};
+		};
+		class WeaponSlotsInfo : WeaponSlotsInfo
+		{
+			class MuzzleSlot : MuzzleSlot
+			{
+				linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
+				compatibleItems[] = {};
+				iconPosition[] = {0,0.44999999};
+				iconScale = 0.2;
+			};
+			class CowsSlot : CowsSlot
+			{
+				linkProxy = "\A3\data_f\proxies\weapon_slots\TOP";
+				compatibleItems[] = {};
+			};
+			class PointerSlot : PointerSlot
+			{
+				linkProxy = "\A3\data_f\proxies\weapon_slots\SIDE";
+				compatibleItems[] = {};
+			};
+			class UnderBarrelSlot : UnderBarrelSlot
+			{
+				linkProxy = "\A3\data_f_mark\proxies\weapon_slots\UNDERBARREL";
+				compatibleItems[] = {};
+			};
+		};
+		opticsZoomMin = 0.25;
+		opticsZoomMax = 1.25;
+		opticsZoomInit = 0.75;
+		distanceZoomMin = 400;
+		distanceZoomMax = 400;
+		descriptionShort = "RK3, 3rd Army Studios";
+		selectionFireAnim = "zasleh";
+		fireLightDiffuse[] = { 7,36,190,1 };
+		fireLightIntensity = 0.02;
+		flash = "gunfire";
+		flashSize = 0.1;
+		modes[] =
+		{
+			"Single",
+			"FullAuto"
+		};
+		class Single : Mode_SemiAuto
+		{
+			sounds[] =
+			{
+				"StandardSound",
+				"SilencedSound"
+			};
+			class BaseSoundModeType;
+			class StandardSound : BaseSoundModeType
+			{
+				soundSetShot[] =
+				{
+					"3AS_RK3_Shot_SoundSet"
+				};
+			};
+			class SilencedSound : BaseSoundModeType
+			{
+				soundSetShot[] =
+				{
+					"3AS_RK3_Shot_SoundSet"
+				};
+			};
+			recoil = "recoil_pistol_light";
+			recoilProne = "recoil_prone_pistol_light";
+			reloadTime = 0.1;
+			magazineReloadTime = 2;
+			dispersion = 0.0039900001;
+			minRange = 5;
+			minRangeProbab = 0.30000001;
+			midRange = 25;
+			midRangeProbab = 0.60000002;
+			maxRange = 50;
+			maxRangeProbab = 0.1;
+			aiRateOfFire = 2;
+			aiRateOfFireDistance = 25;
+		};
+		class FullAuto : Mode_FullAuto
+		{
+			sounds[] =
+			{
+				"StandardSound",
+				"SilencedSound"
+			};
+			class BaseSoundModeType;
+			class StandardSound : BaseSoundModeType
+			{
+				soundSetShot[] =
+				{
+					"3AS_RK3_Shot_SoundSet"
+				};
+			};
+			class SilencedSound : BaseSoundModeType
+			{
+				soundSetShot[] =
+				{
+					"3AS_RK3_Shot_SoundSet"
+				};
+			};
+			recoil = "recoil_pistol_light";
+			recoilProne = "recoil_prone_pistol_light";
+			reloadTime = 0.1;	
+			magazineReloadTime = 2;
+			dispersion = 0.0039900001;
+			minRange = 5;
+			minRangeProbab = 0.30000001;
+			midRange = 25;
+			midRangeProbab = 0.60000002;
+			maxRange = 50;
+			maxRangeProbab = 0.1;
+			aiRateOfFire = 2;
+			aiRateOfFireDistance = 25;
+		};
+		aiDispersionCOEFY = 6;
+		aiDispersionCOEFX = 4;
+		caseless[] =
+		{
+			"",
+			1,
+			1,
+			1
+		};
+		soundBullet[] =
+		{
+			"caseless",
+			1
+		};
+		drySound[] =
+		{
+			"\3AS\3AS_Main\Sounds\Blaster_empty",
+			2,
+			1,
+			20
+		};
+		reloadMagazineSound[] =
+		{
+			"3as\3AS_Main\Sounds\Reload\Venting_Sound.ogg",
+			2,
+			1,
+			30
+		};
+		ace_overheating_mrbs = 3000;
+		ace_overheating_slowdownFactor = 1;
+		ace_overheating_allowSwapBarrel = 0;
+		ace_overheating_dispersion = 0.75;
+	};
+
+	class MET_C_RK3 : MET_C_RK3_Base_F
+	{
+		scope = 2;
+		displayName = "[16th] RK3 Blaster";
+		model = "\3AS\3AS_Weapons\Imperial\3AS_RK3.p3d";
+		picture = "\3AS\3AS_Weapons\Imperial\data\UI\3as_rk3.paa";
+		weaponInfoType = "RscWeaponZeroing";
+		class WeaponSlotsInfo : WeaponSlotsInfo
+		{
+			mass = 60;
+		};
+	};
+
 	/*==============================================================================
 	==DC-17M
 	==============================================================================*/
@@ -9729,7 +9932,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_box_b.paa";
 		model="\MRC\JLTS\weapons\z6\z6_mag.p3d";
 		count=10000;
-		displayName="[16th] Z6 Energy Cell";
+		displayName="[16th] Z6 Heavy Energy Cell";
 		displayNameShort="Z6 Energy Cell";
 		descriptionShort="Energy cell for the Z6";
 		ammo="MET_blasterbolt_low";
@@ -10924,6 +11127,25 @@ class CfgMagazines
 		type="2*  256";
 		mass=60;
 		count=600;
+	};
+
+	class MET_BARC_Mag : JLTS_DC15A_mag
+	{
+		JLTS_hasElectronics = 1;
+		JLTS_hasEMPProtection = 1;
+		author = "Chet";
+		scope = 1;
+		modelSpecial = "";
+		modelSpecialIsProxy = 0;
+		picture = "\3AS\3AS_Weapons\Data\UI\3as_box_b.paa";
+		model = "\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
+		count = 1000;
+		displayName = "[16th] BARC Repeater Cell";
+		displayNameShort = "BARC Repeater";
+		descriptionShort = "Energy cell for the BARC";
+		ammo = "MET_blasterbolt";
+		mass = 250;
+		tracersEvery = 1;
 	};
 };
 class ACE_Medical_Injuries
@@ -20035,11 +20257,11 @@ class CfgAmmo
 	class MET_blasterbolt_antimat: MET_blasterbolt_at
 	{
 		ACE_damageType="bullet";
-		hit=250;
-		indirectHit=6;
+		hit=300;
+		indirectHit=12;
 		explosive=1;
-		indirectHitRange=0.5;
-		caliber=40;
+		indirectHitRange=1;
+		caliber=50;
 		coefGravity=0;
 		timetolive=80;
 		waterFriction=-0.0099999998;
@@ -21532,11 +21754,11 @@ class CfgAmmo
 	class MET_blasterbolt_antimatat: MET_blasterbolt_at
 	{
 		ACE_damageType="bullet";
-		hit=750;
+		hit=950;
 		indirectHit=6;
 		explosive=1;
 		indirectHitRange=0.5;
-		caliber=90;
+		caliber=200;
 		coefGravity=0;
 		timetolive=80;
 		waterFriction=-0.0099999998;

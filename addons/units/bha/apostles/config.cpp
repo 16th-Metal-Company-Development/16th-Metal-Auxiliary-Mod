@@ -169,6 +169,10 @@ class CfgVehicles
 			"VSM_Balaclava2_black_Goggles",
 			"NVGogglesB_blk_F"
 		};
+		class EventHandlers
+		{
+			init = "_unit = _this select 0; if (local _unit) then { {_unit setSkill [_x, 0.95]; } forEach ['aimingAccuracy','aimingShake','aimingSpeed','commanding','courage','general','reloadSpeed','spotDistance','spotTime']; };";
+		};
 	};
 	class BHA_Apostles_Apostle: BHA_Apostles_Base
 	{
