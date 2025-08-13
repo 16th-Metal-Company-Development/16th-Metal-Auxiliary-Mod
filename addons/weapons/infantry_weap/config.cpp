@@ -9218,7 +9218,7 @@ class CfgWeapons
 
 	class MET_C_RK3 : MET_C_RK3_Base_F
 	{
-		scope = 2;
+		scope = 1;
 		displayName = "[16th] RK3 Blaster";
 		model = "\3AS\3AS_Weapons\Imperial\3AS_RK3.p3d";
 		picture = "\3AS\3AS_Weapons\Imperial\data\UI\3as_rk3.paa";
