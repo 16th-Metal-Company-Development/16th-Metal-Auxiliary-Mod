@@ -2995,6 +2995,18 @@ class CfgMagazines
 		mass=80;
 		initSpeed=100;
 	};
+	class BHA_AA_Dub: 3AS_JLTS_MK39_AA
+	{
+		scope=2;
+		scopeArsenal=0;
+		displayName="HH-12 Dual AA Rocket";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_rocket_aa.paa";
+		ammo = "bha_aa_missile_van";
+		displayNameShort="Mk39 AA";
+		count=2;
+		mass=80;
+		initSpeed=100;
+	};
 	class BHA_AP_SINGLE: 3AS_JLTS_MK39_AA
 	{
 		scope=2;
@@ -3007,6 +3019,30 @@ class CfgMagazines
 		mass=80;
 		initSpeed=100;
 	};
+	class BHA_AP_DUB: 3AS_JLTS_MK39_AA
+	{
+		scope=2;
+		scopeArsenal=0;
+		displayName="HH-12 Dual AP Rocket";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_rocket_he.paa";
+		ammo="bha_ap_missile";
+		displayNameShort="Mk44 AP";
+		count=2;
+		mass=80;
+		initSpeed=100;
+	};
+	class BHA_AP_OCT: 3AS_JLTS_MK39_AA
+	{
+		scope=2;
+		scopeArsenal=0;
+		displayName="HH-12 Octuple AP Rocket";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_rocket_he.paa";
+		ammo="bha_ap_missile";
+		displayNameShort="Mk44 AP";
+		count=8;
+		mass=80;
+		initSpeed=100;
+	};
 	class BHA_AT_SINGLE: 3AS_JLTS_MK39_AA
 	{
 		scope=2;
@@ -3016,6 +3052,30 @@ class CfgMagazines
 		ammo="bha_at_wire_missile";
 		displayNameShort="Mk43 AT";
 		count=1;
+		mass=90;
+		initSpeed=100;
+	};
+	class BHA_AT_DUB: 3AS_JLTS_MK39_AA
+	{
+		scope=2;
+		scopeArsenal=0;
+		displayName="HH-12 Dual AT Rocket";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_rocket_at.paa";
+		ammo="bha_at_wire_missile";
+		displayNameShort="Mk43 AT";
+		count=2;
+		mass=90;
+		initSpeed=100;
+	};
+	class BHA_AT_OCT: 3AS_JLTS_MK39_AA
+	{
+		scope=2;
+		scopeArsenal=0;
+		displayName="HH-12 Octuple AT Rocket";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_rocket_at.paa";
+		ammo="bha_at_wire_missile";
+		displayNameShort="Mk43 AT";
+		count=8;
 		mass=90;
 		initSpeed=100;
 	};
@@ -3093,6 +3153,11 @@ class CfgLights
 	{
 		diffuse[]={252,161,0,1};
 	};
+	class MET_plasmaOrange_big: MET_plasmaBlue
+	{
+		diffuse[]={252,161,0,1};
+		intensity=30000;
+	};
 };
 class MET_Rocket_effect_orange_fly
 {
@@ -3148,6 +3213,18 @@ class MET_plasma_orange
 	{
 		simulation="light";
 		type="MET_plasmaOrange";
+		position[]={0,0,0};
+		intensity=1;
+		interval=1;
+		lifeTime=6;
+	};
+};
+class MET_plasma_orange_big
+{
+	class MET_Orange_plasma
+	{
+		simulation="light";
+		type="MET_plasmaOrange_big";
 		position[]={0,0,0};
 		intensity=1;
 		interval=1;
@@ -5016,7 +5093,7 @@ class CfgAmmo
 		ace_frag_classes[]={};
 		ace_frag_skip=0;
 		ace_frag_force=0;
-		hit=12000;
+		hit=10000;
 		indirectHit=15;
 		indirectHitRange=1;
 		explosive=1;

@@ -931,14 +931,12 @@ class CfgVehicles
 		Weapons[]=
 		{
 			"MET_BHA_SBB3",
-			"MET_D200",
 			"Put",
 			"Throw"
 		};
 		respawnWeapons[]=
 		{
 			"MET_BHA_SBB3",
-			"MET_D200",
 			"Put",
 			"Throw"
 		};
@@ -952,10 +950,6 @@ class CfgVehicles
 			"MET_SBB3_mag",
 			"MET_SBB3_mag",
 			"MET_SBB3_mag",
-			"MET_D200_Pistol_mag",
-			"MET_D200_Pistol_mag",
-			"MET_D200_Pistol_mag",
-			"MET_D200_Pistol_mag",
 			"BHA_AT_Single",
 			"BHA_AT_Single",
 			"BHA_AA_Single",
@@ -979,10 +973,6 @@ class CfgVehicles
 			"MET_SBB3_mag",
 			"MET_SBB3_mag",
 			"MET_SBB3_mag",
-			"MET_D200_Pistol_mag",
-			"MET_D200_Pistol_mag",
-			"MET_D200_Pistol_mag",
-			"MET_D200_Pistol_mag",
 			"BHA_AT_Single",
 			"BHA_AT_Single",
 			"BHA_AP_SINGLE",

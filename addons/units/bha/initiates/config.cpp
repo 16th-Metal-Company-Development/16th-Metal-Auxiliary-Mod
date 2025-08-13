@@ -62,7 +62,7 @@ class CfgEditorSubcategories
 	};
 	class BHA_Helis
 	{
-		displayName="Helicopters";
+		displayName="Transports";
 	};
 	class BHA_Statics
 	{
