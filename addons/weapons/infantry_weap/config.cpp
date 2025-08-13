@@ -8797,7 +8797,8 @@ class CfgWeapons
 		};
 		modes[]=
 		{
-			"Single"
+			"Single",
+			"FullAuto"
 		};
 		class Single: Mode_SemiAuto
 		{
@@ -8833,6 +8834,40 @@ class CfgWeapons
 			maxRangeProbab=0.1;
 			aiRateOfFire=2;
 			aiRateOfFireDistance=25;
+		};
+		class FullAuto: Mode_FullAuto
+		{
+			sounds[]=
+			{
+				"StandardSound",
+				"SilencedSound"
+			};
+			class BaseSoundModeType;
+			class StandardSound: BaseSoundModeType
+			{
+				soundSetShot[]=
+				{
+					"3AS_DC17_Shot_SoundSet"
+				};
+			};
+			class SilencedSound: BaseSoundModeType
+			{
+				soundSetShot[]=
+				{
+					"3AS_DC15S_Shot_SoundSet"
+				};
+			};
+			reloadTime=0.1333333333333333;
+			recoil="recoil_pistol_light";
+			recoilProne="recoil_prone_pistol_light";
+			dispersion=0.00043000003;
+			minRange=5;
+			minRangeProbab=0.30000001;
+			midRange=25;
+			midRangeProbab=0.60000002;
+			maxRange=50;
+			maxRangeProbab=0.1;
+			aiRateOfFire=2;
 		};
 		inertia=0.30000001;
 		aimTransitionSpeed=1.5;
