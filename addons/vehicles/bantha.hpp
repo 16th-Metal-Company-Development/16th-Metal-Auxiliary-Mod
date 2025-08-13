@@ -9,7 +9,7 @@
 		accuracy=0.25;
 		displayName="*TEST*HAVw A2 Bantha IFV";
 		attenuationEffectType="TankAttenuation";
-		class ACE_SelfActions;
+		//class ACE_SelfActions;
 		soundGetIn[]=
 		{
 			"A3\sounds_f\vehicles\armor\noises\get_in_out",
@@ -1567,17 +1567,17 @@
 			class Revolving
 			{
 				source="revolving";
-				weapon="212th_Bantha_missiles_DAGR";
+				weapon="MET_Bantha_missiles_DAGR";
 			};
 			class muzzle_rot
 			{
 				source="ammorandom";
-				weapon="212th_autocannon_Z20_HBB";
+				weapon="MET_autocannon_Z20_HBB";
 			};
 			class muzzle_hide
 			{
 				source="reload";
-				weapon="212th_autocannon_Z20_HBB";
+				weapon="MET_autocannon_Z20_HBB";
 			};
 			class HideTurret
 			{
@@ -1588,7 +1588,7 @@
 			class recoil_source
 			{
 				source="reload";
-				weapon="212th_autocannon_Z20_HBB";
+				weapon="MET_autocannon_Z20_HBB";
 			};
 			class missile_rot
 			{
@@ -1767,110 +1767,8 @@
 				};
 			};
 		};
-		transportSoldier=13;class TransportMagazines 
-		{
-			class _xx_MET_DC15S_mag {
-				magazine = "MET_DC15S_mag";
-				count = 20;
-			};
-			class _xx_MET_DC15A_mag {
-				magazine = "MET_DC15A_mag";
-				count = 20;
-			};
-			class _xx_MET_DC15L_mag {
-				magazine = "MET_DC15L_mag";
-				count = 5;
-			};
-			class _xx_MET_Valken_mag {
-				magazine = "MET_Valken_mag";
-				count = 10;
-			};
-			class _xx_MET_blaster_battery {
-				magazine = "MET_blaster_battery";
-				count = 2;
-			};
-			class _xx_MET_blaster_battery_green {
-				magazine = "MET_blaster_battery_green";
-				count = 1;
-			};
-			class _xx_SquadShieldMagazine {
-				magazine = "SquadShieldMagazine";
-				count = 3;
-			};
-			class _xx_MET_Weapons_Mags_Thermal_Detonator {
-				magazine = "MET_Weapons_Mags_Thermal_Detonator";
-				count = 10;
-			};	
-		};
-
-		class TransportWeapons
-		{
-			class _xx_ACE_EntrenchingTool {
-				weapon = "ACE_EntrenchingTool";
-				count = 5;
-			};
-			class _xx_WBK_HeadLampItem_Narrow {
-				weapon = "WBK_HeadLampItem_Narrow";
-				count = 10;
-			};
-			class _xx_Aux212_Stun_Cuffs {
-				weapon = "Aux212_Stun_Cuffs";
-				count = 5;
-			};
-			
-
-
-			class _xx_LFP_item_bacta_bandage {
-				weapon = "LFP_item_bacta_bandage";
-				count = 20;
-			};
-			class _xx_kat_suction {
-				weapon = "kat_suction";
-				count = 1;
-			};
-			class _xx_kat_AED {
-				weapon = "kat_AED";
-				count = 1;
-			};
-			class _xx_kat_larynx {
-				weapon = "kat_larynx";
-				count = 5;
-			};
-			class _xx_kat_chestSeal {
-				weapon = "kat_chestSeal";
-				count = 5;
-			};
-			class _xx_ACE_epinephrine {
-				weapon = "ACE_epinephrine";
-				count = 10;
-			};
-			class _xx_ACE_morphine {
-				weapon = "ACE_morphine";
-				count = 10;
-			};
-			class _xx_ACE_splint {
-				weapon = "ACE_splint";
-				count = 5;
-			};
-			class _xx_ACE_tourniquet {
-				weapon = "ACE_tourniquet";
-				count = 5;
-			};
-			class _xx_ACE_plasmaIV {
-				weapon = "ACE_plasmaIV";
-				count = 5;
-			};
-		};
-
-		class TransportItems 
-		{
-
-		};
-
-		class TransportBackpacks
-		{
-
-		};
+		transportSoldier=13;
+		
 		GCommander=1;
 		showNVGGunner=1;
 		showNVGDriver=1;
@@ -2217,7 +2115,7 @@
 			"B_soldier_F"
 		};
 		TFAR_hasIntercom=1;
-		class ACE_SelfActions: ACE_SelfActions
+		/*class ACE_SelfActions: ACE_SelfActions
 		{
 			class TFAR_IntercomChannel
 			{
@@ -2262,7 +2160,8 @@
 					statement="(vehicle ACE_Player) setVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)],4,true];";
 				};
 			};
-		};
+		};*/
+		#include "vics\Bantha\Bantha_Intercoms.hpp"
 	};
 	class MET_Bantha_C_IFV_Base: MET_Bantha_Base
 	{
@@ -2729,6 +2628,7 @@
 			"212th\Vehicles\212th_APC02\Data\Textures\Bantha_Master\Bantha_Wheel_Co.paa",
 			"212th\Vehicles\212th_APC02\Data\Textures\Bantha_C\Bantha_C_IFV\Bantha_C_IFV_Turret_Co.paa"
 		};
+		#include "vics\Bantha\Bantha_StandardInventory.hpp"
 	};
 	class MET_Bantha_C_Unarmed_Base: MET_Bantha_C_IFV_Base
 	{
@@ -2794,6 +2694,7 @@
 			"212th\Vehicles\212th_APC02\Data\Textures\Bantha_C\Bantha_C_IFV\Bantha_C_IFV_Body_Co.paa",
 			"212th\Vehicles\212th_APC02\Data\Textures\Bantha_Master\Bantha_Wheel_Co.paa"
 		};
+		#include "vics\Bantha\Bantha_StandardInventory.hpp"
 	};
 	class MET_Bantha_C_MG_Base: MET_Bantha_C_IFV_Base
 	{
@@ -2987,6 +2888,7 @@
 			"212th\Vehicles\212th_APC02\Data\Textures\Bantha_Master\Bantha_Wheel_Co.paa",
 			"212th\Vehicles\212th_APC02\Data\Textures\Bantha_C\Bantha_C_IFV\Bantha_C_IFV_Turret_Co.paa"
 		};
+		#include "vics\Bantha\Bantha_StandardInventory.hpp"
 	};
 	class MET_Bantha_C_Mortar_Base: MET_Bantha_C_IFV_Base
 	{
@@ -3133,6 +3035,7 @@
 			"212th\Vehicles\212th_APC02\Data\Textures\Bantha_Master\Bantha_Wheel_Co.paa",
 			"212th\Vehicles\212th_APC02\Data\Textures\Bantha_C\Bantha_C_Mortar\Bantha_C_Mortar_Turret_Co.paa"
 		};
+		#include "vics\Bantha\Bantha_MortarInventory.hpp"
 	};
 	class MET_Bantha_C_AA_Base: MET_Bantha_C_IFV_Base
 	{
@@ -3155,7 +3058,8 @@
 				maxElev=90;
 				weapons[]=
 				{
-					"MET_autocannon_Z60_EAA"
+					"MET_autocannon_Z60_EAA",
+					"MET_Bantha_missiles_DAGR"
 				};
 				magazines[]=
 				{
@@ -3169,18 +3073,20 @@
 					"MET_1000Rnd_Z60_HAA",
 					"MET_1000Rnd_Z60_HAA",
 					"MET_1000Rnd_Z60_HAA",
-					"MET_1000Rnd_Z60_HAA"
+					"MET_1000Rnd_Z60_HAA",
+					"MET_Bantha_DAGR_Magazine",
+					"MET_Bantha_DAGR_Magazine"
 				};
 				usePip=1;
 				memoryPointGun[]=
 				{
 					"z_muzzle_R_1",
-					"z_muzzle_R_2",
-					"z_muzzle_R_3",
-					"z_muzzle_R_4",
 					"z_muzzle_L_1",
+					"z_muzzle_R_2",
 					"z_muzzle_L_2",
+					"z_muzzle_R_3",
 					"z_muzzle_L_3",
+					"z_muzzle_R_4",
 					"z_muzzle_L_4"
 				};
 				soundServo[]=
@@ -3280,6 +3186,7 @@
 			"212th\Vehicles\212th_APC02\Data\Textures\Bantha_Master\Bantha_Wheel_Co.paa",
 			"212th\Vehicles\212th_APC02\Data\Textures\Bantha_C\Bantha_C_AA\Bantha_C_AA_Turret_Co.paa"
 		};
+		#include "vics\Bantha\Bantha_StandardInventory.hpp"
 	};
 	class MET_Bantha_C_AT_Base: MET_Bantha_C_IFV_Base
 	{
@@ -3582,7 +3489,7 @@
 		scope=2;
 		scopecurator=2;
 		displayName="HAVw A2 Bantha-E (MSV)";
-		class TransportBackpacks
+		/*class TransportBackpacks
 		{
 			class _xx_JLTS_portable_shield_gar_backpack
 			{
@@ -3594,7 +3501,7 @@
 				backpack="JLTS_UST_turret_GAR_backpack";
 				count=1;
 			};
-		};
+		};*/
 		hiddenselections[]=
 		{
 			"camo1",
@@ -3613,6 +3520,7 @@
 			"212th\Vehicles\212th_APC02\Data\Textures\Bantha_E\Bantha_E_MSV\Bantha_E_MSV_Crates_Co.paa",
 			"212th\Vehicles\212th_APC02\Data\Textures\Bantha_E\Bantha_E_MSV\Bantha_E_MSV_Crates_Co.paa"
 		};
+		#include "vics\Bantha\Bantha_MSVInventory.hpp"
 	};
 	class MET_Bantha_T_Cargo_Base: MET_Bantha_Base
 	{
@@ -3735,6 +3643,7 @@
 		{
 			fired="[_this select 0,_this select 6,'missile_move','MissileBase'] call BIS_fnc_missileLaunchPositionFix; _this call (uinamespace getvariable 'BIS_fnc_effectFired');";
 		};
+		#include "vics\Bantha\Bantha_MSVInventory.hpp"
 	};
 	class MET_Bantha_T_Cargo: MET_Bantha_T_Cargo_Base
 	{
@@ -4108,4 +4017,5 @@
 			"212th\Vehicles\212th_APC02\Data\Textures\Bantha_T\Bantha_T_Assault\Bantha_T_Assault_Turret_Base_Co.paa",
 			"212th\Vehicles\212th_APC02\Data\Textures\Bantha_T\Bantha_T_Assault\Bantha_T_Assault_Turret_Main_Co.paa"
 		};
+		#include "vics\Bantha\Bantha_StandardInventory.hpp"
 	};

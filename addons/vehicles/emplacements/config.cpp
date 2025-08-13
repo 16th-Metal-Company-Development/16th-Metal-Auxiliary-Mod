@@ -2050,7 +2050,7 @@ class CfgWeapons
 		autoReload=1;
 		magazines[]=
 		{
-			"Aux212_Bantha_DAGR_Magazine",
+			"MET_Bantha_missiles_DAGR",
 			"24Rnd_PG_missiles",
 			"12Rnd_PG_missiles",
 			"PylonRack_12Rnd_PG_missiles"
