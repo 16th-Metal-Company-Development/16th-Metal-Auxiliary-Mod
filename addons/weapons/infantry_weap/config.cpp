@@ -3718,7 +3718,7 @@ class CfgWeapons
 		};
 		class Single: Mode_SemiAuto
 		{
-			reloadTime=0.15;
+			reloadTime=0.3;
 			dispersion=0.0001;
 			minRange=1;
 			minRangeProbab=0.1;
@@ -23941,7 +23941,7 @@ class CfgAmmo
 		indirectHitRange=0.5;
 		caliber=1;
 		coefGravity=0;
-		timetolive=8;
+		timetolive=1;
 		waterFriction=-0.0099999998;
 		deflecting=0;
 		airfriction=0;
