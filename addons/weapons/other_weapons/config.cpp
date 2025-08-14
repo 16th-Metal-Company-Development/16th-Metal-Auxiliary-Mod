@@ -5022,6 +5022,7 @@ class CfgAmmo
 	class MET_pellet_orange: MET_slug_orange
 	{
 		hit=18;
+		timetolive=1.5;
 		simulationStep=9.9999997e-005;
 		cartridge="";
 		submunitionAmmo="MET_pellet_subminition_orange";
