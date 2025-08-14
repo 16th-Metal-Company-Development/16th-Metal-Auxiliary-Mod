@@ -3718,7 +3718,7 @@ class CfgWeapons
 		};
 		class Single: Mode_SemiAuto
 		{
-			reloadTime=0.15;
+			reloadTime=0.3;
 			dispersion=0.0001;
 			minRange=1;
 			minRangeProbab=0.1;
