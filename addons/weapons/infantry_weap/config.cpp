@@ -3915,6 +3915,264 @@ class CfgWeapons
 		UiPicture="\A3\weapons_f\data\UI\icon_regular_CA.paa";
 	};
 	/*==============================================================================
+	==DP-12 Mk II
+	==============================================================================*/
+	class MET_DP12_F: MET_DP23_Base_F
+	{
+		author="$STR_3as_Studio";
+		baseWeapon="MET_DP12_F";
+		scope=2;
+		displayName="[16th] DP-12 MkII";
+		model="\3AS\3AS_Weapons\Republic\DP23\3AS_DP23_F.p3d";
+		picture="\3AS\3AS_Weapons\Republic\DP23\Data\UI\3as_dp23.paa";
+		UiPicture="\A3\weapons_f\data\UI\icon_regular_CA.paa";
+		recoil="MET_recoil_CinCar";
+		magazines[]=
+		{
+			"MET_DP12_pellet_mag",
+			"MET_DP12_slug_mag"
+		};
+		magazineWell[]=	
+		{
+			"MET_DP12_MagWell"
+		};
+		modes[]=
+		{
+			"Single",
+			"FullAuto"
+		};
+		class Single: Mode_SemiAuto
+		{
+			reloadTime=0.2;
+			dispersion=0.0001;
+			minRange=1;
+			minRangeProbab=0.1;
+			midRange=10;
+			midRangeProbab=0.80000001;
+			maxRange=50;
+			maxRangeProbab=0.15000001;
+			soundContinuous=0;
+			soundBurst=0;
+			sounds[]=
+			{
+				"StandardSound",
+				"SilencedSound"
+			};
+			class BaseSoundModeType;
+			class StandardSound: BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				begin1[]=
+				{
+					"z\16th\addons\weapons\infantry_weap\sounds\dp12_1.ogg",
+					1,
+					1,
+					1800
+				};
+				begin2[]=
+				{
+					"z\16th\addons\weapons\infantry_weap\sounds\dp12_2.ogg",
+					1,
+					1,
+					1800
+				};
+				begin3[]=
+				{
+					"z\16th\addons\weapons\infantry_weap\sounds\dp12_3.ogg",
+					1,
+					1,
+					1800
+				};
+				begin4[]=
+				{
+					"z\16th\addons\weapons\infantry_weap\sounds\dp12_4.ogg",
+					1,
+					1,
+					1800
+				};
+				begin5[]=
+				{
+					"z\16th\addons\weapons\infantry_weap\sounds\dp12_5.ogg",
+					1,
+					1,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",0.2,
+					"begin2",0.2,
+					"begin3",0.2,
+					"begin4",0.2,
+					"begin5",0.2
+				};
+			};
+			class SilencedSound: BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				begin1[]=
+				{
+					"z\16th\addons\weapons\infantry_weap\sounds\dp12_1.ogg",
+					1,
+					1,
+					1800
+				};
+				begin2[]=
+				{
+					"z\16th\addons\weapons\infantry_weap\sounds\dp12_2.ogg",
+					1,
+					1,
+					1800
+				};
+				begin3[]=
+				{
+					"z\16th\addons\weapons\infantry_weap\sounds\dp12_3.ogg",
+					1,
+					1,
+					1800
+				};
+				begin4[]=
+				{
+					"z\16th\addons\weapons\infantry_weap\sounds\dp12_4.ogg",
+					1,
+					1,
+					1800
+				};
+				begin5[]=
+				{
+					"z\16th\addons\weapons\infantry_weap\sounds\dp12_5.ogg",
+					1,
+					1,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",0.2,
+					"begin2",0.2,
+					"begin3",0.2,
+					"begin4",0.2,
+					"begin5",0.2
+				};
+			};
+			aiRateOfFire=1;
+			aiRateOfFireDistance=20;
+		};
+		class FullAuto: Mode_FullAuto
+		{
+			reloadTime=0.2;
+			dispersion=0.0001;
+			minRange=1;
+			minRangeProbab=0.1;
+			midRange=10;
+			midRangeProbab=0.80000001;
+			maxRange=50;
+			maxRangeProbab=0.15000001;
+			soundContinuous=0;
+			soundBurst=0;
+			sounds[]=
+			{
+				"StandardSound",
+				"SilencedSound"
+			};
+			class BaseSoundModeType;
+			class StandardSound: BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				begin1[]=
+				{
+					"z\16th\addons\weapons\infantry_weap\sounds\dp12_1.ogg",
+					1,
+					1,
+					1800
+				};
+				begin2[]=
+				{
+					"z\16th\addons\weapons\infantry_weap\sounds\dp12_2.ogg",
+					1,
+					1,
+					1800
+				};
+				begin3[]=
+				{
+					"z\16th\addons\weapons\infantry_weap\sounds\dp12_3.ogg",
+					1,
+					1,
+					1800
+				};
+				begin4[]=
+				{
+					"z\16th\addons\weapons\infantry_weap\sounds\dp12_4.ogg",
+					1,
+					1,
+					1800
+				};
+				begin5[]=
+				{
+					"z\16th\addons\weapons\infantry_weap\sounds\dp12_5.ogg",
+					1,
+					1,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",0.2,
+					"begin2",0.2,
+					"begin3",0.2,
+					"begin4",0.2,
+					"begin5",0.2
+				};
+			};
+			class SilencedSound: BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				begin1[]=
+				{
+					"z\16th\addons\weapons\infantry_weap\sounds\dp12_1.ogg",
+					1,
+					1,
+					1800
+				};
+				begin2[]=
+				{
+					"z\16th\addons\weapons\infantry_weap\sounds\dp12_2.ogg",
+					1,
+					1,
+					1800
+				};
+				begin3[]=
+				{
+					"z\16th\addons\weapons\infantry_weap\sounds\dp12_3.ogg",
+					1,
+					1,
+					1800
+				};
+				begin4[]=
+				{
+					"z\16th\addons\weapons\infantry_weap\sounds\dp12_4.ogg",
+					1,
+					1,
+					1800
+				};
+				begin5[]=
+				{
+					"z\16th\addons\weapons\infantry_weap\sounds\dp12_5.ogg",
+					1,
+					1,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",0.2,
+					"begin2",0.2,
+					"begin3",0.2,
+					"begin4",0.2,
+					"begin5",0.2
+				};
+			};
+			aiRateOfFire=1;
+			aiRateOfFireDistance=20;
+		};
+	};
+	/*==============================================================================
 	==DP-23 GL
 	==============================================================================*/
 	class MET_DP23_GL: MET_DP23_Base_F
@@ -4004,23 +4262,19 @@ class CfgWeapons
 		};
 		class Single: Mode_SemiAuto
 		{
+			
 			sounds[]=
 			{
-				"StandardSound"
+				"StandardSound",
+				"SilencedSound"
 			};
-			class BaseSoundModeType
-			{
-				weaponSoundEffect="";
-				closure1[]={};
-				closure2[]={};
-				soundClosure[]={};
-			};
+			class BaseSoundModeType;
 			class StandardSound: BaseSoundModeType
 			{
 				weaponSoundEffect="";
 				begin1[]=
 				{
-					"\MRC\JLTS\weapons\DP23\sounds\dp23_fire.wss",
+					"z\16th\addons\weapons\infantry_weap\sounds\dp23.ogg",
 					1,
 					1,
 					1800
@@ -4031,7 +4285,23 @@ class CfgWeapons
 					1
 				};
 			};
-			reloadTime=0.15;
+			class SilencedSound: BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				begin1[]=
+				{
+					"z\16th\addons\weapons\infantry_weap\sounds\dp23.ogg",
+					1,
+					1,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+			};
+			reloadTime=0.3;
 			dispersion=0.00003000003;
 			minRange=1;
 			minRangeProbab=0.5;
@@ -4049,6 +4319,343 @@ class CfgWeapons
 		JLTS_isShielded=1;
 		JLTS_baseWeapon="MET_JLTS_DP23";
 		JLTS_friedItem="JLTS_DP23_shield_fried";
+		model="\MRC\JLTS\weapons\DP23\DP23_shielded.p3d";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\MRC\JLTS\weapons\DP23\data\DP23_co.paa",
+			"\MRC\JLTS\weapons\Shield\data\shield_co.paa"
+		};
+		handAnim[]=
+		{
+			"OFP2_ManSkeleton",
+			"\MRC\JLTS\weapons\DP23\anims\DP23_shielded_handanim.rtm"
+		};
+		inertia=0.80000001;
+		recoil="recoil_pdw";
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			mass=500;
+			class UnderBarrelSlot: UnderBarrelSlot
+			{
+				compatibleItems[]=
+				{
+					"JLTS_riot_shield_attachment",
+					"JLTS_riot_shield_212_attachment",
+					"JLTS_riot_shield_501_attachment",
+					"JLTS_riot_shield_101_attachment",
+					"JLTS_riot_shield_CG_attachment",
+					"JLTS_riot_shield_GD_attachment",
+					"JLTS_riot_shield_droid_attachment"
+				};
+			};
+		};
+	};
+	/*==============================================================================
+	==DP-12 MkI
+	==============================================================================*/
+	class MET_JLTS_DP12: JLTS_DP23
+	{
+		scope=2;
+		displayName="[16th] DP-12 Scattergun MkI";
+		JLTS_hasElectronics=1;
+		JLTS_hasEMPProtection=1;
+		JLTS_friedItem="JLTS_DP12_fried";
+		JLTS_repairTime=25;
+		JLTS_canHaveShield=1;
+		JLTS_shieldedWeapon="MET_DP12_shield";
+		recoil="MET_recoil_CinCar";
+		magazines[]=
+		{
+			"MET_DP12_pellet_mag",
+			"MET_DP12_slug_mag"
+		};
+		magazineWell[]=	
+		{
+			"MET_DP12_MagWell"
+		};
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			mass=80
+			class CowsSlot: CowsSlot
+			{
+				compatibleItems[]=
+				{
+					"MET_holo_optic",
+					//"3AS_optic_holo_DC15S",
+					"MET_optic_holo_scope",
+					"MET_Optic_Holo_Two_Blue",
+					"MET_Optic_Holo_Two_Red",
+					"MET_Optic_Holo_Two_Yellow",
+					"MET_Optic_Holo_Two_Green",
+					"MET_Optic_Holo_One_Blue",
+					"MET_Optic_Holo_One_Green",
+					"MET_Optic_Holo_One_Red",
+					"MET_Optic_Holo_One_Yellow"
+				};
+			};
+			class MuzzleSlot: MuzzleSlot
+			{
+				compatibleItems[]={};
+			};
+			class PointerSlot: PointerSlot
+			{
+				compatibleItems[]={};
+			};
+			class UnderBarrelSlot: UnderBarrelSlot
+			{
+				linkProxy="\A3\data_f_mark\proxies\weapon_slots\UNDERBARREL";
+				compatibleItems[]={};
+			};
+		};
+		modes[]=
+		{
+			"Single",
+			"FullAuto"
+		};
+		class Single: Mode_SemiAuto
+		{
+			reloadTime=0.2;
+			dispersion=0.0001;
+			minRange=1;
+			minRangeProbab=0.1;
+			midRange=10;
+			midRangeProbab=0.80000001;
+			maxRange=50;
+			maxRangeProbab=0.15000001;
+			soundContinuous=0;
+			soundBurst=0;
+			sounds[]=
+			{
+				"StandardSound",
+				"SilencedSound"
+			};
+			class BaseSoundModeType;
+			class StandardSound: BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				begin1[]=
+				{
+					"z\16th\addons\weapons\infantry_weap\sounds\dp12_1.ogg",
+					1,
+					1,
+					1800
+				};
+				begin2[]=
+				{
+					"z\16th\addons\weapons\infantry_weap\sounds\dp12_2.ogg",
+					1,
+					1,
+					1800
+				};
+				begin3[]=
+				{
+					"z\16th\addons\weapons\infantry_weap\sounds\dp12_3.ogg",
+					1,
+					1,
+					1800
+				};
+				begin4[]=
+				{
+					"z\16th\addons\weapons\infantry_weap\sounds\dp12_4.ogg",
+					1,
+					1,
+					1800
+				};
+				begin5[]=
+				{
+					"z\16th\addons\weapons\infantry_weap\sounds\dp12_5.ogg",
+					1,
+					1,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",0.2,
+					"begin2",0.2,
+					"begin3",0.2,
+					"begin4",0.2,
+					"begin5",0.2
+				};
+			};
+			class SilencedSound: BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				begin1[]=
+				{
+					"z\16th\addons\weapons\infantry_weap\sounds\dp12_1.ogg",
+					1,
+					1,
+					1800
+				};
+				begin2[]=
+				{
+					"z\16th\addons\weapons\infantry_weap\sounds\dp12_2.ogg",
+					1,
+					1,
+					1800
+				};
+				begin3[]=
+				{
+					"z\16th\addons\weapons\infantry_weap\sounds\dp12_3.ogg",
+					1,
+					1,
+					1800
+				};
+				begin4[]=
+				{
+					"z\16th\addons\weapons\infantry_weap\sounds\dp12_4.ogg",
+					1,
+					1,
+					1800
+				};
+				begin5[]=
+				{
+					"z\16th\addons\weapons\infantry_weap\sounds\dp12_5.ogg",
+					1,
+					1,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",0.2,
+					"begin2",0.2,
+					"begin3",0.2,
+					"begin4",0.2,
+					"begin5",0.2
+				};
+			};
+			aiRateOfFire=1;
+			aiRateOfFireDistance=20;
+		};
+		class FullAuto: Mode_FullAuto
+		{
+			reloadTime=0.2;
+			dispersion=0.0001;
+			minRange=1;
+			minRangeProbab=0.1;
+			midRange=10;
+			midRangeProbab=0.80000001;
+			maxRange=50;
+			maxRangeProbab=0.15000001;
+			soundContinuous=0;
+			soundBurst=0;
+			sounds[]=
+			{
+				"StandardSound",
+				"SilencedSound"
+			};
+			class BaseSoundModeType;
+			class StandardSound: BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				begin1[]=
+				{
+					"z\16th\addons\weapons\infantry_weap\sounds\dp12_1.ogg",
+					1,
+					1,
+					1800
+				};
+				begin2[]=
+				{
+					"z\16th\addons\weapons\infantry_weap\sounds\dp12_2.ogg",
+					1,
+					1,
+					1800
+				};
+				begin3[]=
+				{
+					"z\16th\addons\weapons\infantry_weap\sounds\dp12_3.ogg",
+					1,
+					1,
+					1800
+				};
+				begin4[]=
+				{
+					"z\16th\addons\weapons\infantry_weap\sounds\dp12_4.ogg",
+					1,
+					1,
+					1800
+				};
+				begin5[]=
+				{
+					"z\16th\addons\weapons\infantry_weap\sounds\dp12_5.ogg",
+					1,
+					1,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",0.2,
+					"begin2",0.2,
+					"begin3",0.2,
+					"begin4",0.2,
+					"begin5",0.2
+				};
+			};
+			class SilencedSound: BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				begin1[]=
+				{
+					"z\16th\addons\weapons\infantry_weap\sounds\dp12_1.ogg",
+					1,
+					1,
+					1800
+				};
+				begin2[]=
+				{
+					"z\16th\addons\weapons\infantry_weap\sounds\dp12_2.ogg",
+					1,
+					1,
+					1800
+				};
+				begin3[]=
+				{
+					"z\16th\addons\weapons\infantry_weap\sounds\dp12_3.ogg",
+					1,
+					1,
+					1800
+				};
+				begin4[]=
+				{
+					"z\16th\addons\weapons\infantry_weap\sounds\dp12_4.ogg",
+					1,
+					1,
+					1800
+				};
+				begin5[]=
+				{
+					"z\16th\addons\weapons\infantry_weap\sounds\dp12_5.ogg",
+					1,
+					1,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",0.2,
+					"begin2",0.2,
+					"begin3",0.2,
+					"begin4",0.2,
+					"begin5",0.2
+				};
+			};
+			aiRateOfFire=1;
+			aiRateOfFireDistance=20;
+		};
+	};
+	class MET_DP12_shield: MET_JLTS_DP12
+	{
+		displayName="[16th] DP-12 (Shield) MkI";
+		baseWeapon="MET_DP12_shield";
+		scope=1;
+		JLTS_isShielded=1;
+		JLTS_baseWeapon="MET_JLTS_DP12";
+		JLTS_friedItem="JLTS_DP12_shield_fried";
 		model="\MRC\JLTS\weapons\DP23\DP23_shielded.p3d";
 		hiddenSelections[]=
 		{
@@ -9597,6 +10204,14 @@ class CfgMagazineWells
 			"MET_slug_mag"
 		};
 	};
+	class MET_DP12_MagWell
+	{
+		MET_DP12Magazines[]=
+		{
+			"MET_DP12_pellet_mag",
+			"MET_DP12_slug_mag"
+		};
+	};
 	class MET_DC17SA_MagWell
 	{
 		MET_DC17SA_Mags[] =
@@ -10119,6 +10734,36 @@ class CfgMagazines
 		initSpeed=380;
 		count=10;
 		mass=15;
+		tracerEvery=1;
+		lastRoundsTracer=8;
+	};
+	class MET_DP12_slug_mag: CA_Magazine
+	{
+		author="Hazmat";
+		scope=2;
+		displayName="[16th] DP-12 Energy Cell (Slugs)";
+		displayNameShort="DP-12 Slugs";
+		descriptionShort="Slugs for the DP-12";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_shotgun_b.paa";
+		ammo="MET_DP12_slug_blue";
+		initSpeed=450;
+		count=32;
+		mass=20;
+		tracerEvery=1;
+		lastRoundsTracer=8;
+	};
+	class MET_DP12_pellet_mag: CA_Magazine
+	{
+		author="Hazmat";
+		scope=2;
+		displayName="[16th] DP-12 Energy Cell (Pellets)";
+		displayNameShort="DP-12 Pellets";
+		descriptionShort="Pellets for the DP-12";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_pellets_b.paa";
+		ammo="MET_DP12_pellet_blue";
+		initSpeed=380;
+		count=32;
+		mass=20;
 		tracerEvery=1;
 		lastRoundsTracer=8;
 	};
@@ -23290,11 +23935,11 @@ class CfgAmmo
 		ACE_damageType="bullet";
 		cartridge="";
 		lightcolor[]={0,0.30000001,1};
-		hit=20;
+		hit=90;
 		indirectHit=0;
 		explosive=0;
 		indirectHitRange=0.5;
-		caliber=0.5;
+		caliber=1;
 		coefGravity=0;
 		timetolive=8;
 		waterFriction=-0.0099999998;
@@ -24767,14 +25412,14 @@ class CfgAmmo
 	};
 	class MET_pellet_blue: MET_slug_blue
 	{
-		hit=9;
+		hit=45;
 		simulationStep=9.9999997e-005;
 		cartridge="";
 		submunitionAmmo="MET_pellet_subminition_blue";
 		submunitionConeType[]=
 		{
 			"poissondisc",
-			12
+			15
 		};
 		submunitionConeAngle=0.4;
 		triggerSpeedCoef[]={0.85000002,1};
@@ -24783,6 +25428,36 @@ class CfgAmmo
 	};
 	class MET_pellet_subminition_blue: MET_slug_blue
 	{
+		hit=45;
+		deflecting=2;
+	};
+	class MET_dp12_slug_blue: MET_slug_blue
+	{
+		hit=45;
+		indirectHit=0;
+		explosive=0;
+		indirectHitRange=0.5;
+		caliber=0.8;
+	};
+	class MET_dp12_pellet_blue: MET_dp12_slug_blue
+	{
+		hit=15;
+		simulationStep=9.9999997e-005;
+		cartridge="";
+		submunitionAmmo="MET_dp12_pellet_subminition_blue";
+		submunitionConeType[]=
+		{
+			"poissondisc",
+			20
+		};
+		submunitionConeAngle=0.5;
+		triggerSpeedCoef[]={0.85000002,1};
+		triggerTime=0.001;
+		cost=1;
+	};
+	class MET_dp12_pellet_subminition_blue: MET_dp12_slug_blue
+	{
+		hit=15;
 		deflecting=2;
 	};
 	/*========================================================================================================================================

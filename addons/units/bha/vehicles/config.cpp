@@ -196,6 +196,40 @@ class CfgAmmo
 		effectFly="MET_plasma_orange";
 	};
 	class B_40mm_AP;
+	class MET_B_OrangePlasma_40_APC: B_40mm_GPR
+	{
+		hit=850;
+		indirectHit=0;
+		indirectHitRange=0;
+		explosive=0;
+		caliber=9;
+		typicalSpeed=1000;
+		coefGravity=0;
+		/*hit=20;
+		indirectHit=0;
+		explosive=0;
+		indirectHitRange=0.5;
+		caliber=1.4;*/
+		bulletFly[]=
+		{
+			"bulletFly1",
+			1
+		};
+		bulletFly1[]=
+		{
+			"",
+			1.58489,
+			1,
+			30
+		};
+		timeToLive=10;
+		tracerScale=3;
+		tracerStartTime=0;
+		tracerEndTime=10;
+		deflecting=0;
+		model="3AS\3as_Weapons\Data\tracer_yellow";
+		effectFly="MET_plasma_orange";
+	};
 	class MET_B_OrangePlasma_40_AP: B_40mm_AP
 	{
 		hit=850;
@@ -205,11 +239,6 @@ class CfgAmmo
 		caliber=9;
 		typicalSpeed=1000;
 		coefGravity=0;
-		/*hit=20;
-		indirectHit=0;
-		explosive=0;
-		indirectHitRange=0.5;
-		caliber=1.4;*/
 		bulletFly[]=
 		{
 			"bulletFly1",
@@ -453,7 +482,7 @@ class CfgMagazines
 		displayName="Bantha Z36 Heavy Blaster Bolt";
 		displayNameShort="Z36 H.B.C";
 		picture="";
-		ammo="MET_B_OrangePlasma_127_HBC";
+		ammo="MET_B_OrangePlasma_127_GPR";
 		mass=8;
 		count=500;
 		tracersEvery=1;
@@ -498,7 +527,7 @@ class CfgMagazines
 		displayName="Bantha Z38 Heavy Blaster Bolt AP";
 		displayNameShort="Z38 H.B.C";
 		picture="";
-		ammo="MET_B_OrangePlasma_40_AP";
+		ammo="MET_B_OrangePlasma_40_APC";
 		mass=8;
 		count=500;
 		tracersEvery=1;
@@ -1232,6 +1261,7 @@ class CfgWeapons
 				effectName="AutoCannonFired";
 			};
 		};
+		//modes[] = { "HE", "AP" };
 		class HE: MET_autocannon_Base_F
 		{
 			displayName="Z36 H.B.C HE";
@@ -1921,7 +1951,8 @@ class CfgWeapons
 		};
 		magazines[]=
 		{
-			"MET_500Rnd_Z38_HBC"
+			"MET_500Rnd_Z38_HBC",
+			"MET_500Rnd_Z38_HBC_AP"
 		};
 	};
 	/*class BHA_autocannon_40mm_AP: autocannon_40mm_CTWS
