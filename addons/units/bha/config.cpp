@@ -15,6 +15,15 @@ class CfgFactionClasses
 		side=2;
 	};
 };
+class CfgEditorCategories
+{
+	class BHA_Assets
+	{
+		displayName = "Barysaw Holdings Authority";
+		priority=1;
+		side=2;
+	};
+};
 class CfgEditorSubcategories
 {
 	class BHA_Apostles
@@ -49,6 +58,10 @@ class CfgEditorSubcategories
 	{
 		displayName="Tanks";
 	};
+	class BHA_Artillery
+	{
+		displayName="Artillery";
+	};
 	class BHA_130Rnd_338_Mag
 	{
 		displayName="IFVs";
@@ -61,9 +74,13 @@ class CfgEditorSubcategories
 	{
 		displayName="Helicopters";
 	};
+	class BHA_Planes
+	{
+		displayName="Planes";
+	};
 	class BHA_Statics
 	{
-		displayName="Static";
+		displayName="Turrets";
 	};
 	class BHA_Trucks
 	{

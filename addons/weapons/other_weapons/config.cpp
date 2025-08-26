@@ -3007,6 +3007,30 @@ class CfgMagazines
 		mass=80;
 		initSpeed=100;
 	};
+	class BHA_AA_OCT: 3AS_JLTS_MK39_AA
+	{
+		scope=2;
+		scopeArsenal=0;
+		displayName="HH-12 Octuple AA Rocket";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_rocket_at.paa";
+		ammo="bha_aa_missile_van";
+		displayNameShort="Mk39 AA";
+		count=8;
+		mass=90;
+		initSpeed=100;
+	};
+	class BHA_AA_DEC: 3AS_JLTS_MK39_AA
+	{
+		scope=2;
+		scopeArsenal=0;
+		displayName="HH-12 Decagoonal AA Rocket";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_rocket_at.paa";
+		ammo="bha_aa_missile_van";
+		displayNameShort="Mk39 AA";
+		count=12;
+		mass=90;
+		initSpeed=100;
+	};
 	class BHA_AP_SINGLE: 3AS_JLTS_MK39_AA
 	{
 		scope=2;
@@ -3043,6 +3067,18 @@ class CfgMagazines
 		mass=80;
 		initSpeed=100;
 	};
+	class BHA_AP_DEC: 3AS_JLTS_MK39_AA
+	{
+		scope=2;
+		scopeArsenal=0;
+		displayName="HH-12 Decagoonal AP Rocket";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_rocket_he.paa";
+		ammo="bha_ap_missile";
+		displayNameShort="Mk44 AP";
+		count=12;
+		mass=90;
+		initSpeed=100;
+	};
 	class BHA_AT_SINGLE: 3AS_JLTS_MK39_AA
 	{
 		scope=2;
@@ -3076,6 +3112,18 @@ class CfgMagazines
 		ammo="bha_at_wire_missile";
 		displayNameShort="Mk43 AT";
 		count=8;
+		mass=90;
+		initSpeed=100;
+	};
+	class BHA_AT_DEC: 3AS_JLTS_MK39_AA
+	{
+		scope=2;
+		scopeArsenal=0;
+		displayName="HH-12 Decagoonal AT Rocket";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_rocket_at.paa";
+		ammo="bha_at_wire_missile";
+		displayNameShort="Mk43 AT";
+		count=12;
 		mass=90;
 		initSpeed=100;
 	};
@@ -3153,6 +3201,16 @@ class CfgLights
 	{
 		diffuse[]={252,161,0,1};
 	};
+	class MET_plasmaOrange_medium: MET_plasmaBlue
+	{
+		diffuse[]={252,161,0,1};
+		intensity=10000;
+	};
+	class MET_plasmaOrange_large: MET_plasmaBlue
+	{
+		diffuse[]={252,161,0,1};
+		intensity=10000;
+	};
 	class MET_plasmaOrange_big: MET_plasmaBlue
 	{
 		diffuse[]={252,161,0,1};
@@ -3219,6 +3277,30 @@ class MET_plasma_orange
 		lifeTime=6;
 	};
 };
+class MET_plasma_medium_orange
+{
+	class MET_Orange_plasma
+	{
+		simulation="light";
+		type="MET_plasmaOrange_Medium";
+		position[]={0,0,0};
+		intensity=1;
+		interval=1;
+		lifeTime=60;
+	};
+};
+class MET_plasma_large_orange
+{
+	class MET_Orange_plasma
+	{
+		simulation="light";
+		type="MET_plasmaOrange_Large";
+		position[]={0,0,0};
+		intensity=1;
+		interval=1;
+		lifeTime=60;
+	};
+};
 class MET_plasma_orange_big
 {
 	class MET_Orange_plasma
@@ -3228,7 +3310,7 @@ class MET_plasma_orange_big
 		position[]={0,0,0};
 		intensity=1;
 		interval=1;
-		lifeTime=6;
+		lifeTime=60;
 	};
 };
 class CfgAmmo
@@ -3397,6 +3479,7 @@ class CfgAmmo
 		tracerstarttime=0;
 		tracerendtime=10;
 		nvgonly=0;
+		timetolive=8;
 		effectfly="met_plasma_orange";
 		hit=200;
 		indirecthit=25;
