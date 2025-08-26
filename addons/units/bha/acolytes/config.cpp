@@ -140,6 +140,7 @@ class CfgVehicles
 			"ItemCompass",
 			"ItemRadio",
 			"ItemWatch",
+			"G_Bandanna_blk",
 			"MET_MDF_Helmet_Black",
 			"MET_MDF_Heavy_Black"
 		};
@@ -150,12 +151,18 @@ class CfgVehicles
 			"ItemCompass",
 			"ItemRadio",
 			"ItemWatch",
+			"G_Bandanna_blk",
 			"MET_MDF_Helmet_Black",
 			"MET_MDF_Heavy_Black"
 		};
+		class Attributes
+		{
+			// VCOM compatibility: set skill to max via VCOM attributes if present
+			VCOM_AISkill = 0.8;
+		};
 		class EventHandlers
 		{
-			init = "_unit = _this select 0; if (local _unit) then { {_unit setSkill [_x, 0.8]; } forEach ['aimingAccuracy','aimingShake','aimingSpeed','commanding','courage','general','reloadSpeed','spotDistance','spotTime']; };";
+			init = "_unit = _this select 0; if (local _unit) then { {_unit setSkill [_x, 0.8]; } forEach ['aimingAccuracy','aimingShake','aimingSpeed','commanding','courage','general','reloadSpeed','spotDistance','spotTime']; if !(isNil 'VCOM_AI_SetSkill') then { [_unit, 0.8] call VCOM_AI_SetSkill; }; };";
 		};
 	};
 	class BHA_HonorGuard_Base: I_Soldier_base_F
@@ -280,6 +287,7 @@ class CfgVehicles
 			"ItemCompass",
 			"ItemRadio",
 			"ItemWatch",
+			"G_Bandanna_blk",
 			"MET_MDF_Helmet_PHOBOS",
 			"MET_MDF_Heavy_PHOBOS"
 		};
@@ -290,12 +298,18 @@ class CfgVehicles
 			"ItemCompass",
 			"ItemRadio",
 			"ItemWatch",
+			"G_Bandanna_blk",
 			"MET_MDF_Helmet_PHOBOS",
 			"MET_MDF_Heavy_PHOBOS"
 		};
+		class Attributes
+		{
+			// VCOM compatibility: set skill to max via VCOM attributes if present
+			VCOM_AISkill = 1;
+		};
 		class EventHandlers
 		{
-			init = "_unit = _this select 0; if (local _unit) then { {_unit setSkill [_x, 1]; } forEach ['aimingAccuracy','aimingShake','aimingSpeed','commanding','courage','general','reloadSpeed','spotDistance','spotTime']; };";
+			init = "_unit = _this select 0; if (local _unit) then { {_unit setSkill [_x, 1]; } forEach ['aimingAccuracy','aimingShake','aimingSpeed','commanding','courage','general','reloadSpeed','spotDistance','spotTime']; if !(isNil 'VCOM_AI_SetSkill') then { [_unit, 1] call VCOM_AI_SetSkill; }; };";
 		};
 	};
 	class BHA_Acolytes_Acolyte: BHA_Acolytes_Base
@@ -851,7 +865,7 @@ class CfgVehicles
 		displayName="Honor Guard Immortal";
 		scope=2;
 		scopeCurator=2;
-		icon="iconManLeader";
+		//icon="iconManLeader";
 		backpack="MET_MDFBackpack_SSD_MG";
 		//editorPreview="\HDC_Units_mod\data\Editor Previews\BHA\Apostles\BHA_Apostles_Apostle.jpg";
 		Weapons[]=

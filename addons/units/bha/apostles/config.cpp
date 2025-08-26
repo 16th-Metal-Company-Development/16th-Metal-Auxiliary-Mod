@@ -154,6 +154,7 @@ class CfgVehicles
 			"ItemCompass",
 			"ItemRadio",
 			"ACE_Altimeter",
+			"G_Bandanna_blk",
 			"MET_Helmet_SEN_SL_Black",
 			"MET_Vest_SEN_Heavy_Black"
 		};
@@ -164,14 +165,18 @@ class CfgVehicles
 			"ItemCompass",
 			"ItemRadio",
 			"ACE_Altimeter",
-			"BHA_HelmetHBK_chops_F",
-			"AGE_WAS_Heavy_AK_HolsterV2_MultiCam",
-			"VSM_Balaclava2_black_Goggles",
-			"NVGogglesB_blk_F"
+			"G_Bandanna_blk",
+			"MET_Helmet_SEN_SL_Black",
+			"MET_Vest_SEN_Heavy_Black"
+		};
+		class Attributes
+		{
+			// VCOM compatibility: set skill to max via VCOM attributes if present
+			VCOM_AISkill = 0.95;
 		};
 		class EventHandlers
 		{
-			init = "_unit = _this select 0; if (local _unit) then { {_unit setSkill [_x, 0.95]; } forEach ['aimingAccuracy','aimingShake','aimingSpeed','commanding','courage','general','reloadSpeed','spotDistance','spotTime']; };";
+			init = "_unit = _this select 0; if (local _unit) then { {_unit setSkill [_x, 0.95]; } forEach ['aimingAccuracy','aimingShake','aimingSpeed','commanding','courage','general','reloadSpeed','spotDistance','spotTime']; if !(isNil 'VCOM_AI_SetSkill') then { [_unit, 0.95] call VCOM_AI_SetSkill; }; };";
 		};
 	};
 	class BHA_Apostles_Apostle: BHA_Apostles_Base

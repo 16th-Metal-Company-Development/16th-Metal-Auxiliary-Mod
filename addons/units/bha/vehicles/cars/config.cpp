@@ -11,7 +11,11 @@ class CfgPatches
 			"BHA_Ferret_AA",
 			"BHA_Ferret_AUTOGUN",
 			"BHA_SaurusAPC_SE",
-			"BHA_Mantis"
+			"BHA_Mantis",
+			"BHA_HAGM",
+			"BHA_Firebrand_F",
+			"BHA_Avalanche_F",
+			"BHA_Firebrand_Rocket"
 		};
 		weapons[]={};
 	};
@@ -899,6 +903,980 @@ class CfgVehicles
 			{
 				source="revolving";
 				weapon="BHA_Rockets_Mantis";
+			};
+		};
+	};
+	class 3AS_HAGM_Tan
+	{
+		class Turrets
+		{
+			class MainTurret;
+		};
+	};
+	class BHA_HAGM: 3AS_HAGM_Tan
+	{
+		author="$STR_3AS_Studio";
+		crew="BHA_warbot";
+		side=2;
+		faction="BHA_Units";
+		editorSubcategory="BHA_Tanks";
+		displayname="HAG-M Artillery Tank (BHA)";
+		hiddenselectionstextures[]=
+		{
+			"z\16th\addons\units\bha\vehicles\cars\data\cisarty_black_co.paa"
+		};
+		class Turrets: Turrets
+		{
+			class MainTurret: MainTurret
+			{
+				weapons[]=
+				{
+					"BHA_HAGM_300mm_AMOS"
+				};
+				magazines[]=
+				{
+					"BHA_30Rnd_300mm_Mo_shells",
+					"BHA_30Rnd_300mm_Mo_shells",
+					"BHA_4Rnd_300mm_Mo_guided",
+					"BHA_4Rnd_300mm_Mo_guided",
+					"BHA_4Rnd_300mm_Mo_guided",
+					"BHA_5Rnd_300mm_Mo_Cluster",
+					"BHA_5Rnd_300mm_Mo_Cluster",
+					"BHA_5Rnd_300mm_Mo_Cluster"
+				};
+			};
+		};
+	};
+	class SFA_hovertank_base
+	{
+		class Turrets
+		{
+			class MainTurret
+			{
+				class Turrets
+				{
+					class CommanderOptics;
+					class ViewOptics;
+				};
+			}
+		};
+	};
+	class BHA_Firebrand_F: SFA_hovertank_base
+	{
+		author="Starforge Armory Team";
+		scope=2;
+		scopeCurator=2;
+		_generalMacro="BHA_Firebrand_F";
+		displayName="Stormcaller Heavy Tank";
+		crew="BHA_warbot";
+		side=2;
+		faction="BHA_Units";
+		editorSubcategory="BHA_Tanks";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+			"camo3"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"z\16th\addons\units\bha\vehicles\cars\data\Firebrand_Cannons_black_co.paa",
+			"z\16th\addons\units\bha\vehicles\cars\data\Firebrand_Hull_black_co.paa",
+			"z\16th\addons\units\bha\vehicles\cars\data\Firebrand_Turret_black_co.paa"
+		};
+		typicalCargo[]=
+		{
+			"BHA_warbot"
+		};
+		class Turrets: Turrets
+		{
+			class MainTurret: MainTurret
+			{
+				class Turrets: Turrets
+				{
+					class CommanderOptics: CommanderOptics
+					{
+						body="Obsturret";
+						gun="Obsgun";
+						proxyIndex=1;
+						viewGunnerInExternal=0;
+						proxytype="CPCommander";
+						gunnername="Commander";
+						animationSourceBody="Obsturret";
+						animationSourceGun="Obsgun";
+						minOutElev=-25;
+						maxOutElev=45;
+						initOutElev=0;
+						minOutTurn=-90;
+						maxOutTurn=90;
+						initOutTurn=0;
+						maxHorizontalRotSpeed=1.8;
+						maxVerticalRotSpeed=1.8;
+						stabilizedInAxes=3;
+						soundServo[]=
+						{
+							"A3\Sounds_F\vehicles\armor\noises\servo_best",
+							"db-40",
+							1,
+							50
+						};
+						minElev=-10;
+						maxElev=20;
+						initElev=0;
+						minTurn=-15;
+						maxTurn=15;
+						initTurn=0;
+						gunnerAction="";
+						gunnerInAction="mbt2_slot2b_in";
+						forceHideGunner=0;
+						outGunnerMayFire=1;
+						inGunnerMayFire=1;
+						gunnerRightHandAnimName="konec hlavne3";
+						gunnerLeftHandAnimName="konec hlavne3";
+						soundAttenuationTurret="HeliAttenuationGunner";
+						isPersonTurret=1;
+						personTurretAction="vehicle_turnout_1";
+						memoryPointGun[]=
+						{
+							"z_gunL_muzzle",
+							"z_gunR_muzzle"
+						};
+						weapons[]=
+						{
+							"SmokeLauncher"
+						};
+						magazines[]=
+						{
+							"SmokeLauncherMag"
+						};
+						turretInfoType="RscWeaponRangeZeroing";
+						discreteDistance[]={100,200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500};
+						discreteDistanceInitIndex=2;
+						memoryPointGunnerOptics="CommanderView";
+						memoryPointGunnerOutOptics="commanderview";
+						gunnerOpticsModel="\A3\weapons_f\reticle\Optics_Commander_02_F";
+						gunnerOutOpticsModel="";
+						gunnerOpticsEffect[]={};
+						gunnerHasFlares=1;
+						turretFollowFreeLook=1;
+						commanding=1;
+						class ViewOptics: ViewOptics
+						{
+							initAngleX=0;
+							minAngleX=-15;
+							maxAngleX=15;
+							initAngleY=0;
+							minAngleY=-10;
+							maxAngleY=60;
+							initFov=0.155;
+							minFov=0.034000002;
+							maxFov=0.155;
+							visionMode[]=
+							{
+								"Normal",
+								"NVG",
+								"Ti"
+							};
+							thermalMode[]={4,5};
+						};
+						gunnerGetInAction="GetInHigh";
+						gunnerGetOutAction="GetOutHigh";
+						startEngine=0;
+						LODTurnedOut="VIEW_GUNNER";
+						LODTurnedIn="VIEW_GUNNER";
+						class HitPoints
+						{
+							class HitTurret
+							{
+								armor=0.60000002;
+								material=-1;
+								name="Commander_Turret";
+								visual="commander_turret";
+								passThrough=0;
+								minimalHit=0.029999999;
+								explosionShielding=0.60000002;
+								radius=0.15000001;
+							};
+							class HitGun
+							{
+								armor=0.60000002;
+								material=-1;
+								name="Commander_Gun";
+								visual="Commander_Gun";
+								passThrough=0;
+								minimalHit=0.029999999;
+								explosionShielding=0.60000002;
+								radius=0.15000001;
+							};
+						};
+						selectionFireAnim="ZaslehCommander";
+					};
+				};
+				startEngine=0;
+				memoryPointGun[]=
+				{
+					"z_gunL_muzzle",
+					"z_gunR_muzzle"
+				};
+				gunBeg="usti hlavne";
+				gunEnd="konec hlavne";
+				weapons[]=
+				{
+					"BHA_Heavy_Cannon",
+					"BHA_weapon_Cannon_low",
+					"SmokeLauncher"
+				};
+				magazines[]=
+				{
+					"BHA_MassDriver_AP_x25",
+					"BHA_MassDriver_AP_x25",
+					"BHA_MassDriver_AP_x25",
+					"BHA_MassDriver_AP_x25",
+					"BHA_MassDriver_HE_x25",
+					"BHA_MassDriver_HE_x25",
+					"BHA_MassDriver_HE_x25",
+					"BHA_MassDriver_HE_x25",
+					"BHA_100Rnd_autocannon_70mm_AA_mag",
+					"BHA_100Rnd_autocannon_70mm_AA_mag",
+					"BHA_100Rnd_autocannon_70mm_AA_mag",
+					"BHA_100Rnd_autocannon_70mm_AA_mag",
+					"BHA_100Rnd_autocannon_70mm_AA_mag",
+					"BHA_100Rnd_autocannon_70mm_AA_mag",
+					"SmokeLauncherMag"
+				};
+				turretInfoType="RscWeaponRangeZeroing";
+				discreteDistance[]={100,200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500};
+				animationSourceBody="Mainturret";
+				animationSourceGun="MainGun";
+				body="Mainturret";
+				gun="MainGun";
+				discreteDistanceInitIndex=5;
+				memoryPointGunnerOptics="gunnerview";
+				gunnerOutOpticsModel="gunnerview";
+				gunnerOutOpticsEffect[]={};
+				gunnerOpticsEffect[]={};
+				gunnerForceOptics=1;
+				visionMode[]=
+				{
+					"Normal"
+				};
+				thermalMode[]={};
+				class OpticsIn
+				{
+					class Wide
+					{
+						initAngleX=0;
+						minAngleX=-30;
+						maxAngleX=30;
+						initAngleY=0;
+						minAngleY=-100;
+						maxAngleY=100;
+						initFov=0.155;
+						minFov=0.155;
+						maxFov=0.155;
+						visionMode[]=
+						{
+							"Normal",
+							"NVG",
+							"Ti"
+						};
+						thermalMode[]={0,1};
+						gunnerOpticsModel="\A3\weapons_f\reticle\Optics_Commander_02_F";
+						gunnerOpticsEffect[]={};
+					};
+					class Narrow: Wide
+					{
+						gunnerOpticsModel="\A3\weapons_f\reticle\Optics_Commander_02_F";
+						initFov=0.046999998;
+						minFov=0.046999998;
+						maxFov=0.046999998;
+					};
+				};
+				gunnerAction="mbt2_slot2b_in";
+				forceHideGunner=1;
+				outGunnerMayFire=1;
+				gunnerInAction="mbt2_slot2b_in";
+				gunnerRightHandAnimName="";
+				gunnerLeftHandAnimName="";
+				gunnerFireAlsoInInternalCamera=1;
+				gunnerOutFireAlsoInInternalCamera=1;
+				proxyIndex=1;
+				viewGunnerInExternal=0;
+				gunnerName="Gunner";
+				proxytype="CPGunner";
+				isPersonTurret=0;
+				personTurretAction="vehicle_turnout_1";
+				minOutElev=-10;
+				maxOutElev=25;
+				initOutElev=0;
+				minOutTurn=-90;
+				maxOutTurn=90;
+				initOutTurn=0;
+				soundServo[]=
+				{
+					"A3\Sounds_F\vehicles\armor\noises\servo_best",
+					"db-40",
+					1,
+					50
+				};
+				minElev=-9;
+				maxElev=45;
+				initElev=0;
+				inGunnerMayFire=1;
+				class HitPoints
+				{
+					class HitTurret
+					{
+						armor=0.80000001;
+						material=-1;
+						name="otocvez";
+						visual="vez";
+						passThrough=0;
+						minimalHit=0.02;
+						explosionShielding=1;
+						radius=0.15000001;
+					};
+					class HitGun
+					{
+						armor=0.75;
+						material=-1;
+						name="otocvez";
+						visual="";
+						passThrough=0;
+						minimalHit=0;
+						explosionShielding=1;
+						radius=0.15000001;
+					};
+				};
+			};
+		};
+		class TextureSources
+		{
+			class Yellow
+			{
+				displayName="Republic Yellow";
+				author="Starforge Armory Team";
+				textures[]=
+				{
+					"\SFA_Main\SFA_Vehicles_R\data\Firebrand\Firebrand_Cannons_co.paa",
+					"\SFA_Main\SFA_Vehicles_R\data\Firebrand\Firebrand_Hull_co.paa",
+					"\SFA_Main\SFA_Vehicles_R\data\Firebrand\Firebrand_Turret_co.paa"
+				};
+				factions[]=
+				{
+					"SFA_Republic"
+				};
+			};
+			class Red
+			{
+				displayName=" Republic Red";
+				author="Starforge Armory Team";
+				textures[]=
+				{
+					"\SFA_Main\SFA_Vehicles_R\data\Firebrand\Firebrand_Cannons_red_co.paa",
+					"\SFA_Main\SFA_Vehicles_R\data\Firebrand\Firebrand_Hull_red_co.paa",
+					"\SFA_Main\SFA_Vehicles_R\data\Firebrand\Firebrand_Turret_red_co.paa"
+				};
+				factions[]=
+				{
+					"SFA_Republic"
+				};
+			};
+		};
+	};
+	class BHA_Avalanche_F: BHA_Firebrand_F
+	{
+		author="Starforge Armory Team";
+		scope=2;
+		scopeCurator=2;
+		_generalMacro="BHA_Avalanche_F";
+		displayName="Avalanche Medium Tank";
+		model="\SFA_Main\SFA_Vehicles_R\Avalanche.p3d";
+		class Turrets: Turrets
+		{
+			class MainTurret: MainTurret
+			{
+				class Turrets: Turrets
+				{
+					class CommanderOptics: CommanderOptics
+					{
+						body="Obsturret";
+						gun="Obsgun";
+						proxyIndex=1;
+						viewGunnerInExternal=0;
+						proxytype="CPCommander";
+						gunnername="Commander";
+						animationSourceBody="Obsturret";
+						animationSourceGun="Obsgun";
+						minOutElev=-25;
+						maxOutElev=45;
+						initOutElev=0;
+						minOutTurn=-90;
+						maxOutTurn=90;
+						initOutTurn=0;
+						maxHorizontalRotSpeed=1.8;
+						maxVerticalRotSpeed=1.8;
+						stabilizedInAxes=3;
+						soundServo[]=
+						{
+							"A3\Sounds_F\vehicles\armor\noises\servo_best",
+							"db-40",
+							1,
+							50
+						};
+						minElev=-10;
+						maxElev=20;
+						initElev=0;
+						minTurn=-15;
+						maxTurn=15;
+						initTurn=0;
+						gunnerAction="";
+						gunnerInAction="mbt2_slot2b_in";
+						forceHideGunner=0;
+						outGunnerMayFire=1;
+						inGunnerMayFire=1;
+						gunnerRightHandAnimName="konec hlavne3";
+						gunnerLeftHandAnimName="konec hlavne3";
+						soundAttenuationTurret="HeliAttenuationGunner";
+						isPersonTurret=1;
+						personTurretAction="vehicle_turnout_1";
+						memoryPointGun[]=
+						{
+							"z_gunL_muzzle",
+							"z_gunR_muzzle"
+						};
+						weapons[]=
+						{
+							"SmokeLauncher"
+						};
+						magazines[]=
+						{
+							"SmokeLauncherMag"
+						};
+						turretInfoType="RscWeaponRangeZeroing";
+						discreteDistance[]={100,200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500};
+						discreteDistanceInitIndex=2;
+						memoryPointGunnerOptics="CommanderView";
+						memoryPointGunnerOutOptics="commanderview";
+						gunnerOpticsModel="\A3\weapons_f\reticle\Optics_Commander_02_F";
+						gunnerOutOpticsModel="";
+						gunnerOpticsEffect[]={};
+						gunnerHasFlares=1;
+						turretFollowFreeLook=1;
+						commanding=1;
+						class ViewOptics: ViewOptics
+						{
+							initAngleX=0;
+							minAngleX=-15;
+							maxAngleX=15;
+							initAngleY=0;
+							minAngleY=-10;
+							maxAngleY=60;
+							initFov=0.155;
+							minFov=0.034000002;
+							maxFov=0.155;
+							visionMode[]=
+							{
+								"Normal",
+								"NVG",
+								"Ti"
+							};
+							thermalMode[]={4,5};
+						};
+						gunnerGetInAction="GetInHigh";
+						gunnerGetOutAction="GetOutHigh";
+						startEngine=0;
+						LODTurnedOut="VIEW_GUNNER";
+						LODTurnedIn="VIEW_GUNNER";
+						class HitPoints
+						{
+							class HitTurret
+							{
+								armor=0.60000002;
+								material=-1;
+								name="Commander_Turret";
+								visual="commander_turret";
+								passThrough=0;
+								minimalHit=0.029999999;
+								explosionShielding=0.60000002;
+								radius=0.15000001;
+							};
+							class HitGun
+							{
+								armor=0.60000002;
+								material=-1;
+								name="Commander_Gun";
+								visual="Commander_Gun";
+								passThrough=0;
+								minimalHit=0.029999999;
+								explosionShielding=0.60000002;
+								radius=0.15000001;
+							};
+						};
+						selectionFireAnim="ZaslehCommander";
+					};
+				};
+				startEngine=0;
+				memoryPointGun[]=
+				{
+					"z_gunL_muzzle",
+					"z_gunR_muzzle"
+				};
+				gunBeg="usti hlavne";
+				gunEnd="konec hlavne";
+				weapons[]=
+				{
+					"BHA_Heavy_Cannon",
+					"SmokeLauncher"
+				};
+				magazines[]=
+				{
+					"BHA_MassDriver_AP_x25",
+					"BHA_MassDriver_AP_x25",
+					"BHA_MassDriver_AP_x25",
+					"BHA_MassDriver_AP_x25",
+					"BHA_MassDriver_HE_x25",
+					"BHA_MassDriver_HE_x25",
+					"BHA_MassDriver_HE_x25",
+					"BHA_MassDriver_HE_x25",
+					"SmokeLauncherMag"
+				};
+				turretInfoType="RscWeaponRangeZeroing";
+				discreteDistance[]={100,200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500};
+				animationSourceBody="Mainturret";
+				animationSourceGun="MainGun";
+				body="Mainturret";
+				gun="MainGun";
+				discreteDistanceInitIndex=5;
+				memoryPointGunnerOptics="gunnerview";
+				gunnerOutOpticsModel="gunnerview";
+				gunnerOutOpticsEffect[]={};
+				gunnerOpticsEffect[]={};
+				gunnerForceOptics=1;
+				visionMode[]=
+				{
+					"Normal"
+				};
+				thermalMode[]={};
+				class OpticsIn
+				{
+					class Wide
+					{
+						initAngleX=0;
+						minAngleX=-30;
+						maxAngleX=30;
+						initAngleY=0;
+						minAngleY=-100;
+						maxAngleY=100;
+						initFov=0.155;
+						minFov=0.155;
+						maxFov=0.155;
+						visionMode[]=
+						{
+							"Normal",
+							"NVG",
+							"Ti"
+						};
+						thermalMode[]={0,1};
+						gunnerOpticsModel="\A3\weapons_f\reticle\Optics_Commander_02_F";
+						gunnerOpticsEffect[]={};
+					};
+					class Narrow: Wide
+					{
+						gunnerOpticsModel="\A3\weapons_f\reticle\Optics_Commander_02_F";
+						initFov=0.046999998;
+						minFov=0.046999998;
+						maxFov=0.046999998;
+					};
+				};
+				gunnerAction="mbt2_slot2b_in";
+				forceHideGunner=1;
+				outGunnerMayFire=1;
+				gunnerInAction="mbt2_slot2b_in";
+				gunnerRightHandAnimName="";
+				gunnerLeftHandAnimName="";
+				gunnerFireAlsoInInternalCamera=1;
+				gunnerOutFireAlsoInInternalCamera=1;
+				proxyIndex=1;
+				viewGunnerInExternal=0;
+				gunnerName="Gunner";
+				proxytype="CPGunner";
+				isPersonTurret=0;
+				personTurretAction="vehicle_turnout_1";
+				minOutElev=-10;
+				maxOutElev=15;
+				initOutElev=0;
+				minOutTurn=-90;
+				maxOutTurn=90;
+				initOutTurn=0;
+				soundServo[]=
+				{
+					"A3\Sounds_F\vehicles\armor\noises\servo_best",
+					"db-40",
+					1,
+					50
+				};
+				minElev=-9;
+				maxElev=20;
+				initElev=0;
+				inGunnerMayFire=1;
+				class HitPoints
+				{
+					class HitTurret
+					{
+						armor=0.80000001;
+						material=-1;
+						name="otocvez";
+						visual="vez";
+						passThrough=0;
+						minimalHit=0.02;
+						explosionShielding=1;
+						radius=0.15000001;
+					};
+					class HitGun
+					{
+						armor=0.75;
+						material=-1;
+						name="otocvez";
+						visual="";
+						passThrough=0;
+						minimalHit=0;
+						explosionShielding=1;
+						radius=0.15000001;
+					};
+				};
+			};
+		};
+		class TextureSources
+		{
+			class Yellow
+			{
+				displayName="Republic Yellow";
+				author="Starforge Armory Team";
+				textures[]=
+				{
+					"\SFA_Main\SFA_Vehicles_R\data\Firebrand\Firebrand_Cannons_co.paa",
+					"\SFA_Main\SFA_Vehicles_R\data\Firebrand\Firebrand_Hull_co.paa",
+					"\SFA_Main\SFA_Vehicles_R\data\Firebrand\Firebrand_Turret_co.paa"
+				};
+				factions[]=
+				{
+					"SFA_Republic"
+				};
+			};
+			class Red
+			{
+				displayName=" Republic Red";
+				author="Starforge Armory Team";
+				textures[]=
+				{
+					"\SFA_Main\SFA_Vehicles_R\data\Firebrand\Firebrand_Cannons_red_co.paa",
+					"\SFA_Main\SFA_Vehicles_R\data\Firebrand\Firebrand_Hull_red_co.paa",
+					"\SFA_Main\SFA_Vehicles_R\data\Firebrand\Firebrand_Turret_red_co.paa"
+				};
+				factions[]=
+				{
+					"SFA_Republic"
+				};
+			};
+		};
+	};
+	class SFA_hovertank_R_base
+	{
+		class Turrets
+		{
+			class MainTurret
+			{
+				class Turrets
+				{
+					class CommanderOptics;
+					class ViewOptics;
+				};
+			}
+		};
+	};
+	class BHA_Firebrand_Rocket: SFA_hovertank_R_base
+	{
+		author="Starforge Armory Team";
+		scope=2;
+		scopeCurator=2;
+		_generalMacro="BHA_Firebrand_Rocket";
+		displayName="Firebrand Rocket Tank";
+		crew="BHA_warbot";
+		side=2;
+		faction="BHA_Units";
+		editorSubcategory="BHA_Tanks";
+		typicalCargo[]=
+		{
+			"BHA_warbot"
+		};
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+			"camo3"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"z\16th\addons\units\bha\vehicles\cars\data\rocket_pods_black_co.paa",
+			"z\16th\addons\units\bha\vehicles\cars\data\Firebrand_Hull_black_co.paa",
+			"z\16th\addons\units\bha\vehicles\cars\data\Firebrand_Turret_black_co.paa"
+		};
+		class Turrets: Turrets
+		{
+			class MainTurret: MainTurret
+			{
+				class Turrets: Turrets
+				{
+					class CommanderOptics: CommanderOptics
+					{
+						body="Obsturret";
+						gun="Obsgun";
+						proxyIndex=1;
+						viewGunnerInExternal=0;
+						proxytype="CPCommander";
+						gunnername="Commander";
+						animationSourceBody="Obsturret";
+						animationSourceGun="Obsgun";
+						minOutElev=-25;
+						maxOutElev=45;
+						initOutElev=0;
+						minOutTurn=-90;
+						maxOutTurn=90;
+						initOutTurn=0;
+						maxHorizontalRotSpeed=1.8;
+						maxVerticalRotSpeed=1.8;
+						stabilizedInAxes=3;
+						soundServo[]=
+						{
+							"A3\Sounds_F\vehicles\armor\noises\servo_best",
+							"db-40",
+							1,
+							50
+						};
+						minElev=-10;
+						maxElev=20;
+						initElev=0;
+						minTurn=-15;
+						maxTurn=15;
+						initTurn=0;
+						gunnerAction="";
+						gunnerInAction="mbt2_slot2b_in";
+						forceHideGunner=0;
+						outGunnerMayFire=1;
+						inGunnerMayFire=1;
+						gunnerRightHandAnimName="konec hlavne3";
+						gunnerLeftHandAnimName="konec hlavne3";
+						soundAttenuationTurret="HeliAttenuationGunner";
+						isPersonTurret=1;
+						personTurretAction="vehicle_turnout_1";
+						memoryPointGun[]=
+						{
+							"z_gunL_muzzle",
+							"z_gunR_muzzle"
+						};
+						weapons[]=
+						{
+							"SmokeLauncher"
+						};
+						magazines[]=
+						{
+							"SmokeLauncherMag"
+						};
+						turretInfoType="RscWeaponRangeZeroing";
+						discreteDistance[]={100,200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500};
+						discreteDistanceInitIndex=2;
+						memoryPointGunnerOptics="CommanderView";
+						memoryPointGunnerOutOptics="commanderview";
+						gunnerOpticsModel="\A3\weapons_f\reticle\Optics_Commander_02_F";
+						gunnerOutOpticsModel="";
+						gunnerOpticsEffect[]={};
+						gunnerHasFlares=1;
+						turretFollowFreeLook=1;
+						commanding=1;
+						class ViewOptics: ViewOptics
+						{
+							initAngleX=0;
+							minAngleX=-15;
+							maxAngleX=15;
+							initAngleY=0;
+							minAngleY=-10;
+							maxAngleY=60;
+							initFov=0.155;
+							minFov=0.034000002;
+							maxFov=0.155;
+							visionMode[]=
+							{
+								"Normal",
+								"NVG",
+								"Ti"
+							};
+							thermalMode[]={2,3,4};
+						};
+						gunnerGetInAction="GetInHigh";
+						gunnerGetOutAction="GetOutHigh";
+						startEngine=0;
+						LODTurnedOut="VIEW_GUNNER";
+						LODTurnedIn="VIEW_GUNNER";
+						class HitPoints
+						{
+							class HitTurret
+							{
+								armor=0.60000002;
+								material=-1;
+								name="Commander_Turret";
+								visual="commander_turret";
+								passThrough=0;
+								minimalHit=0.029999999;
+								explosionShielding=0.60000002;
+								radius=0.15000001;
+							};
+							class HitGun
+							{
+								armor=0.60000002;
+								material=-1;
+								name="Commander_Gun";
+								visual="Commander_Gun";
+								passThrough=0;
+								minimalHit=0.029999999;
+								explosionShielding=0.60000002;
+								radius=0.15000001;
+							};
+						};
+						selectionFireAnim="ZaslehCommander";
+					};
+				};
+				startEngine=0;
+				memoryPointGun[]=
+				{
+					"z_gunL_muzzle",
+					"z_gunR_muzzle"
+				};
+				gunBeg="usti hlavne";
+				gunEnd="konec hlavne";
+				weapons[]=
+				{
+					"BHA_Rockets_Firebrand",
+					"SmokeLauncher"
+				};
+				magazines[]=
+				{
+					"BHA_AT_DEC",
+					"BHA_AP_DEC",
+					"BHA_AP_DEC",
+					"BHA_AP_DEC",
+					"BHA_AP_DEC",
+					"BHA_AA_DEC",
+					"BHA_AA_DEC",
+					"BHA_AA_DEC",
+					"SmokeLauncherMag"
+				};
+				turretInfoType="RscWeaponRangeZeroing";
+				discreteDistance[]={100,200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500};
+				animationSourceBody="Mainturret";
+				animationSourceGun="MainGun";
+				body="Mainturret";
+				gun="MainGun";
+				missileBeg="spice rakety";
+				missileEnd="konec rakety";
+				discreteDistanceInitIndex=5;
+				memoryPointGunnerOptics="gunnerview";
+				gunnerOutOpticsModel="gunnerview";
+				gunnerOutOpticsEffect[]={};
+				gunnerOpticsEffect[]={};
+				gunnerForceOptics=1;
+				visionMode[]=
+				{
+					"Normal"
+				};
+				thermalMode[]={};
+				class OpticsIn
+				{
+					class Wide
+					{
+						initAngleX=0;
+						minAngleX=-30;
+						maxAngleX=30;
+						initAngleY=0;
+						minAngleY=-100;
+						maxAngleY=100;
+						initFov=0.155;
+						minFov=0.155;
+						maxFov=0.155;
+						visionMode[]=
+						{
+							"Normal",
+							"NVG",
+							"Ti"
+						};
+						thermalMode[]={0,1};
+						gunnerOpticsModel="\A3\weapons_f\reticle\Optics_Commander_02_F";
+						gunnerOpticsEffect[]={};
+					};
+					class Narrow: Wide
+					{
+						gunnerOpticsModel="\A3\weapons_f\reticle\Optics_Commander_02_F";
+						initFov=0.046999998;
+						minFov=0.046999998;
+						maxFov=0.046999998;
+					};
+				};
+				gunnerAction="mbt2_slot2b_in";
+				forceHideGunner=1;
+				outGunnerMayFire=1;
+				gunnerInAction="mbt2_slot2b_in";
+				gunnerRightHandAnimName="";
+				gunnerLeftHandAnimName="";
+				gunnerFireAlsoInInternalCamera=1;
+				gunnerOutFireAlsoInInternalCamera=1;
+				proxyIndex=1;
+				viewGunnerInExternal=0;
+				gunnerName="Gunner";
+				proxytype="CPGunner";
+				isPersonTurret=0;
+				personTurretAction="vehicle_turnout_1";
+				minOutElev=-10;
+				maxOutElev=15;
+				initOutElev=0;
+				minOutTurn=-90;
+				maxOutTurn=90;
+				initOutTurn=0;
+				soundServo[]=
+				{
+					"A3\Sounds_F\vehicles\armor\noises\servo_best",
+					"db-40",
+					1,
+					50
+				};
+				minElev=-9;
+				maxElev=20;
+				initElev=0;
+				inGunnerMayFire=1;
+				class HitPoints
+				{
+					class HitTurret
+					{
+						armor=0.80000001;
+						material=-1;
+						name="otocvez";
+						visual="vez";
+						passThrough=0;
+						minimalHit=0.02;
+						explosionShielding=1;
+						radius=0.15000001;
+					};
+					class HitGun
+					{
+						armor=0.75;
+						material=-1;
+						name="otocvez";
+						visual="";
+						passThrough=0;
+						minimalHit=0;
+						explosionShielding=1;
+						radius=0.15000001;
+					};
+				};
 			};
 		};
 	};

@@ -1217,7 +1217,7 @@ class CfgWeapons
 		scope=2;
 		displayName="[16th] DC-15A GL MkII";
 		model="\3AS\3AS_Weapons\Republic\DC15A\3AS_DC15A_GL.p3d";
-		picture="\3AS\3AS_Weapons\Republic\DC15A\Data\UI\3as_dc15a.paa";
+		picture="\3AS\3AS_Weapons\Republic\DC15A\Data\UI\3as_dc15agl.paa";
 		UiPicture="\A3\weapons_f\data\UI\icon_regular_CA.paa";
 		handAnim[]=
 		{
@@ -1935,7 +1935,7 @@ class CfgWeapons
 		scope=2;
 		displayName="[16th] DC-15S GL";
 		model="\3AS\3AS_Weapons\Republic\DC15S\3AS_DC15S_GL.p3d";
-		picture="\3AS\3AS_Weapons\Republic\DC15S\Data\UI\3as_dc15s.paa";
+		picture="\3AS\3AS_Weapons\Republic\DC15S\Data\UI\3as_dc15sgl.paa";
 		UiPicture="\A3\weapons_f\data\UI\icon_regular_CA.paa";
 		handAnim[]=
 		{
@@ -2292,7 +2292,7 @@ class CfgWeapons
 		scope=2;
 		displayName="[16th] DC-15C GL";
 		model="\3AS\3AS_Weapons\Republic\DC15C\3AS_DC15C_GL.p3d";
-		picture="\3AS\3AS_Weapons\Republic\DC15C\Data\UI\3as_dc15c.paa";
+		picture="\3AS\3AS_Weapons\Republic\DC15C\Data\UI\3as_dc15cgl.paa";
 		UiPicture="\A3\weapons_f\data\UI\icon_regular_CA.paa";
 		muzzles[]=
 		{
@@ -4182,7 +4182,7 @@ class CfgWeapons
 		scope=2;
 		displayName="[16th] DP-23 MkII GL";
 		model="\3AS\3AS_Weapons\Republic\DP23\3AS_DP23_GL.p3d";
-		picture="\3AS\3AS_Weapons\Republic\DP23\Data\UI\3as_dp23.paa";
+		picture="\3AS\3AS_Weapons\Republic\DP23\Data\UI\3as_dp23gl.paa";
 		UiPicture="\A3\weapons_f\data\UI\icon_regular_CA.paa";
 		handAnim[]=
 		{
