@@ -2974,7 +2974,7 @@ class CfgMagazines
 	{
 		scope=2;
 		scopeArsenal=0;
-		author="16th AUX Team";
+		author="16th Aux Team";
 		picture="\3AS\3AS_Weapons\Data\UI\3as_sniper_o.paa";
 		modelSpecialIsProxy=0;
 		count=15;

@@ -322,7 +322,8 @@ class CfgAmmo
 		typicalspeed=40;
 		explosionTime=10;
 		timeToLive=20;
-		model="ls_weapons\explosives\detPack\ls_explosives_detpack";
+		model="3AS\3AS_Equipment\model\RTX_Bomb.p3d";
+		//model="3AS\3AS_Equipment\model\annihilatorbomb.p3d";
 		simulation="shotGrenade";
 		soundFly[]=
 		{
@@ -367,6 +368,34 @@ class CfgAmmo
 				activeLight=0;
 				useFlare=0;
 			};
+		};
+		class LightEffects
+		{
+			class StrobeLight
+			{
+				color[] = {1, 0, 0, 1}; // Red
+				ambient[] = {1, 0, 0, 1};
+				intensity = 50;
+				size = 0.3;
+				brightness = 0.05;
+				blinking = 1;
+				blinkingPattern[] = {0.7, 0.3}; // Slow strobe: 0.7s off, 0.3s on
+				blinkingPatternGuarantee = 1;
+				onlyInNvg = 0;
+				useFlare = 0;
+			};
+			class StrobeLightFast: StrobeLight
+			{
+				blinkingPattern[] = {0.2, 0.1}; // Fast strobe: 0.2s off, 0.1s on
+			};
+		};
+		class EventHandlersLight
+		{ 
+			init = "_this spawn { params ['_ammo']; private _ttl = getNumber (configFile >> 'CfgAmmo' >> typeOf _ammo >> 'timeToLive'); waitUntil { !isNull (_ammo getVariable ['projectile', objNull]) }; private _proj = _ammo getVariable ['projectile', objNull]; _proj setVariable ['strobeState', 'slow', true]; _proj setLightEffect ['StrobeLight']; sleep (_ttl - 2); _proj setVariable ['strobeState', 'fast', true]; _proj setLightEffect ['StrobeLightFast']; };";
+		};
+		class EventHandlers
+		{
+			init = "_this spawn { params ['_ammo']; waitUntil { !isNull (_ammo getVariable ['projectile', objNull]) }; _proj = _ammo getVariable ['projectile', objNull]; _proj addEventHandler ['HitPart', { params ['_projectile', '_hitPart', '_damage', '_instigator', '_hitPoint', '_hitEntity']; if (_hitEntity isKindOf 'LandVehicle' || _hitEntity isKindOf 'Air' || _hitEntity isKindOf 'Ship') then { _projectile attachTo [_hitEntity, [0,0,0]]; }; }]; };";
 		};
 	};
 	/*class MET_Weapons_Ammo_Grenades_CISDetonator: MET_Weapons_Ammo_Grenades_Detonator

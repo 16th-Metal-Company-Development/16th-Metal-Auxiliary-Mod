@@ -213,9 +213,30 @@ class CfgVehicles
 			VCOM_AISkill = 1;
 		};
 
-		class EventHandlers
+		/*class EventHandlers
 		{
 			init = "_unit = _this select 0; if (local _unit) then { {_unit setSkill [_x, 1]; } forEach ['aimingAccuracy','aimingShake','aimingSpeed','commanding','courage','general','reloadSpeed','spotDistance','spotTime']; if !(isNil 'VCOM_AI_SetSkill') then { [_unit, 1] call VCOM_AI_SetSkill; }; };";
+		};*/
+		/*class EventHandlers
+		{
+			init = "_unit = _this select 0; if (local _unit) then { _unit spawn { sleep 15; {_this setSkill [_x, 1]; } forEach ['aimingAccuracy','aimingShake','aimingSpeed','commanding','courage','general','reloadSpeed','spotDistance','spotTime']; if !(isNil 'VCOM_AI_SetSkill') then { [_this, 1] call VCOM_AI_SetSkill; }; }; };";
+		};*/
+		class CustomSkillScript
+		{
+			init = "_unit = _this select 0; if (local _unit) then { \
+				_unit spawn { \
+					sleep 15; \
+					_unit setSkill ['aimingAccuracy', 1]; \
+					_unit setSkill ['aimingShake', 1]; \
+					_unit setSkill ['aimingSpeed', 1]; \
+					_unit setSkill ['commanding', 1]; \
+					_unit setSkill ['courage', 1]; \
+					_unit setSkill ['general', 1]; \
+					_unit setSkill ['reloadSpeed', 1]; \
+					_unit setSkill ['spotDistance', 1]; \
+					_unit setSkill ['spotTime', 1]; \
+				}; \
+			};";
 		};
 	};
 	class BHA_Initiate_Soldier_Base: I_Soldier_base_F

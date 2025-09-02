@@ -461,8 +461,8 @@ class CfgWeapons
 				};
 				opticsFlare=0;
 				opticsDisablePeripherialVision=0;
-				opticsZoomMin=0.25;
-				opticsZoomMax=1.25;
+				opticsZoomMin=0.25;// Roughly 4x
+				opticsZoomMax=1.25;//Roughly 2x
 				opticsZoomInit=0.75;
 				memoryPointCamera="eye";
 				visionMode[]={};
@@ -1323,7 +1323,7 @@ class CfgWeapons
 					1
 				};
 			};
-			reloadTime=0.096000001;
+			reloadTime=0.075;
 			recoil="recoil_single_mx";
 			recoilProne="recoil_single_prone_mx";
 			dispersion=0.00086999999;
@@ -1363,7 +1363,7 @@ class CfgWeapons
 					1
 				};
 			};
-			reloadTime=0.096000001;
+			reloadTime=0.075;
 			dispersion=0.00086999999;
 			recoil="recoil_auto_mx";
 			recoilProne="recoil_auto_prone_mx";
@@ -5076,12 +5076,480 @@ class CfgWeapons
 		ace_overheating_dispersion=0.75;
 	};
 	/*==============================================================================
+	==Westar M-5 Block II
+	==============================================================================*/
+	class MET_WestarM5_blockii_Base_F: Rifle_Base_F
+	{
+		author="$STR_3as_Studio";
+		magazines[]=
+		{
+			"MET_DC15A_mag"
+		};
+		magazineWell[]=
+		{
+			"MET_WestarM5_MagWell"
+		};
+		reloadAction="GestureReloadMX";
+		magazineReloadSwitchPhase=0.40000001;
+		discreteDistanceInitIndex=0;
+		recoil="MET_recoil_Z6";
+		maxRecoilSway=0.0125;
+		swayDecaySpeed=1.25;
+		inertia=0.5;
+		dexterity=1.5;
+		initSpeed=-1;
+		maxZeroing=100;
+		class GunParticles: GunParticles
+		{
+			class SecondEffect
+			{
+				positionName="Nabojnicestart";
+				directionName="Nabojniceend";
+				effectName="CaselessAmmoCloud";
+			};
+		};
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			class CowsSlot: CowsSlot
+			{
+				linkProxy="\A3\data_f\proxies\weapon_slots\TOP";
+				compatibleItems[]=
+				{
+					"MET_Optic_Scope_WestarM5"
+				};
+			};
+			class PointerSlot: PointerSlot
+			{
+				linkProxy="\A3\data_f\proxies\weapon_slots\SIDE";
+				compatibleItems[]=
+				{
+					"acc_flashlight",
+					"acc_pointer_IR"
+				};
+			};
+			class UnderBarrelSlot: UnderBarrelSlot
+			{
+				linkProxy="\A3\data_f_mark\proxies\weapon_slots\UNDERBARREL";
+				compatibleItems[]={};
+			};
+		};
+		opticsZoomMin=0.25;
+		opticsZoomMax=1.25;
+		opticsZoomInit=0.75;
+		distanceZoomMin=400;
+		distanceZoomMax=400;
+		descriptionShort="Westar-M5, 3rd Army Studios";
+		handAnim[]=
+		{
+			"OFP2_ManSkeleton",
+			"\3AS\3AS_Weapons\WestarM5\Data\Anim\WestarM5_handanim.rtm"
+		};
+		selectionFireAnim="zasleh";
+		fireLightDiffuse[]={7,36,190,1};
+		fireLightIntensity=0.02;
+		flash="gunfire";
+		flashSize=0.1;
+		modes[]=
+		{
+			"Single",
+			"Burst",
+			"FullAuto",
+			"FullerAuto"
+		};
+		class Single: Mode_SemiAuto
+		{
+			reloadTime=0.0666666667;
+			dispersion=0.00000000001;
+			minRange=2;
+			minRangeProbab=0.5;
+			midRange=200;
+			midRangeProbab=0.69999999;
+			maxRange=400;
+			maxRangeProbab=0.30000001;
+			soundContinuous=0;
+			soundBurst=0;
+			sounds[]=
+			{
+				"StandardSound",
+				"SilencedSound"
+			};
+			class BaseSoundModeType;
+			class StandardSound: BaseSoundModeType
+			{
+				soundSetShot[]=
+				{
+					"3AS_Westar_Shot_SoundSet"
+				};
+			};
+			class SilencedSound: BaseSoundModeType
+			{
+				soundSetShot[]=
+				{
+					"3AS_Plasma_Shot_SoundSet"
+				};
+			};
+		};
+		class Burst: Mode_Burst
+		{
+			textureType="dual";
+			burst=2;
+			reloadTime=0.03;
+			dispersion=0.00059000002;
+			minRange=0;
+			minRangeProbab=0.89999998;
+			midRange=50;
+			midRangeProbab=0.69999999;
+			maxRange=100;
+			maxRangeProbab=0.1;
+			soundContinuous=0;
+			soundBurst=0;
+			sounds[]=
+			{
+				"StandardSound",
+				"SilencedSound"
+			};
+			class BaseSoundModeType;
+			class StandardSound: BaseSoundModeType
+			{
+				soundSetShot[]=
+				{
+					"3AS_Westar_Shot_SoundSet"
+				};
+			};
+			class SilencedSound: BaseSoundModeType
+			{
+				soundSetShot[]=
+				{
+					""
+				};
+			};
+		};
+		class FullAuto: Mode_FullAuto
+		{
+			reloadTime=0.1;
+			dispersion=0.00059000002;
+			minRange=0;
+			minRangeProbab=0.89999998;
+			midRange=15;
+			midRangeProbab=0.69999999;
+			maxRange=30;
+			maxRangeProbab=0.1;
+			aiRateOfFire=1e-006;
+			sounds[]=
+			{
+				"StandardSound",
+				"SilencedSound"
+			};
+			class BaseSoundModeType;
+			class StandardSound: BaseSoundModeType
+			{
+				soundSetShot[]=
+				{
+					"3AS_Westar_Shot_SoundSet"
+				};
+			};
+			class SilencedSound: BaseSoundModeType
+			{
+				soundSetShot[]=
+				{
+					"3AS_Plasma_Shot_SoundSet"
+				};
+			};
+		};
+		class fullerAuto: FullAuto
+		{
+			reloadTime=0.05;
+			dispersion=0.006;
+			textureType="fastAuto";
+			minRangeProbab=0;
+			midRangeProbab=0;
+			maxRangeProbab=0;
+		};
+		class Burst_medium: Burst
+		{
+			showToPlayer=0;
+			minRange=2;
+			minRangeProbab=0.5;
+			midRange=75;
+			midRangeProbab=0.69999999;
+			maxRange=100;
+			maxRangeProbab=0.050000001;
+			aiRateOfFire=2;
+		};
+		class single_medium_optics1: Single
+		{
+			requiredOpticType=1;
+			showToPlayer=0;
+			minRange=5;
+			minRangeProbab=0.2;
+			midRange=300;
+			midRangeProbab=0.69999999;
+			maxRange=450;
+			maxRangeProbab=0.30000001;
+			aiRateOfFire=5;
+			aiRateOfFireDistance=500;
+		};
+		class single_medium_optics2: single_medium_optics1
+		{
+			requiredOpticType=2;
+			minRange=100;
+			minRangeProbab=0.1;
+			midRange=400;
+			midRangeProbab=0.69999999;
+			maxRange=600;
+			maxRangeProbab=0.050000001;
+			aiRateOfFire=6;
+			aiRateOfFireDistance=600;
+		};
+		class MET_WestarM5_GL_F: UGL_F
+		{
+			displayName="[3AS] WestarM5-GL";
+			descriptionShort="GL for the WestarM5 Platform";
+			useModelOptics=0;
+			useExternalOptic=0;
+			magazines[]=
+			{
+				"MET_3Rnd_HE_Grenade_shell",
+				"MET_3Rnd_AT_Grenade_shell",
+				"MET_6Rnd_HE_Grenade_shell",
+				"MET_6Rnd_Clust_Grenade_shell",
+				"MET_12Rnd_Grape_Grenade",
+				"MET_6Rnd_AT_Grenade_shell",
+				"MET_6Rnd_HE_RocketGrenade",
+				"MET_HE_Grenade",
+				"MET_AT_Grenade",
+				"1Rnd_HE_Grenade_shell",
+				"UGL_FlareWhite_F",
+				"UGL_FlareGreen_F",
+				"UGL_FlareRed_F",
+				"UGL_FlareYellow_F",
+				"UGL_FlareCIR_F",
+				"1Rnd_Smoke_Grenade_shell",
+				"1Rnd_SmokeRed_Grenade_shell",
+				"1Rnd_SmokeGreen_Grenade_shell",
+				"1Rnd_SmokeYellow_Grenade_shell",
+				"1Rnd_SmokePurple_Grenade_shell",
+				"1Rnd_SmokeBlue_Grenade_shell",
+				"1Rnd_SmokeOrange_Grenade_shell",
+				"3Rnd_HE_Grenade_shell",
+				"3Rnd_UGL_FlareWhite_F",
+				"3Rnd_UGL_FlareGreen_F",
+				"3Rnd_UGL_FlareRed_F",
+				"3Rnd_UGL_FlareYellow_F",
+				"3Rnd_UGL_FlareCIR_F",
+				"3Rnd_Smoke_Grenade_shell",
+				"3Rnd_SmokeRed_Grenade_shell",
+				"3Rnd_SmokeGreen_Grenade_shell",
+				"3Rnd_SmokeYellow_Grenade_shell",
+				"3Rnd_SmokePurple_Grenade_shell",
+				"3Rnd_SmokeBlue_Grenade_shell",
+				"3Rnd_SmokeOrange_Grenade_shell"
+			};
+			magazineWell[]=
+			{
+				"UGL_40x36",
+				"3UGL_40x36",
+				"MET_GL_MagWell",
+				"MET_3GL_MagWell"
+			};
+			cameraDir="OP_look";
+			discreteDistance[]={50,75,100,150,200,250,300,350,400};
+			discreteDistanceCameraPoint[]=
+			{
+				"OP_eye_50",
+				"OP_eye_75",
+				"OP_eye_100",
+				"OP_eye_150",
+				"OP_eye_200",
+				"OP_eye_250",
+				"OP_eye_300",
+				"OP_eye_350",
+				"OP_eye_400"
+			};
+			discreteDistanceInitIndex=1;
+			reloadAction="GestureReloadMXUGL";
+			reloadMagazineSound[]=
+			{
+				"A3\Sounds_F\arsenal\weapons\Rifles\MX\Mx_UGL_reload",
+				1,
+				1,
+				10
+			};
+		};
+		aiDispersionCoefY=6;
+		aiDispersionCoefX=4;
+		caseless[]=
+		{
+			"",
+			1,
+			1,
+			1
+		};
+		soundBullet[]=
+		{
+			"caseless",
+			1
+		};
+		drySound[]=
+		{
+			"\3AS\3AS_Main\Sounds\Blaster_empty",
+			2,
+			1,
+			20
+		};
+		reloadMagazineSound[]=
+		{
+			"\3AS\3AS_Main\Sounds\Old\Blaster_reload.wss",
+			1,
+			1,
+			30
+		};
+	};
+	class MET_WestarM5_blockii_F: MET_WestarM5_blockii_Base_F
+	{
+		scope=2;
+		displayName="[16th] Westar-M5 Block II";
+		model="3AS\3AS_Weapons\WestarM5\3AS_Westar_M5_F.p3d";
+		picture="\3AS\3AS_Weapons\WestarM5\Data\UI\3as_westar.paa";
+		weaponInfoType="RscWeaponZeroing";
+		modelOptics="z\16th\addons\weapons\scopes\big_cross_blue_full.p3d";
+		class OpticsModes
+		{
+			class Ironsights
+			{
+				opticsID=1;
+				useModelOptics=0;
+				opticsFlare="true";
+				opticsPPEffects[]=
+				{
+					"OpticsCHAbera5",
+					"OpticsBlur5"
+				};
+				opticsDisablePeripherialVision=0.67000002;
+				opticsZoomMin=0.375;
+				opticsZoomMax=1.1;
+				opticsZoomInit=0.75;
+				memoryPointCamera="eye";
+				visionMode[]={};
+				distanceZoomMin=100;
+				distanceZoomMax=100;
+			};
+			class Scope: Ironsights
+			{
+				opticsID=2;
+				useModelOptics=1;
+				opticsPPEffects[]=
+				{
+					"OpticsCHAbera5",
+					"OpticsBlur5"
+				};
+				visionMode[]=
+				{
+					"Normal",
+					"NVG",
+					"TI"
+				};
+				thermalMode[]={0,1};
+				opticsZoomMin=0.050000001;
+				opticsZoomMax=0.107;
+				opticsZoomInit=0.107;
+				memoryPointCamera="opticView";
+				opticsFlare=1;
+				opticsDisablePeripherialVision=1;
+				distanceZoomMin=400;
+				distanceZoomMax=400;
+				weaponInfoType="RscWeaponEmpty";
+			};
+		};
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			mass=100;
+		};
+		ace_overheating_mrbs=3000;
+		ace_overheating_slowdownFactor=1;
+		ace_overheating_allowSwapBarrel=0;
+		ace_overheating_dispersion=0.75;
+	};
+	/*==============================================================================
 	==Westar M-5 GL
 	==============================================================================*/
 	class MET_WestarM5_GL: MET_WestarM5_Base_F
 	{
 		scope=2;
 		displayName="[16th] Westar-M5 GL";
+		model="3AS\3AS_Weapons\WestarM5\3AS_Westar_M5_GL.p3d";
+		picture="\3AS\3AS_Weapons\WestarM5\Data\UI\3as_westargl.paa";
+		weaponInfoType="RscWeaponZeroing";
+		modelOptics="z\16th\addons\weapons\scopes\big_cross_blue_full.p3d";
+		muzzles[]=
+		{
+			"this",
+			"MET_WestarM5_GL_F"
+		};
+		class OpticsModes
+		{
+			class Ironsights
+			{
+				opticsID=1;
+				useModelOptics=0;
+				opticsFlare="true";
+				opticsPPEffects[]=
+				{
+					"OpticsCHAbera5",
+					"OpticsBlur5"
+				};
+				opticsDisablePeripherialVision=0.67000002;
+				opticsZoomMin=0.375;
+				opticsZoomMax=1.1;
+				opticsZoomInit=0.75;
+				memoryPointCamera="eye";
+				visionMode[]={};
+				distanceZoomMin=100;
+				distanceZoomMax=100;
+			};
+			class Scope: Ironsights
+			{
+				opticsID=2;
+				useModelOptics=1;
+				opticsPPEffects[]=
+				{
+					"OpticsCHAbera5",
+					"OpticsBlur5"
+				};
+				visionMode[]=
+				{
+					"Normal",
+					"NVG",
+					"TI"
+				};
+				thermalMode[]={0,1};
+				opticsZoomMin=0.050000001;
+				opticsZoomMax=0.107;
+				opticsZoomInit=0.107;
+				memoryPointCamera="opticView";
+				opticsFlare=1;
+				opticsDisablePeripherialVision=1;
+				distanceZoomMin=400;
+				distanceZoomMax=400;
+				weaponInfoType="RscWeaponEmpty";
+			};
+		};
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			mass=130;
+		};
+		ace_overheating_mrbs=3000;
+		ace_overheating_slowdownFactor=1;
+		ace_overheating_allowSwapBarrel=0;
+		ace_overheating_dispersion=0.75;
+	};
+	/*==============================================================================
+	==Westar M-5 Block II GL
+	==============================================================================*/
+	class MET_WestarM5_blockii_GL: MET_WestarM5_Base_F
+	{
+		scope=2;
+		displayName="[16th] Westar-M5 Block II GL";
 		model="3AS\3AS_Weapons\WestarM5\3AS_Westar_M5_GL.p3d";
 		picture="\3AS\3AS_Weapons\WestarM5\Data\UI\3as_westargl.paa";
 		weaponInfoType="RscWeaponZeroing";
@@ -8831,7 +9299,7 @@ class CfgWeapons
 			};
 			dispersion=0.00073000003;
 			showToPlayer=0;
-			burst=3;
+			//burst=3;
 			aiBurstTerminable=1;
 			minRange=5;
 			minRangeProbab=0.30000001;
@@ -10225,9 +10693,10 @@ class CfgMagazineWells
 		MET_WestarM5_Mags[]=
 		{
 			"MET_DC15A_mag",
-			"MET_DC15A_Red_mag",
+			"MET_DC15S_mag",
+			"MET_DC15LE_mag",
+			"MET_DC15SMG_mag",
 			"MET_blaster_pistol_battery",
-			"MET_blaster_pistol_Red_battery",
 			"JLTS_E5_mag",
 			"3AS_60Rnd_EM50_RedPlasma",
 			"DBA_58x42mm_BP87D_x40_mag",
@@ -11796,7 +12265,7 @@ class CfgMagazines
 	class MET_Chaingun_Nuke_Drum_Mag: CA_LauncherMagazine
 	{
 		author="Hazmat and 3AS";
-		scope=2;
+		scope=1;
 		displayName="[16th] 600 Rnd HE Chaingun Drum";
 		model="\A3\weapons_f\launchers\RPG32\pg32v_rocket_item.p3d";
 		picture="\3AS\3AS_Weapons\Data\UI\3as_ammo_chain.paa";
