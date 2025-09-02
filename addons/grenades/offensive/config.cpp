@@ -62,7 +62,9 @@ class CfgMagazines
 		picture="\3AS\3AS_Equipment\UI\Baradium_Core_UI_ca.paa";
 		uiPicture="\3AS\3AS_Equipment\UI\Baradium_Core_UI_ca.paa";
     	model="\3AS\3AS_Equipment\model\3AS_coredetonator.p3d";
-		ammo="MET_Weapons_Ammo_Grenades_Imploder";
+		//ammo="MET_Weapons_Ammo_Grenades_Imploder";
+		//WBK_PlasmaKill_Color_String_Int = "Red";
+		WBK_UseDisintegrate = "true";
 		initSpeed=16;
 		mass=10;
 	};

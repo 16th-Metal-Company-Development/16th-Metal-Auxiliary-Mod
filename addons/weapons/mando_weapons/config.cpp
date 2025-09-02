@@ -1119,6 +1119,8 @@ class CfgMagazines
 		displayNameShort="773 Firepuncher Energy Cell";
 		descriptionShort="Energy Cell for the 773 Firepuncher";
 		ammo="MET_blasterbolt_antimat_Yellow";
+		WBK_PlasmaKill_Color_String_Int = "Yellow";
+		WBK_UseDisintegrate = "true";
 		tracersEvery=1;
 		initSpeed = 2650;
 		mass=10;

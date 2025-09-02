@@ -3177,26 +3177,7 @@ class CfgLights
 		flareSize=1.5;
 		flareMaxDistance=6000;
 	};
-	class MET_plasmaBlue
-	{
-		color[]={0,0,0,0.5};
-		diffuse[]={7,110,176,1};
-		ambient[]={0,0,0,1};
-		intensity=10000;
-		class Attenuation
-		{
-			start=0;
-			constant=0;
-			linear=0;
-			quadratic=255;
-			hardLimitStart="100";
-			hardLimitEnd=1000;
-		};
-		dayLight=1;
-		useFlare=1;
-		flareSize=1;
-		flareMaxDistance=6000;
-	};
+	class MET_plasmaBlue;
 	class MET_plasmaOrange: MET_plasmaBlue
 	{
 		diffuse[]={252,161,0,1};
