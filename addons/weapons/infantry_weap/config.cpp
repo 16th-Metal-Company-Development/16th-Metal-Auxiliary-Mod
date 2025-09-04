@@ -11133,7 +11133,7 @@ class CfgMagazines
 		JLTS_hasElectronics=1;
 		JLTS_hasEMPProtection=1;
 		Scope=2;
-		scopeArsenal=1;
+		scopeArsenal=2;
 		author="Hazmat";
 		modelSpecial="";
 		modelSpecialIsProxy=0;
@@ -11155,7 +11155,7 @@ class CfgMagazines
 		JLTS_hasElectronics=1;
 		JLTS_hasEMPProtection=1;
 		Scope=2;
-		scopeArsenal=1;
+		scopeArsenal=2;
 		author="Hazmat";
 		modelSpecial="";
 		modelSpecialIsProxy=0;
@@ -11177,7 +11177,7 @@ class CfgMagazines
 		JLTS_hasElectronics=1;
 		JLTS_hasEMPProtection=1;
 		Scope=2;
-		scopeArsenal=1;
+		scopeArsenal=2;
 		author="Hazmat";
 		modelSpecial="";
 		modelSpecialIsProxy=0;
