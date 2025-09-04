@@ -7150,6 +7150,14 @@ class CfgVehicles
 		scope=2;
 		maximumLoad=800;
 	};
+	class JLTS_Clone_ARC_backpack;
+	class MET_ARC_Backpack: JLTS_Clone_ARC_backpack
+	{
+		author="Hazmat";
+		displayName="[16th] ARC Backpack (JLTS)";
+		scope=2;
+		maximumLoad=800;
+	};
 	class JLTS_Clone_jumppack_JT12;
 	class jetpack_16th: JLTS_Clone_jumppack_JT12
 	{
