@@ -561,5 +561,5 @@ class CfgAmmo
 		explosionEffects="AAMissileExplosion";
 		effectsMissileInit="";
 		effectsMissile="MET_Rocket_effect_Green_fly";
-	}
+	};
 };

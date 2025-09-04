@@ -627,6 +627,7 @@ class CfgWeapons
     class SC_Gen2WarbotHead;
 	class MET_Gen2WarbotHead_NoFS: SC_Gen2WarbotHead
 	{
+		scopeArsenal=2;
 		displayName="Gen II Warbot Head (No Faceshield)";
 		hiddenSelections[]=
 		{

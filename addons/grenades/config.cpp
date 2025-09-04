@@ -51,7 +51,6 @@ class CfgWeapons
 		};
 		class MetAux_Weaps_Thermal_Imploder_ThrowMuzzle: ThrowMuzzle
 		{	
-			WBK_UseMelting = "true";
 			magazines[]=
 			{
 				"Met_Weapons_Mags_Thermal_Imploder"
