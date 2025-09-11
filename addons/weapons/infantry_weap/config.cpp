@@ -3008,8 +3008,7 @@ class CfgWeapons
 		magazines[]=
 		{
 			"MET_DC15x_mag",
-			"MET_DC15x_at_mag",
-			"IDA_Blaster_Cell_Power5_5Rnd_Blue"
+			"MET_DC15x_at_mag"
 		};
 		magazineWell[]=
 		{
@@ -10673,7 +10672,8 @@ class CfgMagazineWells
 		MET_DP23Magazines[]=
 		{
 			"MET_pellet_mag",
-			"MET_slug_mag"
+			"MET_slug_mag",
+			"MET_Doomsday_mag"
 		};
 	};
 	class MET_DP12_MagWell
@@ -11279,6 +11279,22 @@ class CfgMagazines
 		initSpeed=380;
 		count=10;
 		mass=15;
+		tracerEvery=1;
+		lastRoundsTracer=8;
+	};
+	class MET_Doomsday_mag: CA_Magazine
+	{
+		author="Hazmat";
+		scope=2;
+		scopeArsenal=1;
+		displayName="[16th] DP-23 Energy Cell (Doomsday)";
+		displayNameShort="DP-23 Doomsday";
+		descriptionShort="Doomsday Pellets for the DP-23";
+		picture="z\16th\addons\weapons\infantry_weap\data\3as_doomsday_g.paa";
+		ammo="MET_pellet_doomsday";
+		initSpeed=380;
+		count=5;
+		mass=30;
 		tracerEvery=1;
 		lastRoundsTracer=8;
 	};
@@ -12371,23 +12387,6 @@ class CfgMagazines
 		ammo = "MET_blasterbolt";
 		mass = 250;
 		tracersEvery = 1;
-	};
-	class IDA_Blaster_Cell_Power5_5Rnd_Blue: 100Rnd_65x39_caseless_mag
-	{
-		author="Indecisive Armoury Team";
-		scope=2;
-		modelSpecial="";
-		modelSpecialIsProxy=0;
-		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
-		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
-		count=5;
-		displayName="5Rnd Energy Cell (Blue)";
-		displayNameShort="Energy Cell";
-		descriptionShort="5 round capacity.";
-		ammo="IDA_Blasterbolt_Power5_Blue";
-		tracersEvery=1;
-		initSpeed=3200;
-		mass=12;
 	};
 };
 class ACE_Medical_Injuries
@@ -13955,14 +13954,6 @@ class CfgAmmo
 		supersoniccrackfar[]={};
 		soundSetSonicCrack[]={};
 	};
-	class IDA_Blasterbolt_Power5_Blue: MET_blasterbolt_base
-	{
-		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Blue.p3d";
-		effectfly="MET_BlasterBoltGlow_Blue_Fly";
-		ACE_damageType="plasma";
-		hit=25;
-		caliber=2.2;
-	};
 	class MET_blasterbolt: MET_blasterbolt_base
 	{
 		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Blue.p3d";
@@ -14302,6 +14293,62 @@ class CfgAmmo
 	class MET_dp12_pellet_subminition_blue: MET_dp12_slug_blue
 	{
 		hit=15;
+		deflecting=2;
+	};
+	class MET_Doomsday_HE: MET_blasterbolt_base
+	{
+		// Example values, adjust as needed for your mod
+		hit = 120;
+		indirectHit = 40;
+		indirectHitRange = 3;
+		explosive = 1;
+		ExplosionEffects = "ExploAmmoExplosion";
+		CraterEffects = "ExploAmmoCrater";
+		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Green.p3d";
+		effectfly="MET_BlasterBoltGlow_Green_Fly";
+		lightcolor[]={0,1,0};
+		// Standard Arma 3 20mm HE uses these effects
+		class HitEffects
+		{
+			hitGround = "ImpactShell20mm";
+			hitGroundSoft = "ImpactShell20mm";
+			hitGroundHard = "ImpactShell20mm";
+			hitWater = "ImpactShell20mm";
+			hitMan = "ImpactShell20mm";
+			hitBuilding = "ImpactShell20mm";
+			hitArmor = "ImpactShell20mm";
+			hitMetal = "ImpactShell20mm";
+			hitMetalPlate = "ImpactShell20mm";
+			hitGlass = "ImpactShell20mm";
+			hitGlassArmoRed = "ImpactShell20mm";
+			hitWood = "ImpactShell20mm";
+			hitPlastic = "ImpactShell20mm";
+			hitRubber = "ImpactShell20mm";
+			hitTyre = "ImpactShell20mm";
+			hitFoliage = "ImpactShell20mm";
+			hitVirtual = "ImpactShell20mm";
+			default_mat = "ImpactShell20mm";
+		};
+	};
+	class MET_pellet_doomsday: MET_Doomsday_HE
+	{
+		hit=95;
+		simulationStep=9.9999997e-005;
+		cartridge="";
+		submunitionAmmo="MET_pellet_subminition_doomsday";
+		submunitionConeType[]=
+		{
+			"poissondisc",
+			10
+		};
+		submunitionConeAngle=0.4;
+		triggerSpeedCoef[]={0.85000002,1};
+		triggerTime=0.001;
+		cost=1;
+	};
+	class MET_pellet_subminition_doomsday: MET_Doomsday_HE
+	{
+		hit=95;
 		deflecting=2;
 	};
 	/*========================================================================================================================================

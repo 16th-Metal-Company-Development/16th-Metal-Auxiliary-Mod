@@ -74,9 +74,9 @@ class CfgWeapons
 	class met_weapon_westar35c: ls_weapon_westar35c_base 
 	{
 		scope = 2;
-		scopeArsenal=1;
+		scopeArsenal=2;
 		author = "Hazmat";
-    	displayname = "[16th] Westar-35C";
+    	displayname = "[Mando] Westar-35C";
 		baseWeapon = "met_weapon_westar35c";
 		magazines[] = {"MET_Westar35C_mag"};
 		magazineWell[] = {"MET_Westar35C_MagWell"};
@@ -197,10 +197,10 @@ class CfgWeapons
 	class MET_weapon_westar35s: ls_weapon_westar35s_base 
 	{
 		scope = 2;
-		scopeArsenal=1;
+		scopeArsenal=2;
 		author = "Hazmat";
 		baseWeapon = "MET_weapon_westar35s";
-		displayName = "[16th] Westar-35S";
+		displayName = "[Mando] Westar-35S";
 		magazines[] = {"MET_Westar35S_mag"};
 		magazineWell[] = {"MET_Westar35S_MagWell"};
 		muzzles[] = {"this", "scatter"};
@@ -302,7 +302,7 @@ class CfgWeapons
 	};
 	class MET_cows_westar35s_scope: ItemCore {
 		scope = 2;
-		scopeArsenal=1;
+		scopeArsenal=2;
 		author = "Hazmat";
 		displayName = "Westar-35S Holosight";
 		descriptionShort = "";
@@ -370,10 +370,10 @@ class CfgWeapons
 	class MET_weapon_westar35sa: ls_weapon_westar35sa_base
 	{
 		scope=2;
-		scopeArsenal=1;
+		scopeArsenal=2;
 		author="Hazmat";
 		baseWeapon="MET_weapon_westar35sa";
-		displayName="[16th] Westar-35SA";
+		displayName="[Mando] Westar-35SA";
 		recoil="MET_recoil_Raff";
 		magazines[]=
 		{
@@ -463,9 +463,9 @@ class CfgWeapons
 	class MET_weapon_firepuncher: ls_weapon_firepuncher_base
 	{
 		scope=2;
-		scopeArsenal=1;
+		scopeArsenal=2;
 		author="Legion Studios";
-		displayName="[16th] Mando 773 Firepuncher";
+		displayName="[Mando] Mando 773 Firepuncher";
 		baseWeapon="MET_weapon_firepuncher";
 		magazines[]=
 		{
@@ -557,8 +557,8 @@ class CfgWeapons
 	};
 	class MET_RPS6_SMRT: 3AS_PLX1_F
 	{
-		scopeArsenal=1;
-		displayName="[16th] Mandalorian RPS-6 Smart Launcher";
+		scopeArsenal=2;
+		displayName="[Mando] Mandalorian RPS-6 Smart Launcher";
 		JLTS_hasElectronics=1;
 		JLTS_hasEMPProtection=1;
 		JLTS_friedItem="JLTS_RPS6_fried";
@@ -612,10 +612,10 @@ class CfgWeapons
 		inertia=0;
 		canShootInWater=1;
 		scope=2;
-		scopeArsenal=1;
+		scopeArsenal=2;
 		autoReload="true";
 		baseWeapon="MET_MANDALORIAN_Z6";
-		displayName="[16th] Mando Z6 rotary cannon";
+		displayName="[Mando] Mando Z6 rotary cannon";
 		displayNameShort="A big weapon for big battles";
 		descriptionShort="Rapid Fire. Reloads automatically.";
 		picture="\MRC\JLTS\weapons\Z6\data\ui\Z6_ui_ca.paa";

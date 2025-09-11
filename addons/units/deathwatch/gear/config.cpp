@@ -83,7 +83,7 @@ class CfgWeapons
 		author="Legion Studios";
 		displayName="[MET] Deathwatch Grunt Armor";
 		scope=2;
-		scopeArsenal=1;
+		scopeArsenal=2;
 		scopeCurator=2;
 		model="\ls\core\addons\characters_mandalorian\vests\standard\ls_vest_mandalorian.p3d";
 		hiddenSelections[]=
