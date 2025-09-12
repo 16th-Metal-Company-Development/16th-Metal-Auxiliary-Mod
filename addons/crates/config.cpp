@@ -21,6 +21,7 @@ class CfgPatches
             "Box_MET_Ordinance",
             "Box_MET_Mortars",
             "Box_MET_Rockets",
+            "Box_MET_Rockets_2",
             "Box_MET_Engineer",
             "Box_MET_ARF",
             "Box_MET_Medical",
@@ -1115,6 +1116,16 @@ class CfgVehicles
 				magazine="MET_pellet_mag";
 				count=15;
 			};
+			class _xx_MET_DP12_slug_mag
+			{
+				magazine="MET_DP12_slug_mag";
+				count=15;
+			};
+			class _xx_MET_DP12_pellet_mag
+			{
+				magazine="MET_DP12_pellet_mag";
+				count=15;
+			};
 			class _xx_MET_blaster_pistol_battery
 			{
 				magazine="MET_blaster_pistol_battery";
@@ -1837,6 +1848,72 @@ class CfgVehicles
 			};
         };
 	};
+    class Box_MET_Rockets_2: Box_MET_Base
+	{
+		scope=2;
+		scopecurator=2;
+		displayname="[16th] Resupply Box (Rockets 2)";
+		hiddenSelectionsTextures[]=
+		{
+			"\212th\Other\212_Box\Textures\ResupplyBox_Rockets_CO.paa"
+		};
+		class TransportMagazines
+		{
+			class _xx_DBA_90mm_IK55_HEAT_x1_mag
+			{
+				magazine="DBA_90mm_IK55_HEAT_x1_mag";
+				count=20;
+			};
+			class _xx_DBA_90mm_IK60_HEP_x1_mag
+			{
+				magazine="DBA_90mm_IK60_HEP_x1_mag";
+				count=20;
+			};
+			class _xx_DBA_90mm_IK40_FRAG_x1_mag
+			{
+				magazine="DBA_90mm_IK40_FRAG_x1_mag";
+				count=20;
+			};
+			class _xx_metal_at_mag
+			{
+				magazine="metal_at_mag";
+				count=20;
+			};
+			class _xx_metal_aa_mag
+			{
+				magazine="metal_aa_mag";
+				count=20;
+			};
+			class _xx_metal_ap_mag
+			{
+				magazine="metal_ap_mag";
+				count=20;
+			};
+			class _xx_MET_AA_SINGLE
+			{
+				magazine="MET_AA_SINGLE";
+				count=20;
+			};
+			class _xx_MET_AP_SINGLE
+			{
+				magazine="MET_AP_SINGLE";
+				count=20;
+			};
+			class _xx_MET_AT_Single
+			{
+				magazine="MET_AT_Single";
+				count=20;
+			};
+		};
+        class TransportWeapons
+		{
+            class _xx_MET_RPS6_F
+            {
+                weapon = "MET_RPS6_F"; // Weapon class name
+                count = 10; // Number of weapons
+            };
+        };
+	};
     class Box_MET_Engineer: Box_MET_Base
 	{
 		scope=2;
@@ -2085,6 +2162,11 @@ class CfgVehicles
 			{
 				magazine="MET_pellet_mag";
 				count=50;
+			};
+			class _xx_MET_Doomsday_mag
+			{
+				magazine="MET_Doomsday_mag";
+				count=20;
 			};
 			class _xx_MET_blaster_pistol_battery
 			{

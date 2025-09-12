@@ -58,7 +58,7 @@ class CfgVehicles
 	class MET_mandalorianBackpack_journeyman: ls_backpack_base
 	{
 		scope=2;
-		scopeArsenal=1;
+		scopeArsenal=2;
 		author="Legion Studios";
 		displayName="[MET] Journeyman's Jetpack";
 		model="\ls\core\addons\characters_mandalorian\backpacks\journeymanJet\ls_backpack_mandalorian_journeyman.p3d";
