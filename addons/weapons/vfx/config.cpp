@@ -618,6 +618,10 @@ class CfgLights
 	{
 		diffuse[]={255,0,0,1};
 	};
+	class MET_BlasterBoltOldRepLight_Blue: MET_BlasterboltLight_Blue
+	{
+		diffuse[]={7,110,176,1};
+	};
 	class MET_BlasterboltLight_Green: MET_BlasterboltLight_Blue
 	{
 		diffuse[]={0,255,0,1};
@@ -1124,6 +1128,15 @@ class MET_BlasterBoltGlow_Blue_Fly
 	{
 		simulation="light";
 		type="MET_BlasterBoltLight_Blue";
+		position[]={0,0,1};
+	};
+};
+class MET_BlasterBoltGlow_LightBlue_Fly
+{
+	class Light
+	{
+		simulation="light";
+		type="MET_BlasterBoltOldRepLight_Blue";
 		position[]={0,0,1};
 	};
 };

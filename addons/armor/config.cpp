@@ -1588,6 +1588,116 @@ class CfgWeapons
 			};
 		};
 	};
+	class Aux212_Heavy_Gunner_Vest_Standard
+	{
+		class VestItem;
+	};
+	class MET_Heavy_Gunner_Vest_Standard: Aux212_Heavy_Gunner_Vest_Standard
+	{
+		scope=2;
+		scopeArsenal=2;
+		displayname="[16th] Weapons Squad Armor Plates";
+		class ItemInfo: VestItem
+		{
+			containerClass="Supply100";
+			mass=10;
+			class HitpointsProtectionInfo
+			{
+				class Neck
+				{
+					hitpointName="HitNeck";
+					armor=7;
+					passThrough=.3;
+				};
+				class Chest
+				{
+					hitpointName="HitChest";
+					armor=8;
+					passThrough=.3;
+				};
+				class Diaphragm
+				{
+					hitpointName="HitDiaphragm";
+					armor=8;
+					passThrough=.3;
+				};
+				class Abdomen
+				{
+					hitpointName="HitAbdomen";
+					armor=8;
+					passThrough=.3;
+				};
+				class Pelvis
+				{
+					hitpointName="HitPelvis";
+					armor=8;
+					passThrough=.3;
+				};
+				class Body
+				{
+					hitpointName="HitBody";
+					armor=8;
+					passThrough=.3;
+					depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
+				};
+			};
+		};
+	};
+	class Aux212_Heavy_Gunner_Vest_Team_Leader
+	{
+		class VestItem;
+	};
+	class MET_Heavy_Gunner_Vest_Reaper: Aux212_Heavy_Gunner_Vest_Team_Leader
+	{
+		scope=2;
+		scopeArsenal=2;
+		displayname="[16th] Reaper Armor Plates";
+		class ItemInfo: VestItem
+		{
+			containerClass="Supply100";
+			mass=10;
+			class HitpointsProtectionInfo
+			{
+				class Neck
+				{
+					hitpointName="HitNeck";
+					armor=7;
+					passThrough=.3;
+				};
+				class Chest
+				{
+					hitpointName="HitChest";
+					armor=8;
+					passThrough=.3;
+				};
+				class Diaphragm
+				{
+					hitpointName="HitDiaphragm";
+					armor=8;
+					passThrough=.3;
+				};
+				class Abdomen
+				{
+					hitpointName="HitAbdomen";
+					armor=8;
+					passThrough=.3;
+				};
+				class Pelvis
+				{
+					hitpointName="HitPelvis";
+					armor=8;
+					passThrough=.3;
+				};
+				class Body
+				{
+					hitpointName="HitBody";
+					armor=8;
+					passThrough=.3;
+					depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
+				};
+			};
+		};
+	};
 	class 16_vest_suspenders: JLTS_CloneVestSuspender
 	{
 		scope=2;
@@ -7143,7 +7253,7 @@ class CfgVehicles
 		maximumLoad=300;
 	};
 	class Aux212_ARC_Backpack;
-	class MET_ARC_Backpack: Aux212_ARC_Backpack
+	class MET_ARC_Backpack_212: Aux212_ARC_Backpack
 	{
 		author="Hazmat";
 		displayName="[16th] ARC Backpack";
@@ -7157,6 +7267,26 @@ class CfgVehicles
 		displayName="[16th] ARC Backpack (JLTS)";
 		scope=2;
 		maximumLoad=750;
+	};
+	class B_Kitbag_rgr;
+	class MET_ARC_Backpack: B_Kitbag_rgr
+	{
+		author = "Hazmat";
+		scope = 2;
+		maximumload = 750;
+		displayName = "[16th] ARC Backpack";
+		model = "z\16th\addons\armor\ARC_Backpack.p3d";
+		picture = "z\16th\addons\armor\data\UI\ARC_Backpack_UI_ca.paa";
+		hiddenSelections[] = {"camo1"};
+		hiddenSelectionsTextures[] = {"z\16th\addons\armor\data\gear\backpacks\ARC_Backpack_CO.paa"};
+		hiddenSelectionsMaterials[] = {"z\16th\addons\armor\data\gear\backpacks\ARC_Backpack.rvmat"};
+		containerClass = "Supply250";
+		tf_dialogUpdate = "call TFAR_fnc_updateLRDialogToChannel;";
+		tf_hasLRradio = 1;
+		tf_encryptionCode = "tf_west_radio_code";
+		tf_dialog = "JLTS_clone_rto_radio_dialog";
+		tf_subtype = "digital_lr";
+		tf_range = 35000;
 	};
 	class JLTS_Clone_jumppack_JT12;
 	class jetpack_16th: JLTS_Clone_jumppack_JT12

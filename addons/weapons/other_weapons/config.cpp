@@ -3177,22 +3177,22 @@ class CfgLights
 		flareSize=1.5;
 		flareMaxDistance=6000;
 	};
-	class MET_plasmaBlue;
-	class MET_plasmaOrange: MET_plasmaBlue
+	class MET_BlasterboltLight_Blue;
+	class MET_plasmaOrange: MET_BlasterboltLight_Blue
 	{
 		diffuse[]={252,161,0,1};
 	};
-	class MET_plasmaOrange_medium: MET_plasmaBlue
-	{
-		diffuse[]={252,161,0,1};
-		intensity=10000;
-	};
-	class MET_plasmaOrange_large: MET_plasmaBlue
+	class MET_plasmaOrange_medium: MET_BlasterboltLight_Blue
 	{
 		diffuse[]={252,161,0,1};
 		intensity=10000;
 	};
-	class MET_plasmaOrange_big: MET_plasmaBlue
+	class MET_plasmaOrange_large: MET_BlasterboltLight_Blue
+	{
+		diffuse[]={252,161,0,1};
+		intensity=10000;
+	};
+	class MET_plasmaOrange_big: MET_BlasterboltLight_Blue
 	{
 		diffuse[]={252,161,0,1};
 		intensity=30000;

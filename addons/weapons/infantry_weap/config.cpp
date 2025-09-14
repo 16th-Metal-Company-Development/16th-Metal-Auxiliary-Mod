@@ -2750,6 +2750,268 @@ class CfgWeapons
 			};
 		};
 	};
+	class MET_E15: LMG_Mk200_F
+	{
+		author="Starforge Armory";
+		scope=2;
+		scopeArsenal=2;
+		baseWeapon="MET_E15";
+		reloadAction="";
+		ace_clearJamAction="";
+		autoReload="true";
+		displayName="[16th] E-15 Assault cannon";
+		descriptionShort="Assault Cannon";
+		picture="\SFA_Main\SFA_Weapons_R\E15\data\ui\E15_ui.paa";
+		model="SFA_Main\SFA_Weapons_R\E15\E15.p3d";
+		WBK_UseHeavyWeaponFramework = true;	
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"SFA_Main\SFA_Weapons_R\E15\data\E15_Assault_cannon_camo1_co.paa"
+		};
+		recoil="MET_recoil_Z6";
+		maxZeroing=1200;
+		handAnim[]=
+		{
+			"OFP2_ManSkeleton",
+			"SFA_Main\SFA_Weapons_R\Anim\E15_Assault_Cannon\E15_Assault_Cannon.rtm"
+		};
+		magazines[]=
+		{
+			"MET_E15_mag"
+		};
+		magazineWell[]=
+		{
+			"MET_E15_magwell"
+		};
+		fireLightDiffuse[]={0,0,1};
+		drySound[]=
+		{
+			"z\16th\addons\weapons\infantry_weap\sounds\weapon_dry.ogg",
+			5,
+			1,
+			10
+		};
+		reloadMagazineSound[]=
+		{
+			"z\16th\addons\weapons\infantry_weap\sounds\republic\z-6\Z6_reload.ogg",
+			1.5,
+			1,
+			100
+		};
+		modes[]=
+		{
+			"slowerAuto",
+			"Auto",
+			"fullerAuto",
+			"close",
+			"short",
+			"medium",
+			"far_optic1",
+			"far_optic2"
+		};
+		class manual: Mode_FullAuto
+		{
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				closure1[]={};
+				closure2[]={};
+				soundClosure[]={};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				begin1[]=
+				{
+					"\SFA_Main\SFA_Weapons_R\BoltBlaster\data\SFX\boltblaster.wav",
+					1,
+					1,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+			};
+			reloadTime=0.075000003;
+			dispersion=0.00102;
+			soundContinuous=0;
+			soundBurst=0;
+			minRange=0;
+			minRangeProbab=0.30000001;
+			midRange=5;
+			midRangeProbab=0.69999999;
+			maxRange=10;
+			maxRangeProbab=0.039999999;
+			showToPlayer=1;
+		};
+		class Auto: Mode_FullAuto
+		{
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				closure1[]={};
+				closure2[]={};
+				soundClosure[]={};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				begin1[]=
+				{
+					"SFA_Main\SFA_Weapons_R\E15\data\SFX\E15_Close.wav",
+					1,
+					1,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+			};
+			reloadTime=0.06;
+			dispersion=0.00102;
+			burst=1;
+			soundContinuous="false";
+			soundBurst="true";
+			minRange=2;
+			minRangeProbab=0.5;
+			midRange=100;
+			midRangeProbab=0.075000003;
+			maxRange=10000;
+			maxRangeProbab=0.30000001;
+		};
+		class fullerAuto: Auto
+		{
+			reloadTime=0.0461538462;
+			dispersion=0.00104;
+			textureType="fastAuto";
+			minRangeProbab=0;
+			midRangeProbab=0;
+			maxRangeProbab=0;
+		};
+		class slowerAuto: Auto
+		{
+			reloadTime=0.0857142857;
+			dispersion=0.001;
+			textureType="burst";
+			minRangeProbab=0;
+			midRangeProbab=0;
+			maxRangeProbab=0;
+		};
+		class close: manual
+		{
+			burst=10;
+			aiRateOfFire=0.5;
+			aiRateOfFireDistance=50;
+			minRange=10;
+			minRangeProbab=0.050000001;
+			midRange=20;
+			midRangeProbab=0.69999999;
+			maxRange=50;
+			maxRangeProbab=0.039999999;
+			showToPlayer=0;
+		};
+		class short: close
+		{
+			burst=8;
+			aiRateOfFire=2;
+			aiRateOfFireDistance=300;
+			minRange=50;
+			minRangeProbab=0.050000001;
+			midRange=150;
+			midRangeProbab=0.69999999;
+			maxRange=300;
+			maxRangeProbab=0.039999999;
+		};
+		class medium: close
+		{
+			burst=7;
+			aiRateOfFire=4;
+			aiRateOfFireDistance=600;
+			minRange=200;
+			minRangeProbab=0.050000001;
+			midRange=300;
+			midRangeProbab=0.69999999;
+			maxRange=500;
+			maxRangeProbab=0.1;
+		};
+		class far_optic1: medium
+		{
+			requiredOpticType=1;
+			showToPlayer=0;
+			burst=3;
+			aiRateOfFire=10;
+			aiRateOfFireDistance=1000;
+			minRange=300;
+			minRangeProbab=0.050000001;
+			midRange=500;
+			midRangeProbab=0.40000001;
+			maxRange=650;
+			maxRangeProbab=0.0099999998;
+		};
+		class far_optic2: far_optic1
+		{
+			burst=3;
+			requiredOpticType=2;
+			minRange=400;
+			minRangeProbab=0.050000001;
+			midRange=750;
+			midRangeProbab=0.69999999;
+			maxRange=900;
+			maxRangeProbab=0.0099999998;
+			aiRateOfFire=10;
+			aiRateOfFireDistance=900;
+		};
+		aiDispersionCoefY=24;
+		aiDispersionCoefX=21;
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			mass=270;
+			class CowsSlot: CowsSlot
+			{
+				compatibleItems[]=
+				{
+					"SFA_Holosight_blue"
+				};
+			};
+			class MuzzleSlot: MuzzleSlot
+			{
+				compatibleItems[]={};
+			};
+			class PointerSlot: PointerSlot
+			{
+				compatibleItems[]={};
+			};
+			class UnderBarrelSlot: UnderBarrelSlot
+			{
+				compatibleItems[]={};
+			};
+		};
+		class GunParticles
+		{
+			class FirstEffect
+			{
+				directionName="Konec hlavne";
+				effectName="RifleAssaultCloud";
+				positionName="Usti hlavne";
+			};
+		};
+	};
 	class MET_Z6_SOF: LMG_Mk200_F
 	{
 		JLTS_hasElectronics=1;
@@ -10667,6 +10929,38 @@ class CfgMagazineWells
 			"MET_blaster_pistol_battery"
 		};
 	};
+	class MET_E15_MagWell
+	{
+		MET_E15_Magazines[]=
+		{
+			"MET_E15_Mag",
+			"MET_DC15L_mag",
+			"MET_DC15A_mag",
+			"MET_CinCar_Mag",
+			"MET_DC15SMG_Mag",
+			"MET_DC15S_mag",
+			"MET_blaster_pistol_battery",
+			"MET_Westar35SA_mag",
+			"MET_blaster_battery_mand",
+			"MET_blaster_battery",
+			"MET_Westar35C_mag",
+			"MET_Westar35S_mag",
+			"3AS_130Rnd_EM50_RedPlasma",
+			"3AS_60Rnd_EM50_RedPlasma",
+			"ls_magazine_e5c",
+			"ls_magazine_e5",
+			"JLTS_E5C_mag",
+			"JLTS_E5",
+			"Aux212_JLTS_E5_Mag",
+			"Aux212_JLTS_E5C_Mag",
+			"3AS_15Rnd_EM20_SE14R_Mag",
+			"ls_magazine_rg4d",
+			"JLTS_RG4D_mag",
+			"MET_D200_Pistol_mag",
+			"MET_DLA13_mag",
+			"MET_EL34_mag"
+		};
+	};
 	class MET_DP23_MagWell
 	{
 		MET_DP23Magazines[]=
@@ -10976,6 +11270,23 @@ class CfgMagazines
 		descriptionShort="Energy cell for the DC-15L";
 		ammo="MET_blasterbolt";
 		mass = 50;
+		tracersEvery=1;
+	};
+	class MET_E15_mag: JLTS_DC15A_mag
+	{
+		JLTS_hasElectronics=1;
+		JLTS_hasEMPProtection=1;
+		author="Hazmat";
+		modelSpecial="";
+		modelSpecialIsProxy=0;
+		picture="\3AS\3AS_Weapons\Data\UI\3as_box_b.paa";
+		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
+		count=250;
+		displayName="[16th] E-15 Energy Cell";
+		displayNameShort="E-15 Energy Cell";
+		descriptionShort="Energy cell for the E-15";
+		ammo="MET_blasterbolt_light_blue";
+		mass = 60;
 		tracersEvery=1;
 	};
 	class MET_DC15LE_mag: JLTS_DC15A_mag
@@ -13965,6 +14276,12 @@ class CfgAmmo
 		indirectHitRange=0.5;
 		caliber=1.4;
 		timetolive=8;
+	};
+	class MET_blasterbolt_light_blue: MET_blasterbolt
+	{
+		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Blue.p3d";
+		lightcolor[]={0.03,0.43,0.69};
+		effectfly="MET_BlasterBoltGlow_LightBlue_Fly";
 	};
 	class MET_blasterbolt_Red: MET_blasterbolt
 	{
