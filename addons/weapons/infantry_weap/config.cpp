@@ -5811,7 +5811,7 @@ class CfgWeapons
 	/*==============================================================================
 	==Westar M-5 Block II GL
 	==============================================================================*/
-	class MET_WestarM5_blockii_GL: MET_WestarM5_Base_F
+	class MET_WestarM5_blockii_GL: MET_WestarM5_blockii_Base_F
 	{
 		scope=2;
 		displayName="[16th] Westar-M5 Block II GL";
@@ -10998,7 +10998,8 @@ class CfgMagazineWells
 			"JLTS_E5_mag",
 			"3AS_60Rnd_EM50_RedPlasma",
 			"DBA_58x42mm_BP87D_x40_mag",
-			"Aux212_JLTS_E5_Mag"
+			"Aux212_JLTS_E5_Mag",
+			"ls_magazine_e5"
 		};
 	};
 	class MET_CinCar_MagWell
