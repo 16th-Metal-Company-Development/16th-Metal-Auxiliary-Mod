@@ -7,15 +7,204 @@ class CfgPatches
 		units[]={};
 		weapons[]=
 		{
-			"metal_dc15a"
+			"MET_DC15A_LEG",
+			"MET_DC15A_LEG_ugl",
+			"MET_DC15A_PLASTIC",
+			"MET_DC15A_ugl_plastic",
+			"MET_DC15A_F",
+			"MET_DC15LE",
+			"MET_DC15A_GL",
+			"MET_DC15S",
+			"MET_DC15S_shield",
+			"MET_DC15S_F",
+			"MET_DC15S_GL",
+			"MET_DC15C_F",
+			"MET_DC15C_GL",
+			"MET_DC15L_F",
+			"MET_Z6",
+			"MET_E15",
+			"MET_Z6_SOF",
+			"MET_DC15X_F",
+			"MET_DC15xm",
+			"MET_Valken38X_F",
+			"MET_DP23_F",
+			"MET_DP12_F",
+			"MET_DP23_GL",
+			"MET_JLTS_DP23",
+			"MET_DP23_shield",
+			"MET_JLTS_DP12",
+			"MET_DP12_shield",
+			"MET_WestarM5_F",
+			"MET_WestarM5_blockii_F",
+			"MET_WestarM5_GL",
+			"MET_WestarM5_blockii_GL",
+			"MET_DC19",
+			"MET_Chaingun",
+			"MET_Chaingun_mkii",
+			"MET_Cinnagaran_Carbine_F",
+			"MET_DC15SMG",
+			"MET_DC15SMG_shield",
+			"MET_MPL_F",
+			"MET_MPL60A_HM",
+			"MET_EPL2",
+			"MET_RPS6_F",
+			"MET_DC17SA",
+			"MET_DC17C",
+			"MET_DC17B",
+			"MET_DC17SA_shield",
+			"MET_DC17B_shield",
+			"MET_DC17S_F",
+			"MET_DC17S_Dual_F",
+			"MET_DC17M_F",
+			"MET_pistol_DC15SA_F"
 		};
 		magazines[]=
 		{
 			"MET_DC15A_mag",
+			"MET_DC15S_mag",
+			"MET_DC19E_mag",
+			"MET_DC15L_mag",
+			"MET_E15_mag",
+			"MET_DC15LE_mag",
+			"MET_CinCar_Mag",
+			"MET_DC15SMG_Mag",
+			"MET_blaster_battery",
+			"MET_blaster_battery_heavy",
+			"MET_blaster_battery_green",
+			"MET_Valken_mag",
+			"MET_DC15x_mag",
+			"MET_DC15xm_mag",
+			"MET_DC15xm_mag_red",
+			"MET_DC15xm_mag_Yellow",
+			"MET_DC15xm_mag_Orange",
+			"MET_DC19X_Mag",
+			"MET_DC15x_at_mag",
+			"MET_DC15xm_at_mag",
+			"MET_slug_mag",
+			"MET_pellet_mag",
+			"MET_Doomsday_mag",
+			"MET_DP12_slug_mag",
+			"MET_DP12_pellet_mag",
+			"MET_blaster_pistolC_battery",
+			"MET_blaster_pistol_battery",
+			"MET_dual_blaster_pistol_battery",
+			"MET_blaster_pistol_Red_battery",
+			"MET_DC17M_mag",
+			"MET_DC17M_Red_mag",
+			"MET_DC17M_Sniper_mag",
+			"MET_DC17M_Sniper_Red_mag",
+			"MET_DC17M_Grenade",
+			"MET_dc15sa_battery",
+			"MET_dc15sa_red_battery",
+			"MET_HE_Grenade",
+			"MET_Clust_Grenade_shell",
+			"MET_Nuclear_Grenade",
+			"MET_AT_Grenade",
+			"MET_Grape_Grenade",
+			"MET_6Rnd_Grape_Grenade",
+			"MET_12Rnd_Grape_Grenade",
+			"MET_ILLUM_Grenade",
+			"MET_ILLUM_Grenade_Clust",
+			"MET_SUN_Grenade",
+			"MET_SUN_Grenade_Clust",
+			"MET_RA_Grenade",
+			"MET_RA_Grenade_Clust",
+			"MET_ILLUM_B_Grenade",
+			"MET_ILLUM_B_Grenade_Clust",
+			"MET_ILLUM_G_Grenade",
+			"MET_ILLUM_G_Grenade_Clust",
+			"MET_ILLUM_R_Grenade",
+			"MET_ILLUM_R_Grenade_Clust",
+			"MET_ILLUM_Y_Grenade",
+			"MET_ILLUM_Y_Grenade_Clust",
+			"MET_ILLUM_O_Grenade",
+			"MET_ILLUM_O_Grenade_Clust",
+			"MET_ILLUM_P_Grenade",
+			"MET_ILLUM_P_Grenade_Clust",
+			"MET_ILLUM_TU_Grenade",
+			"MET_ILLUM_TU_Grenade_Clust",
+			"MET_ILLUM_TE_Grenade",
+			"MET_ILLUM_TE_Grenade_Clust",
+			"MET_ILLUM_IR_Grenade",
+			"MET_ILLUM_IR_Grenade_Clust",
+			"MET_SMKW_Grenade",
+			"MET_SMKB_Grenade",
+			"MET_SMKG_Grenade",
+			"MET_SMKO_Grenade",
+			"MET_SMKP_Grenade",
+			"MET_SMKR_Grenade",
+			"MET_SMKTU_Grenade",
+			"MET_SMKTE_Grenade",
+			"MET_SMKY_Grenade",
+			"MET_SMKW_Clust_Grenade",
+			"MET_SMKB_Clust_Grenade",
+			"MET_SMKG_Clust_Grenade",
+			"MET_SMKO_Clust_Grenade",
+			"MET_SMKP_Clust_Grenade",
+			"MET_SMKR_Clust_Grenade",
+			"MET_SMKTU_Clust_Grenade",
+			"MET_SMKTE_Clust_Grenade",
+			"MET_SMKY_Clust_Grenade",
+			"MET_3Rnd_HE_Grenade_shell",
+			"MET_3Rnd_AT_Grenade_shell",
+			"MET_3Rnd_ILLUM_Grenade",
+			"MET_3Rnd_ILLUM_Grenade_Clust",
+			"MET_3Rnd_ILLUM_B_Grenade",
+			"MET_3Rnd_ILLUM_B_Grenade_Clust",
+			"MET_3Rnd_ILLUM_G_Grenade",
+			"MET_3Rnd_ILLUM_G_Grenade_Clust",
+			"MET_3Rnd_ILLUM_R_Grenade",
+			"MET_3Rnd_ILLUM_R_Grenade_Clust",
+			"MET_3Rnd_ILLUM_Y_Grenade",
+			"MET_3Rnd_ILLUM_Y_Grenade_Clust",
+			"MET_3Rnd_ILLUM_O_Grenade",
+			"MET_3Rnd_ILLUM_O_Grenade_Clust",
+			"MET_3Rnd_ILLUM_P_Grenade",
+			"MET_3Rnd_ILLUM_P_Grenade_Clust",
+			"MET_3Rnd_ILLUM_TU_Grenade",
+			"MET_3Rnd_ILLUM_TU_Grenade_Clust",
+			"MET_3Rnd_ILLUM_TE_Grenade",
+			"MET_3Rnd_ILLUM_TE_Grenade_Clust",
+			"MET_3Rnd_ILLUM_IR_Grenade",
+			"MET_3Rnd_ILLUM_IR_Grenade_Clust",
+			"MET_3Rnd_SMKW_Grenade",
+			"MET_3Rnd_SMKB_Grenade",
+			"MET_3Rnd_SMKG_Grenade",
+			"MET_3Rnd_SMKO_Grenade",
+			"MET_3Rnd_SMKP_Grenade",
+			"MET_3Rnd_SMKR_Grenade",
+			"MET_3Rnd_SMKTU_Grenade",
+			"MET_3Rnd_SMKTE_Grenade",
+			"MET_3Rnd_SMKY_Grenade",
+			"MET_6Rnd_HE_Grenade_shell",
+			"MET_6Rnd_Clust_Grenade_shell",
+			"MET_6Rnd_HE_RocketGrenade",
+			"MET_6Rnd_AT_Grenade_shell",
+			"MET_60mm_HE_mag",
+			"MET_60mm_HEAT_mag",
+			"MET_60mm_ClustHE_mag",
+			"MET_60mm_WideClustHE_mag",
+			"MET_Chaingun_Light_Drum_Mag",
+			"MET_Chaingun_AT_Drum_Mag",
+			"MET_Chaingun_HE_Drum_Mag",
+			"MET_Chaingun_Nuke_Drum_Mag"
 		};
 		ammo[]=
 		{
 			"MET_blasterbolt"
+		};
+		requiredAddons[]=
+		{
+			"JLTS_weapons_DC15A",
+			"JLTS_weapons_DC15S",
+			"JLTS_weapons_DC15X",
+			"JLTS_weapons_DC17SA",
+			"JLTS_weapons_DP23",
+			"JLTS_weapons_EPL2",
+			"JLTS_weapons_PLX1",
+			"JLTS_weapons_RPS6",
+			"JLTS_weapons_Z6",
+			"metal_weapons"
 		};
 	};
 };
@@ -161,6 +350,7 @@ class CfgWeapons
 		displayName="[16th] DC-15A MkI (Wood Stock)";
 		descriptionShort="$STR_JLTS_descs_BlasterRifle";
 		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_ui_ca.paa";
+		UiPicture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_ui_ca.paa";
 		model="\MRC\JLTS\weapons\DC15A\DC15A.p3d";
 		hiddenSelections[]=
 		{
@@ -2546,9 +2736,9 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"z\16th\addons\weapons\infantry_weap\data\Z6_co.paa",
-			"z\16th\addons\weapons\infantry_weap\data\Z6_Barrel_co.paa",
-			"z\16th\addons\weapons\infantry_weap\data\Z6_Mag_co.paa"
+			"z\16th\addons\weapons\data\Z6_co.paa",
+			"z\16th\addons\weapons\data\Z6_Barrel_co.paa",
+			"z\16th\addons\weapons\data\Z6_Mag_co.paa"
 		};
 		magazines[]=
 		{
@@ -3051,9 +3241,9 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"z\16th\addons\weapons\infantry_weap\data\Z6_co.paa",
-			"z\16th\addons\weapons\infantry_weap\data\Z6_Barrel_co.paa",
-			"z\16th\addons\weapons\infantry_weap\data\Z6_Mag_co.paa"
+			"z\16th\addons\weapons\data\Z6_co.paa",
+			"z\16th\addons\weapons\data\Z6_Barrel_co.paa",
+			"z\16th\addons\weapons\data\Z6_Mag_co.paa"
 		};
 		magazines[]=
 		{
@@ -11602,7 +11792,7 @@ class CfgMagazines
 		displayName="[16th] DP-23 Energy Cell (Doomsday)";
 		displayNameShort="DP-23 Doomsday";
 		descriptionShort="Doomsday Pellets for the DP-23";
-		picture="z\16th\addons\weapons\infantry_weap\data\3as_doomsday_g.paa";
+		picture="z\16th\addons\weapons\data\3as_doomsday_g.paa";
 		ammo="MET_pellet_doomsday";
 		initSpeed=380;
 		count=5;
@@ -11680,7 +11870,8 @@ class CfgMagazines
 		scope=2;
 		modelSpecial="";
 		modelSpecialIsProxy=0;
-		picture="\3AS\3AS_Weapons\Data\UI\3as_pistol_b.paa";
+		picture="z\16th\addons\weapons\data\ui\met_pistol_dual_b2.paa";
+		UiPicture="z\16th\addons\weapons\data\ui\met_pistol_dual_b2.paa";
 		model="\MRC\JLTS\weapons\DC17SA\DC17SA_mag.p3d";
 		count=100;
 		displayName="[16th] Dual DC-17SA Energy Cell";
@@ -11842,7 +12033,7 @@ class CfgMagazines
 		count=1;
 		displayName="[16th] Grapeshot";
 		displayNameShort="[16th] Grapeshot";
-		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_ap.paa";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_pellets_b.paa";
 		descriptionShort="Fuck that Direction";
 		ammo="MET_GrapeShot_blue";
 		mass=6;
@@ -12349,7 +12540,7 @@ class CfgMagazines
 	class MET_3Rnd_ILLUM_G_Grenade_Clust: MET_ILLUM_G_Grenade_Clust
 	{
 		author="Hazmat";
-		count=1;
+		count=3;
 		displayName="[16th] 3 Round Green Illumination Star Cluster";
 		mass=12;
 	};

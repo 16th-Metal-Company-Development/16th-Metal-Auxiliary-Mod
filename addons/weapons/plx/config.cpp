@@ -22,6 +22,11 @@ class CfgPatches
 			"metal_aa_missile",
 			"metal_ap_missile"
 		};
+		requiredAddons[]=
+		{
+			"JLTS_weapons_PLX1",
+			"JLTS_weapons_RPS6"
+		};
 	};
 };
 class UGL_F;
