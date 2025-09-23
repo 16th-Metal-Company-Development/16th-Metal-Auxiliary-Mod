@@ -38,12 +38,14 @@ class CfgPatches
 			"MET_ATAP_Base",
 			"MET_Uber_LAAT",
 			"MET_LAATCMK2",
-			"MET_Bantha_Mortar",
-			"MET_Bantha_IFV",
-			"MET_Bantha_Transport",
-			"MET_Bantha_MSV",
-			"MET_Bantha_Assault",
-			"MET_Bantha_Cargo",
+			"MET_Bantha_C_IFV",
+			"MET_Bantha_C_Unarmed",
+			"MET_Bantha_C_MG",
+			"MET_Bantha_C_Mortar",
+			"MET_Bantha_C_AA",
+			"MET_Bantha_E_MSV",
+			"MET_Bantha_T_Cargo",
+			"MET_Bantha_T_Assault",
 			"MET_ATTE_Rommel",
 			"MET_BARC",
 			"MET_BARC_SideCar",
@@ -231,111 +233,47 @@ class cfgvehicles
 			};
 		};
 	};
-	class Aux212_Bantha_Base_F: Wheeled_APC_F
+class Optics_Commander_01: Optics_Armored
+{
+	class Wide;
+	class Medium;
+	class Narrow;
+};
+class Optics_Gunner_APC_01: Optics_Armored
+{
+	class Wide;
+	class Medium;
+	class Narrow;
+};
+class Optics_Metal_Bantha_T_Assault_Turret
+{
+	class Wide: RCWSOptics
 	{
-		class ViewPilot;
-		class ViewOptics;
-		class ViewCargo;
-		class Sounds: Sounds
+		initFov="(36 / 120)";
+		minFov="(36 / 120)";
+		maxFov="(36 / 120)";
+		visionMode[]=
 		{
-			class Engine;
-			class Movement;
+			"Normal",
+			"NVG"
 		};
-		class NewTurret;
-		class Turrets
-		{
-			class MainTurret: NewTurret
-			{
-				class ViewOptics;
-				class ViewGunner;
-				class Turrets
-				{
-					class CommanderOptics;
-				};
-			};
-		};
+		gunnerOpticsModel="\A3\weapons_f\reticle\optics_empty";
+		gunnerOpticsEffect[]={};
 	};
-	class Aux212_Bantha_Base: Aux212_Bantha_Base_F
+	class Medium: Wide
 	{
-		class ViewPilot;
-		class ViewOptics;
-		class ViewCargo;
-		class Sounds: Sounds
-		{
-			class Engine;
-			class Movement;
-		};
-		class NewTurret;
-		class Turrets
-		{
-			class MainTurret: NewTurret
-			{
-				class ViewOptics;
-				class ViewGunner;
-				class Turrets
-				{
-					class CommanderOptics;
-				};
-			};
-		};
+		gunnerOpticsModel="\A3\weapons_f\reticle\optics_empty";
+		initFov="(150 * 0.05625 / 120)";
+		minFov="(150 * 0.05625 / 120)";
+		maxFov="(150 * 0.05625 / 120)";
 	};
-	class Aux212_Bantha_C_IFV_Base: Aux212_Bantha_Base
-	{
-		class ViewPilot;
-		class ViewOptics;
-		class ViewCargo;
-		class Sounds: Sounds
-		{
-			class Engine;
-			class Movement;
-		};
-		class NewTurret;
-		class Turrets
-		{
-			class MainTurret: NewTurret
-			{
-				class ViewOptics;
-				class ViewGunner;
-				class Turrets
-				{
-					class CommanderOptics;
-				};
-			};
-		};
-	};
-	class Aux212_Bantha_C_Mortar_Base: Aux212_Bantha_Base_F
-	{
-		class ViewPilot;
-		class ViewOptics;
-		class ViewCargo;
-		class Sounds: Sounds
-		{
-			class Engine;
-			class Movement;
-		};
-		class NewTurret;
-		class Turrets
-		{
-			class MainTurret: NewTurret
-			{
-				class ViewOptics;
-				class ViewGunner;
-				class Turrets
-				{
-					class CommanderOptics;
-				};
-			};
-		};
-	};
-	class Aux212_Bantha_C_Unarmed;
-	class Aux212_Bantha_E_MSV;
-	class Aux212_Bantha_T_Assault;
-	class Aux212_Bantha_T_Cargo;
+};
 	class 3AS_Barc_501;
 	class 3AS_BarcSideCar;
 	class 3AS_ISP;
 	class 3AS_ISP_Transport;
 
+	#include "bantha.hpp"
 	#include "base_vic.hpp"
 	#include "custom_vic.hpp"
 };

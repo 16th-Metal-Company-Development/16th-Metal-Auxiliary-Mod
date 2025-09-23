@@ -13,7 +13,7 @@ class CfgPatches
 		weapons[]={};
 	};
 };
-class CfgFactionClasses
+/*class CfgFactionClasses
 {
 	class BHA_Units
 	{
@@ -62,7 +62,7 @@ class CfgEditorSubcategories
 	};
 	class BHA_Helis
 	{
-		displayName="Helicopters";
+		displayName="Transports";
 	};
 	class BHA_Statics
 	{
@@ -72,7 +72,7 @@ class CfgEditorSubcategories
 	{
 		displayName="Trucks";
 	};
-};
+};*/
 class CfgVehicles
 {
 	class I_Soldier_base_F;
@@ -177,12 +177,20 @@ class CfgVehicles
 		linkedItems[]=
 		{
 			"ItemRadio",
+			"ItemMap",
+			"ItemCompass",
+			"ItemGPS",
+			"G_Bandanna_blk",
 			"MET_Gen2WarbotHead_NoFS",
 			"MET_EliminatorUpArmorVest"
 		};
 		respawnLinkedItems[]=
 		{
 			"ItemRadio",
+			"ItemMap",
+			"ItemCompass",
+			"ItemGPS",
+			"G_Bandanna_blk",
 			"MET_Gen2WarbotHead_NoFS",
 			"MET_EliminatorUpArmorVest"
 		};
@@ -195,9 +203,40 @@ class CfgVehicles
 		reloadSpeed[] = { 0.9, 0.8, 1, 1 }; // Faster reload
 		spotDistance[] = { 1, 1, 1, 1 }; // Good spotting range
 		spotTime[] = { 0.7, 0.8, 1, 1 }; // Faster spotting response*/
-		class EventHandlers
+		/*class EventHandlers
 		{
 			init = "_unit = _this select 0; if (local _unit) then { {_unit setSkill [_x, 1]; } forEach ['aimingAccuracy','aimingShake','aimingSpeed','commanding','courage','general','reloadSpeed','spotDistance','spotTime']; };";
+		};*/
+		class Attributes
+		{
+			// VCOM compatibility: set skill to max via VCOM attributes if present
+			VCOM_AISkill = 1;
+		};
+
+		/*class EventHandlers
+		{
+			init = "_unit = _this select 0; if (local _unit) then { {_unit setSkill [_x, 1]; } forEach ['aimingAccuracy','aimingShake','aimingSpeed','commanding','courage','general','reloadSpeed','spotDistance','spotTime']; if !(isNil 'VCOM_AI_SetSkill') then { [_unit, 1] call VCOM_AI_SetSkill; }; };";
+		};*/
+		/*class EventHandlers
+		{
+			init = "_unit = _this select 0; if (local _unit) then { _unit spawn { sleep 15; {_this setSkill [_x, 1]; } forEach ['aimingAccuracy','aimingShake','aimingSpeed','commanding','courage','general','reloadSpeed','spotDistance','spotTime']; if !(isNil 'VCOM_AI_SetSkill') then { [_this, 1] call VCOM_AI_SetSkill; }; }; };";
+		};*/
+		class CustomSkillScript
+		{
+			init = "_unit = _this select 0; if (local _unit) then { \
+				_unit spawn { \
+					sleep 15; \
+					_unit setSkill ['aimingAccuracy', 1]; \
+					_unit setSkill ['aimingShake', 1]; \
+					_unit setSkill ['aimingSpeed', 1]; \
+					_unit setSkill ['commanding', 1]; \
+					_unit setSkill ['courage', 1]; \
+					_unit setSkill ['general', 1]; \
+					_unit setSkill ['reloadSpeed', 1]; \
+					_unit setSkill ['spotDistance', 1]; \
+					_unit setSkill ['spotTime', 1]; \
+				}; \
+			};";
 		};
 	};
 	class BHA_Initiate_Soldier_Base: I_Soldier_base_F
@@ -297,6 +336,9 @@ class CfgVehicles
 		linkedItems[]=
 		{
 			"ItemRadio",
+			"ItemMap",
+			"ItemCompass",
+			"ItemGPS",
 			"MET_Helmet_WD_Black_VU",
 			"MET_Vest_WD_Medium_Black",
 			"SC_TacGlass"
@@ -304,13 +346,21 @@ class CfgVehicles
 		respawnLinkedItems[]=
 		{
 			"ItemRadio",
+			"ItemMap",
+			"ItemCompass",
+			"ItemGPS",
 			"MET_Helmet_WD_Black_VU",
 			"MET_Vest_WD_Medium_Black",
 			"SC_TacGlass"
 		};
+		class Attributes
+		{
+			// VCOM compatibility: set skill to max via VCOM attributes if present
+			VCOM_AISkill = 0.3;
+		};
 		class EventHandlers
 		{
-			init = "_unit = _this select 0; if (local _unit) then { {_unit setSkill [_x, 0.3]; } forEach ['aimingAccuracy','aimingShake','aimingSpeed','commanding','courage','general','reloadSpeed','spotDistance','spotTime']; };";
+			init = "_unit = _this select 0; if (local _unit) then { {_unit setSkill [_x, 0.3]; } forEach ['aimingAccuracy','aimingShake','aimingSpeed','commanding','courage','general','reloadSpeed','spotDistance','spotTime']; if !(isNil 'VCOM_AI_SetSkill') then { [_unit, 0.3] call VCOM_AI_SetSkill; }; };";
 		};
 	};
 	class BHA_SuicideBot_Soldier_Base: I_Soldier_base_F
@@ -368,8 +418,74 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init = "_unit = _this select 0; if (local _unit) then { _unit spawn { params['_unit']; while {alive _unit} do { private _nearest = objNull; private _minDist = 1e10; { if (side _x isEqualTo west) then { private _dist = _unit distance _x; if (_dist < _minDist) then { _minDist = _dist; _nearest = _x; }; }; } forEach allPlayers; if (!isNull _nearest) then { _unit doMove getPosASL _nearest; _unit forceSpeed 12; }; sleep 1; }; }; _unit addEventHandler ['Killed', { params['_unit']; _pos = getPosATL _unit; 'Bo_GBU12_LGB' createVehicle _pos; }]; };"
+			init = "_unit = _this select 0; if (local _unit) then { \
+				_unit spawn { \
+					params['_unit']; \
+					while {alive _unit} do { \
+						private _nearest = objNull; \
+						private _minDist = 1e10; \
+						{ \
+							if (side _x in [west, east, resistance]) then { \
+								private _dist = _unit distance _x; \
+								if (_dist < _minDist) then { _minDist = _dist; _nearest = _x; }; \
+							}; \
+						} forEach allPlayers; \
+						if (!isNull _nearest) then { \
+							_unit doMove getPosASL _nearest; \
+							_unit forceSpeed 20; \
+							if (_unit distance _nearest < 8) then { \
+								_pos = getPosATL _unit; \
+								'Bo_GBU12_LGB' createVehicle _pos; \
+								_unit setDamage 1; \
+							}; \
+						}; \
+						sleep 0.5; \
+					}; \
+				}; \
+				_unit addEventHandler ['Killed', { \
+					params['_unit']; \
+					_pos = getPosATL _unit; \
+					'Bo_GBU12_LGB' createVehicle _pos; \
+				}]; \
+			};";
 		};
+		/*class EventHandlers
+		{
+			init = "_unit = _this select 0; if (local _unit) then { \
+				_unit spawn { \
+					params['_unit']; \
+					while {alive _unit} do { \
+						private _nearest = objNull; \
+						private _minDist = 1e10; \
+						{ \
+							if (side _x isEqualTo west) then { \
+								private _dist = _unit distance _x; \
+								if (_dist < _minDist) then { _minDist = _dist; _nearest = _x; }; \
+							}; \
+						} forEach allPlayers; \
+						if (!isNull _nearest) then { \
+							_unit doMove getPosASL _nearest; \
+							_unit forceSpeed 20; \
+							if (_unit distance _nearest < 10) then { \
+								_pos = getPosATL _unit; \
+								'Bo_GBU12_LGB' createVehicle _pos; \
+								_unit setDamage 1; \
+							}; \
+						}; \
+						sleep 0.5; \
+					}; \
+				}; \
+				_unit addEventHandler ['Killed', { \
+					params['_unit']; \
+					_pos = getPosATL _unit; \
+					'Bo_GBU12_LGB' createVehicle _pos; \
+				}]; \
+			};";
+		};
+		/*class EventHandlers
+		{
+			init = "_unit = _this select 0; if (local _unit) then { _unit spawn { params['_unit']; while {alive _unit} do { private _nearest = objNull; private _minDist = 1e10; { if (side _x isEqualTo west) then { private _dist = _unit distance _x; if (_dist < _minDist) then { _minDist = _dist; _nearest = _x; }; }; } forEach allPlayers; if (!isNull _nearest) then { _unit doMove getPosASL _nearest; _unit forceSpeed 12; }; sleep 1; }; }; _unit addEventHandler ['Killed', { params['_unit']; _pos = getPosATL _unit; 'Bo_GBU12_LGB' createVehicle _pos; }]; };"
+		};*/
 	};
 	class BHA_Initiates_Initiate: BHA_Initiate_Soldier_Base
 	{

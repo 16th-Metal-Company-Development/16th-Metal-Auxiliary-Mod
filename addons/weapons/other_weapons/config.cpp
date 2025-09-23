@@ -2974,7 +2974,7 @@ class CfgMagazines
 	{
 		scope=2;
 		scopeArsenal=0;
-		author="16th AUX Team";
+		author="16th Aux Team";
 		picture="\3AS\3AS_Weapons\Data\UI\3as_sniper_o.paa";
 		modelSpecialIsProxy=0;
 		count=15;
@@ -2995,6 +2995,42 @@ class CfgMagazines
 		mass=80;
 		initSpeed=100;
 	};
+	class BHA_AA_Dub: 3AS_JLTS_MK39_AA
+	{
+		scope=2;
+		scopeArsenal=0;
+		displayName="HH-12 Dual AA Rocket";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_rocket_aa.paa";
+		ammo = "bha_aa_missile_van";
+		displayNameShort="Mk39 AA";
+		count=2;
+		mass=80;
+		initSpeed=100;
+	};
+	class BHA_AA_OCT: 3AS_JLTS_MK39_AA
+	{
+		scope=2;
+		scopeArsenal=0;
+		displayName="HH-12 Octuple AA Rocket";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_rocket_at.paa";
+		ammo="bha_aa_missile_van";
+		displayNameShort="Mk39 AA";
+		count=8;
+		mass=90;
+		initSpeed=100;
+	};
+	class BHA_AA_DEC: 3AS_JLTS_MK39_AA
+	{
+		scope=2;
+		scopeArsenal=0;
+		displayName="HH-12 Decagoonal AA Rocket";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_rocket_at.paa";
+		ammo="bha_aa_missile_van";
+		displayNameShort="Mk39 AA";
+		count=12;
+		mass=90;
+		initSpeed=100;
+	};
 	class BHA_AP_SINGLE: 3AS_JLTS_MK39_AA
 	{
 		scope=2;
@@ -3007,6 +3043,42 @@ class CfgMagazines
 		mass=80;
 		initSpeed=100;
 	};
+	class BHA_AP_DUB: 3AS_JLTS_MK39_AA
+	{
+		scope=2;
+		scopeArsenal=0;
+		displayName="HH-12 Dual AP Rocket";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_rocket_he.paa";
+		ammo="bha_ap_missile";
+		displayNameShort="Mk44 AP";
+		count=2;
+		mass=80;
+		initSpeed=100;
+	};
+	class BHA_AP_OCT: 3AS_JLTS_MK39_AA
+	{
+		scope=2;
+		scopeArsenal=0;
+		displayName="HH-12 Octuple AP Rocket";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_rocket_he.paa";
+		ammo="bha_ap_missile";
+		displayNameShort="Mk44 AP";
+		count=8;
+		mass=80;
+		initSpeed=100;
+	};
+	class BHA_AP_DEC: 3AS_JLTS_MK39_AA
+	{
+		scope=2;
+		scopeArsenal=0;
+		displayName="HH-12 Decagoonal AP Rocket";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_rocket_he.paa";
+		ammo="bha_ap_missile";
+		displayNameShort="Mk44 AP";
+		count=12;
+		mass=90;
+		initSpeed=100;
+	};
 	class BHA_AT_SINGLE: 3AS_JLTS_MK39_AA
 	{
 		scope=2;
@@ -3016,6 +3088,42 @@ class CfgMagazines
 		ammo="bha_at_wire_missile";
 		displayNameShort="Mk43 AT";
 		count=1;
+		mass=90;
+		initSpeed=100;
+	};
+	class BHA_AT_DUB: 3AS_JLTS_MK39_AA
+	{
+		scope=2;
+		scopeArsenal=0;
+		displayName="HH-12 Dual AT Rocket";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_rocket_at.paa";
+		ammo="bha_at_wire_missile";
+		displayNameShort="Mk43 AT";
+		count=2;
+		mass=90;
+		initSpeed=100;
+	};
+	class BHA_AT_OCT: 3AS_JLTS_MK39_AA
+	{
+		scope=2;
+		scopeArsenal=0;
+		displayName="HH-12 Octuple AT Rocket";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_rocket_at.paa";
+		ammo="bha_at_wire_missile";
+		displayNameShort="Mk43 AT";
+		count=8;
+		mass=90;
+		initSpeed=100;
+	};
+	class BHA_AT_DEC: 3AS_JLTS_MK39_AA
+	{
+		scope=2;
+		scopeArsenal=0;
+		displayName="HH-12 Decagoonal AT Rocket";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_rocket_at.paa";
+		ammo="bha_at_wire_missile";
+		displayNameShort="Mk43 AT";
+		count=12;
 		mass=90;
 		initSpeed=100;
 	};
@@ -3069,29 +3177,25 @@ class CfgLights
 		flareSize=1.5;
 		flareMaxDistance=6000;
 	};
-	class MET_plasmaBlue
-	{
-		color[]={0,0,0,0.5};
-		diffuse[]={7,110,176,1};
-		ambient[]={0,0,0,1};
-		intensity=10000;
-		class Attenuation
-		{
-			start=0;
-			constant=0;
-			linear=0;
-			quadratic=255;
-			hardLimitStart="100";
-			hardLimitEnd=1000;
-		};
-		dayLight=1;
-		useFlare=1;
-		flareSize=1;
-		flareMaxDistance=6000;
-	};
-	class MET_plasmaOrange: MET_plasmaBlue
+	class MET_BlasterboltLight_Blue;
+	class MET_plasmaOrange: MET_BlasterboltLight_Blue
 	{
 		diffuse[]={252,161,0,1};
+	};
+	class MET_plasmaOrange_medium: MET_BlasterboltLight_Blue
+	{
+		diffuse[]={252,161,0,1};
+		intensity=10000;
+	};
+	class MET_plasmaOrange_large: MET_BlasterboltLight_Blue
+	{
+		diffuse[]={252,161,0,1};
+		intensity=10000;
+	};
+	class MET_plasmaOrange_big: MET_BlasterboltLight_Blue
+	{
+		diffuse[]={252,161,0,1};
+		intensity=30000;
 	};
 };
 class MET_Rocket_effect_orange_fly
@@ -3152,6 +3256,42 @@ class MET_plasma_orange
 		intensity=1;
 		interval=1;
 		lifeTime=6;
+	};
+};
+class MET_plasma_medium_orange
+{
+	class MET_Orange_plasma
+	{
+		simulation="light";
+		type="MET_plasmaOrange_Medium";
+		position[]={0,0,0};
+		intensity=1;
+		interval=1;
+		lifeTime=60;
+	};
+};
+class MET_plasma_large_orange
+{
+	class MET_Orange_plasma
+	{
+		simulation="light";
+		type="MET_plasmaOrange_Large";
+		position[]={0,0,0};
+		intensity=1;
+		interval=1;
+		lifeTime=60;
+	};
+};
+class MET_plasma_orange_big
+{
+	class MET_Orange_plasma
+	{
+		simulation="light";
+		type="MET_plasmaOrange_big";
+		position[]={0,0,0};
+		intensity=1;
+		interval=1;
+		lifeTime=60;
 	};
 };
 class CfgAmmo
@@ -3320,6 +3460,7 @@ class CfgAmmo
 		tracerstarttime=0;
 		tracerendtime=10;
 		nvgonly=0;
+		timetolive=8;
 		effectfly="met_plasma_orange";
 		hit=200;
 		indirecthit=25;
@@ -4945,6 +5086,7 @@ class CfgAmmo
 	class MET_pellet_orange: MET_slug_orange
 	{
 		hit=18;
+		timetolive=1.5;
 		simulationStep=9.9999997e-005;
 		cartridge="";
 		submunitionAmmo="MET_pellet_subminition_orange";
@@ -5016,7 +5158,7 @@ class CfgAmmo
 		ace_frag_classes[]={};
 		ace_frag_skip=0;
 		ace_frag_force=0;
-		hit=12000;
+		hit=10000;
 		indirectHit=15;
 		indirectHitRange=1;
 		explosive=1;

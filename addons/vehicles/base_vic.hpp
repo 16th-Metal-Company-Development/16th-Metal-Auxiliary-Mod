@@ -251,7 +251,7 @@ class MET_LAATCMK2: 3AS_LAATC
 };
 
 // Infatry Banthas
-class MET_Bantha_IFV: Aux212_Bantha_C_IFV
+/*class MET_Bantha_IFV: Aux212_Bantha_C_IFV
 {
 	scope=2;
 	scopeCurator = 2;
@@ -471,147 +471,6 @@ class MET_Bantha_Mortar: Aux212_Bantha_C_Mortar_Base
 				1,
 				30
 			};
-			class Turrets: Turrets
-			{
-				class CommanderOptics: CommanderOptics
-				{
-					memoryPointGunnerOutOptics="";
-					memoryPointGunnerOptics="commanderview";
-					commanderUsesPilotView=1;
-					LODTurnedIn=1100;
-					LODTurnedOut=1;
-					gunBeg="Usti hlavne3";
-					gunEnd="Konec hlavne3";
-					memoryPointGun="usti hlavne3";
-					minElev=-25;
-					maxElev=60;
-					initElev=0;
-					minTurn=-360;
-					maxTurn=360;
-					initTurn=0;
-					minCamElev=-90;
-					maxCamElev=90;
-					weapons[]=
-					{
-						"MET_Bantha_Commander_Turret",
-						"Laserdesignator_vehicle"
-					};
-					magazines[]=
-					{
-						"MET_DC15L_Heavy_mag",
-						"MET_DC15L_Heavy_mag",
-						"MET_DC15L_Heavy_mag",
-						"MET_DC15L_Heavy_mag",
-						"MET_DC15L_Heavy_mag",
-						"MET_DC15L_Heavy_mag",
-						"Laserbatteries"
-					};
-					soundServo[]=
-					{
-						"A3\Sounds_F\vehicles\armor\APC\noises\servo_APC_comm",
-						1,
-						1,
-						30
-					};
-					soundServoVertical[]=
-					{
-						"A3\Sounds_F\vehicles\armor\APC\noises\servo_APC_comm",
-						1,
-						1,
-						30
-					};
-					outGunnerMayFire=0;
-					inGunnerMayFire=1;
-					forceHideGunner=0;
-					forceHideCommander=1;
-					usePip=2;
-					gunnerAction="driver_apcwheeled1_out";
-					gunnerInAction="Driver_APC_Wheeled_01_in";
-					gunnerGetInAction="GetInAMV_cargo";
-					gunnerGetOutAction="GetOutLow";
-					gunnerOpticsModel="\A3\weapons_f\reticle\Optics_Commander_02_F";
-					gunnerForceOptics=0;
-					gunnerOutOpticsModel="";
-					gunnerOpticsEffect[]={};
-					isPersonTurret=1;
-					personTurretAction="vehicle_turnout_0";
-					minOutElev=-10;
-					maxOutElev=15;
-					initOutElev=0;
-					minOutTurn=-45;
-					maxOutTurn=90;
-					initOutTurn=0;
-					class ViewGunner: ViewGunner
-					{
-						initAngleX=-10;
-					};
-					class ViewOptics: ViewOptics
-					{
-						initAngleX=0;
-						minAngleX=-30;
-						maxAngleX=30;
-						initAngleY=0;
-						minAngleY=-100;
-						maxAngleY=100;
-						initFov=0.31;
-						minFov=0.034000002;
-						maxFov=0.31;
-						visionMode[]=
-						{
-							"Normal",
-							"TI"
-						};
-						thermalMode[]={2,3};
-					};
-					class OpticsIn: Optics_Commander_01
-					{
-						class Wide: Wide
-						{
-						};
-						class Medium: Medium
-						{
-						};
-						class Narrow: Narrow
-						{
-						};
-					};
-					turretInfoType="RscOptics_MBT_01_commander";
-					showCrewAim=1;
-					startEngine=0;
-					class HitPoints
-					{
-						class HitTurret
-						{
-							armor="0.2,";
-							material=-1;
-							armorComponent="hit_gun_turret";
-							name="hit_gun_turret";
-							passThrough=0;
-							minimalHit=0.1;
-							explosionShielding=0.5;
-							radius=0.5;
-							isTurret=1;
-						};
-						class HitGun
-						{
-							armor=0.2;
-							material=-1;
-							armorComponent="hit_commander_gun";
-							name="hit_commander_gun_Point";
-							passThrough=0;
-							minimalHit=0.1;
-							explosionShielding=0.5;
-							radius=0.5;
-							isGun=1;
-						};
-					};
-					stabilizedInAxes=3;
-					maxHorizontalRotSpeed=1.8;
-					maxVerticalRotSpeed=1.8;
-					gunnerHasFlares=1;
-					viewGunnerInExternal=1;
-				};
-			};
 		};
 	};
 
@@ -778,7 +637,7 @@ class MET_Bantha_Cargo: Aux212_Bantha_T_Cargo
 	{
         init = "_veh = _this select 0; if (local _veh) then { _veh spawn { private _veh = _this; private _cfg = configFile >> 'CfgVehicles' >> typeOf _veh; private _crateList = getArray (_cfg >> 'crateList'); { [_x, _veh] call ace_cargo_fnc_loadItem } forEach _crateList; }; };";
     };
-};
+};*/
 
 // BARCs
 class MET_BARC: 3AS_Barc_501
