@@ -7,15 +7,204 @@ class CfgPatches
 		units[]={};
 		weapons[]=
 		{
-			"metal_dc15a"
+			"MET_DC15A_LEG",
+			"MET_DC15A_LEG_ugl",
+			"MET_DC15A_PLASTIC",
+			"MET_DC15A_ugl_plastic",
+			"MET_DC15A_F",
+			"MET_DC15LE",
+			"MET_DC15A_GL",
+			"MET_DC15S",
+			"MET_DC15S_shield",
+			"MET_DC15S_F",
+			"MET_DC15S_GL",
+			"MET_DC15C_F",
+			"MET_DC15C_GL",
+			"MET_DC15L_F",
+			"MET_Z6",
+			"MET_E15",
+			"MET_Z6_SOF",
+			"MET_DC15X_F",
+			"MET_DC15xm",
+			"MET_Valken38X_F",
+			"MET_DP23_F",
+			"MET_DP12_F",
+			"MET_DP23_GL",
+			"MET_JLTS_DP23",
+			"MET_DP23_shield",
+			"MET_JLTS_DP12",
+			"MET_DP12_shield",
+			"MET_WestarM5_F",
+			"MET_WestarM5_blockii_F",
+			"MET_WestarM5_GL",
+			"MET_WestarM5_blockii_GL",
+			"MET_DC19",
+			"MET_Chaingun",
+			"MET_Chaingun_mkii",
+			"MET_Cinnagaran_Carbine_F",
+			"MET_DC15SMG",
+			"MET_DC15SMG_shield",
+			"MET_MPL_F",
+			"MET_MPL60A_HM",
+			"MET_EPL2",
+			"MET_RPS6_F",
+			"MET_DC17SA",
+			"MET_DC17C",
+			"MET_DC17B",
+			"MET_DC17SA_shield",
+			"MET_DC17B_shield",
+			"MET_DC17S_F",
+			"MET_DC17S_Dual_F",
+			"MET_DC17M_F",
+			"MET_pistol_DC15SA_F"
 		};
 		magazines[]=
 		{
 			"MET_DC15A_mag",
+			"MET_DC15S_mag",
+			"MET_DC19E_mag",
+			"MET_DC15L_mag",
+			"MET_E15_mag",
+			"MET_DC15LE_mag",
+			"MET_CinCar_Mag",
+			"MET_DC15SMG_Mag",
+			"MET_blaster_battery",
+			"MET_blaster_battery_heavy",
+			"MET_blaster_battery_green",
+			"MET_Valken_mag",
+			"MET_DC15x_mag",
+			"MET_DC15xm_mag",
+			"MET_DC15xm_mag_red",
+			"MET_DC15xm_mag_Yellow",
+			"MET_DC15xm_mag_Orange",
+			"MET_DC19X_Mag",
+			"MET_DC15x_at_mag",
+			"MET_DC15xm_at_mag",
+			"MET_slug_mag",
+			"MET_pellet_mag",
+			"MET_Doomsday_mag",
+			"MET_DP12_slug_mag",
+			"MET_DP12_pellet_mag",
+			"MET_blaster_pistolC_battery",
+			"MET_blaster_pistol_battery",
+			"MET_dual_blaster_pistol_battery",
+			"MET_blaster_pistol_Red_battery",
+			"MET_DC17M_mag",
+			"MET_DC17M_Red_mag",
+			"MET_DC17M_Sniper_mag",
+			"MET_DC17M_Sniper_Red_mag",
+			"MET_DC17M_Grenade",
+			"MET_dc15sa_battery",
+			"MET_dc15sa_red_battery",
+			"MET_HE_Grenade",
+			"MET_Clust_Grenade_shell",
+			"MET_Nuclear_Grenade",
+			"MET_AT_Grenade",
+			"MET_Grape_Grenade",
+			"MET_6Rnd_Grape_Grenade",
+			"MET_12Rnd_Grape_Grenade",
+			"MET_ILLUM_Grenade",
+			"MET_ILLUM_Grenade_Clust",
+			"MET_SUN_Grenade",
+			"MET_SUN_Grenade_Clust",
+			"MET_RA_Grenade",
+			"MET_RA_Grenade_Clust",
+			"MET_ILLUM_B_Grenade",
+			"MET_ILLUM_B_Grenade_Clust",
+			"MET_ILLUM_G_Grenade",
+			"MET_ILLUM_G_Grenade_Clust",
+			"MET_ILLUM_R_Grenade",
+			"MET_ILLUM_R_Grenade_Clust",
+			"MET_ILLUM_Y_Grenade",
+			"MET_ILLUM_Y_Grenade_Clust",
+			"MET_ILLUM_O_Grenade",
+			"MET_ILLUM_O_Grenade_Clust",
+			"MET_ILLUM_P_Grenade",
+			"MET_ILLUM_P_Grenade_Clust",
+			"MET_ILLUM_TU_Grenade",
+			"MET_ILLUM_TU_Grenade_Clust",
+			"MET_ILLUM_TE_Grenade",
+			"MET_ILLUM_TE_Grenade_Clust",
+			"MET_ILLUM_IR_Grenade",
+			"MET_ILLUM_IR_Grenade_Clust",
+			"MET_SMKW_Grenade",
+			"MET_SMKB_Grenade",
+			"MET_SMKG_Grenade",
+			"MET_SMKO_Grenade",
+			"MET_SMKP_Grenade",
+			"MET_SMKR_Grenade",
+			"MET_SMKTU_Grenade",
+			"MET_SMKTE_Grenade",
+			"MET_SMKY_Grenade",
+			"MET_SMKW_Clust_Grenade",
+			"MET_SMKB_Clust_Grenade",
+			"MET_SMKG_Clust_Grenade",
+			"MET_SMKO_Clust_Grenade",
+			"MET_SMKP_Clust_Grenade",
+			"MET_SMKR_Clust_Grenade",
+			"MET_SMKTU_Clust_Grenade",
+			"MET_SMKTE_Clust_Grenade",
+			"MET_SMKY_Clust_Grenade",
+			"MET_3Rnd_HE_Grenade_shell",
+			"MET_3Rnd_AT_Grenade_shell",
+			"MET_3Rnd_ILLUM_Grenade",
+			"MET_3Rnd_ILLUM_Grenade_Clust",
+			"MET_3Rnd_ILLUM_B_Grenade",
+			"MET_3Rnd_ILLUM_B_Grenade_Clust",
+			"MET_3Rnd_ILLUM_G_Grenade",
+			"MET_3Rnd_ILLUM_G_Grenade_Clust",
+			"MET_3Rnd_ILLUM_R_Grenade",
+			"MET_3Rnd_ILLUM_R_Grenade_Clust",
+			"MET_3Rnd_ILLUM_Y_Grenade",
+			"MET_3Rnd_ILLUM_Y_Grenade_Clust",
+			"MET_3Rnd_ILLUM_O_Grenade",
+			"MET_3Rnd_ILLUM_O_Grenade_Clust",
+			"MET_3Rnd_ILLUM_P_Grenade",
+			"MET_3Rnd_ILLUM_P_Grenade_Clust",
+			"MET_3Rnd_ILLUM_TU_Grenade",
+			"MET_3Rnd_ILLUM_TU_Grenade_Clust",
+			"MET_3Rnd_ILLUM_TE_Grenade",
+			"MET_3Rnd_ILLUM_TE_Grenade_Clust",
+			"MET_3Rnd_ILLUM_IR_Grenade",
+			"MET_3Rnd_ILLUM_IR_Grenade_Clust",
+			"MET_3Rnd_SMKW_Grenade",
+			"MET_3Rnd_SMKB_Grenade",
+			"MET_3Rnd_SMKG_Grenade",
+			"MET_3Rnd_SMKO_Grenade",
+			"MET_3Rnd_SMKP_Grenade",
+			"MET_3Rnd_SMKR_Grenade",
+			"MET_3Rnd_SMKTU_Grenade",
+			"MET_3Rnd_SMKTE_Grenade",
+			"MET_3Rnd_SMKY_Grenade",
+			"MET_6Rnd_HE_Grenade_shell",
+			"MET_6Rnd_Clust_Grenade_shell",
+			"MET_6Rnd_HE_RocketGrenade",
+			"MET_6Rnd_AT_Grenade_shell",
+			"MET_60mm_HE_mag",
+			"MET_60mm_HEAT_mag",
+			"MET_60mm_ClustHE_mag",
+			"MET_60mm_WideClustHE_mag",
+			"MET_Chaingun_Light_Drum_Mag",
+			"MET_Chaingun_AT_Drum_Mag",
+			"MET_Chaingun_HE_Drum_Mag",
+			"MET_Chaingun_Nuke_Drum_Mag"
 		};
 		ammo[]=
 		{
 			"MET_blasterbolt"
+		};
+		requiredAddons[]=
+		{
+			"JLTS_weapons_DC15A",
+			"JLTS_weapons_DC15S",
+			"JLTS_weapons_DC15X",
+			"JLTS_weapons_DC17SA",
+			"JLTS_weapons_DP23",
+			"JLTS_weapons_EPL2",
+			"JLTS_weapons_PLX1",
+			"JLTS_weapons_RPS6",
+			"JLTS_weapons_Z6",
+			"metal_weapons"
 		};
 	};
 };
@@ -161,6 +350,7 @@ class CfgWeapons
 		displayName="[16th] DC-15A MkI (Wood Stock)";
 		descriptionShort="$STR_JLTS_descs_BlasterRifle";
 		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_ui_ca.paa";
+		UiPicture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_ui_ca.paa";
 		model="\MRC\JLTS\weapons\DC15A\DC15A.p3d";
 		hiddenSelections[]=
 		{
@@ -2546,9 +2736,9 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"z\16th\addons\weapons\infantry_weap\data\Z6_co.paa",
-			"z\16th\addons\weapons\infantry_weap\data\Z6_Barrel_co.paa",
-			"z\16th\addons\weapons\infantry_weap\data\Z6_Mag_co.paa"
+			"z\16th\addons\weapons\data\Z6_co.paa",
+			"z\16th\addons\weapons\data\Z6_Barrel_co.paa",
+			"z\16th\addons\weapons\data\Z6_Mag_co.paa"
 		};
 		magazines[]=
 		{
@@ -2750,6 +2940,268 @@ class CfgWeapons
 			};
 		};
 	};
+	class MET_E15: LMG_Mk200_F
+	{
+		author="Starforge Armory";
+		scope=2;
+		scopeArsenal=2;
+		baseWeapon="MET_E15";
+		reloadAction="";
+		ace_clearJamAction="";
+		autoReload="true";
+		displayName="[16th] E-15 Assault cannon";
+		descriptionShort="Assault Cannon";
+		picture="\SFA_Main\SFA_Weapons_R\E15\data\ui\E15_ui.paa";
+		model="SFA_Main\SFA_Weapons_R\E15\E15.p3d";
+		WBK_UseHeavyWeaponFramework = true;	
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"SFA_Main\SFA_Weapons_R\E15\data\E15_Assault_cannon_camo1_co.paa"
+		};
+		recoil="MET_recoil_Z6";
+		maxZeroing=1200;
+		handAnim[]=
+		{
+			"OFP2_ManSkeleton",
+			"SFA_Main\SFA_Weapons_R\Anim\E15_Assault_Cannon\E15_Assault_Cannon.rtm"
+		};
+		magazines[]=
+		{
+			"MET_E15_mag"
+		};
+		magazineWell[]=
+		{
+			"MET_E15_magwell"
+		};
+		fireLightDiffuse[]={0,0,1};
+		drySound[]=
+		{
+			"z\16th\addons\weapons\infantry_weap\sounds\weapon_dry.ogg",
+			5,
+			1,
+			10
+		};
+		reloadMagazineSound[]=
+		{
+			"z\16th\addons\weapons\infantry_weap\sounds\republic\z-6\Z6_reload.ogg",
+			1.5,
+			1,
+			100
+		};
+		modes[]=
+		{
+			"slowerAuto",
+			"Auto",
+			"fullerAuto",
+			"close",
+			"short",
+			"medium",
+			"far_optic1",
+			"far_optic2"
+		};
+		class manual: Mode_FullAuto
+		{
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				closure1[]={};
+				closure2[]={};
+				soundClosure[]={};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				begin1[]=
+				{
+					"\SFA_Main\SFA_Weapons_R\BoltBlaster\data\SFX\boltblaster.wav",
+					1,
+					1,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+			};
+			reloadTime=0.075000003;
+			dispersion=0.00102;
+			soundContinuous=0;
+			soundBurst=0;
+			minRange=0;
+			minRangeProbab=0.30000001;
+			midRange=5;
+			midRangeProbab=0.69999999;
+			maxRange=10;
+			maxRangeProbab=0.039999999;
+			showToPlayer=1;
+		};
+		class Auto: Mode_FullAuto
+		{
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				closure1[]={};
+				closure2[]={};
+				soundClosure[]={};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				begin1[]=
+				{
+					"SFA_Main\SFA_Weapons_R\E15\data\SFX\E15_Close.wav",
+					1,
+					1,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+			};
+			reloadTime=0.06;
+			dispersion=0.00102;
+			burst=1;
+			soundContinuous="false";
+			soundBurst="true";
+			minRange=2;
+			minRangeProbab=0.5;
+			midRange=100;
+			midRangeProbab=0.075000003;
+			maxRange=10000;
+			maxRangeProbab=0.30000001;
+		};
+		class fullerAuto: Auto
+		{
+			reloadTime=0.0461538462;
+			dispersion=0.00104;
+			textureType="fastAuto";
+			minRangeProbab=0;
+			midRangeProbab=0;
+			maxRangeProbab=0;
+		};
+		class slowerAuto: Auto
+		{
+			reloadTime=0.0857142857;
+			dispersion=0.001;
+			textureType="burst";
+			minRangeProbab=0;
+			midRangeProbab=0;
+			maxRangeProbab=0;
+		};
+		class close: manual
+		{
+			burst=10;
+			aiRateOfFire=0.5;
+			aiRateOfFireDistance=50;
+			minRange=10;
+			minRangeProbab=0.050000001;
+			midRange=20;
+			midRangeProbab=0.69999999;
+			maxRange=50;
+			maxRangeProbab=0.039999999;
+			showToPlayer=0;
+		};
+		class short: close
+		{
+			burst=8;
+			aiRateOfFire=2;
+			aiRateOfFireDistance=300;
+			minRange=50;
+			minRangeProbab=0.050000001;
+			midRange=150;
+			midRangeProbab=0.69999999;
+			maxRange=300;
+			maxRangeProbab=0.039999999;
+		};
+		class medium: close
+		{
+			burst=7;
+			aiRateOfFire=4;
+			aiRateOfFireDistance=600;
+			minRange=200;
+			minRangeProbab=0.050000001;
+			midRange=300;
+			midRangeProbab=0.69999999;
+			maxRange=500;
+			maxRangeProbab=0.1;
+		};
+		class far_optic1: medium
+		{
+			requiredOpticType=1;
+			showToPlayer=0;
+			burst=3;
+			aiRateOfFire=10;
+			aiRateOfFireDistance=1000;
+			minRange=300;
+			minRangeProbab=0.050000001;
+			midRange=500;
+			midRangeProbab=0.40000001;
+			maxRange=650;
+			maxRangeProbab=0.0099999998;
+		};
+		class far_optic2: far_optic1
+		{
+			burst=3;
+			requiredOpticType=2;
+			minRange=400;
+			minRangeProbab=0.050000001;
+			midRange=750;
+			midRangeProbab=0.69999999;
+			maxRange=900;
+			maxRangeProbab=0.0099999998;
+			aiRateOfFire=10;
+			aiRateOfFireDistance=900;
+		};
+		aiDispersionCoefY=24;
+		aiDispersionCoefX=21;
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			mass=270;
+			class CowsSlot: CowsSlot
+			{
+				compatibleItems[]=
+				{
+					"SFA_Holosight_blue"
+				};
+			};
+			class MuzzleSlot: MuzzleSlot
+			{
+				compatibleItems[]={};
+			};
+			class PointerSlot: PointerSlot
+			{
+				compatibleItems[]={};
+			};
+			class UnderBarrelSlot: UnderBarrelSlot
+			{
+				compatibleItems[]={};
+			};
+		};
+		class GunParticles
+		{
+			class FirstEffect
+			{
+				directionName="Konec hlavne";
+				effectName="RifleAssaultCloud";
+				positionName="Usti hlavne";
+			};
+		};
+	};
 	class MET_Z6_SOF: LMG_Mk200_F
 	{
 		JLTS_hasElectronics=1;
@@ -2789,9 +3241,9 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"z\16th\addons\weapons\infantry_weap\data\Z6_co.paa",
-			"z\16th\addons\weapons\infantry_weap\data\Z6_Barrel_co.paa",
-			"z\16th\addons\weapons\infantry_weap\data\Z6_Mag_co.paa"
+			"z\16th\addons\weapons\data\Z6_co.paa",
+			"z\16th\addons\weapons\data\Z6_Barrel_co.paa",
+			"z\16th\addons\weapons\data\Z6_Mag_co.paa"
 		};
 		magazines[]=
 		{
@@ -5549,7 +6001,7 @@ class CfgWeapons
 	/*==============================================================================
 	==Westar M-5 Block II GL
 	==============================================================================*/
-	class MET_WestarM5_blockii_GL: MET_WestarM5_Base_F
+	class MET_WestarM5_blockii_GL: MET_WestarM5_blockii_Base_F
 	{
 		scope=2;
 		displayName="[16th] Westar-M5 Block II GL";
@@ -10667,6 +11119,38 @@ class CfgMagazineWells
 			"MET_blaster_pistol_battery"
 		};
 	};
+	class MET_E15_MagWell
+	{
+		MET_E15_Magazines[]=
+		{
+			"MET_E15_Mag",
+			"MET_DC15L_mag",
+			"MET_DC15A_mag",
+			"MET_CinCar_Mag",
+			"MET_DC15SMG_Mag",
+			"MET_DC15S_mag",
+			"MET_blaster_pistol_battery",
+			"MET_Westar35SA_mag",
+			"MET_blaster_battery_mand",
+			"MET_blaster_battery",
+			"MET_Westar35C_mag",
+			"MET_Westar35S_mag",
+			"3AS_130Rnd_EM50_RedPlasma",
+			"3AS_60Rnd_EM50_RedPlasma",
+			"ls_magazine_e5c",
+			"ls_magazine_e5",
+			"JLTS_E5C_mag",
+			"JLTS_E5",
+			"Aux212_JLTS_E5_Mag",
+			"Aux212_JLTS_E5C_Mag",
+			"3AS_15Rnd_EM20_SE14R_Mag",
+			"ls_magazine_rg4d",
+			"JLTS_RG4D_mag",
+			"MET_D200_Pistol_mag",
+			"MET_DLA13_mag",
+			"MET_EL34_mag"
+		};
+	};
 	class MET_DP23_MagWell
 	{
 		MET_DP23Magazines[]=
@@ -10704,7 +11188,8 @@ class CfgMagazineWells
 			"JLTS_E5_mag",
 			"3AS_60Rnd_EM50_RedPlasma",
 			"DBA_58x42mm_BP87D_x40_mag",
-			"Aux212_JLTS_E5_Mag"
+			"Aux212_JLTS_E5_Mag",
+			"ls_magazine_e5"
 		};
 	};
 	class MET_CinCar_MagWell
@@ -10976,6 +11461,23 @@ class CfgMagazines
 		descriptionShort="Energy cell for the DC-15L";
 		ammo="MET_blasterbolt";
 		mass = 50;
+		tracersEvery=1;
+	};
+	class MET_E15_mag: JLTS_DC15A_mag
+	{
+		JLTS_hasElectronics=1;
+		JLTS_hasEMPProtection=1;
+		author="Hazmat";
+		modelSpecial="";
+		modelSpecialIsProxy=0;
+		picture="\3AS\3AS_Weapons\Data\UI\3as_box_b.paa";
+		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
+		count=250;
+		displayName="[16th] E-15 Energy Cell";
+		displayNameShort="E-15 Energy Cell";
+		descriptionShort="Energy cell for the E-15";
+		ammo="MET_blasterbolt_light_blue";
+		mass = 60;
 		tracersEvery=1;
 	};
 	class MET_DC15LE_mag: JLTS_DC15A_mag
@@ -11290,7 +11792,7 @@ class CfgMagazines
 		displayName="[16th] DP-23 Energy Cell (Doomsday)";
 		displayNameShort="DP-23 Doomsday";
 		descriptionShort="Doomsday Pellets for the DP-23";
-		picture="z\16th\addons\weapons\infantry_weap\data\3as_doomsday_g.paa";
+		picture="z\16th\addons\weapons\data\3as_doomsday_g.paa";
 		ammo="MET_pellet_doomsday";
 		initSpeed=380;
 		count=5;
@@ -11368,7 +11870,8 @@ class CfgMagazines
 		scope=2;
 		modelSpecial="";
 		modelSpecialIsProxy=0;
-		picture="\3AS\3AS_Weapons\Data\UI\3as_pistol_b.paa";
+		picture="z\16th\addons\weapons\data\ui\met_pistol_dual_b2.paa";
+		UiPicture="z\16th\addons\weapons\data\ui\met_pistol_dual_b2.paa";
 		model="\MRC\JLTS\weapons\DC17SA\DC17SA_mag.p3d";
 		count=100;
 		displayName="[16th] Dual DC-17SA Energy Cell";
@@ -11530,7 +12033,7 @@ class CfgMagazines
 		count=1;
 		displayName="[16th] Grapeshot";
 		displayNameShort="[16th] Grapeshot";
-		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_ap.paa";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_pellets_b.paa";
 		descriptionShort="Fuck that Direction";
 		ammo="MET_GrapeShot_blue";
 		mass=6;
@@ -12037,7 +12540,7 @@ class CfgMagazines
 	class MET_3Rnd_ILLUM_G_Grenade_Clust: MET_ILLUM_G_Grenade_Clust
 	{
 		author="Hazmat";
-		count=1;
+		count=3;
 		displayName="[16th] 3 Round Green Illumination Star Cluster";
 		mass=12;
 	};
@@ -13965,6 +14468,12 @@ class CfgAmmo
 		indirectHitRange=0.5;
 		caliber=1.4;
 		timetolive=8;
+	};
+	class MET_blasterbolt_light_blue: MET_blasterbolt
+	{
+		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Blue.p3d";
+		lightcolor[]={0.03,0.43,0.69};
+		effectfly="MET_BlasterBoltGlow_LightBlue_Fly";
 	};
 	class MET_blasterbolt_Red: MET_blasterbolt
 	{

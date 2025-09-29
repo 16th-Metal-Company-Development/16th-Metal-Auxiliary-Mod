@@ -143,7 +143,7 @@ class MET_Ywing_V1: 3AS_BTLB_Bomber
 	editorSubcategory = "metal_co_EdSubCat_Thunder";
 	hiddenselectionstextures[] = 
 	{
-		"3as\3AS_btlb\textures\chasis_shadow_co.paa",
+		"z\16th\addons\vehicles\vics\BTLB\16th_BTLB_CO.paa",
 		"3as\3AS_btlb\data\detail_co.paa",
 		"3as\3AS_btlb\data\interior_co.paa"
 	};

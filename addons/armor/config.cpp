@@ -163,14 +163,14 @@ class CfgWeapons
 				class Head
 				{
 					hitpointName="HitHead";
-					armor=10;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Face
 				{
 					hitpointName="HitFace";
-					armor=10;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 			};
 		};
@@ -205,14 +205,14 @@ class CfgWeapons
 				class Head
 				{
 					hitpointName="HitHead";
-					armor=10;
-					passThrough=0.2;
+					armor=6;
+					passThrough=0.15;
 				};
 				class Face
 				{
 					hitpointName="HitFace";
-					armor=11;
-					passThrough=.3;
+					armor=7;
+					passThrough=.2;
 				};
 			};
 		};
@@ -346,14 +346,14 @@ class CfgWeapons
 				class Head
 				{
 					hitpointName="HitHead";
-					armor=10;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Face
 				{
 					hitpointName="HitFace";
-					armor=10;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 			};
 		};
@@ -389,14 +389,14 @@ class CfgWeapons
 				class Head
 				{
 					hitpointName="HitHead";
-					armor=10;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Face
 				{
 					hitpointName="HitFace";
-					armor=10;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 			};
 		};
@@ -429,14 +429,14 @@ class CfgWeapons
 				class Head
 				{
 					hitpointName="HitHead";
-					armor=10;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Face
 				{
 					hitpointName="HitFace";
-					armor=10;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 			};
 		};
@@ -508,14 +508,14 @@ class CfgWeapons
 				class Head
 				{
 					hitpointName="HitHead";
-					armor=10;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Face
 				{
 					hitpointName="HitFace";
-					armor=10;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 			};
 		};
@@ -1203,14 +1203,14 @@ class CfgWeapons
 				class Head
 				{
 					hitpointName="HitHead";
-					armor=10;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Face
 				{
 					hitpointName="HitFace";
-					armor=10;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 			};
 		};
@@ -1255,14 +1255,14 @@ class CfgWeapons
 				class Head
 				{
 					hitpointName="HitHead";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Face
 				{
 					hitpointName="HitFace";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 			};
 		};
@@ -1307,14 +1307,14 @@ class CfgWeapons
 				class Head
 				{
 					hitpointName="HitHead";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Face
 				{
 					hitpointName="HitFace";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 			};
 		};
@@ -1362,7 +1362,7 @@ class CfgWeapons
 				class Head
 				{
 					hitpointName="HitHead";
-					armor=8;
+					armor=6;
 					passThrough=0.5;
 				};
 			};
@@ -1385,38 +1385,38 @@ class CfgWeapons
 				class Neck
 				{
 					hitpointName="HitNeck";
-					armor=7;
-					passThrough=.3;
+					armor=5;
+					passThrough=.2;
 				};
 				class Chest
 				{
 					hitpointName="HitChest";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Diaphragm
 				{
 					hitpointName="HitDiaphragm";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Pelvis
 				{
 					hitpointName="HitPelvis";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 					depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
 				};
 			};
@@ -1441,38 +1441,38 @@ class CfgWeapons
 				class Neck
 				{
 					hitpointName="HitNeck";
-					armor=7;
-					passThrough=.3;
+					armor=5;
+					passThrough=.2;
 				};
 				class Chest
 				{
 					hitpointName="HitChest";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Diaphragm
 				{
 					hitpointName="HitDiaphragm";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Pelvis
 				{
 					hitpointName="HitPelvis";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 					depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
 				};
 			};
@@ -1496,38 +1496,38 @@ class CfgWeapons
 				class Neck
 				{
 					hitpointName="HitNeck";
-					armor=7;
-					passThrough=.3;
+					armor=5;
+					passThrough=.2;
 				};
 				class Chest
 				{
 					hitpointName="HitChest";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Diaphragm
 				{
 					hitpointName="HitDiaphragm";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Pelvis
 				{
 					hitpointName="HitPelvis";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 					depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
 				};
 			};
@@ -1551,38 +1551,148 @@ class CfgWeapons
 				class Neck
 				{
 					hitpointName="HitNeck";
-					armor=7;
-					passThrough=.3;
+					armor=5;
+					passThrough=.2;
 				};
 				class Chest
 				{
 					hitpointName="HitChest";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Diaphragm
 				{
 					hitpointName="HitDiaphragm";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Pelvis
 				{
 					hitpointName="HitPelvis";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
+					depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
+				};
+			};
+		};
+	};
+	class Aux212_Heavy_Gunner_Vest_Standard
+	{
+		class VestItem;
+	};
+	class MET_Heavy_Gunner_Vest_Standard: Aux212_Heavy_Gunner_Vest_Standard
+	{
+		scope=2;
+		scopeArsenal=2;
+		displayname="[16th] Weapons Squad Armor Plates";
+		class ItemInfo: VestItem
+		{
+			containerClass="Supply100";
+			mass=10;
+			class HitpointsProtectionInfo
+			{
+				class Neck
+				{
+					hitpointName="HitNeck";
+					armor=5;
+					passThrough=.2;
+				};
+				class Chest
+				{
+					hitpointName="HitChest";
+					armor=6;
+					passThrough=.2;
+				};
+				class Diaphragm
+				{
+					hitpointName="HitDiaphragm";
+					armor=6;
+					passThrough=.2;
+				};
+				class Abdomen
+				{
+					hitpointName="HitAbdomen";
+					armor=6;
+					passThrough=.2;
+				};
+				class Pelvis
+				{
+					hitpointName="HitPelvis";
+					armor=6;
+					passThrough=.2;
+				};
+				class Body
+				{
+					hitpointName="HitBody";
+					armor=6;
+					passThrough=.2;
+					depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
+				};
+			};
+		};
+	};
+	class Aux212_Heavy_Gunner_Vest_Team_Leader
+	{
+		class VestItem;
+	};
+	class MET_Heavy_Gunner_Vest_Reaper: Aux212_Heavy_Gunner_Vest_Team_Leader
+	{
+		scope=2;
+		scopeArsenal=2;
+		displayname="[16th] Reaper Armor Plates";
+		class ItemInfo: VestItem
+		{
+			containerClass="Supply100";
+			mass=10;
+			class HitpointsProtectionInfo
+			{
+				class Neck
+				{
+					hitpointName="HitNeck";
+					armor=5;
+					passThrough=.2;
+				};
+				class Chest
+				{
+					hitpointName="HitChest";
+					armor=6;
+					passThrough=.2;
+				};
+				class Diaphragm
+				{
+					hitpointName="HitDiaphragm";
+					armor=6;
+					passThrough=.2;
+				};
+				class Abdomen
+				{
+					hitpointName="HitAbdomen";
+					armor=6;
+					passThrough=.2;
+				};
+				class Pelvis
+				{
+					hitpointName="HitPelvis";
+					armor=6;
+					passThrough=.2;
+				};
+				class Body
+				{
+					hitpointName="HitBody";
+					armor=6;
+					passThrough=.2;
 					depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
 				};
 			};
@@ -1605,38 +1715,38 @@ class CfgWeapons
 				class Neck
 				{
 					hitpointName="HitNeck";
-					armor=7;
-					passThrough=.3;
+					armor=5;
+					passThrough=.2;
 				};
 				class Chest
 				{
 					hitpointName="HitChest";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Diaphragm
 				{
 					hitpointName="HitDiaphragm";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Pelvis
 				{
 					hitpointName="HitPelvis";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 					depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
 				};
 			};
@@ -1659,38 +1769,38 @@ class CfgWeapons
 				class Neck
 				{
 					hitpointName="HitNeck";
-					armor=7;
-					passThrough=.3;
+					armor=5;
+					passThrough=.2;
 				};
 				class Chest
 				{
 					hitpointName="HitChest";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Diaphragm
 				{
 					hitpointName="HitDiaphragm";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Pelvis
 				{
 					hitpointName="HitPelvis";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 					depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
 				};
 			};
@@ -1714,38 +1824,38 @@ class CfgWeapons
 				class Neck
 				{
 					hitpointName="HitNeck";
-					armor=7;
-					passThrough=.3;
+					armor=5;
+					passThrough=.2;
 				};
 				class Chest
 				{
 					hitpointName="HitChest";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Diaphragm
 				{
 					hitpointName="HitDiaphragm";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Pelvis
 				{
 					hitpointName="HitPelvis";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 					depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
 				};
 			};
@@ -1770,38 +1880,38 @@ class CfgWeapons
 				class Neck
 				{
 					hitpointName="HitNeck";
-					armor=7;
-					passThrough=.3;
+					armor=5;
+					passThrough=.2;
 				};
 				class Chest
 				{
 					hitpointName="HitChest";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Diaphragm
 				{
 					hitpointName="HitDiaphragm";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Pelvis
 				{
 					hitpointName="HitPelvis";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 					depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
 				};
 			};
@@ -1825,38 +1935,38 @@ class CfgWeapons
 				class Neck
 				{
 					hitpointName="HitNeck";
-					armor=7;
-					passThrough=.3;
+					armor=5;
+					passThrough=.2;
 				};
 				class Chest
 				{
 					hitpointName="HitChest";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Diaphragm
 				{
 					hitpointName="HitDiaphragm";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Pelvis
 				{
 					hitpointName="HitPelvis";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 					depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
 				};
 			};
@@ -1881,38 +1991,38 @@ class CfgWeapons
 				class Neck
 				{
 					hitpointName="HitNeck";
-					armor=7;
-					passThrough=.3;
+					armor=5;
+					passThrough=.2;
 				};
 				class Chest
 				{
 					hitpointName="HitChest";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Diaphragm
 				{
 					hitpointName="HitDiaphragm";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Pelvis
 				{
 					hitpointName="HitPelvis";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 					depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
 				};
 			};
@@ -1936,38 +2046,38 @@ class CfgWeapons
 				class Neck
 				{
 					hitpointName="HitNeck";
-					armor=7;
-					passThrough=.3;
+					armor=5;
+					passThrough=.2;
 				};
 				class Chest
 				{
 					hitpointName="HitChest";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Diaphragm
 				{
 					hitpointName="HitDiaphragm";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Pelvis
 				{
 					hitpointName="HitPelvis";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 					depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
 				};
 			};
@@ -1992,38 +2102,38 @@ class CfgWeapons
 				class Neck
 				{
 					hitpointName="HitNeck";
-					armor=7;
-					passThrough=.3;
+					armor=5;
+					passThrough=.2;
 				};
 				class Chest
 				{
 					hitpointName="HitChest";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Diaphragm
 				{
 					hitpointName="HitDiaphragm";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Pelvis
 				{
 					hitpointName="HitPelvis";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 					depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
 				};
 			};
@@ -2047,38 +2157,38 @@ class CfgWeapons
 				class Neck
 				{
 					hitpointName="HitNeck";
-					armor=7;
-					passThrough=.3;
+					armor=5;
+					passThrough=.2;
 				};
 				class Chest
 				{
 					hitpointName="HitChest";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Diaphragm
 				{
 					hitpointName="HitDiaphragm";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Pelvis
 				{
 					hitpointName="HitPelvis";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 					depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
 				};
 			};
@@ -2098,45 +2208,45 @@ class CfgWeapons
 				class Neck
 				{
 					hitpointName="HitNeck";
-					armor=7;
-					passThrough=.3;
+					armor=5;
+					passThrough=.2;
 				};
 				class Chest
 				{
 					hitpointName="HitChest";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Diaphragm
 				{
 					hitpointName="HitDiaphragm";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Pelvis
 				{
 					hitpointName="HitPelvis";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 					depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
 				};
 				class Legs
 				{
 					hitpointName="HitLegs";
-					armor=9;
-					passThrough=.3;
+					armor=7;
+					passThrough=.2;
 				};
 			};
 		};
@@ -2159,45 +2269,45 @@ class CfgWeapons
 				class Neck
 				{
 					hitpointName="HitNeck";
-					armor=7;
-					passThrough=.3;
+					armor=5;
+					passThrough=.2;
 				};
 				class Chest
 				{
 					hitpointName="HitChest";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Diaphragm
 				{
 					hitpointName="HitDiaphragm";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Pelvis
 				{
 					hitpointName="HitPelvis";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 					depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
 				};
 				class Legs
 				{
 					hitpointName="HitLegs";
-					armor=9;
-					passThrough=.3;
+					armor=7;
+					passThrough=.2;
 				};
 			};
 		};
@@ -2247,45 +2357,45 @@ class CfgWeapons
 				class Neck
 				{
 					hitpointName="HitNeck";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Chest
 				{
 					hitpointName="HitChest";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Diaphragm
 				{
 					hitpointName="HitDiaphragm";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Pelvis
 				{
 					hitpointName="HitPelvis";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 					depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
 				};
 				class Legs
 				{
 					hitpointName="HitLegs";
 					armor=7;
-					passThrough=.3;
+					passThrough=.2;
 				};
 			};
 		};
@@ -2335,45 +2445,45 @@ class CfgWeapons
 				class Neck
 				{
 					hitpointName="HitNeck";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Chest
 				{
 					hitpointName="HitChest";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Diaphragm
 				{
 					hitpointName="HitDiaphragm";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Pelvis
 				{
 					hitpointName="HitPelvis";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 					depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
 				};
 				class Legs
 				{
 					hitpointName="HitLegs";
-					armor=7;
-					passThrough=.3;
+					armor=5;
+					passThrough=.2;
 				};
 			};
 		};
@@ -2405,45 +2515,45 @@ class CfgWeapons
 				class Neck
 				{
 					hitpointName="HitNeck";
-					armor=10;
-					passThrough=.3;
+					armor=8;
+					passThrough=.2;
 				};
 				class Chest
 				{
 					hitpointName="HitChest";
 					armor=12;
-					passThrough=.3;
+					passThrough=.2;
 				};
 				class Diaphragm
 				{
 					hitpointName="HitDiaphragm";
 					armor=12;
-					passThrough=.3;
+					passThrough=.2;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
 					armor=12;
-					passThrough=.3;
+					passThrough=.2;
 				};
 				class Pelvis
 				{
 					hitpointName="HitPelvis";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
 					armor=12;
-					passThrough=.3;
+					passThrough=.2;
 					depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
 				};
 				class Legs
 				{
 					hitpointName="HitLegs";
-					armor=9;
-					passThrough=.3;
+					armor=7;
+					passThrough=.2;
 				};
 			};
 		};
@@ -2491,45 +2601,45 @@ class CfgWeapons
 				class Neck
 				{
 					hitpointName="HitNeck";
-					armor=7;
-					passThrough=.3;
+					armor=5;
+					passThrough=.2;
 				};
 				class Chest
 				{
 					hitpointName="HitChest";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Diaphragm
 				{
 					hitpointName="HitDiaphragm";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Pelvis
 				{
 					hitpointName="HitPelvis";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
-					armor=8;
-					passThrough=.3;
+					armor=6;
+					passThrough=.2;
 					depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
 				};
 				class Legs
 				{
 					hitpointName="HitLegs";
-					armor=7;
-					passThrough=.3;
+					armor=5;
+					passThrough=.2;
 				};
 			};
 		};
@@ -2572,56 +2682,56 @@ class CfgWeapons
 				class Neck
 				{
 					hitpointName="HitNeck";
-					armor=7;
+					armor=5;
 					passThrough=0.5;
 				};
 				class Legs
 				{
 					hitpointName="HitLegs";
-					armor=10;
-					passThrough=0.30000001;
+					armor=8;
+					passThrough=0.2;
 				};
 				class Arms
 				{
 					hitpointName="HitArms";
-					armor=10;
-					passThrough=0.30000001;
+					armor=8;
+					passThrough=0.2;
 				};
 				class Hands
 				{
 					hitpointName="HitHands";
-					armor=7;
-					passThrough=0.5;
+					armor=5;
+					passThrough=0.4;
 				};
 				class Chest
 				{
 					hitpointName="HitChest";
-					armor=10;
-					passThrough=0.30000001;
+					armor=8;
+					passThrough=0.2;
 				};
 				class Diaphragm
 				{
 					hitpointName="HitDiaphragm";
-					armor=10;
-					passThrough=0.30000001;
+					armor=8;
+					passThrough=0.2;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
-					armor=10;
-					passThrough=0.30000001;
+					armor=8;
+					passThrough=0.2;
 				};
 				class Pelvis
 				{
 					hitpointName="HitPelvis";
-					armor=10;
-					passThrough=0.30000001;
+					armor=8;
+					passThrough=0.2;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
-					armor=10;
-					passThrough=0.30000001;
+					armor=8;
+					passThrough=0.2;
 					depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
 				};
 			};
@@ -3003,56 +3113,56 @@ class CfgWeapons
 				class Neck
 				{
 					hitpointName="HitNeck";
-					armor=7;
+					armor=5;
 					passThrough=0.5;
 				};
 				class Legs
 				{
 					hitpointName="HitLegs";
-					armor=10;
-					passThrough=0.30000001;
+					armor=8;
+					passThrough=0.2;
 				};
 				class Arms
 				{
 					hitpointName="HitArms";
-					armor=10;
-					passThrough=0.30000001;
+					armor=8;
+					passThrough=0.2;
 				};
 				class Hands
 				{
 					hitpointName="HitHands";
-					armor=7;
-					passThrough=0.5;
+					armor=5;
+					passThrough=0.4;
 				};
 				class Chest
 				{
 					hitpointName="HitChest";
-					armor=10;
-					passThrough=0.30000001;
+					armor=8;
+					passThrough=0.2;
 				};
 				class Diaphragm
 				{
 					hitpointName="HitDiaphragm";
-					armor=10;
-					passThrough=0.30000001;
+					armor=8;
+					passThrough=0.2;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
-					armor=10;
-					passThrough=0.30000001;
+					armor=8;
+					passThrough=0.2;
 				};
 				class Pelvis
 				{
 					hitpointName="HitPelvis";
-					armor=10;
-					passThrough=0.30000001;
+					armor=8;
+					passThrough=0.2;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
-					armor=10;
-					passThrough=0.30000001;
+					armor=8;
+					passThrough=0.2;
 					depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
 				};
 			};
@@ -3073,56 +3183,56 @@ class CfgWeapons
 				class Neck
 				{
 					hitpointName="HitNeck";
-					armor=7;
+					armor=5;
 					passThrough=0.5;
 				};
 				class Legs
 				{
 					hitpointName="HitLegs";
-					armor=10;
-					passThrough=0.30000001;
+					armor=8;
+					passThrough=0.2;
 				};
 				class Arms
 				{
 					hitpointName="HitArms";
-					armor=10;
-					passThrough=0.30000001;
+					armor=8;
+					passThrough=0.2;
 				};
 				class Hands
 				{
 					hitpointName="HitHands";
-					armor=7;
-					passThrough=0.5;
+					armor=5;
+					passThrough=0.4;
 				};
 				class Chest
 				{
 					hitpointName="HitChest";
-					armor=10;
-					passThrough=0.30000001;
+					armor=8;
+					passThrough=0.2;
 				};
 				class Diaphragm
 				{
 					hitpointName="HitDiaphragm";
-					armor=10;
-					passThrough=0.30000001;
+					armor=8;
+					passThrough=0.2;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
-					armor=10;
-					passThrough=0.30000001;
+					armor=8;
+					passThrough=0.2;
 				};
 				class Pelvis
 				{
 					hitpointName="HitPelvis";
-					armor=10;
-					passThrough=0.30000001;
+					armor=8;
+					passThrough=0.2;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
-					armor=10;
-					passThrough=0.30000001;
+					armor=8;
+					passThrough=0.2;
 					depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
 				};
 			};
@@ -3143,56 +3253,56 @@ class CfgWeapons
 				class Neck
 				{
 					hitpointName="HitNeck";
-					armor=7;
+					armor=5;
 					passThrough=0.5;
 				};
 				class Legs
 				{
 					hitpointName="HitLegs";
-					armor=10;
-					passThrough=0.30000001;
+					armor=8;
+					passThrough=0.2;
 				};
 				class Arms
 				{
 					hitpointName="HitArms";
-					armor=10;
-					passThrough=0.30000001;
+					armor=8;
+					passThrough=0.2;
 				};
 				class Hands
 				{
 					hitpointName="HitHands";
-					armor=7;
-					passThrough=0.5;
+					armor=5;
+					passThrough=0.4;
 				};
 				class Chest
 				{
 					hitpointName="HitChest";
-					armor=10;
-					passThrough=0.30000001;
+					armor=8;
+					passThrough=0.2;
 				};
 				class Diaphragm
 				{
 					hitpointName="HitDiaphragm";
-					armor=10;
-					passThrough=0.30000001;
+					armor=8;
+					passThrough=0.2;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
-					armor=10;
-					passThrough=0.30000001;
+					armor=8;
+					passThrough=0.2;
 				};
 				class Pelvis
 				{
 					hitpointName="HitPelvis";
-					armor=10;
-					passThrough=0.30000001;
+					armor=8;
+					passThrough=0.2;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
-					armor=10;
-					passThrough=0.30000001;
+					armor=8;
+					passThrough=0.2;
 					depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
 				};
 			};
@@ -3218,56 +3328,56 @@ class CfgWeapons
 				class Neck
 				{
 					hitpointName="HitNeck";
-					armor=7;
+					armor=5;
 					passThrough=0.5;
 				};
 				class Legs
 				{
 					hitpointName="HitLegs";
-					armor=10;
-					passThrough=0.30000001;
+					armor=8;
+					passThrough=0.2;
 				};
 				class Arms
 				{
 					hitpointName="HitArms";
-					armor=10;
-					passThrough=0.30000001;
+					armor=8;
+					passThrough=0.2;
 				};
 				class Hands
 				{
 					hitpointName="HitHands";
-					armor=7;
-					passThrough=0.5;
+					armor=5;
+					passThrough=0.4;
 				};
 				class Chest
 				{
 					hitpointName="HitChest";
-					armor=10;
-					passThrough=0.30000001;
+					armor=8;
+					passThrough=0.2;
 				};
 				class Diaphragm
 				{
 					hitpointName="HitDiaphragm";
-					armor=10;
-					passThrough=0.30000001;
+					armor=8;
+					passThrough=0.2;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
-					armor=10;
-					passThrough=0.30000001;
+					armor=8;
+					passThrough=0.2;
 				};
 				class Pelvis
 				{
 					hitpointName="HitPelvis";
-					armor=10;
-					passThrough=0.30000001;
+					armor=8;
+					passThrough=0.2;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
-					armor=10;
-					passThrough=0.30000001;
+					armor=8;
+					passThrough=0.2;
 					depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
 				};
 			};
@@ -3291,56 +3401,56 @@ class CfgWeapons
 				class Neck
 				{
 					hitpointName="HitNeck";
-					armor=7;
+					armor=5;
 					passThrough=0.5;
 				};
 				class Legs
 				{
 					hitpointName="HitLegs";
-					armor=10;
-					passThrough=0.30000001;
+					armor=8;
+					passThrough=0.2;
 				};
 				class Arms
 				{
 					hitpointName="HitArms";
-					armor=10;
-					passThrough=0.30000001;
+					armor=8;
+					passThrough=0.2;
 				};
 				class Hands
 				{
 					hitpointName="HitHands";
-					armor=7;
-					passThrough=0.5;
+					armor=5;
+					passThrough=0.4;
 				};
 				class Chest
 				{
 					hitpointName="HitChest";
-					armor=10;
-					passThrough=0.30000001;
+					armor=8;
+					passThrough=0.2;
 				};
 				class Diaphragm
 				{
 					hitpointName="HitDiaphragm";
-					armor=10;
-					passThrough=0.30000001;
+					armor=8;
+					passThrough=0.2;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
-					armor=10;
-					passThrough=0.30000001;
+					armor=8;
+					passThrough=0.2;
 				};
 				class Pelvis
 				{
 					hitpointName="HitPelvis";
-					armor=10;
-					passThrough=0.30000001;
+					armor=8;
+					passThrough=0.2;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
-					armor=10;
-					passThrough=0.30000001;
+					armor=8;
+					passThrough=0.2;
 					depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
 				};
 			};
@@ -3364,56 +3474,56 @@ class CfgWeapons
 				class Neck
 				{
 					hitpointName="HitNeck";
-					armor=7;
+					armor=5;
 					passThrough=0.5;
 				};
 				class Legs
 				{
 					hitpointName="HitLegs";
-					armor=10;
-					passThrough=0.30000001;
+					armor=8;
+					passThrough=0.2;
 				};
 				class Arms
 				{
 					hitpointName="HitArms";
-					armor=10;
-					passThrough=0.30000001;
+					armor=8;
+					passThrough=0.2;
 				};
 				class Hands
 				{
 					hitpointName="HitHands";
-					armor=7;
-					passThrough=0.5;
+					armor=5;
+					passThrough=0.4;
 				};
 				class Chest
 				{
 					hitpointName="HitChest";
-					armor=10;
-					passThrough=0.30000001;
+					armor=8;
+					passThrough=0.2;
 				};
 				class Diaphragm
 				{
 					hitpointName="HitDiaphragm";
-					armor=10;
-					passThrough=0.30000001;
+					armor=8;
+					passThrough=0.2;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
-					armor=10;
-					passThrough=0.30000001;
+					armor=8;
+					passThrough=0.2;
 				};
 				class Pelvis
 				{
 					hitpointName="HitPelvis";
-					armor=10;
-					passThrough=0.30000001;
+					armor=8;
+					passThrough=0.2;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
-					armor=10;
-					passThrough=0.30000001;
+					armor=8;
+					passThrough=0.2;
 					depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
 				};
 			};
@@ -3437,56 +3547,56 @@ class CfgWeapons
 				class Neck
 				{
 					hitpointName="HitNeck";
-					armor=7;
+					armor=5;
 					passThrough=0.5;
 				};
 				class Legs
 				{
 					hitpointName="HitLegs";
-					armor=10;
-					passThrough=0.30000001;
+					armor=8;
+					passThrough=0.2;
 				};
 				class Arms
 				{
 					hitpointName="HitArms";
-					armor=10;
-					passThrough=0.30000001;
+					armor=8;
+					passThrough=0.2;
 				};
 				class Hands
 				{
 					hitpointName="HitHands";
-					armor=7;
-					passThrough=0.5;
+					armor=5;
+					passThrough=0.4;
 				};
 				class Chest
 				{
 					hitpointName="HitChest";
-					armor=10;
-					passThrough=0.30000001;
+					armor=8;
+					passThrough=0.2;
 				};
 				class Diaphragm
 				{
 					hitpointName="HitDiaphragm";
-					armor=10;
-					passThrough=0.30000001;
+					armor=8;
+					passThrough=0.2;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
-					armor=10;
-					passThrough=0.30000001;
+					armor=8;
+					passThrough=0.2;
 				};
 				class Pelvis
 				{
 					hitpointName="HitPelvis";
-					armor=10;
-					passThrough=0.30000001;
+					armor=8;
+					passThrough=0.2;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
-					armor=10;
-					passThrough=0.30000001;
+					armor=8;
+					passThrough=0.2;
 					depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
 				};
 			};
@@ -3510,56 +3620,56 @@ class CfgWeapons
 				class Neck
 				{
 					hitpointName="HitNeck";
-					armor=7;
+					armor=5;
 					passThrough=0.5;
 				};
 				class Legs
 				{
 					hitpointName="HitLegs";
-					armor=10;
-					passThrough=0.30000001;
+					armor=8;
+					passThrough=0.2;
 				};
 				class Arms
 				{
 					hitpointName="HitArms";
-					armor=10;
-					passThrough=0.30000001;
+					armor=8;
+					passThrough=0.2;
 				};
 				class Hands
 				{
 					hitpointName="HitHands";
-					armor=7;
-					passThrough=0.5;
+					armor=5;
+					passThrough=0.4;
 				};
 				class Chest
 				{
 					hitpointName="HitChest";
-					armor=10;
-					passThrough=0.30000001;
+					armor=8;
+					passThrough=0.2;
 				};
 				class Diaphragm
 				{
 					hitpointName="HitDiaphragm";
-					armor=10;
-					passThrough=0.30000001;
+					armor=8;
+					passThrough=0.2;
 				};
 				class Abdomen
 				{
 					hitpointName="HitAbdomen";
-					armor=10;
-					passThrough=0.30000001;
+					armor=8;
+					passThrough=0.2;
 				};
 				class Pelvis
 				{
 					hitpointName="HitPelvis";
-					armor=10;
-					passThrough=0.30000001;
+					armor=8;
+					passThrough=0.2;
 				};
 				class Body
 				{
 					hitpointName="HitBody";
-					armor=10;
-					passThrough=0.30000001;
+					armor=8;
+					passThrough=0.2;
 					depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
 				};
 			};
@@ -3891,7 +4001,7 @@ class CfgVehicles
 				armor=1;
 				material=-1;
 				name="face_hub";
-				passThrough=0.30000001;
+				passThrough=0.2;
 				radius=0.079999998;
 				explosionShielding=0.1;
 				minimalHit=0.0099999998;
@@ -3901,7 +4011,7 @@ class CfgVehicles
 				armor=1;
 				material=-1;
 				name="neck";
-				passThrough=0.30000001;
+				passThrough=.2
 				radius=0.1;
 				explosionShielding=0.5;
 				minimalHit=0.0099999998;
@@ -3911,7 +4021,7 @@ class CfgVehicles
 				armor=1;
 				material=-1;
 				name="head";
-				passThrough=0.30000001;
+				passThrough=.2
 				radius=0.2;
 				explosionShielding=0.5;
 				minimalHit=0.0099999998;
@@ -3919,10 +4029,10 @@ class CfgVehicles
 			};
 			class HitPelvis: HitHead
 			{
-				armor=8;
+				armor=6;
 				material=-1;
 				name="pelvis";
-				passThrough=0.30000001;
+				passThrough=.2
 				radius=0.23999999;
 				explosionShielding=3;
 				visual="injury_body";
@@ -3931,10 +4041,10 @@ class CfgVehicles
 			};
 			class HitAbdomen: HitPelvis
 			{
-				armor=8;
+				armor=6;
 				material=-1;
 				name="spine1";
-				passThrough=0.30000001;
+				passThrough=.2
 				radius=0.16;
 				explosionShielding=3;
 				visual="injury_body";
@@ -3942,10 +4052,10 @@ class CfgVehicles
 			};
 			class HitDiaphragm: HitAbdomen
 			{
-				armor=8;
+				armor=6;
 				material=-1;
 				name="spine2";
-				passThrough=0.33000001;
+				passThrough=0.2;
 				radius=0.18000001;
 				explosionShielding=6;
 				visual="injury_body";
@@ -3953,10 +4063,10 @@ class CfgVehicles
 			};
 			class HitChest: HitDiaphragm
 			{
-				armor=8;
+				armor=6;
 				material=-1;
 				name="spine3";
-				passThrough=0.33000001;
+				passThrough=0.2;
 				radius=0.18000001;
 				explosionShielding=6;
 				visual="injury_body";
@@ -3967,7 +4077,7 @@ class CfgVehicles
 				armor=1000;
 				material=-1;
 				name="body";
-				passThrough=1;
+				passThrough=0.2;
 				radius=0;
 				explosionShielding=6;
 				visual="injury_body";
@@ -3976,10 +4086,10 @@ class CfgVehicles
 			};
 			class HitArms: HitBody
 			{
-				armor=8;
+				armor=6;
 				material=-1;
 				name="arms";
-				passThrough=1;
+				passThrough=0.2;
 				radius=0.1;
 				explosionShielding=3;
 				visual="injury_hands";
@@ -3988,10 +4098,10 @@ class CfgVehicles
 			};
 			class HitHands: HitArms
 			{
-				armor=8;
+				armor=6;
 				material=-1;
 				name="hands";
-				passThrough=1;
+				passThrough=0.3;
 				radius=0.1;
 				explosionShielding=1;
 				visual="injury_hands";
@@ -4000,10 +4110,10 @@ class CfgVehicles
 			};
 			class HitLegs: HitHands
 			{
-				armor=8;
+				armor=6;
 				material=-1;
 				name="legs";
-				passThrough=1;
+				passThrough=0.2;
 				radius=0.14;
 				explosionShielding=3;
 				visual="injury_legs";
@@ -4024,10 +4134,10 @@ class CfgVehicles
 			};
 			class HitLeftArm
 			{
-				armor=8;
+				armor=6;
 				material=-1;
 				name="hand_l";
-				passThrough=1;
+				passThrough=0.2
 				radius=0.079999998;
 				explosionShielding=3;
 				visual="injury_hands";
@@ -4039,10 +4149,10 @@ class CfgVehicles
 			};
 			class HitLeftLeg
 			{
-				armor=8;
+				armor=6;
 				material=-1;
 				name="leg_l";
-				passThrough=1;
+				passThrough=0.2
 				radius=0.1;
 				explosionShielding=3;
 				visual="injury_legs";
@@ -5460,7 +5570,7 @@ class CfgVehicles
 				armor=1;
 				material=-1;
 				name="face_hub";
-				passThrough=0.30000001;
+				passThrough=0.2;
 				radius=0.079999998;
 				explosionShielding=0.1;
 				minimalHit=0.0099999998;
@@ -5470,7 +5580,7 @@ class CfgVehicles
 				armor=1;
 				material=-1;
 				name="neck";
-				passThrough=0.30000001;
+				passThrough=.2
 				radius=0.1;
 				explosionShielding=0.5;
 				minimalHit=0.0099999998;
@@ -5480,7 +5590,7 @@ class CfgVehicles
 				armor=1;
 				material=-1;
 				name="head";
-				passThrough=0.30000001;
+				passThrough=.2
 				radius=0.2;
 				explosionShielding=0.5;
 				minimalHit=0.0099999998;
@@ -5488,10 +5598,10 @@ class CfgVehicles
 			};
 			class HitPelvis: HitHead
 			{
-				armor=8;
+				armor=6;
 				material=-1;
 				name="pelvis";
-				passThrough=0.30000001;
+				passThrough=.2
 				radius=0.23999999;
 				explosionShielding=3;
 				visual="injury_body";
@@ -5500,10 +5610,10 @@ class CfgVehicles
 			};
 			class HitAbdomen: HitPelvis
 			{
-				armor=8;
+				armor=6;
 				material=-1;
 				name="spine1";
-				passThrough=0.30000001;
+				passThrough=.2
 				radius=0.16;
 				explosionShielding=3;
 				visual="injury_body";
@@ -5511,10 +5621,10 @@ class CfgVehicles
 			};
 			class HitDiaphragm: HitAbdomen
 			{
-				armor=8;
+				armor=6;
 				material=-1;
 				name="spine2";
-				passThrough=0.33000001;
+				passThrough=0.2;
 				radius=0.18000001;
 				explosionShielding=6;
 				visual="injury_body";
@@ -5522,10 +5632,10 @@ class CfgVehicles
 			};
 			class HitChest: HitDiaphragm
 			{
-				armor=8;
+				armor=6;
 				material=-1;
 				name="spine3";
-				passThrough=0.33000001;
+				passThrough=0.2;
 				radius=0.18000001;
 				explosionShielding=6;
 				visual="injury_body";
@@ -5536,7 +5646,7 @@ class CfgVehicles
 				armor=1000;
 				material=-1;
 				name="body";
-				passThrough=1;
+				passThrough=0.2;
 				radius=0;
 				explosionShielding=6;
 				visual="injury_body";
@@ -5545,10 +5655,10 @@ class CfgVehicles
 			};
 			class HitArms: HitBody
 			{
-				armor=8;
+				armor=6;
 				material=-1;
 				name="arms";
-				passThrough=1;
+				passThrough=0.2;
 				radius=0.1;
 				explosionShielding=3;
 				visual="injury_hands";
@@ -5557,10 +5667,10 @@ class CfgVehicles
 			};
 			class HitHands: HitArms
 			{
-				armor=8;
+				armor=6;
 				material=-1;
 				name="hands";
-				passThrough=1;
+				passThrough=0.3;
 				radius=0.1;
 				explosionShielding=1;
 				visual="injury_hands";
@@ -5569,10 +5679,10 @@ class CfgVehicles
 			};
 			class HitLegs: HitHands
 			{
-				armor=8;
+				armor=6;
 				material=-1;
 				name="legs";
-				passThrough=1;
+				passThrough=0.2;
 				radius=0.14;
 				explosionShielding=3;
 				visual="injury_legs";
@@ -5593,10 +5703,10 @@ class CfgVehicles
 			};
 			class HitLeftArm
 			{
-				armor=8;
+				armor=6;
 				material=-1;
 				name="hand_l";
-				passThrough=1;
+				passThrough=0.2
 				radius=0.079999998;
 				explosionShielding=3;
 				visual="injury_hands";
@@ -5608,10 +5718,10 @@ class CfgVehicles
 			};
 			class HitLeftLeg
 			{
-				armor=8;
+				armor=6;
 				material=-1;
 				name="leg_l";
-				passThrough=1;
+				passThrough=0.2
 				radius=0.1;
 				explosionShielding=3;
 				visual="injury_legs";
@@ -5792,7 +5902,7 @@ class CfgVehicles
 				armor=1;
 				material=-1;
 				name="face_hub";
-				passThrough=0.30000001;
+				passThrough=0.2;
 				radius=0.079999998;
 				explosionShielding=0.1;
 				minimalHit=0.0099999998;
@@ -5802,7 +5912,7 @@ class CfgVehicles
 				armor=1;
 				material=-1;
 				name="neck";
-				passThrough=0.30000001;
+				passThrough=.2
 				radius=0.1;
 				explosionShielding=0.5;
 				minimalHit=0.0099999998;
@@ -5812,7 +5922,7 @@ class CfgVehicles
 				armor=1;
 				material=-1;
 				name="head";
-				passThrough=0.30000001;
+				passThrough=.2
 				radius=0.2;
 				explosionShielding=0.5;
 				minimalHit=0.0099999998;
@@ -5820,10 +5930,10 @@ class CfgVehicles
 			};
 			class HitPelvis: HitHead
 			{
-				armor=8;
+				armor=6;
 				material=-1;
 				name="pelvis";
-				passThrough=0.30000001;
+				passThrough=.2
 				radius=0.23999999;
 				explosionShielding=3;
 				visual="injury_body";
@@ -5832,10 +5942,10 @@ class CfgVehicles
 			};
 			class HitAbdomen: HitPelvis
 			{
-				armor=8;
+				armor=6;
 				material=-1;
 				name="spine1";
-				passThrough=0.30000001;
+				passThrough=.2
 				radius=0.16;
 				explosionShielding=3;
 				visual="injury_body";
@@ -5843,10 +5953,10 @@ class CfgVehicles
 			};
 			class HitDiaphragm: HitAbdomen
 			{
-				armor=8;
+				armor=6;
 				material=-1;
 				name="spine2";
-				passThrough=0.33000001;
+				passThrough=0.2;
 				radius=0.18000001;
 				explosionShielding=6;
 				visual="injury_body";
@@ -5854,10 +5964,10 @@ class CfgVehicles
 			};
 			class HitChest: HitDiaphragm
 			{
-				armor=8;
+				armor=6;
 				material=-1;
 				name="spine3";
-				passThrough=0.33000001;
+				passThrough=0.2;
 				radius=0.18000001;
 				explosionShielding=6;
 				visual="injury_body";
@@ -5868,7 +5978,7 @@ class CfgVehicles
 				armor=1000;
 				material=-1;
 				name="body";
-				passThrough=1;
+				passThrough=0.2;
 				radius=0;
 				explosionShielding=6;
 				visual="injury_body";
@@ -5877,10 +5987,10 @@ class CfgVehicles
 			};
 			class HitArms: HitBody
 			{
-				armor=8;
+				armor=6;
 				material=-1;
 				name="arms";
-				passThrough=1;
+				passThrough=0.2;
 				radius=0.1;
 				explosionShielding=3;
 				visual="injury_hands";
@@ -5889,10 +5999,10 @@ class CfgVehicles
 			};
 			class HitHands: HitArms
 			{
-				armor=8;
+				armor=6;
 				material=-1;
 				name="hands";
-				passThrough=1;
+				passThrough=0.3;
 				radius=0.1;
 				explosionShielding=1;
 				visual="injury_hands";
@@ -5901,10 +6011,10 @@ class CfgVehicles
 			};
 			class HitLegs: HitHands
 			{
-				armor=8;
+				armor=6;
 				material=-1;
 				name="legs";
-				passThrough=1;
+				passThrough=0.2;
 				radius=0.14;
 				explosionShielding=3;
 				visual="injury_legs";
@@ -5925,10 +6035,10 @@ class CfgVehicles
 			};
 			class HitLeftArm
 			{
-				armor=8;
+				armor=6;
 				material=-1;
 				name="hand_l";
-				passThrough=1;
+				passThrough=0.2
 				radius=0.079999998;
 				explosionShielding=3;
 				visual="injury_hands";
@@ -5940,10 +6050,10 @@ class CfgVehicles
 			};
 			class HitLeftLeg
 			{
-				armor=8;
+				armor=6;
 				material=-1;
 				name="leg_l";
-				passThrough=1;
+				passThrough=0.2
 				radius=0.1;
 				explosionShielding=3;
 				visual="injury_legs";
@@ -6124,7 +6234,7 @@ class CfgVehicles
 				armor=1;
 				material=-1;
 				name="face_hub";
-				passThrough=0.30000001;
+				passThrough=0.2;
 				radius=0.079999998;
 				explosionShielding=0.1;
 				minimalHit=0.0099999998;
@@ -6134,7 +6244,7 @@ class CfgVehicles
 				armor=1;
 				material=-1;
 				name="neck";
-				passThrough=0.30000001;
+				passThrough=.2
 				radius=0.1;
 				explosionShielding=0.5;
 				minimalHit=0.0099999998;
@@ -6144,7 +6254,7 @@ class CfgVehicles
 				armor=1;
 				material=-1;
 				name="head";
-				passThrough=0.30000001;
+				passThrough=.2
 				radius=0.2;
 				explosionShielding=0.5;
 				minimalHit=0.0099999998;
@@ -6152,10 +6262,10 @@ class CfgVehicles
 			};
 			class HitPelvis: HitHead
 			{
-				armor=8;
+				armor=6;
 				material=-1;
 				name="pelvis";
-				passThrough=0.30000001;
+				passThrough=.2
 				radius=0.23999999;
 				explosionShielding=3;
 				visual="injury_body";
@@ -6164,10 +6274,10 @@ class CfgVehicles
 			};
 			class HitAbdomen: HitPelvis
 			{
-				armor=8;
+				armor=6;
 				material=-1;
 				name="spine1";
-				passThrough=0.30000001;
+				passThrough=.2
 				radius=0.16;
 				explosionShielding=3;
 				visual="injury_body";
@@ -6175,10 +6285,10 @@ class CfgVehicles
 			};
 			class HitDiaphragm: HitAbdomen
 			{
-				armor=8;
+				armor=6;
 				material=-1;
 				name="spine2";
-				passThrough=0.33000001;
+				passThrough=0.2;
 				radius=0.18000001;
 				explosionShielding=6;
 				visual="injury_body";
@@ -6186,10 +6296,10 @@ class CfgVehicles
 			};
 			class HitChest: HitDiaphragm
 			{
-				armor=8;
+				armor=6;
 				material=-1;
 				name="spine3";
-				passThrough=0.33000001;
+				passThrough=0.2;
 				radius=0.18000001;
 				explosionShielding=6;
 				visual="injury_body";
@@ -6200,7 +6310,7 @@ class CfgVehicles
 				armor=1000;
 				material=-1;
 				name="body";
-				passThrough=1;
+				passThrough=0.2;
 				radius=0;
 				explosionShielding=6;
 				visual="injury_body";
@@ -6209,10 +6319,10 @@ class CfgVehicles
 			};
 			class HitArms: HitBody
 			{
-				armor=8;
+				armor=6;
 				material=-1;
 				name="arms";
-				passThrough=1;
+				passThrough=0.2;
 				radius=0.1;
 				explosionShielding=3;
 				visual="injury_hands";
@@ -6221,10 +6331,10 @@ class CfgVehicles
 			};
 			class HitHands: HitArms
 			{
-				armor=8;
+				armor=6;
 				material=-1;
 				name="hands";
-				passThrough=1;
+				passThrough=0.3;
 				radius=0.1;
 				explosionShielding=1;
 				visual="injury_hands";
@@ -6233,10 +6343,10 @@ class CfgVehicles
 			};
 			class HitLegs: HitHands
 			{
-				armor=8;
+				armor=6;
 				material=-1;
 				name="legs";
-				passThrough=1;
+				passThrough=0.2;
 				radius=0.14;
 				explosionShielding=3;
 				visual="injury_legs";
@@ -6257,10 +6367,10 @@ class CfgVehicles
 			};
 			class HitLeftArm
 			{
-				armor=8;
+				armor=6;
 				material=-1;
 				name="hand_l";
-				passThrough=1;
+				passThrough=0.2
 				radius=0.079999998;
 				explosionShielding=3;
 				visual="injury_hands";
@@ -6272,10 +6382,10 @@ class CfgVehicles
 			};
 			class HitLeftLeg
 			{
-				armor=8;
+				armor=6;
 				material=-1;
 				name="leg_l";
-				passThrough=1;
+				passThrough=0.2
 				radius=0.1;
 				explosionShielding=3;
 				visual="injury_legs";
@@ -6456,7 +6566,7 @@ class CfgVehicles
 				armor=1;
 				material=-1;
 				name="face_hub";
-				passThrough=0.30000001;
+				passThrough=0.2;
 				radius=0.079999998;
 				explosionShielding=0.1;
 				minimalHit=0.0099999998;
@@ -6466,7 +6576,7 @@ class CfgVehicles
 				armor=1;
 				material=-1;
 				name="neck";
-				passThrough=0.30000001;
+				passThrough=.2
 				radius=0.1;
 				explosionShielding=0.5;
 				minimalHit=0.0099999998;
@@ -6476,7 +6586,7 @@ class CfgVehicles
 				armor=1;
 				material=-1;
 				name="head";
-				passThrough=0.30000001;
+				passThrough=.2
 				radius=0.2;
 				explosionShielding=0.5;
 				minimalHit=0.0099999998;
@@ -6484,10 +6594,10 @@ class CfgVehicles
 			};
 			class HitPelvis: HitHead
 			{
-				armor=8;
+				armor=6;
 				material=-1;
 				name="pelvis";
-				passThrough=0.30000001;
+				passThrough=.2
 				radius=0.23999999;
 				explosionShielding=3;
 				visual="injury_body";
@@ -6496,10 +6606,10 @@ class CfgVehicles
 			};
 			class HitAbdomen: HitPelvis
 			{
-				armor=8;
+				armor=6;
 				material=-1;
 				name="spine1";
-				passThrough=0.30000001;
+				passThrough=.2
 				radius=0.16;
 				explosionShielding=3;
 				visual="injury_body";
@@ -6507,10 +6617,10 @@ class CfgVehicles
 			};
 			class HitDiaphragm: HitAbdomen
 			{
-				armor=8;
+				armor=6;
 				material=-1;
 				name="spine2";
-				passThrough=0.33000001;
+				passThrough=0.2;
 				radius=0.18000001;
 				explosionShielding=6;
 				visual="injury_body";
@@ -6518,10 +6628,10 @@ class CfgVehicles
 			};
 			class HitChest: HitDiaphragm
 			{
-				armor=8;
+				armor=6;
 				material=-1;
 				name="spine3";
-				passThrough=0.33000001;
+				passThrough=0.2;
 				radius=0.18000001;
 				explosionShielding=6;
 				visual="injury_body";
@@ -6532,7 +6642,7 @@ class CfgVehicles
 				armor=1000;
 				material=-1;
 				name="body";
-				passThrough=1;
+				passThrough=0.2;
 				radius=0;
 				explosionShielding=6;
 				visual="injury_body";
@@ -6541,10 +6651,10 @@ class CfgVehicles
 			};
 			class HitArms: HitBody
 			{
-				armor=8;
+				armor=6;
 				material=-1;
 				name="arms";
-				passThrough=1;
+				passThrough=0.2;
 				radius=0.1;
 				explosionShielding=3;
 				visual="injury_hands";
@@ -6553,10 +6663,10 @@ class CfgVehicles
 			};
 			class HitHands: HitArms
 			{
-				armor=8;
+				armor=6;
 				material=-1;
 				name="hands";
-				passThrough=1;
+				passThrough=0.3;
 				radius=0.1;
 				explosionShielding=1;
 				visual="injury_hands";
@@ -6565,10 +6675,10 @@ class CfgVehicles
 			};
 			class HitLegs: HitHands
 			{
-				armor=8;
+				armor=6;
 				material=-1;
 				name="legs";
-				passThrough=1;
+				passThrough=0.2;
 				radius=0.14;
 				explosionShielding=3;
 				visual="injury_legs";
@@ -6589,10 +6699,10 @@ class CfgVehicles
 			};
 			class HitLeftArm
 			{
-				armor=8;
+				armor=6;
 				material=-1;
 				name="hand_l";
-				passThrough=1;
+				passThrough=0.2
 				radius=0.079999998;
 				explosionShielding=3;
 				visual="injury_hands";
@@ -6604,10 +6714,10 @@ class CfgVehicles
 			};
 			class HitLeftLeg
 			{
-				armor=8;
+				armor=6;
 				material=-1;
 				name="leg_l";
-				passThrough=1;
+				passThrough=0.2
 				radius=0.1;
 				explosionShielding=3;
 				visual="injury_legs";
@@ -6788,7 +6898,7 @@ class CfgVehicles
 				armor=1;
 				material=-1;
 				name="face_hub";
-				passThrough=0.30000001;
+				passThrough=0.2;
 				radius=0.079999998;
 				explosionShielding=0.1;
 				minimalHit=0.0099999998;
@@ -6798,7 +6908,7 @@ class CfgVehicles
 				armor=1;
 				material=-1;
 				name="neck";
-				passThrough=0.30000001;
+				passThrough=.2
 				radius=0.1;
 				explosionShielding=0.5;
 				minimalHit=0.0099999998;
@@ -6808,7 +6918,7 @@ class CfgVehicles
 				armor=1;
 				material=-1;
 				name="head";
-				passThrough=0.30000001;
+				passThrough=.2
 				radius=0.2;
 				explosionShielding=0.5;
 				minimalHit=0.0099999998;
@@ -6816,10 +6926,10 @@ class CfgVehicles
 			};
 			class HitPelvis: HitHead
 			{
-				armor=8;
+				armor=6;
 				material=-1;
 				name="pelvis";
-				passThrough=0.30000001;
+				passThrough=.2
 				radius=0.23999999;
 				explosionShielding=3;
 				visual="injury_body";
@@ -6828,10 +6938,10 @@ class CfgVehicles
 			};
 			class HitAbdomen: HitPelvis
 			{
-				armor=8;
+				armor=6;
 				material=-1;
 				name="spine1";
-				passThrough=0.30000001;
+				passThrough=.2
 				radius=0.16;
 				explosionShielding=3;
 				visual="injury_body";
@@ -6839,10 +6949,10 @@ class CfgVehicles
 			};
 			class HitDiaphragm: HitAbdomen
 			{
-				armor=8;
+				armor=6;
 				material=-1;
 				name="spine2";
-				passThrough=0.33000001;
+				passThrough=0.2;
 				radius=0.18000001;
 				explosionShielding=6;
 				visual="injury_body";
@@ -6850,10 +6960,10 @@ class CfgVehicles
 			};
 			class HitChest: HitDiaphragm
 			{
-				armor=8;
+				armor=6;
 				material=-1;
 				name="spine3";
-				passThrough=0.33000001;
+				passThrough=0.2;
 				radius=0.18000001;
 				explosionShielding=6;
 				visual="injury_body";
@@ -6864,7 +6974,7 @@ class CfgVehicles
 				armor=1000;
 				material=-1;
 				name="body";
-				passThrough=1;
+				passThrough=0.2;
 				radius=0;
 				explosionShielding=6;
 				visual="injury_body";
@@ -6873,10 +6983,10 @@ class CfgVehicles
 			};
 			class HitArms: HitBody
 			{
-				armor=8;
+				armor=6;
 				material=-1;
 				name="arms";
-				passThrough=1;
+				passThrough=0.2;
 				radius=0.1;
 				explosionShielding=3;
 				visual="injury_hands";
@@ -6885,10 +6995,10 @@ class CfgVehicles
 			};
 			class HitHands: HitArms
 			{
-				armor=8;
+				armor=6;
 				material=-1;
 				name="hands";
-				passThrough=1;
+				passThrough=0.3;
 				radius=0.1;
 				explosionShielding=1;
 				visual="injury_hands";
@@ -6897,10 +7007,10 @@ class CfgVehicles
 			};
 			class HitLegs: HitHands
 			{
-				armor=8;
+				armor=6;
 				material=-1;
 				name="legs";
-				passThrough=1;
+				passThrough=0.2;
 				radius=0.14;
 				explosionShielding=3;
 				visual="injury_legs";
@@ -6921,10 +7031,10 @@ class CfgVehicles
 			};
 			class HitLeftArm
 			{
-				armor=8;
+				armor=6;
 				material=-1;
 				name="hand_l";
-				passThrough=1;
+				passThrough=0.2
 				radius=0.079999998;
 				explosionShielding=3;
 				visual="injury_hands";
@@ -6936,10 +7046,10 @@ class CfgVehicles
 			};
 			class HitLeftLeg
 			{
-				armor=8;
+				armor=6;
 				material=-1;
 				name="leg_l";
-				passThrough=1;
+				passThrough=0.2
 				radius=0.1;
 				explosionShielding=3;
 				visual="injury_legs";
@@ -7143,7 +7253,7 @@ class CfgVehicles
 		maximumLoad=300;
 	};
 	class Aux212_ARC_Backpack;
-	class MET_ARC_Backpack: Aux212_ARC_Backpack
+	class MET_ARC_Backpack_212: Aux212_ARC_Backpack
 	{
 		author="Hazmat";
 		displayName="[16th] ARC Backpack";
@@ -7157,6 +7267,26 @@ class CfgVehicles
 		displayName="[16th] ARC Backpack (JLTS)";
 		scope=2;
 		maximumLoad=750;
+	};
+	class B_Kitbag_rgr;
+	class MET_ARC_Backpack: B_Kitbag_rgr
+	{
+		author = "Hazmat";
+		scope = 2;
+		maximumload = 750;
+		displayName = "[16th] ARC Backpack";
+		model = "z\16th\addons\armor\ARC_Backpack.p3d";
+		picture = "z\16th\addons\armor\data\UI\ARC_Backpack_UI_ca.paa";
+		hiddenSelections[] = {"camo1"};
+		hiddenSelectionsTextures[] = {"z\16th\addons\armor\data\gear\backpacks\ARC_Backpack_CO.paa"};
+		hiddenSelectionsMaterials[] = {"z\16th\addons\armor\data\gear\backpacks\ARC_Backpack.rvmat"};
+		containerClass = "Supply250";
+		tf_dialogUpdate = "call TFAR_fnc_updateLRDialogToChannel;";
+		tf_hasLRradio = 1;
+		tf_encryptionCode = "tf_west_radio_code";
+		tf_dialog = "JLTS_clone_rto_radio_dialog";
+		tf_subtype = "digital_lr";
+		tf_range = 35000;
 	};
 	class JLTS_Clone_jumppack_JT12;
 	class jetpack_16th: JLTS_Clone_jumppack_JT12
