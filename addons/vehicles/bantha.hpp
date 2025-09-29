@@ -3639,11 +3639,13 @@
 		threat[]={1,1,0.30000001};
 		tas_canBlift=1;
 		tas_liftVars="[[[[0,-2,-4.3]]], [0.4], [-0.3]]";
+
 		class EventHandlers: EventHandlers
 		{
 			fired="[_this select 0,_this select 6,'missile_move','MissileBase'] call BIS_fnc_missileLaunchPositionFix; _this call (uinamespace getvariable 'BIS_fnc_effectFired');";
 		};
-		#include "vics\Bantha\Bantha_MSVInventory.hpp"
+		
+		#include "vics\Bantha\Bantha_CargoInventory.hpp"
 	};
 	class MET_Bantha_T_Cargo: MET_Bantha_T_Cargo_Base
 	{
@@ -3660,6 +3662,19 @@
 		{
 			"212th\Vehicles\212th_APC02\Data\Textures\Bantha_Master\Bantha_Wheel_Co.paa",
 			"212th\Vehicles\212th_APC02\Data\Textures\Bantha_T\Bantha_T_Cargo\Bantha_T_Cargo_Body_Co.paa"
+		};
+
+		ace_cargo_hasCargo = 1;
+		ace_cargo_space = 6;
+		crateList[] = {
+        	"Box_MET_Ammo",
+        	"Box_MET_Medical",
+        	"Box_MET_Rockets"
+    	};
+
+		class EventHandlers: EventHandlers
+		{
+			init = "_veh = _this select 0; if (local _veh) then { _veh spawn { private _veh = _this; private _cfg = configFile >> 'CfgVehicles' >> typeOf _veh; private _crateList = getArray (_cfg >> 'crateList'); { [_x, _veh] call ace_cargo_fnc_loadItem } forEach _crateList; }; };";
 		};
 	};
 	class MET_Bantha_T_Assault_Base: MET_Bantha_Base
