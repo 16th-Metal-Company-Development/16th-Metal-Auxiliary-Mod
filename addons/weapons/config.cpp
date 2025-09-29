@@ -23,8 +23,8 @@ class CfgPatches
 			"JLTS_weapons_EPL2",
 			"JLTS_weapons_PLX1",
 			"JLTS_weapons_RPS6",
-			"JLTS_weapons_Z6",
-            "metal_texturesaregay"
+			"JLTS_weapons_Z6"//,
+            //"metal_texturesaregay"
 		};
 	};
 };
