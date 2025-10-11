@@ -5,7 +5,7 @@ class CfgPatches
 		units[] = { "MET_MLA_Rifleman_E5","MET_MLA_Rifleman_DC15S","MET_MLA_Autorifleman_DC15L","MET_MLA_Autorifleman_E5C","MET_MLA_Marksman_DC15X","MET_MLA_Marksman_E5S","MET_MLA_Grenadier","MET_MLA_Light_AntiTank_E60R","MET_MLA_Light_AntiTank_RPS6","MET_MLA_Crewman","MET_MLA_AAT","MET_MLA_ISP" };
 		weapons[] = { "MET_MLA_DC15L","MET_MLA_DC15X" };
 		requiredVersion = 0.1;
-		requiredAddons[] = { "ace_flashlights","ace_maptools","LF_Medicial_Pack","kat_airway","ace_medical_treatment","A3_Weapons_F","ls_radios","cTab","212th_Equipment","3AS_Weapons_E5","A3_expEden_characters","A3_expEden_Characters_Vests","A3_Characters_F_Globe_Headgear","A3_Characters_F","jmm_miscUnitsV2","3AS_Weapons_Republic_DC15L","JLTS_weapons_E5C","3AS_Weapons_Republic_DC15X","A3_Characters_F_Orange_Headgear","3AS_Weapons_E5S","3AS_Weapons_Republic_DC15S","ls_weapons_eseries","3AS_Weapons_Republic_DC17S" };
+		requiredAddons[] = { "ace_flashlights","ace_maptools","LF_Medicial_Pack","ace_medical_treatment","A3_Weapons_F","ls_radios","cTab","212th_Equipment","3AS_Weapons_E5","A3_expEden_characters","A3_expEden_Characters_Vests","A3_Characters_F_Globe_Headgear","A3_Characters_F","jmm_miscUnitsV2","3AS_Weapons_Republic_DC15L","JLTS_weapons_E5C","3AS_Weapons_Republic_DC15X","A3_Characters_F_Orange_Headgear","3AS_Weapons_E5S","3AS_Weapons_Republic_DC15S","ls_weapons_eseries","3AS_Weapons_Republic_DC17S" };
 	};
 };
 
