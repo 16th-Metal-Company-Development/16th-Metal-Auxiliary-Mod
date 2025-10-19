@@ -15083,6 +15083,12 @@ class CfgAmmo
 		effectfly="MET_BlasterBoltGlow_Blue_Fly";
 		maxSpeed=1000;
 	};
+	class MET_blasterbolt_br: MET_blasterbolt_br
+	{
+		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Red.p3d";
+		effectfly="MET_BlasterBoltGlow_Red_Fly";
+		lightcolor[]={1,0,0};
+	};
 	class MET_blasterbolt_br_Red: MET_blasterbolt_br
 	{
 		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Red.p3d";
