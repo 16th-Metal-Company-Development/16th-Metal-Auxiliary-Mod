@@ -967,9 +967,9 @@ class CfgWeapons
 		displayName="[16th] Maple's Helmet";
 		hiddenSelectionsTextures[]=
 		{
-			"z\16th\addons\armor\data\custom\maple_helmet_co.paa"
+			"z\16th\addons\armor\data\custom\maple_helmet_new_co.paa"
 		};
-	};
+	};	
 	class helmet_16th_maple_arf: helmet_16th_arf
 	{
 		scope=2;
