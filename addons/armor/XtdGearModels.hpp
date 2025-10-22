@@ -172,4 +172,26 @@ class XtdGearModels {
             };
         };
     };
+
+    class CfgVehicles {
+        
+        class 16th_JT12_Jetpacks {
+            label = "[16th] JT-12 Jetpacks";
+            author = "16th Mod Team";
+            options[] = { "camo" };
+            class camo {
+                values[] = { "Trooper", "RTO", "Medic" };
+            };
+        };
+
+        class 16th_Jump_Packs {
+            label = "[16th] Jump Packs";
+            author = "16th Mod Team";
+            options[] = { "camo" };
+            class camo {
+                values[] = { "Trooper", "RTO", "Medic" };
+            };
+        };
+
+    };
 };
