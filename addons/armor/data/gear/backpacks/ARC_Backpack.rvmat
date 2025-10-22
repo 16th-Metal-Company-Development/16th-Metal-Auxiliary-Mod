@@ -21,7 +21,7 @@ PixelShaderID = "Super";
 VertexShaderID = "Super";
 class Stage1
 {
-	texture = "9\9thAux\addons\ARC_Backpack\Data\Textures\ARC_Backpack_nohq.paa";
+	texture = "z\16th\addons\armor\data\gear\backpacks\ARC_Backpack_nohq.paa";
 	uvSource = "tex";
 	class uvTransform
 	{
@@ -57,7 +57,7 @@ class Stage3
 };
 class Stage4
 {
-	texture = "9\9thAux\addons\ARC_Backpack\Data\Textures\ARC_Backpack_as.paa";
+	texture = "z\16th\addons\armor\data\gear\backpacks\ARC_Backpack_as.paa";
 	uvSource = "tex";
 	class uvTransform
 	{
@@ -69,7 +69,7 @@ class Stage4
 };
 class Stage5
 {
-	texture = "9\9thAux\addons\ARC_Backpack\Data\Textures\ARC_Backpack_smdi.paa";
+	texture = "z\16th\addons\armor\data\gear\backpacks\ARC_Backpack_smdi.paa";
 	uvSource = "tex";
 	class uvTransform
 	{
