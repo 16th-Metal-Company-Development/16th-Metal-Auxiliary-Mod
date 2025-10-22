@@ -23,7 +23,7 @@ class XtdGearModels {
                     "Arch", "Avalanche", "Beige", "Ben", "Blackrose",
                     "Blatt", "Blowfish", "Bopit", "Butcher", "Chet",
                     "Chetiah", "Cougar", "Creed", "Fish", "Frost",
-                    "Gambit", "Hazmat", "Hellwolf", "Hood", "Karma",
+                    "Gambit", "Hazmat", "Hellwolf", "Hevy", "Hood", "Karma",
                     "Maia", "Mace", "Maple", "Maxson", "Merlin",
                     "Moldy", "Nix", "Noble", "Prez", "Ronin",
                     "Roz", "Sam", "Ska", "Six", "Smith",
@@ -119,7 +119,7 @@ class XtdGearModels {
                     "Avalanche", "Ben", "Blackrose", "Blatt", "Cougar",
                     "Fool", "Hazmat", "Hood", "Kix", "Maxson",
                     "Merlin", "Moldy", "MoldyZeus", "Nix", "Noble",
-                    "Prez", "Ronin", "Six", "Sunto", "Vergil",
+                    "Prez", "Ronin", "Roz", "Six", "Sunto", "Vergil",
                     "Winters"
                 };
             };

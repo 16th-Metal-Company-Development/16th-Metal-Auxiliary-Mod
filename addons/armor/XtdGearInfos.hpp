@@ -30,6 +30,7 @@ class XtdGearInfos {
         class helmet_16th_gambit       { model = "16th_Custom_Helmet"; camo = "Gambit"; };
         class helmet_16th_hazmat       { model = "16th_Custom_Helmet"; camo = "Hazmat"; };
         class helmet_16th_hellwolf     { model = "16th_Custom_Helmet"; camo = "Hellwolf"; };
+        class helmet_16th_hevy         { model = "16th_Custom_Helmet"; camo = "Hevy"; };
         class helmet_16th_hood         { model = "16th_Custom_Helmet"; camo = "Hood"; };
         class helmet_16th_karma        { model = "16th_Custom_Helmet"; camo = "Karma"; };
         class helmet_16th_krieg        { model = "16th_Custom_Helmet"; camo = "Krieg"; };
@@ -125,6 +126,7 @@ class XtdGearInfos {
         class armor_16th_noble          { model = "16th_Custom_Armor"; camo = "Noble"; };
         class armor_16th_prez           { model = "16th_Custom_Armor"; camo = "Prez"; };
         class armor_16th_ronin          { model = "16th_Custom_Armor"; camo = "Ronin"; };
+        class armor_16th_roz            { model = "16th_Custom_Armor"; camo = "Roz"; };
         class armor_16th_six            { model = "16th_Custom_Armor"; camo = "Six"; };
         class armor_16th_sunto          { model = "16th_Custom_Armor"; camo = "Sunto"; };
         class armor_16th_vergil         { model = "16th_Custom_Armor"; camo = "Vergil"; };

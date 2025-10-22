@@ -260,7 +260,7 @@ class human
 class dancin
 {
 	name = "Aaron Smith - Dancin";
-	sound[] = {"z\16th\addons\music\songs\other\hd_dangerzone.ogg",db+0,1};
+	sound[] = {"z\16th\addons\music\songs\other\dancin.ogg",db+0,1};
 	duration=194;
 	musicClass = "other";
 };

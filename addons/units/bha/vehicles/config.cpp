@@ -2384,6 +2384,21 @@ class CfgMagazines
 		nameSound="heat";
 		muzzleImpulseFactor[]={1.5,10};
 	};
+	class BHA_5Rnd_Disin_300mm_Mo_shells: VehicleMagazine
+	{
+		author="Hazmat";
+		initSpeed=810;
+		scope=2;
+		displayName="HAGM High Explosive Disintegrating Shells";
+		WBK_PlasmaKill_Color_String_Int = "Orange";
+		WBK_UseDisintegrate = "true";
+		displayNameShort="HE";
+		displayNameMFDFormat="HE";
+		ammo="BHA_300mm_AMOS";
+		count=5;
+		nameSound="heat";
+		muzzleImpulseFactor[]={1.5,10};
+	};
 	class BHA_4Rnd_300mm_Mo_guided: VehicleMagazine
 	{
 		author="Hazmat";
@@ -4958,6 +4973,7 @@ class CfgWeapons
 		{
 			"BHA_30Rnd_300mm_Mo_shells",
 			"BHA_4Rnd_300mm_Mo_guided",
+			"BHA_5Rnd_Disin_300mm_Mo_shells",
 			"BHA_5Rnd_300mm_Mo_Cluster"
 		};
 		modes[]=

@@ -5,7 +5,7 @@ class CfgPatches
 		units[] = { "MET_MLA_Rifleman_E5","MET_MLA_Rifleman_DC15S","MET_MLA_Autorifleman_DC15L","MET_MLA_Autorifleman_E5C","MET_MLA_Marksman_DC15X","MET_MLA_Marksman_E5S","MET_MLA_Grenadier","MET_MLA_Light_AntiTank_E60R","MET_MLA_Light_AntiTank_RPS6","MET_MLA_Crewman","MET_MLA_AAT","MET_MLA_ISP" };
 		weapons[] = { "MET_MLA_DC15L","MET_MLA_DC15X" };
 		requiredVersion = 0.1;
-		requiredAddons[] = { "ace_flashlights","ace_maptools","LF_Medicial_Pack","kat_airway","ace_medical_treatment","A3_Weapons_F","ls_radios","cTab","212th_Equipment","3AS_Weapons_E5","A3_expEden_characters","A3_expEden_Characters_Vests","A3_Characters_F_Globe_Headgear","A3_Characters_F","jmm_miscUnitsV2","3AS_Weapons_Republic_DC15L","JLTS_weapons_E5C","3AS_Weapons_Republic_DC15X","A3_Characters_F_Orange_Headgear","3AS_Weapons_E5S","3AS_Weapons_Republic_DC15S","ls_weapons_eseries","3AS_Weapons_Republic_DC17S" };
+		requiredAddons[] = { "ace_flashlights","ace_maptools","LF_Medicial_Pack","ace_medical_treatment","A3_Weapons_F","ls_radios","cTab","212th_Equipment","3AS_Weapons_E5","A3_expEden_characters","A3_expEden_Characters_Vests","A3_Characters_F_Globe_Headgear","A3_Characters_F","jmm_miscUnitsV2","3AS_Weapons_Republic_DC15L","JLTS_weapons_E5C","3AS_Weapons_Republic_DC15X","A3_Characters_F_Orange_Headgear","3AS_Weapons_E5S","3AS_Weapons_Republic_DC15S","ls_weapons_eseries","3AS_Weapons_Republic_DC17S" };
 	};
 };
 
@@ -176,7 +176,7 @@ class cfgVehicles
 		respawnMagazines[] = { "MET_Weapons_Mags_Thermal_Detonator","MET_Weapons_Mags_Thermal_Detonator","MET_Smoke_White","MET_Smoke_White","ACE_painkillers","3AS_200Rnd_EM40_Mag","3AS_200Rnd_EM40_Mag","3AS_200Rnd_EM40_Mag","3AS_200Rnd_EM40_Mag" };
 		linkedItems[] = { "ItemMap","ItemCompass","ItemWatch","ls_radios_hush98_aurebesh","ItemMicroDAGR","ls_nvg_goggles","212th_RangeFinder_Unmarked","ls_helmet_m1","V_PlateCarrier1_blk","ls_glasses_coif","ls_nvg_goggles" };
 		respawnLinkedItems[] = { "ItemMap","ItemCompass","ItemWatch","ls_radios_hush98_aurebesh","ItemMicroDAGR","ls_nvg_goggles","212th_RangeFinder_Unmarked","ls_helmet_m1","V_PlateCarrier1_blk","ls_glasses_coif","ls_nvg_goggles" };
-		backpack = "MET_Autorifleman_DC15L_pack";
+		backpack = "MET_MLA_Autorifleman_DC15L_pack";
 	};
 
 	class MET_MLA_Autorifleman_E5C : Mimbanese_Man_Base
@@ -198,7 +198,7 @@ class cfgVehicles
 		respawnMagazines[] = { "MET_Weapons_Mags_Thermal_Detonator","MET_Weapons_Mags_Thermal_Detonator","MET_Smoke_White","MET_Smoke_White","ACE_painkillers","3AS_130Rnd_EM50_RedPlasma","3AS_130Rnd_EM50_RedPlasma","3AS_130Rnd_EM50_RedPlasma","3AS_130Rnd_EM50_RedPlasma","3AS_130Rnd_EM50_RedPlasma","3AS_130Rnd_EM50_RedPlasma" };
 		linkedItems[] = { "ItemMap","ItemCompass","ItemWatch","ls_radios_hush98_aurebesh","ItemMicroDAGR","ls_nvg_goggles","212th_RangeFinder_Unmarked","ls_helmet_m1_light","V_PlateCarrier1_blk","ls_glasses_coif","ls_nvg_goggles" };
 		respawnLinkedItems[] = { "ItemMap","ItemCompass","ItemWatch","ls_radios_hush98_aurebesh","ItemMicroDAGR","ls_nvg_goggles","212th_RangeFinder_Unmarked","ls_helmet_m1_light","V_PlateCarrier1_blk","ls_glasses_coif","ls_nvg_goggles" };
-		backpack = "MET_Autorifleman_E5C_pack";
+		backpack = "MET_MLA_Autorifleman_E5C_pack";
 	};
 
 	class MET_MLA_Marksman_DC15X : Mimbanese_Man_Base
@@ -261,7 +261,7 @@ class cfgVehicles
 		respawnMagazines[] = { "MET_Weapons_Mags_Thermal_Detonator","MET_Weapons_Mags_Thermal_Detonator","MET_Smoke_White","MET_Smoke_White","ACE_painkillers","3AS_60Rnd_EM30_mag","3AS_60Rnd_EM30_mag","3AS_60Rnd_EM30_mag","3AS_60Rnd_EM30_mag","3AS_60Rnd_EM30_mag","3AS_60Rnd_EM30_mag","3AS_60Rnd_EM30_mag","3AS_60Rnd_EM30_mag","3AS_60Rnd_EM30_mag","3AS_60Rnd_EM30_mag","3AS_1UGL_MK54_HE_shell","3AS_1UGL_MK54_HE_shell","3AS_1UGL_MK54_HE_shell","3AS_1UGL_MK54_HE_shell","3AS_1UGL_MK54_HE_shell" };
 		linkedItems[] = { "ItemMap","ItemCompass","ItemWatch","ls_radios_hush98_aurebesh","ItemMicroDAGR","ls_nvg_goggles","212th_RangeFinder_Unmarked","SC_Turban_Black","V_Chestrig_blk_noHydrator","ls_imperial_satchel","ls_nvg_goggles" };
 		respawnLinkedItems[] = { "ItemMap","ItemCompass","ItemWatch","ls_radios_hush98_aurebesh","ItemMicroDAGR","ls_nvg_goggles","212th_RangeFinder_Unmarked","SC_Turban_Black","V_Chestrig_blk_noHydrator","ls_imperial_satchel","ls_nvg_goggles" };
-		backpack = "MET_Grenadier_pack";
+		backpack = "MET_MLA_Grenadier_pack";
 	};
 
 	class MET_MLA_Light_AntiTank_E60R : Mimbanese_Man_Base
@@ -282,7 +282,7 @@ class cfgVehicles
 		respawnMagazines[] = { "MET_Weapons_Mags_Thermal_Detonator","MET_Weapons_Mags_Thermal_Detonator","MET_Smoke_White","MET_Smoke_White","ACE_painkillers","3AS_60Rnd_EM50_RedPlasma","3AS_60Rnd_EM50_RedPlasma","3AS_60Rnd_EM50_RedPlasma","3AS_60Rnd_EM50_RedPlasma","3AS_60Rnd_EM50_RedPlasma","3AS_60Rnd_EM50_RedPlasma","3AS_60Rnd_EM50_RedPlasma","3AS_60Rnd_EM50_RedPlasma","ls_magazine_e60r_at","ls_magazine_e60r_at","ls_magazine_e60r_at" };
 		linkedItems[] = { "ItemMap","ItemCompass","ItemWatch","ls_radios_hush98_aurebesh","ItemMicroDAGR","ls_nvg_goggles","212th_RangeFinder_Unmarked","H_Watchcap_red","V_Chestrig_blk_noHydrator","3AS_G_AT_4_F","ls_nvg_goggles" };
 		respawnLinkedItems[] = { "ItemMap","ItemCompass","ItemWatch","ls_radios_hush98_aurebesh","ItemMicroDAGR","ls_nvg_goggles","212th_RangeFinder_Unmarked","H_Watchcap_red","V_Chestrig_blk_noHydrator","3AS_G_AT_4_F","ls_nvg_goggles" };
-		backpack = "MET_Light_AntiTank_E60R_pack";
+		backpack = "MET_MLA_Light_AntiTank_E60R_pack";
 	};
 
 	class MET_MLA_Light_AntiTank_RPS6 : Mimbanese_Man_Base
@@ -303,7 +303,7 @@ class cfgVehicles
 		respawnMagazines[] = { "MET_Weapons_Mags_Thermal_Detonator","MET_Weapons_Mags_Thermal_Detonator","MET_Smoke_White","MET_Smoke_White","ACE_painkillers","3AS_60Rnd_EM30_mag","3AS_60Rnd_EM30_mag","3AS_60Rnd_EM30_mag","3AS_60Rnd_EM30_mag","3AS_60Rnd_EM30_mag","3AS_60Rnd_EM30_mag","3AS_60Rnd_EM30_mag","3AS_60Rnd_EM30_mag","3AS_60Rnd_EM30_mag","3AS_60Rnd_EM30_mag","DBA_90mm_IK40_FRAG_x1_mag","DBA_90mm_IK40_FRAG_x1_mag","DBA_90mm_IK40_FRAG_x1_mag","DBA_90mm_IK40_FRAG_x1_mag" };
 		linkedItems[] = { "ItemMap","ItemCompass","ItemWatch","ls_radios_hush98_aurebesh","ItemMicroDAGR","ls_nvg_goggles","212th_RangeFinder_Unmarked","SC_Turban_Black","V_Chestrig_blk_noHydrator","3AS_G_AT_4_F","ls_nvg_goggles" };
 		respawnLinkedItems[] = { "ItemMap","ItemCompass","ItemWatch","ls_radios_hush98_aurebesh","ItemMicroDAGR","ls_nvg_goggles","212th_RangeFinder_Unmarked","SC_Turban_Black","V_Chestrig_blk_noHydrator","3AS_G_AT_4_F","ls_nvg_goggles" };
-		backpack = "MET_Light_AntiTank_RPS6_pack";
+		backpack = "MET_MLA_Light_AntiTank_RPS6_pack";
 	};
 
 	class MET_MLA_Crewman : Mimbanese_Man_Base
@@ -355,7 +355,7 @@ class cfgVehicles
 	  typicalCargo[] = {"MET_MLA_Rifleman_E5"};
 	};
 
-	class MET_Autorifleman_DC15L_pack : ls_orsfBackpack_trooper
+	class MET_MLA_Autorifleman_DC15L_pack : ls_orsfBackpack_trooper
 	{
 		scope = 1;
 		class TransportMagazines
@@ -366,7 +366,7 @@ class cfgVehicles
 		class TransportWeapons {};
 	};
 
-	class MET_Autorifleman_E5C_pack : ls_orsfBackpack_trooper
+	class MET_MLA_Autorifleman_E5C_pack : ls_orsfBackpack_trooper
 	{
 		scope = 1;
 		class TransportMagazines
@@ -377,7 +377,7 @@ class cfgVehicles
 		class TransportWeapons {};
 	};
 
-	class MET_Grenadier_pack : ls_orsfBackpack_trooper
+	class MET_MLA_Grenadier_pack : ls_orsfBackpack_trooper
 	{
 		scope = 1;
 		class TransportMagazines
@@ -388,7 +388,7 @@ class cfgVehicles
 		class TransportWeapons {};
 	};
 
-	class MET_Light_AntiTank_E60R_pack : ls_orsfBackpack_trooper
+	class MET_MLA_Light_AntiTank_E60R_pack : ls_orsfBackpack_trooper
 	{
 		scope = 1;
 		class TransportMagazines
@@ -399,7 +399,7 @@ class cfgVehicles
 		class TransportWeapons {};
 	};
 
-	class MET_Light_AntiTank_RPS6_pack : ls_orsfBackpack_trooper
+	class MET_MLA_Light_AntiTank_RPS6_pack : ls_orsfBackpack_trooper
 	{
 		scope = 1;
 		class TransportMagazines
