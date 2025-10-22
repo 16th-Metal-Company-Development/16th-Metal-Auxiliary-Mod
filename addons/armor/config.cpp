@@ -7366,7 +7366,7 @@ class CfgVehicles
 	class jetpack_16th_medic: jetpack_16th
 	{
 		scope=2;
-		displayName="[16th] JT-12 Medic";
+		displayName="[16th] JT-12 (Medic)";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\gear\backpacks\jt12_backpack_medic_co.paa"
@@ -7376,7 +7376,7 @@ class CfgVehicles
 	class jetpack_16th_ro: jetpack_16th
 	{
 		scope=2;
-		displayName="[16th] JT-12 RO";
+		displayName="[16th] JT-12 (RTO)";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\gear\backpacks\jt12_backpack_co.paa"
@@ -7401,7 +7401,7 @@ class CfgVehicles
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\MRC\JLTS\characters\CloneArmor\data\Clone_jumppack_mc_co.paa"
+			"z\16th\addons\armor\data\gear\backpacks\jump_backpack_trooper_co.paa"
 		};
 		maximumLoad=250;
 		tf_dialog="JLTS_clone_lr_programmer_radio_dialog";
@@ -7511,7 +7511,7 @@ class CfgVehicles
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\MRC\JLTS\characters\CloneArmor\data\Clone_jumppack_mc_co.paa"
+			"z\16th\addons\armor\data\gear\backpacks\jump_backpack_trooper_co.paa"
 		};
 		maximumLoad=250;
 		tf_dialog="JLTS_clone_lr_programmer_radio_dialog";
@@ -7621,7 +7621,7 @@ class CfgVehicles
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\MRC\JLTS\characters\CloneArmor\data\Clone_jumppack_mc_co.paa"
+			"z\16th\addons\armor\data\gear\backpacks\jump_backpack_medic_co.paa"
 		};
 		maximumLoad=300;
 		tf_dialog="JLTS_clone_lr_programmer_radio_dialog";

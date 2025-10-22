@@ -165,4 +165,17 @@ class XtdGearInfos {
         class nvg_16th_macro_eod      { model = "16th_Macrobinoculars"; camo = "EOD"; };
         class nvg_16th_macro_med      { model = "16th_Macrobinoculars"; camo = "Medic"; };
     };
+
+    class CfgVehicles {
+        
+        // [16th] JT-12 Jetpacks
+        class jetpack_16th           { model = "16th_JT12_Jetpacks"; camo = "Trooper"; };
+        class jetpack_16th_ro        { model = "16th_JT12_Jetpacks"; camo = "RTO"; };
+        class jetpack_16th_medic     { model = "16th_JT12_Jetpacks"; camo = "Medic"; };
+
+        // [16th] Jump Packs
+        class jumppack_16th          { model = "16th_Jump_Packs"; camo = "Trooper"; };
+        class jumppack_16th_RTO      { model = "16th_Jump_Packs"; camo = "RTO"; };
+        class jumppack_16th_med      { model = "16th_Jump_Packs"; camo = "Medic"; };
+    }
 };
