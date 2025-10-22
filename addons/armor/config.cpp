@@ -52,6 +52,7 @@ class CfgPatches
 			"helmet_16th_frost",
 			"helmet_16th_gambit",
 			"helmet_16th_hazmat",
+			"helmet_16th_hevy",
 			"helmet_16th_hood",
 			"helmet_16th_karma",
 			"helmet_16th_kick",
@@ -78,7 +79,7 @@ class CfgPatches
 			"helmet_16th_vergil",
 			"helmet_16th_william",
 			"helmet_16th_winters",
-			"helmet_16th_wolf",
+			"helmet_16th_wolf",		
 			"OPTRE_Metal_CH252D_Helmet",
 			"vest_16_backpack_rack_ammo_bearer",
 			"vest_16_backpack_rack_cls",
@@ -898,6 +899,15 @@ class CfgWeapons
 			"z\16th\addons\armor\data\custom\hellwolf_helmet_co.paa"
 		};
 	};
+	class helmet_16th_hevy : helmet_16th_trp
+	{
+		scope = 2;
+		displayName = "[16th] Hevy's Helmet";
+		hiddenSelectionsTextures[] =
+		{
+			"z\16th\addons\armor\data\custom\hevy_helmet_co.paa"
+		};
+	};
 	class helmet_16th_hood: helmet_16th_trp
 	{
 		scope=2;
@@ -1066,7 +1076,7 @@ class CfgWeapons
 		displayName="[16th] Sam's Helmet";
 		hiddenSelectionsTextures[]=
 		{
-			"z\16th\addons\armor\data\custom\sam_helmet_co.paa"
+			"z\16th\addons\armor\data\custom\sam_helmet_new_co.paa"
 		};
 	};
 	class helmet_16th_six: helmet_16th_trp
@@ -3061,6 +3071,15 @@ class CfgWeapons
 			uniformclass="armor_16th_ronin_base";
 		};
 	};
+	class armor_16th_roz : armor_16th_trp
+	{
+		scope = 2;
+		displayName = "[16th] Roz's Armor";
+		class ItemInfo : ItemInfo
+		{
+			uniformclass = "armor_16th_roz_base";
+		};
+	};
 	class armor_16th_six: armor_16th_trp
 	{
 		scope=2;
@@ -4856,6 +4875,33 @@ class CfgVehicles
 			"ItemCompass",
 			"ItemWatch",
 			"JLTS_CloneNVG"
+		};
+	};
+	class armor_16th_roz_base : armor_16th_trp_base
+	{
+		scope = 1;
+		displayName = "[16th] Roz";
+		uniformClass = "armor_16th_roz";
+		hiddenselectionsTextures[] =
+		{
+			"z\16th\addons\armor\data\custom\roz_uniform1_co.paa",
+			"z\16th\addons\armor\data\custom\roz_uniform2_co.paa"
+		};
+		linkedItems[] =
+		{
+			"helmet_16th_roz",
+			"ItemMap",
+			"JLTS_clone_comlink",
+			"ItemCompass",
+			"ItemWatch"
+		};
+		respawnLinkedItems[] =
+		{
+			"helmet_16th_roz",
+			"ItemMap",
+			"JLTS_clone_comlink",
+			"ItemCompass",
+			"ItemWatch"
 		};
 	};
 	class armor_16th_moldyz_base: armor_16th_trp_base
