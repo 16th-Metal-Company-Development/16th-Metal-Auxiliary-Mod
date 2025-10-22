@@ -2330,7 +2330,7 @@ class CfgWeapons
 	};
 	class MET_Item_ClothBandage: ACE_ItemCore
 	{
-		scope=2;
+		scope=0;
 		author="Krinix";
 		displayName="[16th] Cloth Bandage";
 		model="\TK\GW\GW_Medical_Assets\BandageCloth.p3d";
@@ -2342,7 +2342,7 @@ class CfgWeapons
 	};
 	class GW_BactaBandage: ACE_ItemCore
 	{
-		scope=2;
+		scope=0;
 		author="Krinix";
 		displayName="[16th] Bacta Bandage";
 		model="\TK\GW\GW_Medical_Assets\BandageBacta.p3d";
@@ -2354,7 +2354,7 @@ class CfgWeapons
 	};
 	class GW_BactaSpray: ACE_ItemCore
 	{
-		scope=2;
+		scope=0;
 		author="Krinix";
 		displayName="[16th] Bacta Spray";
 		model="\TK\GW\GW_Medical_Assets\BactaSpray.p3d";
@@ -2366,7 +2366,7 @@ class CfgWeapons
 	};
 	class GW_BactaPatch: ACE_ItemCore
 	{
-		scope=2;
+		scope=0;
 		author="Krinix";
 		displayName="[16th] Bacta Patch";
 		model="\TK\GW\GW_Medical_Assets\BactaPatch.p3d";
@@ -2378,7 +2378,7 @@ class CfgWeapons
 	};
 	class GW_Stim_Perigen: ACE_ItemCore
 	{
-		scope=2;
+		scope=0;
 		author="Krinix";
 		displayName="$STR_GW_Medical_Display_Stim_Perigen";
 		model="\TK\GW\GW_Medical_Assets\StimGreen.p3d";
@@ -2390,7 +2390,7 @@ class CfgWeapons
 	};
 	class GW_Stim_Enkephalin: ACE_ItemCore
 	{
-		scope=2;
+		scope=0;
 		author="Krinix";
 		displayName="$STR_GW_Medical_Display_Stim_Enkephalin";
 		model="\TK\GW\GW_Medical_Assets\StimRed.p3d";
@@ -2402,7 +2402,7 @@ class CfgWeapons
 	};
 	class GW_Stim_Kyrprax: ACE_ItemCore
 	{
-		scope=2;
+		scope=0;
 		author="Krinix";
 		displayName="$STR_GW_Medical_Display_Stim_Kyrprax";
 		model="\TK\GW\GW_Medical_Assets\StimYellow.p3d";
@@ -2414,7 +2414,7 @@ class CfgWeapons
 	};
 	class GW_Stim_Myocaine: ACE_ItemCore
 	{
-		scope=2;
+		scope=0;
 		author="Krinix";
 		displayName="$STR_GW_Medical_Display_Stim_Myocaine";
 		model="\TK\GW\GW_Medical_Assets\StimBlue.p3d";
@@ -2426,7 +2426,7 @@ class CfgWeapons
 	};
 	class GW_Stim_Reedug: ACE_ItemCore
 	{
-		scope=2;
+		scope=0;
 		author="Krinix";
 		displayName="$STR_GW_Medical_Display_Stim_Reedug";
 		model="\TK\GW\GW_Medical_Assets\StimBlack.p3d";
@@ -2438,7 +2438,7 @@ class CfgWeapons
 	};
 	class GW_Injector_Myoplexaril: ACE_ItemCore
 	{
-		scope=2;
+		scope=0;
 		author="Krinix";
 		displayName="$STR_GW_Medical_Display_Injector_Myoplexaril";
 		model="\TK\GW\GW_Medical_Assets\InjectorBlue.p3d";
@@ -2450,7 +2450,7 @@ class CfgWeapons
 	};
 	class GW_Injector_Polybiotics: ACE_ItemCore
 	{
-		scope=2;
+		scope=0;
 		author="Krinix";
 		displayName="$STR_GW_Medical_Display_Injector_Polybiotics";
 		model="\TK\GW\GW_Medical_Assets\InjectorYellow.p3d";
@@ -2462,7 +2462,7 @@ class CfgWeapons
 	};
 	class GW_Injector_Nyex: ACE_ItemCore
 	{
-		scope=2;
+		scope=0;
 		author="Krinix";
 		displayName="$STR_GW_Medical_Display_Injector_Nyex";
 		model="\TK\GW\GW_Medical_Assets\InjectorRed.p3d";
@@ -2474,7 +2474,7 @@ class CfgWeapons
 	};
 	class MET_ITEM_Vasko1000: ACE_ItemCore
 	{
-		scope=2;
+		scope=0;
 		author="Krinix";
 		displayName="[16th] Vasko 1000ml";
 		model="\TK\GW\GW_Medical_Assets\Vasko1000ml.p3d";
@@ -2486,6 +2486,7 @@ class CfgWeapons
 	};
 	class MET_ITEM_Vasko500: MET_ITEM_Vasko1000
 	{
+		scope = 0;
 		displayName="[16th] Vasko 500ml";
 		model="\TK\GW\GW_Medical_Assets\Vasko500ml.p3d";
 		class ItemInfo: CBA_MiscItem_ItemInfo
@@ -2495,6 +2496,7 @@ class CfgWeapons
 	};
 	class MET_ITEM_Vasko250: MET_ITEM_Vasko1000
 	{
+		scope = 0;
 		displayName="[16th] Vasko 250ml";
 		model="\TK\GW\GW_Medical_Assets\Vasko250ml.p3d";
 		class ItemInfo: CBA_MiscItem_ItemInfo
@@ -2504,7 +2506,7 @@ class CfgWeapons
 	};
 	class MET_ITEM_BactaPack: ACE_ItemCore
 	{
-		scope=2;
+		scope=0;
 		author="Krinix and a touch of Hazmat";
 		displayName="[16th] Bacta Pack";
 		model="\TK\GW\GW_Medical_Assets\BactaCanister.p3d";
@@ -2516,7 +2518,7 @@ class CfgWeapons
 	};
 	class MET_ITEM_Cauterizer: ACE_ItemCore
 	{
-		scope=2;
+		scope=0;
 		author="Krinix";
 		displayName="[16th] AED-S";
 		model="\TK\GW\GW_Medical_Assets\Cauterizer.p3d";
@@ -2530,7 +2532,7 @@ class CfgWeapons
 	};
 	class Metal_MedKit: ACE_ItemCore
     {
-        scope = 2;
+        scope = 0;
         author = "Article 2 Studios";
         displayName = "[16th] Medical Kit";
         picture = "\OPTRE_weapons\items\icons\medkit.paa";
