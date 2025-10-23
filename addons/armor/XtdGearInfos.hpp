@@ -77,6 +77,7 @@ class XtdGearInfos {
 
         // [16th] Custom ARF variants
         class helmet_16th_blue_arf     { model = "16th_Custom_ARF_Helmet"; camo = "Blue"; };
+        class helmet_16th_chet_arf     { model = "16th_Custom_ARF_Helmet"; camo = "Chet"; };
         class helmet_16th_convor       { model = "16th_Custom_ARF_Helmet"; camo = "Convor"; };
         class helmet_16th_kix          { model = "16th_Custom_ARF_Helmet"; camo = "Kix"; };
         class helmet_16th_maple_arf    { model = "16th_Custom_ARF_Helmet"; camo = "Maple"; };

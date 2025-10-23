@@ -44,6 +44,7 @@ class CfgPatches
 			"helmet_16th_bravo",
 			"helmet_16th_butcher",
 			"helmet_16th_chet",
+			"helmet_16th_chet_arf",
 			"helmet_16th_chetiah",
 			"helmet_16th_convor",
 			"helmet_16th_cougar",
@@ -758,6 +759,15 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\custom\chet_helmet_co.paa"
+		};
+	};
+	class helmet_16th_chet_arf : helmet_16th_arf
+	{
+		scope = 2;
+		displayName = "[16th] Chets's ARF Helmet";
+		hiddenSelectionsTextures[] =
+		{
+			"z\16th\addons\armor\data\custom\chet_helmet_arf_co.paa"
 		};
 	};
 	class helmet_16th_chetiah: helmet_16th_trp
