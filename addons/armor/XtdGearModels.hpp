@@ -52,7 +52,7 @@ class XtdGearModels {
             options[] = { "camo" };
             class camo {
                 values[] = {
-                    "Blackrose", "Vergil"
+                    "Blackrose", "Jero", "Vergil"
                 };
             };
         };

@@ -22,6 +22,7 @@ class CfgPatches
 			"helmet_16th_ab_sgm",
 			"helmet_16th_ab_medic",
 			"helmet_16th_ab_blackrose",
+			"helmet_16th_ab_jero",
 			"helmet_16th_ab_kick",
 			"helmet_16th_ab_vergil",
 			"helmet_16th_arf_nco",
@@ -634,6 +635,15 @@ class CfgWeapons
 			"z\16th\addons\armor\data\custom\blackrose_ab_helmet_co.paa"
 		};
 	};
+	class helmet_16th_ab_jero : helmet_16th_ab_trp
+	{
+		scope = 2;
+		displayName = "[16th] Jeros's Airborne Helmet";
+		hiddenSelectionsTextures[] =
+		{
+			"z\16th\addons\armor\data\custom\jero_ab_helmet_co.paa"
+		};
+	};
 	class helmet_16th_ab_kick: helmet_16th_ab_trp
 	{
 		scope=0;
@@ -785,7 +795,7 @@ class CfgWeapons
 		displayName="[16th] Convor's Helmet";
 		hiddenSelectionsTextures[]=
 		{
-			"z\16th\addons\armor\data\custom\convor_helmet_co.paa"
+			"z\16th\addons\armor\data\custom\convor_arf_helmet_U_co.paa"
 		};
 	};
 	class helmet_16th_cougar: helmet_16th_trp
