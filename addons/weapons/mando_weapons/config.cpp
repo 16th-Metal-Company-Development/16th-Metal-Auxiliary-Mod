@@ -477,7 +477,7 @@ class CfgWeapons
 		};
 		class Single: Mode_SemiAuto
 		{
-			reloadTime=1.2;
+			reloadTime=0.3;
 			dispersion=0.00000000000001;
 			minRange=5;
 			minRangeProbab=0.30000001;
@@ -1114,11 +1114,11 @@ class CfgMagazines
 		modelSpecialIsProxy=0;
 		picture="\3AS\3AS_Weapons\Data\UI\3as_sniper_y.paa";
 		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
-		count=5;
+		count=10;
 		displayName="[16th] 773 Firepuncher Energy Cell";
 		displayNameShort="773 Firepuncher Energy Cell";
 		descriptionShort="Energy Cell for the 773 Firepuncher";
-		ammo="MET_blasterbolt_antimat_Yellow";
+		ammo="MET_blasterbolt_dmr_Yellow";
 		WBK_PlasmaKill_Color_String_Int = "Yellow";
 		WBK_UseDisintegrate = "true";
 		tracersEvery=1;

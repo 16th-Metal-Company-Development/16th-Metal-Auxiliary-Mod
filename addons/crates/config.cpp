@@ -33,6 +33,9 @@ class CfgPatches
 		requiredAddons[]=
 		{
 			"A3_characters_F",
+            "metal_rps",
+            "metal_plx",
+            "metal_inf_weap"
 		};
 		author="DJ, LCDR Wolf, 212th Team";
 		Name="crates_16";
@@ -1782,306 +1785,6 @@ class CfgVehicles
             };
         };
 	};
-    class Box_MET_Rockets: Box_MET_Base
-	{
-		scope=2;
-		scopecurator=2;
-		displayname="[16th] Resupply Box (Rockets)";
-		hiddenSelectionsTextures[]=
-		{
-			"\212th\Other\212_Box\Textures\ResupplyBox_Rockets_CO.paa"
-		};
-		class TransportMagazines
-		{
-			class _xx_DBA_90mm_IK55_HEAT_x1_mag
-			{
-				magazine="DBA_90mm_IK55_HEAT_x1_mag";
-				count=20;
-			};
-			class _xx_DBA_90mm_IK60_HEP_x1_mag
-			{
-				magazine="DBA_90mm_IK60_HEP_x1_mag";
-				count=20;
-			};
-			class _xx_DBA_90mm_IK40_FRAG_x1_mag
-			{
-				magazine="DBA_90mm_IK40_FRAG_x1_mag";
-				count=20;
-			};
-			class _xx_metal_at_mag
-			{
-				magazine="metal_at_mag";
-				count=20;
-			};
-			class _xx_metal_aa_mag
-			{
-				magazine="metal_aa_mag";
-				count=20;
-			};
-			class _xx_metal_ap_mag
-			{
-				magazine="metal_ap_mag";
-				count=20;
-			};
-			class _xx_MET_AA_SINGLE
-			{
-				magazine="MET_AA_SINGLE";
-				count=20;
-			};
-			class _xx_MET_AP_SINGLE
-			{
-				magazine="MET_AP_SINGLE";
-				count=20;
-			};
-			class _xx_MET_AT_Single
-			{
-				magazine="MET_AT_Single";
-				count=20;
-			};
-		};
-        class TransportWeapons
-        {
-            class _xx_MET_RPS6_F
-			{
-				magazine="MET_RPS6_F";
-				count=10;
-			};
-        };
-	};
-    class Box_MET_Rockets_2: Box_MET_Base
-	{
-		scope=2;
-		scopecurator=2;
-		displayname="[16th] Resupply Box (Rockets 2)";
-		hiddenSelectionsTextures[]=
-		{
-			"\212th\Other\212_Box\Textures\ResupplyBox_Rockets_CO.paa"
-		};
-		class TransportMagazines
-		{
-			class _xx_DBA_90mm_IK55_HEAT_x1_mag
-			{
-				magazine="DBA_90mm_IK55_HEAT_x1_mag";
-				count=20;
-			};
-			class _xx_DBA_90mm_IK60_HEP_x1_mag
-			{
-				magazine="DBA_90mm_IK60_HEP_x1_mag";
-				count=20;
-			};
-			class _xx_DBA_90mm_IK40_FRAG_x1_mag
-			{
-				magazine="DBA_90mm_IK40_FRAG_x1_mag";
-				count=20;
-			};
-			class _xx_metal_at_mag
-			{
-				magazine="metal_at_mag";
-				count=20;
-			};
-			class _xx_metal_aa_mag
-			{
-				magazine="metal_aa_mag";
-				count=20;
-			};
-			class _xx_metal_ap_mag
-			{
-				magazine="metal_ap_mag";
-				count=20;
-			};
-			class _xx_MET_AA_SINGLE
-			{
-				magazine="MET_AA_SINGLE";
-				count=20;
-			};
-			class _xx_MET_AP_SINGLE
-			{
-				magazine="MET_AP_SINGLE";
-				count=20;
-			};
-			class _xx_MET_AT_Single
-			{
-				magazine="MET_AT_Single";
-				count=20;
-			};
-		};
-        class TransportWeapons
-		{
-            class _xx_MET_RPS6_F
-            {
-                weapon = "MET_RPS6_F"; // Weapon class name
-                count = 10; // Number of weapons
-            };
-        };
-	};
-    class Box_MET_Engineer: Box_MET_Base
-	{
-		scope=2;
-		scopecurator=2;
-		displayname="[16th] Resupply Box (Engineer)";
-		hiddenSelectionsTextures[]=
-		{
-			"\212th\Other\212_Box\Textures\ResupplyBox_Engineer_CO.paa"
-		};
-		class TransportMagazines
-		{
-			class _xx_MET_pellet_mag
-			{
-				magazine="MET_pellet_mag";
-				count=20;
-			};
-			class _xx_MET_slug_mag
-			{
-				magazine="MET_slug_mag";
-				count=15;
-			};
-		};
-		class TransportItems
-		{
-			class _xx_ACE_Fortify
-			{
-				name="ACE_Fortify";
-				count=1;
-			};
-			class _xx_ToolKit
-			{
-				name="ToolKit";
-				count=1;
-			};
-		};
-		class TransportBackpacks
-		{
-			class _xx_JLTS_portable_shield_gar_backpack
-			{
-				backpack="JLTS_portable_shield_gar_backpack";
-				count=1;
-			};
-			class _xx_JLTS_UST_turret_GAR_backpack
-			{
-				backpack="JLTS_UST_turret_GAR_backpack";
-				count=3;
-			};
-            class _xx_3AS_Republic_HR_Shield_Bag
-            {
-                backpack="3AS_Republic_HR_Shield_Bag";
-				count=5;
-            };
-		};
-	};
-    class Box_MET_ARF: Box_MET_Base
-	{
-		scope=2;
-		scopecurator=2;
-		displayname="[16th] Resupply Box (ARF)";
-		hiddenSelectionsTextures[]=
-		{
-			"\212th\Other\212_Box\Textures\ResupplyBox_Arf_CO.paa"
-		};
-		class TransportMagazines
-		{
-			class _xx_ACE_HuntIR_M203
-			{
-				magazine="ACE_HuntIR_M203";
-				count=10;
-			};
-			class _xx_MET_DC15A_mag
-			{
-				magazine="MET_DC15A_mag";
-				count=20;
-			};
-			class _xx_MET_Valken_mag
-			{
-				magazine="MET_Valken_mag";
-				count=10;
-			};
-			class _xx_MET_blaster_pistol_battery
-			{
-				magazine="MET_blaster_pistol_battery";
-				count=15;
-			};
-			class _xx_MET_DC15x_mag
-			{
-				magazine="MET_DC15x_mag";
-				count=10;
-			};
-            class _xx_MET_DC15LE_mag
-            {
-                magazine = "MET_DC15LE_mag";
-                count = 30;
-            };
-			class _xx_MET_DC15x_at_mag
-			{
-				magazine="MET_DC15x_at_mag";
-				count=5;
-			};
-		};
-		class TransportItems
-		{
-			class _xx_kat_Carbonate
-            {
-                count=5;
-                name="kat_Carbonatec";
-            };
-            class _xx_LFP_item_bacta_bandage
-            {
-                count=200;
-                name="LFP_item_bacta_bandage";
-            };
-            class _xx_ACE_plasmaIV_250
-            {
-                count=10;
-                name="ACE_plasmaIV_250";
-            };
-            class _xx_ACE_plasmaIV_500
-            {
-                count=10;
-                name="ACE_plasmaIV_500";
-            };
-            class _xx_ACE_plasmaIV
-            {
-                count=10;
-                name="ACE_plasmaIV";
-            };
-            class _xx_kat_chestSeal
-            {
-                count=10;
-                name="kat_chestSeal";
-            };
-            class _xx_LFP_item_injector_red
-            {
-                count=10;
-                name="LFP_item_injector_red";
-            };
-            class _xx_ACE_painkillers
-            {
-                count=5;
-                name="ACE_painkillers";
-            };
-            class _xx_kat_larynx
-            {
-                count=5;
-                name="kat_larynx";
-            };
-            class _xx_ACE_tourniquet
-            {
-                count=30;
-                name="ACE_tourniquet";
-            };
-            class _xx_ACE_splint
-            {
-                count=15;
-                name="ACE_splint";
-            };
-		};
-		class TransportBackpacks
-		{
-			class _xx_JLTS_UAV_prowler_gar_backpack
-			{
-				backpack="JLTS_UAV_prowler_gar_backpack";
-				count=1;
-			};
-		};
-	};
     class Box_MET_ARC: Box_MET_Base
 	{
 		scope=2;
@@ -3044,6 +2747,306 @@ class CfgVehicles
                 count=5;
                 name="MET_Optic_Cinnagaran_1_F";
             };
+		};
+	};
+    class Box_MET_Rockets: Box_MET_ARC
+	{
+		scope=2;
+		scopecurator=2;
+		displayname="[16th] Resupply Box (Rockets)";
+		hiddenSelectionsTextures[]=
+		{
+			"\212th\Other\212_Box\Textures\ResupplyBox_Rockets_CO.paa"
+		};
+		class TransportMagazines
+		{
+			class _xx_DBA_90mm_IK55_HEAT_x1_mag
+			{
+				magazine="DBA_90mm_IK55_HEAT_x1_mag";
+				count=20;
+			};
+			class _xx_DBA_90mm_IK60_HEP_x1_mag
+			{
+				magazine="DBA_90mm_IK60_HEP_x1_mag";
+				count=20;
+			};
+			class _xx_DBA_90mm_IK40_FRAG_x1_mag
+			{
+				magazine="DBA_90mm_IK40_FRAG_x1_mag";
+				count=20;
+			};
+			class _xx_metal_at_mag
+			{
+				magazine="metal_at_mag";
+				count=20;
+			};
+			class _xx_metal_aa_mag
+			{
+				magazine="metal_aa_mag";
+				count=20;
+			};
+			class _xx_metal_ap_mag
+			{
+				magazine="metal_ap_mag";
+				count=20;
+			};
+			class _xx_MET_AA_SINGLE
+			{
+				magazine="MET_AA_SINGLE";
+				count=20;
+			};
+			class _xx_MET_AP_SINGLE
+			{
+				magazine="MET_AP_SINGLE";
+				count=20;
+			};
+			class _xx_MET_AT_Single
+			{
+				magazine="MET_AT_Single";
+				count=20;
+			};
+		};
+        /*class TransportWeapons
+        {
+            class _xx_MET_RPS6_F
+			{
+				magazine="MET_RPS6_F";
+				count=10;
+			};
+        };*/
+	};
+    class Box_MET_Rockets_2: Box_MET_Base
+	{
+		scope=0;
+		scopecurator=0;
+		displayname="[16th] Resupply Box (Rockets 2)";
+		hiddenSelectionsTextures[]=
+		{
+			"\212th\Other\212_Box\Textures\ResupplyBox_Rockets_CO.paa"
+		};
+		class TransportMagazines
+		{
+			class _xx_DBA_90mm_IK55_HEAT_x1_mag
+			{
+				magazine="DBA_90mm_IK55_HEAT_x1_mag";
+				count=20;
+			};
+			class _xx_DBA_90mm_IK60_HEP_x1_mag
+			{
+				magazine="DBA_90mm_IK60_HEP_x1_mag";
+				count=20;
+			};
+			class _xx_DBA_90mm_IK40_FRAG_x1_mag
+			{
+				magazine="DBA_90mm_IK40_FRAG_x1_mag";
+				count=20;
+			};
+			class _xx_metal_at_mag
+			{
+				magazine="metal_at_mag";
+				count=20;
+			};
+			class _xx_metal_aa_mag
+			{
+				magazine="metal_aa_mag";
+				count=20;
+			};
+			class _xx_metal_ap_mag
+			{
+				magazine="metal_ap_mag";
+				count=20;
+			};
+			class _xx_MET_AA_SINGLE
+			{
+				magazine="MET_AA_SINGLE";
+				count=20;
+			};
+			class _xx_MET_AP_SINGLE
+			{
+				magazine="MET_AP_SINGLE";
+				count=20;
+			};
+			class _xx_MET_AT_Single
+			{
+				magazine="MET_AT_Single";
+				count=20;
+			};
+		};
+        class TransportWeapons
+		{
+            class _xx_MET_RPS6_F
+            {
+                weapon = "MET_RPS6_F"; // Weapon class name
+                count = 10; // Number of weapons
+            };
+        };
+	};
+    class Box_MET_Engineer: Box_MET_Base
+	{
+		scope=2;
+		scopecurator=2;
+		displayname="[16th] Resupply Box (Engineer)";
+		hiddenSelectionsTextures[]=
+		{
+			"\212th\Other\212_Box\Textures\ResupplyBox_Engineer_CO.paa"
+		};
+		class TransportMagazines
+		{
+			class _xx_MET_pellet_mag
+			{
+				magazine="MET_pellet_mag";
+				count=20;
+			};
+			class _xx_MET_slug_mag
+			{
+				magazine="MET_slug_mag";
+				count=15;
+			};
+		};
+		class TransportItems
+		{
+			class _xx_ACE_Fortify
+			{
+				name="ACE_Fortify";
+				count=1;
+			};
+			class _xx_ToolKit
+			{
+				name="ToolKit";
+				count=1;
+			};
+		};
+		class TransportBackpacks
+		{
+			class _xx_JLTS_portable_shield_gar_backpack
+			{
+				backpack="JLTS_portable_shield_gar_backpack";
+				count=1;
+			};
+			class _xx_JLTS_UST_turret_GAR_backpack
+			{
+				backpack="JLTS_UST_turret_GAR_backpack";
+				count=3;
+			};
+            class _xx_3AS_Republic_HR_Shield_Bag
+            {
+                backpack="3AS_Republic_HR_Shield_Bag";
+				count=5;
+            };
+		};
+	};
+    class Box_MET_ARF: Box_MET_Base
+	{
+		scope=2;
+		scopecurator=2;
+		displayname="[16th] Resupply Box (ARF)";
+		hiddenSelectionsTextures[]=
+		{
+			"\212th\Other\212_Box\Textures\ResupplyBox_Arf_CO.paa"
+		};
+		class TransportMagazines
+		{
+			class _xx_ACE_HuntIR_M203
+			{
+				magazine="ACE_HuntIR_M203";
+				count=10;
+			};
+			class _xx_MET_DC15A_mag
+			{
+				magazine="MET_DC15A_mag";
+				count=20;
+			};
+			class _xx_MET_Valken_mag
+			{
+				magazine="MET_Valken_mag";
+				count=10;
+			};
+			class _xx_MET_blaster_pistol_battery
+			{
+				magazine="MET_blaster_pistol_battery";
+				count=15;
+			};
+			class _xx_MET_DC15x_mag
+			{
+				magazine="MET_DC15x_mag";
+				count=10;
+			};
+            class _xx_MET_DC15LE_mag
+            {
+                magazine = "MET_DC15LE_mag";
+                count = 30;
+            };
+			class _xx_MET_DC15x_at_mag
+			{
+				magazine="MET_DC15x_at_mag";
+				count=5;
+			};
+		};
+		class TransportItems
+		{
+			class _xx_kat_Carbonate
+            {
+                count=5;
+                name="kat_Carbonatec";
+            };
+            class _xx_LFP_item_bacta_bandage
+            {
+                count=200;
+                name="LFP_item_bacta_bandage";
+            };
+            class _xx_ACE_plasmaIV_250
+            {
+                count=10;
+                name="ACE_plasmaIV_250";
+            };
+            class _xx_ACE_plasmaIV_500
+            {
+                count=10;
+                name="ACE_plasmaIV_500";
+            };
+            class _xx_ACE_plasmaIV
+            {
+                count=10;
+                name="ACE_plasmaIV";
+            };
+            class _xx_kat_chestSeal
+            {
+                count=10;
+                name="kat_chestSeal";
+            };
+            class _xx_LFP_item_injector_red
+            {
+                count=10;
+                name="LFP_item_injector_red";
+            };
+            class _xx_ACE_painkillers
+            {
+                count=5;
+                name="ACE_painkillers";
+            };
+            class _xx_kat_larynx
+            {
+                count=5;
+                name="kat_larynx";
+            };
+            class _xx_ACE_tourniquet
+            {
+                count=30;
+                name="ACE_tourniquet";
+            };
+            class _xx_ACE_splint
+            {
+                count=15;
+                name="ACE_splint";
+            };
+		};
+		class TransportBackpacks
+		{
+			class _xx_JLTS_UAV_prowler_gar_backpack
+			{
+				backpack="JLTS_UAV_prowler_gar_backpack";
+				count=1;
+			};
 		};
 	};
     class Box_MET_CommandoGroup: Box_MET_Base
