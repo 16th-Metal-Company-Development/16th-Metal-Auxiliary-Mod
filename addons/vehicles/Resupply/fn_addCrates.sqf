@@ -19,9 +19,7 @@ private _cargoArray = [
 	"Box_MET_Medical",
 	"Box_MET_Medical",
 	"Box_MET_ARF",
-	"Box_MET_ARF",
 	"Box_MET_ARC",
-	"Box_MET_CommandoGroup",
 	"Box_MET_Turrets"
 ];
 

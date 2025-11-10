@@ -634,6 +634,18 @@ class CfgLights
 	{
 		diffuse[]={214,191,124,1};
 	};
+	class MET_BlasterboltLight_Pink: MET_BlasterboltLight_Blue
+	{
+		diffuse[]={240,113,255,1};
+	};
+	class MET_BlasterboltLight_Pink_Clust: MET_BlasterboltLight_Blue
+	{
+		diffuse[]={204,68,219,1};
+	};
+	class MET_BlasterboltLight_Pink_HEAT: MET_BlasterboltLight_Blue
+	{
+		diffuse[]={244,142,255,1};
+	};
 	class MET_BlasterboltLight_Stun
 	{
 		color[]={0,0,0,0};
@@ -697,10 +709,31 @@ class CfgLights
 			hardLimitEnd=200;
 		};
 	};
+	class 3AS_RocketLight;
+	class MET_ATRocket_Pink: 3AS_RocketLight
+	{
+		color[]={0.941,0.443,1};
+		diffuse[]={240,113,255,1};
+		intensity=30000;
+		dayLight=1;
+		useFlare=1;
+		flareSize=1.5;
+		flareMaxDistance=6000;
+	};
 	class MET_MissileLight_Blue: MET_MissileLight_Base
 	{
 		color[]={0,42,255};
 		diffuse[]={0,42,255,1};
+		intensity=30000;
+		dayLight=1;
+		useFlare=1;
+		flareSize=1.5;
+		flareMaxDistance=6000;
+	};
+	class MET_MissileLight_Pink: MET_MissileLight_Base
+	{
+		color[]={0.941,0.443,1};
+		diffuse[]={240,113,255,1};
 		intensity=30000;
 		dayLight=1;
 		useFlare=1;
@@ -1013,6 +1046,22 @@ class MET_GrenadeExplosionEffect
 		lifeTime=0.25;
 	};
 };
+class MET_Rocket_effect_Pink_fly
+{
+	class Light
+	{
+		simulation="light";
+		type="MET_ATRocket_Pink";
+		position[]={0,0,0};
+	};
+	class Smoke
+	{
+		simulation="particles";
+		type="Missile3";
+		position[]={0,0,0};
+		qualityLevel=-1;
+	};
+};
 class MET_MissileGlow_Blue_fly
 {
 	class Light
@@ -1038,6 +1087,31 @@ class MET_MissileGlow_Blue_fly
 		qualityLevel=-1;
 	};
 };
+class MET_MissileGlow_Pink_fly
+{
+	class Light
+	{
+		simulation="light";
+		type="MET_ATRocket_Pink";
+		position[]={0,0,0};
+	};
+	class GrenadeSparks
+	{
+		simulation="particles";
+		type="MET_GrenadeSparks";
+		position[]={0,0,0};
+		intensity=1;
+		interval=1;
+		lifeTime=0.1;
+	};
+	class Smoke
+	{
+		simulation="particles";
+		type="Missile4";
+		position[]={0,0,0};
+		qualityLevel=-1;
+	};
+}
 class MET_MissileGlow_Red_fly
 {
 	class Light
@@ -1173,6 +1247,33 @@ class MET_BlasterBoltGlow_White_Fly
 	{
 		simulation="light";
 		type="MET_BlasterBoltLight_White";
+		position[]={0,0,1};
+	};
+};
+class MET_BlasterBoltGlow_Pink_Fly
+{
+	class Light
+	{
+		simulation="light";
+		type="MET_BlasterBoltLight_Pink";
+		position[]={0,0,1};
+	};
+};
+class MET_BlasterBoltGlow_Pink_Clust_Fly
+{
+	class Light
+	{
+		simulation="light";
+		type="MET_BlasterBoltLight_Pink_Clust";
+		position[]={0,0,1};
+	};
+};
+class MET_BlasterBoltGlow_Pink_HEAT_Fly
+{
+	class Light
+	{
+		simulation="light";
+		type="MET_BlasterboltLight_Pink_HEAT";
 		position[]={0,0,1};
 	};
 };

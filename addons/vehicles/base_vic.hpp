@@ -26,10 +26,16 @@ class MET_LAAT_Mk2: 3as_LAAT_MK2
 		"z\16th\addons\vehicles\vics\LAAT\Weapon_Details_CO.paa",
 		"z\16th\addons\vehicles\vics\LAAT\16_Laat_Interior.paa"
 	};
+	ace_cargo_space = 20;  // Cargo space your vehicle has
+    ace_cargo_hasCargo = 1;  // Enables cargo to be loaded inside the vehicle (1-yes, 0-no)
+    ace_cargo_loadmasterTurrets[] = {{1}}; // If vehicle inherits from "Air", you can set this attribute.
+    // When sitting in the turret paths you define here, you can paradrop cargo items. By default, pilots and co-pilots can paradrop cargo items.
 	class EventHandlers: DefaultEventHandlers
 	{
 		init = "[_this select 0] call MET_fnc_addCrates;";
 	};
+	TFAR_hasIntercom=1;
+	#include "vics\Bantha\Bantha_Intercoms.hpp"
 };
 class MET_LAAT_Mk2_Lamps: 3as_LAAT_Mk2Lights
 {
@@ -57,10 +63,16 @@ class MET_LAAT_Mk2_Lamps: 3as_LAAT_Mk2Lights
 		"z\16th\addons\vehicles\vics\LAAT\Weapon_Details_CO.paa",
 		"z\16th\addons\vehicles\vics\LAAT\16_Laat_Interior.paa"
 	};
+	ace_cargo_space = 20;  // Cargo space your vehicle has
+    ace_cargo_hasCargo = 1;  // Enables cargo to be loaded inside the vehicle (1-yes, 0-no)
+    ace_cargo_loadmasterTurrets[] = {{1}}; // If vehicle inherits from "Air", you can set this attribute.
+    // When sitting in the turret paths you define here, you can paradrop cargo items. By default, pilots and co-pilots can paradrop cargo items.
 	class EventHandlers: DefaultEventHandlers
 	{
 		init = "[_this select 0] call MET_fnc_addCrates;";
 	};
+	TFAR_hasIntercom=1;
+	#include "vics\Bantha\Bantha_Intercoms.hpp"
 };
 class MET_LAAT_MK1: 3as_LAAT_MK1
 {
@@ -84,10 +96,16 @@ class MET_LAAT_MK1: 3as_LAAT_MK1
 		"z\16th\addons\vehicles\vics\LAAT\Weapon_Details_CO.paa",
 		"z\16th\addons\vehicles\vics\LAAT\16_Laat_Interior.paa"
 	};
+	ace_cargo_space = 20;  // Cargo space your vehicle has
+    ace_cargo_hasCargo = 1;  // Enables cargo to be loaded inside the vehicle (1-yes, 0-no)
+    ace_cargo_loadmasterTurrets[] = {{1}}; // If vehicle inherits from "Air", you can set this attribute.
+    // When sitting in the turret paths you define here, you can paradrop cargo items. By default, pilots and co-pilots can paradrop cargo items.
 	class EventHandlers: DefaultEventHandlers
 	{
 		init = "[_this select 0] call MET_fnc_addCrates;";
 	};
+	TFAR_hasIntercom=1;
+	#include "vics\Bantha\Bantha_Intercoms.hpp"
 };
 class MET_ARC_170: 3as_arc_170_base
 {
