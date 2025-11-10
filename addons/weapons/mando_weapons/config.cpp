@@ -1114,7 +1114,7 @@ class CfgMagazines
 		modelSpecialIsProxy=0;
 		picture="\3AS\3AS_Weapons\Data\UI\3as_sniper_y.paa";
 		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
-		count=10;
+		count=20;
 		displayName="[16th] 773 Firepuncher Energy Cell";
 		displayNameShort="773 Firepuncher Energy Cell";
 		descriptionShort="Energy Cell for the 773 Firepuncher";

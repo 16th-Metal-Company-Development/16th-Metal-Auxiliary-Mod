@@ -226,6 +226,12 @@ class CfgRecoils
 		kickBack[]={0.059999999,0.090000004};
 		temporary=0.0060000001;
 	};
+	class MET_recoil_chain: recoil_default
+	{
+		muzzleOuter[]={0,0.5,0.6,0.6};
+		kickBack[]={0.06,0.1};
+		temporary=0.004;
+	};
 	class MET_recoil_CinCar: recoil_default
 	{
 		muzzleOuter[]={0,0.5,0.40000001,0.40000001};
@@ -7625,7 +7631,7 @@ class CfgWeapons
 			""
 		};
 		reloadAction="";
-		recoil="MET_recoil_Z6";
+		recoil="MET_recoil_chain";
 		autoReload="true";
 		maxZeroing=600;
 		//modelOptics="";
@@ -7796,11 +7802,18 @@ class CfgWeapons
 			""
 		};
 		reloadAction="";
-		recoil="MET_recoil_Z6";
-		/*autoReload="true";
-		reloadTime=0.000001;
-		WeaponReloadTime=0.000001;*/
+		recoil="MET_recoil_chain";
+		autoReload="true";
+		reloadTime=0;
+		weaponReloadingTime=0;
 		maxZeroing=600;
+		reloadMagazineSound[]=
+		{
+			"z\16th\addons\weapons\infantry_weap\sounds\republic\z-6\Z6_reload.ogg",
+			1.5,
+			1,
+			100
+		};
 		//modelOptics="";
 		weaponInfoType="RscWeaponEmpty";
 		opticsZoomMin=0.1083;
@@ -13396,7 +13409,7 @@ class CfgMagazines
 		ammo="MET_light_Chaingun_Ammo";
 		type="2*  256";
 		mass=100;
-		count=600;
+		count=200;
 	};
 	class MET_Chaingun_AT_Drum_Mag: CA_LauncherMagazine
 	{
@@ -13473,20 +13486,9 @@ class ACE_Medical_Injuries
             // bullets only create multiple wounds when the damage is very high
             thresholds[] = {{20, 10}, {4.5, 2}, {3, 1}, {0, 1}};
             selectionSpecific = 1;
+            noBlood = 1;
 
             class Avulsion {
-                // at damage, weight. between points, weight is interpolated then wound is chosen by weighted random.
-                // as with thresholds, but result is not rounded (decimal values used as-is)
-                weighting[] = {{2, 2}, {0.7, 1}};
-                /*
-                damageMultiplier = 1;
-                sizeMultiplier = 1;
-                bleedingMultiplier = 1;
-                painMultiplier = 1;
-                fractureMultiplier = 1;
-                */
-            };
-			class ThermalBurn {
                 // at damage, weight. between points, weight is interpolated then wound is chosen by weighted random.
                 // as with thresholds, but result is not rounded (decimal values used as-is)
                 weighting[] = {{1, 1}, {0.35, 0}};
@@ -13511,6 +13513,9 @@ class ACE_Medical_Injuries
                 // velocity wounds will tend to be medium or large
                 sizeMultiplier = 0.9;
             };
+            class ThermalBurn {
+                weighting[] = {{0.35, 0}, {0.35, 1}};
+            };
         };
 	};
 };
@@ -13522,6 +13527,27 @@ class CfgLights
 		color[]={0.22, 0.984, 0.11};
 		diffuse[]={56,251,28,1};
 		intensity=30000;
+		dayLight=1;
+		useFlare=1;
+		flareSize=1.5;
+		flareMaxDistance=6000;
+	};
+	class MET_BlasterboltLightChaingun_Blue: 3AS_RocketLight
+	{
+		color[]={0, 0.164, 1};
+		diffuse[]={0,42,255,1};
+		intensity=5000;
+		dayLight=1;
+		useFlare=1;
+		flareSize=1.5;
+		flareMaxDistance=6000;
+	};
+	class MET_BlasterboltLightChaingun_red: 3AS_RocketLight
+	{
+		color[]={0,0,0,0};
+		diffuse[]={255,0,0,1};
+		ambient[]={0,0,0,0.5};
+		intensity=850;
 		dayLight=1;
 		useFlare=1;
 		flareSize=1.5;
@@ -13544,13 +13570,31 @@ class MET_Rocket_effect_Green_fly
 		qualityLevel=-1;
 	};
 };
+class MET_chaingunglow
+{
+	class Light
+	{
+		simulation="light";
+		type="MET_BlasterboltLightChaingun_Blue";
+		position[]={0,0,0};
+	};
+};
+class MET_chaingunglow_Red
+{
+	class Light
+	{
+		simulation="light";
+		type="MET_BlasterboltLightChaingun_Red";
+		position[]={0,0,0};
+	};
+};
 class CfgAmmo
 {
 	class B_338_Ball;
 	class MET_blasterbolt_base: B_338_Ball
 	{
 		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Blue.p3d";
-		ACE_damageType="bullet";
+		ACE_damageType="metplasma";
 		cartridge="";
 		lightcolor[]={0,0.30000001,1};
 		hit=20;
@@ -18443,36 +18487,43 @@ class CfgAmmo
 			distance = 1;
 		};
 	};*/
-	class MET_light_Chaingun_Ammo: M_NLAW_AT_F
+	class MET_light_Chaingun_Ammo: MET_AT_Chaingun_Ammo
 	{
 		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Blue.p3d";
-		ACE_damageType="bullet";
-		cartridge="";
-		lightcolor[]={0,0.30000001,1};
-		hit=45;
-		indirectHit=2;
-		explosive=0;
-		indirectHitRange=0.5;
-		caliber=80;
-		coefGravity=0;
-		timetolive=20;
-		waterFriction=-0.0099999998;
-		deflecting=0;
-		airfriction=0;
+		lightcolor[]={0,0,1};
 		tracerstarttime=0.050000001;
-		tracerendtime=22;
+		tracerendtime=10;
 		nvgonly=0;
 		airlock=1;
 		irtarget=1;
 		brightness=1000;
 		flaresize=5;
 		tracerscale=1;
-		effectflare="FlareShell";
-		effectfly="MET_BlasterBoltGlow_Blue_Fly";
-		effectsMissile="MET_BlasterBoltGlow_Blue_Fly";
-		ExplosionEffects="MET_ImpactEffect";
-		cratereffects="";
-		maxSpeed=1250;
+		hit=30;
+		indirectHit=5;
+		indirectHitRange=0.75;
+		caliber=1;
+		ACE_caliber=1;
+		cost=500;
+		airFriction=0;
+		sideairFriction=0;
+		coefGravity=0;
+		maxSpeed=1050;
+		typicalSpeed=1050;
+		initTime=0;
+		thrustTime=3.4000001;
+		thrust=500;
+		fuseDistance=0;
+		simulationStep=0.02;
+		timeToLive=4;
+		whistleDist=20;
+		triggerOnImpact=1;
+		triggerDistance=2.5;
+		directionalExplosion=0;
+		dangerRadiusBulletClose=-1;
+		dangerRadiusHit=-1;
+		warheadName="";
+		deleteParentWhenTriggered=0;
 		submunitionAmmo="";
 		submunitionDirectionType="SubmunitionModelDirection";
 		submunitionInitSpeed=1000;
@@ -18484,37 +18535,36 @@ class CfgAmmo
 		{
 			"Direct"
 		};
-		soundHit[] = {"", 3.16228, 1, 1800};
-		soundFly[] = {"", 1, 1.5, 400};
-		soundEngine[] = {"", 1, 1, 200};
-		soundSetExplosion[] = {""};
-		class CamShakeExplode
-		{
-			power = 0;
-			duration = 0;
-			frequency = 0;
-			distance = 0;
-		};
-		class CamShakeHit
-		{
-			power = 0;
-			duration = 0;
-			frequency = 0;
-			distance = 0;
-		};
+		proximityExplosionDistance=5;
+		explosive=0.2;
+		CraterEffects="ExploAmmoCrater";
+		effectFlare="FlareShell";
+		effectFly="MET_chaingunglow";
+		effectsFire="CannonFire";
+		effectsMissile="MET_chaingunglow";
+		effectsMissileInit="";
+		effectsSmoke="SmokeShellWhite";
+		explosionAngle=60;
+		explosionEffects="MET_ImpactEffect";
+		explosionEffectsDir="explosionDir";
+		aiAmmoUsageFlags="64 + 128 + 256";
+		maneuvrability=4;
+		allowAgainstInfantry=1;
+		trackOversteer=1;
+		maxControlRange=600;
 		class CamShakeFire
 		{
-			power = 0;
-			duration = 0;
-			frequency = 0;
-			distance = 0;
+			power=0;
+			duration=0;
+			frequency=18;
+			distance=1;
 		};
 		class CamShakePlayerFire
 		{
-			power = 0;
-			duration = 0;
-			frequency = 0;
-			distance = 0;
+			power=0;
+			duration=0;
+			frequency=20;
+			distance=1;
 		};
 		class HitEffects
 		{
@@ -19973,6 +20023,7 @@ class CfgAmmo
 	{
 		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Red.p3d";
 		lightcolor[]={1,0.30000001,0};
-		effectfly="MET_BlasterBoltGlow_Red_Fly";
+		effectfly="MET_chaingunglow_Red";
+		effectsMissile="MET_chaingunglow_Red";
 	};
 };
