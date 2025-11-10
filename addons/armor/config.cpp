@@ -60,6 +60,7 @@ class CfgPatches
 			"helmet_16th_kick",
 			"helmet_16th_kix",
 			"helmet_16th_krieg",
+			"helmet_16th_longshot",
 			"helmet_16th_mace",
 			"helmet_16th_maple",
 			"helmet_16th_maple_arf",
@@ -971,6 +972,15 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\custom\krieg_helmet_co.paa"
+		};
+	};
+	class helmet_16th_longshot: helmet_16th_trp
+	{
+		scope=2;
+		displayName="[16th] Longshot's Helmet";
+		hiddenSelectionsTextures[]=
+		{
+			"z\16th\addons\armor\data\custom\longshot_helmet_co.paa"
 		};
 	};
 	class helmet_16th_maia: helmet_16th_trp

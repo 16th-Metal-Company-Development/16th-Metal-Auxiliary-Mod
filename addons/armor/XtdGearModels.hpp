@@ -24,7 +24,7 @@ class XtdGearModels {
                     "Blatt", "Blowfish", "Bopit", "Butcher", "Chet",
                     "Chetiah", "Cougar", "Creed", "Fish", "Frost",
                     "Gambit", "Hazmat", "Hellwolf", "Hevy", "Hood", "Karma",
-                    "Maia", "Mace", "Maple", "Maxson", "Merlin",
+                    "Longshot", "Maia", "Mace", "Maple", "Maxson", "Merlin",
                     "Moldy", "Nix", "Noble", "Prez", "Ronin",
                     "Roz", "Sam", "Ska", "Six", "Smith",
                     "Spice", "Sunto", "Talk", "Vergil", "William",

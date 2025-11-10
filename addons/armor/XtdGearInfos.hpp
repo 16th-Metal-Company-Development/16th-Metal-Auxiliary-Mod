@@ -34,6 +34,7 @@ class XtdGearInfos {
         class helmet_16th_hood         { model = "16th_Custom_Helmet"; camo = "Hood"; };
         class helmet_16th_karma        { model = "16th_Custom_Helmet"; camo = "Karma"; };
         class helmet_16th_krieg        { model = "16th_Custom_Helmet"; camo = "Krieg"; };
+        class helmet_16th_longshot     { model = "16th_Custom_Helmet"; camo = "longshot"; };
         class helmet_16th_mace         { model = "16th_Custom_Helmet"; camo = "Mace"; };
         class helmet_16th_maia         { model = "16th_Custom_Helmet"; camo = "Maia"; };
         class helmet_16th_maple        { model = "16th_Custom_Helmet"; camo = "Maple"; };
