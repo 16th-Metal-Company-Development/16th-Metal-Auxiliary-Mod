@@ -1014,7 +1014,7 @@ class CfgVehicles
 		scopecurator=2;
 		author="Watchdog, Sox";
 		displayname="[16th] Resupply Box (Base)";
-		maximumLoad=1210;
+		maximumLoad=2000;
 		editorCategory="B_MET_Props_F";
 		editorSubcategory="O_MET_Props";
 		hiddenSelections[]=
@@ -1025,6 +1025,10 @@ class CfgVehicles
 		{
 			mat[]={};
 		};
+        ace_cargo_size = 1;  // Cargo space the object takes
+        ace_cargo_canLoad = 1;  // Enables the object to be loaded (1-yes, 0-no)
+        ace_cargo_noRename = 1;  // Blocks renaming object (1-blocked, 0-allowed)
+        ace_cargo_blockUnloadCarry = 1; // Blocks object from being automatically picked up by player on unload
 		ace_dragging_ignoreWeight=1;
 		ace_dragging_ignoreWeightCarry=0;
 	};
@@ -1434,8 +1438,52 @@ class CfgVehicles
                 magazine="MET_3Rnd_SMKY_Grenade";
                 count=20;
             };
+			class _xx_DBA_90mm_IK55_HEAT_x1_mag
+			{
+				magazine="DBA_90mm_IK55_HEAT_x1_mag";
+				count=20;
+			};
+			class _xx_DBA_90mm_IK60_HEP_x1_mag
+			{
+				magazine="DBA_90mm_IK60_HEP_x1_mag";
+				count=20;
+			};
+			class _xx_DBA_90mm_IK40_FRAG_x1_mag
+			{
+				magazine="DBA_90mm_IK40_FRAG_x1_mag";
+				count=20;
+			};
+			class _xx_metal_at_mag
+			{
+				magazine="metal_at_mag";
+				count=20;
+			};
+			class _xx_metal_aa_mag
+			{
+				magazine="metal_aa_mag";
+				count=20;
+			};
+			class _xx_metal_ap_mag
+			{
+				magazine="metal_ap_mag";
+				count=20;
+			};
+			class _xx_MET_AA_SINGLE
+			{
+				magazine="MET_AA_SINGLE";
+				count=20;
+			};
+			class _xx_MET_AP_SINGLE
+			{
+				magazine="MET_AP_SINGLE";
+				count=20;
+			};
+			class _xx_MET_AT_Single
+			{
+				magazine="MET_AT_Single";
+				count=20;
+			};
 		};
-		ace_dragging_ignoreWeightCarry=1;
 	};
     class Box_MET_Airborne: Box_MET_Base
 	{
@@ -1451,8 +1499,13 @@ class CfgVehicles
 			class _xx_MET_DC15A_mag
 			{
 				magazine="MET_DC15A_mag";
-				count=30;
+				count=50;
 			};
+            class _xx_MET_DC15S_mag
+			{
+				magazine="MET_DC15S_mag";
+				count=50;
+            };
             class _xx_MET_CinCar_Mag
 			{
 				magazine="MET_CinCar_Mag";
@@ -1471,26 +1524,26 @@ class CfgVehicles
 			class _xx_MET_DC15C_mag
 			{
 				magazine="MET_DC15C_mag";
-				count=80;
+				count=50;
+			};
+			class _xx_MET_DC15x_mag
+			{
+				magazine="MET_DC15x_mag";
+				count=10;
+			};
+            class _xx_MET_DC15LE_mag
+            {
+                magazine = "MET_DC15LE_mag";
+                count = 30;
+            };
+			class _xx_MET_DC15x_at_mag
+			{
+				magazine="MET_DC15x_at_mag";
+				count=5;
 			};
 			class _xx_MET_Valken_mag
 			{
 				magazine="MET_Valken_mag";
-				count=20;
-			};
-			class _xx_MET_AA_SINGLE
-			{
-				magazine="MET_AA_SINGLE";
-				count=20;
-			};
-			class _xx_MET_AP_SINGLE
-			{
-				magazine="MET_AP_SINGLE";
-				count=10;
-			};
-			class _xx_MET_AT_SINGLE
-			{
-				magazine="MET_AT_SINGLE";
 				count=20;
 			};
 			class _xx_MET_HE_Grenade
@@ -1513,48 +1566,337 @@ class CfgVehicles
 				magazine="MET_pellet_mag";
 				count=15;
 			};
+			class _xx_MET_DP12_slug_mag
+			{
+				magazine="MET_DP12_slug_mag";
+				count=15;
+			};
+			class _xx_MET_DP12_pellet_mag
+			{
+				magazine="MET_DP12_pellet_mag";
+				count=15;
+			};
 			class _xx_MET_blaster_pistol_battery
 			{
 				magazine="MET_blaster_pistol_battery";
 				count=20;
 			};
-			class _xx_OPTRE_1Rnd_SmokeBlue_Grenade_shell
+            class _xx_MET_ILLUM_Grenade
+            {
+                magazine="MET_ILLUM_Grenade";
+                count=20;
+            };
+            class _xx_MET_ILLUM_Grenade_Clust
+            {
+                magazine="MET_ILLUM_Grenade_Clust";
+                count=20;
+            };
+            class _xx_MET_ILLUM_B_Grenade
+            {
+                magazine="MET_ILLUM_B_Grenade";
+                count=20;
+            };
+            class _xx_MET_ILLUM_B_Grenade_Clust
+            {
+                magazine="MET_ILLUM_B_Grenade_Clust";
+                count=20;
+            };
+            class _xx_MET_ILLUM_G_Grenade
+            {
+                magazine="MET_ILLUM_G_Grenade";
+                count=20;
+            };
+            class _xx_MET_ILLUM_G_Grenade_Clust
+            {
+                magazine="MET_ILLUM_G_Grenade_Clust";
+                count=20;
+            };
+            class _xx_MET_ILLUM_R_Grenade
+            {
+                magazine="MET_ILLUM_R_Grenade";
+                count=20;
+            };
+            class _xx_MET_ILLUM_R_Grenade_Clust
+            {
+                magazine="MET_ILLUM_R_Grenade_Clust";
+                count=20;
+            };
+            class _xx_MET_ILLUM_Y_Grenade
+            {
+                magazine="MET_ILLUM_Y_Grenade";
+                count=20;
+            };
+            class _xx_MET_ILLUM_Y_Grenade_Clust
+            {
+                magazine="MET_ILLUM_Y_Grenade_Clust";
+                count=20;
+            };
+            class _xx_MET_ILLUM_O_Grenade
+            {
+                magazine="MET_ILLUM_O_Grenade";
+                count=20;
+            };
+            class _xx_MET_ILLUM_O_Grenade_Clust
+            {
+                magazine="MET_ILLUM_O_Grenade_Clust";
+                count=20;
+            };
+            class _xx_MET_ILLUM_P_Grenade
+            {
+                magazine="MET_ILLUM_P_Grenade";
+                count=20;
+            };
+            class _xx_MET_ILLUM_P_Grenade_Clust
+            {
+                magazine="MET_ILLUM_P_Grenade_Clust";
+                count=20;
+            };
+            class _xx_MET_ILLUM_TU_Grenade
+            {
+                magazine="MET_ILLUM_TU_Grenade";
+                count=20;
+            };
+            class _xx_MET_ILLUM_TU_Grenade_Clust
+            {
+                magazine="MET_ILLUM_TU_Grenade_Clust";
+                count=20;
+            };
+            class _xx_MET_ILLUM_TE_Grenade
+            {
+                magazine="MET_ILLUM_TE_Grenade";
+                count=20;
+            };
+            class _xx_MET_ILLUM_TE_Grenade_Clust
+            {
+                magazine="MET_ILLUM_TE_Grenade_Clust";
+                count=20;
+            };
+            class _xx_MET_ILLUM_IR_Grenade
+            {
+                magazine="MET_ILLUM_IR_Grenade";
+                count=20;
+            };
+            class _xx_MET_ILLUM_IR_Grenade_Clust
+            {
+                magazine="MET_ILLUM_IR_Grenade_Clust";
+                count=20;
+            };
+            class _xx_MET_SMKW_Grenade
+            {
+                magazine="MET_SMKW_Grenade";
+                count=20;
+            };
+            class _xx_MET_SMKB_Grenade
+            {
+                magazine="MET_SMKB_Grenade";
+                count=20;
+            };
+            class _xx_MET_SMKG_Grenade
+            {
+                magazine="MET_SMKG_Grenade";
+                count=20;
+            };
+            class _xx_MET_SMKO_Grenade
+            {
+                magazine="MET_SMKO_Grenade";
+                count=20;
+            };
+            class _xx_MET_SMKP_Grenade
+            {
+                magazine="MET_SMKP_Grenade";
+                count=20;
+            };
+            class _xx_MET_SMKR_Grenade
+            {
+                magazine="MET_SMKR_Grenade";
+                count=20;
+            };
+            class _xx_MET_SMKTU_Grenade
+            {
+                magazine="MET_SMKTU_Grenade";
+                count=20;
+            };
+            class _xx_MET_SMKTE_Grenade
+            {
+                magazine="MET_SMKTE_Grenade";
+                count=20;
+            };
+            class _xx_MET_SMKY_Grenade
+            {
+                magazine="MET_SMKY_Grenade";
+                count=20;
+            };
+            class _xx_MET_3Rnd_HE_Grenade_shell
+            {
+                magazine="MET_3Rnd_HE_Grenade_shell";
+                count=20;
+            };
+            class _xx_MET_3Rnd_AT_Grenade_shell
+            {
+                magazine="MET_3Rnd_AT_Grenade_shell";
+                count=20;
+            };
+            class _xx_MET_3Rnd_ILLUM_Grenade
+            {
+                magazine="MET_3Rnd_ILLUM_Grenade";
+                count=20;
+            };
+            class _xx_MET_3Rnd_ILLUM_Grenade_Clust
+            {
+                magazine="MET_3Rnd_ILLUM_Grenade_Clust";
+                count=20;
+            };
+            class _xx_MET_3Rnd_ILLUM_B_Grenade
+            {
+                magazine="MET_3Rnd_ILLUM_B_Grenade";
+                count=20;
+            };
+            class _xx_MET_3Rnd_ILLUM_B_Grenade_Clust
+            {
+                magazine="MET_3Rnd_ILLUM_B_Grenade_Clust";
+                count=20;
+            };
+            class _xx_MET_3Rnd_ILLUM_G_Grenade
+            {
+                magazine="MET_3Rnd_ILLUM_G_Grenade";
+                count=20;
+            };
+            class _xx_MET_3Rnd_ILLUM_G_Grenade_Clust
+            {
+                magazine="MET_3Rnd_ILLUM_G_Grenade_Clust";
+                count=20;
+            };
+            class _xx_MET_3Rnd_ILLUM_R_Grenade
+            {
+                magazine="MET_3Rnd_ILLUM_R_Grenade";
+                count=20;
+            };
+            class _xx_MET_3Rnd_ILLUM_R_Grenade_Clust
+            {
+                magazine="MET_3Rnd_ILLUM_R_Grenade_Clust";
+                count=20;
+            };
+            class _xx_MET_3Rnd_ILLUM_Y_Grenade
+            {
+                magazine="MET_3Rnd_ILLUM_Y_Grenade";
+                count=20;
+            };
+            class _xx_MET_3Rnd_ILLUM_Y_Grenade_Clust
+            {
+                magazine="MET_3Rnd_ILLUM_Y_Grenade_Clust";
+                count=20;
+            };
+            class _xx_MET_3Rnd_ILLUM_O_Grenade
+            {
+                magazine="MET_3Rnd_ILLUM_O_Grenade";
+                count=20;
+            };
+            class _xx_MET_3Rnd_ILLUM_O_Grenade_Clust
+            {
+                magazine="MET_3Rnd_ILLUM_O_Grenade_Clust";
+                count=20;
+            };
+            class _xx_MET_3Rnd_ILLUM_P_Grenade
+            {
+                magazine="MET_3Rnd_ILLUM_P_Grenade";
+                count=20;
+            };
+            class _xx_MET_3Rnd_ILLUM_P_Grenade_Clust
+            {
+                magazine="MET_3Rnd_ILLUM_P_Grenade_Clust";
+                count=20;
+            };
+            class _xx_MET_3Rnd_ILLUM_TU_Grenade
+            {
+                magazine="MET_3Rnd_ILLUM_TU_Grenade";
+                count=20;
+            };
+            class _xx_MET_3Rnd_ILLUM_TU_Grenade_Clust
+            {
+                magazine="MET_3Rnd_ILLUM_TU_Grenade_Clust";
+                count=20;
+            };
+            class _xx_MET_3Rnd_ILLUM_TE_Grenade
+            {
+                magazine="MET_3Rnd_ILLUM_TE_Grenade";
+                count=20;
+            };
+            class _xx_MET_3Rnd_ILLUM_TE_Grenade_Clust
+            {
+                magazine="MET_3Rnd_ILLUM_TE_Grenade_Clust";
+                count=20;
+            };
+            class _xx_MET_3Rnd_ILLUM_IR_Grenade
+            {
+                magazine="MET_3Rnd_ILLUM_IR_Grenade";
+                count=20;
+            };
+            class _xx_MET_3Rnd_ILLUM_IR_Grenade_Clust
+            {
+                magazine="MET_3Rnd_ILLUM_IR_Grenade_Clust";
+                count=20;
+            };
+            class _xx_MET_3Rnd_SMKW_Grenade
+            {
+                magazine="MET_3Rnd_SMKW_Grenade";
+                count=20;
+            };
+            class _xx_MET_3Rnd_SMKB_Grenade
+            {
+                magazine="MET_3Rnd_SMKB_Grenade";
+                count=20;
+            };
+            class _xx_MET_3Rnd_SMKG_Grenade
+            {
+                magazine="MET_3Rnd_SMKG_Grenade";
+                count=20;
+            };
+            class _xx_MET_3Rnd_SMKO_Grenade
+            {
+                magazine="MET_3Rnd_SMKO_Grenade";
+                count=20;
+            };
+            class _xx_MET_3Rnd_SMKP_Grenade
+            {
+                magazine="MET_3Rnd_SMKP_Grenade";
+                count=20;
+            };
+            class _xx_MET_3Rnd_SMKR_Grenade
+            {
+                magazine="MET_3Rnd_SMKR_Grenade";
+                count=20;
+            };
+            class _xx_MET_3Rnd_SMKTU_Grenade
+            {
+                magazine="MET_3Rnd_SMKTU_Grenade";
+                count=20;
+            };
+            class _xx_MET_3Rnd_SMKTE_Grenade
+            {
+                magazine="MET_3Rnd_SMKTE_Grenade";
+                count=20;
+            };
+            class _xx_MET_3Rnd_SMKY_Grenade
+            {
+                magazine="MET_3Rnd_SMKY_Grenade";
+                count=20;
+            };
+			class _xx_MET_AA_SINGLE
 			{
-				magazine="OPTRE_1Rnd_SmokeBlue_Grenade_shell";
-				count=20;
+				magazine="MET_AA_SINGLE";
+				count=10;
 			};
-			class _xx_OPTRE_1Rnd_SmokeGreen_Grenade_shell
+			class _xx_MET_AP_SINGLE
 			{
-				magazine="OPTRE_1Rnd_SmokeGreen_Grenade_shell";
-				count=20;
+				magazine="MET_AP_SINGLE";
+				count=10;
 			};
-			class _xx_OPTRE_1Rnd_SmokeOrange_Grenade_shell
+			class _xx_MET_AT_Single
 			{
-				magazine="OPTRE_1Rnd_SmokeOrange_Grenade_shell";
-				count=20;
-			};
-			class _xx_OPTRE_1Rnd_SmokePurple_Grenade_shell
-			{
-				magazine="OPTRE_1Rnd_SmokePurple_Grenade_shell";
-				count=20;
-			};
-			class _xx_OPTRE_1Rnd_SmokeRed_Grenade_shell
-			{
-				magazine="OPTRE_1Rnd_SmokeRed_Grenade_shell";
-				count=20;
-			};
-			class _xx_OPTRE_1Rnd_Smoke_Grenade_shell
-			{
-				magazine="OPTRE_1Rnd_Smoke_Grenade_shell";
-				count=20;
-			};
-			class _xx_OPTRE_1Rnd_SmokeYellow_Grenade_shell
-			{
-				magazine="OPTRE_1Rnd_SmokeYellow_Grenade_shell";
-				count=20;
+				magazine="MET_AT_Single";
+				count=10;
 			};
 		};
-		ace_dragging_ignoreWeightCarry=1;
 	};
     class Box_MET_FieldAssets: Box_MET_Base
 	{
@@ -1653,10 +1995,6 @@ class CfgVehicles
 				count=10;
 			};
 		};
-		class TransportItems
-		{
-		};
-		ace_dragging_ignoreWeightCarry=1;
 	};
     class Box_MET_Ordinance: Box_MET_Base
 	{
@@ -2749,7 +3087,7 @@ class CfgVehicles
             };
 		};
 	};
-    class Box_MET_Rockets: Box_MET_ARC
+    class Box_MET_Rockets: Box_MET_Base
 	{
 		scope=2;
 		scopecurator=2;
@@ -2814,72 +3152,6 @@ class CfgVehicles
 				count=10;
 			};
         };*/
-	};
-    class Box_MET_Rockets_2: Box_MET_Base
-	{
-		scope=0;
-		scopecurator=0;
-		displayname="[16th] Resupply Box (Rockets 2)";
-		hiddenSelectionsTextures[]=
-		{
-			"\212th\Other\212_Box\Textures\ResupplyBox_Rockets_CO.paa"
-		};
-		class TransportMagazines
-		{
-			class _xx_DBA_90mm_IK55_HEAT_x1_mag
-			{
-				magazine="DBA_90mm_IK55_HEAT_x1_mag";
-				count=20;
-			};
-			class _xx_DBA_90mm_IK60_HEP_x1_mag
-			{
-				magazine="DBA_90mm_IK60_HEP_x1_mag";
-				count=20;
-			};
-			class _xx_DBA_90mm_IK40_FRAG_x1_mag
-			{
-				magazine="DBA_90mm_IK40_FRAG_x1_mag";
-				count=20;
-			};
-			class _xx_metal_at_mag
-			{
-				magazine="metal_at_mag";
-				count=20;
-			};
-			class _xx_metal_aa_mag
-			{
-				magazine="metal_aa_mag";
-				count=20;
-			};
-			class _xx_metal_ap_mag
-			{
-				magazine="metal_ap_mag";
-				count=20;
-			};
-			class _xx_MET_AA_SINGLE
-			{
-				magazine="MET_AA_SINGLE";
-				count=20;
-			};
-			class _xx_MET_AP_SINGLE
-			{
-				magazine="MET_AP_SINGLE";
-				count=20;
-			};
-			class _xx_MET_AT_Single
-			{
-				magazine="MET_AT_Single";
-				count=20;
-			};
-		};
-        class TransportWeapons
-		{
-            class _xx_MET_RPS6_F
-            {
-                weapon = "MET_RPS6_F"; // Weapon class name
-                count = 10; // Number of weapons
-            };
-        };
 	};
     class Box_MET_Engineer: Box_MET_Base
 	{
