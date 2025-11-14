@@ -127,4 +127,46 @@ class CfgMarkerColors
 		color[]={0.14,0.15000001,0.15000001,1};
 		scope=2;
 	};
+	class Color21Blue: Default
+	{
+		name="2-1 Blue";
+		color[]={0.439,0.439,0.941,1};
+		scope=2;
+	};
+	class Color22Red: Default
+	{
+		name="2-2 Red";
+		color[]={0.98,0.49,0.49,1};
+		scope=2;
+	};
+	class Color23Green: Default
+	{
+		name="2-3 Green";
+		color[]={0.443,1,0.443,1};
+		scope=2;
+	};
+	class Color24Yellow: Default
+	{
+		name="2-4 Yellow";
+		color[]={1,1,0.545,1};
+		scope=2;
+	};
+	class ColorReaperOrange: Default
+	{
+		name="Reaper";
+		color[]={0.804,0.435,0.051,1};
+		scope=2;
+	};
+	class Color9thRed: Default
+	{
+		name="9th Red";
+		color[]={0.604,0.204,0.208,1};
+		scope=2;
+	};
+	class Color9thGray: Default
+	{
+		name="9th Gray";
+		color[]={0.451,0.451,0.451,1};
+		scope=2;
+	};
 };
