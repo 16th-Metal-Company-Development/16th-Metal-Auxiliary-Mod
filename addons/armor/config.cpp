@@ -69,6 +69,7 @@ class CfgPatches
 			"helmet_16th_moldy",
 			"helmet_16th_nix",
 			"helmet_16th_noble",
+			"helmet_16th_orpheus",
 			"helmet_16th_prez",
 			"helmet_16th_ronin",
 			"helmet_16th_ronin_barc",
@@ -1064,6 +1065,15 @@ class CfgWeapons
 			"z\16th\addons\armor\data\custom\noble_helmet_co.paa"
 		};
 	};
+	class helmet_16th_orpheus : helmet_16th_trp
+	{
+		scope = 2;
+		displayName = "[16th] Orpheus's Helmet";
+		hiddenSelectionsTextures[] =
+		{
+			"z\16th\addons\armor\data\custom\orpheus_helmet_co.paa"
+		};
+	};
 	class helmet_16th_prez: helmet_16th_trp
 	{
 		scope=2;
@@ -1115,7 +1125,7 @@ class CfgWeapons
 		displayName="[16th] Six's Helmet";
 		hiddenSelectionsTextures[]=
 		{
-			"z\16th\addons\armor\data\custom\six_helmet_co.paa"
+			"z\16th\addons\armor\data\custom\six_helmet_u_co.paa"
 		};
 	};
 	class helmet_16th_ska: helmet_16th_trp
@@ -2614,6 +2624,15 @@ class CfgWeapons
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\custom\moose_arc_vest_co.paa"
+		};
+	};
+	class vest_six_arc : vest_16th_arc
+	{
+		scope = 2;
+		displayname = "[16th] Six's ARC Vest";
+		hiddenSelectionsTextures[] =
+		{
+			"z\16th\addons\armor\data\custom\six_arc_vest_co.paa"
 		};
 	};
 	class SEA_Vest_GM_Base;
@@ -5232,8 +5251,8 @@ class CfgVehicles
 		uniformClass="armor_16th_six";
 		hiddenselectionsTextures[]=
 		{
-			"z\16th\addons\armor\data\custom\six_uniform1_co.paa",
-			"z\16th\addons\armor\data\custom\six_uniform2_co.paa"
+			"z\16th\addons\armor\data\custom\six_uniform1_u_co.paa",
+			"z\16th\addons\armor\data\custom\six_uniform2_u_co.paa"
 		};
 		linkedItems[]=
 		{

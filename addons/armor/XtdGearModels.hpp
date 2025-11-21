@@ -25,7 +25,7 @@ class XtdGearModels {
                     "Chetiah", "Cougar", "Creed", "Fish", "Frost",
                     "Gambit", "Hazmat", "Hellwolf", "Hevy", "Hood", "Karma",
                     "Longshot", "Maia", "Mace", "Maple", "Maxson", "Merlin",
-                    "Moldy", "Nix", "Noble", "Prez", "Ronin",
+                    "Moldy", "Nix", "Noble", "Orpheus", "Prez", "Ronin",
                     "Roz", "Sam", "Ska", "Six", "Smith",
                     "Spice", "Sunto", "Talk", "Vergil", "William",
                     "Winters", "Wolf"
