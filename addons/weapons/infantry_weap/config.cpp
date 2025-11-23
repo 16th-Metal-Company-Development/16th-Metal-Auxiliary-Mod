@@ -2764,13 +2764,13 @@ class CfgWeapons
 		scope=2;
 		autoReload="true";
 		baseWeapon="MET_Z6";
-		displayName="[16th] Z6 rotary cannon";
+		displayName="[16th] Z-6 Rotary Cannon Mk I";
 		displayNameShort="A big weapon for big battles";
 		descriptionShort="Rapid Fire. Reloads automatically.";
 		picture="\MRC\JLTS\weapons\Z6\data\ui\Z6_ui_ca.paa";
 		UiPicture="\MRC\JLTS\weapons\Z6\data\ui\Z6_ui_ca.paa";
 		model="\MRC\JLTS\weapons\Z6\Z6.p3d";
-		WBK_UseHeavyWeaponFramework = true;	
+		WBK_UseHeavyWeaponFramework = true;
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -2956,6 +2956,158 @@ class CfgWeapons
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
 			mass=270;
+			class CowsSlot: CowsSlot
+			{
+				compatibleItems[]={};
+			};
+			class MuzzleSlot: MuzzleSlot
+			{
+				compatibleItems[]={};
+			};
+			class PointerSlot: PointerSlot
+			{
+				compatibleItems[]={};
+			};
+			class UnderBarrelSlot: UnderBarrelSlot
+			{
+				compatibleItems[]={};
+			};
+		};
+		class GunParticles
+		{
+			class FirstEffect
+			{
+				directionName="Konec hlavne";
+				effectName="RifleAssaultCloud";
+				positionName="Usti hlavne";
+			};
+		};
+	};
+	class MET_Z6_MkII: arifle_MX_Base_F
+	{
+		ace_overheating_mrbs=40000;
+		ace_overheating_slowdownFactor=0;
+		ace_overheating_allowSwapBarrel=0;
+		ace_overheating_dispersion=1;
+		ace_overheating_closedBolt=0;
+		ace_overheating_barrelMass=1;
+		ace_overheating_jamTypesAllowed[]=
+		{
+			"Fire",
+			"Dud"
+		};
+		author="Indecisive Armoury Team";
+		inertia=0;
+		canShootInWater=1;
+		scope=2;
+		autoReload="true";
+		baseWeapon="MET_Z6_MkII";
+		displayName="[16th] Z-6 Rotary Cannon Mk II";
+		descriptionShort="";
+		picture="Indecisive_Armoury_Weapons_REPUBLIC\Data\Z6\Z6_ui.paa";
+		model="Indecisive_Armoury_Weapons_REPUBLIC\Data\Z6\Model\IDA_Z6.p3d";
+		WBK_UseHeavyWeaponFramework = true;
+		magazines[]=
+		{
+			"MET_blaster_battery",
+			"MET_blaster_battery_Red",
+			"MET_blaster_battery_Green",
+			"MET_blaster_battery_Yellow"
+		};
+		recoil="MET_recoil_Z6";
+		magazineWell[]=
+		{
+			"MET_Z6_MagWell"
+		};
+		maxZeroing=1200;
+		handAnim[]=
+		{
+			"OFP2_ManSkeleton",
+			"\MRC\JLTS\weapons\Z6\anims\Z6_handanim.rtm"
+		};
+		reloadAction="";
+		ace_clearJamAction="";
+		fireLightDiffuse[]={0.5,0.5,0.5};
+		drySound[]=
+		{
+			"\Indecisive_Armoury_Sounds\weapon_dry.ogg",
+			5,
+			1,
+			10
+		};
+		reloadMagazineSound[]=
+		{
+			"z\16th\addons\weapons\infantry_weap\sounds\republic\z-6\Z6_reload.ogg",
+			1.5,
+			1,
+			100
+		};
+		muzzles[]=
+		{
+			"this"
+		};
+		modes[]=
+		{
+			"slowerAuto",
+			"Auto",
+			"fullerAuto"
+			//"maxAuto"
+		};
+		class Auto: Mode_FullAuto
+		{
+			class BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				closure1[]={};
+				closure2[]={};
+				soundClosure[]={};
+			};
+			sounds[] = {"StandardSound"};
+			class StandardSound {
+				soundSetShot[] = {"ls_z6_Shot_SoundSet", "ls_mediumBlaster_Tail_SoundSet"};
+			};
+			reloadTime=0.05;
+			magazines[]=
+			{
+				//"MET_blaster_battery",
+				"MET_blaster_battery_Red",
+				"MET_blaster_battery_Green",
+				"MET_blaster_battery_Yellow"
+			};
+			dispersion=0.005;
+			burst=1;
+			soundContinuous="false";
+			soundBurst="true";
+			minRange=2;
+			minRangeProbab=0.5;
+			midRange=100;
+			midRangeProbab=0.075000003;
+			maxRange=10000;
+			maxRangeProbab=0.30000001;
+		};
+		class fullerAuto: Auto
+		{
+			reloadTime=0.03;
+			dispersion=0.006;
+			textureType="fastAuto";
+			minRangeProbab=0;
+			midRangeProbab=0;
+			maxRangeProbab=0;
+		};
+		class slowerAuto: Auto
+		{
+			reloadTime=0.075;
+			dispersion=0.004;
+			textureType="burst";
+			minRangeProbab=0;
+			midRangeProbab=0;
+			maxRangeProbab=0;
+		};
+		aiDispersionCoefY=24;
+		aiDispersionCoefX=21;
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			mass=100;
 			class CowsSlot: CowsSlot
 			{
 				compatibleItems[]={};
@@ -11646,7 +11798,11 @@ class CfgMagazineWells
 			"JLTS_RG4D_mag",
 			"MET_D200_Pistol_mag",
 			"MET_DLA13_mag",
-			"MET_EL34_mag"
+			"MET_EL34_mag",
+			"Metal_E5_mag",
+			"Metal_E5_BX_mag",
+			"Metal_E5C_mag",
+			"Metal_RG4D_mag"
 		};
 		MET_E15_RandomMagazines[]=
 		{
@@ -11732,6 +11888,15 @@ class CfgMagazineWells
 			"3AS_8Rnd_EY30_Pellets",
 			"3AS_15Rnd_EM20_SE14R_Mag"
 		};
+		MET_DC20Magazines_MET_Droid[]=
+		{
+			"Metal_E5_mag",
+			"Metal_E5_BX_mag",
+			"Metal_E5C_mag",
+			"Metal_E5S_mag",
+			"Metal_RG4D_mag",
+			"Metal_SBB3_mag"
+		};
 	};
 	class MET_DP23_MagWell
 	{
@@ -11771,7 +11936,9 @@ class CfgMagazineWells
 			"3AS_60Rnd_EM50_RedPlasma",
 			"DBA_58x42mm_BP87D_x40_mag",
 			"Aux212_JLTS_E5_Mag",
-			"ls_magazine_e5"
+			"ls_magazine_e5",
+			"Metal_E5_mag",
+			"Metal_E5_BX_mag"
 		};
 	};
 	class MET_CinCar_MagWell

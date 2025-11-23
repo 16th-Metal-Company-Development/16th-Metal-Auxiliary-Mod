@@ -205,6 +205,7 @@ class CfgWeapons
 		JLTS_repairTime=20;
 		JLTS_canHaveShield=1;
 		JLTS_shieldedWeapon="Metal_E5_shield";
+		displayName="[CIS] E-5";
 		author="Hathmat";
 		scope=2;
         scopeArsenal=2;
@@ -637,6 +638,7 @@ class CfgWeapons
 		JLTS_shieldedWeapon="Metal_E5_BX_shield";
 		displayName="E-5 BX";
 		baseWeapon="Metal_E5_BX";
+		displayName="[CIS] E-5 BX";
 		author="Hathmat";
 		scope=2;
         scopeArsenal=2;
@@ -994,7 +996,7 @@ class CfgWeapons
 	{
 		JLTS_friedItem="Metal_E5C_stock_fried";
 		baseWeapon="Metal_E5C_stock";
-		displayName="$STR_JLTS_names_E5CStock";
+		displayName="[CIS] E-5C";
 		picture="\MRC\JLTS\weapons\e5c\data\ui\e5c_stock_ui_ca.paa";
 		model="\MRC\JLTS\weapons\e5c\e5c_stock.p3d";
 		scope=2;
@@ -1228,6 +1230,7 @@ class CfgWeapons
 	{
 		JLTS_hasElectronics=1;
 		JLTS_hasEMPProtection=0;
+		displayName="[CIS] E-5S";
 		JLTS_friedItem="Metal_E5S_fried";
 		JLTS_repairTime=33;
 		author="MrClock";
@@ -1535,7 +1538,7 @@ class CfgWeapons
 		JLTS_friedItem="Metal_RG4D_fried";
 		JLTS_repairTime=20;
 		author="MrClock";
-		displayName="$STR_JLTS_names_RG4D";
+		displayName="[CIS] RG-4D";
 		descriptionShort="$STR_JLTS_descs_BlasterPistol";
 		scope=2;
 		baseWeapon="Metal_RG4D";
@@ -1697,7 +1700,7 @@ class CfgWeapons
 		JLTS_repairTime=25;
 		author="MrClock";
 		scope=2;
-		displayName="$STR_JLTS_names_SBB3";
+		displayName="[CIS] SBB3";
 		descriptionShort="$STR_JLTS_descs_BlasterScatter";
 		picture="\MRC\JLTS\weapons\SBB3\data\ui\SBB3_ui_ca.paa";
 		model="\MRC\JLTS\weapons\SBB3\SBB3.p3d";
@@ -2147,7 +2150,7 @@ class CfgWeapons
 		JLTS_friedItem="";
 		author="MrClock";
 		scope=2;
-		displayName="$STR_JLTS_names_EPL2";
+		displayName="[CIS] EPL-2";
 		descriptionShort="$STR_JLTS_descs_EMPL";
 		magazines[]=
 		{
@@ -2401,7 +2404,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_ammo_r.paa";
 		model="\MRC\JLTS\weapons\E5\E5_mag.p3d";
 		count=60;
-		displayName="$STR_JLTS_names_E5_mag";
+		displayName="[CIS] E5 Mag";
 		descriptionShort="$STR_JLTS_descs_E5_mag";
 		displayNameShort="$STR_JLTS_snames_EnergyCellStandard";
 		ammo="MET_blasterbolt_low_Red";
@@ -2418,7 +2421,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_ammo_r.paa";
 		model="\MRC\JLTS\weapons\E5\E5_mag.p3d";
 		count=40;
-		displayName="$STR_JLTS_names_E5_mag";
+		displayName="[CIS] E5 BX Mag";
 		descriptionShort="$STR_JLTS_descs_E5_mag";
 		displayNameShort="$STR_JLTS_snames_EnergyCellStandard";
 		ammo="MET_blasterbolt_Red";
@@ -2435,7 +2438,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_box_r.paa";
 		model="\MRC\JLTS\weapons\e5c\e5c_mag.p3d";
 		count=200;
-		displayName="$STR_JLTS_names_E5C_mag";
+		displayName="[CIS] E5C Mag";
 		displayNameShort="$STR_JLTS_snames_EnergyCellStandard";
 		descriptionShort="$STR_JLTS_descs_E5C_mag";
 		ammo="MET_blasterbolt_Red";
@@ -2452,7 +2455,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_sniper_r.paa";
 		model="\MRC\JLTS\weapons\E5S\E5S_mag.p3d";
 		count=20;
-		displayName="$STR_JLTS_names_E5S_mag";
+		displayName="[CIS] E5S Mag";
 		displayNameShort="$STR_JLTS_snames_EnergyCellHigh";
 		descriptionShort="$STR_JLTS_descs_E5S_mag";
 		ammo="MET_blasterbolt_dmr_Red";
@@ -2466,7 +2469,7 @@ class CfgMagazines
 		author="MrClock";
 		modelSpecial="";
 		modelSpecialIsProxy=0;
-		displayName="$STR_JLTS_names_RG4D_mag";
+		displayName="[CIS] RG-4D Mag";
 		displayNameShort="$STR_JLTS_snames_EnergyCellLow";
 		model="\MRC\JLTS\weapons\RG4D\RG4D_mag.p3d";
 		picture="\3AS\3AS_Weapons\Data\UI\3as_pistol_r.paa";
@@ -2485,7 +2488,7 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_pellets_r.paa";
 		model="\MRC\JLTS\weapons\Core\stun_mag.p3d";
 		count=25;
-		displayName="$STR_JLTS_names_SBB3_mag";
+		displayName="[CIS] SBB3 Mag";
 		displayNameShort="$STR_JLTS_snames_EnergyCellLow";
 		descriptionShort="$STR_JLTS_descs_SBB3_mag";
 		ammo="MET_pellet_red";
@@ -2526,8 +2529,8 @@ class CfgMagazines
 	{
 		author="Hazmat";
 		count=3;
-		displayName="[16th] Cluster Grenade";
-		displayNameShort="[16th] Cluster Grenades";
+		displayName="[CIS] Cluster Grenade";
+		displayNameShort="[CIS] Cluster Grenades";
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_proto.paa";
 		ammo="MET_40HE_ClusterShot_CIS";
 		model="\MRC\JLTS\weapons\EPL2\EPL2_mag.p3d";
@@ -2538,8 +2541,8 @@ class CfgMagazines
 	{
 		author="Hazmat";
 		count=6;
-		displayName="[16th] HE Grenade";
-		displayNameShort="[16th] HE Grenades";
+		displayName="[CIS] HE Grenade";
+		displayNameShort="[CIS] HE Grenades";
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_he.paa";
 		descriptionShort="Impact grenade";
 		ammo="MET_HE_LauncherGrenade_CIS";
