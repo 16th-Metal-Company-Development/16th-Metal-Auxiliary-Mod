@@ -636,7 +636,6 @@ class CfgWeapons
 		JLTS_repairTime=20;
 		JLTS_canHaveShield=1;
 		JLTS_shieldedWeapon="Metal_E5_BX_shield";
-		displayName="E-5 BX";
 		baseWeapon="Metal_E5_BX";
 		displayName="[CIS] E-5 BX";
 		author="Hathmat";
