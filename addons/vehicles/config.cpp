@@ -28,6 +28,7 @@ class CfgPatches
 			"MET_ATAT",
 			"MET_Republic_Transport",
 			"MET_ATTE_Base",
+			"MET_Juggernaut",
 			"MET_Lightning_LAAT",
 			"MET_LSLAAT_cerb",
 			"MET_Z95_Defect",
@@ -145,6 +146,7 @@ class cfgvehicles
 	class ls_barc_base;
 	class 3AS_Nuclass;
 	class 3as_ATTE_Base;
+	class 3AS_Jug;
 	class 3AS_ATAT_Base;
 	class 3as_V19_base;
 	class 3as_Vulture_dynamicLoadout;
