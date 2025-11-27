@@ -25,6 +25,7 @@ class CfgPatches
 			"helmet_16th_ab_medic",
 			"helmet_16th_ab_blackrose",
 			"helmet_16th_ab_jero",
+			"helmet_16th_ab_noble",
 			"helmet_16th_ab_kick",
 			"helmet_16th_ab_vergil",
 			"helmet_16th_arf_nco",
@@ -738,6 +739,15 @@ class CfgWeapons
 		hiddenSelectionsTextures[] =
 		{
 			"z\16th\addons\armor\data\custom\jero_ab_helmet_co.paa"
+		};
+	};
+	class helmet_16th_ab_noble : helmet_16th_ab_trp
+	{
+		scope = 2;
+		displayName = "[16th] Noble's Airborne Helmet";
+		hiddenSelectionsTextures[] =
+		{
+			"z\16th\addons\armor\data\custom\noble_ab_helmet_co.paa"
 		};
 	};
 	class helmet_16th_ab_kick: helmet_16th_ab_trp

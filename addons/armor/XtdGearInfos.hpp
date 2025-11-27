@@ -72,6 +72,7 @@ class XtdGearInfos {
         // [16th] Custom Airborne Trooper Helmet variants
         class helmet_16th_ab_blackrose { model = "16th_Custom_Airborne_Helmet"; camo = "Blackrose"; };
         class helmet_16th_ab_jero      { model = "16th_Custom_Airborne_Helmet"; camo = "Jero"; };
+        class helmet_16th_ab_noble     { model = "16th_Custom_Airborne_Helmet"; camo = "Noble"; };
         class helmet_16th_ab_vergil    { model = "16th_Custom_Airborne_Helmet"; camo = "Vergil"; };
 
         // [16th] ARF variants
