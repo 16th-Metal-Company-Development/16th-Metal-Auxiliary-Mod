@@ -110,6 +110,7 @@ class CfgPatches
 			"vest_16_vest_officer_cpt",
 			"vest_16_vest_avalanche",
 			"vest_16_vest_arc",
+			"vest_16_vest_blackrose_arc",
 			"vest_16_vest_ronin_arc",
 			"vest_16_vest_mooose_arc",
 			"vest_16_ca_trp",
@@ -2699,6 +2700,15 @@ class CfgWeapons
 					passThrough=.2;
 				};
 			};
+		};
+	};	
+	class vest_blackrose_arc : vest_16th_arc
+	{
+		scope = 2;
+		displayname = "[16th] Blackrose's ARC Vest";
+		hiddenSelectionsTextures[] =
+		{
+			"z\16th\addons\armor\data\custom\blackrose_arc_vest_co.paa"
 		};
 	};
 	class vest_ronin_arc: vest_16th_arc
@@ -5317,8 +5327,8 @@ class CfgVehicles
 		uniformClass="armor_16th_winters";
 		hiddenselectionsTextures[]=
 		{
-			"z\16th\addons\armor\data\custom\winters_uniform1_co.paa",
-			"z\16th\addons\armor\data\custom\winters_uniform2_co.paa"
+			"z\16th\addons\armor\data\custom\winters_uniform1_u_co.paa",
+			"z\16th\addons\armor\data\custom\winters_uniform2_u_co.paa"
 		};
 		linkedItems[]=
 		{
