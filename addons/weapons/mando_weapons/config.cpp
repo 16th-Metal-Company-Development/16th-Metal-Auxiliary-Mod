@@ -630,9 +630,9 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"z\16th\addons\weapons\infantry_weap\data\Z6_co.paa",
-			"z\16th\addons\weapons\infantry_weap\data\Z6_Barrel_co.paa",
-			"z\16th\addons\weapons\infantry_weap\data\Z6_Mag_co.paa"
+			"z\16th\addons\weapons\data\Z6_co.paa",
+			"z\16th\addons\weapons\data\Z6_Barrel_co.paa",
+			"z\16th\addons\weapons\data\Z6_Mag_co.paa"
 		};
 		magazines[]=
 		{
@@ -943,13 +943,6 @@ class CfgMagazineWells
 		{
 			"MET_yellow_pellet_mag",
 			"MET_yellow_pellet_mag_bird"
-		};
-	};
-	class MET_Z6_MagWell
-	{
-		MET_Z6YellowMagazines[]=
-		{
-			"MET_blaster_battery_mand"
 		};
 	};
 	class MET_773_magWell

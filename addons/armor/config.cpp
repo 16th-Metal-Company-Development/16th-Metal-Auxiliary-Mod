@@ -13,6 +13,8 @@ class CfgPatches
 			"helmet_16th_trp",
 			"helmet_16th_ab_trp",
 			"helmet_16th_arf",
+			"MET_212th_ARF_Helm_Base",
+			"MET_Heavy_Helmet",
 			"helmet_16th_plt",
 			"helmet_16th_ab_vtrp",
 			"helmet_16th_ab_cpl",
@@ -23,6 +25,7 @@ class CfgPatches
 			"helmet_16th_ab_medic",
 			"helmet_16th_ab_blackrose",
 			"helmet_16th_ab_jero",
+			"helmet_16th_ab_noble",
 			"helmet_16th_ab_kick",
 			"helmet_16th_ab_vergil",
 			"helmet_16th_arf_nco",
@@ -108,6 +111,7 @@ class CfgPatches
 			"vest_16_vest_officer_cpt",
 			"vest_16_vest_avalanche",
 			"vest_16_vest_arc",
+			"vest_16_vest_blackrose_arc",
 			"vest_16_vest_ronin_arc",
 			"vest_16_vest_mooose_arc",
 			"vest_16_ca_trp",
@@ -137,6 +141,8 @@ class CfgWeapons
 	class 3as_P2_Pilot_helmet;
 	class JLTS_CloneHelmetAB;
 	class 3AS_ARF_Helmet;
+	class 212th_ARF_Helm;
+	class LST_Clone_Heavy_P2_Helmet;
 	class JLTS_CloneHelmetBARC;
 	class helmet_16th_trp: JLTS_CloneHelmetP2
 	{
@@ -176,6 +182,51 @@ class CfgWeapons
 					hitpointName="HitFace";
 					armor=6;
 					passThrough=.2;
+				};
+			};
+		};
+	};
+	class MET_Heavy_Helmet : LST_Clone_Heavy_P2_Helmet
+	{
+		scope = 2;
+		displayName = "[16th] RTO Helmet";
+		hiddenSelections[] = 
+		{ 
+			"camo1",
+			"camo2" 
+		};
+		hiddenSelectionsTextures[] = 
+		{ 
+			"z\16th\addons\armor\data\infantry\rifleman\rto_helmet_co.paa",
+			"z\16th\addons\armor\data\infantry\rifleman\rto_helmet_co.paa" 
+		};
+		model = "\Clone_Armor_Unit\Heavy_P2_Helmet.p3d";	
+		ace_hearing_protection = 0.94999999;
+		ace_hearing_lowerVolume = 0.1;
+		class ItemInfo : HeadgearItem
+		{
+			mass = 10;
+			uniformModel = "\Clone_Armor_Unit\Heavy_P2_Helmet.p3d";
+			hiddenSelections[] = 
+			{ 
+				"camo1",
+				"camo2" 
+			};
+			allowedSlots[] = { 801,901,701,605 };
+			modelSides[] = { 6 };
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointName = "HitHead";
+					armor = 6;
+					passThrough = .2;
+				};
+				class Face
+				{
+					hitpointName = "HitFace";
+					armor = 6;
+					passThrough = .2;
 				};
 			};
 		};
@@ -451,6 +502,50 @@ class CfgWeapons
 		};*/
 		subItems[]={};
 	};
+	class MET_212th_ARF_Helm_Base : 212th_ARF_Helm
+	{
+		scope = 0;
+		displayName = "[16th] ARF Helmet";
+		model = "\212th\Armor\212th_Helms\ARF_Helm.p3d";
+		hiddenSelections[] =
+		{
+			"Camo"
+		};
+		hiddenSelectionsTextures[] =
+		{
+			"z\16th\addons\armor\data\arf\arf_helmet_co.paa"
+		};
+		class ItemInfo : HeadgearItem
+		{
+			mass = 10;
+			uniformModel = "\212th\Armor\212th_Helms\ARF_Helm.p3d";
+			modelSides[] = {3,1};
+			hiddenSelections[] =
+			{
+				"camo"
+			};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointName = "HitHead";
+					armor = 6;
+					passThrough = .2;
+				};
+				class Face
+				{
+					hitpointName = "HitFace";
+					armor = 6;
+					passThrough = .2;
+				};
+			};
+		};
+		/*subItems[]=
+		{
+			"nvg_16_arf_int"
+		};*/
+		subItems[] = {};
+	};
 	class helmet_16th_arf_nco: helmet_16th_arf
 	{
 		scope=2;
@@ -646,6 +741,15 @@ class CfgWeapons
 			"z\16th\addons\armor\data\custom\jero_ab_helmet_co.paa"
 		};
 	};
+	class helmet_16th_ab_noble : helmet_16th_ab_trp
+	{
+		scope = 2;
+		displayName = "[16th] Noble's Airborne Helmet";
+		hiddenSelectionsTextures[] =
+		{
+			"z\16th\addons\armor\data\custom\noble_ab_helmet_co.paa"
+		};
+	};
 	class helmet_16th_ab_kick: helmet_16th_ab_trp
 	{
 		scope=0;
@@ -773,10 +877,10 @@ class CfgWeapons
 			"z\16th\addons\armor\data\custom\chet_helmet_co.paa"
 		};
 	};
-	class helmet_16th_chet_arf : helmet_16th_arf
+	class helmet_16th_chet_arf : MET_212th_ARF_Helm_Base
 	{
 		scope = 2;
-		displayName = "[16th] Chets's ARF Helmet";
+		displayName = "[16th] Chet's ARF Helmet";
 		hiddenSelectionsTextures[] =
 		{
 			"z\16th\addons\armor\data\custom\chet_helmet_arf_co.paa"
@@ -2606,6 +2710,15 @@ class CfgWeapons
 					passThrough=.2;
 				};
 			};
+		};
+	};	
+	class vest_blackrose_arc : vest_16th_arc
+	{
+		scope = 2;
+		displayname = "[16th] Blackrose's ARC Vest";
+		hiddenSelectionsTextures[] =
+		{
+			"z\16th\addons\armor\data\custom\blackrose_arc_vest_co.paa"
 		};
 	};
 	class vest_ronin_arc: vest_16th_arc
@@ -5224,8 +5337,8 @@ class CfgVehicles
 		uniformClass="armor_16th_winters";
 		hiddenselectionsTextures[]=
 		{
-			"z\16th\addons\armor\data\custom\winters_uniform1_co.paa",
-			"z\16th\addons\armor\data\custom\winters_uniform2_co.paa"
+			"z\16th\addons\armor\data\custom\winters_uniform1_u_co.paa",
+			"z\16th\addons\armor\data\custom\winters_uniform2_u_co.paa"
 		};
 		linkedItems[]=
 		{
