@@ -40,9 +40,8 @@ class XtdGearModels {
             options[] = { "camo" };
             class camo {
                 values[] = {
-                    "Trooper", "Veteran", "Corporal", "Sergeant",
-                    "SSG", "1SG", "SGM",
-                    "Medic"
+                    "Trooper", "Veteran", "Specialist", "NCO",
+                    "SNCO", "Officer", "Medic"
                 };
             };
         };
@@ -103,8 +102,7 @@ class XtdGearModels {
             class camo {
                 values[] = {
                     "Cadet", "Trooper", "Veteran", "Specialist", "NCO",
-                    "SNCO", "Officer", "Medic", "EOD", "Dragon",
-                    "DragonNCO", "Reaper", "ReaperNCO"
+                    "SNCO", "Officer", "Medic", "EOD"
                 };
             };
         };
@@ -132,8 +130,8 @@ class XtdGearModels {
             options[] = { "camo" };
             class camo {
                 values[] = {
-                    "Trooper", "Veteran", "Corporal", "Sergeant",
-                    "SSG", "1SG", "SGM", "Medic"
+                    "Trooper", "Veteran", "Specialist", "NCO",
+                     "SNCO", "Officer", "Medic"
                 };
             };
         };

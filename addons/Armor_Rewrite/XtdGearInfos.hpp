@@ -62,11 +62,10 @@ class XtdGearInfos {
         // [16th] Airborne Trooper Helmet variants
         class MET_Helmet_Airborne_Base       { model = "MET_Airborne_Helmet"; camo = "Trooper"; };
         class MET_Helmet_Airborne_Veteran    { model = "MET_Airborne_Helmet"; camo = "Veteran"; };
-        class MET_Helmet_Airborne_CPL        { model = "MET_Airborne_Helmet"; camo = "Corporal"; };
-        class MET_Helmet_Airborne_SGT        { model = "MET_Airborne_Helmet"; camo = "Sergeant"; };
-        class MET_Helmet_Airborne_SSGT       { model = "MET_Airborne_Helmet"; camo = "SSG"; };
-        class MET_Helmet_Airborne_FSGT       { model = "MET_Airborne_Helmet"; camo = "1SG"; };
-        class MET_Helmet_Airborne_SGM        { model = "MET_Airborne_Helmet"; camo = "SGM"; };
+        class MET_Helmet_Airborne_SPC        { model = "MET_Airborne_Helmet"; camo = "Specialist"; };
+        class MET_Helmet_Airborne_NCO        { model = "MET_Airborne_Helmet"; camo = "NCO"; };
+        class MET_Helmet_Airborne_SNCO       { model = "MET_Airborne_Helmet"; camo = "SNCO"; };
+        class MET_Helmet_Airborne_Officer    { model = "MET_Airborne_Helmet"; camo = "Officer"; };
         class MET_Helmet_Airborne_Medic      { model = "MET_Airborne_Helmet"; camo = "Medic"; };
 
         // [16th] Custom Airborne Trooper Helmet variants
@@ -144,11 +143,10 @@ class XtdGearInfos {
         // [16th] Airborne Trooper Armor variants
         class MET_Uniform_Airborne_Trooper   { model = "MET_Airborne_Armor"; camo = "Trooper"; };
         class MET_Uniform_Airborne_Veteran   { model = "MET_Airborne_Armor"; camo = "Veteran"; };
-        class MET_Uniform_Airborne_CPL       { model = "MET_Airborne_Armor"; camo = "Corporal"; };
-        class MET_Uniform_Airborne_SGT       { model = "MET_Airborne_Armor"; camo = "Sergeant"; };
-        class MET_Uniform_Airborne_SSGT      { model = "MET_Airborne_Armor"; camo = "SSG"; };
-        class MET_Uniform_Airborne_FSGT      { model = "MET_Airborne_Armor"; camo = "1SG"; };
-        class MET_Uniform_Airborne_SGM       { model = "MET_Airborne_Armor"; camo = "SGM"; };
+        class MET_Uniform_Airborne_SPC       { model = "MET_Airborne_Armor"; camo = "Specialist"; };
+        class MET_Uniform_Airborne_NCO       { model = "MET_Airborne_Armor"; camo = "NCO"; };
+        class MET_Uniform_Airborne_SNCO      { model = "MET_Airborne_Armor"; camo = "SNCO"; };
+        class MET_Uniform_Airborne_Officer   { model = "MET_Airborne_Armor"; camo = "Officer"; };
         class MET_Uniform_Airborne_Medic     { model = "MET_Airborne_Armor"; camo = "Medic"; };
 
         // [16th] Goff Armor (ARF) variants

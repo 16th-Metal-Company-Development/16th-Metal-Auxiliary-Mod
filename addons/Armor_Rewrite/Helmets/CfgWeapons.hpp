@@ -346,10 +346,10 @@ class MET_Helmet_Airborne_Veteran : MET_Helmet_Airborne_Base
 		"z\MET\addons\Armor_Rewrite\Helmets\Textures\Base\MET_AB_VET_Helmet_CO.paa"
 	};
 };
-class MET_Helmet_Airborne_CPL : MET_Helmet_Airborne_Base
+class MET_Helmet_Airborne_SPC : MET_Helmet_Airborne_Base
 {
 	scope = 2;
-	displayName = "[16th] Airborne Corporal Helmet";
+	displayName = "[16th] Airborne Specialist Helmet";
 	hiddenSelections[] =
 	{
 		"camo1"
@@ -359,10 +359,10 @@ class MET_Helmet_Airborne_CPL : MET_Helmet_Airborne_Base
 		"z\MET\addons\Armor_Rewrite\Helmets\Textures\Base\MET_AB_CPL_Helmet_CO.paa"
 	};
 };
-class MET_Helmet_Airborne_SGT : MET_Helmet_Airborne_Base
+class MET_Helmet_Airborne_NCO : MET_Helmet_Airborne_Base
 {
 	scope = 2;
-	displayName = "[16th] Airborne Sergeant Helmet";
+	displayName = "[16th] Airborne NCO Helmet";
 	hiddenSelections[] =
 	{
 		"camo1"
@@ -372,23 +372,10 @@ class MET_Helmet_Airborne_SGT : MET_Helmet_Airborne_Base
 		"z\MET\addons\Armor_Rewrite\Helmets\Textures\Base\MET_AB_SGT_Helmet_CO.paa"
 	};
 };
-class MET_Helmet_Airborne_SSGT : MET_Helmet_Airborne_Base 
+class MET_Helmet_Airborne_SNCO : MET_Helmet_Airborne_Base
 {
 	scope = 2;
-	displayName = "[16th] Airborne Staff Sergeant Helmet";
-	hiddenSelections[] =
-	{
-		"camo1"
-	};
-	hiddenSelectionsTextures[] =
-	{
-		"z\MET\addons\Armor_Rewrite\Helmets\Textures\Base\MET_AB_SSGT_Helmet_CO.paa"
-	};
-};
-class MET_Helmet_Airborne_FSGT : MET_Helmet_Airborne_Base
-{
-	scope = 2;
-	displayName = "[16th] Airborne First Sergeant Helmet";
+	displayName = "[16th] Airborne SNCO Helmet";
 	hiddenSelections[] =
 	{
 		"camo1"
@@ -398,10 +385,10 @@ class MET_Helmet_Airborne_FSGT : MET_Helmet_Airborne_Base
 		"z\MET\addons\Armor_Rewrite\Helmets\Textures\Base\MET_AB_FSGT_Helmet_CO.paa"
 	};
 };
-class MET_Helmet_Airborne_SGM : MET_Helmet_Airborne_Base
+class MET_Helmet_Airborne_Officer : MET_Helmet_Airborne_Base
 {
 	scope = 2;
-	displayName = "[16th] Airborne Sergeant Major Helmet";
+	displayName = "[16th] Airborne Officer Helmet";
 	hiddenSelections[] =
 	{
 		"camo1"

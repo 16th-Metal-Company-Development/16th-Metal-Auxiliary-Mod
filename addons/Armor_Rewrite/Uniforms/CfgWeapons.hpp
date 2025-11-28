@@ -533,49 +533,40 @@ class MET_Uniform_Airborne_Veteran : MET_Uniform_Trooper
 		uniformclass = "MET_Uniform_Airborne_Veteran_Base";
 	};
 };
-class MET_Uniform_Airborne_CPL : MET_Uniform_Trooper
+class MET_Uniform_Airborne_SPC : MET_Uniform_Trooper
 {
 	scope = 2;
-	displayName = "[16th] Airborne Corporal Armor";
+	displayName = "[16th] Airborne Specialist Armor";
 	class ItemInfo : ItemInfo
 	{
-		uniformclass = "MET_Uniform_Airborne_CPL_Base";
+		uniformclass = "MET_Uniform_Airborne_SPC_Base";
 	};
 };
-class MET_Uniform_Airborne_SGT : MET_Uniform_Trooper
+class MET_Uniform_Airborne_NCO : MET_Uniform_Trooper
 {
 	scope = 2;
-	displayName = "[16th] Airborne Sergeant Armor";
+	displayName = "[16th] Airborne NCO Armor";
 	class ItemInfo : ItemInfo
 	{
-		uniformclass = "MET_Uniform_Airborne_SGT_Base";
+		uniformclass = "MET_Uniform_Airborne_NCO_Base";
 	};
 };
-class MET_Uniform_Airborne_SSGT : MET_Uniform_Trooper
+class MET_Uniform_Airborne_SNCO : MET_Uniform_Trooper
 {
 	scope = 2;
-	displayName = "[16th] Airborne Staff Sergeant Armor";
+	displayName = "[16th] Airborne SNCO Armor";
 	class ItemInfo : ItemInfo
 	{
-		uniformclass = "MET_Uniform_Airborne_SSGT_Base";
+		uniformclass = "MET_Uniform_Airborne_SNCO_Base";
 	};
 };
-class MET_Uniform_Airborne_FSGT : MET_Uniform_Trooper
+class MET_Uniform_Airborne_Officer : MET_Uniform_Trooper
 {
 	scope = 2;
-	displayName = "[16th] Airborne First Sergeant Armor";
+	displayName = "[16th] Airborne Officer Armor";
 	class ItemInfo : ItemInfo
 	{
-		uniformclass = "MET_Uniform_Airborne_FSGT_Base";
-	};
-};
-class MET_Uniform_Airborne_SGM : MET_Uniform_Trooper
-{
-	scope = 2;
-	displayName = "[16th] Airborne Sergeant Major Armor";
-	class ItemInfo : ItemInfo
-	{
-		uniformclass = "MET_Uniform_Airborne_SGM_Base";
+		uniformclass = "MET_Uniform_Airborne_Officer_Base";
 	};
 };
 class MET_Uniform_Airborne_Medic : MET_Uniform_Trooper

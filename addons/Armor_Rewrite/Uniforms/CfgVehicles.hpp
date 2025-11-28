@@ -2198,10 +2198,10 @@ class MET_Uniform_Airborne_Veteran_Base : MET_Uniform_Trooper_Base
 		"ItemWatch"
 	};
 };
-class MET_Uniform_Airborne_CPL_Base : MET_Uniform_Trooper_Base
+class MET_Uniform_Airborne_SPC_Base : MET_Uniform_Trooper_Base
 {
 	scope = 1;
-	displayName = "[16th] Airborne Corporal";
+	displayName = "[16th] Airborne Specialist";
 	uniformClass = "MET_Uniform_Airborne_CPL";
 	hiddenselectionsTextures[] =
 	{
@@ -2210,7 +2210,7 @@ class MET_Uniform_Airborne_CPL_Base : MET_Uniform_Trooper_Base
 	};
 	linkedItems[] =
 	{
-		"MET_Helmet_Airborne_CPL",
+		"MET_Helmet_Airborne_SPC",
 		"ItemMap",
 		"JLTS_clone_comlink",
 		"ItemCompass",
@@ -2218,18 +2218,18 @@ class MET_Uniform_Airborne_CPL_Base : MET_Uniform_Trooper_Base
 	};
 	respawnLinkedItems[] =
 	{
-		"MET_Helmet_Airborne_CPL",
+		"MET_Helmet_Airborne_SPC",
 		"ItemMap",
 		"JLTS_clone_comlink",
 		"ItemCompass",
 		"ItemWatch"
 	};
 };
-class MET_Uniform_Airborne_SGT_Base : MET_Uniform_Trooper_Base
+class MET_Uniform_Airborne_NCO_Base : MET_Uniform_Trooper_Base
 {
 	scope = 1;
-	displayName = "[16th] Airborne Sergeant";
-	uniformClass = "MET_Uniform_Airborne_SGT";
+	displayName = "[16th] Airborne NCO";
+	uniformClass = "MET_Uniform_Airborne_NCO";
 	hiddenselectionsTextures[] =
 	{
 		"z\MET\addons\Armor_Rewrite\Uniforms\Textures\Base\MET_AB_SGT_Uniform1_CO.paa",
@@ -2237,7 +2237,7 @@ class MET_Uniform_Airborne_SGT_Base : MET_Uniform_Trooper_Base
 	};
 	linkedItems[] =
 	{
-		"MET_Helmet_Airborne_SGT",
+		"MET_Helmet_Airborne_NCO",
 		"ItemMap",
 		"JLTS_clone_comlink",
 		"ItemCompass",
@@ -2245,45 +2245,18 @@ class MET_Uniform_Airborne_SGT_Base : MET_Uniform_Trooper_Base
 	};
 	respawnLinkedItems[] =
 	{
-		"MET_Helmet_Airborne_SGT",
+		"MET_Helmet_Airborne_NCO",
 		"ItemMap",
 		"JLTS_clone_comlink",
 		"ItemCompass",
 		"ItemWatch"
 	};
 };
-class MET_Uniform_Airborne_SSGT_Base : MET_Uniform_Trooper_Base
+class MET_Uniform_Airborne_SNCO_Base : MET_Uniform_Trooper_Base
 {
 	scope = 1;
-	displayName = "[16th] Airborne Staff Sergeant";
-	uniformClass = "MET_Uniform_Airborne_SSGT";
-	hiddenselectionsTextures[] =
-	{
-		"z\MET\addons\Armor_Rewrite\Uniforms\Textures\Base\MET_AB_SSGT_Uniform1_CO.paa",
-		"z\MET\addons\Armor_Rewrite\Uniforms\Textures\Base\MET_AB_SSGT_Uniform2_CO.paa"
-	};
-	linkedItems[] =
-	{
-		"MET_Helmet_Airborne_SSGT",
-		"ItemMap",
-		"JLTS_clone_comlink",
-		"ItemCompass",
-		"ItemWatch"
-	};
-	respawnLinkedItems[] =
-	{
-		"MET_Helmet_Airborne_SSGT",
-		"ItemMap",
-		"JLTS_clone_comlink",
-		"ItemCompass",
-		"ItemWatch"
-	};
-};
-class MET_Uniform_Airborne_FSGT_Base : MET_Uniform_Trooper_Base
-{
-	scope = 1;
-	displayName = "[16th] Airborne First Sergeant";
-	uniformClass = "MET_Uniform_Airborne_FSGT";
+	displayName = "[16th] Airborne SNCO";
+	uniformClass = "MET_Uniform_Airborne_SNCO";
 	hiddenselectionsTextures[] =
 	{
 		"z\MET\addons\Armor_Rewrite\Uniforms\Textures\Base\MET_AB_FSGT_Uniform1_CO.paa",
@@ -2291,7 +2264,7 @@ class MET_Uniform_Airborne_FSGT_Base : MET_Uniform_Trooper_Base
 	};
 	linkedItems[] =
 	{
-		"MET_Helmet_Airborne_FSGT",
+		"MET_Helmet_Airborne_SNCO",
 		"ItemMap",
 		"JLTS_clone_comlink",
 		"ItemCompass",
@@ -2299,18 +2272,18 @@ class MET_Uniform_Airborne_FSGT_Base : MET_Uniform_Trooper_Base
 	};
 	respawnLinkedItems[] =
 	{
-		"MET_Helmet_Airborne_FSGT",
+		"MET_Helmet_Airborne_SNCO",
 		"ItemMap",
 		"JLTS_clone_comlink",
 		"ItemCompass",
 		"ItemWatch"
 	};
 };
-class MET_Uniform_Airborne_SGM_Base : MET_Uniform_Trooper_Base
+class MET_Uniform_Airborne_Officer_Base : MET_Uniform_Trooper_Base
 {
 	scope = 1;
 	displayName = "[16th] Airborne Sergeant Major";
-	uniformClass = "MET_Uniform_Airborne_SGM";
+	uniformClass = "MET_Uniform_Airborne_Officer";
 	hiddenselectionsTextures[] =
 	{
 		"z\MET\addons\Armor_Rewrite\Uniforms\Textures\Base\MET_AB_SGM_Uniform1_CO.paa",
@@ -2318,7 +2291,7 @@ class MET_Uniform_Airborne_SGM_Base : MET_Uniform_Trooper_Base
 	};
 	linkedItems[] =
 	{
-		"MET_Helmet_Airborne_SGM",
+		"MET_Helmet_Airborne_Officer",
 		"ItemMap",
 		"JLTS_clone_comlink",
 		"ItemCompass",
@@ -2326,7 +2299,7 @@ class MET_Uniform_Airborne_SGM_Base : MET_Uniform_Trooper_Base
 	};
 	respawnLinkedItems[] =
 	{
-		"MET_Helmet_Airborne_SGM",
+		"MET_Helmet_Airborne_Officer",
 		"ItemMap",
 		"JLTS_clone_comlink",
 		"ItemCompass",

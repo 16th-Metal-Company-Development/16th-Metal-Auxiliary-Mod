@@ -28,11 +28,10 @@ class CfgPatches
 			// Base Airborne
 			"MET_Helmet_Airborne_Base",
 			"MET_Helmet_Airborne_Veteran",
-			"MET_Helmet_Airborne_CPL",
-			"MET_Helmet_Airborne_SGT",
-			"MET_Helmet_Airborne_SSGT",
-			"MET_Helmet_Airborne_FSGT",
-			"MET_Helmet_Airborne_SGM",
+			"MET_Helmet_Airborne_SPC",
+			"MET_Helmet_Airborne_NCO",
+			"MET_Helmet_Airborne_SNCO",
+			"MET_Helmet_Airborne_Officer",
 			"MET_Helmet_Airborne_Medic",
 
 			// Base ARF
