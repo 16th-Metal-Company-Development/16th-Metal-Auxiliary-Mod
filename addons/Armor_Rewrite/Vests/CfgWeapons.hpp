@@ -176,7 +176,6 @@ class MET_Vest_Basic : JLTS_CloneVestSuspender
 {
 	scope = 2;
 	displayname = "[16th] Vest Basic";
-	picture = "\SWLB_clones\data\ui\icon_SWLB_clone_uniform_ca.paa";
 	model = "\SWLB_clones\SWLB_clone_basic_armor.p3d";
 	class ItemInfo : ItemInfo
 	{
@@ -1248,6 +1247,24 @@ class MET_Vest_ARC_Blackrose : MET_Vest_ARC_Base
 	hiddenSelectionsTextures[] =
 	{
 		"z\MET\addons\Armor_Rewrite\Vests\Textures\Custom\MET_Vest_ARC_Blackrose_CO.paa"
+	};
+};
+class MET_Vest_ARC_Hazmat : MET_Vest_ARC_Base
+{
+	scope = 2;
+	displayname = "[16th] Hazmat's ARC Vest";
+	hiddenSelectionsTextures[] =
+	{
+		"z\MET\addons\Armor_Rewrite\Vests\Textures\Custom\MET_Vest_ARC_Hazmat_CO.paa"
+	};
+};
+class MET_Vest_ARC_Hood : MET_Vest_ARC_Base
+{
+	scope = 2;
+	displayname = "[16th] Hood's ARC Vest";
+	hiddenSelectionsTextures[] =
+	{
+		"z\MET\addons\Armor_Rewrite\Vests\Textures\Custom\MET_Vest_ARC_Hood_CO.paa"
 	};
 };
 class MET_Vest_ARC_Ronin : MET_Vest_ARC_Base
