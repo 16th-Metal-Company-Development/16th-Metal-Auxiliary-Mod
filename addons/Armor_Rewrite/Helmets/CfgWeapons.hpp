@@ -473,6 +473,10 @@ class MET_Helmet_ARF_Base : 3AS_ARF_Helmet
 	{
 		"z\MET\addons\Armor_Rewrite\Helmets\Textures\Base\MET_ARF_Helmet_CO.paa"
 	};
+	hiddenSelectionsMaterials[] =
+	{
+		"z\MET\addons\Armor_Rewrite\Helmets\Textures\Base\ARF.rvmat"
+	};
 	class ItemInfo : HeadgearItem
 	{
 		mass = 10;
