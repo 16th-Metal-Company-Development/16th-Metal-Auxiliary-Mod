@@ -8,8 +8,8 @@ class CfgPatches
 		version=0.11;
 		requiredAddons[]=
 		{
-			"OPTRE_Core",
-			"OPTRE_Weapons"
+			/*"OPTRE_Core",
+			"OPTRE_Weapons"*/
 		};
 		author="Article 2 Studios";
 		fileName="SW_Hud.pbo";

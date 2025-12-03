@@ -37,7 +37,7 @@ class CfgWeapons
 	class HeadgearItem;
 	class TEST_16th_trp: JLTS_CloneHelmetP2
 	{
-		scope=2;
+		scope=1;
 		displayName="[METAL TEST] Trooper Helmet";
 		hiddenSelections[]=
 		{
@@ -82,8 +82,8 @@ class CfgWeapons
 	{
 		author="Legion Studios";
 		displayName="[MET] Deathwatch Grunt Armor";
-		scope=2;
-		scopeArsenal=2;
+		scope=1;
+		scopeArsenal=1;
 		scopeCurator=2;
 		model="\ls\core\addons\characters_mandalorian\vests\standard\ls_vest_mandalorian.p3d";
 		hiddenSelections[]=
@@ -166,7 +166,7 @@ class CfgWeapons
 	class ls_vest_base;
 	class MET_mandalorianVest_standard: ls_vest_base
 	{
-		scope=2;
+		scope=1;
 		scopeArsenal=1;
 		author="Legion Studios";
 		displayName="[MET] Mandalorian Traditional Vest";
@@ -222,8 +222,8 @@ class CfgWeapons
 	{
 		author="Legion Studios";
 		displayName="[MET] Deathwatch Grunt Helmet";
-		scope=2;
-		scopeArsenal=2;
+		scope=1;
+		scopeArsenal=1;
 		hiddenSelectionsTextures[]=
 		{
 			"\ls\core\addons\characters_mandalorian\units\deathwatch\data\grunt_helmet_co.paa",
@@ -282,8 +282,8 @@ class CfgWeapons
 	class ls_uniform_base;
 	class MET_mandalorianUniform: ls_uniform_base
 	{
-		scope=2;
-        scopeArsenal=2;
+		scope=1;
+        scopeArsenal=1;
 		author="Legion Studios";
 		displayName="[MET] Mandalorian Undersuit";
 		picture="\ls\core\addons\characters_mandalorian\data\ui\undersuit_ui_ca.paa";
@@ -297,8 +297,8 @@ class CfgWeapons
 	class ls_nvg_base;
 	class MET_mandalorian_rangefinder: ls_nvg_base
 	{
-		scope=2;
-		scopeArsenal=2;
+		scope=1;
+		scopeArsenal=1;
 		author="Legion Studios";
 		displayName="[MET] Mandalorian Rangefinder";
 		model="\ls\core\addons\characters_mandalorian\equipment\nvgs\rangefinder\ls_mandalorian_rangefinder_nvg_on.p3d";
@@ -330,7 +330,7 @@ class CfgWeapons
 	};
 	class MET_mandalorian_rangefinder2: ls_nvg_base
 	{
-		scope=2;
+		scope=1;
 		scopeArsenal=1;
 		author="Legion Studios";
 		displayName="[MET] Mandalorian Rangefinder";
@@ -363,7 +363,7 @@ class CfgWeapons
 	};
 	class MET_mandalorian_rangefinder3: ls_nvg_base
 	{
-		scope=2;
+		scope=1;
 		scopeArsenal=1;
 		author="Legion Studios";
 		displayName="[MET] Mandalorian Rangefinder";
@@ -396,7 +396,7 @@ class CfgWeapons
 	};
 	class MET_mandalorian_rangefinder4: ls_nvg_base
 	{
-		scope=2;
+		scope=1;
 		scopeArsenal=1;
 		author="Legion Studios";
 		displayName="[MET] Mandalorian Rangefinder";
@@ -429,7 +429,7 @@ class CfgWeapons
 	};
 	class MET_mandalorian_rangefinder5: ls_nvg_base
 	{
-		scope=2;
+		scope=1;
 		scopeArsenal=1;
 		author="Legion Studios";
 		displayName="[MET] Mandalorian Rangefinder";

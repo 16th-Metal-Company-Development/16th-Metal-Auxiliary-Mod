@@ -147,7 +147,7 @@ class CfgWeapons
 	class helmet_16th_trp: JLTS_CloneHelmetP2
 	{
 		scope=2;
-		displayName="[16th] Trooper Helmet";
+		displayName = "[OUTDATED] Trooper Helmet";
 		hiddenSelections[]=
 		{
 			"camo1"
@@ -189,7 +189,7 @@ class CfgWeapons
 	class MET_Heavy_Helmet : LST_Clone_Heavy_P2_Helmet
 	{
 		scope = 2;
-		displayName = "[16th] RTO Helmet";
+		displayName = "[OUTDATED] RTO Helmet";
 		hiddenSelections[] = 
 		{ 
 			"camo1",
@@ -234,7 +234,7 @@ class CfgWeapons
 	class helmet_16th_ab_trp: JLTS_CloneHelmetAB
 	{
 		scope=2;
-		displayName="[16th] Airborne Trooper Helmet";
+		displayName = "[OUTDATED] Airborne Trooper Helmet";
 		hiddenSelections[]=
 		{
 			"camo1"
@@ -276,7 +276,7 @@ class CfgWeapons
 	class helmet_16th_ab_vtrp: helmet_16th_ab_trp
 	{
 		scope=2;
-		displayName="[16th] Airborne Veteran Trooper Helmet";
+		displayName = "[OUTDATED] Airborne Veteran Trooper Helmet";
 		hiddenSelections[]=
 		{
 			"camo1"
@@ -289,7 +289,7 @@ class CfgWeapons
 	class helmet_16th_ab_cpl: helmet_16th_ab_trp
 	{
 		scope=2;
-		displayName="[16th] Airborne Corporal Helmet";
+		displayName = "[OUTDATED] Airborne Corporal Helmet";
 		hiddenSelections[]=
 		{
 			"camo1"
@@ -302,7 +302,7 @@ class CfgWeapons
 	class helmet_16th_ab_sgt: helmet_16th_ab_trp
 	{
 		scope=2;
-		displayName="[16th] Airborne Sergeant Helmet";
+		displayName = "[OUTDATED] Airborne Sergeant Helmet";
 		hiddenSelections[]=
 		{
 			"camo1"
@@ -315,7 +315,7 @@ class CfgWeapons
 	class helmet_16th_ab_ssgt: helmet_16th_ab_trp
 	{
 		scope=2;
-		displayName="[16th] Airborne Staff Sergeant Helmet";
+		displayName = "[OUTDATED] Airborne Staff Sergeant Helmet";
 		hiddenSelections[]=
 		{
 			"camo1"
@@ -328,7 +328,7 @@ class CfgWeapons
 	class helmet_16th_ab_cfs: helmet_16th_ab_trp
 	{
 		scope=2;
-		displayName="[16th] Airborne First Sergeant Helmet";
+		displayName = "[OUTDATED] Airborne First Sergeant Helmet";
 		hiddenSelections[]=
 		{
 			"camo1"
@@ -341,7 +341,7 @@ class CfgWeapons
 	class helmet_16th_ab_sgm: helmet_16th_ab_trp
 	{
 		scope=2;
-		displayName="[16th] Airborne Sergeant Major Helmet";
+		displayName = "[OUTDATED] Airborne Sergeant Major Helmet";
 		hiddenSelections[]=
 		{
 			"camo1"
@@ -354,7 +354,7 @@ class CfgWeapons
 	class helmet_16th_ab_medic: helmet_16th_ab_trp
 	{
 		scope=2;
-		displayName="[16th] Airborne Medic Helmet";
+		displayName = "[OUTDATED] Airborne Medic Helmet";
 		hiddenSelections[]=
 		{
 			"camo1"
@@ -367,7 +367,7 @@ class CfgWeapons
 	class helmet_16th_trp_illum: JLTS_CloneHelmetP2_illum
 	{
 		scope=1;
-		displayName="[16th] Trooper Helmet (Glowing)";
+		displayName = "[OUTDATED] Trooper Helmet (Glowing)";
 		hiddenSelections[]=
 		{
 			"camo2",
@@ -417,7 +417,7 @@ class CfgWeapons
 	class helmet_16th_barc: JLTS_CloneHelmetBARC
 	{
 		scope=1;
-		displayName="[16th] BARC Helmet";
+		displayName = "[OUTDATED] BARC Helmet";
 		hiddenSelections[]=
 		{
 			"camo1"
@@ -460,7 +460,7 @@ class CfgWeapons
 	class helmet_16th_arf: 3AS_ARF_Helmet
 	{
 		scope=2;
-		displayName="[16th] Goff Helmet";
+		displayName = "[OUTDATED] Goff Helmet";
 		model="\3AS\3AS_Characters\Clones\Headgear\3AS_Clone_ARF.p3d";
 		hiddenSelections[]=
 		{
@@ -505,7 +505,7 @@ class CfgWeapons
 	class MET_212th_ARF_Helm_Base : 212th_ARF_Helm
 	{
 		scope = 0;
-		displayName = "[16th] ARF Helmet";
+		displayName = "[OUTDATED] ARF Helmet";
 		model = "\212th\Armor\212th_Helms\ARF_Helm.p3d";
 		hiddenSelections[] =
 		{
@@ -549,7 +549,7 @@ class CfgWeapons
 	class helmet_16th_arf_nco: helmet_16th_arf
 	{
 		scope=2;
-		displayName="[16th] Goff NCO Helmet";
+		displayName = "[OUTDATED] Goff NCO Helmet";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\arf\arf_nco_helmet_co.paa"
@@ -558,7 +558,7 @@ class CfgWeapons
 	class helmet_16th_tavion_arf: helmet_16th_arf
 	{
 		scope=2;
-		displayName="[16th] Tavion's ARF Helmet";
+		displayName = "[OUTDATED] Tavion's ARF Helmet";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\custom\tavion_helmet_co.paa"
@@ -567,7 +567,7 @@ class CfgWeapons
 	class helmet_16th_plt: 3as_P2_Pilot_helmet
 	{
 		scope=2;
-		displayName="[16th] Pilot Helmet";
+		displayName = "[OUTDATED] Pilot Helmet";
 		model="\3AS\3AS_Characters\Clones\Headgear\3AS_Clone_Pilot_P2.p3d";
 		hiddenSelections[]=
 		{
@@ -623,7 +623,7 @@ class CfgWeapons
 	class helmet_16th_plt_sunto: helmet_16th_plt
 	{
 		scope=0;
-		displayName="[16th] Sunto's Helmet";
+		displayName = "[OUTDATED] Sunto's Helmet";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\custom\plt_sunton_helmet_co.paa",
@@ -637,7 +637,7 @@ class CfgWeapons
 	class helmet_16th_plt_fool: helmet_16th_plt
 	{
 		scope=2;
-		displayName="[16th] Fool's Helmet";
+		displayName = "[OUTDATED] Fool's Helmet";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\custom\plt_Fool_helmet_co.paa",
@@ -651,7 +651,7 @@ class CfgWeapons
 	class helmet_16th_cadet: helmet_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Cadet Helmet";
+		displayName = "[OUTDATED] Cadet Helmet";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\infantry\rifleman\cadet_helmet_co.paa"
@@ -660,7 +660,7 @@ class CfgWeapons
 	class helmet_16th_vttrp: helmet_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Veteran Trooper Helmet";
+		displayName = "[OUTDATED] Veteran Trooper Helmet";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\infantry\vetrifleman\veteran_helmet_co.paa"
@@ -669,7 +669,7 @@ class CfgWeapons
 	class helmet_16th_special: helmet_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Specialist Helmet";
+		displayName = "[OUTDATED] Specialist Helmet";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\infantry\vetrifleman\specialist_helmet_co.paa"
@@ -678,7 +678,7 @@ class CfgWeapons
 	class helmet_16th_nco: helmet_16th_trp
 	{
 		scope=2;
-		displayName="[16th] NCO Helmet";
+		displayName = "[OUTDATED] NCO Helmet";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\infantry\ncos\nco_helmet_co.paa"
@@ -687,7 +687,7 @@ class CfgWeapons
 	class helmet_16th_snco: helmet_16th_trp
 	{
 		scope=2;
-		displayName="[16th] SNCO Helmet";
+		displayName = "[OUTDATED] SNCO Helmet";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\infantry\ncos\snco_helmet_co.paa"
@@ -696,7 +696,7 @@ class CfgWeapons
 	class helmet_16th_officer: helmet_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Officer Helmet";
+		displayName = "[OUTDATED] Officer Helmet";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\infantry\officers\officer_helmet_co.paa"
@@ -705,7 +705,7 @@ class CfgWeapons
 	class helmet_16th_medic: helmet_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Medic Helmet";
+		displayName = "[OUTDATED] Medic Helmet";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\infantry\specialists\medic_helmet_co.paa"
@@ -714,7 +714,7 @@ class CfgWeapons
 	class helmet_16th_eod: helmet_16th_trp
 	{
 		scope=2;
-		displayName="[16th] EOD Helmet";
+		displayName = "[OUTDATED] EOD Helmet";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\infantry\specialists\eod_helmet_co.paa"
@@ -726,7 +726,7 @@ class CfgWeapons
 	class helmet_16th_ab_blackrose: helmet_16th_ab_trp
 	{
 		scope=2;
-		displayName="[16th] Blackrose's Airborne Helmet";
+		displayName = "[OUTDATED] Blackrose's Airborne Helmet";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\custom\blackrose_ab_helmet_co.paa"
@@ -735,7 +735,7 @@ class CfgWeapons
 	class helmet_16th_ab_jero : helmet_16th_ab_trp
 	{
 		scope = 2;
-		displayName = "[16th] Jeros's Airborne Helmet";
+		displayName = "[OUTDATED] Jeros's Airborne Helmet";
 		hiddenSelectionsTextures[] =
 		{
 			"z\16th\addons\armor\data\custom\jero_ab_helmet_co.paa"
@@ -744,7 +744,7 @@ class CfgWeapons
 	class helmet_16th_ab_noble : helmet_16th_ab_trp
 	{
 		scope = 2;
-		displayName = "[16th] Noble's Airborne Helmet";
+		displayName = "[OUTDATED] Noble's Airborne Helmet";
 		hiddenSelectionsTextures[] =
 		{
 			"z\16th\addons\armor\data\custom\noble_ab_helmet_co.paa"
@@ -753,7 +753,7 @@ class CfgWeapons
 	class helmet_16th_ab_kick: helmet_16th_ab_trp
 	{
 		scope=0;
-		displayName="[16th] Kick's Airborne Helmet";
+		displayName = "[OUTDATED] Kick's Airborne Helmet";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\custom\kick_ab_helmet_co.paa"
@@ -762,7 +762,7 @@ class CfgWeapons
 	class helmet_16th_ab_vergil: helmet_16th_ab_trp
 	{
 		scope=2;
-		displayName="[16th] Vergil's Airborne Helmet";
+		displayName = "[OUTDATED] Vergil's Airborne Helmet";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\custom\vergil_ab_helmet_co.paa"
@@ -771,7 +771,7 @@ class CfgWeapons
 	class helmet_16th_arch: helmet_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Arch's Helmet";
+		displayName = "[OUTDATED] Arch's Helmet";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\custom\arch_helmet_co.paa"
@@ -780,7 +780,7 @@ class CfgWeapons
 	class helmet_16th_avalanche: helmet_16th_trp_illum
 	{
 		scope=2;
-		displayName="[16th] Avalanche's Helmet";
+		displayName = "[OUTDATED] Avalanche's Helmet";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\custom\dj_helmet_co.paa",
@@ -790,7 +790,7 @@ class CfgWeapons
 	class helmet_16th_beige: helmet_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Beige's Helmet";
+		displayName = "[OUTDATED] Beige's Helmet";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\custom\beige_helmet_co.paa"
@@ -799,7 +799,7 @@ class CfgWeapons
 	class helmet_16th_ben: helmet_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Ben's Helmet";
+		displayName = "[OUTDATED] Ben's Helmet";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\custom\ben_helmet_co.paa"
@@ -808,7 +808,7 @@ class CfgWeapons
 	class helmet_16th_blackrose: helmet_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Blackrose's Helmet";
+		displayName = "[OUTDATED] Blackrose's Helmet";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\custom\blackrose_helmet_co.paa"
@@ -817,7 +817,7 @@ class CfgWeapons
 	class helmet_16th_blat: helmet_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Blatt's Helmet";
+		displayName = "[OUTDATED] Blatt's Helmet";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\custom\blatt_helmet_co.paa"
@@ -826,7 +826,7 @@ class CfgWeapons
 	class helmet_16th_blowfish: helmet_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Blowfish's Helmet";
+		displayName = "[OUTDATED] Blowfish's Helmet";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\custom\blowfish_helmet_co.paa"
@@ -835,7 +835,7 @@ class CfgWeapons
 	class helmet_16th_blue_arf: helmet_16th_arf
 	{
 		scope=2;
-		displayName="[16th] Blue's ARF Helmet";
+		displayName = "[OUTDATED] Blue's ARF Helmet";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\custom\blue_arf_helmet_co.paa"
@@ -844,7 +844,7 @@ class CfgWeapons
 	class helmet_16th_bopit: helmet_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Bopit's Helmet";
+		displayName = "[OUTDATED] Bopit's Helmet";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\custom\bopit_helmet_co.paa"
@@ -853,7 +853,7 @@ class CfgWeapons
 	class helmet_16th_bravo: helmet_16th_trp
 	{
 		scope=1;
-		displayName="[16th] Bravo's Helmet";
+		displayName = "[OUTDATED] Bravo's Helmet";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\custom\bravo_helmet_co.paa"
@@ -862,7 +862,7 @@ class CfgWeapons
 	class helmet_16th_butcher: helmet_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Butcher's Helmet";
+		displayName = "[OUTDATED] Butcher's Helmet";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\custom\butcher_helmet_co.paa"
@@ -871,7 +871,7 @@ class CfgWeapons
 	class helmet_16th_chet: helmet_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Chet's Helmet";
+		displayName = "[OUTDATED] Chet's Helmet";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\custom\chet_helmet_co.paa"
@@ -880,7 +880,7 @@ class CfgWeapons
 	class helmet_16th_chet_arf : MET_212th_ARF_Helm_Base
 	{
 		scope = 2;
-		displayName = "[16th] Chet's ARF Helmet";
+		displayName = "[OUTDATED] Chet's ARF Helmet";
 		hiddenSelectionsTextures[] =
 		{
 			"z\16th\addons\armor\data\custom\chet_helmet_arf_co.paa"
@@ -889,7 +889,7 @@ class CfgWeapons
 	class helmet_16th_chetiah: helmet_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Chetiah's Helmet";
+		displayName = "[OUTDATED] Chetiah's Helmet";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\custom\chetiah_helmet_co.paa"
@@ -898,7 +898,7 @@ class CfgWeapons
 	class helmet_16th_convor: helmet_16th_arf
 	{
 		scope=2;
-		displayName="[16th] Convor's Helmet";
+		displayName = "[OUTDATED] Convor's Helmet";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\custom\convor_arf_helmet_U_co.paa"
@@ -907,7 +907,7 @@ class CfgWeapons
 	class helmet_16th_cougar: helmet_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Cougar's Helmet";
+		displayName = "[OUTDATED] Cougar's Helmet";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\custom\cougar_helmet_co.paa"
@@ -916,7 +916,7 @@ class CfgWeapons
 	class helmet_16th_creed: helmet_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Creed's Helmet";
+		displayName = "[OUTDATED] Creed's Helmet";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\custom\creed_helmet_co.paa"
@@ -925,7 +925,7 @@ class CfgWeapons
 	class helmet_16th_fish: helmet_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Fish's Helmet";
+		displayName = "[OUTDATED] Fish's Helmet";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\custom\fish_helmet_co.paa"
@@ -934,7 +934,7 @@ class CfgWeapons
 	class helmet_16th_frost: helmet_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Frost's Helmet";
+		displayName = "[OUTDATED] Frost's Helmet";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\custom\frost_helmet_co.paa"
@@ -943,7 +943,7 @@ class CfgWeapons
 	class helmet_16th_gambit: helmet_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Gambit's Helmet";
+		displayName = "[OUTDATED] Gambit's Helmet";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\custom\gambit_helmet_co.paa"
@@ -952,7 +952,7 @@ class CfgWeapons
 	class helmet_16th_hazmat: helmet_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Hazmat's Helmet";
+		displayName = "[OUTDATED] Hazmat's Helmet";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\custom\hazmat_helmet_co.paa"
@@ -972,7 +972,7 @@ class CfgWeapons
 		scope=2;
 		scopeArsenal=2;
 		author="Article 2 Studios";
-		displayName="[16th] CH252D Helmet [Basic]";
+		displayName = "[OUTDATED] CH252D Helmet [Basic]";
 		hiddenSelections[]=
 		{
 			"camo",
@@ -1019,7 +1019,7 @@ class CfgWeapons
 	class helmet_16th_hellwolf: helmet_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Hellwolf's Helmet";
+		displayName = "[OUTDATED] Hellwolf's Helmet";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\custom\hellwolf_helmet_co.paa"
@@ -1028,7 +1028,7 @@ class CfgWeapons
 	class helmet_16th_hevy : helmet_16th_trp
 	{
 		scope = 2;
-		displayName = "[16th] Hevy's Helmet";
+		displayName = "[OUTDATED] Hevy's Helmet";
 		hiddenSelectionsTextures[] =
 		{
 			"z\16th\addons\armor\data\custom\hevy_helmet_co.paa"
@@ -1037,7 +1037,7 @@ class CfgWeapons
 	class helmet_16th_hood: helmet_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Hood's Helmet";
+		displayName = "[OUTDATED] Hood's Helmet";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\custom\hood_helmet_co.paa"
@@ -1046,7 +1046,7 @@ class CfgWeapons
 	class helmet_16th_karma: helmet_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Karma's Helmet";
+		displayName = "[OUTDATED] Karma's Helmet";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\custom\karma_helmet_co.paa"
@@ -1055,7 +1055,7 @@ class CfgWeapons
 	class helmet_16th_kick: helmet_16th_trp
 	{
 		scope=0;
-		displayName="[16th] Kick's Helmet";
+		displayName = "[OUTDATED] Kick's Helmet";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\custom\kick_helmet_co.paa"
@@ -1064,7 +1064,7 @@ class CfgWeapons
 	class helmet_16th_kix: helmet_16th_arf
 	{
 		scope=2;
-		displayName="[16th] Kix's Helmet";
+		displayName = "[OUTDATED] Kix's Helmet";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\custom\kix_helmet_co.paa"
@@ -1073,7 +1073,7 @@ class CfgWeapons
 	class helmet_16th_krieg: helmet_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Krieg's Helmet";
+		displayName = "[OUTDATED] Krieg's Helmet";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\custom\krieg_helmet_co.paa"
@@ -1082,7 +1082,7 @@ class CfgWeapons
 	class helmet_16th_longshot: helmet_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Longshot's Helmet";
+		displayName = "[OUTDATED] Longshot's Helmet";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\custom\longshot_helmet_co.paa"
@@ -1091,7 +1091,7 @@ class CfgWeapons
 	class helmet_16th_maia: helmet_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Maia's Helmet";
+		displayName = "[OUTDATED] Maia's Helmet";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\custom\maia_helmet_co.paa"
@@ -1100,7 +1100,7 @@ class CfgWeapons
 	class helmet_16th_mace: helmet_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Mace's Helmet";
+		displayName = "[OUTDATED] Mace's Helmet";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\custom\mace_helmet_co.paa"
@@ -1109,7 +1109,7 @@ class CfgWeapons
 	class helmet_16th_maple: helmet_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Maple's Helmet";
+		displayName = "[OUTDATED] Maple's Helmet";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\custom\maple_helmet_new_co.paa"
@@ -1118,7 +1118,7 @@ class CfgWeapons
 	class helmet_16th_maple_arf: helmet_16th_arf
 	{
 		scope=2;
-		displayName="[16th] Maple's ARF Helmet";
+		displayName = "[OUTDATED] Maple's ARF Helmet";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\custom\maple_arf_helmet_co.paa"
@@ -1127,7 +1127,7 @@ class CfgWeapons
 	class helmet_16th_maxson: helmet_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Maxson's Helmet";
+		displayName = "[OUTDATED] Maxson's Helmet";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\custom\maxson_helmet_co.paa"
@@ -1136,7 +1136,7 @@ class CfgWeapons
 	class helmet_16th_merlin: helmet_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Merlin's Helmet";
+		displayName = "[OUTDATED] Merlin's Helmet";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\custom\merlin_helmet_co.paa"
@@ -1145,7 +1145,7 @@ class CfgWeapons
 	class helmet_16th_moldy: helmet_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Moldy's Helmet";
+		displayName = "[OUTDATED] Moldy's Helmet";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\custom\moldy_helmet_co.paa"
@@ -1154,7 +1154,7 @@ class CfgWeapons
 	class helmet_16th_nix: helmet_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Nix's Helmet";
+		displayName = "[OUTDATED] Nix's Helmet";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\custom\nix_helmet_co.paa"
@@ -1163,7 +1163,7 @@ class CfgWeapons
 	class helmet_16th_noble: helmet_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Nobles's Helmet";
+		displayName = "[OUTDATED] Nobles's Helmet";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\custom\noble_helmet_co.paa"
@@ -1172,7 +1172,7 @@ class CfgWeapons
 	class helmet_16th_orpheus : helmet_16th_trp
 	{
 		scope = 2;
-		displayName = "[16th] Orpheus's Helmet";
+		displayName = "[OUTDATED] Orpheus's Helmet";
 		hiddenSelectionsTextures[] =
 		{
 			"z\16th\addons\armor\data\custom\orpheus_helmet_co.paa"
@@ -1181,7 +1181,7 @@ class CfgWeapons
 	class helmet_16th_prez: helmet_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Prez's Helmet";
+		displayName = "[OUTDATED] Prez's Helmet";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\custom\prez_helmet_co.paa"
@@ -1190,7 +1190,7 @@ class CfgWeapons
 	class helmet_16th_ronin: helmet_16th_trp
 	{
 		scope=1;
-		displayName="[16th] Ronin's Helmet";
+		displayName = "[OUTDATED] Ronin's Helmet";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\custom\ronin_helmet_co.paa"
@@ -1199,7 +1199,7 @@ class CfgWeapons
 	class helmet_16th_ronin_barc: helmet_16th_barc
 	{
 		scope=2;
-		displayName="[16th] Ronin's Helmet";
+		displayName = "[OUTDATED] Ronin's Helmet";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\custom\ronin_helmet_barc_co.paa"
@@ -1208,7 +1208,7 @@ class CfgWeapons
 	class helmet_16th_roz: helmet_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Roz's Helmet";
+		displayName = "[OUTDATED] Roz's Helmet";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\custom\roz_helmet_co.paa"
@@ -1217,7 +1217,7 @@ class CfgWeapons
 	class helmet_16th_sam: helmet_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Sam's Helmet";
+		displayName = "[OUTDATED] Sam's Helmet";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\custom\sam_helmet_new_co.paa"
@@ -1226,7 +1226,7 @@ class CfgWeapons
 	class helmet_16th_six: helmet_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Six's Helmet";
+		displayName = "[OUTDATED] Six's Helmet";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\custom\six_helmet_u_co.paa"
@@ -1235,7 +1235,7 @@ class CfgWeapons
 	class helmet_16th_ska: helmet_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Ska's Helmet";
+		displayName = "[OUTDATED] Ska's Helmet";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\custom\ska_helmet_co.paa"
@@ -1244,7 +1244,7 @@ class CfgWeapons
 	class helmet_16th_smith: helmet_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Smith's Helmet";
+		displayName = "[OUTDATED] Smith's Helmet";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\custom\smith_helmet_co.paa"
@@ -1253,7 +1253,7 @@ class CfgWeapons
 	class helmet_16th_spice: helmet_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Spice's Helmet";
+		displayName = "[OUTDATED] Spice's Helmet";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\custom\spice_helmet_co.paa"
@@ -1262,7 +1262,7 @@ class CfgWeapons
 	class helmet_16th_sunto: helmet_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Sunto's Helmet";
+		displayName = "[OUTDATED] Sunto's Helmet";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\custom\sunto_helmet_co.paa"
@@ -1271,7 +1271,7 @@ class CfgWeapons
 	class helmet_16th_talk: helmet_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Talk's Helmet";
+		displayName = "[OUTDATED] Talk's Helmet";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\custom\talk_helmet_co.paa"
@@ -1280,7 +1280,7 @@ class CfgWeapons
 	class helmet_16th_vergil: helmet_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Vergil's Helmet";
+		displayName = "[OUTDATED] Vergil's Helmet";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\custom\vergil_helmet_co.paa"
@@ -1289,7 +1289,7 @@ class CfgWeapons
 	class helmet_16th_william: helmet_16th_trp
 	{
 		scope=2;
-		displayName="[16th] William's Helmet";
+		displayName = "[OUTDATED] William's Helmet";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\custom\william_helmet_co.paa"
@@ -1298,7 +1298,7 @@ class CfgWeapons
 	class helmet_16th_winters: helmet_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Winters' Helmet";
+		displayName = "[OUTDATED] Winters' Helmet";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\custom\winters_helmet_co.paa"
@@ -1307,7 +1307,7 @@ class CfgWeapons
 	class helmet_16th_wolf: helmet_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Wolf's Helmet";
+		displayName = "[OUTDATED] Wolf's Helmet";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\custom\wolf_helmet_co.paa"
@@ -1322,7 +1322,7 @@ class CfgWeapons
 	{
 		author="Hazmat";
 		model="JLTS_AE_GM\SEA_Helmet_GM_Base.p3d";
-		displayName="[16th] Cold Assault Trooper Helmet";
+		displayName = "[OUTDATED] Cold Assault Trooper Helmet";
 		scope=2;
 		hiddenSelections[]=
 		{
@@ -1374,7 +1374,7 @@ class CfgWeapons
 		author="Hazmat";
 		scope=2;
 		model="JLTS_AE_GM\SEA_Helmet_GM_Modular.p3d";
-		displayName="[16th] Cold Assault NCO Helmet";
+		displayName = "[OUTDATED] Cold Assault NCO Helmet";
 		hiddenSelections[]=
 		{
 			"Camo1",
@@ -1426,7 +1426,7 @@ class CfgWeapons
 		author="Hazmat";
 		scope=2;
 		model="JLTS_AE_GM\SEA_Helmet_GM_Modular.p3d";
-		displayName="[16th] Cold Assault Officer Helmet";
+		displayName = "[OUTDATED] Cold Assault Officer Helmet";
 		hiddenSelections[]=
 		{
 			"Camo1",
@@ -1478,7 +1478,7 @@ class CfgWeapons
 		author="Hazmat";
 		scope=2;
 		model="JLTS_AE_GM\SEA_Helmet_GM_RTO.p3d";
-		displayName="[16th] Cold Assault RTO Helmet";
+		displayName = "[OUTDATED] Cold Assault RTO Helmet";
 		hiddenSelections[]=
 		{
 			"Camo1",
@@ -1526,8 +1526,7 @@ class CfgWeapons
 	class vest_16_basic: JLTS_CloneVestSuspender
 	{
 		scope=2;
-		displayname="[16th] Vest Basic";
-		picture="\SWLB_clones\data\ui\icon_SWLB_clone_uniform_ca.paa";
+		displayname="[OUDATED] Vest Basic";
 		model="\SWLB_clones\SWLB_clone_basic_armor.p3d";
 		class ItemInfo: ItemInfo
 		{
@@ -1582,7 +1581,7 @@ class CfgWeapons
 	{
 		scope=2;
 		scopeArsenal=2;
-		displayname="[16th] Backpack Rack (Ammo Bearer)";
+		displayname="[OUDATED] Backpack Rack (Ammo Bearer)";
 		model="\212th\Armor\212th_Armor\212th_Vests\Aux212_Backpack_Racks\Aux212_Backpack_Rack_Ammo_Bearer\Backpack_Rack_Ammo_Bearer.p3d";
 		picture="\212th\Armor\212th_Armor\212th_Vests\Aux212_Backpack_Racks\Data\UI\Backpack_Rack_Ammo_Bearer_UI_ca.paa";
 		class ItemInfo: VestItem
@@ -1637,7 +1636,7 @@ class CfgWeapons
 	{
 		scope=2;
 		scopeArsenal=2;
-		displayname="[16th] Backpack Rack (Medic)";
+		displayname="[OUDATED] Backpack Rack (Medic)";
 		model="\212th\Armor\212th_Armor\212th_Vests\Aux212_Backpack_Racks\Aux212_Backpack_Rack_CLS\Backpack_Rack_CLS.p3d";
 		picture="212th\Armor\212th_Armor\212th_Vests\Aux212_Backpack_Racks\Data\UI\Backpack_Rack_CLS_UI_ca.paa";
 		class ItemInfo: VestItem
@@ -1692,7 +1691,7 @@ class CfgWeapons
 	{
 		scope=2;
 		scopeArsenal=2;
-		displayname="[16th] Backpack Rack (AT)";
+		displayname="[OUDATED] Backpack Rack (AT)";
 		model="\212th\Armor\212th_Armor\212th_Vests\Aux212_Backpack_Racks\Aux212_Backpack_Rack_AT\Backpack_Rack_AT.p3d";
 		picture="\212th\Armor\212th_Armor\212th_Vests\Aux212_Backpack_Racks\Data\UI\Backpack_Rack_Ammo_Bearer_UI_ca.paa";
 		class ItemInfo: VestItem
@@ -1750,7 +1749,7 @@ class CfgWeapons
 	{
 		scope=2;
 		scopeArsenal=2;
-		displayname="[16th] Weapons Squad Armor Plates";
+		displayname="[OUDATED] Weapons Squad Armor Plates";
 		class ItemInfo: VestItem
 		{
 			containerClass="Supply100";
@@ -1805,7 +1804,7 @@ class CfgWeapons
 	{
 		scope=2;
 		scopeArsenal=2;
-		displayname="[16th] Reaper Armor Plates";
+		displayname="[OUDATED] Reaper Armor Plates";
 		class ItemInfo: VestItem
 		{
 			containerClass="Supply100";
@@ -1855,7 +1854,7 @@ class CfgWeapons
 	class 16_vest_suspenders: JLTS_CloneVestSuspender
 	{
 		scope=2;
-		displayname="[16th] Suspenders";
+		displayname="[OUDATED] Suspenders";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\gear\reg_vests\suspenders\trp_vest_suspenders_co.paa"
@@ -1909,7 +1908,7 @@ class CfgWeapons
 	class 16_eod_vest_suspenders: JLTS_CloneVestSuspender
 	{
 		scope=2;
-		displayname="[16th] EOD Suspenders";
+		displayname="[OUDATED] EOD Suspenders";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\gear\reg_vests\suspenders\eod_vest_suspenders_co.paa"
@@ -1964,7 +1963,7 @@ class CfgWeapons
 	class met_vest_holster: JLTS_CloneVestHolster
 	{
 		scope=2;
-		displayname="[16th] Holster";
+		displayname="[OUDATED] Holster";
 		/*hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\gear\reg_vests\suspenders\trp_vest_suspenders_co.paa"
@@ -2020,7 +2019,7 @@ class CfgWeapons
 	class 16_vest_recon_nco: JLTS_CloneVestReconNCO
 	{
 		scope=2;
-		displayname="[16th] Corporal Vest";
+		displayname="[OUDATED] Corporal Vest";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\gear\reg_vests\trp_nco\trp_cpl_vest_co.paa"
@@ -2075,7 +2074,7 @@ class CfgWeapons
 	class 16_vest_nco: JLTS_CloneVestKama
 	{
 		scope=2;
-		displayname="[16th] Sergeant Vest";
+		displayname="[OUDATED] Sergeant Vest";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\gear\reg_vests\trp_nco\trp_sgt_vest_co.paa"
@@ -2130,7 +2129,7 @@ class CfgWeapons
 	class 16_vest_ab: JLTS_CloneVestAirborne
 	{
 		scope=2;
-		displayname="[16th] Airborne Vest";
+		displayname="[OUDATED] Airborne Vest";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\gear\reg_vests\ab_nco\ab_nco_kama_co.paa",
@@ -2185,7 +2184,7 @@ class CfgWeapons
 	class 16_vest_ab_med: JLTS_CloneVestAirborne
 	{
 		scope=2;
-		displayname="[16th] Platoon Medic Vest";
+		displayname="[OUDATED] Platoon Medic Vest";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\gear\reg_vests\ab_nco\ab_nco_kama_co.paa",
@@ -2241,7 +2240,7 @@ class CfgWeapons
 	class 16_vest_ab_nco: JLTS_CloneVestAirborneNCO
 	{
 		scope=2;
-		displayname="[16th] Airborne NCO Vest";
+		displayname="[OUDATED] Airborne NCO Vest";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\gear\reg_vests\ab_nco\ab_nco_kama_co.paa",
@@ -2296,7 +2295,7 @@ class CfgWeapons
 	class 16_vest_ab_med_nco: JLTS_CloneVestAirborneNCO
 	{
 		scope=2;
-		displayname="[16th] Platoon Senior Medic Vest";
+		displayname="[OUDATED] Platoon Senior Medic Vest";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\gear\reg_vests\ab_nco\ab_nco_kama_co.paa",
@@ -2352,7 +2351,7 @@ class CfgWeapons
 	class 16_vest_recon_officer: JLTS_CloneVestReconOfficer
 	{
 		scope=2;
-		displayname="[16th] Staff NCO Vest";
+		displayname="[OUDATED] Staff NCO Vest";
 		class ItemInfo: ItemInfo
 		{
 			containerClass="Supply100";
@@ -2409,7 +2408,7 @@ class CfgWeapons
 	class 16_vest_commander: JLTS_CloneVestCommander
 	{
 		scope=2;
-		displayname="[16th] Merlin's Vest";
+		displayname="[OUDATED] Merlin's Vest";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\gear\reg_vests\trp_off\trp_ofc_vest_co.paa"
@@ -2469,7 +2468,7 @@ class CfgWeapons
 	class 16_vest_commander_2lt: 16_vest_commander
 	{
 		scope=0;
-		displayname="[16th] Commander Vest (2LT)";
+		displayname="[OUDATED] Commander Vest (2LT)";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\gear\reg_vests\trp_off\trp_2lt_vest_co.paa"
@@ -2478,7 +2477,7 @@ class CfgWeapons
 	class 16_vest_commander_1lt: 16_vest_commander
 	{
 		scope=0;
-		displayname="[16th] Commander Vest (1LT)";
+		displayname="[OUDATED] Commander Vest (1LT)";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\gear\reg_vests\trp_off\trp_1lt_vest_co.paa"
@@ -2487,7 +2486,7 @@ class CfgWeapons
 	class 16_vest_commander_cpt: 16_vest_commander
 	{
 		scope=0;
-		displayname="[16th] Commander Vest (CPT)";
+		displayname="[OUDATED] Commander Vest (CPT)";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\gear\reg_vests\trp_off\trp_cpt_vest_co.paa"
@@ -2497,7 +2496,7 @@ class CfgWeapons
 	class 16_vest_officer: JLTS_CloneVestOfficer
 	{
 		scope=2;
-		displayname="[16th] Officer Vest (Left)";
+		displayname="[OUDATED] Officer Vest (Left)";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\gear\reg_vests\trp_off\trp_ofc_vest_co.paa"
@@ -2557,7 +2556,7 @@ class CfgWeapons
 	class 16_vest_officer_2lt: 16_vest_officer
 	{
 		scope=1;
-		displayname="[16th] Officer Vest (2LT) (Left)";
+		displayname="[OUDATED] Officer Vest (2LT) (Left)";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\gear\reg_vests\trp_off\trp_2lt_vest_co.paa"
@@ -2566,7 +2565,7 @@ class CfgWeapons
 	class 16_vest_officer_1lt: 16_vest_officer
 	{
 		scope=2;
-		displayname="[16th] Ronin's Vest";
+		displayname="[OUDATED] Ronin's Vest";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\gear\custom_vests\ronin\ronin_officer_vest_co.paa"
@@ -2575,7 +2574,7 @@ class CfgWeapons
 	class 16_vest_officer_cpt: 16_vest_officer
 	{
 		scope=2;
-		displayname="[16th] Cougar's Vest";
+		displayname="[OUDATED] Cougar's Vest";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\gear\reg_vests\trp_off\trp_cpt_vest_co.paa"
@@ -2585,7 +2584,7 @@ class CfgWeapons
 	class 16_vest_officer2: JLTS_CloneVestOfficer2
 	{
 		scope=1;
-		displayname="[16th] Officer Vest (Right)";
+		displayname="[OUDATED] Officer Vest (Right)";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\gear\reg_vests\trp_off\trp_ofc_vest_co.paa"
@@ -2645,7 +2644,7 @@ class CfgWeapons
 	class 16_vest_avalanche: 16_vest_officer2
 	{
 		scope=2;
-		displayname="[16th] Avalanche Vest";
+		displayname="[OUDATED] Avalanche Vest";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\gear\custom_vests\dj\dj_vest_co.paa"
@@ -2655,7 +2654,7 @@ class CfgWeapons
 	class vest_16th_arc: JLTS_CloneVestARC
 	{
 		scope=2;
-		displayname="[16th] ARC Vest";
+		displayname="[OUDATED] ARC Vest";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\gear\reg_vests\arc_vest\16th_arc_vest_co.paa"
@@ -2724,7 +2723,7 @@ class CfgWeapons
 	class vest_ronin_arc: vest_16th_arc
 	{
 		scope=2;
-		displayname="[16th] Ronin's ARC Vest";
+		displayname="[OUDATED] Ronin's ARC Vest";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\custom\ronin_arc_vest_co.paa"
@@ -2733,7 +2732,7 @@ class CfgWeapons
 	class vest_mooose_arc: vest_16th_arc
 	{
 		scope=2;
-		displayname="[16th] Winter's ARC Vest";
+		displayname="[OUDATED] Winter's ARC Vest";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\custom\moose_arc_vest_co.paa"
@@ -2751,7 +2750,7 @@ class CfgWeapons
 	class SEA_Vest_GM_Base;
 	class vest_16_ca_trp: SEA_Vest_GM_Base
 	{
-		displayName="[16th] Cold Assault Trooper Vest";
+		displayName = "[OUTDATED] Cold Assault Trooper Vest";
 		author="Hazmat";
 		scope=2;
 		model="\JLTS_AE_GM\SEA_Vest_GM_Base.p3d";
@@ -2818,7 +2817,7 @@ class CfgWeapons
 	};
 	class vest_16_ca_nco: vest_16_ca_trp
 	{
-		displayName="[16th] Cold Assault NCO Vest";
+		displayName = "[OUTDATED] Cold Assault NCO Vest";
 		author="Hazmat";
 		scope=2;
 		model="\JLTS_AE_GM\SEA_Vest_GM_Base.p3d";
@@ -2829,7 +2828,7 @@ class CfgWeapons
 	};
 	class vest_16_ca_off: vest_16_ca_trp
 	{
-		displayName="[16th] Cold Assault Officer Vest";
+		displayName = "[OUTDATED] Cold Assault Officer Vest";
 		author="Hazmat";
 		scope=2;
 		model="\JLTS_AE_GM\SEA_Vest_GM_Base.p3d";
@@ -2842,7 +2841,7 @@ class CfgWeapons
 	class armor_16th_trp: JLTS_CloneArmor
 	{
 		scope=2;
-		displayName="[16th] Trooper Armor";
+		displayName = "[OUTDATED] Trooper Armor";
 		class ItemInfo: ItemInfo
 		{
 			uniformclass="armor_16th_trp_base";
@@ -2912,7 +2911,7 @@ class CfgWeapons
 	class armor_16th_arf: armor_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Goff Armor";
+		displayName = "[OUTDATED] Goff Armor";
 		class ItemInfo: ItemInfo
 		{
 			uniformclass="armor_16th_arf_base";
@@ -2921,7 +2920,7 @@ class CfgWeapons
 	class armor_16th_arf_nco: armor_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Goff NCO Armor";
+		displayName = "[OUTDATED] Goff NCO Armor";
 		class ItemInfo: ItemInfo
 		{
 			uniformclass="armor_16th_arf_nco_base";
@@ -2930,7 +2929,7 @@ class CfgWeapons
 	class armor_16th_cadet: armor_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Cadet Armor";
+		displayName = "[OUTDATED] Cadet Armor";
 		class ItemInfo: ItemInfo
 		{
 			uniformclass="armor_16th_cadet_base";
@@ -2939,7 +2938,7 @@ class CfgWeapons
 	class armor_16th_arty: armor_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Dragon Armor";
+		displayName = "[OUTDATED] Dragon Armor";
 		class ItemInfo: ItemInfo
 		{
 			uniformclass="armor_16th_arty_base";
@@ -2948,7 +2947,7 @@ class CfgWeapons
 	class armor_16th_arty_nco: armor_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Dragon NCO Armor";
+		displayName = "[OUTDATED] Dragon NCO Armor";
 		class ItemInfo: ItemInfo
 		{
 			uniformclass="armor_16th_arty_nco_base";
@@ -2957,7 +2956,7 @@ class CfgWeapons
 	class armor_16th_mechanized: armor_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Reaper Armor";
+		displayName = "[OUTDATED] Reaper Armor";
 		class ItemInfo: ItemInfo
 		{
 			uniformclass="armor_16th_mechanized_base";
@@ -2966,7 +2965,7 @@ class CfgWeapons
 	class armor_16th_mechanized_nco: armor_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Reaper NCO Armor";
+		displayName = "[OUTDATED] Reaper NCO Armor";
 		class ItemInfo: ItemInfo
 		{
 			uniformclass="armor_16th_mechanized_nco_base";
@@ -2975,7 +2974,7 @@ class CfgWeapons
 	class armor_16th_vttrp: armor_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Veteran Trooper Armor";
+		displayName = "[OUTDATED] Veteran Trooper Armor";
 		class ItemInfo: ItemInfo
 		{
 			uniformclass="armor_16th_vttrp_base";
@@ -2984,7 +2983,7 @@ class CfgWeapons
 	class armor_16th_special: armor_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Specialist Armor";
+		displayName = "[OUTDATED] Specialist Armor";
 		class ItemInfo: ItemInfo
 		{
 			uniformclass="armor_16th_special_base";
@@ -2993,7 +2992,7 @@ class CfgWeapons
 	class armor_16th_nco: armor_16th_trp
 	{
 		scope=2;
-		displayName="[16th] NCO Armor";
+		displayName = "[OUTDATED] NCO Armor";
 		class ItemInfo: ItemInfo
 		{
 			uniformclass="armor_16th_nco_base";
@@ -3002,7 +3001,7 @@ class CfgWeapons
 	class armor_16th_snco: armor_16th_trp
 	{
 		scope=2;
-		displayName="[16th] SNCO Armor";
+		displayName = "[OUTDATED] SNCO Armor";
 		class ItemInfo: ItemInfo
 		{
 			uniformclass="armor_16th_snco_base";
@@ -3011,7 +3010,7 @@ class CfgWeapons
 	class armor_16th_officer: armor_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Officer Armor";
+		displayName = "[OUTDATED] Officer Armor";
 		class ItemInfo: ItemInfo
 		{
 			uniformclass="armor_16th_officer_base";
@@ -3020,7 +3019,7 @@ class CfgWeapons
 	class armor_16th_med: armor_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Medic Armor";
+		displayName = "[OUTDATED] Medic Armor";
 		class ItemInfo: ItemInfo
 		{
 			uniformclass="armor_16th_med_base";
@@ -3029,7 +3028,7 @@ class CfgWeapons
 	class armor_16th_eod: armor_16th_trp
 	{
 		scope=2;
-		displayName="[16th] EOD Armor";
+		displayName = "[OUTDATED] EOD Armor";
 		class ItemInfo: ItemInfo
 		{
 			uniformclass="armor_16th_eod_base";
@@ -3038,7 +3037,7 @@ class CfgWeapons
 	class armor_16th_ab_trp: armor_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Airborne Trooper Armor";
+		displayName = "[OUTDATED] Airborne Trooper Armor";
 		class ItemInfo: ItemInfo
 		{
 			uniformclass="armor_16th_ab_trp_base";
@@ -3047,7 +3046,7 @@ class CfgWeapons
 	class armor_16th_ab_vtrp: armor_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Airborne Veteran Trooper Armor";
+		displayName = "[OUTDATED] Airborne Veteran Trooper Armor";
 		class ItemInfo: ItemInfo
 		{
 			uniformclass="armor_16th_ab_vtrp_base";
@@ -3056,7 +3055,7 @@ class CfgWeapons
 	class armor_16th_ab_cpl: armor_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Airborne Corporal Armor";
+		displayName = "[OUTDATED] Airborne Corporal Armor";
 		class ItemInfo: ItemInfo
 		{
 			uniformclass="armor_16th_ab_cpl_base";
@@ -3065,7 +3064,7 @@ class CfgWeapons
 	class armor_16th_ab_sgt: armor_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Airborne Sergeant Armor";
+		displayName = "[OUTDATED] Airborne Sergeant Armor";
 		class ItemInfo: ItemInfo
 		{
 			uniformclass="armor_16th_ab_sgt_base";
@@ -3074,7 +3073,7 @@ class CfgWeapons
 	class armor_16th_ab_ssgt: armor_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Airborne Staff Sergeant Armor";
+		displayName = "[OUTDATED] Airborne Staff Sergeant Armor";
 		class ItemInfo: ItemInfo
 		{
 			uniformclass="armor_16th_ab_ssgt_base";
@@ -3083,7 +3082,7 @@ class CfgWeapons
 	class armor_16th_ab_cfs: armor_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Airborne First Sergeant Armor";
+		displayName = "[OUTDATED] Airborne First Sergeant Armor";
 		class ItemInfo: ItemInfo
 		{
 			uniformclass="armor_16th_ab_cfs_base";
@@ -3092,7 +3091,7 @@ class CfgWeapons
 	class armor_16th_ab_sgm: armor_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Airborne Sergeant Major Armor";
+		displayName = "[OUTDATED] Airborne Sergeant Major Armor";
 		class ItemInfo: ItemInfo
 		{
 			uniformclass="armor_16th_ab_sgm_base";
@@ -3101,7 +3100,7 @@ class CfgWeapons
 	class armor_16th_ab_medic: armor_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Airborne Medic Armor";
+		displayName = "[OUTDATED] Airborne Medic Armor";
 		class ItemInfo: ItemInfo
 		{
 			uniformclass="armor_16th_ab_medic_base";
@@ -3110,7 +3109,7 @@ class CfgWeapons
 	class armor_16th_ben: armor_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Ben's Armor";
+		displayName = "[OUTDATED] Ben's Armor";
 		class ItemInfo: ItemInfo
 		{
 			uniformclass="armor_16th_ben_base";
@@ -3119,7 +3118,7 @@ class CfgWeapons
 	class armor_16th_blackrose: armor_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Blackrose's Armor";
+		displayName = "[OUTDATED] Blackrose's Armor";
 		class ItemInfo: ItemInfo
 		{
 			uniformclass="armor_16th_blackrose_base";
@@ -3128,7 +3127,7 @@ class CfgWeapons
 	class armor_16th_blatt: armor_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Blatt's Armor";
+		displayName = "[OUTDATED] Blatt's Armor";
 		class ItemInfo: ItemInfo
 		{
 			uniformclass="armor_16th_blatt_base";
@@ -3137,7 +3136,7 @@ class CfgWeapons
 	class armor_16th_cooger: armor_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Cougar's Armor";
+		displayName = "[OUTDATED] Cougar's Armor";
 		class ItemInfo: ItemInfo
 		{
 			uniformclass="armor_16th_cooger_base";
@@ -3146,7 +3145,7 @@ class CfgWeapons
 	class armor_16th_fool: armor_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Fool's Armor";
+		displayName = "[OUTDATED] Fool's Armor";
 		class ItemInfo: ItemInfo
 		{
 			uniformclass="armor_16th_fool_base";
@@ -3155,7 +3154,7 @@ class CfgWeapons
 	class armor_16th_hazmat: armor_16th_cadet
 	{
 		scope=2;
-		displayName="[16th] Hazmat's Armor";
+		displayName = "[OUTDATED] Hazmat's Armor";
 		class ItemInfo: ItemInfo
 		{
 			uniformclass="armor_16th_hazmat_base";
@@ -3164,7 +3163,7 @@ class CfgWeapons
 	class armor_16th_hood: armor_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Hood's Armor";
+		displayName = "[OUTDATED] Hood's Armor";
 		class ItemInfo: ItemInfo
 		{
 			uniformclass="armor_16th_hood_base";
@@ -3173,7 +3172,7 @@ class CfgWeapons
 	class armor_16th_kix: armor_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Kix's Armor";
+		displayName = "[OUTDATED] Kix's Armor";
 		class ItemInfo: ItemInfo
 		{
 			uniformclass="armor_16th_kix_base";
@@ -3182,7 +3181,7 @@ class CfgWeapons
 	class armor_16th_moldy: armor_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Moldy Armor";
+		displayName = "[OUTDATED] Moldy Armor";
 		class ItemInfo: ItemInfo
 		{
 			uniformclass="armor_16th_moldy_base";
@@ -3191,7 +3190,7 @@ class CfgWeapons
 	class armor_16th_moldy_zeus: armor_16th_cadet
 	{
 		scope=2;
-		displayName="[16th] Moldy Zeus Armor";
+		displayName = "[OUTDATED] Moldy Zeus Armor";
 		class ItemInfo: ItemInfo
 		{
 			uniformclass="armor_16th_moldyz_base";
@@ -3200,7 +3199,7 @@ class CfgWeapons
 	class armor_16th_nix: armor_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Nix's Armor";
+		displayName = "[OUTDATED] Nix's Armor";
 		class ItemInfo: ItemInfo
 		{
 			uniformclass="armor_16th_nix_base";
@@ -3209,7 +3208,7 @@ class CfgWeapons
 	class armor_16th_Noble: armor_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Noble's Armor";
+		displayName = "[OUTDATED] Noble's Armor";
 		class ItemInfo: ItemInfo
 		{
 			uniformclass="armor_16th_noble_base";
@@ -3218,7 +3217,7 @@ class CfgWeapons
 	class armor_16th_prez: armor_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Prez's Armor";
+		displayName = "[OUTDATED] Prez's Armor";
 		class ItemInfo: ItemInfo
 		{
 			uniformclass="armor_16th_prez_base";
@@ -3227,7 +3226,7 @@ class CfgWeapons
 	class armor_16th_ronin: armor_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Ronin's Armor";
+		displayName = "[OUTDATED] Ronin's Armor";
 		class ItemInfo: ItemInfo
 		{
 			uniformclass="armor_16th_ronin_base";
@@ -3236,7 +3235,7 @@ class CfgWeapons
 	class armor_16th_roz : armor_16th_trp
 	{
 		scope = 2;
-		displayName = "[16th] Roz's Armor";
+		displayName = "[OUTDATED] Roz's Armor";
 		class ItemInfo : ItemInfo
 		{
 			uniformclass = "armor_16th_roz_base";
@@ -3245,7 +3244,7 @@ class CfgWeapons
 	class armor_16th_six: armor_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Six's Armor";
+		displayName = "[OUTDATED] Six's Armor";
 		class ItemInfo: ItemInfo
 		{
 			uniformclass="armor_16th_six_base";
@@ -3254,7 +3253,7 @@ class CfgWeapons
 	class armor_16th_sunto: armor_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Sunto's Armor";
+		displayName = "[OUTDATED] Sunto's Armor";
 		class ItemInfo: ItemInfo
 		{
 			uniformclass="armor_16th_sunto_base";
@@ -3263,7 +3262,7 @@ class CfgWeapons
 	class armor_16th_vergil: armor_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Vergil's Armor";
+		displayName = "[OUTDATED] Vergil's Armor";
 		class ItemInfo: ItemInfo
 		{
 			uniformclass="armor_16th_vergil_base";
@@ -3272,7 +3271,7 @@ class CfgWeapons
 	class armor_16th_winters: armor_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Winters's Armor";
+		displayName = "[OUTDATED] Winters's Armor";
 		class ItemInfo: ItemInfo
 		{
 			uniformclass="armor_16th_winters_base";
@@ -3282,7 +3281,7 @@ class CfgWeapons
 	class armor_16th_avalanche: JLTS_CloneArmorMC
 	{
 		scope=2;
-		displayName="[16th] Avalanche's Armor";
+		displayName = "[OUTDATED] Avalanche's Armor";
 		class ItemInfo: ItemInfo
 		{
 			uniformClass="armor_16th_avalanche_base";
@@ -3352,7 +3351,7 @@ class CfgWeapons
 	class armor_16th_maxson: armor_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Maxson's Armor";
+		displayName = "[OUTDATED] Maxson's Armor";
 		class ItemInfo: ItemInfo
 		{
 			uniformClass="armor_16th_maxson_base";
@@ -3422,7 +3421,7 @@ class CfgWeapons
 	class armor_16th_merlin: armor_16th_trp
 	{
 		scope=2;
-		displayName="[16th] Merlin's Armor";
+		displayName = "[OUTDATED] Merlin's Armor";
 		class ItemInfo: ItemInfo
 		{
 			uniformClass="armor_16th_merlin_base";
@@ -3495,7 +3494,7 @@ class CfgWeapons
 	{
 		author="Hazmat";
 		scope=2;
-		displayName="[16th] Cold Assault Trooper Armor";
+		displayName = "[OUTDATED] Cold Assault Trooper Armor";
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
 		model="JLTS_AE_GM\SEA_Uniform_GM_Fabric.p3d";
 		class ItemInfo: UniformItem
@@ -3568,7 +3567,7 @@ class CfgWeapons
 	{
 		author="Hazmat";
 		scope=2;
-		displayName="[16th] Cold Assault EOD Armor";
+		displayName = "[OUTDATED] Cold Assault EOD Armor";
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
 		model="JLTS_AE_GM\SEA_Uniform_GM_Fabric.p3d";
 		class ItemInfo: UniformItem
@@ -3641,7 +3640,7 @@ class CfgWeapons
 	{
 		author="Hazmat";
 		scope=2;
-		displayName="[16th] Cold Assault Medic Armor";
+		displayName = "[OUTDATED] Cold Assault Medic Armor";
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
 		model="JLTS_AE_GM\SEA_Uniform_GM_Fabric.p3d";
 		class ItemInfo: UniformItem
@@ -3714,7 +3713,7 @@ class CfgWeapons
 	{
 		author="Hazmat";
 		scope=2;
-		displayName="[16th] Cold Assault NCO Armor";
+		displayName = "[OUTDATED] Cold Assault NCO Armor";
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
 		model="JLTS_AE_GM\SEA_Uniform_GM_Fabric.p3d";
 		class ItemInfo: UniformItem
@@ -3787,7 +3786,7 @@ class CfgWeapons
 	{
 		author="Hazmat";
 		scope=2;
-		displayName="[16th] Cold Assault Officer Armor";
+		displayName = "[OUTDATED] Cold Assault Officer Armor";
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
 		model="JLTS_AE_GM\SEA_Uniform_GM_Fabric.p3d";
 		class ItemInfo: UniformItem
@@ -3860,7 +3859,7 @@ class CfgWeapons
 	class nvg_16th_macro: JLTS_CloneNVG
 	{
 		scope=2;
-		displayName="[16th] Macrobinoculars";
+		displayName = "[OUTDATED] Macrobinoculars";
 		hiddenselectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\gear\visors\trp_nvg_co.paa"
@@ -3869,7 +3868,7 @@ class CfgWeapons
 	class nvg_16th_macro_eod: JLTS_CloneNVG
 	{
 		scope=2;
-		displayName="[16th] EOD Macrobinoculars";
+		displayName = "[OUTDATED] EOD Macrobinoculars";
 		hiddenselectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\gear\visors\eod_nvg_co.paa"
@@ -3878,7 +3877,7 @@ class CfgWeapons
 	class nvg_16th_macro_med: JLTS_CloneNVG
 	{
 		scope=2;
-		displayName="[16th] Medic Macrobinoculars";
+		displayName = "[OUTDATED] Medic Macrobinoculars";
 		hiddenselectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\gear\visors\med_nvg_co.paa"
@@ -3888,7 +3887,7 @@ class CfgWeapons
 	class nvg_16th_macro_down: JLTS_CloneNVG_spec
 	{
 		scope=2;
-		displayName="[16th] Macrobinoculars (Down)";
+		displayName = "[OUTDATED] Macrobinoculars (Down)";
 		modelOptics="\MRC\JLTS\characters\CloneArmor\CloneNVG_regular_optic.p3d";
 		hiddenselectionsTextures[]=
 		{
@@ -3904,7 +3903,7 @@ class CfgWeapons
 	class nvg_16th_chip: JLTS_NVG_droid_chip_1
 	{
 		scope=2;
-		displayName="[16th] Clone NV Chip";
+		displayName = "[OUTDATED] Clone NV Chip";
 		modelOptics="\MRC\JLTS\characters\CloneArmor\CloneNVG_regular_optic.p3d";
 		hiddenselectionsTextures[]=
 		{
@@ -3920,7 +3919,7 @@ class CfgWeapons
 	class nvg_16th_adv_chip_1: JLTS_NVG_droid_chip_2
 	{
 		scope=2;
-		displayName="[16th] Clone Thermal Chip (White Hot)";
+		displayName = "[OUTDATED] Clone Thermal Chip (White Hot)";
 		modelOptics="\MRC\JLTS\characters\CloneArmor\CloneNVG_regular_optic.p3d";
 		hiddenselectionsTextures[]=
 		{
@@ -3937,7 +3936,7 @@ class CfgWeapons
 	class nvg_16th_adv_chip_2: JLTS_NVG_droid_chip_2
 	{
 		scope=2;
-		displayName="[16th] Clone Thermal Chip (Green Hot)";
+		displayName = "[OUTDATED] Clone Thermal Chip (Green Hot)";
 		modelOptics="\MRC\JLTS\characters\CloneArmor\CloneNVG_regular_optic.p3d";
 		hiddenselectionsTextures[]=
 		{
@@ -3954,7 +3953,7 @@ class CfgWeapons
 	class nvg_16th_adv_chip_3: JLTS_NVG_droid_chip_2
 	{
 		scope=2;
-		displayName="[16th] Clone Thermal Chip (Red Hot)";
+		displayName = "[OUTDATED] Clone Thermal Chip (Red Hot)";
 		modelOptics="\MRC\JLTS\characters\CloneArmor\CloneNVG_regular_optic.p3d";
 		hiddenselectionsTextures[]=
 		{
@@ -3971,7 +3970,7 @@ class CfgWeapons
 	class nvg_16th_adv_chip_4: JLTS_NVG_droid_chip_2
 	{
 		scope=2;
-		displayName="[16th] Clone Thermal Chip (Multi)";
+		displayName = "[OUTDATED] Clone Thermal Chip (Multi)";
 		modelOptics="\MRC\JLTS\characters\CloneArmor\CloneNVG_regular_optic.p3d";
 		hiddenselectionsTextures[]=
 		{
@@ -3989,14 +3988,14 @@ class CfgWeapons
 	class nvg_16th_cc: JLTS_CloneNVGCC
 	{
 		scope=2;
-		displayName="[16th] Commander Visor";
+		displayName = "[OUTDATED] Commander Visor";
 	};
 	class SEA_Equipment_GM_Rangefinder;
 	class nvg_16_ca_rangefinder: SEA_Equipment_GM_Rangefinder
 	{
 		author="Hazmat";
 		scope=2;
-		displayName="[16th] Cold Assault Rangefinder";
+		displayName = "[OUTDATED] Cold Assault Rangefinder";
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_nvg_range_ui_ca.paa";
 		modelOptics="\a3\weapons_f\empty.p3d";
 		model="JLTS_AE_GM\SEA_Equipment_Rangefinder_Off.p3d";
@@ -4044,7 +4043,7 @@ class CfgWeapons
 	class nvg_16_arc_range: JLTS_CloneNVGRange
 	{
 		scope=2;
-		displayName="[16th] Rangefinder (ARC)";
+		displayName = "[OUTDATED] Rangefinder (ARC)";
 		modelOptics="";
 		hiddenselectionsTextures[]=
 		{
@@ -4054,7 +4053,7 @@ class CfgWeapons
 	class nvg_16_nco_range: JLTS_CloneNVGRange
 	{
 		scope=2;
-		displayName="[16th] Rangefinder (NCO)";
+		displayName = "[OUTDATED] Rangefinder (NCO)";
 		modelOptics="";
 		hiddenselectionsTextures[]=
 		{
@@ -4064,7 +4063,7 @@ class CfgWeapons
 	class nvg_16_off_range: JLTS_CloneNVGRange
 	{
 		scope=2;
-		displayName="[16th] Rangefinder (Officer)";
+		displayName = "[OUTDATED] Rangefinder (Officer)";
 		modelOptics="";
 		hiddenselectionsTextures[]=
 		{
@@ -4075,7 +4074,7 @@ class CfgWeapons
 	{
 		scope=2;
 		scopeArsenal=1;
-		displayName="[16th] Hazmat's Rangefinder (W)";
+		displayName = "[OUTDATED] Hazmat's Rangefinder (W)";
 		visionMode[]=
 		{
 			"Normal",
@@ -4093,7 +4092,7 @@ class CfgWeapons
 	{
 		scope=2;
 		scopeArsenal=1;
-		displayName="[16th] Hazmat's Rangefinder (G)";
+		displayName = "[OUTDATED] Hazmat's Rangefinder (G)";
 		visionMode[]=
 		{
 			"Normal",
@@ -4111,7 +4110,7 @@ class CfgWeapons
 	{
 		scope=2;
 		scopeArsenal=1;
-		displayName="[16th] Hazmat's Rangefinder (O)";
+		displayName = "[OUTDATED] Hazmat's Rangefinder (O)";
 		visionMode[]=
 		{
 			"Normal",
@@ -4129,7 +4128,7 @@ class CfgWeapons
 	{
 		scope=2;
 		scopeArsenal=1;
-		displayName="[16th] Hazmat's Rangefinder (M)";
+		displayName = "[OUTDATED] Hazmat's Rangefinder (M)";
 		visionMode[]=
 		{
 			"Normal",
@@ -4150,7 +4149,7 @@ class CfgVehicles
 	class armor_16th_trp_base: JLTS_Clone_P2_DC15A
 	{
 		scope=2;
-		displayName="[16th] Trooper";
+		displayName = "[OUTDATED] Trooper";
 		uniformClass="armor_16th_trp";
 		hiddenselectionsTextures[]=
 		{
@@ -4390,7 +4389,7 @@ class CfgVehicles
 	class armor_16th_cadet_base: armor_16th_trp_base
 	{
 		scope=1;
-		displayName="[16th] Cadet";
+		displayName = "[OUTDATED] Cadet";
 		uniformClass="armor_16th_cadet";
 		hiddenselectionsTextures[]=
 		{
@@ -4424,7 +4423,7 @@ class CfgVehicles
 	class armor_16th_arf_base: armor_16th_trp_base
 	{
 		scope=1;
-		displayName="[16th] ARF";
+		displayName = "[OUTDATED] ARF";
 		uniformClass="armor_16th_arf";
 		hiddenselectionsTextures[]=
 		{
@@ -4451,7 +4450,7 @@ class CfgVehicles
 	class armor_16th_arf_nco_base: armor_16th_trp_base
 	{
 		scope=1;
-		displayName="[16th] ARF NCO";
+		displayName = "[OUTDATED] ARF NCO";
 		uniformClass="armor_16th_arf_nco";
 		hiddenselectionsTextures[]=
 		{
@@ -4478,7 +4477,7 @@ class CfgVehicles
 	class armor_16th_arty_base: armor_16th_trp_base
 	{
 		scope=1;
-		displayName="[16th] Artillery Trooper";
+		displayName = "[OUTDATED] Artillery Trooper";
 		uniformClass="armor_16th_arty";
 		hiddenselectionsTextures[]=
 		{
@@ -4507,7 +4506,7 @@ class CfgVehicles
 	class armor_16th_arty_nco_base: armor_16th_trp_base
 	{
 		scope=1;
-		displayName="[16th] Artillery NCO";
+		displayName = "[OUTDATED] Artillery NCO";
 		uniformClass="armor_16th_arty_nco";
 		hiddenselectionsTextures[]=
 		{
@@ -4536,7 +4535,7 @@ class CfgVehicles
 	class armor_16th_mechanized_base: armor_16th_trp_base
 	{
 		scope=1;
-		displayName="[16th] Mechanized Trooper";
+		displayName = "[OUTDATED] Mechanized Trooper";
 		uniformClass="armor_16th_mechanized";
 		hiddenselectionsTextures[]=
 		{
@@ -4565,7 +4564,7 @@ class CfgVehicles
 	class armor_16th_mechanized_nco_base: armor_16th_trp_base
 	{
 		scope=1;
-		displayName="[16th] Mechanized NCO";
+		displayName = "[OUTDATED] Mechanized NCO";
 		uniformClass="armor_16th_mechanized_nco";
 		hiddenselectionsTextures[]=
 		{
@@ -4594,7 +4593,7 @@ class CfgVehicles
 	class armor_16th_vttrp_base: armor_16th_trp_base
 	{
 		scope=1;
-		displayName="[16th] Veteran Trooper";
+		displayName = "[OUTDATED] Veteran Trooper";
 		uniformClass="armor_16th_vttrp";
 		hiddenselectionsTextures[]=
 		{
@@ -4623,7 +4622,7 @@ class CfgVehicles
 	class armor_16th_special_base: armor_16th_trp_base
 	{
 		scope=1;
-		displayName="[16th] Specialist";
+		displayName = "[OUTDATED] Specialist";
 		uniformClass="armor_16th_special";
 		hiddenselectionsTextures[]=
 		{
@@ -4652,7 +4651,7 @@ class CfgVehicles
 	class armor_16th_nco_base: armor_16th_trp_base
 	{
 		scope=1;
-		displayName="[16th] NCO";
+		displayName = "[OUTDATED] NCO";
 		uniformClass="armor_16th_nco";
 		hiddenselectionsTextures[]=
 		{
@@ -4681,7 +4680,7 @@ class CfgVehicles
 	class armor_16th_snco_base: armor_16th_trp_base
 	{
 		scope=1;
-		displayName="[16th] SNCO";
+		displayName = "[OUTDATED] SNCO";
 		uniformClass="armor_16th_snco";
 		hiddenselectionsTextures[]=
 		{
@@ -4710,7 +4709,7 @@ class CfgVehicles
 	class armor_16th_officer_base: armor_16th_trp_base
 	{
 		scope=1;
-		displayName="[16th] Officer";
+		displayName = "[OUTDATED] Officer";
 		uniformClass="armor_16th_officer";
 		hiddenselectionsTextures[]=
 		{
@@ -4739,7 +4738,7 @@ class CfgVehicles
 	class armor_16th_med_base: armor_16th_trp_base
 	{
 		scope=2;
-		displayName="[16th] Medic";
+		displayName = "[OUTDATED] Medic";
 		uniformClass="armor_16th_med";
 		hiddenselectionsTextures[]=
 		{
@@ -4768,7 +4767,7 @@ class CfgVehicles
 	class armor_16th_eod_base: armor_16th_trp_base
 	{
 		scope=2;
-		displayName="[16th] EOD";
+		displayName = "[OUTDATED] EOD";
 		uniformClass="armor_16th_eod";
 		hiddenselectionsTextures[]=
 		{
@@ -4797,7 +4796,7 @@ class CfgVehicles
 	class armor_16th_ab_trp_base: armor_16th_trp_base
 	{
 		scope=2;
-		displayName="[16th] Airborne Trooper";
+		displayName = "[OUTDATED] Airborne Trooper";
 		uniformClass="armor_16th_ab_trp";
 		hiddenselectionsTextures[]=
 		{
@@ -4824,7 +4823,7 @@ class CfgVehicles
 	class armor_16th_ab_vtrp_base: armor_16th_trp_base
 	{
 		scope=1;
-		displayName="[16th] Airborne Veteran Trooper";
+		displayName = "[OUTDATED] Airborne Veteran Trooper";
 		uniformClass="armor_16th_ab_vtrp";
 		hiddenselectionsTextures[]=
 		{
@@ -4851,7 +4850,7 @@ class CfgVehicles
 	class armor_16th_ab_cpl_base: armor_16th_trp_base
 	{
 		scope=1;
-		displayName="[16th] Airborne Corporal";
+		displayName = "[OUTDATED] Airborne Corporal";
 		uniformClass="armor_16th_ab_cpl";
 		hiddenselectionsTextures[]=
 		{
@@ -4878,7 +4877,7 @@ class CfgVehicles
 	class armor_16th_ab_sgt_base: armor_16th_trp_base
 	{
 		scope=1;
-		displayName="[16th] Airborne Sergeant";
+		displayName = "[OUTDATED] Airborne Sergeant";
 		uniformClass="armor_16th_ab_sgt";
 		hiddenselectionsTextures[]=
 		{
@@ -4905,7 +4904,7 @@ class CfgVehicles
 	class armor_16th_ab_ssgt_base: armor_16th_trp_base
 	{
 		scope=1;
-		displayName="[16th] Airborne Staff Sergeant";
+		displayName = "[OUTDATED] Airborne Staff Sergeant";
 		uniformClass="armor_16th_ab_ssgt";
 		hiddenselectionsTextures[]=
 		{
@@ -4932,7 +4931,7 @@ class CfgVehicles
 	class armor_16th_ab_cfs_base: armor_16th_trp_base
 	{
 		scope=1;
-		displayName="[16th] Airborne First Sergeant";
+		displayName = "[OUTDATED] Airborne First Sergeant";
 		uniformClass="armor_16th_ab_cfs";
 		hiddenselectionsTextures[]=
 		{
@@ -4959,7 +4958,7 @@ class CfgVehicles
 	class armor_16th_ab_sgm_base: armor_16th_trp_base
 	{
 		scope=1;
-		displayName="[16th] Airborne Sergeant Major";
+		displayName = "[OUTDATED] Airborne Sergeant Major";
 		uniformClass="armor_16th_ab_sgm";
 		hiddenselectionsTextures[]=
 		{
@@ -4986,7 +4985,7 @@ class CfgVehicles
 	class armor_16th_ab_medic_base: armor_16th_trp_base
 	{
 		scope=2;
-		displayName="[16th] Airborne Medic";
+		displayName = "[OUTDATED] Airborne Medic";
 		uniformClass="armor_16th_ab_medic";
 		hiddenselectionsTextures[]=
 		{
@@ -5013,7 +5012,7 @@ class CfgVehicles
 	class armor_16th_ronin_base: armor_16th_trp_base
 	{
 		scope=1;
-		displayName="[16th] Ronin";
+		displayName = "[OUTDATED] Ronin";
 		uniformClass="armor_16th_ronin";
 		hiddenselectionsTextures[]=
 		{
@@ -5042,7 +5041,7 @@ class CfgVehicles
 	class armor_16th_roz_base : armor_16th_trp_base
 	{
 		scope = 1;
-		displayName = "[16th] Roz";
+		displayName = "[OUTDATED] Roz";
 		uniformClass = "armor_16th_roz";
 		hiddenselectionsTextures[] =
 		{
@@ -5069,7 +5068,7 @@ class CfgVehicles
 	class armor_16th_moldyz_base: armor_16th_trp_base
 	{
 		scope=1;
-		displayName="[16th] Moldy Zeus";
+		displayName = "[OUTDATED] Moldy Zeus";
 		uniformClass="armor_16th_moldy_zeus";
 		hiddenselectionsTextures[]=
 		{
@@ -5103,7 +5102,7 @@ class CfgVehicles
 	class armor_16th_moldy_base: armor_16th_trp_base
 	{
 		scope=1;
-		displayName="[16th] Moldy";
+		displayName = "[OUTDATED] Moldy";
 		uniformClass="armor_16th_moldy";
 		hiddenselectionsTextures[]=
 		{
@@ -5132,7 +5131,7 @@ class CfgVehicles
 	class armor_16th_blatt_base: armor_16th_trp_base
 	{
 		scope=1;
-		displayName="[16th] Blatt";
+		displayName = "[OUTDATED] Blatt";
 		uniformClass="armor_16th_blatt";
 		hiddenselectionsTextures[]=
 		{
@@ -5161,7 +5160,7 @@ class CfgVehicles
 	class armor_16th_ben_base: armor_16th_trp_base
 	{
 		scope=1;
-		displayName="[16th] Ben";
+		displayName = "[OUTDATED] Ben";
 		uniformClass="armor_16th_ben";
 		hiddenselectionsTextures[]=
 		{
@@ -5190,7 +5189,7 @@ class CfgVehicles
 	class armor_16th_blackrose_base: armor_16th_trp_base
 	{
 		scope=1;
-		displayName="[16th] Blackrose";
+		displayName = "[OUTDATED] Blackrose";
 		uniformClass="armor_16th_blackrose";
 		hiddenselectionsTextures[]=
 		{
@@ -5219,7 +5218,7 @@ class CfgVehicles
 	class armor_16th_prez_base: armor_16th_trp_base
 	{
 		scope=1;
-		displayName="[16th] Prez";
+		displayName = "[OUTDATED] Prez";
 		uniformClass="armor_16th_prez";
 		hiddenselectionsTextures[]=
 		{
@@ -5248,7 +5247,7 @@ class CfgVehicles
 	class armor_16th_hazmat_base: armor_16th_cadet_base
 	{
 		scope=1;
-		displayName="[16th] Hazmat";
+		displayName = "[OUTDATED] Hazmat";
 		uniformClass="armor_16th_hazmat";
 		hiddenselectionsTextures[]=
 		{
@@ -5277,7 +5276,7 @@ class CfgVehicles
 	class armor_16th_hood_base: armor_16th_trp_base
 	{
 		scope=1;
-		displayName="[16th] Hood";
+		displayName = "[OUTDATED] Hood";
 		uniformClass="armor_16th_hood";
 		hiddenselectionsTextures[]=
 		{
@@ -5306,7 +5305,7 @@ class CfgVehicles
 	class armor_16th_kix_base: armor_16th_trp_base
 	{
 		scope=1;
-		displayName="[16th] Kix";
+		displayName = "[OUTDATED] Kix";
 		uniformClass="armor_16th_kix";
 		hiddenselectionsTextures[]=
 		{
@@ -5333,7 +5332,7 @@ class CfgVehicles
 	class armor_16th_winters_base: armor_16th_trp_base
 	{
 		scope=1;
-		displayName="[16th] Winters";
+		displayName = "[OUTDATED] Winters";
 		uniformClass="armor_16th_winters";
 		hiddenselectionsTextures[]=
 		{
@@ -5360,7 +5359,7 @@ class CfgVehicles
 	class armor_16th_six_base: armor_16th_trp_base
 	{
 		scope=1;
-		displayName="[16th] Six";
+		displayName = "[OUTDATED] Six";
 		uniformClass="armor_16th_six";
 		hiddenselectionsTextures[]=
 		{
@@ -5387,7 +5386,7 @@ class CfgVehicles
 	class armor_16th_vergil_base: armor_16th_trp_base
 	{
 		scope=1;
-		displayName="[16th] Vergils";
+		displayName = "[OUTDATED] Vergils";
 		uniformClass="armor_16th_vergil";
 		hiddenselectionsTextures[]=
 		{
@@ -5422,7 +5421,7 @@ class CfgVehicles
 	class armor_16th_avalanche_base: JLTS_Clone_P2_marshalcommander
 	{
 		scope=1;
-		displayName="[16th] Avalanche";
+		displayName = "[OUTDATED] Avalanche";
 		uniformClass="armor_16th_avalanche";
 		hiddenselectionsTextures[]=
 		{
@@ -5451,7 +5450,7 @@ class CfgVehicles
 	class armor_16th_maxson_base: armor_16th_trp_base
 	{
 		scope=1;
-		displayName="[16th] Maxson";
+		displayName = "[OUTDATED] Maxson";
 		uniformClass="armor_16th_maxson";
 		hiddenselectionsTextures[]=
 		{
@@ -5480,7 +5479,7 @@ class CfgVehicles
 	class armor_16th_merlin_base: armor_16th_trp_base
 	{
 		scope=1;
-		displayName="[16th] Merlin";
+		displayName = "[OUTDATED] Merlin";
 		uniformClass="armor_16th_merlin";
 		hiddenselectionsTextures[]=
 		{
@@ -5509,7 +5508,7 @@ class CfgVehicles
 	class armor_16th_cooger_base: armor_16th_trp_base
 	{
 		scope=1;
-		displayName="[16th] Cougar";
+		displayName = "[OUTDATED] Cougar";
 		uniformClass="armor_16th_cooger";
 		hiddenselectionsTextures[]=
 		{
@@ -5538,7 +5537,7 @@ class CfgVehicles
 	class armor_16th_fool_base: armor_16th_trp_base
 	{
 		scope=1;
-		displayName="[16th] Fool";
+		displayName = "[OUTDATED] Fool";
 		uniformClass="armor_16th_fool";
 		hiddenselectionsTextures[]=
 		{
@@ -5567,7 +5566,7 @@ class CfgVehicles
 	class armor_16th_sunto_base: armor_16th_trp_base
 	{
 		scope=1;
-		displayName="[16th] Sunto";
+		displayName = "[OUTDATED] Sunto";
 		uniformClass="armor_16th_sunto";
 		hiddenselectionsTextures[]=
 		{
@@ -5596,7 +5595,7 @@ class CfgVehicles
 	class armor_16th_nix_base: armor_16th_trp_base
 	{
 		scope=1;
-		displayName="[16th] Nix";
+		displayName = "[OUTDATED] Nix";
 		uniformClass="armor_16th_nix";
 		hiddenselectionsTextures[]=
 		{
@@ -5625,7 +5624,7 @@ class CfgVehicles
 	class armor_16th_noble_base: armor_16th_trp_base
 	{
 		scope=1;
-		displayName="[16th] Noble";
+		displayName = "[OUTDATED] Noble";
 		uniformClass="armor_16th_noble";
 		hiddenselectionsTextures[]=
 		{
@@ -5655,7 +5654,7 @@ class CfgVehicles
 	{
 		author="Hazmat";
 		scope=2;
-		displayName="[16th] Cold Assault Trooper";
+		displayName = "[OUTDATED] Cold Assault Trooper";
 		editorPreview="\MRC\JLTS\characters\CloneArmor\data\ui\editorPreviews\JLTS_Clone_P2_DC15A.jpg";
 		genericNames="JLTS_Clones";
 		faction="JLTS_GAR";
@@ -5987,7 +5986,7 @@ class CfgVehicles
 	{
 		author="Hazmat";
 		scope=2;
-		displayName="[16th] Cold Assault EOD";
+		displayName = "[OUTDATED] Cold Assault EOD";
 		editorPreview="\MRC\JLTS\characters\CloneArmor\data\ui\editorPreviews\JLTS_Clone_P2_DC15A.jpg";
 		genericNames="JLTS_Clones";
 		faction="JLTS_GAR";
@@ -6319,7 +6318,7 @@ class CfgVehicles
 	{
 		author="Hazmat";
 		scope=2;
-		displayName="[16th] Cold Assault Medic";
+		displayName = "[OUTDATED] Cold Assault Medic";
 		editorPreview="\MRC\JLTS\characters\CloneArmor\data\ui\editorPreviews\JLTS_Clone_P2_DC15A.jpg";
 		genericNames="JLTS_Clones";
 		faction="JLTS_GAR";
@@ -6651,7 +6650,7 @@ class CfgVehicles
 	{
 		author="Hazmat";
 		scope=2;
-		displayName="[16th] Cold Assault NCO";
+		displayName = "[OUTDATED] Cold Assault NCO";
 		editorPreview="\MRC\JLTS\characters\CloneArmor\data\ui\editorPreviews\JLTS_Clone_P2_DC15A.jpg";
 		genericNames="JLTS_Clones";
 		faction="JLTS_GAR";
@@ -6983,7 +6982,7 @@ class CfgVehicles
 	{
 		author="Hazmat";
 		scope=2;
-		displayName="[16th] Cold Assault Officer";
+		displayName = "[OUTDATED] Cold Assault Officer";
 		editorPreview="\MRC\JLTS\characters\CloneArmor\data\ui\editorPreviews\JLTS_Clone_P2_DC15A.jpg";
 		genericNames="JLTS_Clones";
 		faction="JLTS_GAR";
@@ -7317,7 +7316,7 @@ class CfgVehicles
 	class backpack_16th: JLTS_Clone_backpack
 	{
 		scope=2;
-		displayName="[16th] Backpack";
+		displayName = "[OUTDATED] Backpack";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\gear\backpacks\trp_backpack_co.paa"
@@ -7327,13 +7326,13 @@ class CfgVehicles
 	class beltpack_16th: JLTS_Clone_belt_bag
 	{
 		scope=2;
-		displayName="[16th] Beltpack";
+		displayName = "[OUTDATED] Beltpack";
 		maximumLoad=300;
 	};
 	class backpack_16th_heavy: backpack_16th
 	{
 		scope=2;
-		displayName="[16th] Heavy Backpack";
+		displayName = "[OUTDATED] Heavy Backpack";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\gear\backpacks\at_backpack_co.paa"
@@ -7344,7 +7343,7 @@ class CfgVehicles
 	class backpack_16th_eod: JLTS_Clone_backpack_eod
 	{
 		scope=2;
-		displayName="[16th] EOD Backpack";
+		displayName = "[OUTDATED] EOD Backpack";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\gear\backpacks\eod_backpack_co.paa"
@@ -7355,7 +7354,7 @@ class CfgVehicles
 	class backpack_16th_medic: JLTS_Clone_backpack_medic
 	{
 		scope=2;
-		displayName="[16th] Medic Backpack";
+		displayName = "[OUTDATED] Medic Backpack";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\gear\backpacks\med_backpack_co.paa"
@@ -7366,7 +7365,7 @@ class CfgVehicles
 	class backpack_16th_rto: JLTS_Clone_backpack_RTO
 	{
 		scope=2;
-		displayName="[16th] RTO Backpack";
+		displayName = "[OUTDATED] RTO Backpack";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\gear\backpacks\rto_backpack_co.paa"
@@ -7377,28 +7376,28 @@ class CfgVehicles
 	class backpack_16th_mini_rto_1: JLTS_Clone_LR_attachment
 	{
 		scope=2;
-		displayName="[16th] RTO Mini Backpack Mk1";
+		displayName = "[OUTDATED] RTO Mini Backpack Mk1";
 		maximumLoad=300;
 	};
 	class JLTS_Clone_RTO_pack;
 	class backpack_16th_mini_rto_2: JLTS_Clone_RTO_pack
 	{
 		scope=2;
-		displayName="[16th] RTO Mini Backpack Mk2";
+		displayName = "[OUTDATED] RTO Mini Backpack Mk2";
 		maximumLoad=300;
 	};
 	class Aux212_Clone_Radio_LR;
 	class backpack_16th_mini_rto_3: Aux212_Clone_Radio_LR
 	{
 		scope=2;
-		displayName="[16th] RTO Mini Backpack Mk3";
+		displayName = "[OUTDATED] RTO Mini Backpack Mk3";
 		maximumLoad=300;
 	};
 	class backpack_16_ca_base: JLTS_Clone_backpack
 	{
 		author="Hazmat";
 		scope=2;
-		displayName="[16th] Cold Assault Backpack";
+		displayName = "[OUTDATED] Cold Assault Backpack";
 		model="\JLTS_AE_GM\SEA_Backpack_GM_Base.p3d";
 		hiddenSelectionsTextures[]=
 		{
@@ -7410,7 +7409,7 @@ class CfgVehicles
 	{
 		author="Hazmat";
 		scope=2;
-		displayName="[16th] Cold Assault Heavy Backpack";
+		displayName = "[OUTDATED] Cold Assault Heavy Backpack";
 		model="\JLTS_AE_GM\SEA_Backpack_GM_Base.p3d";
 		hiddenSelectionsTextures[]=
 		{
@@ -7422,7 +7421,7 @@ class CfgVehicles
 	{
 		author="Hazmat";
 		scope=2;
-		displayName="[16th] Cold Assault EOD Backpack";
+		displayName = "[OUTDATED] Cold Assault EOD Backpack";
 		model="\JLTS_AE_GM\SEA_Backpack_GM_Base.p3d";
 		hiddenSelectionsTextures[]=
 		{
@@ -7434,7 +7433,7 @@ class CfgVehicles
 	{
 		author="Hazmat";
 		scope=2;
-		displayName="[16th] Cold Assault Medic Backpack";
+		displayName = "[OUTDATED] Cold Assault Medic Backpack";
 		model="\JLTS_AE_GM\SEA_Backpack_GM_Medic.p3d";
 		hiddenSelectionsTextures[]=
 		{
@@ -7446,7 +7445,7 @@ class CfgVehicles
 	{
 		author="Hazmat";
 		scope=2;
-		displayName="[16th] Cold Assault RTO Backpack";
+		displayName = "[OUTDATED] Cold Assault RTO Backpack";
 		model="\JLTS_AE_GM\SEA_Backpack_GM_RTO.p3d";
 		hiddenselections[]=
 		{
@@ -7464,7 +7463,7 @@ class CfgVehicles
 	class MET_ARC_Backpack_212: Aux212_ARC_Backpack
 	{
 		author="Hazmat";
-		displayName="[16th] ARC Backpack";
+		displayName = "[OUTDATED] ARC Backpack";
 		scope=2;
 		maximumLoad=750;
 	};
@@ -7472,7 +7471,7 @@ class CfgVehicles
 	class MET_ARC_Backpack_JLTS: JLTS_Clone_ARC_backpack
 	{
 		author="Hazmat";
-		displayName="[16th] ARC Backpack (JLTS)";
+		displayName = "[OUTDATED] ARC Backpack (JLTS)";
 		scope=2;
 		maximumLoad=750;
 	};
@@ -7482,7 +7481,7 @@ class CfgVehicles
 		author = "Hazmat";
 		scope = 2;
 		maximumload = 750;
-		displayName = "[16th] ARC Backpack";
+		displayName = "[OUTDATED] ARC Backpack";
 		model = "z\16th\addons\armor\ARC_Backpack.p3d";
 		picture = "z\16th\addons\armor\data\UI\ARC_Backpack_UI_ca.paa";
 		hiddenSelections[] = {"camo1"};
@@ -7500,7 +7499,7 @@ class CfgVehicles
 	class jetpack_16th: JLTS_Clone_jumppack_JT12
 	{
 		scope=2;
-		displayName="[16th] JT-12";
+		displayName = "[OUTDATED] JT-12";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\gear\backpacks\jt12_backpack_co.paa"
@@ -7528,7 +7527,7 @@ class CfgVehicles
 	class jetpack_16th_medic: jetpack_16th
 	{
 		scope=2;
-		displayName="[16th] JT-12 (Medic)";
+		displayName = "[OUTDATED] JT-12 (Medic)";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\gear\backpacks\jt12_backpack_medic_co.paa"
@@ -7538,7 +7537,7 @@ class CfgVehicles
 	class jetpack_16th_ro: jetpack_16th
 	{
 		scope=2;
-		displayName="[16th] JT-12 (RTO)";
+		displayName = "[OUTDATED] JT-12 (RTO)";
 		hiddenSelectionsTextures[]=
 		{
 			"z\16th\addons\armor\data\gear\backpacks\jt12_backpack_co.paa"
@@ -7556,7 +7555,7 @@ class CfgVehicles
 		author="Hazmat";
 		scope=2;
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		displayName="[16th] Jump Pack";
+		displayName = "[OUTDATED] Jump Pack";
 		hiddenSelections[]=
 		{
 			"camo1"
@@ -7666,7 +7665,7 @@ class CfgVehicles
 		author="Hazmat";
 		scope=2;
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		displayName="[16th] Jump Pack (RTO)";
+		displayName = "[OUTDATED] Jump Pack (RTO)";
 		hiddenSelections[]=
 		{
 			"camo1"
@@ -7776,7 +7775,7 @@ class CfgVehicles
 		author="Hazmat";
 		scope=2;
 		picture="\MRC\JLTS\characters\CloneArmor\data\ui\Clone_jumppack_mc_ui_ca.paa";
-		displayName="[16th] Jump Pack (Medic)";
+		displayName = "[OUTDATED] Jump Pack (Medic)";
 		hiddenSelections[]=
 		{
 			"camo1"
