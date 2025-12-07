@@ -1113,7 +1113,7 @@ class CfgWeapons
 		};
 		class manual_fast: manual
 		{
-			textureType="fastAuto"
+			textureType="fastAuto";
 			reloadTime=0.05;
 			dispersion=0.004;
 			soundContinuous=0;

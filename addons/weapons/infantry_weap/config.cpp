@@ -21,6 +21,7 @@ class CfgPatches
 			"MET_DC15C_F",
 			"MET_DC15C_GL",
 			"MET_DC15L_F",
+			"MET_T15",
 			"MET_Z6",
 			"MET_E15",
 			"MET_Z6_SOF",
@@ -299,12 +300,12 @@ class Mode_FullAuto: Mode_SemiAuto
 	class StandardSound;
 };
 /*
- _______ ______________ _______________ _______________
- ____/ / ____/  ______/ ____/___   ___/ ____/  /   /  /
- ___/ /  ___/  /_____   _______/  /     ___/  /___/  /
- __/ /   __/   ___  /   ______/  /      __/  ____   /
- _/ /    _/   /__/ /    _____/  /       _/  /   /  /
- /_/     /________/     ____/  /        /__/   /__/
+ _______ ______________ _______________ _______________ _________
+ ____/ / ____/  ______/ ____/___   ___/ ____/  /   /  / ____/    |    / /
+ ___/ /  ___/  /_____   _______/  /     ___/  /___/  /  ___/  /| |   / /
+ __/ /   __/   ___  /   ______/  /      __/  ____   /   __/  / | |  / /
+ _/ /    _/   /__/ /    _____/  /       _/  /   /  /    _/  /  | |_/ /
+ /_/     /________/     ____/  /        /__/   /__/     /__/   |____/
 
 */
 class Single;
@@ -893,7 +894,12 @@ class CfgWeapons
 		modes[]=
 		{
 			"Single",
-			"FullAuto"
+			"FullAuto",
+			"close",
+			"short",
+			"medium",
+			"far_optic1",
+			"far_optic2"
 		};
 		class FullAuto: Mode_FullAuto
 		{
@@ -1057,6 +1063,74 @@ class CfgWeapons
 				};
 			};
 		};
+		class close: FullAuto
+		{
+			burst=5;
+			aiRateOfFire=0.5;
+			aiRateOfFireDistance=50;
+			minRange=10;
+			minRangeProbab=0.3;
+			midRange=20;
+			midRangeProbab=0.9;
+			maxRange=50;
+			maxRangeProbab=0.9;
+			showToPlayer=0;
+		};
+		class short: close
+		{
+			burst=4;
+			aiRateOfFire=2;
+			aiRateOfFireDistance=200;
+			minRange=50;
+			minRangeProbab=0.8;
+			midRange=200;
+			midRangeProbab=0.9;
+			maxRange=350;
+			maxRangeProbab=0.9;
+		};
+		class medium: close
+		{
+			burst=4;
+			aiRateOfFire=4;
+			aiRateOfFireDistance=350;
+			minRange=200;
+			minRangeProbab=0.8;
+			midRange=350;
+			midRangeProbab=0.9;
+			maxRange=500;
+			maxRangeProbab=0.9;
+		};
+		class far_optic1: medium
+		{
+			//reloadTime=0.15;
+			//requiredOpticType=1;
+			showToPlayer=0;
+			burst=3;
+			aiRateOfFire=8;
+			aiRateOfFireDistance=500;
+			minRange=400;
+			minRangeProbab=1;
+			midRange=500;
+			midRangeProbab=0.85;
+			maxRange=600;
+			maxRangeProbab=0.75;
+		};
+		class far_optic2: far_optic1
+		{
+			//reloadTime=0.15;
+			burst=2;
+			aiRateOfFire=16;
+			//requiredOpticType=2;
+			minRange=500;
+			minRangeProbab=0.85;
+			midRange=750;
+			midRangeProbab=0.7;
+			maxRange=1000;
+			maxRangeProbab=0.5;
+			aiRateOfFireDistance=900;
+		};
+		aiDispersionCoefY=8;
+		aiDispersionCoefX=5;
 		class EGLM: UGL_F
 		{
 			displayName="[16th] UBGL";
@@ -1211,7 +1285,12 @@ class CfgWeapons
 		modes[]=
 		{
 			"Single",
-			"Burst"
+			"Burst",
+			"close",
+			"short",
+			"medium",
+			"far_optic1",
+			"far_optic2"
 		};
 		class FullAuto: Mode_FullAuto
 		{
@@ -1379,6 +1458,74 @@ class CfgWeapons
 				};
 			};
 		};
+		class close: Single
+		{
+			burst=2;
+			aiRateOfFire=0.5;
+			aiRateOfFireDistance=50;
+			minRange=50;
+			minRangeProbab=0.3;
+			midRange=100;
+			midRangeProbab=0.9;
+			maxRange=150;
+			maxRangeProbab=0.9;
+			showToPlayer=0;
+		};
+		class short: close
+		{
+			burst=2;
+			aiRateOfFire=2;
+			aiRateOfFireDistance=250;
+			minRange=100;
+			minRangeProbab=0.8;
+			midRange=250;
+			midRangeProbab=0.9;
+			maxRange=400;
+			maxRangeProbab=0.9;
+		};
+		class medium: close
+		{
+			burst=1;
+			aiRateOfFire=4;
+			aiRateOfFireDistance=500;
+			minRange=250;
+			minRangeProbab=0.8;
+			midRange=500;
+			midRangeProbab=0.9;
+			maxRange=750;
+			maxRangeProbab=0.9;
+		};
+		class far_optic1: medium
+		{
+			//reloadTime=0.15;
+			//requiredOpticType=1;
+			showToPlayer=0;
+			burst=1;
+			aiRateOfFire=8;
+			aiRateOfFireDistance=1000;
+			minRange=500;
+			minRangeProbab=1;
+			midRange=1000;
+			midRangeProbab=0.85;
+			maxRange=1500;
+			maxRangeProbab=0.75;
+		};
+		class far_optic2: far_optic1
+		{
+			//reloadTime=0.15;
+			burst=1;
+			aiRateOfFire=16;
+			//requiredOpticType=2;
+			minRange=1000;
+			minRangeProbab=0.85;
+			midRange=1500;
+			midRangeProbab=0.7;
+			maxRange=2000;
+			maxRangeProbab=0.5;
+			aiRateOfFireDistance=1000;
+		};
+		aiDispersionCoefY=2;
+		aiDispersionCoefX=1;
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
 			mass=100;
@@ -1918,8 +2065,11 @@ class CfgWeapons
 		{
 			"FullAuto",
 			"Single",
-			"single_medium_optics1",
-			"single_far_optics2"
+			"close",
+			"short",
+			"medium",
+			"far_optic1",
+			"far_optic2"
 		};
 		class FullAuto: Mode_FullAuto
 		{
@@ -1986,31 +2136,71 @@ class CfgWeapons
 				};
 			};
 		};
-		class single_medium_optics1: Single
+		class close: FullAuto
 		{
-			requiredOpticType=1;
+			burst=8;
+			aiRateOfFire=0.5;
+			aiRateOfFireDistance=20;
+			minRange=10;
+			minRangeProbab=0.3;
+			midRange=20;
+			midRangeProbab=0.9;
+			maxRange=30;
+			maxRangeProbab=0.9;
 			showToPlayer=0;
-			minRange=5;
-			minRangeProbab=0.2;
-			midRange=300;
-			midRangeProbab=0.69999999;
-			maxRange=450;
-			maxRangeProbab=0.2;
-			aiRateOfFire=6;
-			aiRateOfFireDistance=500;
 		};
-		class single_far_optics2: Single
+		class short: close
 		{
-			requiredOpticType=2;
+			burst=6;
+			aiRateOfFire=2;
+			aiRateOfFireDistance=50;
+			minRange=25;
+			minRangeProbab=0.8;
+			midRange=50;
+			midRangeProbab=0.9;
+			maxRange=75;
+			maxRangeProbab=0.9;
+		};
+		class medium: close
+		{
+			burst=4;
+			aiRateOfFire=4;
+			aiRateOfFireDistance=100;
+			minRange=50;
+			minRangeProbab=0.8;
+			midRange=100;
+			midRangeProbab=0.9;
+			maxRange=150;
+			maxRangeProbab=0.9;
+		};
+		class far_optic1: medium
+		{
+			//reloadTime=0.15;
+			//requiredOpticType=1;
 			showToPlayer=0;
-			minRange=100;
-			minRangeProbab=0.2;
-			midRange=400;
-			midRangeProbab=0.69999999;
-			maxRange=600;
-			maxRangeProbab=0.050000001;
+			burst=2;
 			aiRateOfFire=8;
-			aiRateOfFireDistance=800;
+			aiRateOfFireDistance=200;
+			minRange=100;
+			minRangeProbab=1;
+			midRange=200;
+			midRangeProbab=0.85;
+			maxRange=400;
+			maxRangeProbab=0.75;
+		};
+		class far_optic2: far_optic1
+		{
+			//reloadTime=0.15;
+			burst=1;
+			aiRateOfFire=16;
+			//requiredOpticType=2;
+			minRange=200;
+			minRangeProbab=0.85;
+			midRange=400;
+			midRangeProbab=0.7;
+			maxRange=600;
+			maxRangeProbab=0.5;
+			aiRateOfFireDistance=400;
 		};
 		class GL_1GL_F: UGL_F
 		{
@@ -2350,31 +2540,71 @@ class CfgWeapons
 				};
 			};
 		};
-		class single_medium_optics1: Single
+		class close: Burst
 		{
-			requiredOpticType=1;
+			burst=3;
+			aiRateOfFire=0.5;
+			aiRateOfFireDistance=25;
+			minRange=15;
+			minRangeProbab=0.3;
+			midRange=25;
+			midRangeProbab=0.9;
+			maxRange=35;
+			maxRangeProbab=0.9;
 			showToPlayer=0;
-			minRange=5;
-			minRangeProbab=0.2;
-			midRange=300;
-			midRangeProbab=0.69999999;
-			maxRange=450;
-			maxRangeProbab=0.2;
-			aiRateOfFire=6;
-			aiRateOfFireDistance=500;
 		};
-		class single_far_optics2: Single
+		class short: close
 		{
-			requiredOpticType=2;
+			burst=3;
+			aiRateOfFire=1;
+			aiRateOfFireDistance=50;
+			minRange=25;
+			minRangeProbab=0.8;
+			midRange=50;
+			midRangeProbab=0.9;
+			maxRange=75;
+			maxRangeProbab=0.9;
+		};
+		class medium: close
+		{
+			burst=3;
+			aiRateOfFire=2;
+			aiRateOfFireDistance=100;
+			minRange=50;
+			minRangeProbab=0.8;
+			midRange=100;
+			midRangeProbab=0.9;
+			maxRange=150;
+			maxRangeProbab=0.9;
+		};
+		class far_optic1: medium
+		{
+			//reloadTime=0.15;
+			//requiredOpticType=1;
 			showToPlayer=0;
+			burst=1;
+			aiRateOfFire=3;
+			aiRateOfFireDistance=200;
 			minRange=100;
-			minRangeProbab=0.2;
+			minRangeProbab=1;
+			midRange=200;
+			midRangeProbab=0.85;
+			maxRange=400;
+			maxRangeProbab=0.75;
+		};
+		class far_optic2: far_optic1
+		{
+			//reloadTime=0.15;
+			burst=1;
+			aiRateOfFire=5;
+			//requiredOpticType=2;
+			minRange=200;
+			minRangeProbab=0.85;
 			midRange=400;
-			midRangeProbab=0.69999999;
+			midRangeProbab=0.7;
 			maxRange=600;
-			maxRangeProbab=0.050000001;
-			aiRateOfFire=8;
-			aiRateOfFireDistance=800;
+			maxRangeProbab=0.5;
+			aiRateOfFireDistance=400;
 		};
 		class ELGM: UGL_F
 		{
@@ -2620,7 +2850,12 @@ class CfgWeapons
 		{
 			"SlowAuto",
 			"MediumAuto",
-			"FastAuto"
+			"FastAuto",
+			"close",
+			"short",
+			"medium",
+			"far_optic1",
+			"far_optic2"
 		};
 		class SlowAuto: Mode_FullAuto
 		{
@@ -2673,6 +2908,74 @@ class CfgWeapons
 			minRangeProbab=0;
 			midRangeProbab=0;
 			maxRangeProbab=0;
+		};
+		class close: MediumAuto
+		{
+			reloadTime=0.06;
+			burst=12;
+			aiRateOfFire=0.5;
+			aiRateOfFireDistance=50;
+			minRange=10;
+			minRangeProbab=0.3;
+			midRange=50;
+			midRangeProbab=0.9;
+			maxRange=100;
+			maxRangeProbab=0.9;
+			showToPlayer=0;
+		};
+		class short: close
+		{
+			burst=12;
+			aiRateOfFire=1;
+			aiRateOfFireDistance=100;
+			minRange=50;
+			minRangeProbab=0.8;
+			midRange=100;
+			midRangeProbab=0.9;
+			maxRange=150;
+			maxRangeProbab=0.9;
+		};
+		class medium: close
+		{
+			reloadTime=0.0857142857142857;
+			burst=9;
+			aiRateOfFire=2;
+			aiRateOfFireDistance=200;
+			minRange=100;
+			minRangeProbab=0.8;
+			midRange=200;
+			midRangeProbab=0.9;
+			maxRange=300;
+			maxRangeProbab=0.9;
+		};
+		class far_optic1: medium
+		{
+			reloadTime=0.15;
+			//requiredOpticType=1;
+			showToPlayer=0;
+			burst=6;
+			aiRateOfFire=3;
+			aiRateOfFireDistance=400;
+			minRange=200;
+			minRangeProbab=1;
+			midRange=400;
+			midRangeProbab=0.85;
+			maxRange=600;
+			maxRangeProbab=0.75;
+		};
+		class far_optic2: far_optic1
+		{
+			reloadTime=0.15;
+			burst=6;
+			aiRateOfFire=5;
+			//requiredOpticType=2;
+			minRange=500;
+			minRangeProbab=0.85;
+			midRange=1000;
+			midRangeProbab=0.7;
+			maxRange=1500;
+			maxRangeProbab=0.5;
+			aiRateOfFireDistance=1000;
 		};
 		aiDispersionCoefY=24;
 		aiDispersionCoefX=21;
@@ -2737,6 +3040,353 @@ class CfgWeapons
 		model="\3AS\3AS_Weapons\Republic\DC15L\3AS_DC15L_F.p3d";
 		picture="\3AS\3AS_Weapons\Republic\DC15L\Data\UI\3as_dc15l.paa";
 		UiPicture="\A3\weapons_f\data\UI\icon_regular_CA.paa";
+	};
+	/*==============================================================================
+	==T-15 Heavy Repeating Blaster
+	==============================================================================*/
+	class IDA_T15
+	{
+		class WeaponSlotsInfo;
+	};
+	class IDA_Stun_Muzzle;
+	class MET_T15: arifle_MX_Base_F
+	{
+		ace_overheating_mrbs=40000;
+		ace_overheating_slowdownFactor=0;
+		ace_overheating_allowSwapBarrel=0;
+		ace_overheating_dispersion=1;
+		ace_overheating_closedBolt=0;
+		ace_overheating_barrelMass=1;
+		IDA_StunWeapon="MET_T15_Stun";
+		author="Indecisive Armoury Team";
+		scope=2;
+		inertia=0;
+		canShootInWater=1;
+		displayName="[16th] T-15 Heavy Repeating Blaster";
+		magazines[]=
+		{
+			"MET_T15_mag"
+		};
+		magazineWell[]={};
+		descriptionShort="";
+		picture="Indecisive_Armoury_Weapons_REPUBLIC\Data\T15\T15_ui.paa";
+		model="Indecisive_Armoury_Weapons_REPUBLIC\Data\T15\Model\IDA_T15.p3d";
+		handAnim[]=
+		{
+			"OFP2_ManSkeleton",
+			"\MRC\JLTS\weapons\EPL2\anims\EPL2_handanim.rtm"
+		};
+		ace_clearJamAction="";
+		reloadAction="GestureReload_IDA_Reload_Blaster";
+		reloadMagazineSound[]=
+		{
+			"\Indecisive_Armoury_Sounds\Blaster_reload_Vent.ogg",
+			5,
+			1,
+			100
+		};
+		recoil="IDA_recoil_HeavyRepeatingBlaster";
+		fireLightDiffuse[]={0.1,0.25,1};
+		drySound[]=
+		{
+			"\Indecisive_Armoury_Sounds\weapon_dry.ogg",
+			5,
+			1,
+			10
+		};
+		muzzles[]=
+		{
+			"this"
+		};
+		modes[]=
+		{
+			"SlowAuto",
+			"MediumAuto",
+			"FastAuto",
+			"close",
+			"short",
+			"medium",
+			"far_optic1",
+			"far_optic2"
+		};
+		class SlowAuto: Mode_FullAuto
+		{
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				closure1[]={};
+				closure2[]={};
+				soundClosure[]={};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				begin1[]=
+				{
+					"\Indecisive_Armoury_Sounds\Republic\T15.ogg",
+					1.25,
+					1,
+					1800
+				};
+				begin2[]=
+				{
+					"\Indecisive_Armoury_Sounds\Republic\T15.ogg",
+					1.25,
+					1.025,
+					1800
+				};
+				begin3[]=
+				{
+					"\Indecisive_Armoury_Sounds\Republic\T15.ogg",
+					1.25,
+					0.94999999,
+					1800
+				};
+				begin4[]=
+				{
+					"\Indecisive_Armoury_Sounds\Republic\T15.ogg",
+					1.25,
+					1.05,
+					1800
+				};
+				begin5[]=
+				{
+					"\Indecisive_Armoury_Sounds\Republic\T15.ogg",
+					1.25,
+					0.89999998,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					0.2,
+					"begin2",
+					0.2,
+					"begin3",
+					0.2,
+					"begin4",
+					0.2,
+					"begin5",
+					0.2
+				};
+				beginwater1[]=
+				{
+					"\Indecisive_Armoury_Sounds\Republic\T15.ogg",
+					1,
+					1,
+					400
+				};
+				soundBeginWater[]=
+				{
+					"beginwater1",
+					1
+				};
+			};
+			textureType="burst";
+			reloadTime=0.3;
+			dispersion=0.00050000002;
+			minRange=2;
+			minRangeProbab=0.5;
+			midRange=100;
+			midRangeProbab=0.69999999;
+			maxRange=10000;
+			maxRangeProbab=0.30000001;
+		};
+		class MediumAuto: SlowAuto
+		{
+			reloadTime=0.15;
+			dispersion=0.00079;
+			textureType="fullAuto";
+			minRangeProbab=0;
+			midRangeProbab=0;
+			maxRangeProbab=0;
+		};
+		class FastAuto: SlowAuto
+		{
+			reloadTime=0.1;
+			dispersion=0.00079;
+			textureType="fastAuto";
+			minRangeProbab=0;
+			midRangeProbab=0;
+			maxRangeProbab=0;
+		};
+		class close: MediumAuto
+		{
+			reloadTime=0.1;
+			burst=7;
+			aiRateOfFire=0.5;
+			aiRateOfFireDistance=100;
+			minRange=50;
+			minRangeProbab=0.3;
+			midRange=100;
+			midRangeProbab=0.9;
+			maxRange=150;
+			maxRangeProbab=0.9;
+			showToPlayer=0;
+		};
+		class short: close
+		{
+			burst=7;
+			aiRateOfFire=1;
+			aiRateOfFireDistance=200;
+			minRange=100;
+			minRangeProbab=0.8;
+			midRange=200;
+			midRangeProbab=0.9;
+			maxRange=300;
+			maxRangeProbab=0.9;
+		};
+		class medium: close
+		{
+			reloadTime=0.15;
+			burst=5;
+			aiRateOfFire=2;
+			aiRateOfFireDistance=500;
+			minRange=250;
+			minRangeProbab=0.8;
+			midRange=500;
+			midRangeProbab=0.9;
+			maxRange=750;
+			maxRangeProbab=0.9;
+		};
+		class far_optic1: medium
+		{
+			reloadTime=0.3;
+			//requiredOpticType=1;
+			showToPlayer=0;
+			burst=3;
+			aiRateOfFire=3;
+			aiRateOfFireDistance=400;
+			minRange=500;
+			minRangeProbab=1;
+			midRange=1000;
+			midRangeProbab=0.85;
+			maxRange=1500;
+			maxRangeProbab=0.75;
+		};
+		class far_optic2: far_optic1
+		{
+			reloadTime=0.3;
+			burst=3;
+			aiRateOfFire=5;
+			//requiredOpticType=2;
+			minRange=1000;
+			minRangeProbab=0.85;
+			midRange=1500;
+			midRangeProbab=0.7;
+			maxRange=2000;
+			maxRangeProbab=0.5;
+			aiRateOfFireDistance=1000;
+		};
+		distanceZoomMin=400;
+		distanceZoomMax=400;
+		weaponInfoType="RscOptics_nightstalker";
+		modelOptics="\Indecisive_Armoury_Weapons_REPUBLIC\Data\LowPower_Scope\IDA_LowPower_Scope_Blue.p3d";
+		class OpticsModes
+		{
+			class Iron
+			{
+				opticsID=1;
+				useModelOptics=0;
+				opticsPPEffects[]=
+				{
+					"",
+					""
+				};
+				opticsZoomMin=0.25;
+				opticsZoomMax=1.25;
+				opticsZoomInit=0.75;
+				discreteDistance[]={200};
+				discreteDistanceInitIndex=0;
+				distanceZoomMin=200;
+				distanceZoomMax=200;
+				memoryPointCamera="eye";
+				visionMode[]={};
+				opticsFlare=0;
+				opticsDisablePeripherialVision=0;
+			};
+			class IDA_T15_Scope
+			{
+				opticsID=2;
+				useModelOptics=1;
+				opticsPPEffects[]=
+				{
+					"OpticsRadialBlur1",
+					"OpticsBlur1"
+				};
+				opticsZoomMin=0.125;
+				opticsZoomMax=0.125;
+				opticsZoomInit=0.125;
+				discreteDistance[]={200};
+				discreteDistanceInitIndex=0;
+				distanceZoomMin=100;
+				distanceZoomMax=1000;
+				memoryPointCamera="eye";
+				visionMode[]={};
+				opticsFlare=0;
+				opticsDisablePeripherialVision=0;
+				cameraDir="";
+			};
+		};
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			mass=80;
+			class CowsSlot: CowsSlot
+			{
+				compatibleItems[]=
+				{
+					"MET_Optic_Scope_WestarM5"
+				};
+			};
+			class MuzzleSlot: MuzzleSlot
+			{
+				compatibleItems[]={};
+			};
+			class PointerSlot: PointerSlot
+			{
+				compatibleItems[]=
+				{
+					"acc_flashLight"
+				};
+			};
+			class UnderBarrelSlot: UnderBarrelSlot
+			{
+				compatibleItems[]={};
+			};
+		};
+		class GunParticles
+		{
+			class FirstEffect
+			{
+				directionName="Konec hlavne";
+				effectName="RifleAssaultCloud";
+				positionName="Usti hlavne";
+			};
+		};
+	};
+	class MET_T15_Stun: MET_T15
+	{
+		IDA_StunWeapon="MET_T15";
+		scope=1;
+		canShootInWater=0;
+		fireLightDiffuse[]={0,0,1};
+		baseWeapon="IDA_T15_Stun";
+		magazines[]=
+		{
+			"IDA_Stun_Cell"
+		};
+		muzzles[]=
+		{
+			"Stun"
+		};
+		class Stun: IDA_Stun_Muzzle
+		{
+		};
+		weaponInfoType="RscWeaponZeroing";
 	};
 	/*==============================================================================
 	==Z6
@@ -2825,7 +3475,12 @@ class CfgWeapons
 		{
 			"slowerAuto",
 			"Auto",
-			"fullerAuto"
+			"fullerAuto",
+			"close",
+			"short",
+			"medium",
+			"far_optic1",
+			"far_optic2"
 			//"maxAuto"
 		};
 		class Auto: Mode_FullAuto
@@ -2942,6 +3597,76 @@ class CfgWeapons
 			midRangeProbab=0;
 			maxRangeProbab=0;
 		};
+		class close: MediumAuto
+		{
+			reloadTime=0.03;
+			burst=26;
+			aiRateOfFire=0.5;
+			minRange=100;
+			minRangeProbab=0.3;
+			midRange=200;
+			midRangeProbab=0.9;
+			maxRange=300;
+			maxRangeProbab=0.9;
+			showToPlayer=0;
+			aiRateOfFireDistance=200;
+		};
+		class short: close
+		{
+			burst=26;
+			aiRateOfFire=1;
+			minRange=200;
+			minRangeProbab=0.8;
+			midRange=300;
+			midRangeProbab=0.9;
+			maxRange=400;
+			maxRangeProbab=0.9;
+			aiRateOfFireDistance=200;
+		};
+		class medium: close
+		{
+			reloadTime=0.05;
+			burst=13;
+			aiRateOfFire=2;
+			minRange=300;
+			minRangeProbab=0.8;
+			midRange=400;
+			midRangeProbab=0.9;
+			maxRange=500;
+			maxRangeProbab=0.9;
+			aiRateOfFireDistance=500;
+		};
+		class far_optic1: medium
+		{
+			reloadTime=0.075;
+			//requiredOpticType=1;
+			showToPlayer=0;
+			burst=9;
+			aiRateOfFire=3;
+			minRange=300;
+			minRangeProbab=1;
+			midRange=500;
+			midRangeProbab=0.85;
+			maxRange=700;
+			maxRangeProbab=0.75;
+			aiRateOfFireDistance=500;
+		};
+		class far_optic2: far_optic1
+		{
+			reloadTime=0.075;
+			burst=9;
+			aiRateOfFire=5;
+			//requiredOpticType=2;
+			minRange=500;
+			minRangeProbab=0.85;
+			midRange=750;
+			midRangeProbab=0.7;
+			maxRange=1000;
+			maxRangeProbab=0.5;
+			aiRateOfFireDistance=750;
+		};
+		aiDispersionCoefY=24;
+		aiDispersionCoefX=21;
 		/*class maxAuto: Auto
 		{
 			reloadTime=0.0060240963855422;
@@ -2951,8 +3676,6 @@ class CfgWeapons
 			midRangeProbab=0;
 			maxRangeProbab=0;
 		};*/
-		aiDispersionCoefY=24;
-		aiDispersionCoefX=21;
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
 			mass=270;
@@ -3050,7 +3773,12 @@ class CfgWeapons
 		{
 			"slowerAuto",
 			"Auto",
-			"fullerAuto"
+			"fullerAuto",
+			"close",
+			"short",
+			"medium",
+			"far_optic1",
+			"far_optic2"
 			//"maxAuto"
 		};
 		class Auto: Mode_FullAuto
@@ -3103,11 +3831,79 @@ class CfgWeapons
 			midRangeProbab=0;
 			maxRangeProbab=0;
 		};
+		class close: MediumAuto
+		{
+			reloadTime=0.03;
+			burst=26;
+			aiRateOfFire=0.5;
+			minRange=100;
+			minRangeProbab=0.3;
+			midRange=200;
+			midRangeProbab=0.9;
+			maxRange=300;
+			maxRangeProbab=0.9;
+			showToPlayer=0;
+			aiRateOfFireDistance=200;
+		};
+		class short: close
+		{
+			burst=26;
+			aiRateOfFire=1;
+			minRange=200;
+			minRangeProbab=0.8;
+			midRange=300;
+			midRangeProbab=0.9;
+			maxRange=400;
+			maxRangeProbab=0.9;
+			aiRateOfFireDistance=200;
+		};
+		class medium: close
+		{
+			reloadTime=0.05;
+			burst=13;
+			aiRateOfFire=2;
+			minRange=300;
+			minRangeProbab=0.8;
+			midRange=400;
+			midRangeProbab=0.9;
+			maxRange=500;
+			maxRangeProbab=0.9;
+			aiRateOfFireDistance=500;
+		};
+		class far_optic1: medium
+		{
+			reloadTime=0.075;
+			//requiredOpticType=1;
+			showToPlayer=0;
+			burst=9;
+			aiRateOfFire=3;
+			minRange=300;
+			minRangeProbab=1;
+			midRange=500;
+			midRangeProbab=0.85;
+			maxRange=700;
+			maxRangeProbab=0.75;
+			aiRateOfFireDistance=500;
+		};
+		class far_optic2: far_optic1
+		{
+			reloadTime=0.075;
+			burst=9;
+			aiRateOfFire=5;
+			//requiredOpticType=2;
+			minRange=500;
+			minRangeProbab=0.85;
+			midRange=750;
+			midRangeProbab=0.7;
+			maxRange=1000;
+			maxRangeProbab=0.5;
+			aiRateOfFireDistance=750;
+		};
 		aiDispersionCoefY=24;
 		aiDispersionCoefX=21;
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
-			mass=100;
+			mass=270;
 			class CowsSlot: CowsSlot
 			{
 				compatibleItems[]={};
@@ -4030,6 +4826,105 @@ class CfgWeapons
 					""
 				};
 			};
+		};
+		modelOptics="z\16th\addons\weapons\scopes\big_cross_blue_med.p3d";
+		class OpticsModes
+		{
+			class Snip
+				{
+					opticsID=1;
+					opticsDisplayName="WFOV";
+					useModelOptics=1;
+					opticsPPEffects[]=
+					{
+						"OpticsCHAbera1",
+						"OpticsBlur1"
+					};
+					maxZeroing=2000;
+					opticsZoomMin=0.0037499999;
+					opticsZoomMax=0.1;
+					opticsZoomInit=0.75;
+					distanceZoomMin=2000;
+					distanceZoomMax=2000;
+					visionMode[]=
+					{
+						"Normal",
+						"NVG",
+						"TI"
+					};
+					thermalMode[]={0,1};
+					memoryPointCamera="opticView";
+					modelOptics[]=
+					{
+						"z\16th\addons\weapons\scopes\big_cross_blue_med.p3d"
+					};
+					opticsFlare=1;
+					opticsDisablePeripherialVision=1;
+					cameraDir="";
+				};
+		};
+	};
+	/*==============================================================================
+	==Firepuncher 773
+	==============================================================================*/
+	class ls_weapon_firepuncher_base;
+	class MET_16_weapon_firepuncher: ls_weapon_firepuncher_base
+	{
+		scope=2;
+		scopeArsenal=2;
+		author="Legion Studios";
+		displayName="[16th] 773 Firepuncher";
+		baseWeapon="MET_16_weapon_firepuncher";
+		magazines[]=
+		{
+			"MET_ARC_773_mag"
+		};
+		magazineWell[]=
+		{
+			"MET_ARC_773_magwell"
+		};
+		class Single: Mode_SemiAuto
+		{
+			reloadTime=0.133333333;
+			dispersion=0.00000000000001;
+			minRange=5;
+			minRangeProbab=0.3;
+			midRange=20;
+			midRangeProbab=0.6;
+			maxRange=50;
+			maxRangeProbab=0.1;
+			aiRateOfFire=2;
+			aiRateOfFireDistance=25;
+			sounds[]=
+			{
+				"StandardSound",
+				"SilencedSound"
+			};
+			class StandardSound
+			{
+				soundSetShot[]=
+				{
+					"ls_firepuncher_Shot_SoundSet",
+					"ls_sniper_Tail_SoundSet"
+				};
+			};
+			class SilencedSound
+			{
+				soundSetShot[]=
+				{
+					"ls_firepuncher_suppressed_Shot_SoundSet",
+					"ls_sniper_Tail_SoundSet"
+				};
+			};
+		};
+		ls_weapons_adsSounds[]=
+		{
+			
+			{
+				"ls_weapons_sniperRifle_zoomIn01",
+				"ls_weapons_sniperRifle_zoomIn02"
+			},
+			"ls_weapons_sniperRifle_zoomOut01"
 		};
 		modelOptics="z\16th\addons\weapons\scopes\big_cross_blue_med.p3d";
 		class OpticsModes
@@ -11957,6 +12852,14 @@ class CfgMagazineWells
 			"MET_Valken_mag"
 		};
 	};
+	class MET_ARC_773_magwell
+	{
+		MET_ARC_773_mags[]=
+		{
+			"MET_ARC_773_mag",
+			"MET_DC15x_at_mag"
+		};
+	};
 	class MET_dc15x_MagWell
 	{
 		MET_CinCar_Mags[]=
@@ -12212,6 +13115,23 @@ class CfgMagazines
 		mass = 50;
 		tracersEvery=1;
 	};
+	class MET_T15_mag: JLTS_DC15A_mag
+	{
+		JLTS_hasElectronics=1;
+		JLTS_hasEMPProtection=1;
+		author="Hazmat";
+		modelSpecial="";
+		modelSpecialIsProxy=0;
+		picture="\3AS\3AS_Weapons\Data\UI\3as_box_b.paa";
+		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
+		count=80;
+		displayName="[16th] T-15 Energy Cell";
+		displayNameShort="T-15 Energy Cell";
+		descriptionShort="Energy cell for the T-15";
+		ammo="MET_blasterbolt_br";
+		mass = 25;
+		tracersEvery=1;
+	};
 	class MET_E15_mag: JLTS_DC15A_mag
 	{
 		JLTS_hasElectronics=1;
@@ -12336,6 +13256,24 @@ class CfgMagazines
 		displayName="[16th] Valken Energy Cell";
 		displayNameShort="Valken Energy Cell";
 		descriptionShort="Energy cell for the Valken-38x";
+		ammo="MET_blasterbolt_dmr";
+		tracersEvery=1;
+		initSpeed = 1250;
+		mass=20;
+	};
+	class MET_ARC_773_mag: JLTS_DC15A_mag
+	{
+		JLTS_hasElectronics=1;
+		JLTS_hasEMPProtection=1;
+		author="Hazmat";
+		modelSpecial="";
+		modelSpecialIsProxy=0;
+		picture="\3AS\3AS_Weapons\Data\UI\3as_sniper_b.paa";
+		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
+		count=25;
+		displayName="[16th] Firepuncher Energy Cell";
+		displayNameShort="Firepuncher Energy Cell";
+		descriptionShort="Energy cell for the Firepuncher";
 		ammo="MET_blasterbolt_dmr";
 		tracersEvery=1;
 		initSpeed = 1250;
