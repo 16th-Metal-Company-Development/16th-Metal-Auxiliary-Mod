@@ -217,7 +217,7 @@ class CfgWeapons
 		};
 		magazines[]=
 		{
-			"Metal_E5_mag"
+			"Metal_E5_Mag"
 		};
 		magazineWell[]={};
 		class Single: Mode_SemiAuto
@@ -650,7 +650,7 @@ class CfgWeapons
 		};
 		magazines[]=
 		{
-			"Metal_E5_BX_mag"
+			"Metal_E5_BX_Mag"
 		};
 		magazineWell[]={};
 		class Single: Mode_SemiAuto
@@ -1003,7 +1003,7 @@ class CfgWeapons
         scopeCurator=2;
 		magazines[]=
 		{
-			"Metal_E5C_mag"
+			"Metal_E5C_Mag"
 		};
 		magazineWell[]={};
 		handAnim[]=
@@ -1113,7 +1113,7 @@ class CfgWeapons
 		};
 		class manual_fast: manual
 		{
-			textureType="fastAuto";
+			textureType = "fastAuto";
 			reloadTime=0.05;
 			dispersion=0.004;
 			soundContinuous=0;
@@ -1240,7 +1240,7 @@ class CfgWeapons
 		recoil="MET_recoil_VK38X";
 		magazines[]=
 		{
-			"Metal_E5S_mag"
+			"Metal_E5S_Mag"
 		};
 		magazineWell[]={};
 		modes[]=
@@ -1553,7 +1553,7 @@ class CfgWeapons
 		};
 		magazines[]=
 		{
-			"Metal_RG4D_mag"
+			"Metal_RG4D_Mag"
 		};
 		magazineWell[]={};
 		fireLightDiffuse[]={1,0,0};
@@ -1724,7 +1724,7 @@ class CfgWeapons
 		};
 		magazines[]=
 		{
-			"Metal_SBB3_mag"
+			"Metal_SBB3_Mag"
 		};
 		magazineWell[]={};
 		modes[]=
@@ -2393,7 +2393,7 @@ class CfgMagazines
 	class 30Rnd_65x39_caseless_mag;
 	class 100Rnd_65x39_caseless_mag;
 	class 16Rnd_9x21_Mag;
-	class Metal_E5_mag: 30Rnd_65x39_caseless_mag
+	class Metal_E5_Mag: 30Rnd_65x39_caseless_mag
 	{
 		JLTS_hasElectronics=1;
 		JLTS_hasEMPProtection=0;
@@ -2410,7 +2410,7 @@ class CfgMagazines
 		tracersEvery=1;
 		mass=10;
 	};
-	class Metal_E5_BX_mag: 30Rnd_65x39_caseless_mag
+	class Metal_E5_BX_Mag: 30Rnd_65x39_caseless_mag
 	{
 		JLTS_hasElectronics=1;
 		JLTS_hasEMPProtection=0;
@@ -2427,7 +2427,7 @@ class CfgMagazines
 		tracersEvery=1;
 		mass=10;
 	};
-	class Metal_E5C_mag: 100Rnd_65x39_caseless_mag
+	class Metal_E5C_Mag: 100Rnd_65x39_caseless_mag
 	{
 		JLTS_hasElectronics=1;
 		JLTS_hasEMPProtection=0;
@@ -2444,7 +2444,7 @@ class CfgMagazines
 		tracersEvery=1;
 		mass=50;
 	};
-	class Metal_E5S_mag: 30Rnd_65x39_caseless_mag
+	class Metal_E5S_Mag: 30Rnd_65x39_caseless_mag
 	{
 		JLTS_hasElectronics=1;
 		JLTS_hasEMPProtection=0;
@@ -2461,7 +2461,7 @@ class CfgMagazines
 		tracersEvery=1;
 		mass=20;
 	};
-	class Metal_RG4D_mag: 16Rnd_9x21_Mag
+	class Metal_RG4D_Mag: 16Rnd_9x21_Mag
 	{
 		JLTS_hasElectronics=1;
 		JLTS_hasEMPProtection=0;
@@ -2477,7 +2477,7 @@ class CfgMagazines
 		descriptionShort="$STR_JLTS_descs_RG4D_mag";
 		tracersEvery=1;
 	};
-	class Metal_SBB3_mag: 30Rnd_65x39_caseless_mag
+	class Metal_SBB3_Mag: 30Rnd_65x39_caseless_mag
 	{
 		JLTS_hasElectronics=1;
 		JLTS_hasEMPProtection=0;
