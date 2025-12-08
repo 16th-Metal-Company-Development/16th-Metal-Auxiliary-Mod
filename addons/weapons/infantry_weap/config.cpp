@@ -62,7 +62,7 @@ class CfgPatches
 		magazines[]=
 		{
 			"MET_DC15A_mag",
-			"MET_DC15S_mag",
+			"MET_DC15S_Mag",
 			"MET_DC19E_mag",
 			"MET_DC15L_mag",
 			"MET_E15_mag",
@@ -1631,7 +1631,7 @@ class CfgWeapons
 		reloadAction="GestureReload_JLTS_DC15S";
 		magazines[]=
 		{
-			"MET_DC15S_mag"
+			"MET_DC15S_Mag"
 		};
 		magazineWell[]=
 		{
@@ -2002,7 +2002,7 @@ class CfgWeapons
 		author="$STR_3as_Studio";
 		magazines[]=
 		{
-			"MET_DC15S_mag"
+			"MET_DC15S_Mag"
 		};
 		magazineWell[]=
 		{
@@ -2373,7 +2373,7 @@ class CfgWeapons
 		author="$STR_3as_Studio";
 		magazines[]=
 		{
-			"MET_DC15S_mag"
+			"MET_DC15S_Mag"
 		};
 		magazineWell[]=
 		{
@@ -3420,7 +3420,7 @@ class CfgWeapons
 		picture="\MRC\JLTS\weapons\Z6\data\ui\Z6_ui_ca.paa";
 		UiPicture="\MRC\JLTS\weapons\Z6\data\ui\Z6_ui_ca.paa";
 		model="\MRC\JLTS\weapons\Z6\Z6.p3d";
-		WBK_UseHeavyWeaponFramework = true;
+		WBK_UseHeavyWeaponFramework = "true";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -3729,7 +3729,7 @@ class CfgWeapons
 		descriptionShort="";
 		picture="Indecisive_Armoury_Weapons_REPUBLIC\Data\Z6\Z6_ui.paa";
 		model="Indecisive_Armoury_Weapons_REPUBLIC\Data\Z6\Model\IDA_Z6.p3d";
-		WBK_UseHeavyWeaponFramework = true;
+		WBK_UseHeavyWeaponFramework = "true";
 		magazines[]=
 		{
 			"MET_blaster_battery",
@@ -3944,7 +3944,7 @@ class CfgWeapons
 		descriptionShort="Assault Cannon";
 		picture="\SFA_Main\SFA_Weapons_R\E15\data\ui\E15_ui.paa";
 		model="SFA_Main\SFA_Weapons_R\E15\E15.p3d";
-		WBK_UseHeavyWeaponFramework = true;	
+		WBK_UseHeavyWeaponFramework = "true";	
 		hiddenSelections[]=
 		{
 			"camo1"
@@ -4223,7 +4223,7 @@ class CfgWeapons
 		picture="\MRC\JLTS\weapons\Z6\data\ui\Z6_ui_ca.paa";
 		UiPicture="\MRC\JLTS\weapons\Z6\data\ui\Z6_ui_ca.paa";
 		model="\MRC\JLTS\weapons\Z6\Z6.p3d";
-		WBK_UseHeavyWeaponFramework = true;	
+		WBK_UseHeavyWeaponFramework = "true";	
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -4819,7 +4819,7 @@ class CfgWeapons
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
 			mass=380;
-			class CowsSlot: Cowsslot
+			class CowsSlot: CowsSlot
 			{
 				compatibleItems[]=
 				{
@@ -4831,37 +4831,37 @@ class CfgWeapons
 		class OpticsModes
 		{
 			class Snip
+			{
+				opticsID=1;
+				opticsDisplayName="WFOV";
+				useModelOptics=1;
+				opticsPPEffects[]=
 				{
-					opticsID=1;
-					opticsDisplayName="WFOV";
-					useModelOptics=1;
-					opticsPPEffects[]=
-					{
-						"OpticsCHAbera1",
-						"OpticsBlur1"
-					};
-					maxZeroing=2000;
-					opticsZoomMin=0.0037499999;
-					opticsZoomMax=0.1;
-					opticsZoomInit=0.75;
-					distanceZoomMin=2000;
-					distanceZoomMax=2000;
-					visionMode[]=
-					{
-						"Normal",
-						"NVG",
-						"TI"
-					};
-					thermalMode[]={0,1};
-					memoryPointCamera="opticView";
-					modelOptics[]=
-					{
-						"z\16th\addons\weapons\scopes\big_cross_blue_med.p3d"
-					};
-					opticsFlare=1;
-					opticsDisablePeripherialVision=1;
-					cameraDir="";
+					"OpticsCHAbera1",
+					"OpticsBlur1"
 				};
+				maxZeroing=2000;
+				opticsZoomMin=0.0037499999;
+				opticsZoomMax=0.1;
+				opticsZoomInit=0.75;
+				distanceZoomMin=2000;
+				distanceZoomMax=2000;
+				visionMode[]=
+				{
+					"Normal",
+					"NVG",
+					"TI"
+				};
+				thermalMode[]={0,1};
+				memoryPointCamera="opticView";
+				modelOptics[] =
+				{
+					"z\16th\addons\weapons\scopes\big_cross_blue_med.p3d"
+				};
+				opticsFlare=1;
+				opticsDisablePeripherialVision=1;
+				cameraDir="";
+			};
 		};
 	};
 	/*==============================================================================
@@ -5801,7 +5801,7 @@ class CfgWeapons
 		};
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
-			mass=80
+			mass = 80;
 			class CowsSlot: CowsSlot
 			{
 				compatibleItems[]=
@@ -5969,7 +5969,7 @@ class CfgWeapons
 		};
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
-			mass=80
+			mass = 80;
 			class CowsSlot: CowsSlot
 			{
 				compatibleItems[]=
@@ -12636,7 +12636,7 @@ class CfgMagazineWells
 	{
 		MET_LightMagazines[]=
 		{
-			"MET_DC15S_mag"
+			"MET_DC15S_Mag"
 		};
 	};
 	class MET_DC15A_MagWell
@@ -12659,7 +12659,7 @@ class CfgMagazineWells
 		{
 			"MET_blaster_battery",
 			"MET_blaster_pistol_battery",
-			"MET_DC15S_mag",
+			"MET_DC15S_Mag",
 			"MET_blaster_pistol_battery"
 		};
 	};
@@ -12672,14 +12672,14 @@ class CfgMagazineWells
 			"MET_DC15A_mag",
 			"MET_CinCar_Mag",
 			"MET_DC15SMG_Mag",
-			"MET_DC15S_mag",
+			"MET_DC15S_Mag",
 			"MET_blaster_pistol_battery",
 			"MET_Westar35SA_mag",
 			"MET_blaster_battery_mand",
 			"MET_blaster_battery",
 			"MET_blaster_battery_green",
-			"MET_Westar35C_mag",
-			"MET_Westar35S_mag",
+			"MET_Westar35C_Mag",
+			"MET_Westar35S_Mag",
 			"3AS_130Rnd_EM50_RedPlasma",
 			"3AS_60Rnd_EM50_RedPlasma",
 			"ls_magazine_e5c",
@@ -12691,12 +12691,12 @@ class CfgMagazineWells
 			"3AS_15Rnd_EM20_SE14R_Mag",
 			"ls_magazine_rg4d",
 			"JLTS_RG4D_mag",
-			"MET_D200_Pistol_mag",
-			"MET_DLA13_mag",
+			"MET_D200_Pistol_Mag",
+			"MET_DLA13_Mag",
 			"MET_EL34_mag",
-			"Metal_E5_mag",
-			"Metal_E5_BX_mag",
-			"Metal_E5C_mag",
+			"Metal_E5_Mag",
+			"Metal_E5_BX_Mag",
+			"Metal_E5C_Mag",
 			"Metal_RG4D_mag"
 		};
 		MET_E15_RandomMagazines[]=
@@ -12709,40 +12709,26 @@ class CfgMagazineWells
 		MET_DC20Magazines_REP[]=
 		{
 			"MET_DC15A_mag",
-			"MET_DC15S_mag",
+			"MET_DC15S_Mag",
 			"MET_DC19E_mag",
-			"MET_DC15LE_mag",
 			"MET_CinCar_Mag",
 			"MET_DC15SMG_Mag",
-			"MET_Valken_mag",
-			"MET_DC15x_mag",
-			"MET_DC15xm_mag",
-			"MET_slug_mag",
-			"MET_pellet_mag",
-			"MET_DP12_slug_mag",
-			"MET_DP12_pellet_mag",
 			"MET_blaster_pistolC_battery",
 			"MET_blaster_pistol_battery",
 			"MET_dual_blaster_pistol_battery",
 			"MET_blaster_pistol_Red_battery",
-			"MET_DC17M_mag",
-			"MET_DC17M_Red_mag",
-			"MET_DC17M_Sniper_mag",
-			"MET_DC17M_Sniper_Red_mag",
 			"MET_dc15sa_battery",
 			"MET_dc15sa_red_battery"
 		};
 		MET_DC20Magazines_BAR[]=
 		{
-			"MET_D200_Pistol_mag",
-			"MET_DLA13_mag",
-			"MET_T20_mag",
-			"MET_X300_Sniper_mag"
+			"MET_D200_Pistol_Mag",
+			"MET_DLA13_Mag",
+			"MET_T20_Mag"
 		};
 		MET_DC20Magazines_212[]=
 		{
-			"Aux212_JLTS_E5_Mag",
-			"Aux212_JLTS_E5S_Mag"
+			"Aux212_JLTS_E5_Mag"
 		};
 		MET_DC20Magazines_IDA[]=
 		{
@@ -12752,45 +12738,34 @@ class CfgMagazineWells
 		MET_DC20Magazines_LS[]=
 		{
 			"ls_magazine_e5",
-			"ls_magazine_mercenarySniper",
 			"ls_magazine_rg4d",
 			"ls_magazine_westar35sa",
 			"ls_magazine_westar35s",
-			"ls_magazine_westar35c",
-			"ls_magazine_westar35s_scatter"
+			"ls_magazine_westar35c"
 		};
 		MET_DC20Magazines_MAND[]=
 		{
-			"MET_773_mag",
-			"MET_Westar35C_mag",
-			"MET_Westar35S_mag",
-			"MET_yellow_pellet_mag_bird",
-			"MET_yellow_pellet_mag",
-			"MET_weapon_westar35sa"
+			"MET_Westar35C_Mag",
+			"MET_Westar35S_Mag",
+			"MET_Westar35SA_mag"
 		};
 		MET_DC20Magazines_JLTS[]=
 		{
 			"JLTS_E5_mag",
-			"JLTS_E5S_mag",
-			"JLTS_SBB3_mag",
 			"JLTS_RG4D_mag"
 		};
 		MET_DC20Magazines_3as[]=
 		{
 			"3AS_60Rnd_EM50_RedPlasma",
 			"3AS_10Rnd_EM90_Mag",
-			"3AS_8Rnd_ESlugY_Mag",
-			"3AS_8Rnd_EY30_Pellets",
 			"3AS_15Rnd_EM20_SE14R_Mag"
 		};
 		MET_DC20Magazines_MET_Droid[]=
 		{
-			"Metal_E5_mag",
-			"Metal_E5_BX_mag",
-			"Metal_E5C_mag",
-			"Metal_E5S_mag",
-			"Metal_RG4D_mag",
-			"Metal_SBB3_mag"
+			"Metal_E5_Mag",
+			"Metal_E5_BX_Mag",
+			"Metal_E5C_Mag",
+			"Metal_RG4D_mag"
 		};
 	};
 	class MET_DP23_MagWell
@@ -12823,17 +12798,17 @@ class CfgMagazineWells
 		MET_WestarM5_Mags[]=
 		{
 			"MET_DC15A_mag",
-			"MET_DC15S_mag",
+			"MET_DC15S_Mag",
 			"MET_DC15LE_mag",
-			"MET_DC15SMG_mag",
+			"MET_DC15SMG_Mag",
 			"MET_blaster_pistol_battery",
 			"JLTS_E5_mag",
 			"3AS_60Rnd_EM50_RedPlasma",
 			"DBA_58x42mm_BP87D_x40_mag",
 			"Aux212_JLTS_E5_Mag",
 			"ls_magazine_e5",
-			"Metal_E5_mag",
-			"Metal_E5_BX_mag"
+			"Metal_E5_Mag",
+			"Metal_E5_BX_Mag"
 		};
 	};
 	class MET_CinCar_MagWell
@@ -12965,7 +12940,7 @@ class CfgMagazineWells
 		MET_60mm_GL_Mags[]=
 		{
 			"MET_60mm_HE_mag",
-			"MET_60mm_AT_mag"
+			"MET_60mm_HEAT_mag"
 		};
 	};
 	class MET_GL_MagWell_Pacifist
@@ -13065,7 +13040,7 @@ class CfgMagazines
 		ammo="MET_blasterbolt";
 		tracersEvery=1;
 	};
-	class MET_DC15S_mag: JLTS_DC15A_mag
+	class MET_DC15S_Mag: JLTS_DC15A_mag
 	{
 		JLTS_hasElectronics=1;
 		JLTS_hasEMPProtection=1;
@@ -17340,11 +17315,11 @@ class CfgAmmo
 		effectFlare = "CounterMeasureFlare";
 		lightColor[] = {1, 1, 1,0.5};
 		smokeColor[] = {1,1,1,0.5};
-		intensity = 999999999999999999999999999999999999999999999999999999999999999999;
+		intensity = "999999999999999999999999999999999999999999999999999999999999999999";
         coefGravity = 0.25;
 		size = 1;
 		triggerSpeedCoef=1;
-		brightness = 999999999999999999999999999999999999999999999999999999999999999999;
+		brightness = "999999999999999999999999999999999999999999999999999999999999999999";
 	};
 	class MET_GL_Flare_RA: MET_GL_Flare_RA_SubMun
 	{
