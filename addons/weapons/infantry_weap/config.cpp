@@ -1170,8 +1170,6 @@ class CfgWeapons
 				10
 			};
 		};
-		aiDispersionCoefY=6;
-		aiDispersionCoefX=4;
 		modelOptics="z\16th\addons\weapons\scopes\big_cross_blue_full.p3d";
 		class OpticsModes
 		{
