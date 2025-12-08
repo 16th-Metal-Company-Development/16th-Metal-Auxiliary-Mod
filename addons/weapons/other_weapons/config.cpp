@@ -1263,7 +1263,7 @@ class CfgWeapons
 			"SFA_Main\SFA_Weapons_N\T20\data\T20_Assault_Cannon_co.paa"
 		};
 		recoil="recoil_pdw";
-		WBK_UseHeavyWeaponFramework = true;	
+		WBK_UseHeavyWeaponFramework = "true";	
 		maxZeroing=1200;
 		handAnim[]=
 		{
@@ -1449,7 +1449,7 @@ class CfgWeapons
 			"SFA_Main\SFA_Weapons_R\E403\data\E403_co.paa"
 		};
 		recoil="recoil_pdw";
-		WBK_UseHeavyWeaponFramework = true;	
+		WBK_UseHeavyWeaponFramework = "true";	
 		maxZeroing=1200;
 		handAnim[]=
 		{
@@ -1774,7 +1774,7 @@ class CfgWeapons
 		};
 		recoil="recoil_pdw";
 		maxZeroing=1200;
-		WBK_UseHeavyWeaponFramework = true;	
+		WBK_UseHeavyWeaponFramework = "true";	
 		handAnim[]=
 		{
 			"OFP2_ManSkeleton",
@@ -1948,7 +1948,7 @@ class CfgWeapons
 		displayName="[BHA] FHR-1 Heavy Repeater";
 		descriptionShort="$STR_JLTS_descs_BlasterRotaryCannon";
 		maxZeroing=1200;
-		WBK_UseHeavyWeaponFramework = true;
+		WBK_UseHeavyWeaponFramework = "true";
 		magazines[]=
 		{
 			"MET_FHR1_mag"
@@ -2412,7 +2412,7 @@ class CfgWeapons
 		descriptionShort="$STR_JLTS_descs_BlasterScatter";
 		picture="\MRC\JLTS\weapons\SBB3\data\ui\SBB3_ui_ca.paa";
 		model="\MRC\JLTS\weapons\SBB3\SBB3.p3d";
-		//WBK_UseHeavyWeaponFramework = true;	
+		//WBK_UseHeavyWeaponFramework = "true";	
 		hiddenSelections[]=
 		{
 			"camo1",
