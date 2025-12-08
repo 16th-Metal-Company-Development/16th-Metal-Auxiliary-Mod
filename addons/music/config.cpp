@@ -35,6 +35,6 @@ class CfgMusicClasses
 	};
 	class Fallout
 	{
-		displayName = "[16th] Fallout"
+		displayName = "[16th] Fallout";
 	};
 };
