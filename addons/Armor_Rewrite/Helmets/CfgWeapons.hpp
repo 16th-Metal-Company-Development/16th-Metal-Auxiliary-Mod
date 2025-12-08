@@ -678,7 +678,7 @@ class MET_Helmet_Trooper_BARC : JLTS_CloneHelmetBARC
 };
 class MET_Helmet_Trooper_RTO : LST_Clone_Heavy_P2_Helmet
 {
-	scope = 2;
+	scope = 1;
 	displayName = "[16th] RTO Helmet";
 	hiddenSelections[] =
 	{

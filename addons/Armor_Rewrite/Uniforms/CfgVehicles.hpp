@@ -48,8 +48,8 @@ class MET_Uniform_Trooper_Base : JLTS_Clone_P2_DC15A
 			armor = 1;
 			material = -1;
 			name = "neck";
-			passThrough = .2
-				radius = 0.1;
+			passThrough = 0.2;
+			radius = 0.1;
 			explosionShielding = 0.5;
 			minimalHit = 0.0099999998;
 		};
@@ -58,8 +58,8 @@ class MET_Uniform_Trooper_Base : JLTS_Clone_P2_DC15A
 			armor = 1;
 			material = -1;
 			name = "head";
-			passThrough = .2
-				radius = 0.2;
+			passThrough = 0.2;
+			radius = 0.2;
 			explosionShielding = 0.5;
 			minimalHit = 0.0099999998;
 			depends = "HitFace max HitNeck";
@@ -69,8 +69,8 @@ class MET_Uniform_Trooper_Base : JLTS_Clone_P2_DC15A
 			armor = 6;
 			material = -1;
 			name = "pelvis";
-			passThrough = .2
-				radius = 0.23999999;
+			passThrough = 0.2;
+			radius = 0.23999999;
 			explosionShielding = 3;
 			visual = "injury_body";
 			minimalHit = 0.0099999998;
@@ -81,8 +81,8 @@ class MET_Uniform_Trooper_Base : JLTS_Clone_P2_DC15A
 			armor = 6;
 			material = -1;
 			name = "spine1";
-			passThrough = .2
-				radius = 0.16;
+			passThrough = 0.2;
+			radius = 0.16;
 			explosionShielding = 3;
 			visual = "injury_body";
 			minimalHit = 0.0099999998;
@@ -619,8 +619,8 @@ class MET_Uniform_Cold_Trooper_Base : JLTS_Clone_P2_DC15A
 			armor = 1;
 			material = -1;
 			name = "neck";
-			passThrough = .2
-				radius = 0.1;
+			passThrough = 0.2;
+			radius = 0.1;
 			explosionShielding = 0.5;
 			minimalHit = 0.0099999998;
 		};
@@ -629,8 +629,8 @@ class MET_Uniform_Cold_Trooper_Base : JLTS_Clone_P2_DC15A
 			armor = 1;
 			material = -1;
 			name = "head";
-			passThrough = .2
-				radius = 0.2;
+			passThrough = 0.2;
+			radius = 0.2;
 			explosionShielding = 0.5;
 			minimalHit = 0.0099999998;
 			depends = "HitFace max HitNeck";
@@ -640,8 +640,8 @@ class MET_Uniform_Cold_Trooper_Base : JLTS_Clone_P2_DC15A
 			armor = 6;
 			material = -1;
 			name = "pelvis";
-			passThrough = .2
-				radius = 0.23999999;
+			passThrough = 0.2;
+			radius = 0.23999999;
 			explosionShielding = 3;
 			visual = "injury_body";
 			minimalHit = 0.0099999998;
@@ -652,8 +652,8 @@ class MET_Uniform_Cold_Trooper_Base : JLTS_Clone_P2_DC15A
 			armor = 6;
 			material = -1;
 			name = "spine1";
-			passThrough = .2
-				radius = 0.16;
+			passThrough = 0.2;
+			radius = 0.16;
 			explosionShielding = 3;
 			visual = "injury_body";
 			minimalHit = 0.0099999998;
@@ -951,8 +951,8 @@ class MET_Uniform_Cold_NCO_Base : JLTS_Clone_P2_DC15A
 			armor = 1;
 			material = -1;
 			name = "neck";
-			passThrough = .2
-				radius = 0.1;
+			passThrough = 0.2;
+			radius = 0.1;
 			explosionShielding = 0.5;
 			minimalHit = 0.0099999998;
 		};
@@ -961,8 +961,8 @@ class MET_Uniform_Cold_NCO_Base : JLTS_Clone_P2_DC15A
 			armor = 1;
 			material = -1;
 			name = "head";
-			passThrough = .2
-				radius = 0.2;
+			passThrough = 0.2;
+			radius = 0.2;
 			explosionShielding = 0.5;
 			minimalHit = 0.0099999998;
 			depends = "HitFace max HitNeck";
@@ -972,8 +972,8 @@ class MET_Uniform_Cold_NCO_Base : JLTS_Clone_P2_DC15A
 			armor = 6;
 			material = -1;
 			name = "pelvis";
-			passThrough = .2
-				radius = 0.23999999;
+			passThrough = 0.2;
+			radius = 0.23999999;
 			explosionShielding = 3;
 			visual = "injury_body";
 			minimalHit = 0.0099999998;
@@ -984,8 +984,8 @@ class MET_Uniform_Cold_NCO_Base : JLTS_Clone_P2_DC15A
 			armor = 6;
 			material = -1;
 			name = "spine1";
-			passThrough = .2
-				radius = 0.16;
+			passThrough = 0.2;
+			radius = 0.16;
 			explosionShielding = 3;
 			visual = "injury_body";
 			minimalHit = 0.0099999998;
@@ -1283,8 +1283,8 @@ class MET_Uniform_Cold_Officer_Base : JLTS_Clone_P2_DC15A
 			armor = 1;
 			material = -1;
 			name = "neck";
-			passThrough = .2
-				radius = 0.1;
+			passThrough = 0.2;
+			radius = 0.1;
 			explosionShielding = 0.5;
 			minimalHit = 0.0099999998;
 		};
@@ -1293,8 +1293,8 @@ class MET_Uniform_Cold_Officer_Base : JLTS_Clone_P2_DC15A
 			armor = 1;
 			material = -1;
 			name = "head";
-			passThrough = .2
-				radius = 0.2;
+			passThrough = 0.2;
+			radius = 0.2;
 			explosionShielding = 0.5;
 			minimalHit = 0.0099999998;
 			depends = "HitFace max HitNeck";
@@ -1304,8 +1304,8 @@ class MET_Uniform_Cold_Officer_Base : JLTS_Clone_P2_DC15A
 			armor = 6;
 			material = -1;
 			name = "pelvis";
-			passThrough = .2
-				radius = 0.23999999;
+			passThrough = 0.2;
+			radius = 0.23999999;
 			explosionShielding = 3;
 			visual = "injury_body";
 			minimalHit = 0.0099999998;
@@ -1316,8 +1316,8 @@ class MET_Uniform_Cold_Officer_Base : JLTS_Clone_P2_DC15A
 			armor = 6;
 			material = -1;
 			name = "spine1";
-			passThrough = .2
-				radius = 0.16;
+			passThrough = 0.2;
+			radius = 0.16;
 			explosionShielding = 3;
 			visual = "injury_body";
 			minimalHit = 0.0099999998;
@@ -1615,8 +1615,8 @@ class MET_Uniform_Cold_Medic_Base : JLTS_Clone_P2_DC15A
 			armor = 1;
 			material = -1;
 			name = "neck";
-			passThrough = .2
-				radius = 0.1;
+			passThrough = 0.2;
+			radius = 0.1;
 			explosionShielding = 0.5;
 			minimalHit = 0.0099999998;
 		};
@@ -1625,8 +1625,8 @@ class MET_Uniform_Cold_Medic_Base : JLTS_Clone_P2_DC15A
 			armor = 1;
 			material = -1;
 			name = "head";
-			passThrough = .2
-				radius = 0.2;
+			passThrough = 0.2;
+			radius = 0.2;
 			explosionShielding = 0.5;
 			minimalHit = 0.0099999998;
 			depends = "HitFace max HitNeck";
@@ -1636,8 +1636,8 @@ class MET_Uniform_Cold_Medic_Base : JLTS_Clone_P2_DC15A
 			armor = 6;
 			material = -1;
 			name = "pelvis";
-			passThrough = .2
-				radius = 0.23999999;
+			passThrough = 0.2;
+			radius = 0.23999999;
 			explosionShielding = 3;
 			visual = "injury_body";
 			minimalHit = 0.0099999998;
@@ -1648,8 +1648,8 @@ class MET_Uniform_Cold_Medic_Base : JLTS_Clone_P2_DC15A
 			armor = 6;
 			material = -1;
 			name = "spine1";
-			passThrough = .2
-				radius = 0.16;
+			passThrough = 0.2;
+			radius = 0.16;
 			explosionShielding = 3;
 			visual = "injury_body";
 			minimalHit = 0.0099999998;
@@ -1947,8 +1947,8 @@ class MET_Uniform_Cold_EOD_Base : JLTS_Clone_P2_DC15A
 			armor = 1;
 			material = -1;
 			name = "neck";
-			passThrough = .2
-				radius = 0.1;
+			passThrough = 0.2;
+			radius = 0.1;
 			explosionShielding = 0.5;
 			minimalHit = 0.0099999998;
 		};
@@ -1957,8 +1957,8 @@ class MET_Uniform_Cold_EOD_Base : JLTS_Clone_P2_DC15A
 			armor = 1;
 			material = -1;
 			name = "head";
-			passThrough = .2
-				radius = 0.2;
+			passThrough = 0.2;
+			radius = 0.2;
 			explosionShielding = 0.5;
 			minimalHit = 0.0099999998;
 			depends = "HitFace max HitNeck";
@@ -1968,8 +1968,8 @@ class MET_Uniform_Cold_EOD_Base : JLTS_Clone_P2_DC15A
 			armor = 6;
 			material = -1;
 			name = "pelvis";
-			passThrough = .2
-				radius = 0.23999999;
+			passThrough = 0.2;
+			radius = 0.23999999;
 			explosionShielding = 3;
 			visual = "injury_body";
 			minimalHit = 0.0099999998;
@@ -1980,8 +1980,8 @@ class MET_Uniform_Cold_EOD_Base : JLTS_Clone_P2_DC15A
 			armor = 6;
 			material = -1;
 			name = "spine1";
-			passThrough = .2
-				radius = 0.16;
+			passThrough = 0.2;
+			radius = 0.16;
 			explosionShielding = 3;
 			visual = "injury_body";
 			minimalHit = 0.0099999998;
@@ -2141,7 +2141,7 @@ class MET_Uniform_Cold_EOD_Base : JLTS_Clone_P2_DC15A
 			"A3\Characters_F_Exp\Heads\Data\hl_asian_02_bald_muscular_injury.rvmat"
 		};
 	};
-};	
+};
 
 // Airborne
 class MET_Uniform_Airborne_Trooper_Base : MET_Uniform_Trooper_Base
@@ -3156,7 +3156,7 @@ class MET_Uniform_Trooper_Merlin_Base : MET_Uniform_Trooper_Base
 		"ItemWatch",
 		"JLTS_CloneNVG"
 	};
-};	
+};
 
 // Misc
 class MET_Uniform_Marshal_Avalanche_Base : JLTS_Clone_P2_marshalcommander
