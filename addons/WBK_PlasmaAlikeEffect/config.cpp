@@ -150,7 +150,7 @@ class Extended_Killed_Eventhandlers
 		class WBK_PlasmaDamage_Death
 		{
 			onRespawn="true";
-			killed="_target = _this select 0; _killer = _this select 1; if ((_target != _killer) && (local _target) && (((currentWeapon _killer) in WBK_PlasmaKill_Weapons) || (getText (configFile >> 'CfgWeapons' >> currentWeapon _killer >> 'WBK_UseDisintegrate') != '') || (getText (configFile >> 'CfgMagazines' >> currentMagazine _killer >> 'WBK_UseDisintegrate') != '') || (getText (configFile >> 'CfgAmmo' >> getText (configFile >> 'CfgMagazines' >> currentMagazine _killer >> 'ammo') >> 'WBK_UseDisintegrate') != ''))) then {WBK_PlasmaKill_Color_String_Int = getText (configFile >> 'CfgMagazines' >> currentMagazine _killer >> 'WBK_PlasmaKill_Color_String_Int'); [_target,_killer] remoteExec ['WBK_PlasmaDeath_Regular',0];};"
+			killed = "_target = _this select 0; _killer = _this select 1; if ((_target != _killer) && (local _target) && (((currentWeapon _killer) in WBK_PlasmaKill_Weapons) || (getText (configFile >> 'CfgWeapons' >> currentWeapon _killer >> 'WBK_UseDisintegrate') != '') || (getText (configFile >> 'CfgMagazines' >> currentMagazine _killer >> 'WBK_UseDisintegrate') != '') || (getText (configFile >> 'CfgAmmo' >> getText (configFile >> 'CfgMagazines' >> currentMagazine _killer >> 'ammo') >> 'WBK_UseDisintegrate') != ''))) then {WBK_PlasmaKill_Color_String_Int = getText (configFile >> 'CfgMagazines' >> currentMagazine _killer >> 'WBK_PlasmaKill_Color_String_Int'); [_target,_killer] remoteExec ['WBK_PlasmaDeath_Regular',0];};";
 		};
 		class WBK_MeltaDamage_Death
 		{
