@@ -3595,10 +3595,12 @@ class CfgWeapons
 			midRangeProbab=0;
 			maxRangeProbab=0;
 		};
-		class close: MediumAuto
+		class close
 		{
 			reloadTime=0.03;
 			burst=26;
+			dispersion = 0.00079;
+			textureType = "fullAuto";
 			aiRateOfFire=0.5;
 			minRange=100;
 			minRangeProbab=0.3;
@@ -3829,9 +3831,11 @@ class CfgWeapons
 			midRangeProbab=0;
 			maxRangeProbab=0;
 		};
-		class close: MediumAuto
+		class close
 		{
 			reloadTime=0.03;
+			dispersion = 0.00079;
+			textureType = "fullAuto";
 			burst=26;
 			aiRateOfFire=0.5;
 			minRange=100;
