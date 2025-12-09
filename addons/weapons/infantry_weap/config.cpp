@@ -3042,10 +3042,6 @@ class CfgWeapons
 	/*==============================================================================
 	==T-15 Heavy Repeating Blaster
 	==============================================================================*/
-	class IDA_T15
-	{
-		class WeaponSlotsInfo;
-	};
 	class IDA_Stun_Muzzle;
 	class MET_T15: arifle_MX_Base_F
 	{

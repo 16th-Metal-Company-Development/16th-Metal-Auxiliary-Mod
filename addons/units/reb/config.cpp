@@ -2,10 +2,10 @@ class cfgPatches
 {
 	class MET_REB_Faction
 	{
-		units[] = { "MET_REB_Rifleman_E5","MET_REB_Rifleman_DC15S","MET_REB_Autorifleman_DC15L","MET_REB_Autorifleman_E5C","MET_REB_Marksman_DC15X","MET_REB_Marksman_E5S","MET_REB_Grenadier","MET_REB_Light_Antitank","MET_REB_Crewman","MET_REB_PX_10" };
+		units[] = { "MET_REB_Rifleman_1 ","MET_REB_Rifleman_2","MET_REB_Autorifleman_1","MET_REB_Autorifleman_2","MET_REB_Marksman_1","MET_REB_Marksman_2","MET_REB_Grenadier","MET_REB_Light_Antitank","MET_REB_Crewman","MET_REB_PX_10" };
 		weapons[] = { "MET_REB_Pathfinder", "MET_REB_Pathfinder_R", "MET_REB_Pathfinder_Brown", "MET_REB_Pathfinder_Brown_R", "MET_REB_Pathfinder_Navy", "MET_REB_Pathfinder_Navy_R", "MET_REB_Pathfinder_Navy_Alt", "MET_REB_Pathfinder_Navy_Alt_R" };
 		requiredVersion = 0.1;
-		requiredAddons[] = { "ace_flashlights","ace_maptools","LF_Medicial_Pack","ace_medical_treatment","A3_Weapons_F","ls_radios","cTab","212th_Equipment","3AS_Weapons_E5","ls_characters","A3_Characters_F","jmm_miscUnitsV2","3AS_Weapons_Republic_DC15L","JLTS_weapons_E5C","3AS_Weapons_Republic_DC15X","A3_Characters_F_Orange_Headgear","3AS_Weapons_E5S","ls_characters_imperial","3AS_Weapons_Republic_DC15S","A3_expEden_Characters_Vests","3AS_Weapons_Republic_DC17S" };
+		requiredAddons[] = {  };
 	};
 };
 
@@ -72,6 +72,7 @@ class cfgVehicles
 		linkedItems[] = {};		// Which items the character has.
 		respawnLinkedItems[] = {};	// Which items the character respawns with.
 	};
+
 
 	// Uniform Fixes
 	class MET_REB_Pathfinder_Base : MET_REB_Man_Base	// Define of a new class, which parameters are inherited from B_Soldier_base_F, with exception of those defined below.
@@ -198,8 +199,9 @@ class cfgVehicles
 		};
 	};
 
+
 	// Units
-	class MET_REB_Rifleman_E5 : MET_REB_Pathfinder_Navy_Base
+	class MET_REB_Rifleman_1 : MET_REB_Pathfinder_Navy_Base
 	{
 		scope = 2;
 		scopeCurator = 2;
@@ -208,59 +210,38 @@ class cfgVehicles
 		side = 0;
 		displayName = "Rifleman (E5)";
 		editorSubcategory = "MET_REB_Infantry";
-		weapons[] = { "212th_RangeFinder_Unmarked","3AS_E5_F","Put","Throw" };
-		respawnWeapons[] = { "212th_RangeFinder_Unmarked","3AS_E5_F","Put","Throw" };
+		weapons[] = { "212th_RangeFinder_Unmarked","Metal_E5","Put","Throw" };
+		respawnWeapons[] = { "212th_RangeFinder_Unmarked","Metal_E5","Put","Throw" };
 		items[] = { "ACE_Flashlight_XL50","ACE_MapTools","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","kat_chestSeal","kat_chestSeal","kat_larynx","LFP_item_injector_red","LFP_item_injector_red","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_splint","ACE_splint","ACE_plasmaIV_500" };
 		respawnItems[] = { "ACE_Flashlight_XL50","ACE_MapTools","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","kat_chestSeal","kat_chestSeal","kat_larynx","LFP_item_injector_red","LFP_item_injector_red","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_splint","ACE_splint","ACE_plasmaIV_500" };
-		magazines[] = { "MET_Weapons_Mags_Thermal_Detonator","MET_Weapons_Mags_Thermal_Detonator","MET_Smoke_White","MET_Smoke_White","ACE_painkillers","3AS_60Rnd_EM50_RedPlasma","3AS_60Rnd_EM50_RedPlasma","3AS_60Rnd_EM50_RedPlasma","3AS_60Rnd_EM50_RedPlasma","3AS_60Rnd_EM50_RedPlasma","3AS_60Rnd_EM50_RedPlasma","3AS_60Rnd_EM50_RedPlasma","3AS_60Rnd_EM50_RedPlasma" };
-		respawnMagazines[] = { "MET_Weapons_Mags_Thermal_Detonator","MET_Weapons_Mags_Thermal_Detonator","MET_Smoke_White","MET_Smoke_White","ACE_painkillers","3AS_60Rnd_EM50_RedPlasma","3AS_60Rnd_EM50_RedPlasma","3AS_60Rnd_EM50_RedPlasma","3AS_60Rnd_EM50_RedPlasma","3AS_60Rnd_EM50_RedPlasma","3AS_60Rnd_EM50_RedPlasma","3AS_60Rnd_EM50_RedPlasma","3AS_60Rnd_EM50_RedPlasma" };
+		magazines[] = { "MET_Weapons_Mags_Thermal_Detonator","MET_Weapons_Mags_Thermal_Detonator","MET_Smoke_White","MET_Smoke_White","ACE_painkillers","Metal_E5_Mag","Metal_E5_Mag","Metal_E5_Mag","Metal_E5_Mag","Metal_E5_Mag","Metal_E5_Mag","Metal_E5_Mag","Metal_E5_Mag" };
+		respawnMagazines[] = { "MET_Weapons_Mags_Thermal_Detonator","MET_Weapons_Mags_Thermal_Detonator","MET_Smoke_White","MET_Smoke_White","ACE_painkillers","Metal_E5_Mag","Metal_E5_Mag","Metal_E5_Mag","Metal_E5_Mag","Metal_E5_Mag","Metal_E5_Mag","Metal_E5_Mag","Metal_E5_Mag" };
 		linkedItems[] = { "ItemMap","ItemCompass","ItemWatch","ls_radios_hush98_aurebesh","ItemMicroDAGR","ls_nvg_goggles","212th_RangeFinder_Unmarked","ls_helmet_jockey_navy_alt","ls_vest_flakJacket_pouchesAlt","ls_rebel_chestPouches","ls_nvg_goggles" };
 		respawnLinkedItems[] = { "ItemMap","ItemCompass","ItemWatch","ls_radios_hush98_aurebesh","ItemMicroDAGR","ls_nvg_goggles","212th_RangeFinder_Unmarked","ls_helmet_jockey_navy_alt","ls_vest_flakJacket_pouchesAlt","ls_rebel_chestPouches","ls_nvg_goggles" };
 		backpack = "B_AssaultPack_blk";
 	};
 
-	class MET_REB_Rifleman_DC15S : MET_REB_Pathfinder_Base
+	class MET_REB_Rifleman_2 : MET_REB_Pathfinder_Base
 	{
 		scope = 2;
 		scopeCurator = 2;
 		scopeArsenal = 2;
 		faction = "MET_REB";
 		side = 0;
-		displayName = "Rifleman (DC15S)";
+		displayName = "Rifleman (SPK-12)";
 		editorSubcategory = "MET_REB_Infantry";
-		weapons[] = { "212th_RangeFinder_Unmarked","3AS_DC15S_F","Put","Throw" };
-		respawnWeapons[] = { "212th_RangeFinder_Unmarked","3AS_DC15S_F","Put","Throw" };
+		weapons[] = { "212th_RangeFinder_Unmarked","IDA_SPK12","Put","Throw" };
+		respawnWeapons[] = { "212th_RangeFinder_Unmarked","IDA_SPK12","Put","Throw" };
 		items[] = { "ACE_Flashlight_XL50","ACE_MapTools","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","kat_chestSeal","kat_chestSeal","kat_larynx","LFP_item_injector_red","LFP_item_injector_red","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_splint","ACE_splint","ACE_plasmaIV_500" };
 		respawnItems[] = { "ACE_Flashlight_XL50","ACE_MapTools","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","kat_chestSeal","kat_chestSeal","kat_larynx","LFP_item_injector_red","LFP_item_injector_red","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_splint","ACE_splint","ACE_plasmaIV_500" };
-		magazines[] = { "MET_Weapons_Mags_Thermal_Detonator","MET_Weapons_Mags_Thermal_Detonator","MET_Smoke_White","MET_Smoke_White","ACE_painkillers","3AS_60Rnd_EM30_mag","3AS_60Rnd_EM30_mag","3AS_60Rnd_EM30_mag","3AS_60Rnd_EM30_mag","3AS_60Rnd_EM30_mag","3AS_60Rnd_EM30_mag","3AS_60Rnd_EM30_mag","3AS_60Rnd_EM30_mag","3AS_60Rnd_EM30_mag","3AS_60Rnd_EM30_mag" };
-		respawnMagazines[] = { "MET_Weapons_Mags_Thermal_Detonator","MET_Weapons_Mags_Thermal_Detonator","MET_Smoke_White","MET_Smoke_White","ACE_painkillers","3AS_60Rnd_EM30_mag","3AS_60Rnd_EM30_mag","3AS_60Rnd_EM30_mag","3AS_60Rnd_EM30_mag","3AS_60Rnd_EM30_mag","3AS_60Rnd_EM30_mag","3AS_60Rnd_EM30_mag","3AS_60Rnd_EM30_mag","3AS_60Rnd_EM30_mag","3AS_60Rnd_EM30_mag" };
+		magazines[] = { "MET_Weapons_Mags_Thermal_Detonator","MET_Weapons_Mags_Thermal_Detonator","MET_Smoke_White","MET_Smoke_White","ACE_painkillers","IDA_Blaster_Cell_Power3_60Rnd_Red","IDA_Blaster_Cell_Power3_60Rnd_Red","IDA_Blaster_Cell_Power3_60Rnd_Red","IDA_Blaster_Cell_Power3_60Rnd_Red","IDA_Blaster_Cell_Power3_60Rnd_Red","IDA_Blaster_Cell_Power3_60Rnd_Red","IDA_Blaster_Cell_Power3_60Rnd_Red","IDA_Blaster_Cell_Power3_60Rnd_Red","IDA_Blaster_Cell_Power3_60Rnd_Red","IDA_Blaster_Cell_Power3_60Rnd_Red" };
+		respawnMagazines[] = { "MET_Weapons_Mags_Thermal_Detonator","MET_Weapons_Mags_Thermal_Detonator","MET_Smoke_White","MET_Smoke_White","ACE_painkillers","IDA_Blaster_Cell_Power3_60Rnd_Red","IDA_Blaster_Cell_Power3_60Rnd_Red","IDA_Blaster_Cell_Power3_60Rnd_Red","IDA_Blaster_Cell_Power3_60Rnd_Red","IDA_Blaster_Cell_Power3_60Rnd_Red","IDA_Blaster_Cell_Power3_60Rnd_Red","IDA_Blaster_Cell_Power3_60Rnd_Red","IDA_Blaster_Cell_Power3_60Rnd_Red","IDA_Blaster_Cell_Power3_60Rnd_Red","IDA_Blaster_Cell_Power3_60Rnd_Red" };
 		linkedItems[] = { "ItemMap","ItemCompass","ItemWatch","ls_radios_hush98_aurebesh","ItemMicroDAGR","ls_nvg_goggles","212th_RangeFinder_Unmarked","ls_helmet_jockey_alt","ls_vest_flakJacket_pouches_brown","ls_rebel_chestPouches","ls_nvg_goggles" };
 		respawnLinkedItems[] = { "ItemMap","ItemCompass","ItemWatch","ls_radios_hush98_aurebesh","ItemMicroDAGR","ls_nvg_goggles","212th_RangeFinder_Unmarked","ls_helmet_jockey_alt","ls_vest_flakJacket_pouches_brown","ls_rebel_chestPouches","ls_nvg_goggles" };
 		backpack = "B_AssaultPack_cbr";
 	};
 
-	class MET_REB_Autorifleman_DC15L : MET_REB_Pathfinder_Brown_Base_R
-	{
-		scope = 2;
-		scopeCurator = 2;
-		scopeArsenal = 2;
-		faction = "MET_REB";
-		side = 0;
-		displayName = "Autorifleman (DC15L)";
-		editorSubcategory = "MET_REB_Infantry";
-		icon = "iconManMG";
-		weapons[] = { "212th_RangeFinder_Unmarked","MET_MLA_DC15L","Put","Throw" };
-		respawnWeapons[] = { "212th_RangeFinder_Unmarked","MET_MLA_DC15L","Put","Throw" };
-		items[] = { "ACE_Flashlight_XL50","ACE_MapTools","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","kat_chestSeal","kat_chestSeal","kat_larynx","LFP_item_injector_red","LFP_item_injector_red","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_splint","ACE_splint","ACE_plasmaIV_500" };
-		respawnItems[] = { "ACE_Flashlight_XL50","ACE_MapTools","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","kat_chestSeal","kat_chestSeal","kat_larynx","LFP_item_injector_red","LFP_item_injector_red","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_splint","ACE_splint","ACE_plasmaIV_500" };
-		magazines[] = { "MET_Weapons_Mags_Thermal_Detonator","MET_Weapons_Mags_Thermal_Detonator","MET_Smoke_White","MET_Smoke_White","ACE_painkillers","3AS_200Rnd_EM40_Mag","3AS_200Rnd_EM40_Mag","3AS_200Rnd_EM40_Mag","3AS_200Rnd_EM40_Mag" };
-		respawnMagazines[] = { "MET_Weapons_Mags_Thermal_Detonator","MET_Weapons_Mags_Thermal_Detonator","MET_Smoke_White","MET_Smoke_White","ACE_painkillers","3AS_200Rnd_EM40_Mag","3AS_200Rnd_EM40_Mag","3AS_200Rnd_EM40_Mag","3AS_200Rnd_EM40_Mag" };
-		linkedItems[] = { "ItemMap","ItemCompass","ItemWatch","ls_radios_hush98_aurebesh","ItemMicroDAGR","ls_nvg_goggles","212th_RangeFinder_Unmarked","ls_helmet_m1","ls_vest_flakJacket_open","ls_glasses_coif","ls_nvg_goggles" };
-		respawnLinkedItems[] = { "ItemMap","ItemCompass","ItemWatch","ls_radios_hush98_aurebesh","ItemMicroDAGR","ls_nvg_goggles","212th_RangeFinder_Unmarked","ls_helmet_m1","ls_vest_flakJacket_open","ls_glasses_coif","ls_nvg_goggles" };
-		backpack = "MET_REB_Autorifleman_DC15L_pack";
-	};
-
-	class MET_REB_Autorifleman_E5C : MET_REB_Pathfinder_Navy_Alt_Base
+	class MET_REB_Autorifleman_1 : MET_REB_Pathfinder_Navy_Alt_Base
 	{
 		scope = 2;
 		scopeCurator = 2;
@@ -270,38 +251,39 @@ class cfgVehicles
 		displayName = "Autorifleman (E5C)";
 		icon = "iconManMG";
 		editorSubcategory = "MET_REB_Infantry";
-		weapons[] = { "212th_RangeFinder_Unmarked","E5C_F","Put","Throw" };
-		respawnWeapons[] = { "212th_RangeFinder_Unmarked","E5C_F","Put","Throw" };
+		weapons[] = { "212th_RangeFinder_Unmarked","Metal_E5C_stock","Put","Throw" };
+		respawnWeapons[] = { "212th_RangeFinder_Unmarked","Metal_E5C_stock","Put","Throw" };
 		items[] = { "ACE_Flashlight_XL50","ACE_MapTools","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","kat_chestSeal","kat_chestSeal","kat_larynx","LFP_item_injector_red","LFP_item_injector_red","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_splint","ACE_splint","ACE_plasmaIV_500" };
 		respawnItems[] = { "ACE_Flashlight_XL50","ACE_MapTools","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","kat_chestSeal","kat_chestSeal","kat_larynx","LFP_item_injector_red","LFP_item_injector_red","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_splint","ACE_splint","ACE_plasmaIV_500" };
-		magazines[] = { "MET_Weapons_Mags_Thermal_Detonator","MET_Weapons_Mags_Thermal_Detonator","MET_Smoke_White","MET_Smoke_White","ACE_painkillers","3AS_130Rnd_EM50_RedPlasma","3AS_130Rnd_EM50_RedPlasma","3AS_130Rnd_EM50_RedPlasma","3AS_130Rnd_EM50_RedPlasma","3AS_130Rnd_EM50_RedPlasma","3AS_130Rnd_EM50_RedPlasma" };
-		respawnMagazines[] = { "MET_Weapons_Mags_Thermal_Detonator","MET_Weapons_Mags_Thermal_Detonator","MET_Smoke_White","MET_Smoke_White","ACE_painkillers","3AS_130Rnd_EM50_RedPlasma","3AS_130Rnd_EM50_RedPlasma","3AS_130Rnd_EM50_RedPlasma","3AS_130Rnd_EM50_RedPlasma","3AS_130Rnd_EM50_RedPlasma","3AS_130Rnd_EM50_RedPlasma" };
+		magazines[] = { "MET_Weapons_Mags_Thermal_Detonator","MET_Weapons_Mags_Thermal_Detonator","MET_Smoke_White","MET_Smoke_White","ACE_painkillers","Metal_E5C_Mag","Metal_E5C_Mag","Metal_E5C_Mag","Metal_E5C_Mag","Metal_E5C_Mag","Metal_E5C_Mag" };
+		respawnMagazines[] = { "MET_Weapons_Mags_Thermal_Detonator","MET_Weapons_Mags_Thermal_Detonator","MET_Smoke_White","MET_Smoke_White","ACE_painkillers","Metal_E5C_Mag","Metal_E5C_Mag","Metal_E5C_Mag","Metal_E5C_Mag","Metal_E5C_Mag","Metal_E5C_Mag" };
 		linkedItems[] = { "ItemMap","ItemCompass","ItemWatch","ls_radios_hush98_aurebesh","ItemMicroDAGR","ls_nvg_goggles","212th_RangeFinder_Unmarked","ls_helmet_m1_light","ls_vest_flakJacket_pouchesAlt_brown","ls_imperial_satchel","ls_nvg_goggles" };
 		respawnLinkedItems[] = { "ItemMap","ItemCompass","ItemWatch","ls_radios_hush98_aurebesh","ItemMicroDAGR","ls_nvg_goggles","212th_RangeFinder_Unmarked","ls_helmet_m1_light","ls_vest_flakJacket_pouchesAlt_brown","ls_imperial_satchel","ls_nvg_goggles" };
-		backpack = "MET_REB_Autorifleman_E5C_pack";
+		backpack = "MET_REB_Autorifleman_1_pack";
 	};
 
-	class MET_REB_Marksman_DC15X : MET_REB_Pathfinder_Base_R
+	class MET_REB_Autorifleman_2 : MET_REB_Pathfinder_Brown_Base_R
 	{
 		scope = 2;
 		scopeCurator = 2;
 		scopeArsenal = 2;
 		faction = "MET_REB";
 		side = 0;
-		displayName = "Marksman (DC15X)";
+		displayName = "Autorifleman (T-15)";
 		editorSubcategory = "MET_REB_Infantry";
-		weapons[] = { "212th_RangeFinder_Unmarked","MET_MLA_DC15X","Put","Throw" };
-		respawnWeapons[] = { "212th_RangeFinder_Unmarked","MET_MLA_DC15X","Put","Throw" };
+		icon = "iconManMG";
+		weapons[] = { "212th_RangeFinder_Unmarked","IDA_T15","Put","Throw" };
+		respawnWeapons[] = { "212th_RangeFinder_Unmarked","IDA_T15","Put","Throw" };
 		items[] = { "ACE_Flashlight_XL50","ACE_MapTools","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","kat_chestSeal","kat_chestSeal","kat_larynx","LFP_item_injector_red","LFP_item_injector_red","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_splint","ACE_splint","ACE_plasmaIV_500" };
 		respawnItems[] = { "ACE_Flashlight_XL50","ACE_MapTools","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","kat_chestSeal","kat_chestSeal","kat_larynx","LFP_item_injector_red","LFP_item_injector_red","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_splint","ACE_splint","ACE_plasmaIV_500" };
-		magazines[] = { "MET_Weapons_Mags_Thermal_Detonator","MET_Weapons_Mags_Thermal_Detonator","MET_Smoke_White","MET_Smoke_White","ACE_painkillers","3AS_10Rnd_EM100_Mag","3AS_10Rnd_EM100_Mag","3AS_10Rnd_EM100_Mag","3AS_10Rnd_EM100_Mag","3AS_10Rnd_EM100_Mag","3AS_10Rnd_EM100_Mag","3AS_10Rnd_EM100_Mag","3AS_10Rnd_EM100_Mag" };
-		respawnMagazines[] = { "MET_Weapons_Mags_Thermal_Detonator","MET_Weapons_Mags_Thermal_Detonator","MET_Smoke_White","MET_Smoke_White","ACE_painkillers","3AS_10Rnd_EM100_Mag","3AS_10Rnd_EM100_Mag","3AS_10Rnd_EM100_Mag","3AS_10Rnd_EM100_Mag","3AS_10Rnd_EM100_Mag","3AS_10Rnd_EM100_Mag","3AS_10Rnd_EM100_Mag","3AS_10Rnd_EM100_Mag" };
-		linkedItems[] = { "ItemMap","ItemCompass","ItemWatch","ls_radios_hush98_aurebesh","ItemMicroDAGR","ls_nvg_goggles","212th_RangeFinder_Unmarked","H_PASGT_basic_black_F","ls_vest_flakJacket_open","ls_glasses_coif","ls_nvg_goggles" };
-		respawnLinkedItems[] = { "ItemMap","ItemCompass","ItemWatch","ls_radios_hush98_aurebesh","ItemMicroDAGR","ls_nvg_goggles","212th_RangeFinder_Unmarked","H_PASGT_basic_black_F","ls_vest_flakJacket_open","ls_glasses_coif","ls_nvg_goggles" };
-		backpack = "JMM_B_TacBelt_blk";
-	};
+		magazines[] = { "MET_Weapons_Mags_Thermal_Detonator","MET_Weapons_Mags_Thermal_Detonator","MET_Smoke_White","MET_Smoke_White","ACE_painkillers","IDA_Blaster_Cell_Power2_100Rnd_Blue","IDA_Blaster_Cell_Power2_100Rnd_Blue","IDA_Blaster_Cell_Power2_100Rnd_Blue","IDA_Blaster_Cell_Power2_100Rnd_Blue" };
+		respawnMagazines[] = { "MET_Weapons_Mags_Thermal_Detonator","MET_Weapons_Mags_Thermal_Detonator","MET_Smoke_White","MET_Smoke_White","ACE_painkillers","IDA_Blaster_Cell_Power2_100Rnd_Blue","IDA_Blaster_Cell_Power2_100Rnd_Blue","IDA_Blaster_Cell_Power2_100Rnd_Blue","IDA_Blaster_Cell_Power2_100Rnd_Blue" };
+		linkedItems[] = { "ItemMap","ItemCompass","ItemWatch","ls_radios_hush98_aurebesh","ItemMicroDAGR","ls_nvg_goggles","212th_RangeFinder_Unmarked","ls_helmet_m1","ls_vest_flakJacket_open","ls_glasses_coif","ls_nvg_goggles" };
+		respawnLinkedItems[] = { "ItemMap","ItemCompass","ItemWatch","ls_radios_hush98_aurebesh","ItemMicroDAGR","ls_nvg_goggles","212th_RangeFinder_Unmarked","ls_helmet_m1","ls_vest_flakJacket_open","ls_glasses_coif","ls_nvg_goggles" };
+		backpack = "MET_REB_Autorifleman_2_pack";
+	};	
 
-	class MET_REB_Marksman_E5S : MET_REB_Man_Base
+	class MET_REB_Marksman_1 : MET_REB_Man_Base
 	{
 		scope = 2;
 		scopeCurator = 2;
@@ -311,14 +293,34 @@ class cfgVehicles
 		displayName = "Marksman (E5S)";
 		editorSubcategory = "MET_REB_Infantry";
 		uniformClass = "ls_imperialUniform_army_armored_black";
-		weapons[] = { "212th_RangeFinder_Unmarked","3AS_E5S_F","Put","Throw" };
-		respawnWeapons[] = { "212th_RangeFinder_Unmarked","3AS_E5S_F","Put","Throw" };
+		weapons[] = { "212th_RangeFinder_Unmarked","Metal_E5S","Put","Throw" };
+		respawnWeapons[] = { "212th_RangeFinder_Unmarked","Metal_E5S","Put","Throw" };
 		items[] = { "ACE_Flashlight_XL50","ACE_MapTools","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","kat_chestSeal","kat_chestSeal","kat_larynx","LFP_item_injector_red","LFP_item_injector_red","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_splint","ACE_splint","ACE_plasmaIV_500" };
 		respawnItems[] = { "ACE_Flashlight_XL50","ACE_MapTools","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","kat_chestSeal","kat_chestSeal","kat_larynx","LFP_item_injector_red","LFP_item_injector_red","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_splint","ACE_splint","ACE_plasmaIV_500" };
-		magazines[] = { "MET_Weapons_Mags_Thermal_Detonator","MET_Weapons_Mags_Thermal_Detonator","MET_Smoke_White","MET_Smoke_White","ACE_painkillers","3AS_10Rnd_EM90_Mag","3AS_10Rnd_EM90_Mag","3AS_10Rnd_EM90_Mag","3AS_10Rnd_EM90_Mag","3AS_10Rnd_EM90_Mag","3AS_10Rnd_EM90_Mag","3AS_10Rnd_EM90_Mag","3AS_10Rnd_EM90_Mag" };
-		respawnMagazines[] = { "MET_Weapons_Mags_Thermal_Detonator","MET_Weapons_Mags_Thermal_Detonator","MET_Smoke_White","MET_Smoke_White","ACE_painkillers","3AS_10Rnd_EM90_Mag","3AS_10Rnd_EM90_Mag","3AS_10Rnd_EM90_Mag","3AS_10Rnd_EM90_Mag","3AS_10Rnd_EM90_Mag","3AS_10Rnd_EM90_Mag","3AS_10Rnd_EM90_Mag","3AS_10Rnd_EM90_Mag" };
+		magazines[] = { "MET_Weapons_Mags_Thermal_Detonator","MET_Weapons_Mags_Thermal_Detonator","MET_Smoke_White","MET_Smoke_White","ACE_painkillers","Metal_E5S_Mag","Metal_E5S_Mag","Metal_E5S_Mag","Metal_E5S_Mag","Metal_E5S_Mag","Metal_E5S_Mag","Metal_E5S_Mag","Metal_E5S_Mag" };
+		respawnMagazines[] = { "MET_Weapons_Mags_Thermal_Detonator","MET_Weapons_Mags_Thermal_Detonator","MET_Smoke_White","MET_Smoke_White","ACE_painkillers","Metal_E5S_Mag","Metal_E5S_Mag","Metal_E5S_Mag","Metal_E5S_Mag","Metal_E5S_Mag","Metal_E5S_Mag","Metal_E5S_Mag","Metal_E5S_Mag" };
 		linkedItems[] = { "ItemMap","ItemCompass","ItemWatch","ls_radios_hush98_aurebesh","ItemMicroDAGR","212th_RangeFinder_Unmarked","ls_vest_flakJacket_open","ls_glasses_coif" };
 		respawnLinkedItems[] = { "ItemMap","ItemCompass","ItemWatch","ls_radios_hush98_aurebesh","ItemMicroDAGR","212th_RangeFinder_Unmarked","ls_vest_flakJacket_open","ls_glasses_coif" };
+		backpack = "JMM_B_TacBelt_blk";
+	};
+
+	class MET_REB_Marksman_2 : MET_REB_Pathfinder_Base_R
+	{
+		scope = 2;
+		scopeCurator = 2;
+		scopeArsenal = 2;
+		faction = "MET_REB";
+		side = 0;
+		displayName = "Marksman (774-CX)";
+		editorSubcategory = "MET_REB_Infantry";
+		weapons[] = { "212th_RangeFinder_Unmarked","IDA_774CX","Put","Throw" };
+		respawnWeapons[] = { "212th_RangeFinder_Unmarked","IDA_774CX","Put","Throw" };
+		items[] = { "ACE_Flashlight_XL50","ACE_MapTools","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","kat_chestSeal","kat_chestSeal","kat_larynx","LFP_item_injector_red","LFP_item_injector_red","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_splint","ACE_splint","ACE_plasmaIV_500" };
+		respawnItems[] = { "ACE_Flashlight_XL50","ACE_MapTools","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","kat_chestSeal","kat_chestSeal","kat_larynx","LFP_item_injector_red","LFP_item_injector_red","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_splint","ACE_splint","ACE_plasmaIV_500" };
+		magazines[] = { "MET_Weapons_Mags_Thermal_Detonator","MET_Weapons_Mags_Thermal_Detonator","MET_Smoke_White","MET_Smoke_White","ACE_painkillers","IDA_Blaster_Cell_Power4_10Rnd_Red","IDA_Blaster_Cell_Power4_10Rnd_Red","IDA_Blaster_Cell_Power4_10Rnd_Red","IDA_Blaster_Cell_Power4_10Rnd_Red","IDA_Blaster_Cell_Power4_10Rnd_Red","IDA_Blaster_Cell_Power4_10Rnd_Red","IDA_Blaster_Cell_Power4_10Rnd_Red","IDA_Blaster_Cell_Power4_10Rnd_Red" };
+		respawnMagazines[] = { "MET_Weapons_Mags_Thermal_Detonator","MET_Weapons_Mags_Thermal_Detonator","MET_Smoke_White","MET_Smoke_White","ACE_painkillers","IDA_Blaster_Cell_Power4_10Rnd_Red","IDA_Blaster_Cell_Power4_10Rnd_Red","IDA_Blaster_Cell_Power4_10Rnd_Red","IDA_Blaster_Cell_Power4_10Rnd_Red","IDA_Blaster_Cell_Power4_10Rnd_Red","IDA_Blaster_Cell_Power4_10Rnd_Red","IDA_Blaster_Cell_Power4_10Rnd_Red","IDA_Blaster_Cell_Power4_10Rnd_Red" };
+		linkedItems[] = { "ItemMap","ItemCompass","ItemWatch","ls_radios_hush98_aurebesh","ItemMicroDAGR","ls_nvg_goggles","212th_RangeFinder_Unmarked","H_PASGT_basic_black_F","ls_vest_flakJacket_open","ls_glasses_coif","ls_nvg_goggles" };
+		respawnLinkedItems[] = { "ItemMap","ItemCompass","ItemWatch","ls_radios_hush98_aurebesh","ItemMicroDAGR","ls_nvg_goggles","212th_RangeFinder_Unmarked","H_PASGT_basic_black_F","ls_vest_flakJacket_open","ls_glasses_coif","ls_nvg_goggles" };
 		backpack = "JMM_B_TacBelt_blk";
 	};
 
@@ -351,12 +353,12 @@ class cfgVehicles
 		side = 0;
 		displayName = "Light AT";
 		editorSubcategory = "MET_REB_Infantry";
-		weapons[] = { "212th_RangeFinder_Unmarked","3AS_DC15S_F","rps_16th","Put","Throw" };
-		respawnWeapons[] = { "212th_RangeFinder_Unmarked","3AS_DC15S_F","rps_16th","Put","Throw" };
+		weapons[] = { "212th_RangeFinder_Unmarked","IDA_SPK12","rps_16th","Put","Throw" };
+		respawnWeapons[] = { "212th_RangeFinder_Unmarked","IDA_SPK12","rps_16th","Put","Throw" };
 		items[] = { "ACE_Flashlight_XL50","ACE_MapTools","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","kat_chestSeal","kat_chestSeal","kat_larynx","LFP_item_injector_red","LFP_item_injector_red","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_splint","ACE_splint","ACE_plasmaIV_500" };
 		respawnItems[] = { "ACE_Flashlight_XL50","ACE_MapTools","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","kat_chestSeal","kat_chestSeal","kat_larynx","LFP_item_injector_red","LFP_item_injector_red","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_splint","ACE_splint","ACE_plasmaIV_500" };
-		magazines[] = { "MET_Weapons_Mags_Thermal_Detonator","MET_Weapons_Mags_Thermal_Detonator","MET_Smoke_White","MET_Smoke_White","ACE_painkillers","3AS_60Rnd_EM30_mag","3AS_60Rnd_EM30_mag","3AS_60Rnd_EM30_mag","3AS_60Rnd_EM30_mag","3AS_60Rnd_EM30_mag","3AS_60Rnd_EM30_mag","3AS_60Rnd_EM30_mag","3AS_60Rnd_EM30_mag","3AS_60Rnd_EM30_mag","3AS_60Rnd_EM30_mag","DBA_90mm_IK40_FRAG_x1_mag","DBA_90mm_IK40_FRAG_x1_mag","DBA_90mm_IK40_FRAG_x1_mag","DBA_90mm_IK40_FRAG_x1_mag" };
-		respawnMagazines[] = { "MET_Weapons_Mags_Thermal_Detonator","MET_Weapons_Mags_Thermal_Detonator","MET_Smoke_White","MET_Smoke_White","ACE_painkillers","3AS_60Rnd_EM30_mag","3AS_60Rnd_EM30_mag","3AS_60Rnd_EM30_mag","3AS_60Rnd_EM30_mag","3AS_60Rnd_EM30_mag","3AS_60Rnd_EM30_mag","3AS_60Rnd_EM30_mag","3AS_60Rnd_EM30_mag","3AS_60Rnd_EM30_mag","3AS_60Rnd_EM30_mag","DBA_90mm_IK40_FRAG_x1_mag","DBA_90mm_IK40_FRAG_x1_mag","DBA_90mm_IK40_FRAG_x1_mag","DBA_90mm_IK40_FRAG_x1_mag" };
+		magazines[] = { "MET_Weapons_Mags_Thermal_Detonator","MET_Weapons_Mags_Thermal_Detonator","MET_Smoke_White","MET_Smoke_White","ACE_painkillers","IDA_Blaster_Cell_Power3_60Rnd_Red","IDA_Blaster_Cell_Power3_60Rnd_Red","IDA_Blaster_Cell_Power3_60Rnd_Red","IDA_Blaster_Cell_Power3_60Rnd_Red","IDA_Blaster_Cell_Power3_60Rnd_Red","IDA_Blaster_Cell_Power3_60Rnd_Red","IDA_Blaster_Cell_Power3_60Rnd_Red","IDA_Blaster_Cell_Power3_60Rnd_Red","IDA_Blaster_Cell_Power3_60Rnd_Red","IDA_Blaster_Cell_Power3_60Rnd_Red","DBA_90mm_IK40_FRAG_x1_mag","DBA_90mm_IK40_FRAG_x1_mag","DBA_90mm_IK40_FRAG_x1_mag","DBA_90mm_IK40_FRAG_x1_mag" };
+		respawnMagazines[] = { "MET_Weapons_Mags_Thermal_Detonator","MET_Weapons_Mags_Thermal_Detonator","MET_Smoke_White","MET_Smoke_White","ACE_painkillers","IDA_Blaster_Cell_Power3_60Rnd_Red","IDA_Blaster_Cell_Power3_60Rnd_Red","IDA_Blaster_Cell_Power3_60Rnd_Red","IDA_Blaster_Cell_Power3_60Rnd_Red","IDA_Blaster_Cell_Power3_60Rnd_Red","IDA_Blaster_Cell_Power3_60Rnd_Red","IDA_Blaster_Cell_Power3_60Rnd_Red","IDA_Blaster_Cell_Power3_60Rnd_Red","IDA_Blaster_Cell_Power3_60Rnd_Red","IDA_Blaster_Cell_Power3_60Rnd_Red","DBA_90mm_IK40_FRAG_x1_mag","DBA_90mm_IK40_FRAG_x1_mag","DBA_90mm_IK40_FRAG_x1_mag","DBA_90mm_IK40_FRAG_x1_mag" };
 		linkedItems[] = { "ItemMap","ItemCompass","ItemWatch","ls_radios_hush98_aurebesh","ItemMicroDAGR","ls_nvg_goggles","212th_RangeFinder_Unmarked","ls_orsfHelmet_trooper","ls_vest_spacer","3AS_G_AT_4_F","ls_nvg_goggles" };
 		respawnLinkedItems[] = { "ItemMap","ItemCompass","ItemWatch","ls_radios_hush98_aurebesh","ItemMicroDAGR","ls_nvg_goggles","212th_RangeFinder_Unmarked","ls_orsfHelmet_trooper","ls_vest_spacer","3AS_G_AT_4_F","ls_nvg_goggles" };
 		backpack = "MET_REB_Light_AntiTank_RPS6_pack";
@@ -371,17 +373,19 @@ class cfgVehicles
 		side = 0;
 		displayName = "Crewman";
 		editorSubcategory = "MET_REB_Infantry";
-		weapons[] = { "212th_RangeFinder_Unmarked","3AS_DC17S_F","Put","Throw" };
-		respawnWeapons[] = { "212th_RangeFinder_Unmarked","3AS_DC17S_F","Put","Throw" };
+		weapons[] = { "212th_RangeFinder_Unmarked","IDA_A260P","Put","Throw" };
+		respawnWeapons[] = { "212th_RangeFinder_Unmarked","IDA_A260P","Put","Throw" };
 		items[] = { "ACE_Flashlight_XL50","ACE_MapTools","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","kat_chestSeal" };
 		respawnItems[] = { "ACE_Flashlight_XL50","ACE_MapTools","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","LFP_item_bacta_bandage","kat_chestSeal" };
-		magazines[] = { "MET_Weapons_Mags_Thermal_Detonator","MET_Weapons_Mags_Thermal_Detonator","MET_Smoke_White","MET_Smoke_White","Aux212_3AS_DC17S_Mag","Aux212_3AS_DC17S_Mag" };
-		respawnMagazines[] = { "MET_Weapons_Mags_Thermal_Detonator","MET_Weapons_Mags_Thermal_Detonator","MET_Smoke_White","MET_Smoke_White","Aux212_3AS_DC17S_Mag","Aux212_3AS_DC17S_Mag" };
+		magazines[] = { "MET_Weapons_Mags_Thermal_Detonator","MET_Weapons_Mags_Thermal_Detonator","MET_Smoke_White","MET_Smoke_White","IDA_Blaster_Cell_Power2_20Rnd_Red","IDA_Blaster_Cell_Power2_20Rnd_Red" };
+		respawnMagazines[] = { "MET_Weapons_Mags_Thermal_Detonator","MET_Weapons_Mags_Thermal_Detonator","MET_Smoke_White","MET_Smoke_White","IDA_Blaster_Cell_Power2_20Rnd_Red","IDA_Blaster_Cell_Power2_20Rnd_Red" };
 		linkedItems[] = { "ItemMap","ItemCompass","ItemWatch","ls_radios_hush98_aurebesh","ItemMicroDAGR","ls_nvg_goggles","212th_RangeFinder_Unmarked","ls_imperialVest_army_tacbelt","ls_glasses_coif","ls_nvg_goggles" };
 		respawnLinkedItems[] = { "ItemMap","ItemCompass","ItemWatch","ls_radios_hush98_aurebesh","ItemMicroDAGR","ls_nvg_goggles","212th_RangeFinder_Unmarked","ls_imperialVest_army_tacbelt","ls_glasses_coif","ls_nvg_goggles" };
 		backpack = "";
 	};
 
+
+	// Vehicles
 	class MET_REB_PX_10 : 3AS_PX10_REB_F
 	{
 	  scope = 2;
@@ -396,27 +400,29 @@ class cfgVehicles
 	  typicalCargo[] = {"MET_REB_Crewman"};
 	};
 	
-	class MET_REB_Autorifleman_DC15L_pack : ls_rebelBackpack_chest_pouch
+
+	class MET_REB_Autorifleman_1_pack : ls_rebelBackpack_chest_pouch
 	{
 		scope = 1;
 		class TransportMagazines
 		{
-			class _xx_3AS_200Rnd_EM40_Mag { count = 4;magazine = "3AS_200Rnd_EM40_Mag"; };
+			class _xx_Metal_E5C_Mag { count = 6;magazine = "Metal_E5C_Mag"; };
 		};
 		class TransportItems {};
 		class TransportWeapons {};
 	};
 
-	class MET_REB_Autorifleman_E5C_pack : ls_rebelBackpack_chest_pouch
+	class MET_REB_Autorifleman_2_pack : ls_rebelBackpack_chest_pouch
 	{
 		scope = 1;
 		class TransportMagazines
 		{
-			class _xx_3AS_130Rnd_EM50_RedPlasma { count = 6;magazine = "3AS_130Rnd_EM50_RedPlasma"; };
+			class _xx_IDA_Blaster_Cell_Power2_100Rnd_Blue { count = 4;magazine = "IDA_Blaster_Cell_Power2_100Rnd_Blue"; };
 		};
 		class TransportItems {};
 		class TransportWeapons {};
 	};
+
 
 	class MET_REB_Light_AntiTank_RPS6_pack : ls_imperialBackpack_chestRig
 	{
@@ -461,13 +467,13 @@ class CfgGroups {
 						position[] = { 0,0,0 };
 						rank = "SERGEANT";
 						side = 0;
-						vehicle = "MET_REB_Rifleman_DC15S";
+						vehicle = "MET_REB_Rifleman_2";
 					};
 					class Unit1 {
 						position[] = { 5,-5,0 };
 						rank = "PRIVATE";
 						side = 0;
-						vehicle = "MET_REB_Autorifleman_E5C";
+						vehicle = "MET_REB_Autorifleman_1";
 					};
 				};
 
@@ -482,13 +488,13 @@ class CfgGroups {
 						position[] = { 0,0,0 };
 						rank = "SERGEANT";
 						side = 0;
-						vehicle = "MET_REB_Marksman_DC15X";
+						vehicle = "MET_REB_Marksman_2";
 					};
 					class Unit1 {
 						position[] = { 5,-5,0 };
 						rank = "PRIVATE";
 						side = 0;
-						vehicle = "MET_REB_Marksman_E5S";
+						vehicle = "MET_REB_Marksman_1";
 					};
 				};
 
@@ -503,25 +509,25 @@ class CfgGroups {
 						position[] = { 0,0,0 };
 						rank = "SERGEANT";
 						side = 0;
-						vehicle = "MET_REB_Rifleman_DC15S";
+						vehicle = "MET_REB_Rifleman_2";
 					};
 					class Unit1 {
 						position[] = { 5,-5,0 };
 						rank = "PRIVATE";
 						side = 0;
-						vehicle = "MET_REB_Autorifleman_E5C";
+						vehicle = "MET_REB_Autorifleman_1";
 					};
 					class Unit2 {
 						position[] = { -5,-5,0 };
 						rank = "PRIVATE";
 						side = 0;
-						vehicle = "MET_REB_Autorifleman_DC15L";
+						vehicle = "MET_REB_Autorifleman_2";
 					};
 					class Unit3 {
 						position[] = { 10,-10,0 };
 						rank = "PRIVATE";
 						side = 0;
-						vehicle = "MET_REB_Rifleman_E5";
+						vehicle = "MET_REB_Rifleman_1 ";
 					};
 				};
 
@@ -536,7 +542,7 @@ class CfgGroups {
 						position[] = { 0,0,0 };
 						rank = "SERGEANT";
 						side = 0;
-						vehicle = "MET_REB_Rifleman_E5";
+						vehicle = "MET_REB_Rifleman_1 ";
 					};
 					class Unit1 {
 						position[] = { 5,-5,0 };
@@ -554,7 +560,7 @@ class CfgGroups {
 						position[] = { 10,-10,0 };
 						rank = "PRIVATE";
 						side = 0;
-						vehicle = "MET_REB_Autorifleman_DC15L";
+						vehicle = "MET_REB_Autorifleman_2";
 					};
 				};
 
@@ -569,19 +575,19 @@ class CfgGroups {
 						position[] = { 0,0,0 };
 						rank = "SERGEANT";
 						side = 0;
-						vehicle = "MET_REB_Rifleman_E5";
+						vehicle = "MET_REB_Rifleman_1 ";
 					};
 					class Unit1 {
 						position[] = { 5,-5,0 };
 						rank = "PRIVATE";
 						side = 0;
-						vehicle = "MET_REB_Rifleman_DC15S";
+						vehicle = "MET_REB_Rifleman_2";
 					};
 					class Unit2 {
 						position[] = { -5,-5,0 };
 						rank = "PRIVATE";
 						side = 0;
-						vehicle = "MET_REB_Rifleman_E5";
+						vehicle = "MET_REB_Rifleman_1 ";
 					};
 					class Unit3 {
 						position[] = { 10,-10,0 };
@@ -593,25 +599,25 @@ class CfgGroups {
 						position[] = { -10,-10,0 };
 						rank = "PRIVATE";
 						side = 0;
-						vehicle = "MET_REB_Autorifleman_E5C";
+						vehicle = "MET_REB_Autorifleman_1";
 					};
 					class Unit5 {
 						position[] = { 15,-15,0 };
 						rank = "PRIVATE";
 						side = 0;
-						vehicle = "MET_REB_Autorifleman_DC15L";
+						vehicle = "MET_REB_Autorifleman_2";
 					};
 					class Unit6 {
 						position[] = { -15,-15,0 };
 						rank = "PRIVATE";
 						side = 0;
-						vehicle = "MET_REB_Marksman_DC15X";
+						vehicle = "MET_REB_Marksman_2";
 					};
 					class Unit7 {
 						position[] = { 20,-20,0 };
 						rank = "PRIVATE";
 						side = 0;
-						vehicle = "MET_REB_Rifleman_E5";
+						vehicle = "MET_REB_Rifleman_1 ";
 					};
 				};
 
