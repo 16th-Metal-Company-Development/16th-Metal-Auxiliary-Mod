@@ -470,6 +470,16 @@ class MET_Vest_SNCO_Base : JLTS_CloneVestReconOfficer
 {
 	scope = 2;
 	displayname = "[16th] Staff NCO Vest";
+	hiddenSelections[] = 
+	{ 
+		"camo1",
+		"camo2"
+	};
+	hiddenSelectionsTextures[] = 
+	{ 
+		"MRC\JLTS\characters\CloneArmor\data\Clone_vest_officer_co.paa",
+		"MRC\JLTS\characters\CloneArmor\data\Clone_vest_heavy_co.paa" 
+	};
 	class ItemInfo : ItemInfo
 	{
 		containerClass = "Supply100";
@@ -1104,46 +1114,6 @@ class MET_Vest_Plates_Weapons : Aux212_Heavy_Gunner_Vest_Standard
 	{
 		containerClass = "Supply100";
 		mass = 10;
-		class HitpointsProtectionInfo
-		{
-			class Neck
-			{
-				hitpointName = "HitNeck";
-				armor = 5;
-				passThrough = .2;
-			};
-			class Chest
-			{
-				hitpointName = "HitChest";
-				armor = 6;
-				passThrough = .2;
-			};
-			class Diaphragm
-			{
-				hitpointName = "HitDiaphragm";
-				armor = 6;
-				passThrough = .2;
-			};
-			class Abdomen
-			{
-				hitpointName = "HitAbdomen";
-				armor = 6;
-				passThrough = .2;
-			};
-			class Pelvis
-			{
-				hitpointName = "HitPelvis";
-				armor = 6;
-				passThrough = .2;
-			};
-			class Body
-			{
-				hitpointName = "HitBody";
-				armor = 6;
-				passThrough = .2;
-				depends = "HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
-			};
-		};
 	};
 };
 
@@ -1157,46 +1127,6 @@ class MET_Vest_Plates_Reaper : Aux212_Heavy_Gunner_Vest_Team_Leader
 	{
 		containerClass = "Supply100";
 		mass = 10;
-		class HitpointsProtectionInfo
-		{
-			class Neck
-			{
-				hitpointName = "HitNeck";
-				armor = 5;
-				passThrough = .2;
-			};
-			class Chest
-			{
-				hitpointName = "HitChest";
-				armor = 6;
-				passThrough = .2;
-			};
-			class Diaphragm
-			{
-				hitpointName = "HitDiaphragm";
-				armor = 6;
-				passThrough = .2;
-			};
-			class Abdomen
-			{
-				hitpointName = "HitAbdomen";
-				armor = 6;
-				passThrough = .2;
-			};
-			class Pelvis
-			{
-				hitpointName = "HitPelvis";
-				armor = 6;
-				passThrough = .2;
-			};
-			class Body
-			{
-				hitpointName = "HitBody";
-				armor = 6;
-				passThrough = .2;
-				depends = "HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
-			};
-		};
 	};
 };
 
@@ -1237,7 +1167,16 @@ class MET_Vest_Commander_Merlin : MET_Vest_Commander_Base
 	scope = 2;
 	displayname = "[16th] Merlin's Vest";
 };
-
+class MET_Vest_SNCO_Vergil : MET_Vest_SNCO_Base
+{
+	scope = 2;
+	displayname = "[16th] Vergil's Vest";
+	hiddenSelectionsTextures[] =
+	{
+		"z\MET\addons\Armor_Rewrite\Vests\Textures\Custom\MET_Vest_SNCO_Kama_Vergil_CO.paa",
+		"z\MET\addons\Armor_Rewrite\Vests\Textures\Custom\MET_Vest_SNCO_Rig_Vergil_CO.paa"
+	};
+};
 
 // ARC
 class MET_Vest_ARC_Blackrose : MET_Vest_ARC_Base

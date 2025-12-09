@@ -2633,6 +2633,35 @@ class MET_Uniform_Trooper_Blatt_Base : MET_Uniform_Trooper_Base
 		"JLTS_CloneNVG"
 	};
 };
+class MET_Uniform_Trooper_Bopit_Base : MET_Uniform_Trooper_Base
+{
+	scope = 1;
+	displayName = "[16th] Bopit";
+	uniformClass = "MET_Uniform_Trooper_Bopit";
+	hiddenselectionsTextures[] =
+	{
+		"z\MET\addons\Armor_Rewrite\Uniforms\Textures\Custom\MET_Bopit_Uniform1_CO.paa",
+		"z\MET\addons\Armor_Rewrite\Uniforms\Textures\Custom\MET_Bopit_Uniform2_CO.paa"
+	};
+	linkedItems[] =
+	{
+		"MET_Helmet_Trooper_Bopit",
+		"ItemMap",
+		"JLTS_clone_comlink",
+		"ItemCompass",
+		"ItemWatch",
+		"JLTS_CloneNVG"
+	};
+	respawnLinkedItems[] =
+	{
+		"MET_Helmet_Trooper_Bopit",
+		"ItemMap",
+		"JLTS_clone_comlink",
+		"ItemCompass",
+		"ItemWatch",
+		"JLTS_CloneNVG"
+	};
+};
 class MET_Uniform_Trooper_Cougar_Base : MET_Uniform_Trooper_Base
 {
 	scope = 1;
@@ -2847,7 +2876,7 @@ class MET_Uniform_Trooper_Nix_Base : MET_Uniform_Trooper_Base
 	hiddenselectionsTextures[] =
 	{
 		"z\MET\addons\Armor_Rewrite\Uniforms\Textures\Custom\MET_Nix_Uniform1_CO.paa",
-		"z\MET\addons\Armor_Rewrite\Uniforms\Textures\Custom\MET_Nix_Uniform1_CO.paa"
+		"z\MET\addons\Armor_Rewrite\Uniforms\Textures\Custom\MET_Nix_Uniform2_CO.paa"
 	};
 	linkedItems[] =
 	{

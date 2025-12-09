@@ -114,7 +114,7 @@ class XtdGearModels {
             options[] = { "camo" };
             class camo {
                 values[] = {
-                    "Avalanche", "Ben", "Blackrose", "Blatt", "Cougar",
+                    "Avalanche", "Ben", "Blackrose", "Blatt", "Bopit", "Cougar",
                     "Fool", "Hazmat", "Hood", "Kix", "Maxson",
                     "Merlin", "Moldy", "MoldyZeus", "Nix", "Noble",
                     "Prez", "Ronin", "Roz", "Six", "Sunto", "Vergil",

@@ -743,6 +743,15 @@ class MET_Uniform_Trooper_Blatt : MET_Uniform_Trooper
 		uniformclass = "MET_Uniform_Trooper_Blatt_Base";
 	};
 };
+class MET_Uniform_Trooper_Bopit : MET_Uniform_Trooper
+{
+	scope = 2;
+	displayName = "[16th] Bopit's Armor";
+	class ItemInfo : ItemInfo
+	{
+		uniformclass = "MET_Uniform_Trooper_Bopit_Base";
+	};
+};
 class MET_Uniform_Trooper_Cougar : MET_Uniform_Trooper
 {
 	scope = 2;

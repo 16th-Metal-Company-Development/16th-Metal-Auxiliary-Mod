@@ -121,6 +121,7 @@ class XtdGearInfos {
         class MET_Uniform_Trooper_Ben        { model = "MET_Custom_Armor"; camo = "Ben"; };
         class MET_Uniform_Trooper_Blackrose  { model = "MET_Custom_Armor"; camo = "Blackrose"; };
         class MET_Uniform_Trooper_Blatt      { model = "MET_Custom_Armor"; camo = "Blatt"; };
+        class MET_Uniform_Trooper_Bopit      { model = "MET_Custom_Armor"; camo = "Bopit"; };
         class MET_Uniform_Trooper_Cougar     { model = "MET_Custom_Armor"; camo = "Cougar"; };
         class MET_Uniform_Trooper_Fool       { model = "MET_Custom_Armor"; camo = "Fool"; };
         class MET_Uniform_Trooper_Hazmat     { model = "MET_Custom_Armor"; camo = "Hazmat"; };
