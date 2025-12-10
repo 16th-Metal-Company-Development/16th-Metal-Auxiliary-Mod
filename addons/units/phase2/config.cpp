@@ -5,7 +5,7 @@ class CfgPatches
 		units[]=
 		{
 			"MET_P2_TRP",
-			"MET_P2_TRP2",
+			"MET_P2_TRPDC15S",
 			"MET_P2_MED",
             "MET_P2_AR",
             "MET_P2_Z6",
@@ -26,11 +26,11 @@ class CfgWeapons
 		scope=1;
 		class LinkedItems
 		{
-			/*class LinkedItemsOptic
+			class LinkedItemsOptic
 			{
 				slot="CowsSlot";
-				item="optic_hamr";
-			};*/
+				item="MET_optic_DC15L_F";
+			};
 			class LinkedItemsUnder
 			{
 				slot="UnderBarrelSlot";
@@ -52,7 +52,7 @@ class CfgWeapons
 			class LinkedItemsOptic
 			{
 				slot="CowsSlot";
-				item="MET_Optic_VK38X";
+				item="MET_optic_VK38X_F";
 			};
 			class LinkedItemsUnder
 			{
@@ -61,24 +61,11 @@ class CfgWeapons
 			};
 		};
 	};
-    class MET_DC15S;
-	class MET_DC15S_NPC: MET_DC15S
-	{
-		scope=1;
-		class LinkedItems
-		{
-			class LinkedItemsOptic
-			{
-				slot="CowsSlot";
-				item="3AS_optic_holo_DC15S";
-			};
-		};
-	};
 };
 class CfgVehicles
 {
-    class backpack_16th_medic;
-    class backpack_16th_medic_npc: backpack_16th_medic
+    class MET_Backpack_Medic;
+    class MET_Backpack_Medic_npc: MET_Backpack_Medic
 	{
 		scope=1;
 		class TransportItems
@@ -136,8 +123,8 @@ class CfgVehicles
             
 		};
 	};
-    class backpack_16th_heavy;
-    class backpack_16th_heavy_ar: backpack_16th_heavy
+    class MET_Backpack_Base;
+    class MET_Backpack_Heavy_ar: MET_Backpack_Base
 	{
 		scope=1;
 		class TransportItems
@@ -149,7 +136,8 @@ class CfgVehicles
 			};
 		};
 	};
-    class backpack_16th_heavy_z6: backpack_16th_heavy
+	class MET_Backpack_Heavy;
+    class MET_Backpack_Heavy_z6: MET_Backpack_Heavy
 	{
 		scope=1;
 		class TransportItems
@@ -161,7 +149,7 @@ class CfgVehicles
 			};
 		};
 	};
-    class backpack_16th_heavy_lat: backpack_16th_heavy
+    class MET_Backpack_Heavy_lat: MET_Backpack_Heavy
 	{
 		scope=1;
 		class TransportItems
@@ -183,7 +171,7 @@ class CfgVehicles
 			};
 		};
 	};
-    class backpack_16th_heavy_hat: backpack_16th_heavy
+    class MET_Backpack_Heavy_hat: MET_Backpack_Heavy
 	{
 		scope=1;
 		class TransportItems
@@ -200,20 +188,20 @@ class CfgVehicles
 			};
 		};
 	};
-    class backpack_16th_heavy_aa: backpack_16th_heavy
+    class MET_Backpack_Heavy_aa: MET_Backpack_Heavy
 	{
 		scope=1;
 		class TransportItems
 		{
-			class _xx_3AS_JLTS_MK39_AA
+			class _xx_metal_aa_alt_mag
 			{
 				count=5;
-				name="3AS_JLTS_MK39_AA";
+				name="metal_aa_alt_mag";
 			};
 		};
 	};
-    class beltpack_16th;
-    class backpack_16th_gl: beltpack_16th
+    class MET_Beltbag_Base;
+    class MET_Beltbag_Base_gl: MET_Beltbag_Base
 	{
 		scope=1;
 		class TransportItems
@@ -234,7 +222,7 @@ class CfgVehicles
 		//editorPreview="\HDC_Units_mod\data\Editor Previews\WRU\HDC_WRU_Medic.jpg";
 		side=1;
         //backpack="";
-		uniformClass="armor_16th_trp";
+		uniformClass="MET_Uniform_Trooper";
 		Weapons[]=
 		{
 			"JLTS_CloneBinocular",
@@ -420,10 +408,9 @@ class CfgVehicles
 			"ItemCompass",
 			"JLTS_clone_comlink",
 			"ACE_Altimeter",
-			"helmet_16th_trp",
-			"vest_16_basic",
-			"CWHUD_P2_base",
-			"212th_JLTS_Clone_Helmet_NVG_Chip"
+			"MET_Helmet_Trooper_Base",
+			"MET_Vest_Basic",
+			"MET_NVG_Integrated_Base"
 		};
 		respawnLinkedItems[]=
 		{
@@ -432,10 +419,9 @@ class CfgVehicles
 			"ItemCompass",
 			"JLTS_clone_comlink",
 			"ACE_Altimeter",
-			"helmet_16th_trp",
-			"vest_16_basic",
-			"CWHUD_P2_base",
-			"212th_JLTS_Clone_Helmet_NVG_Chip"
+			"MET_Helmet_Trooper_Base",
+			"MET_Vest_Basic",
+			"MET_NVG_Integrated_Base"
 		};
 	};
     class MET_P2_TRP: MET_P2_Base
@@ -446,19 +432,19 @@ class CfgVehicles
 		editorPreview="\z\16th\addons\units\data\Editor Previews\Phase2\p2_trooper.jpg";
 		side=1;
         //backpack="";
-		uniformClass="armor_16th_trp";
+		uniformClass="MET_Uniform_Trooper";
 		Weapons[]=
 		{
-            "MET_DC15A_PLASTIC",
-            "MET_DC17SA",
+            "MET_DC15A_F",
+            "MET_DC17S_F",
 			"JLTS_CloneBinocular",
 			"Put",
 			"Throw"
 		};
 		respawnWeapons[]=
 		{
-            "MET_DC15A_PLASTIC",
-            "MET_DC17SA",
+            "MET_DC15A_F",
+            "MET_DC17S_F",
 			"JLTS_CloneBinocular",
 			"Put",
 			"Throw"
@@ -518,7 +504,7 @@ class CfgVehicles
 			"MET_Smoke_White"
 		};
 	};
-    class MET_P2_TRP2: MET_P2_Base
+    class MET_P2_TRPDC15S: MET_P2_Base
 	{
 		scope=2;
 		displayName="Trooper (DC-15S)";
@@ -526,37 +512,36 @@ class CfgVehicles
 		editorPreview="\z\16th\addons\units\data\Editor Previews\Phase2\p2_trooper_s.jpg";
 		side=1;
         //backpack="";
-		uniformClass="armor_16th_trp";
 		Weapons[]=
 		{
-            "MET_DC15S_NPC",
-            "MET_DC17SA",
+            "MET_DC15S_F",
+            "MET_DC17S_F",
 			"JLTS_CloneBinocular",
 			"Put",
 			"Throw"
 		};
 		respawnWeapons[]=
 		{
-            "MET_DC15S_NPC",
-            "MET_DC17SA",
+            "MET_DC15S_F",
+            "MET_DC17S_F",
 			"JLTS_CloneBinocular",
 			"Put",
 			"Throw"
 		};
 		Magazines[]=
 		{
-			"MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
+			"MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
 			"MET_blaster_pistol_battery",
 			"MET_Weapons_Mags_Thermal_Detonator",
 			"MET_Weapons_Mags_Thermal_Detonator",
@@ -572,18 +557,18 @@ class CfgVehicles
 		};
 		respawnMagazines[]=
 		{
-			"MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
+			"MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
 			"MET_blaster_pistol_battery",
 			"MET_Weapons_Mags_Thermal_Detonator",
 			"MET_Weapons_Mags_Thermal_Detonator",
@@ -598,85 +583,15 @@ class CfgVehicles
 			"MET_Smoke_White"
 		};
 	};
-    class MET_P2_MED: MET_P2_Base
+    class MET_P2_MED: MET_P2_TRPDC15S
 	{
 		scope=2;
 		displayName="Medic";
 		editorSubCategory="metal_co_EdSubCat_p2";
 		editorPreview="\z\16th\addons\units\data\Editor Previews\Phase2\p2_medic.jpg";
 		side=1;
-        backpack="backpack_16th_medic_npc";
-		uniformClass="armor_16th_med";
-		Weapons[]=
-		{
-            "MET_DC15S",
-            "MET_DC17SA",
-			"JLTS_CloneBinocular",
-			"Put",
-			"Throw"
-		};
-		respawnWeapons[]=
-		{
-            "MET_DC15S",
-            "MET_DC17SA",
-			"JLTS_CloneBinocular",
-			"Put",
-			"Throw"
-		};
-		Magazines[]=
-		{
-			"MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-			"MET_blaster_pistol_battery",
-			"MET_Weapons_Mags_Thermal_Detonator",
-			"MET_Weapons_Mags_Thermal_Detonator",
-			"MET_Weapons_Mags_Thermal_Detonator",
-			"MET_Weapons_Mags_Thermal_Detonator",
-			"MET_Weapons_Mags_Thermal_Detonator",
-			"MET_Weapons_Mags_Thermal_Imploder",
-			"MET_Smoke_Blue",
-			"MET_Smoke_Red",
-			"MET_Smoke_White",
-			"MET_Smoke_White",
-			"MET_Smoke_White"
-		};
-		respawnMagazines[]=
-		{
-			"MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-			"MET_blaster_pistol_battery",
-			"MET_Weapons_Mags_Thermal_Detonator",
-			"MET_Weapons_Mags_Thermal_Detonator",
-			"MET_Weapons_Mags_Thermal_Detonator",
-			"MET_Weapons_Mags_Thermal_Detonator",
-			"MET_Weapons_Mags_Thermal_Detonator",
-			"MET_Weapons_Mags_Thermal_Imploder",
-			"MET_Smoke_Blue",
-			"MET_Smoke_Red",
-			"MET_Smoke_White",
-			"MET_Smoke_White",
-			"MET_Smoke_White"
-		};
+        backpack="MET_Backpack_Medic_npc";
+		uniformClass="MET_Uniform_Trooper_Medic";
         linkedItems[]=
 		{
 			"ItemMap",
@@ -684,10 +599,9 @@ class CfgVehicles
 			"ItemCompass",
 			"JLTS_clone_comlink",
 			"ACE_Altimeter",
-			"helmet_16th_medic",
-			"vest_16_backpack_rack_cls",
-			"CWHUD_P2_base",
-			"212th_JLTS_Clone_Helmet_NVG_Chip"
+			"MET_Helmet_Trooper_Medic",
+			"MET_Vest_Rack_Medic",
+			"MET_NVG_Integrated_Base"
 		};
         respawnLinkedItems[]=
 		{
@@ -696,10 +610,9 @@ class CfgVehicles
 			"ItemCompass",
 			"JLTS_clone_comlink",
 			"ACE_Altimeter",
-			"helmet_16th_medic",
-			"vest_16_backpack_rack_cls",
-			"CWHUD_P2_base",
-			"212th_JLTS_Clone_Helmet_NVG_Chip"
+			"MET_Helmet_Trooper_Medic",
+			"MET_Vest_Rack_Medic",
+			"MET_NVG_Integrated_Base"
 		};
 	};
     class MET_P2_AR: MET_P2_Base
@@ -709,12 +622,11 @@ class CfgVehicles
 		editorSubCategory="metal_co_EdSubCat_p2";
 		editorPreview="\z\16th\addons\units\data\Editor Previews\Phase2\p2_ar.jpg";
 		side=1;
-        backpack="backpack_16th_heavy_AR";
-		uniformClass="armor_16th_trp";
+        backpack="MET_Backpack_Heavy_AR";
 		Weapons[]=
 		{
             "MET_DC15L_F_NPC",
-            "MET_DC17SA",
+            "MET_DC17S_F",
 			"JLTS_CloneBinocular",
 			"Put",
 			"Throw"
@@ -722,7 +634,7 @@ class CfgVehicles
 		respawnWeapons[]=
 		{
             "MET_DC15L_F_NPC",
-            "MET_DC17SA",
+            "MET_DC17S_F",
 			"JLTS_CloneBinocular",
 			"Put",
 			"Throw"
@@ -730,7 +642,6 @@ class CfgVehicles
 		Magazines[]=
 		{
 			"MET_DC15L_mag",
-            "MET_DC15L_mag",
             "MET_DC15L_mag",
 			"MET_blaster_pistol_battery",
 			"MET_Weapons_Mags_Thermal_Detonator",
@@ -748,7 +659,6 @@ class CfgVehicles
 		respawnMagazines[]=
 		{
 			"MET_DC15L_mag",
-            "MET_DC15L_mag",
             "MET_DC15L_mag",
 			"MET_blaster_pistol_battery",
 			"MET_Weapons_Mags_Thermal_Detonator",
@@ -770,10 +680,9 @@ class CfgVehicles
 			"ItemCompass",
 			"JLTS_clone_comlink",
 			"ACE_Altimeter",
-			"helmet_16th_trp",
-			"vest_16_backpack_rack_ammo_bearer",
-			"CWHUD_P2_base",
-			"212th_JLTS_Clone_Helmet_NVG_Chip"
+			"MET_Helmet_Trooper_Base",
+			"MET_Vest_Rack_Ammo",
+			"MET_NVG_Integrated_Base"
 		};
 		respawnLinkedItems[]=
 		{
@@ -782,10 +691,9 @@ class CfgVehicles
 			"ItemCompass",
 			"JLTS_clone_comlink",
 			"ACE_Altimeter",
-			"helmet_16th_trp",
-			"vest_16_backpack_rack_ammo_bearer",
-			"CWHUD_P2_base",
-			"212th_JLTS_Clone_Helmet_NVG_Chip"
+			"MET_Helmet_Trooper_Base",
+			"MET_Vest_Rack_Ammo",
+			"MET_NVG_Integrated_Base"
 		};
 	};
     class MET_P2_Z6: MET_P2_Base
@@ -795,20 +703,19 @@ class CfgVehicles
 		editorSubCategory="metal_co_EdSubCat_p2";
 		editorPreview="\z\16th\addons\units\data\Editor Previews\Phase2\p2_mg.jpg";
 		side=1;
-        backpack="backpack_16th_heavy_z6";
-		uniformClass="armor_16th_trp";
+        backpack="MET_Backpack_Heavy_z6";
 		Weapons[]=
 		{
-            "MET_Z6",
-            "MET_DC17SA",
+            "MET_Z6_MkII",
+            "MET_DC17S_F",
 			"JLTS_CloneBinocular",
 			"Put",
 			"Throw"
 		};
 		respawnWeapons[]=
 		{
-            "MET_Z6",
-            "MET_DC17SA",
+            "MET_Z6_MkII",
+            "MET_DC17S_F",
 			"JLTS_CloneBinocular",
 			"Put",
 			"Throw"
@@ -816,7 +723,6 @@ class CfgVehicles
 		Magazines[]=
 		{
 			"MET_blaster_battery_green",
-            "MET_blaster_battery",
             "MET_blaster_battery",
 			"MET_blaster_pistol_battery",
 			"MET_Weapons_Mags_Thermal_Detonator",
@@ -834,7 +740,6 @@ class CfgVehicles
 		respawnMagazines[]=
 		{
 			"MET_blaster_battery_green",
-            "MET_blaster_battery",
             "MET_blaster_battery",
 			"MET_blaster_pistol_battery",
 			"MET_Weapons_Mags_Thermal_Detonator",
@@ -856,10 +761,9 @@ class CfgVehicles
 			"ItemCompass",
 			"JLTS_clone_comlink",
 			"ACE_Altimeter",
-			"helmet_16th_trp",
-			"vest_16_backpack_rack_ammo_bearer",
-			"CWHUD_P2_base",
-			"212th_JLTS_Clone_Helmet_NVG_Chip"
+			"MET_Helmet_Trooper_Base",
+			"MET_Vest_Rack_Ammo",
+			"MET_NVG_Integrated_Base"
 		};
 		respawnLinkedItems[]=
 		{
@@ -868,10 +772,9 @@ class CfgVehicles
 			"ItemCompass",
 			"JLTS_clone_comlink",
 			"ACE_Altimeter",
-			"helmet_16th_trp",
-			"vest_16_backpack_rack_ammo_bearer",
-			"CWHUD_P2_base",
-			"212th_JLTS_Clone_Helmet_NVG_Chip"
+			"MET_Helmet_Trooper_Base",
+			"MET_Vest_Rack_Ammo",
+			"MET_NVG_Integrated_Base"
 		};
 	};
     class MET_P2_GL: MET_P2_Base
@@ -881,8 +784,7 @@ class CfgVehicles
 		editorSubCategory="metal_co_EdSubCat_p2";
 		editorPreview="\z\16th\addons\units\data\Editor Previews\Phase2\p2_gl.jpg";
 		side=1;
-        backpack="backpack_16th_gl";
-		uniformClass="armor_16th_trp";
+        backpack="MET_Beltbag_Base_gl";
 		Weapons[]=
 		{
             "MET_DC15A_ugl_plastic",
@@ -962,19 +864,18 @@ class CfgVehicles
 		editorPreview="\z\16th\addons\units\data\Editor Previews\Phase2\p2_cqc.jpg";
 		side=1;
         //backpack="";
-		uniformClass="armor_16th_trp";
 		Weapons[]=
 		{
-            "MET_JLTS_DP23",
-            "MET_DC17SA",
+            "MET_DP23_F",
+            "MET_DC17S_F",
 			"JLTS_CloneBinocular",
 			"Put",
 			"Throw"
 		};
 		respawnWeapons[]=
 		{
-            "MET_JLTS_DP23",
-            "MET_DC17SA",
+            "MET_DP23_F",
+            "MET_DC17S_F",
 			"JLTS_CloneBinocular",
 			"Put",
 			"Throw"
@@ -1029,41 +930,40 @@ class CfgVehicles
 		editorSubCategory="metal_co_EdSubCat_p2";
 		editorPreview="\z\16th\addons\units\data\Editor Previews\Phase2\p2_lat.jpg";
 		side=1;
-        backpack="backpack_16th_heavy_LAT";
-		uniformClass="armor_16th_trp";
+        backpack="MET_Backpack_Heavy_LAT";
 		Weapons[]=
 		{
-            "MET_DC15S_NPC",
+            "MET_DC15S_F",
             "rps_16th",
-            "MET_DC17SA",
+            "MET_DC17S_F",
 			"JLTS_CloneBinocular",
 			"Put",
 			"Throw"
 		};
 		respawnWeapons[]=
 		{
-            "MET_DC15S_NPC",
+            "MET_DC15S_F",
             "rps_16th",
-            "MET_DC17SA",
+            "MET_DC17S_F",
 			"JLTS_CloneBinocular",
 			"Put",
 			"Throw"
 		};
 		Magazines[]=
 		{
-			"MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
+			"MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
 			"MET_blaster_pistol_battery",
 			"MET_blaster_pistol_battery",
 			"MET_Weapons_Mags_Thermal_Detonator",
@@ -1080,19 +980,19 @@ class CfgVehicles
 		};
 		respawnMagazines[]=
 		{
-			"MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
+			"MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
 			"MET_blaster_pistol_battery",
 			"MET_blaster_pistol_battery",
 			"MET_Weapons_Mags_Thermal_Detonator",
@@ -1114,10 +1014,9 @@ class CfgVehicles
 			"ItemCompass",
 			"JLTS_clone_comlink",
 			"ACE_Altimeter",
-			"helmet_16th_trp",
-			"vest_16_backpack_rack_at",
-			"CWHUD_P2_base",
-			"212th_JLTS_Clone_Helmet_NVG_Chip"
+			"MET_Helmet_Trooper_Base",
+			"MET_Vest_Rack_AT",
+			"MET_NVG_Integrated_Base"
 		};
 		respawnLinkedItems[]=
 		{
@@ -1126,10 +1025,9 @@ class CfgVehicles
 			"ItemCompass",
 			"JLTS_clone_comlink",
 			"ACE_Altimeter",
-			"helmet_16th_trp",
-			"vest_16_backpack_rack_at",
-			"CWHUD_P2_base",
-			"212th_JLTS_Clone_Helmet_NVG_Chip"
+			"MET_Helmet_Trooper_Base",
+			"MET_Vest_Rack_AT",
+			"MET_NVG_Integrated_Base"
 		};
 	};
     class MET_P2_HAT: MET_P2_Base
@@ -1139,41 +1037,40 @@ class CfgVehicles
 		editorSubCategory="metal_co_EdSubCat_p2";
 		editorPreview="\z\16th\addons\units\data\Editor Previews\Phase2\p2_hat.jpg";
 		side=1;
-        backpack="backpack_16th_heavy_HAT";
-		uniformClass="armor_16th_trp";
+        backpack="MET_Backpack_Heavy_HAT";
 		Weapons[]=
 		{
-            "MET_DC15S_NPC",
+            "MET_DC15S_F",
             "plx_16th",
-            "MET_DC17SA",
+            "MET_DC17S_F",
 			"JLTS_CloneBinocular",
 			"Put",
 			"Throw"
 		};
 		respawnWeapons[]=
 		{
-            "MET_DC15S_NPC",
+            "MET_DC15S_F",
             "plx_16th",
-            "MET_DC17SA",
+            "MET_DC17S_F",
 			"JLTS_CloneBinocular",
 			"Put",
 			"Throw"
 		};
 		Magazines[]=
 		{
-			"MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
+			"MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
 			"MET_blaster_pistol_battery",
 			"MET_blaster_pistol_battery",
 			"MET_Weapons_Mags_Thermal_Detonator",
@@ -1190,19 +1087,19 @@ class CfgVehicles
 		};
 		respawnMagazines[]=
 		{
-			"MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
+			"MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
 			"MET_blaster_pistol_battery",
 			"MET_blaster_pistol_battery",
 			"MET_Weapons_Mags_Thermal_Detonator",
@@ -1224,10 +1121,9 @@ class CfgVehicles
 			"ItemCompass",
 			"JLTS_clone_comlink",
 			"ACE_Altimeter",
-			"helmet_16th_trp",
-			"vest_16_backpack_rack_at",
-			"CWHUD_P2_base",
-			"212th_JLTS_Clone_Helmet_NVG_Chip"
+			"MET_Helmet_Trooper_Base",
+			"MET_Vest_Rack_AT",
+			"MET_NVG_Integrated_Base"
 		};
 		respawnLinkedItems[]=
 		{
@@ -1236,10 +1132,9 @@ class CfgVehicles
 			"ItemCompass",
 			"JLTS_clone_comlink",
 			"ACE_Altimeter",
-			"helmet_16th_trp",
-			"vest_16_backpack_rack_at",
-			"CWHUD_P2_base",
-			"212th_JLTS_Clone_Helmet_NVG_Chip"
+			"MET_Helmet_Trooper_Base",
+			"MET_Vest_Rack_AT",
+			"MET_NVG_Integrated_Base"
 		};
 	};
     class MET_P2_AA: MET_P2_Base
@@ -1249,41 +1144,40 @@ class CfgVehicles
 		editorSubCategory="metal_co_EdSubCat_p2";
 		editorPreview="\z\16th\addons\units\data\Editor Previews\Phase2\p2_hat.jpg";
 		side=1;
-        backpack="backpack_16th_heavy_AA";
-		uniformClass="armor_16th_trp";
+        backpack="MET_Backpack_Heavy_AA";
 		Weapons[]=
 		{
-            "MET_DC15S_NPC",
+            "MET_DC15S_F",
             "MET_PLX1_AA",
-            "MET_DC17SA",
+            "MET_DC17S_F",
 			"JLTS_CloneBinocular",
 			"Put",
 			"Throw"
 		};
 		respawnWeapons[]=
 		{
-            "MET_DC15S_NPC",
+            "MET_DC15S_F",
             "MET_PLX1_AA",
-            "MET_DC17SA",
+            "MET_DC17S_F",
 			"JLTS_CloneBinocular",
 			"Put",
 			"Throw"
 		};
 		Magazines[]=
 		{
-			"MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
+			"MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
 			"MET_blaster_pistol_battery",
 			"MET_blaster_pistol_battery",
 			"MET_Weapons_Mags_Thermal_Detonator",
@@ -1300,19 +1194,19 @@ class CfgVehicles
 		};
 		respawnMagazines[]=
 		{
-			"MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
-            "MET_DC15A_mag",
+			"MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
+            "MET_DC15S_mag",
 			"MET_blaster_pistol_battery",
 			"MET_blaster_pistol_battery",
 			"MET_Weapons_Mags_Thermal_Detonator",
@@ -1334,10 +1228,9 @@ class CfgVehicles
 			"ItemCompass",
 			"JLTS_clone_comlink",
 			"ACE_Altimeter",
-			"helmet_16th_trp",
-			"vest_16_backpack_rack_at",
-			"CWHUD_P2_base",
-			"212th_JLTS_Clone_Helmet_NVG_Chip"
+			"MET_Helmet_Trooper_Base",
+			"MET_Vest_Rack_AT",
+			"MET_NVG_Integrated_Base"
 		};
 		respawnLinkedItems[]=
 		{
@@ -1346,10 +1239,9 @@ class CfgVehicles
 			"ItemCompass",
 			"JLTS_clone_comlink",
 			"ACE_Altimeter",
-			"helmet_16th_trp",
-			"vest_16_backpack_rack_at",
-			"CWHUD_P2_base",
-			"212th_JLTS_Clone_Helmet_NVG_Chip"
+			"MET_Helmet_Trooper_Base",
+			"MET_Vest_Rack_AT",
+			"MET_NVG_Integrated_Base"
 		};
 	};
 };

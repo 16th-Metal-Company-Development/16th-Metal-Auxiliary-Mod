@@ -1,6 +1,6 @@
 class CfgPatches
 {
-	class metal_other_weap
+	class metal_swamp_weap
 	{
 		author="";
 		requiredVersion=0.1;
@@ -429,7 +429,7 @@ class CfgWeapons
 		canShootInWater=1;
 		displayName="[Swamp] M-41 Heavy Repeating Blaster";
 		descriptionShort="";
-		WBK_UseHeavyWeaponFramework = true;	
+		WBK_UseHeavyWeaponFramework = "true";	
 		magazines[]=
 		{
 			"MET_M41_mag"

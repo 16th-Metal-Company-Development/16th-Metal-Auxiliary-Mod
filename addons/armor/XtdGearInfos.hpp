@@ -1,186 +1,189 @@
 class XtdGearInfos {
     class CfgWeapons {
         // [16th] Trooper Helmet variants (Phase 2)
-        class helmet_16th_cadet        { model = "16th_Trooper_Helmet"; camo = "Cadet"; };
-        class helmet_16th_trp          { model = "16th_Trooper_Helmet"; camo = "Trooper"; };
-        class helmet_16th_vttrp        { model = "16th_Trooper_Helmet"; camo = "Veteran"; };
-        class helmet_16th_special      { model = "16th_Trooper_Helmet"; camo = "Specialist"; };
-        class helmet_16th_nco          { model = "16th_Trooper_Helmet"; camo = "NCO"; };
-        class helmet_16th_snco         { model = "16th_Trooper_Helmet"; camo = "SNCO"; };
-        class helmet_16th_officer      { model = "16th_Trooper_Helmet"; camo = "Officer"; };
-        class helmet_16th_medic        { model = "16th_Trooper_Helmet"; camo = "Medic"; };
-        class helmet_16th_eod          { model = "16th_Trooper_Helmet"; camo = "EOD"; };   
+        class MET_Helmet_Trooper_Cadet       { model = "MET_Trooper_Helmet"; camo = "Cadet"; };
+        class MET_Helmet_Trooper_Base        { model = "MET_Trooper_Helmet"; camo = "Trooper"; };
+        class MET_Helmet_Trooper_Veteran     { model = "MET_Trooper_Helmet"; camo = "Veteran"; };
+        class MET_Helmet_Trooper_SPC         { model = "MET_Trooper_Helmet"; camo = "Specialist"; };
+        class MET_Helmet_Trooper_NCO         { model = "MET_Trooper_Helmet"; camo = "NCO"; };
+        class MET_Helmet_Trooper_SNCO        { model = "MET_Trooper_Helmet"; camo = "SNCO"; };
+        class MET_Helmet_Trooper_Officer     { model = "MET_Trooper_Helmet"; camo = "Officer"; };
+        class MET_Helmet_Trooper_Medic       { model = "MET_Trooper_Helmet"; camo = "Medic"; };
+        class MET_Helmet_Trooper_EOD         { model = "MET_Trooper_Helmet"; camo = "EOD"; };
 
         // [16th] Custom Trooper Helmet Variants
-        class helmet_16th_arch         { model = "16th_Custom_Helmet"; camo = "Arch"; };
-        class helmet_16th_avalanche    { model = "16th_Custom_Helmet"; camo = "Avalanche"; };
-        class helmet_16th_ben          { model = "16th_Custom_Helmet"; camo = "Ben"; };
-        class helmet_16th_beige        { model = "16th_Custom_Helmet"; camo = "Beige"; };
-        class helmet_16th_blackrose    { model = "16th_Custom_Helmet"; camo = "Blackrose"; };
-        class helmet_16th_blat         { model = "16th_Custom_Helmet"; camo = "Blatt"; };
-        class helmet_16th_blowfish     { model = "16th_Custom_Helmet"; camo = "Blowfish"; };
-        class helmet_16th_bopit        { model = "16th_Custom_Helmet"; camo = "Bopit"; };
-        class helmet_16th_butcher      { model = "16th_Custom_Helmet"; camo = "Butcher"; };
-        class helmet_16th_chet         { model = "16th_Custom_Helmet"; camo = "Chet"; };
-        class helmet_16th_chetiah      { model = "16th_Custom_Helmet"; camo = "Chetiah"; };
-        class helmet_16th_cougar       { model = "16th_Custom_Helmet"; camo = "Cougar"; };
-        class helmet_16th_creed        { model = "16th_Custom_Helmet"; camo = "Creed"; };
-        class helmet_16th_fish         { model = "16th_Custom_Helmet"; camo = "Fish"; };
-        class helmet_16th_frost        { model = "16th_Custom_Helmet"; camo = "Frost"; };
-        class helmet_16th_gambit       { model = "16th_Custom_Helmet"; camo = "Gambit"; };
-        class helmet_16th_hazmat       { model = "16th_Custom_Helmet"; camo = "Hazmat"; };
-        class helmet_16th_hellwolf     { model = "16th_Custom_Helmet"; camo = "Hellwolf"; };
-        class helmet_16th_hevy         { model = "16th_Custom_Helmet"; camo = "Hevy"; };
-        class helmet_16th_hood         { model = "16th_Custom_Helmet"; camo = "Hood"; };
-        class helmet_16th_karma        { model = "16th_Custom_Helmet"; camo = "Karma"; };
-        class helmet_16th_krieg        { model = "16th_Custom_Helmet"; camo = "Krieg"; };
-        class helmet_16th_longshot     { model = "16th_Custom_Helmet"; camo = "Longshot"; };
-        class helmet_16th_mace         { model = "16th_Custom_Helmet"; camo = "Mace"; };
-        class helmet_16th_maia         { model = "16th_Custom_Helmet"; camo = "Maia"; };
-        class helmet_16th_maple        { model = "16th_Custom_Helmet"; camo = "Maple"; };
-        class helmet_16th_maxson       { model = "16th_Custom_Helmet"; camo = "Maxson"; };
-        class helmet_16th_merlin       { model = "16th_Custom_Helmet"; camo = "Merlin"; };
-        class helmet_16th_moldy        { model = "16th_Custom_Helmet"; camo = "Moldy"; };
-        class helmet_16th_nix          { model = "16th_Custom_Helmet"; camo = "Nix"; };
-        class helmet_16th_noble        { model = "16th_Custom_Helmet"; camo = "Noble"; };
-        class helmet_16th_orpheus      { model = "16th_Custom_Helmet"; camo = "Orpheus"; };
-        class helmet_16th_prez         { model = "16th_Custom_Helmet"; camo = "Prez"; };
-        class helmet_16th_ronin_barc   { model = "16th_Custom_Helmet"; camo = "Ronin"; };
-        class helmet_16th_roz          { model = "16th_Custom_Helmet"; camo = "Roz"; };
-        class helmet_16th_sam          { model = "16th_Custom_Helmet"; camo = "Sam"; };
-        class helmet_16th_six          { model = "16th_Custom_Helmet"; camo = "Six"; };
-        class helmet_16th_ska          { model = "16th_Custom_Helmet"; camo = "Ska"; };
-        class helmet_16th_smith        { model = "16th_Custom_Helmet"; camo = "Smith"; };
-        class helmet_16th_spice        { model = "16th_Custom_Helmet"; camo = "Spice"; };
-        class helmet_16th_sunto        { model = "16th_Custom_Helmet"; camo = "Sunto"; };
-        class helmet_16th_talk         { model = "16th_Custom_Helmet"; camo = "Talk"; };
-        class helmet_16th_vergil       { model = "16th_Custom_Helmet"; camo = "Vergil"; };
-        class helmet_16th_william      { model = "16th_Custom_Helmet"; camo = "William"; };
-        class helmet_16th_winters      { model = "16th_Custom_Helmet"; camo = "Winters"; };
-        class helmet_16th_wolf         { model = "16th_Custom_Helmet"; camo = "Wolf"; };
+        class MET_Helmet_Trooper_Arch        { model = "MET_Custom_Helmet"; camo = "Arch"; };
+        class MET_Helmet_Trooper_Avalanche   { model = "MET_Custom_Helmet"; camo = "Avalanche"; };
+        class MET_Helmet_Trooper_Ben         { model = "MET_Custom_Helmet"; camo = "Ben"; };
+        class MET_Helmet_Trooper_Beige       { model = "MET_Custom_Helmet"; camo = "Beige"; };
+        class MET_Helmet_Trooper_Blackrose   { model = "MET_Custom_Helmet"; camo = "Blackrose"; };
+        class MET_Helmet_Trooper_Blatt       { model = "MET_Custom_Helmet"; camo = "Blatt"; };
+        class MET_Helmet_Trooper_Blowfish    { model = "MET_Custom_Helmet"; camo = "Blowfish"; };
+        class MET_Helmet_Trooper_Bopit       { model = "MET_Custom_Helmet"; camo = "Bopit"; };
+        class MET_Helmet_Trooper_Butcher     { model = "MET_Custom_Helmet"; camo = "Butcher"; };
+        class MET_Helmet_Trooper_Chet        { model = "MET_Custom_Helmet"; camo = "Chet"; };
+        class MET_Helmet_Trooper_Chetiah     { model = "MET_Custom_Helmet"; camo = "Chetiah"; };
+        class MET_Helmet_Trooper_Cougar      { model = "MET_Custom_Helmet"; camo = "Cougar"; };
+        class MET_Helmet_Trooper_Creed       { model = "MET_Custom_Helmet"; camo = "Creed"; };
+        class MET_Helmet_Trooper_Fish        { model = "MET_Custom_Helmet"; camo = "Fish"; };
+        class MET_Helmet_Trooper_Frost       { model = "MET_Custom_Helmet"; camo = "Frost"; };
+        class MET_Helmet_Trooper_Gambit      { model = "MET_Custom_Helmet"; camo = "Gambit"; };
+        class MET_Helmet_Trooper_Hazmat      { model = "MET_Custom_Helmet"; camo = "Hazmat"; };
+        class MET_Helmet_Trooper_Hellwolf    { model = "MET_Custom_Helmet"; camo = "Hellwolf"; };
+        class MET_Helmet_Trooper_Hevy        { model = "MET_Custom_Helmet"; camo = "Hevy"; };
+        class MET_Helmet_Trooper_Hood        { model = "MET_Custom_Helmet"; camo = "Hood"; };
+        class MET_Helmet_Trooper_Karma       { model = "MET_Custom_Helmet"; camo = "Karma"; };
+        class MET_Helmet_Trooper_Krieg       { model = "MET_Custom_Helmet"; camo = "Krieg"; };
+        class MET_Helmet_Trooper_Longshot    { model = "MET_Custom_Helmet"; camo = "Longshot"; };
+        class MET_Helmet_Trooper_Mace        { model = "MET_Custom_Helmet"; camo = "Mace"; };
+        class MET_Helmet_Trooper_Maia        { model = "MET_Custom_Helmet"; camo = "Maia"; };
+        class MET_Helmet_Trooper_Maple       { model = "MET_Custom_Helmet"; camo = "Maple"; };
+        class MET_Helmet_Trooper_Maxson      { model = "MET_Custom_Helmet"; camo = "Maxson"; };
+        class MET_Helmet_Trooper_Merlin      { model = "MET_Custom_Helmet"; camo = "Merlin"; };
+        class MET_Helmet_Trooper_Moldy       { model = "MET_Custom_Helmet"; camo = "Moldy"; };
+        class MET_Helmet_Trooper_Nix         { model = "MET_Custom_Helmet"; camo = "Nix"; };
+        class MET_Helmet_Trooper_Noble       { model = "MET_Custom_Helmet"; camo = "Noble"; };
+        class MET_Helmet_Trooper_Orpheus     { model = "MET_Custom_Helmet"; camo = "Orpheus"; };
+        class MET_Helmet_Trooper_Prez        { model = "MET_Custom_Helmet"; camo = "Prez"; };
+        class MET_Helmet_BARC_Ronin          { model = "MET_Custom_Helmet"; camo = "Ronin"; };
+        class MET_Helmet_Trooper_Roz         { model = "MET_Custom_Helmet"; camo = "Roz"; };
+        class MET_Helmet_Trooper_Sam         { model = "MET_Custom_Helmet"; camo = "Sam"; };
+        class MET_Helmet_Trooper_Six         { model = "MET_Custom_Helmet"; camo = "Six"; };
+        class MET_Helmet_Trooper_Ska         { model = "MET_Custom_Helmet"; camo = "Ska"; };
+        class MET_Helmet_Trooper_Smith       { model = "MET_Custom_Helmet"; camo = "Smith"; };
+        class MET_Helmet_Trooper_Spice       { model = "MET_Custom_Helmet"; camo = "Spice"; };
+        class MET_Helmet_Trooper_Sunto       { model = "MET_Custom_Helmet"; camo = "Sunto"; };
+        class MET_Helmet_Trooper_Talk        { model = "MET_Custom_Helmet"; camo = "Talk"; };
+        class MET_Helmet_Trooper_Vergil      { model = "MET_Custom_Helmet"; camo = "Vergil"; };
+        class MET_Helmet_Trooper_William     { model = "MET_Custom_Helmet"; camo = "William"; };
+        class MET_Helmet_Trooper_Winters     { model = "MET_Custom_Helmet"; camo = "Winters"; };
+        class MET_Helmet_Trooper_Wolf        { model = "MET_Custom_Helmet"; camo = "Wolf"; };
 
         // [16th] Airborne Trooper Helmet variants
-        class helmet_16th_ab_trp       { model = "16th_Airborne_Helmet"; camo = "Trooper"; };
-        class helmet_16th_ab_vtrp      { model = "16th_Airborne_Helmet"; camo = "Veteran"; };
-        class helmet_16th_ab_cpl       { model = "16th_Airborne_Helmet"; camo = "Corporal"; };
-        class helmet_16th_ab_sgt       { model = "16th_Airborne_Helmet"; camo = "Sergeant"; };
-        class helmet_16th_ab_ssgt      { model = "16th_Airborne_Helmet"; camo = "SSG"; };
-        class helmet_16th_ab_cfs       { model = "16th_Airborne_Helmet"; camo = "1SG"; };
-        class helmet_16th_ab_sgm       { model = "16th_Airborne_Helmet"; camo = "SGM"; };
-        class helmet_16th_ab_medic     { model = "16th_Airborne_Helmet"; camo = "Medic"; };
+        class MET_Helmet_Airborne_Base       { model = "MET_Airborne_Helmet"; camo = "Trooper"; };
+        class MET_Helmet_Airborne_Veteran    { model = "MET_Airborne_Helmet"; camo = "Veteran"; };
+        class MET_Helmet_Airborne_SPC        { model = "MET_Airborne_Helmet"; camo = "Specialist"; };
+        class MET_Helmet_Airborne_NCO        { model = "MET_Airborne_Helmet"; camo = "NCO"; };
+        class MET_Helmet_Airborne_SNCO       { model = "MET_Airborne_Helmet"; camo = "SNCO"; };
+        class MET_Helmet_Airborne_Officer    { model = "MET_Airborne_Helmet"; camo = "Officer"; };
+        class MET_Helmet_Airborne_Medic      { model = "MET_Airborne_Helmet"; camo = "Medic"; };
 
         // [16th] Custom Airborne Trooper Helmet variants
-        class helmet_16th_ab_blackrose { model = "16th_Custom_Airborne_Helmet"; camo = "Blackrose"; };
-        class helmet_16th_ab_jero      { model = "16th_Custom_Airborne_Helmet"; camo = "Jero"; };
-        class helmet_16th_ab_noble     { model = "16th_Custom_Airborne_Helmet"; camo = "Noble"; };
-        class helmet_16th_ab_vergil    { model = "16th_Custom_Airborne_Helmet"; camo = "Vergil"; };
+        class MET_Helmet_Airborne_Blackrose  { model = "MET_Custom_Airborne_Helmet"; camo = "Blackrose"; };
+        class MET_Helmet_Airborne_Jero       { model = "MET_Custom_Airborne_Helmet"; camo = "Jero"; };
+        class MET_Helmet_Airborne_Noble      { model = "MET_Custom_Airborne_Helmet"; camo = "Noble"; };
+        class MET_Helmet_Airborne_Vergil     { model = "MET_Custom_Airborne_Helmet"; camo = "Vergil"; };
 
         // [16th] ARF variants
-        class helmet_16th_arf          { model = "16th_ARF_Helmet"; camo = "Trooper"; };
-        class helmet_16th_arf_nco      { model = "16th_ARF_Helmet"; camo = "NCO"; };
+        class MET_Helmet_ARF_Base            { model = "MET_ARF_Helmet"; camo = "Trooper"; };
+        class MET_Helmet_ARF_NCO             { model = "MET_ARF_Helmet"; camo = "NCO"; };
 
         // [16th] Custom ARF variants
-        class helmet_16th_blue_arf     { model = "16th_Custom_ARF_Helmet"; camo = "Blue"; };
-        class helmet_16th_chet_arf     { model = "16th_Custom_ARF_Helmet"; camo = "Chet"; };
-        class helmet_16th_convor       { model = "16th_Custom_ARF_Helmet"; camo = "Convor"; };
-        class helmet_16th_kix          { model = "16th_Custom_ARF_Helmet"; camo = "Kix"; };
-        class helmet_16th_maple_arf    { model = "16th_Custom_ARF_Helmet"; camo = "Maple"; };
-        class helmet_16th_tavion_arf   { model = "16th_Custom_ARF_Helmet"; camo = "Tavion"; };
+        class MET_Helmet_ARF_Blue            { model = "MET_Custom_ARF_Helmet"; camo = "Blue"; };
+        class MET_Helmet_ARF_Chet            { model = "MET_Custom_ARF_Helmet"; camo = "Chet"; };
+        class MET_Helmet_ARF_Convor          { model = "MET_Custom_ARF_Helmet"; camo = "Convor"; };
+        class MET_Helmet_ARF_Kix             { model = "MET_Custom_ARF_Helmet"; camo = "Kix"; };
+        class MET_Helmet_ARF_Maple           { model = "MET_Custom_ARF_Helmet"; camo = "Maple"; };
+        class MET_Helmet_ARF_Tavion          { model = "MET_Custom_ARF_Helmet"; camo = "Tavion"; };
 
         // [16th] Cold Assault Helmet variants
-        class helmet_16th_sm_trp        { model = "16th_CA_Helmet"; camo = "Trooper"; };
-        class helmet_16_sm_nco          { model = "16th_CA_Helmet"; camo = "NCO"; };
-        class helmet_16_sm_off          { model = "16th_CA_Helmet"; camo = "Officer"; };
-        class helmet_16_sm_rto          { model = "16th_CA_Helmet"; camo = "RTO"; };
+        class MET_Helmet_Cold_Base           { model = "MET_CA_Helmet"; camo = "Trooper"; };
+        class MET_Helmet_Cold_NCO            { model = "MET_CA_Helmet"; camo = "NCO"; };
+        class MET_Helmet_Cold_Officer        { model = "MET_CA_Helmet"; camo = "Officer"; };
+        class MET_Helmet_Cold_RTO            { model = "MET_CA_Helmet"; camo = "RTO"; };
 
         // [16th] Thunder Helmet (Pilot) variants
-        class helmet_16th_plt           { model = "16th_Thunder_Helmet"; camo = "Pilot"; };
-        class helmet_16th_plt_fool      { model = "16th_Thunder_Helmet"; camo = "Fool"; };
-        class helmet_16th_plt_sunto     { model = "16th_Thunder_Helmet"; camo = "Sunto"; };
+        class MET_Helmet_Pilot_Base          { model = "MET_Thunder_Helmet"; camo = "Pilot"; };
+        class MET_Helmet_Pilot_Fool          { model = "MET_Thunder_Helmet"; camo = "Fool"; };
+        class MET_Helmet_Pilot_Sunto         { model = "MET_Thunder_Helmet"; camo = "Sunto"; };
 
         // [16th] Trooper Armor variants (Phase 2)
-        class armor_16th_cadet          { model = "16th_Trooper_Armor"; camo = "Cadet"; };
-        class armor_16th_trp            { model = "16th_Trooper_Armor"; camo = "Trooper"; };
-        class armor_16th_vttrp          { model = "16th_Trooper_Armor"; camo = "Veteran"; };
-        class armor_16th_special        { model = "16th_Trooper_Armor"; camo = "Specialist"; };
-        class armor_16th_nco            { model = "16th_Trooper_Armor"; camo = "NCO"; };
-        class armor_16th_snco           { model = "16th_Trooper_Armor"; camo = "SNCO"; };
-        class armor_16th_officer        { model = "16th_Trooper_Armor"; camo = "Officer"; };
-        class armor_16th_med            { model = "16th_Trooper_Armor"; camo = "Medic"; };
-        class armor_16th_eod            { model = "16th_Trooper_Armor"; camo = "EOD"; };
-        class armor_16th_arty           { model = "16th_Trooper_Armor"; camo = "Dragon"; };
-        class armor_16th_arty_nco       { model = "16th_Trooper_Armor"; camo = "DragonNCO"; };
-        class armor_16th_mechanized     { model = "16th_Trooper_Armor"; camo = "Reaper"; };
-        class armor_16th_mechanized_nco { model = "16th_Trooper_Armor"; camo = "ReaperNCO"; };
+        class MET_Uniform_Trooper_Cadet      { model = "MET_Trooper_Armor"; camo = "Cadet"; };
+        class MET_Uniform_Trooper            { model = "MET_Trooper_Armor"; camo = "Trooper"; };
+        class MET_Uniform_Trooper_Veteran    { model = "MET_Trooper_Armor"; camo = "Veteran"; };
+        class MET_Uniform_Trooper_SPC        { model = "MET_Trooper_Armor"; camo = "Specialist"; };
+        class MET_Uniform_Trooper_NCO        { model = "MET_Trooper_Armor"; camo = "NCO"; };
+        class MET_Uniform_Trooper_SNCO       { model = "MET_Trooper_Armor"; camo = "SNCO"; };
+        class MET_Uniform_Trooper_Officer    { model = "MET_Trooper_Armor"; camo = "Officer"; };
+        class MET_Uniform_Trooper_Medic      { model = "MET_Trooper_Armor"; camo = "Medic"; };
+        class MET_Uniform_Trooper_EOD        { model = "MET_Trooper_Armor"; camo = "EOD"; };
+
+        // [16th] Dragon Armor Variants
+        class MET_Uniform_Dragon             { model = "MET_Dragon_Armor"; camo = "Trooper"; };
+        class MET_Uniform_Dragon_NCO         { model = "MET_Dragon_Armor"; camo = "NCO"; };
+
+        // [16th] Reaper Armor Variants
+        class MET_Uniform_Reaper             { model = "MET_Reaper_Armor"; camo = "Trooper"; };
+        class MET_Uniform_Reaper_NCO         { model = "MET_Reaper_Armor"; camo = "NCO"; };
 
         // [16th] Custom Armor variants (Phase 2)
-        class armor_16th_avalanche      { model = "16th_Custom_Armor"; camo = "Avalanche"; };
-        class armor_16th_ben            { model = "16th_Custom_Armor"; camo = "Ben"; };
-        class armor_16th_blackrose      { model = "16th_Custom_Armor"; camo = "Blackrose"; };
-        class armor_16th_blatt          { model = "16th_Custom_Armor"; camo = "Blatt"; };
-        class armor_16th_cooger         { model = "16th_Custom_Armor"; camo = "Cougar"; };
-        class armor_16th_fool           { model = "16th_Custom_Armor"; camo = "Fool"; };
-        class armor_16th_hazmat         { model = "16th_Custom_Armor"; camo = "Hazmat"; };
-        class armor_16th_hood           { model = "16th_Custom_Armor"; camo = "Hood"; };
-        class armor_16th_kix            { model = "16th_Custom_Armor"; camo = "Kix"; };
-        class armor_16th_maxson         { model = "16th_Custom_Armor"; camo = "Maxson"; };
-        class armor_16th_merlin         { model = "16th_Custom_Armor"; camo = "Merlin"; };
-        class armor_16th_moldy          { model = "16th_Custom_Armor"; camo = "Moldy"; };
-        class armor_16th_moldy_zeus     { model = "16th_Custom_Armor"; camo = "Moldy Zeus"; };
-        class armor_16th_nix            { model = "16th_Custom_Armor"; camo = "Nix"; };
-        class armor_16th_noble          { model = "16th_Custom_Armor"; camo = "Noble"; };
-        class armor_16th_prez           { model = "16th_Custom_Armor"; camo = "Prez"; };
-        class armor_16th_ronin          { model = "16th_Custom_Armor"; camo = "Ronin"; };
-        class armor_16th_roz            { model = "16th_Custom_Armor"; camo = "Roz"; };
-        class armor_16th_six            { model = "16th_Custom_Armor"; camo = "Six"; };
-        class armor_16th_sunto          { model = "16th_Custom_Armor"; camo = "Sunto"; };
-        class armor_16th_vergil         { model = "16th_Custom_Armor"; camo = "Vergil"; };
-        class armor_16th_winters        { model = "16th_Custom_Armor"; camo = "Winters"; };
+        class MET_Uniform_Marshal_Avalanche  { model = "MET_Custom_Armor"; camo = "Avalanche"; };
+        class MET_Uniform_Trooper_Ben        { model = "MET_Custom_Armor"; camo = "Ben"; };
+        class MET_Uniform_Trooper_Blackrose  { model = "MET_Custom_Armor"; camo = "Blackrose"; };
+        class MET_Uniform_Trooper_Blatt      { model = "MET_Custom_Armor"; camo = "Blatt"; };
+        class MET_Uniform_Trooper_Bopit      { model = "MET_Custom_Armor"; camo = "Bopit"; };
+        class MET_Uniform_Trooper_Cougar     { model = "MET_Custom_Armor"; camo = "Cougar"; };
+        class MET_Uniform_Trooper_Fool       { model = "MET_Custom_Armor"; camo = "Fool"; };
+        class MET_Uniform_Trooper_Hazmat     { model = "MET_Custom_Armor"; camo = "Hazmat"; };
+        class MET_Uniform_Trooper_Hood       { model = "MET_Custom_Armor"; camo = "Hood"; };
+        class MET_Uniform_Trooper_Kix        { model = "MET_Custom_Armor"; camo = "Kix"; };
+        class MET_Uniform_Trooper_Maxson     { model = "MET_Custom_Armor"; camo = "Maxson"; };
+        class MET_Uniform_Trooper_Merlin     { model = "MET_Custom_Armor"; camo = "Merlin"; };
+        class MET_Uniform_Trooper_Moldy      { model = "MET_Custom_Armor"; camo = "Moldy"; };
+        class MET_Uniform_Trooper_Moldy_Zeus { model = "MET_Custom_Armor"; camo = "Moldy Zeus"; };
+        class MET_Uniform_Trooper_Nix        { model = "MET_Custom_Armor"; camo = "Nix"; };
+        class MET_Uniform_Trooper_Noble      { model = "MET_Custom_Armor"; camo = "Noble"; };
+        class MET_Uniform_Trooper_Prez       { model = "MET_Custom_Armor"; camo = "Prez"; };
+        class MET_Uniform_Trooper_Ronin      { model = "MET_Custom_Armor"; camo = "Ronin"; };
+        class MET_Uniform_Trooper_Roz        { model = "MET_Custom_Armor"; camo = "Roz"; };
+        class MET_Uniform_Trooper_Six        { model = "MET_Custom_Armor"; camo = "Six"; };
+        class MET_Uniform_Trooper_Sunto      { model = "MET_Custom_Armor"; camo = "Sunto"; };
+        class MET_Uniform_Trooper_Vergil     { model = "MET_Custom_Armor"; camo = "Vergil"; };
+        class MET_Uniform_Trooper_Winters    { model = "MET_Custom_Armor"; camo = "Winters"; };
 
         // [16th] Airborne Trooper Armor variants
-        class armor_16th_ab_trp        { model = "16th_Airborne_Armor"; camo = "Trooper"; };
-        class armor_16th_ab_vtrp       { model = "16th_Airborne_Armor"; camo = "Veteran"; };
-        class armor_16th_ab_cpl        { model = "16th_Airborne_Armor"; camo = "Corporal"; };
-        class armor_16th_ab_sgt        { model = "16th_Airborne_Armor"; camo = "Sergeant"; };
-        class armor_16th_ab_ssgt       { model = "16th_Airborne_Armor"; camo = "SSG"; };
-        class armor_16th_ab_cfs        { model = "16th_Airborne_Armor"; camo = "1SG"; };
-        class armor_16th_ab_sgm        { model = "16th_Airborne_Armor"; camo = "SGM"; };
-        class armor_16th_ab_medic      { model = "16th_Airborne_Armor"; camo = "Medic"; };
+        class MET_Uniform_Airborne_Trooper   { model = "MET_Airborne_Armor"; camo = "Trooper"; };
+        class MET_Uniform_Airborne_Veteran   { model = "MET_Airborne_Armor"; camo = "Veteran"; };
+        class MET_Uniform_Airborne_SPC       { model = "MET_Airborne_Armor"; camo = "Specialist"; };
+        class MET_Uniform_Airborne_NCO       { model = "MET_Airborne_Armor"; camo = "NCO"; };
+        class MET_Uniform_Airborne_SNCO      { model = "MET_Airborne_Armor"; camo = "SNCO"; };
+        class MET_Uniform_Airborne_Officer   { model = "MET_Airborne_Armor"; camo = "Officer"; };
+        class MET_Uniform_Airborne_Medic     { model = "MET_Airborne_Armor"; camo = "Medic"; };
 
         // [16th] Goff Armor (ARF) variants
-        class armor_16th_arf           { model = "16th_Goff_Armor"; camo = "Trooper"; };
-        class armor_16th_arf_nco       { model = "16th_Goff_Armor"; camo = "NCO"; };
+        class MET_Uniform_ARF                { model = "MET_Goff_Armor"; camo = "Trooper"; };
+        class MET_Uniform_ARF_NCO            { model = "MET_Goff_Armor"; camo = "NCO"; };
 
         // [16th] Cold Assault Armor variants
-        class armor_16_ca_trp          { model = "16th_CA_Armor"; camo = "Trooper"; };
-        class armor_16_ca_nco          { model = "16th_CA_Armor"; camo = "NCO"; };
-        class armor_16_ca_off          { model = "16th_CA_Armor"; camo = "Officer"; };
-        class armor_16_ca_med          { model = "16th_CA_Armor"; camo = "Medic"; };
-        class armor_16_ca_eod          { model = "16th_CA_Armor"; camo = "EOD"; };
+        class MET_Uniform_Cold_Trooper       { model = "MET_CA_Armor"; camo = "Trooper"; };
+        class MET_Uniform_Cold_NCO           { model = "MET_CA_Armor"; camo = "NCO"; };
+        class MET_Uniform_Cold_Officer       { model = "MET_CA_Armor"; camo = "Officer"; };
+        class MET_Uniform_Cold_Medic         { model = "MET_CA_Armor"; camo = "Medic"; };
+        class MET_Uniform_Cold_EOD           { model = "MET_CA_Armor"; camo = "EOD"; };
 
         // [16th] Advanced Vision Chips
-        class nvg_16th_adv_chip_1      { model = "16th_Advanced_Vision_Chip"; camo = "White Hot"; };
-        class nvg_16th_adv_chip_2      { model = "16th_Advanced_Vision_Chip"; camo = "Green Hot"; };
-        class nvg_16th_adv_chip_3      { model = "16th_Advanced_Vision_Chip"; camo = "Red Hot"; };
-        class nvg_16th_adv_chip_4      { model = "16th_Advanced_Vision_Chip"; camo = "Multi"; };
+        class MET_NVG_Integrated_WH          { model = "MET_Advanced_Vision_Chip"; camo = "White Hot"; };
+        class MET_NVG_Integrated_GH          { model = "MET_Advanced_Vision_Chip"; camo = "Green Hot"; };
+        class MET_NVG_Integrated_RH          { model = "MET_Advanced_Vision_Chip"; camo = "Red Hot"; };
+        class MET_NVG_Integrated_MU          { model = "MET_Advanced_Vision_Chip"; camo = "Multi"; };
 
         // [16th] Macrobinoculars
-        class nvg_16th_macro          { model = "16th_Macrobinoculars"; camo = "Normal"; };
-        class nvg_16th_macro_down     { model = "16th_Macrobinoculars"; camo = "Down"; };
-        class nvg_16th_macro_eod      { model = "16th_Macrobinoculars"; camo = "EOD"; };
-        class nvg_16th_macro_med      { model = "16th_Macrobinoculars"; camo = "Medic"; };
+        class MET_NVG_Macrobinocular_Base    { model = "MET_Macrobinoculars"; camo = "Normal"; };
+        class MET_NVG_Macrobinocular_Down    { model = "MET_Macrobinoculars"; camo = "Down"; };
+        class MET_NVG_Macrobinocular_EOD     { model = "MET_Macrobinoculars"; camo = "EOD"; };
+        class MET_NVG_Macrobinocular_MED     { model = "MET_Macrobinoculars"; camo = "Medic"; };
     };
 
     class CfgVehicles {
         
         // [16th] JT-12 Jetpacks
-        class jetpack_16th           { model = "16th_JT12_Jetpacks"; camo = "Trooper"; };
-        class jetpack_16th_ro        { model = "16th_JT12_Jetpacks"; camo = "RTO"; };
-        class jetpack_16th_medic     { model = "16th_JT12_Jetpacks"; camo = "Medic"; };
+        class MET_Jetpack_Base   { model = "MET_JT12_Jetpacks"; camo = "Trooper"; };
+        class MET_Jetpack_RTO    { model = "MET_JT12_Jetpacks"; camo = "RTO"; };
+        class MET_Jetpack_Medic  { model = "MET_JT12_Jetpacks"; camo = "Medic"; };
 
         // [16th] Jump Packs
-        class jumppack_16th          { model = "16th_Jump_Packs"; camo = "Trooper"; };
-        class jumppack_16th_RTO      { model = "16th_Jump_Packs"; camo = "RTO"; };
-        class jumppack_16th_med      { model = "16th_Jump_Packs"; camo = "Medic"; };
+        class MET_Jumppack_Base  { model = "MET_Jump_Packs"; camo = "Trooper"; };
+        class MET_Jumppack_RTO   { model = "MET_Jump_Packs"; camo = "RTO"; };
+        class MET_Jumppack_Medic { model = "MET_Jump_Packs"; camo = "Medic"; };
     }
 };
