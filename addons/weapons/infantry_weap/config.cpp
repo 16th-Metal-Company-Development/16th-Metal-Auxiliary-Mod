@@ -12706,15 +12706,23 @@ class CfgMagazineWells
 	{
 		MET_DC20Magazines_REP[]=
 		{
+			
 			"MET_DC15A_mag",
+			"MET_DC15S_mag",
 			"MET_DC15S_Mag",
 			"MET_DC19E_mag",
+			"MET_DC15LE_mag",
 			"MET_CinCar_Mag",
 			"MET_DC15SMG_Mag",
+			"MET_Valken_mag",
 			"MET_blaster_pistolC_battery",
 			"MET_blaster_pistol_battery",
 			"MET_dual_blaster_pistol_battery",
 			"MET_blaster_pistol_Red_battery",
+			"MET_DC17M_mag",
+			"MET_DC17M_Red_mag",
+			"MET_DC17M_Sniper_mag",
+			"MET_DC17M_Sniper_Red_mag",
 			"MET_dc15sa_battery",
 			"MET_dc15sa_red_battery"
 		};
@@ -12722,11 +12730,13 @@ class CfgMagazineWells
 		{
 			"MET_D200_Pistol_Mag",
 			"MET_DLA13_Mag",
-			"MET_T20_Mag"
+			"MET_T20_Mag",
+			"MET_X300_Sniper_mag"
 		};
 		MET_DC20Magazines_212[]=
 		{
-			"Aux212_JLTS_E5_Mag"
+			"Aux212_JLTS_E5_Mag",
+			"Aux212_JLTS_E5S_Mag"
 		};
 		MET_DC20Magazines_IDA[]=
 		{
@@ -12737,12 +12747,14 @@ class CfgMagazineWells
 		{
 			"ls_magazine_e5",
 			"ls_magazine_rg4d",
+			"ls_magazine_mercenarySniper",
 			"ls_magazine_westar35sa",
 			"ls_magazine_westar35s",
 			"ls_magazine_westar35c"
 		};
 		MET_DC20Magazines_MAND[]=
 		{
+			"MET_773_mag",
 			"MET_Westar35C_Mag",
 			"MET_Westar35S_Mag",
 			"MET_Westar35SA_mag"
@@ -12750,6 +12762,7 @@ class CfgMagazineWells
 		MET_DC20Magazines_JLTS[]=
 		{
 			"JLTS_E5_mag",
+			"JLTS_E5S_mag",
 			"JLTS_RG4D_mag"
 		};
 		MET_DC20Magazines_3as[]=
@@ -12760,9 +12773,9 @@ class CfgMagazineWells
 		};
 		MET_DC20Magazines_MET_Droid[]=
 		{
-			"Metal_E5_Mag",
-			"Metal_E5_BX_Mag",
-			"Metal_E5C_Mag",
+			"Metal_E5_mag",
+			"Metal_E5_BX_mag",
+			"Metal_E5S_mag",
 			"Metal_RG4D_mag"
 		};
 	};
