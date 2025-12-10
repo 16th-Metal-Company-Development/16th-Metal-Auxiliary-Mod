@@ -12709,7 +12709,6 @@ class CfgMagazineWells
 			
 			"MET_DC15A_mag",
 			"MET_DC15S_mag",
-			"MET_DC15S_Mag",
 			"MET_DC19E_mag",
 			"MET_DC15LE_mag",
 			"MET_CinCar_Mag",
