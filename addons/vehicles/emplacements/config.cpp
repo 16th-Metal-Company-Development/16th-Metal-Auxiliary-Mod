@@ -2920,35 +2920,35 @@ class CfgWeapons
 				weaponSoundEffect="";
 				begin1[]=
 				{
-					"z\16th\addons\weapons\infantry_weap\sounds\republic\z-6\z6.ogg",
+					"z\MET\addons\weapons\infantry_weap\sounds\republic\z-6\z6.ogg",
 					1,
 					1,
 					1800
 				};
 				begin2[]=
 				{
-					"z\16th\addons\weapons\infantry_weap\sounds\republic\z-6\z6.ogg",
+					"z\MET\addons\weapons\infantry_weap\sounds\republic\z-6\z6.ogg",
 					1,
 					1.015,
 					1800
 				};
 				begin3[]=
 				{
-					"z\16th\addons\weapons\infantry_weap\sounds\republic\z-6\z6.ogg",
+					"z\MET\addons\weapons\infantry_weap\sounds\republic\z-6\z6.ogg",
 					1,
 					0.98500001,
 					1800
 				};
 				begin4[]=
 				{
-					"z\16th\addons\weapons\infantry_weap\sounds\republic\z-6\z6.ogg",
+					"z\MET\addons\weapons\infantry_weap\sounds\republic\z-6\z6.ogg",
 					1,
 					1.01,
 					1800
 				};
 				begin5[]=
 				{
-					"z\16th\addons\weapons\infantry_weap\sounds\republic\z-6\z6.ogg",
+					"z\MET\addons\weapons\infantry_weap\sounds\republic\z-6\z6.ogg",
 					1,
 					0.995,
 					1800
@@ -2968,7 +2968,7 @@ class CfgWeapons
 				};
 				beginwater1[]=
 				{
-					"z\16th\addons\weapons\infantry_weap\sounds\republic\z-6\z6.ogg",
+					"z\MET\addons\weapons\infantry_weap\sounds\republic\z-6\z6.ogg",
 					1,
 					1,
 					400
@@ -3389,7 +3389,7 @@ class CfgWeapons
 		{
 			begin1[]=
 			{
-				"z\16th\addons\vehicles\sounds\big_nuetron_3.ogg",
+				"z\MET\addons\vehicles\sounds\big_nuetron_3.ogg",
 				2.5118864,
 				1,
 				1500
@@ -3430,7 +3430,7 @@ class CfgWeapons
 			{
 				begin1[]=
 				{
-					"z\16th\addons\vehicles\sounds\big_nuetron_3.ogg",
+					"z\MET\addons\vehicles\sounds\big_nuetron_3.ogg",
 					2.5118864,
 					1,
 					1500
@@ -5429,7 +5429,7 @@ class CfgVehicles
 			"camoScreen"
         };
         hiddenSelectionsTextures[] = {
-            "z\16th\addons\vehicles\emplacements\data\mortar_co_fuq_dat.paa",
+            "z\MET\addons\vehicles\emplacements\data\mortar_co_fuq_dat.paa",
             "OPTRE_Weapons_Turrets\au_44_mortar\data\computer_screen.paa"
         };
         hiddenSelectionsMaterials[] = {
@@ -5446,7 +5446,7 @@ class CfgVehicles
                 picture = "\OPTRE_Weapons_Turrets\AU_44_Mortar\data\icons\both.paa";
 				hiddenSelectionsTextures[]=
 				{
-					"z\16th\addons\armor\data\gear\backpacks\drag_backpack_co.paa"
+					"z\MET\addons\armor\data\gear\backpacks\drag_backpack_co.paa"
 				};
 				maximumLoad=0;
 				mass=1000;

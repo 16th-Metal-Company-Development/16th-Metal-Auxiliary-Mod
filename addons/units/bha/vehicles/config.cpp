@@ -3327,70 +3327,70 @@ class CfgWeapons
 				{
 					begin1[]=
 					{
-						"z\16th\addons\vehicles\sounds\cannon_1.ogg",
+						"z\MET\addons\vehicles\sounds\cannon_1.ogg",
 						1,
 						1,
 						1900
 					};
 					begin2[]=
 					{
-						"z\16th\addons\vehicles\sounds\cannon_2.ogg",
+						"z\MET\addons\vehicles\sounds\cannon_2.ogg",
 						1,
 						1,
 						1900
 					};
 					begin3[]=
 					{
-						"z\16th\addons\vehicles\sounds\cannon_3.ogg",
+						"z\MET\addons\vehicles\sounds\cannon_3.ogg",
 						1,
 						1,
 						1900
 					};
 					begin4[]=
 					{
-						"z\16th\addons\vehicles\sounds\cannon_4.ogg",
+						"z\MET\addons\vehicles\sounds\cannon_4.ogg",
 						1,
 						1,
 						1900
 					};
 					begin5[]=
 					{
-						"z\16th\addons\vehicles\sounds\cannon_5.ogg",
+						"z\MET\addons\vehicles\sounds\cannon_5.ogg",
 						1,
 						1,
 						1900
 					};
 					begin6[]=
 					{
-						"z\16th\addons\vehicles\sounds\cannon_6.ogg",
+						"z\MET\addons\vehicles\sounds\cannon_6.ogg",
 						1,
 						1,
 						1900
 					};
 					begin7[]=
 					{
-						"z\16th\addons\vehicles\sounds\cannon_7.ogg",
+						"z\MET\addons\vehicles\sounds\cannon_7.ogg",
 						1,
 						1,
 						1900
 					};
 					begin8[]=
 					{
-						"z\16th\addons\vehicles\sounds\cannon_8.ogg",
+						"z\MET\addons\vehicles\sounds\cannon_8.ogg",
 						1,
 						1,
 						1900
 					};
 					begin9[]=
 					{
-						"z\16th\addons\vehicles\sounds\cannon_9.ogg",
+						"z\MET\addons\vehicles\sounds\cannon_9.ogg",
 						1,
 						1,
 						1900
 					};
 					begin10[]=
 					{
-						"z\16th\addons\vehicles\sounds\cannon_10.ogg",
+						"z\MET\addons\vehicles\sounds\cannon_10.ogg",
 						1,
 						1,
 						1900
@@ -3494,70 +3494,70 @@ class CfgWeapons
 				{
 					begin1[]=
 					{
-						"z\16th\addons\vehicles\sounds\cannon_1.ogg",
+						"z\MET\addons\vehicles\sounds\cannon_1.ogg",
 						1,
 						1,
 						1900
 					};
 					begin2[]=
 					{
-						"z\16th\addons\vehicles\sounds\cannon_2.ogg",
+						"z\MET\addons\vehicles\sounds\cannon_2.ogg",
 						1,
 						1,
 						1900
 					};
 					begin3[]=
 					{
-						"z\16th\addons\vehicles\sounds\cannon_3.ogg",
+						"z\MET\addons\vehicles\sounds\cannon_3.ogg",
 						1,
 						1,
 						1900
 					};
 					begin4[]=
 					{
-						"z\16th\addons\vehicles\sounds\cannon_4.ogg",
+						"z\MET\addons\vehicles\sounds\cannon_4.ogg",
 						1,
 						1,
 						1900
 					};
 					begin5[]=
 					{
-						"z\16th\addons\vehicles\sounds\cannon_5.ogg",
+						"z\MET\addons\vehicles\sounds\cannon_5.ogg",
 						1,
 						1,
 						1900
 					};
 					begin6[]=
 					{
-						"z\16th\addons\vehicles\sounds\cannon_6.ogg",
+						"z\MET\addons\vehicles\sounds\cannon_6.ogg",
 						1,
 						1,
 						1900
 					};
 					begin7[]=
 					{
-						"z\16th\addons\vehicles\sounds\cannon_7.ogg",
+						"z\MET\addons\vehicles\sounds\cannon_7.ogg",
 						1,
 						1,
 						1900
 					};
 					begin8[]=
 					{
-						"z\16th\addons\vehicles\sounds\cannon_8.ogg",
+						"z\MET\addons\vehicles\sounds\cannon_8.ogg",
 						1,
 						1,
 						1900
 					};
 					begin9[]=
 					{
-						"z\16th\addons\vehicles\sounds\cannon_9.ogg",
+						"z\MET\addons\vehicles\sounds\cannon_9.ogg",
 						1,
 						1,
 						1900
 					};
 					begin10[]=
 					{
-						"z\16th\addons\vehicles\sounds\cannon_10.ogg",
+						"z\MET\addons\vehicles\sounds\cannon_10.ogg",
 						1,
 						1,
 						1900
@@ -3680,70 +3680,70 @@ class CfgWeapons
 				{
 					begin1[]=
 					{
-						"z\16th\addons\vehicles\sounds\cannon_1.ogg",
+						"z\MET\addons\vehicles\sounds\cannon_1.ogg",
 						1,
 						1,
 						1900
 					};
 					begin2[]=
 					{
-						"z\16th\addons\vehicles\sounds\cannon_2.ogg",
+						"z\MET\addons\vehicles\sounds\cannon_2.ogg",
 						1,
 						1,
 						1900
 					};
 					begin3[]=
 					{
-						"z\16th\addons\vehicles\sounds\cannon_3.ogg",
+						"z\MET\addons\vehicles\sounds\cannon_3.ogg",
 						1,
 						1,
 						1900
 					};
 					begin4[]=
 					{
-						"z\16th\addons\vehicles\sounds\cannon_4.ogg",
+						"z\MET\addons\vehicles\sounds\cannon_4.ogg",
 						1,
 						1,
 						1900
 					};
 					begin5[]=
 					{
-						"z\16th\addons\vehicles\sounds\cannon_5.ogg",
+						"z\MET\addons\vehicles\sounds\cannon_5.ogg",
 						1,
 						1,
 						1900
 					};
 					begin6[]=
 					{
-						"z\16th\addons\vehicles\sounds\cannon_6.ogg",
+						"z\MET\addons\vehicles\sounds\cannon_6.ogg",
 						1,
 						1,
 						1900
 					};
 					begin7[]=
 					{
-						"z\16th\addons\vehicles\sounds\cannon_7.ogg",
+						"z\MET\addons\vehicles\sounds\cannon_7.ogg",
 						1,
 						1,
 						1900
 					};
 					begin8[]=
 					{
-						"z\16th\addons\vehicles\sounds\cannon_8.ogg",
+						"z\MET\addons\vehicles\sounds\cannon_8.ogg",
 						1,
 						1,
 						1900
 					};
 					begin9[]=
 					{
-						"z\16th\addons\vehicles\sounds\cannon_9.ogg",
+						"z\MET\addons\vehicles\sounds\cannon_9.ogg",
 						1,
 						1,
 						1900
 					};
 					begin10[]=
 					{
-						"z\16th\addons\vehicles\sounds\cannon_10.ogg",
+						"z\MET\addons\vehicles\sounds\cannon_10.ogg",
 						1,
 						1,
 						1900
@@ -3847,70 +3847,70 @@ class CfgWeapons
 				{
 					begin1[]=
 					{
-						"z\16th\addons\vehicles\sounds\cannon_1.ogg",
+						"z\MET\addons\vehicles\sounds\cannon_1.ogg",
 						1,
 						1,
 						1900
 					};
 					begin2[]=
 					{
-						"z\16th\addons\vehicles\sounds\cannon_2.ogg",
+						"z\MET\addons\vehicles\sounds\cannon_2.ogg",
 						1,
 						1,
 						1900
 					};
 					begin3[]=
 					{
-						"z\16th\addons\vehicles\sounds\cannon_3.ogg",
+						"z\MET\addons\vehicles\sounds\cannon_3.ogg",
 						1,
 						1,
 						1900
 					};
 					begin4[]=
 					{
-						"z\16th\addons\vehicles\sounds\cannon_4.ogg",
+						"z\MET\addons\vehicles\sounds\cannon_4.ogg",
 						1,
 						1,
 						1900
 					};
 					begin5[]=
 					{
-						"z\16th\addons\vehicles\sounds\cannon_5.ogg",
+						"z\MET\addons\vehicles\sounds\cannon_5.ogg",
 						1,
 						1,
 						1900
 					};
 					begin6[]=
 					{
-						"z\16th\addons\vehicles\sounds\cannon_6.ogg",
+						"z\MET\addons\vehicles\sounds\cannon_6.ogg",
 						1,
 						1,
 						1900
 					};
 					begin7[]=
 					{
-						"z\16th\addons\vehicles\sounds\cannon_7.ogg",
+						"z\MET\addons\vehicles\sounds\cannon_7.ogg",
 						1,
 						1,
 						1900
 					};
 					begin8[]=
 					{
-						"z\16th\addons\vehicles\sounds\cannon_8.ogg",
+						"z\MET\addons\vehicles\sounds\cannon_8.ogg",
 						1,
 						1,
 						1900
 					};
 					begin9[]=
 					{
-						"z\16th\addons\vehicles\sounds\cannon_9.ogg",
+						"z\MET\addons\vehicles\sounds\cannon_9.ogg",
 						1,
 						1,
 						1900
 					};
 					begin10[]=
 					{
-						"z\16th\addons\vehicles\sounds\cannon_10.ogg",
+						"z\MET\addons\vehicles\sounds\cannon_10.ogg",
 						1,
 						1,
 						1900
@@ -4037,70 +4037,70 @@ class CfgWeapons
 				{
 					begin1[]=
 					{
-						"z\16th\addons\vehicles\sounds\cannon_1.ogg",
+						"z\MET\addons\vehicles\sounds\cannon_1.ogg",
 						1,
 						1,
 						1900
 					};
 					begin2[]=
 					{
-						"z\16th\addons\vehicles\sounds\cannon_2.ogg",
+						"z\MET\addons\vehicles\sounds\cannon_2.ogg",
 						1,
 						1,
 						1900
 					};
 					begin3[]=
 					{
-						"z\16th\addons\vehicles\sounds\cannon_3.ogg",
+						"z\MET\addons\vehicles\sounds\cannon_3.ogg",
 						1,
 						1,
 						1900
 					};
 					begin4[]=
 					{
-						"z\16th\addons\vehicles\sounds\cannon_4.ogg",
+						"z\MET\addons\vehicles\sounds\cannon_4.ogg",
 						1,
 						1,
 						1900
 					};
 					begin5[]=
 					{
-						"z\16th\addons\vehicles\sounds\cannon_5.ogg",
+						"z\MET\addons\vehicles\sounds\cannon_5.ogg",
 						1,
 						1,
 						1900
 					};
 					begin6[]=
 					{
-						"z\16th\addons\vehicles\sounds\cannon_6.ogg",
+						"z\MET\addons\vehicles\sounds\cannon_6.ogg",
 						1,
 						1,
 						1900
 					};
 					begin7[]=
 					{
-						"z\16th\addons\vehicles\sounds\cannon_7.ogg",
+						"z\MET\addons\vehicles\sounds\cannon_7.ogg",
 						1,
 						1,
 						1900
 					};
 					begin8[]=
 					{
-						"z\16th\addons\vehicles\sounds\cannon_8.ogg",
+						"z\MET\addons\vehicles\sounds\cannon_8.ogg",
 						1,
 						1,
 						1900
 					};
 					begin9[]=
 					{
-						"z\16th\addons\vehicles\sounds\cannon_9.ogg",
+						"z\MET\addons\vehicles\sounds\cannon_9.ogg",
 						1,
 						1,
 						1900
 					};
 					begin10[]=
 					{
-						"z\16th\addons\vehicles\sounds\cannon_10.ogg",
+						"z\MET\addons\vehicles\sounds\cannon_10.ogg",
 						1,
 						1,
 						1900
@@ -4262,7 +4262,7 @@ class CfgWeapons
 				weaponSoundEffect="";
 				begin1[]=
 				{
-					"z\16th\addons\vehicles\sounds\laser_cannon.ogg",
+					"z\MET\addons\vehicles\sounds\laser_cannon.ogg",
 					1,
 					1,
 					1800

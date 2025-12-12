@@ -245,7 +245,7 @@ class CfgWeapons
 			mass=8;
 			opticType=1;
 			optics=1;
-			modelOptics="z\16th\addons\weapons\scopes\big_cross_orange_full.p3d";
+			modelOptics="z\MET\addons\weapons\scopes\big_cross_orange_full.p3d";
 			class OpticsModes
 			{
 				class nctalkep
@@ -1992,7 +1992,7 @@ class CfgWeapons
 				weaponSoundEffect="";
 				begin1[]=
 				{
-					"z\16th\addons\weapons\other_weapons\sounds\fhr1.ogg",
+					"z\MET\addons\weapons\other_weapons\sounds\fhr1.ogg",
 					200,
 					1,
 					1800
@@ -2318,7 +2318,7 @@ class CfgWeapons
 			aiRateOfFireDistance=800;
 		};
 		weaponInfoType="RscOptics_nightstalker";
-		modelOptics="z\16th\addons\weapons\scopes\big_cross_orange_med.p3d";
+		modelOptics="z\MET\addons\weapons\scopes\big_cross_orange_med.p3d";
 		class OpticsModes
 		{
 			class nctalkep
@@ -2472,7 +2472,7 @@ class CfgWeapons
 				weaponSoundEffect="";
 				begin1[]=
 				{
-					"z\16th\addons\weapons\other_weapons\sounds\sbb3.ogg",
+					"z\MET\addons\weapons\other_weapons\sounds\sbb3.ogg",
 					200,
 					1,
 					1800
@@ -2510,7 +2510,7 @@ class CfgWeapons
 				weaponSoundEffect="";
 				begin1[]=
 				{
-					"z\16th\addons\weapons\other_weapons\sounds\sbb3.ogg",
+					"z\MET\addons\weapons\other_weapons\sounds\sbb3.ogg",
 					200,
 					1,
 					1800
@@ -3134,7 +3134,7 @@ class CfgMagazines
 		author="MrClock";
 		modelSpecial="";
 		modelSpecialIsProxy=0;
-		picture="z\16th\addons\weapons\other_weapons\data\3as_pellets_o.paa";
+		picture="z\MET\addons\weapons\other_weapons\data\3as_pellets_o.paa";
 		model="\MRC\JLTS\weapons\Core\stun_mag.p3d";
 		count=30;
 		displayName="[BHA] SB-B3 Pellets";

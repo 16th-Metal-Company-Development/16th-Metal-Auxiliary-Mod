@@ -146,7 +146,7 @@ class CfgWeapons
 				};
 			};
 		};
-		modelOptics = "z\16th\addons\weapons\scopes\big_cross_yellow_full.p3d";
+		modelOptics = "z\MET\addons\weapons\scopes\big_cross_yellow_full.p3d";
 		class OpticsModes
 		{
 			class DC19scope_sights
@@ -315,7 +315,7 @@ class CfgWeapons
 		class ItemInfo : InventoryOpticsItem_Base_F {
 			mass = 4;
 			optics = 2;
-			modelOptics = "z\16th\addons\weapons\scopes\big_cross_yellow_easy.p3d";
+			modelOptics = "z\MET\addons\weapons\scopes\big_cross_yellow_easy.p3d";
 			class OpticsModes {
 				class ACO {
 					opticsID = 1;
@@ -349,7 +349,7 @@ class CfgWeapons
 					distanceZoomMax = 100;
 					modelOptics[] =
 					{
-						"z\16th\addons\weapons\scopes\big_cross_yellow_easy.p3d"
+						"z\MET\addons\weapons\scopes\big_cross_yellow_easy.p3d"
 					};
 					discreteInitIndex = 0;
 					memoryPointCamera = "opticView";
@@ -518,7 +518,7 @@ class CfgWeapons
 			},
 			"ls_weapons_sniperRifle_zoomOut01"
 		};
-		modelOptics = "z\16th\addons\weapons\scopes\big_cross_yellow_med.p3d";
+		modelOptics = "z\MET\addons\weapons\scopes\big_cross_yellow_med.p3d";
 		class OpticsModes
 		{
 			class Snip
@@ -547,7 +547,7 @@ class CfgWeapons
 				memoryPointCamera = "opticView";
 				modelOptics[] =
 				{
-					"z\16th\addons\weapons\scopes\big_cross_yellow_med_hex.p3d"
+					"z\MET\addons\weapons\scopes\big_cross_yellow_med_hex.p3d"
 				};
 				opticsFlare = 1;
 				opticsDisablePeripherialVision = 1;
@@ -630,9 +630,9 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[] =
 		{
-			"z\16th\addons\weapons\data\Z6_co.paa",
-			"z\16th\addons\weapons\data\Z6_Barrel_co.paa",
-			"z\16th\addons\weapons\data\Z6_Mag_co.paa"
+			"z\MET\addons\weapons\data\Z6_co.paa",
+			"z\MET\addons\weapons\data\Z6_Barrel_co.paa",
+			"z\MET\addons\weapons\data\Z6_Mag_co.paa"
 		};
 		magazines[] =
 		{
@@ -653,14 +653,14 @@ class CfgWeapons
 		fireLightDiffuse[] = { 0.1,0.25,1 };
 		drySound[] =
 		{
-			"z\16th\addons\weapons\infantry_weap\sounds\weapon_dry.ogg",
+			"z\MET\addons\weapons\infantry_weap\sounds\weapon_dry.ogg",
 			5,
 			1,
 			10
 		};
 		reloadMagazineSound[] =
 		{
-			"z\16th\addons\weapons\infantry_weap\sounds\republic\z-6\Z6_reload.ogg",
+			"z\MET\addons\weapons\infantry_weap\sounds\republic\z-6\Z6_reload.ogg",
 			1.5,
 			1,
 			100
@@ -776,35 +776,35 @@ class CfgWeapons
 				weaponSoundEffect = "";
 				begin1[] =
 				{
-					"z\16th\addons\weapons\infantry_weap\sounds\republic\z-6\z6.ogg",
+					"z\MET\addons\weapons\infantry_weap\sounds\republic\z-6\z6.ogg",
 					1,
 					1,
 					1800
 				};
 				begin2[] =
 				{
-					"z\16th\addons\weapons\infantry_weap\sounds\republic\z-6\z6.ogg",
+					"z\MET\addons\weapons\infantry_weap\sounds\republic\z-6\z6.ogg",
 					1,
 					1.015,
 					1800
 				};
 				begin3[] =
 				{
-					"z\16th\addons\weapons\infantry_weap\sounds\republic\z-6\z6.ogg",
+					"z\MET\addons\weapons\infantry_weap\sounds\republic\z-6\z6.ogg",
 					1,
 					0.98500001,
 					1800
 				};
 				begin4[] =
 				{
-					"z\16th\addons\weapons\infantry_weap\sounds\republic\z-6\z6.ogg",
+					"z\MET\addons\weapons\infantry_weap\sounds\republic\z-6\z6.ogg",
 					1,
 					1.01,
 					1800
 				};
 				begin5[] =
 				{
-					"z\16th\addons\weapons\infantry_weap\sounds\republic\z-6\z6.ogg",
+					"z\MET\addons\weapons\infantry_weap\sounds\republic\z-6\z6.ogg",
 					1,
 					0.995,
 					1800
@@ -824,7 +824,7 @@ class CfgWeapons
 				};
 				beginwater1[] =
 				{
-					"z\16th\addons\weapons\infantry_weap\sounds\republic\z-6\z6.ogg",
+					"z\MET\addons\weapons\infantry_weap\sounds\republic\z-6\z6.ogg",
 					1,
 					1,
 					400

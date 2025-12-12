@@ -20,11 +20,11 @@ class MET_LAAT_Mk2: 3as_LAAT_MK2
 	};
 	hiddenSelectionsTextures[] = 
 	{
-		"z\16th\addons\vehicles\vics\LAAT\16th_LAAT_Base.paa",
-		"z\16th\addons\vehicles\vics\LAAT\16th_LAAT_wings_base.paa",
-		"z\16th\addons\vehicles\vics\LAAT\Weapons_CO.paa",
-		"z\16th\addons\vehicles\vics\LAAT\Weapon_Details_CO.paa",
-		"z\16th\addons\vehicles\vics\LAAT\16_Laat_Interior.paa"
+		"z\MET\addons\vehicles\vics\LAAT\16th_LAAT_Base.paa",
+		"z\MET\addons\vehicles\vics\LAAT\16th_LAAT_wings_base.paa",
+		"z\MET\addons\vehicles\vics\LAAT\Weapons_CO.paa",
+		"z\MET\addons\vehicles\vics\LAAT\Weapon_Details_CO.paa",
+		"z\MET\addons\vehicles\vics\LAAT\16_Laat_Interior.paa"
 	};
 	ace_cargo_space = 20;  // Cargo space your vehicle has
     ace_cargo_hasCargo = 1;  // Enables cargo to be loaded inside the vehicle (1-yes, 0-no)
@@ -57,11 +57,11 @@ class MET_LAAT_Mk2_Lamps: 3as_LAAT_Mk2Lights
 	};
 	hiddenSelectionsTextures[] = 
 	{
-		"z\16th\addons\vehicles\vics\LAAT\16th_LAAT_Base.paa",
-		"z\16th\addons\vehicles\vics\LAAT\16th_LAAT_wings_base.paa",
-		"z\16th\addons\vehicles\vics\LAAT\Weapons_CO.paa",
-		"z\16th\addons\vehicles\vics\LAAT\Weapon_Details_CO.paa",
-		"z\16th\addons\vehicles\vics\LAAT\16_Laat_Interior.paa"
+		"z\MET\addons\vehicles\vics\LAAT\16th_LAAT_Base.paa",
+		"z\MET\addons\vehicles\vics\LAAT\16th_LAAT_wings_base.paa",
+		"z\MET\addons\vehicles\vics\LAAT\Weapons_CO.paa",
+		"z\MET\addons\vehicles\vics\LAAT\Weapon_Details_CO.paa",
+		"z\MET\addons\vehicles\vics\LAAT\16_Laat_Interior.paa"
 	};
 	ace_cargo_space = 20;  // Cargo space your vehicle has
     ace_cargo_hasCargo = 1;  // Enables cargo to be loaded inside the vehicle (1-yes, 0-no)
@@ -90,11 +90,11 @@ class MET_LAAT_MK1: 3as_LAAT_MK1
 	};
 	hiddenSelectionsTextures[] = 
 	{
-		"z\16th\addons\vehicles\vics\LAAT\16th_LAAT_Base.paa",
-		"z\16th\addons\vehicles\vics\LAAT\16th_LAAT_wings_base.paa",
-		"z\16th\addons\vehicles\vics\LAAT\Weapons_CO.paa",
-		"z\16th\addons\vehicles\vics\LAAT\Weapon_Details_CO.paa",
-		"z\16th\addons\vehicles\vics\LAAT\16_Laat_Interior.paa"
+		"z\MET\addons\vehicles\vics\LAAT\16th_LAAT_Base.paa",
+		"z\MET\addons\vehicles\vics\LAAT\16th_LAAT_wings_base.paa",
+		"z\MET\addons\vehicles\vics\LAAT\Weapons_CO.paa",
+		"z\MET\addons\vehicles\vics\LAAT\Weapon_Details_CO.paa",
+		"z\MET\addons\vehicles\vics\LAAT\16_Laat_Interior.paa"
 	};
 	ace_cargo_space = 20;  // Cargo space your vehicle has
     ace_cargo_hasCargo = 1;  // Enables cargo to be loaded inside the vehicle (1-yes, 0-no)
@@ -161,7 +161,7 @@ class MET_Ywing_V1: 3AS_BTLB_Bomber
 	editorSubcategory = "metal_co_EdSubCat_Thunder";
 	hiddenselectionstextures[] = 
 	{
-		"z\16th\addons\vehicles\vics\BTLB\16th_BTLB_CO.paa",
+		"z\MET\addons\vehicles\vics\BTLB\16th_BTLB_CO.paa",
 		"3as\3AS_btlb\data\detail_co.paa",
 		"3as\3AS_btlb\data\interior_co.paa"
 	};
@@ -175,8 +175,8 @@ class MET_Tx130_Base_V1: 3as_saber_m1
 	editorSubcategory = "metal_co_EdSubCat_Reaper";
 	hiddenSelectionsTextures[] = 
 	{
-		"z\16th\addons\vehicles\vics\NEWTX130\16th_saber_hull_co.paa",
-		"z\16th\addons\vehicles\vics\NEWTX130\16th_saber_weapons_co.paa"
+		"z\MET\addons\vehicles\vics\NEWTX130\16th_saber_hull_co.paa",
+		"z\MET\addons\vehicles\vics\NEWTX130\16th_saber_weapons_co.paa"
 	};
 };
 class MET_Tx130_Super_v1: 3as_saber_super
@@ -188,8 +188,8 @@ class MET_Tx130_Super_v1: 3as_saber_super
 	editorSubcategory = "metal_co_EdSubCat_Reaper";
 	hiddenSelectionsTextures[] = 
 	{
-		"z\16th\addons\vehicles\vics\NEWTX130\16th_saber_hull_co.paa",
-		"z\16th\addons\vehicles\vics\NEWTX130\16th_saber_weapons_co.paa"
+		"z\MET\addons\vehicles\vics\NEWTX130\16th_saber_hull_co.paa",
+		"z\MET\addons\vehicles\vics\NEWTX130\16th_saber_weapons_co.paa"
 	};
 };
 class MET_Tx130_GL_v1: 3as_saber_m1G
@@ -201,8 +201,8 @@ class MET_Tx130_GL_v1: 3as_saber_m1G
 	editorSubcategory = "metal_co_EdSubCat_Reaper";
 	hiddenSelectionsTextures[] = 
 	{
-		"z\16th\addons\vehicles\vics\NEWTX130\16th_saber_hull_co.paa",
-		"z\16th\addons\vehicles\vics\NEWTX130\16th_saber_weapons_co.paa"
+		"z\MET\addons\vehicles\vics\NEWTX130\16th_saber_hull_co.paa",
+		"z\MET\addons\vehicles\vics\NEWTX130\16th_saber_weapons_co.paa"
 	};
 };
 class MET_ATTE_Base: 3as_ATTE_Base
@@ -223,10 +223,10 @@ class MET_ATTE_Base: 3as_ATTE_Base
 	};
 	hiddenSelectionsTextures[] = 
 	{
-		"z\16th\addons\vehicles\vics\ATTE\16th_ATTE_Shell.paa",
+		"z\MET\addons\vehicles\vics\ATTE\16th_ATTE_Shell.paa",
 		"3as\3as_ATTE\data\Textures\3as_ATTE_Cockpit_co.paa",
 		"3as\3AS_ATTE\data\Textures\3AS_ATTE_Detail_co.paa",
-		"z\16th\addons\vehicles\vics\ATTE\16th_ATTE_Legs.paa",
+		"z\MET\addons\vehicles\vics\ATTE\16th_ATTE_Legs.paa",
 		"3as\3as_ATTE\data\Textures\3as_ATTE_Glass_ca.paa",
 		"3as\3as_ATTE\data\Textures\3as_atte_armor_co.paa"
 	};
@@ -246,10 +246,10 @@ class MET_LAATCMK2: 3AS_LAATC
 	crew = "MET_P2_AR";
 	hiddenSelectionsTextures[] = 
 	{
-		"z\16th\addons\vehicles\vics\LAAT_C\16th_LAAT_C_MK2_Hull_co.paa",
-		"z\16th\addons\vehicles\vics\LAAT_C\16th_LAAT_C_MK2_Wings_co.paa",
-		"z\16th\addons\vehicles\vics\LAAT_C\16th_LAAT_C_MK2_Top_co.paa",
-		"z\16th\addons\vehicles\vics\LAAT_C\LAAT_C_Detail_Front_co.paa"
+		"z\MET\addons\vehicles\vics\LAAT_C\16th_LAAT_C_MK2_Hull_co.paa",
+		"z\MET\addons\vehicles\vics\LAAT_C\16th_LAAT_C_MK2_Wings_co.paa",
+		"z\MET\addons\vehicles\vics\LAAT_C\16th_LAAT_C_MK2_Top_co.paa",
+		"z\MET\addons\vehicles\vics\LAAT_C\LAAT_C_Detail_Front_co.paa"
 	};
 	class TextureSources
 	{
@@ -259,10 +259,10 @@ class MET_LAATCMK2: 3AS_LAATC
 			author="Charger";
 			textures[]=
 			{
-				"z\16th\addons\vehicles\vics\LAAT_C\16th_LAAT_C_MK2_Hull_co.paa",
-				"z\16th\addons\vehicles\vics\LAAT_C\16th_LAAT_C_MK2_Wings_co.paa",
-				"z\16th\addons\vehicles\vics\LAAT_C\16th_LAAT_C_MK2_Top_co.paa",
-				"z\16th\addons\vehicles\vics\LAAT_C\LAAT_C_Detail_Front_co.paa"
+				"z\MET\addons\vehicles\vics\LAAT_C\16th_LAAT_C_MK2_Hull_co.paa",
+				"z\MET\addons\vehicles\vics\LAAT_C\16th_LAAT_C_MK2_Wings_co.paa",
+				"z\MET\addons\vehicles\vics\LAAT_C\16th_LAAT_C_MK2_Top_co.paa",
+				"z\MET\addons\vehicles\vics\LAAT_C\LAAT_C_Detail_Front_co.paa"
 			};
 		};
 	};
@@ -284,9 +284,9 @@ class MET_LAATCMK2: 3AS_LAATC
 	};
 	hiddenselectionstextures[] = 
 	{
-		"z\16th\addons\vehicles\vics\Bantha\IFV\Bantha_C_IFV_Body_New_Co.paa",
+		"z\MET\addons\vehicles\vics\Bantha\IFV\Bantha_C_IFV_Body_New_Co.paa",
 		"212th\Vehicles\212th_APC02\Data\Textures\Bantha_Master\Bantha_Wheel_Co.paa",
-		"z\16th\addons\vehicles\vics\Bantha\IFV\Bantha_C_IFV_Turret_New_Co.paa"
+		"z\MET\addons\vehicles\vics\Bantha\IFV\Bantha_C_IFV_Turret_New_Co.paa"
 	};
 	crew="MET_P2_TRP2";
     typicalCargo[]={"MET_P2_TRP2"};
@@ -310,7 +310,7 @@ class MET_Bantha_Transport: Aux212_Bantha_C_Unarmed
 	};
 	hiddenselectionstextures[] = 
 	{
-		"z\16th\addons\vehicles\vics\Bantha\Unarmed\Bantha_C_Unarmed_Body_New_co.paa",
+		"z\MET\addons\vehicles\vics\Bantha\Unarmed\Bantha_C_Unarmed_Body_New_co.paa",
 		"212th\Vehicles\212th_APC02\Data\Textures\Bantha_Master\Bantha_Wheel_Co.paa",
 	};
 	crew="MET_P2_TRP2";
@@ -338,7 +338,7 @@ class MET_Bantha_Assault: Aux212_Bantha_T_Assault
 	hiddenselectionstextures[] = 
 	{
 		"212th\Vehicles\212th_APC02\Data\Textures\Bantha_Master\Bantha_Wheel_Co.paa",
-		"z\16th\addons\vehicles\vics\Bantha\Assault\Bantha_T_Assault_Body_co.paa",
+		"z\MET\addons\vehicles\vics\Bantha\Assault\Bantha_T_Assault_Body_co.paa",
 		"212th\Vehicles\212th_APC02\Data\Textures\Bantha_T\Bantha_T_Assault\Bantha_T_Assault_Turret_Base_Co.paa",
 		"212th\Vehicles\212th_APC02\Data\Textures\Bantha_T\Bantha_T_Assault\Bantha_T_Assault_Turret_Main_Co.paa"
 	};
@@ -367,9 +367,9 @@ class MET_Bantha_Mortar: Aux212_Bantha_C_Mortar_Base
 	};
 	hiddenselectionstextures[] = 
 	{
-		"z\16th\addons\vehicles\vics\Bantha\Mortar\Bantha_C_Mortar_Body_New_Co.paa",
+		"z\MET\addons\vehicles\vics\Bantha\Mortar\Bantha_C_Mortar_Body_New_Co.paa",
 		"212th\Vehicles\212th_APC02\Data\Textures\Bantha_Master\Bantha_Wheel_Co.paa",
-		"z\16th\addons\vehicles\vics\Bantha\Mortar\Bantha_C_Mortar_Turret_New_Co.paa"
+		"z\MET\addons\vehicles\vics\Bantha\Mortar\Bantha_C_Mortar_Turret_New_Co.paa"
 	};
 	crew="MET_P2_TRP2";
     //typicalCargo[]={"MET_P2_TRP2"};
@@ -518,7 +518,7 @@ class MET_Bantha_MSV: Aux212_Bantha_E_MSV
 	hiddenselectionstextures[] = 
 	{
 		"212th\Vehicles\212th_APC02\Data\Textures\Bantha_Master\Bantha_Wheel_Co.paa",
-		"z\16th\addons\vehicles\vics\Bantha\MSV\Bantha_E_MSV_Body_co.paa",
+		"z\MET\addons\vehicles\vics\Bantha\MSV\Bantha_E_MSV_Body_co.paa",
 		"212th\Vehicles\212th_APC02\Data\Textures\Bantha_E\Bantha_E_MSV\Bantha_E_MSV_Exterior_Co.paa",
 		"212th\Vehicles\212th_APC02\Data\Textures\Bantha_E\Bantha_E_MSV\Bantha_E_MSV_Crane_Co.paa",
 		"212th\Vehicles\212th_APC02\Data\Textures\Bantha_E\Bantha_E_MSV\Bantha_E_MSV_Crates_Co.paa",
@@ -547,7 +547,7 @@ class MET_Bantha_Cargo: Aux212_Bantha_T_Cargo
 	hiddenselectionstextures[] = 
 	{
 		"212th\Vehicles\212th_APC02\Data\Textures\Bantha_Master\Bantha_Wheel_Co.paa",
-		"z\16th\addons\vehicles\vics\Bantha\Cargo\Bantha_T_Cargo_Body_co.paa"
+		"z\MET\addons\vehicles\vics\Bantha\Cargo\Bantha_T_Cargo_Body_co.paa"
 	};
 	crew="MET_P2_TRP2";
     typicalCargo[]={"MET_P2_TRP2"};
@@ -1200,7 +1200,7 @@ class MET_ISP: 3AS_ISP
 	};
 	hiddenselectionstextures[] = 
 	{
-		"z\16th\addons\vehicles\vics\ISP\ISP_Base_New_co.paa",
+		"z\MET\addons\vehicles\vics\ISP\ISP_Base_New_co.paa",
 		"3as\3AS_LightVics\3AS_ISP\textures\ISP_Screens_co.paa",
 	};
 	crew="MET_P2_TRP2";
@@ -1224,7 +1224,7 @@ class MET_ISP_Transport: 3AS_ISP_Transport
 	};
 	hiddenselectionstextures[] = 
 	{
-		"z\16th\addons\vehicles\vics\ISP\ISP_Base_New_Logo_co.paa",
+		"z\MET\addons\vehicles\vics\ISP\ISP_Base_New_Logo_co.paa",
 		"3as\3AS_LightVics\3AS_ISP\textures\ISP_Screens_co.paa",
 	};
 	crew="MET_P2_TRP2";
@@ -1251,7 +1251,7 @@ class MET_Juggernaut: 3AS_Jug
 	};
 	hiddenSelectionsTextures[]=
 	{
-		"z\16th\addons\vehicles\vics\JUGG\Juggernaut_New_Base_CO.paa",
+		"z\MET\addons\vehicles\vics\JUGG\Juggernaut_New_Base_CO.paa",
 		"3as\3AS_Jug\data\juggernaut_guns_co.paa",
 		"3as\3as_jug\data\juggernaut_props_co.paa",
 		"3as\3as_jug\data\juggernaut_wheels_co.paa"
