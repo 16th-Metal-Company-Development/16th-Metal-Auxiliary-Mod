@@ -45,7 +45,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"z\16th\addons\armor\data\infantry\rifleman\trooper_helmet_co.paa"
+			"z\MET\addons\armor\data\infantry\rifleman\trooper_helmet_co.paa"
 		};
 		model="\MRC\JLTS\characters\CloneArmor\CloneHelmetP2.p3d";
 		ace_hearing_protection=0.94999999;

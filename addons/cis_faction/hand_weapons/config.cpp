@@ -73,17 +73,17 @@ class CfgSoundShaders
 		{
 			
 			{
-				"z\16th\addons\cis_faction\hand_weapons\sounds\blaster_far.ogg",
+				"z\MET\addons\cis_faction\hand_weapons\sounds\blaster_far.ogg",
 				1
 			},
 			
 			{
-				"z\16th\addons\cis_faction\hand_weapons\sounds\blaster_far.ogg",
+				"z\MET\addons\cis_faction\hand_weapons\sounds\blaster_far.ogg",
 				1
 			},
 			
 			{
-				"z\16th\addons\cis_faction\hand_weapons\sounds\blaster_far.ogg",
+				"z\MET\addons\cis_faction\hand_weapons\sounds\blaster_far.ogg",
 				1
 			}
 		};
@@ -103,17 +103,17 @@ class CfgSoundShaders
 		{
 			
 			{
-				"z\16th\addons\cis_faction\hand_weapons\sounds\e5_fire1.ogg",
+				"z\MET\addons\cis_faction\hand_weapons\sounds\e5_fire1.ogg",
 				1
 			},
 			
 			{
-				"z\16th\addons\cis_faction\hand_weapons\sounds\e5_fire2.ogg",
+				"z\MET\addons\cis_faction\hand_weapons\sounds\e5_fire2.ogg",
 				1
 			},
 			
 			{
-				"z\16th\addons\cis_faction\hand_weapons\sounds\e5_fire3.ogg",
+				"z\MET\addons\cis_faction\hand_weapons\sounds\e5_fire3.ogg",
 				1
 			}
 		};
@@ -127,17 +127,17 @@ class CfgSoundShaders
 		{
 			
 			{
-				"z\16th\addons\cis_faction\hand_weapons\sounds\e5_dist_fire1.ogg",
+				"z\MET\addons\cis_faction\hand_weapons\sounds\e5_dist_fire1.ogg",
 				1
 			},
 			
 			{
-				"z\16th\addons\cis_faction\hand_weapons\sounds\e5_dist_fire2.ogg",
+				"z\MET\addons\cis_faction\hand_weapons\sounds\e5_dist_fire2.ogg",
 				1
 			},
 			
 			{
-				"z\16th\addons\cis_faction\hand_weapons\sounds\e5_dist_fire3.ogg",
+				"z\MET\addons\cis_faction\hand_weapons\sounds\e5_dist_fire3.ogg",
 				1
 			}
 		};
@@ -157,17 +157,17 @@ class CfgSoundShaders
 		{
 			
 			{
-				"z\16th\addons\cis_faction\hand_weapons\sounds\e5_dist_fire1.ogg",
+				"z\MET\addons\cis_faction\hand_weapons\sounds\e5_dist_fire1.ogg",
 				1
 			},
 			
 			{
-				"z\16th\addons\cis_faction\hand_weapons\sounds\e5_dist_fire2.ogg",
+				"z\MET\addons\cis_faction\hand_weapons\sounds\e5_dist_fire2.ogg",
 				1
 			},
 			
 			{
-				"z\16th\addons\cis_faction\hand_weapons\sounds\e5_dist_fire3.ogg",
+				"z\MET\addons\cis_faction\hand_weapons\sounds\e5_dist_fire3.ogg",
 				1
 			}
 		};
@@ -845,7 +845,7 @@ class CfgWeapons
 				compatibleItems[]={};
 			};
 		};
-		modelOptics="z\16th\addons\weapons\scopes\big_cross_red_full.p3d";
+		modelOptics="z\MET\addons\weapons\scopes\big_cross_red_full.p3d";
 		class OpticsModes
 		{
 			class HoloSight
@@ -1410,7 +1410,7 @@ class CfgWeapons
 			aiRateOfFire=8;
 			aiRateOfFireDistance=1000;
 		};
-		modelOptics="z\16th\addons\weapons\scopes\big_cross_red_med.p3d";
+		modelOptics="z\MET\addons\weapons\scopes\big_cross_red_med.p3d";
 		class OpticsModes
 		{
 			class Snip
@@ -1425,7 +1425,7 @@ class CfgWeapons
 				memoryPointCamera="opticView";
 				modelOptics[]=
 				{
-					"z\16th\addons\weapons\scopes\big_cross_red_med.p3d"
+					"z\MET\addons\weapons\scopes\big_cross_red_med.p3d"
 				};
 				opticsDisablePeripherialVision=1;
 				opticsDisplayName="WFOV";
@@ -1586,7 +1586,7 @@ class CfgWeapons
 				weaponSoundEffect="";
 				begin1[]=
 				{
-					"z\16th\addons\cis_faction\hand_weapons\sounds\rg4d.ogg",
+					"z\MET\addons\cis_faction\hand_weapons\sounds\rg4d.ogg",
 					3,
 					1,
 					1800
@@ -1636,7 +1636,7 @@ class CfgWeapons
 			};
 		};
 		weaponInfoType="RscOptics_nightstalker";
-		modelOptics="z\16th\addons\weapons\scopes\big_cross_red_easy.p3d";
+		modelOptics="z\MET\addons\weapons\scopes\big_cross_red_easy.p3d";
 		class OpticModes
 		{
 			class Scope

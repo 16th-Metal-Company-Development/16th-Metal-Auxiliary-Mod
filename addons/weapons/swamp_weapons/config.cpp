@@ -77,7 +77,7 @@ class CfgWeapons
 			mass=7;
 			opticType=1;
 			optics=1;
-			modelOptics="z\16th\addons\weapons\scopes\big_cross_green_med.p3d";
+			modelOptics="z\MET\addons\weapons\scopes\big_cross_green_med.p3d";
 			class OpticsModes
 			{
 				class cq
@@ -115,7 +115,7 @@ class CfgWeapons
 					memoryPointCamera="opticView";
 					modelOptics[]=
 					{
-						"z\16th\addons\weapons\scopes\big_cross_green_med.p3d"
+						"z\MET\addons\weapons\scopes\big_cross_green_med.p3d"
 					};
 					visionMode[]={};
 					distanceZoomMin=300;
@@ -703,7 +703,7 @@ class CfgWeapons
 		{
 			mass=10;
 			optics=1;
-			modelOptics="z\16th\addons\weapons\scopes\big_cross_green_med.p3d";
+			modelOptics="z\MET\addons\weapons\scopes\big_cross_green_med.p3d";
 			allowedSlots[]={801,701,901};
 			class OpticsModes
 			{

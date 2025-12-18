@@ -42,7 +42,7 @@ class CfgVehicles
 		};
 		hiddenSelectionsTextures[] =
 		{
-			"z\16th\addons\9tharmor\Backpack\Textures\Backpack_Standard.paa"
+			"z\MET\addons\9tharmor\Backpack\Textures\Backpack_Standard.paa"
 		};
 	};
 	class MET_9th_Medical_Backpack : JLTS_Clone_backpack
@@ -57,7 +57,7 @@ class CfgVehicles
 		};
 		hiddenSelectionsTextures[] =
 		{
-			"z\16th\addons\9tharmor\Backpack\Textures\Backpack_Medical.paa"
+			"z\MET\addons\9tharmor\Backpack\Textures\Backpack_Medical.paa"
 		};
 	};
 	class Met_9th_EOD_Backpack : JLTS_Clone_backpack
@@ -72,7 +72,7 @@ class CfgVehicles
 		};
 		hiddenSelectionsTextures[] =
 		{
-			"z\16th\addons\9tharmor\Backpack\Textures\Backpack_EOD.paa"
+			"z\MET\addons\9tharmor\Backpack\Textures\Backpack_EOD.paa"
 		};
 	};
 	class MET_9th_Belt_Bag : JLTS_Clone_belt_bag
@@ -94,7 +94,7 @@ class CfgVehicles
 		};
 		hiddenSelectionsTextures[] =
 		{
-			"z\16th\addons\9tharmor\Backpack\Textures\BeltBag_Medical.paa"
+			"z\MET\addons\9tharmor\Backpack\Textures\BeltBag_Medical.paa"
 		};
 	};
 	class MET_9th_Mini_LR_Attachment : JLTS_Clone_LR_attachment
@@ -139,7 +139,7 @@ class CfgVehicles
 		tf_subtype = "digital_lr";
 		hiddenSelectionsTextures[] =
 		{
-			"z\16th\addons\9tharmor\Backpack\Textures\Backpack_RTO.paa"
+			"z\MET\addons\9tharmor\Backpack\Textures\Backpack_RTO.paa"
 		};
 	};
 
@@ -165,13 +165,13 @@ class CfgVehicles
 		};
 		hiddenSelectionsTextures[] =
 		{
-			"z\16th\addons\9tharmor\Uniform\Textures\INF_Upper.paa",
-			"z\16th\addons\9tharmor\Uniform\Textures\INF_Lower.paa"
+			"z\MET\addons\9tharmor\Uniform\Textures\INF_Upper.paa",
+			"z\MET\addons\9tharmor\Uniform\Textures\INF_Lower.paa"
 		};
 		hiddenSelectionsMaterials[] =
 		{
-			"z\16th\addons\9tharmor\Data\Textures\Armor\P2_Armor_Upper.rvmat",
-			"z\16th\addons\9tharmor\Data\Textures\Armor\P2_Armor_Lower.rvmat"
+			"z\MET\addons\9tharmor\Data\Textures\Armor\P2_Armor_Upper.rvmat",
+			"z\MET\addons\9tharmor\Data\Textures\Armor\P2_Armor_Lower.rvmat"
 		};
 		linkedItems[] =
 		{
@@ -416,12 +416,12 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[] =
 		{
-			"z\16th\addons\9tharmor\Helmet\Textures\P2_Standard.paa"
+			"z\MET\addons\9tharmor\Helmet\Textures\P2_Standard.paa"
 		};
 		hiddenSelectionsMaterials[] =
 		{
-			"z\16th\addons\9tharmor\Data\Textures\Helmet\P2_Helmet.rvmat",
-			"z\16th\addons\9tharmor\Data\Textures\Helmet\Helmet_Visor.rvmat"
+			"z\MET\addons\9tharmor\Data\Textures\Helmet\P2_Helmet.rvmat",
+			"z\MET\addons\9tharmor\Data\Textures\Helmet\Helmet_Visor.rvmat"
 		};
 
 		subItems[] = {};

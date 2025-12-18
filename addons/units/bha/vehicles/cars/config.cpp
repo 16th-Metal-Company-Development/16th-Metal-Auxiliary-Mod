@@ -499,9 +499,9 @@ class CfgVehicles
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"z\16th\addons\vehicles\data\body_co.paa",
-			"z\16th\addons\vehicles\data\details_co.paa",
-			"z\16th\addons\vehicles\data\turret_auto_co.paa"
+			"z\MET\addons\vehicles\data\body_co.paa",
+			"z\MET\addons\vehicles\data\details_co.paa",
+			"z\MET\addons\vehicles\data\turret_auto_co.paa"
 		};
 		class Turrets: Turrets
 		{
@@ -923,7 +923,7 @@ class CfgVehicles
 		displayname="HAG-M Artillery Tank (BHA)";
 		hiddenselectionstextures[]=
 		{
-			"z\16th\addons\units\bha\vehicles\cars\data\cisarty_black_co.paa"
+			"z\MET\addons\units\bha\vehicles\cars\data\cisarty_black_co.paa"
 		};
 		class Turrets: Turrets
 		{
@@ -980,9 +980,9 @@ class CfgVehicles
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"z\16th\addons\units\bha\vehicles\cars\data\Firebrand_Cannons_black_co.paa",
-			"z\16th\addons\units\bha\vehicles\cars\data\Firebrand_Hull_black_co.paa",
-			"z\16th\addons\units\bha\vehicles\cars\data\Firebrand_Turret_black_co.paa"
+			"z\MET\addons\units\bha\vehicles\cars\data\Firebrand_Cannons_black_co.paa",
+			"z\MET\addons\units\bha\vehicles\cars\data\Firebrand_Hull_black_co.paa",
+			"z\MET\addons\units\bha\vehicles\cars\data\Firebrand_Turret_black_co.paa"
 		};
 		typicalCargo[]=
 		{
@@ -1618,9 +1618,9 @@ class CfgVehicles
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"z\16th\addons\units\bha\vehicles\cars\data\rocket_pods_black_co.paa",
-			"z\16th\addons\units\bha\vehicles\cars\data\Firebrand_Hull_black_co.paa",
-			"z\16th\addons\units\bha\vehicles\cars\data\Firebrand_Turret_black_co.paa"
+			"z\MET\addons\units\bha\vehicles\cars\data\rocket_pods_black_co.paa",
+			"z\MET\addons\units\bha\vehicles\cars\data\Firebrand_Hull_black_co.paa",
+			"z\MET\addons\units\bha\vehicles\cars\data\Firebrand_Turret_black_co.paa"
 		};
 		class Turrets: Turrets
 		{

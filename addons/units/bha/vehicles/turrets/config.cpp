@@ -167,8 +167,8 @@ class CfgVehicles
 		};
 		hiddenSelectionsTextures[]=
 		{
-            "z\16th\addons\units\bha\vehicles\turrets\data\black_base_co.paa",
-			"z\16th\addons\units\bha\vehicles\turrets\data\black_tube_co.paa"
+            "z\MET\addons\units\bha\vehicles\turrets\data\black_base_co.paa",
+			"z\MET\addons\units\bha\vehicles\turrets\data\black_tube_co.paa"
 		};
 		hiddenSelectionsMaterials[]=
 		{
@@ -295,7 +295,7 @@ class CfgVehicles
 			"camoScreen"
         };
         hiddenSelectionsTextures[] = {
-			"z\16th\addons\units\bha\vehicles\turrets\data\mortar_co_fuq_dat.paa",
+			"z\MET\addons\units\bha\vehicles\turrets\data\mortar_co_fuq_dat.paa",
             "OPTRE_Weapons_Turrets\au_44_mortar\data\computer_screen.paa"
         };
         hiddenSelectionsMaterials[] = {
@@ -330,8 +330,8 @@ class CfgVehicles
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"z\16th\addons\units\bha\vehicles\turrets\data\aa gun_co.paa",
-			"z\16th\addons\units\bha\vehicles\turrets\data\capsules_co.paa"
+			"z\MET\addons\units\bha\vehicles\turrets\data\aa gun_co.paa",
+			"z\MET\addons\units\bha\vehicles\turrets\data\capsules_co.paa"
 		};
 		class Turrets: Turrets
 		{

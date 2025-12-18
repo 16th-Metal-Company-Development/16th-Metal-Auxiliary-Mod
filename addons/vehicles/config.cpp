@@ -75,7 +75,7 @@ class CfgMods
 	class Mod_Base;
 	class MET_Mod3 : Mod_Base
 	{
-		logo = "z\16th\addons\vehicles\16th_logo.paa";
+		logo = "z\MET\addons\vehicles\16th_logo.paa";
 	};
 };
 class DefaultEventHandlers;
@@ -283,7 +283,7 @@ class Optics_Metal_Bantha_T_Assault_Turret
 class CfgFunctions {
 	class MET {
 		class SpawnPads {
-			file = "z\16th\addons\vehicles\spawnpads";
+			file = "z\MET\addons\vehicles\spawnpads";
 			class spawnCargo {};
 			class spawnVehicle {};
 			class addSpawnEntry {};
@@ -298,7 +298,7 @@ class CfgFunctions {
 			class addSupportPad {};
 		};
 		class Resupply {
-			file = "z\16th\addons\vehicles\resupply";
+			file = "z\MET\addons\vehicles\resupply";
 			class addCrates {};
 		};
 	};
@@ -341,7 +341,7 @@ class CfgWeapons
 			{
 				begin1[] =
 				{
-					"z\16th\addons\vehicles\vics\BARC\BARC_Repeater_SideCar",
+					"z\MET\addons\vehicles\vics\BARC\BARC_Repeater_SideCar",
 					1.1220185,
 					1,
 					1100
