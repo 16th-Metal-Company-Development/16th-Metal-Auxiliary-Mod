@@ -1,7 +1,7 @@
 class TransportMagazines 
 {
-    class _xx_MET_DC15S_mag {
-        magazine = "MET_DC15S_mag";
+    class _xx_MET_DC15S_Mag {
+        magazine = "MET_DC15S_Mag";
         count = 15;
     };
     class _xx_MET_DC15A_mag {
