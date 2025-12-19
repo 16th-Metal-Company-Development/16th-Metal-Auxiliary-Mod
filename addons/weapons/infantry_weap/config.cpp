@@ -10095,7 +10095,7 @@ class CfgWeapons
 			opticType=2;
 			weaponInfoType="RscWeaponRangeZeroingFOV";
 			optics=1;
-			modelOptics="z\MET\addons\weapons\scopes\big_cross_blue_easy.p3d";
+			modelOptics="z\MET\addons\weapons\scopes\big_cross_blue_easy2.p3d";
 			class OpticsModes
 			{
 				class Snip
@@ -10115,7 +10115,7 @@ class CfgWeapons
 					distanceZoomMax=100;
 					modelOptics[]=
 					{
-						"z\MET\addons\weapons\scopes\big_cross_blue_easy.p3d"
+						"z\MET\addons\weapons\scopes\big_cross_blue_easy2.p3d"
 					};
 					discreteInitIndex=0;
 					memoryPointCamera="opticView";
