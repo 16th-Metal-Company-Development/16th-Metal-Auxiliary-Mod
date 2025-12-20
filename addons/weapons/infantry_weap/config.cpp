@@ -205,7 +205,9 @@ class CfgPatches
 			"JLTS_weapons_PLX1",
 			"JLTS_weapons_RPS6",
 			"JLTS_weapons_Z6",
-			"metal_weapons"
+			"metal_weapons",
+			"ls_weapons_zseries",
+			"IDA_Republic"
 		};
 	};
 };

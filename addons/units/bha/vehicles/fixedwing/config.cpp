@@ -86,7 +86,7 @@ class CfgVehicles
 		side=2;
 		crew="BHA_Acolytes_HonorGuard";
 		faction="BHA_Units";
-		editorCategory="BHA_Assets";
+		//editorCategory="BHA_Assets";
 		editorSubcategory="BHA_Planes";
 		typicalCargo[]=
 		{
@@ -150,7 +150,7 @@ class CfgVehicles
 		side=2;
 		crew="BHA_Acolytes_HonorGuard";
 		faction="BHA_Units";
-		editorCategory="BHA_Assets";
+		//editorCategory="BHA_Assets";
 		editorSubcategory="BHA_Planes";
 		maxSpeed=650;
 		stallSpeed=135;
