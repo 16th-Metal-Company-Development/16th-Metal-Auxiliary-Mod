@@ -5446,7 +5446,7 @@ class CfgVehicles
                 picture = "\OPTRE_Weapons_Turrets\AU_44_Mortar\data\icons\both.paa";
 				hiddenSelectionsTextures[]=
 				{
-					"z\MET\addons\armor\data\gear\backpacks\drag_backpack_co.paa"
+					"z\MET\addons\armor\Backpacks\Textures\Unused\drag_backpack_co.paa"
 				};
 				maximumLoad=0;
 				mass=1000;

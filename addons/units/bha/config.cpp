@@ -10,7 +10,7 @@ class CfgFactionClasses
 {
 	class BHA_Units
 	{
-		displayName="Barysaw Holdings Authority";
+		displayName="[16th] Barysaw Holdings Authority";
 		priority=1;
 		side=2;
 	};
@@ -19,7 +19,7 @@ class CfgEditorCategories
 {
 	class BHA_Assets
 	{
-		displayName = "Barysaw Holdings Authority";
+		displayName = "[16th] Barysaw Holdings Authority";
 		priority=1;
 		side=2;
 	};

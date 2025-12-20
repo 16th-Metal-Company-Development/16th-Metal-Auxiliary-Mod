@@ -8,71 +8,12 @@ class CfgPatches
 			"BHA_Initiates_Trutheseeker",
 			"BHA_Initiates_Annihilator",
 			"BHA_warbot",
+			"SP_Officer",
 			"BHA_SuicideBot_Soldier_Base"
 		};
 		weapons[]={};
 	};
 };
-/*class CfgFactionClasses
-{
-	class BHA_Units
-	{
-		displayName="Barysaw Holdings Authority";
-		priority=1;
-		side=2;
-	};
-};
-class CfgEditorSubcategories
-{
-	class BHA_Apostles
-	{
-		displayName="Men (Apostles)";
-	};
-	class BHA_Acolytes
-	{
-		displayName="Men (Acolytes)";
-	};
-	class BHA_Initiates
-	{
-		displayName="Men (Initiates)";
-	};
-	class BHA_Cars
-	{
-		displayName="Cars";
-	};
-	class BHA_APCs
-	{
-		displayName="APCs";
-	};
-	class BHA_IFVs
-	{
-		displayName="IFVs";
-	};
-	class BHA_Tanks
-	{
-		displayName="Tanks";
-	};
-	class BHA_130Rnd_338_Mag
-	{
-		displayName="IFVs";
-	};
-	class BHA_Drones
-	{
-		displayName="Drones";
-	};
-	class BHA_Helis
-	{
-		displayName="Transports";
-	};
-	class BHA_Statics
-	{
-		displayName="Static";
-	};
-	class BHA_Trucks
-	{
-		displayName="Trucks";
-	};
-};*/
 class CfgVehicles
 {
 	class I_Soldier_base_F;

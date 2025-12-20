@@ -7,13 +7,20 @@ class CfgPatches
 		units[]={};
 		weapons[]=
 		{
-			"Metal_Swamp_FA11"
+			"Metal_Swamp_FA11",
+			"MET_Swamp_M41",
+			"MET_Swamp_IQA11"
 		};
 		magazines[]=
 		{
+			"MET_FA11_mag",
+			"MET_M41_mag",
+			"MET_IQA11_mag"
 		};
-		ammo[]=
+		requiredAddons[]=
 		{
+			//"IDA_INDEP"
+			//"metal_inf_weap"
 		};
 	};
 };
@@ -442,7 +449,12 @@ class CfgWeapons
 		modes[]=
 		{
 			"FullAuto",
-			"FasterAuto"
+			"FasterAuto",
+			"close",
+			"short",
+			"medium",
+			"far_optic1",
+			"far_optic2"
 		};
 		class FullAuto: Mode_FullAuto
 		{
@@ -548,6 +560,74 @@ class CfgWeapons
 			midRangeProbab=0.69999999;
 			maxRange=10000;
 			maxRangeProbab=0.30000001;
+		};
+		class close: FullAuto
+		{
+			reloadTime=0.1;
+			burst=12;
+			aiRateOfFire=0.5;
+			aiRateOfFireDistance=50;
+			minRange=10;
+			minRangeProbab=0.3;
+			midRange=50;
+			midRangeProbab=0.9;
+			maxRange=100;
+			maxRangeProbab=0.9;
+			showToPlayer=0;
+		};
+		class short: close
+		{
+			burst=12;
+			aiRateOfFire=1;
+			aiRateOfFireDistance=100;
+			minRange=50;
+			minRangeProbab=0.8;
+			midRange=100;
+			midRangeProbab=0.9;
+			maxRange=150;
+			maxRangeProbab=0.9;
+		};
+		class medium: close
+		{
+			reloadTime=0.15000001;
+			burst=9;
+			aiRateOfFire=2;
+			aiRateOfFireDistance=200;
+			minRange=100;
+			minRangeProbab=0.8;
+			midRange=200;
+			midRangeProbab=0.9;
+			maxRange=300;
+			maxRangeProbab=0.9;
+		};
+		class far_optic1: medium
+		{
+			reloadTime=0.15;
+			//requiredOpticType=1;
+			showToPlayer=0;
+			burst=6;
+			aiRateOfFire=3;
+			aiRateOfFireDistance=400;
+			minRange=200;
+			minRangeProbab=1;
+			midRange=400;
+			midRangeProbab=0.85;
+			maxRange=600;
+			maxRangeProbab=0.75;
+		};
+		class far_optic2: far_optic1
+		{
+			reloadTime=0.15;
+			burst=6;
+			aiRateOfFire=5;
+			//requiredOpticType=2;
+			minRange=500;
+			minRangeProbab=0.85;
+			midRange=1000;
+			midRangeProbab=0.7;
+			maxRange=1500;
+			maxRangeProbab=0.5;
+			aiRateOfFireDistance=1000;
 		};
 	};
 	class MET_Swamp_M41_Stun: MET_Swamp_M41
