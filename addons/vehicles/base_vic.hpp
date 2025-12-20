@@ -1241,6 +1241,7 @@ class MET_Juggernaut: 3AS_Jug
 	scopeCurator=2;
 	displayName="[16th] HAVw A6 Juggernaut";
 	faction="metal_company";
+	vehicleClass="metal_co_EdSubCat_Reaper";
 	editorSubcategory="metal_co_EdSubCat_Reaper";
 	hiddenSelections[]=
 	{
@@ -1568,8 +1569,8 @@ class MET_Juggernaut: 3AS_Jug
 		};
 	};
 
-	crew="MET_P2_TRP2";
-    typicalCargo[]={"MET_P2_TRP2"};
+	//crew="MET_P2_TRP2";
+    //typicalCargo[]={"MET_P2_TRP2"};
 
 	#include "vics\Bantha\Bantha_StandardInventory.hpp"
 	#include "vics\Bantha\Bantha_Intercoms.hpp"
