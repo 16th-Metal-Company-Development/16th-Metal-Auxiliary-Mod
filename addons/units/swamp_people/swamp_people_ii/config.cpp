@@ -82,7 +82,7 @@ class CfgVehicles
 		identityTypes[]=
 		{
 			"LanguageENG_F",
-			"Head_NATO",
+			"ls_head_mirialan",
 			"NoGlasses"
 		};
 		backpack="TKE_EVAPackFCF";
@@ -230,7 +230,7 @@ class CfgVehicles
 		identityTypes[]=
 		{
 			"LanguageENG_F",
-			"Head_NATO",
+			"ls_head_mirialan",
 			"NoGlasses"
 		};
 		backpack="TKE_EVAPackFCF";
@@ -345,7 +345,7 @@ class CfgVehicles
 		identityTypes[]=
 		{
 			"LanguageENG_F",
-			"Head_NATO",
+			"ls_head_mirialan",
 			"NoGlasses"
 		};
 		backpack="SP_EVAPackFCF_AT";
@@ -462,7 +462,7 @@ class CfgVehicles
 		identityTypes[]=
 		{
 			"LanguageENG_F",
-			"Head_NATO",
+			"ls_head_mirialan",
 			"NoGlasses"
 		};
 		backpack="SP_EVAPackFCF_HVY";
@@ -563,7 +563,7 @@ class CfgVehicles
 		identityTypes[]=
 		{
 			"LanguageENG_F",
-			"Head_NATO",
+			"ls_head_mirialan",
 			"NoGlasses"
 		};
 		backpack="TKE_EVAPackFCF";
@@ -664,10 +664,10 @@ class CfgGroups
 	{
 		class SP_Units
 		{
-			name="[16th] Swamp People Fighters";
+			name="[16th] Swamp People";
 			class SP_Fighters_Groups
 			{
-				name="[16th] Swamp People Fighter Groups";
+				name="[16th] Fighters";
 				class SP_Fighters_Squad
 				{
 					name="Squad";

@@ -42,9 +42,17 @@ class CfgEditorSubcategories
 	{
 		displayName="Men (Initiates)";
 	};
-	class BHA_Cars
+	class BHA_ShockDroid
 	{
-		displayName="Cars";
+		displayName="Shock Droids";
+	};
+	class BHA_ShockDroidElite
+	{
+		displayName="Elite Shock Droids";
+	};
+	class BHA_ShockDroidWorker
+	{
+		displayName="Worker Droids";
 	};
 	class BHA_APCs
 	{
