@@ -7219,6 +7219,313 @@ class CfgWeapons
 		ace_overheating_allowSwapBarrel=0;
 		ace_overheating_dispersion=0.75;
 	};
+	/*==============================================================================
+	==Westar M-5 Block II UBSG
+	==============================================================================*/
+	class MET_WestarM5_blockii_UBSG: MET_WestarM5_blockii_Base_F
+	{
+		scope=2;
+		displayName="[16th] Westar-M5 Block II UBSG";
+		model="3AS\3AS_Weapons\WestarM5\3AS_Westar_M5_GL.p3d";
+		picture="\3AS\3AS_Weapons\WestarM5\Data\UI\3as_westargl.paa";
+		weaponInfoType="RscWeaponZeroing";
+		modelOptics="z\MET\addons\weapons\scopes\big_cross_blue_full.p3d";
+		class MET_WestarM5_UBSG_F: Rifle_Base_F
+		{
+			displayName="Westar-M5 UBSG";
+			magazines[]=
+			{
+				"MET_slug_mag",
+				"MET_pellet_mag"
+			};
+			magazineWell[]=
+			{
+				"MET_DP23_MagWell"
+			};
+			discreteDistance[]={50};
+			discreteDistanceInitIndex=0;
+			maxZeroing=50;
+			ballisticsComputer=0;
+			muzzlePos="usti granatometu";
+			muzzleEnd="konec granatometu";
+			cursor="sgun";
+			recoil="recoil_MSBS65_ubs";
+			fireSpreadAngle=0.94999999;
+			autoFire=0;
+			reloadTime=0.34999999;
+			reloadAction="GestureReloadMSBS_UBS";
+			modes[]=
+			{
+				"Single"
+			};
+			aiDispersionCoefY=2;
+			aiDispersionCoefX=2;
+			class Single: Mode_SemiAuto
+			{
+				reloadTime=0.30000001;
+				dispersion=0.01245;
+				minRange=2;
+				minRangeProbab=0.94999999;
+				midRange=30;
+				midRangeProbab=0.94999999;
+				maxRange=100;
+				maxRangeProbab=0.30000001;
+				aiRateOfFire=1;
+				aiRateOfFireDistance=30;
+				sounds[]=
+				{
+					"StandardSound"
+				};
+				class BaseSoundModeType;
+				class StandardSound: BaseSoundModeType
+				{
+					weaponSoundEffect="";
+					begin1[]=
+					{
+						"z\MET\addons\weapons\infantry_weap\sounds\dp23.ogg",
+						1,
+						1,
+						1800
+					};
+					soundBegin[]=
+					{
+						"begin1",
+						1
+					};
+				};
+			};
+		};
+		muzzles[]=
+		{
+			"this",
+			"MET_WestarM5_UBSG_F"
+		};
+		class OpticsModes
+		{
+			class Ironsights
+			{
+				opticsID=1;
+				useModelOptics=0;
+				opticsFlare="true";
+				opticsPPEffects[]=
+				{
+					"OpticsCHAbera5",
+					"OpticsBlur5"
+				};
+				opticsDisablePeripherialVision=0.67000002;
+				opticsZoomMin=0.375;
+				opticsZoomMax=1.1;
+				opticsZoomInit=0.75;
+				memoryPointCamera="eye";
+				visionMode[]={};
+				distanceZoomMin=100;
+				distanceZoomMax=100;
+			};
+			class Scope: Ironsights
+			{
+				opticsID=2;
+				useModelOptics=1;
+				opticsPPEffects[]=
+				{
+					"OpticsCHAbera5",
+					"OpticsBlur5"
+				};
+				visionMode[]=
+				{
+					"Normal",
+					"NVG",
+					"TI"
+				};
+				thermalMode[]={0,1};
+				opticsZoomMin=0.050000001;
+				opticsZoomMax=0.107;
+				opticsZoomInit=0.107;
+				memoryPointCamera="opticView";
+				opticsFlare=1;
+				opticsDisablePeripherialVision=1;
+				distanceZoomMin=400;
+				distanceZoomMax=400;
+				weaponInfoType="RscWeaponEmpty";
+			};
+		};
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			mass=130;
+		};
+		ace_overheating_mrbs=3000;
+		ace_overheating_slowdownFactor=1;
+		ace_overheating_allowSwapBarrel=0;
+		ace_overheating_dispersion=0.75;
+	};
+	/*==============================================================================
+	==Westar M-5 Block II UBSG
+	==============================================================================*/
+	class MET_WestarM5_blockii_UBSGB: MET_WestarM5_blockii_Base_F
+	{
+		scope=2;
+		displayName="[16th] Westar-M5 Block II UBSG-12";
+		model="3AS\3AS_Weapons\WestarM5\3AS_Westar_M5_GL.p3d";
+		picture="\3AS\3AS_Weapons\WestarM5\Data\UI\3as_westargl.paa";
+		weaponInfoType="RscWeaponZeroing";
+		modelOptics="z\MET\addons\weapons\scopes\big_cross_blue_full.p3d";
+		class MET_WestarM5_UBSGB_F: Rifle_Base_F
+		{
+			displayName="Westar-M5 UBSG-12";
+			magazines[]=
+			{
+				"MET_dp12_slug_mag",
+				"MET_dp12_pellet_mag"
+			};
+			magazineWell[]=
+			{
+				"MET_DP12_MagWell"
+			};
+			discreteDistance[]={50};
+			discreteDistanceInitIndex=0;
+			maxZeroing=50;
+			ballisticsComputer=0;
+			muzzlePos="usti granatometu";
+			muzzleEnd="konec granatometu";
+			cursor="sgun";
+			recoil="recoil_MSBS65_ubs";
+			fireSpreadAngle=0.94999999;
+			autoFire=0;
+			reloadTime=0.34999999;
+			reloadAction="GestureReloadMSBS_UBS";
+			modes[]=
+			{
+				"Single"
+			};
+			aiDispersionCoefY=2;
+			aiDispersionCoefX=2;
+			class Single: Mode_SemiAuto
+			{
+				reloadTime=0.30000001;
+				dispersion=0.01245;
+				minRange=2;
+				minRangeProbab=0.94999999;
+				midRange=30;
+				midRangeProbab=0.94999999;
+				maxRange=100;
+				maxRangeProbab=0.30000001;
+				aiRateOfFire=1;
+				aiRateOfFireDistance=30;
+				sounds[]=
+				{
+					"StandardSound"
+				};
+				class BaseSoundModeType;
+				class StandardSound: BaseSoundModeType
+				{
+					weaponSoundEffect="";
+					begin1[]=
+					{
+						"z\MET\addons\weapons\infantry_weap\sounds\dp12_1.ogg",
+						1,
+						1,
+						1800
+					};
+					begin2[]=
+					{
+						"z\MET\addons\weapons\infantry_weap\sounds\dp12_2.ogg",
+						1,
+						1,
+						1800
+					};
+					begin3[]=
+					{
+						"z\MET\addons\weapons\infantry_weap\sounds\dp12_3.ogg",
+						1,
+						1,
+						1800
+					};
+					begin4[]=
+					{
+						"z\MET\addons\weapons\infantry_weap\sounds\dp12_4.ogg",
+						1,
+						1,
+						1800
+					};
+					begin5[]=
+					{
+						"z\MET\addons\weapons\infantry_weap\sounds\dp12_5.ogg",
+						1,
+						1,
+						1800
+					};
+					soundBegin[]=
+					{
+						"begin1",0.2,
+						"begin2",0.2,
+						"begin3",0.2,
+						"begin4",0.2,
+						"begin5",0.2
+					};
+				};
+			};
+		};
+		muzzles[]=
+		{
+			"this",
+			"MET_WestarM5_UBSGB_F"
+		};
+		class OpticsModes
+		{
+			class Ironsights
+			{
+				opticsID=1;
+				useModelOptics=0;
+				opticsFlare="true";
+				opticsPPEffects[]=
+				{
+					"OpticsCHAbera5",
+					"OpticsBlur5"
+				};
+				opticsDisablePeripherialVision=0.67000002;
+				opticsZoomMin=0.375;
+				opticsZoomMax=1.1;
+				opticsZoomInit=0.75;
+				memoryPointCamera="eye";
+				visionMode[]={};
+				distanceZoomMin=100;
+				distanceZoomMax=100;
+			};
+			class Scope: Ironsights
+			{
+				opticsID=2;
+				useModelOptics=1;
+				opticsPPEffects[]=
+				{
+					"OpticsCHAbera5",
+					"OpticsBlur5"
+				};
+				visionMode[]=
+				{
+					"Normal",
+					"NVG",
+					"TI"
+				};
+				thermalMode[]={0,1};
+				opticsZoomMin=0.050000001;
+				opticsZoomMax=0.107;
+				opticsZoomInit=0.107;
+				memoryPointCamera="opticView";
+				opticsFlare=1;
+				opticsDisablePeripherialVision=1;
+				distanceZoomMin=400;
+				distanceZoomMax=400;
+				weaponInfoType="RscWeaponEmpty";
+			};
+		};
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			mass=130;
+		};
+		ace_overheating_mrbs=3000;
+		ace_overheating_slowdownFactor=1;
+		ace_overheating_allowSwapBarrel=0;
+		ace_overheating_dispersion=0.75;
+	};
 	class ItemCore;
 	class InventoryOpticsItem_Base_F;
 	/*==============================================================================
