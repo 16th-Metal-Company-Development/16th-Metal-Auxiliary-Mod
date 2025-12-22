@@ -1252,7 +1252,7 @@ class CfgVehicles
 			};
 		};
 	};
-	/*class BHA_PortableTurret_Boxed: BHA_Turret_Base
+	class BHA_PortableTurret_Boxed: BHA_Turret_Base
 	{
 		author="Tiberian Genesis";
 		scope=2;
@@ -1373,8 +1373,8 @@ class CfgVehicles
 			{
 				"TG_PortableTurretBox_GDI_BP_01"
 			};
-		};
-		class Components: Components
+		};*/
+		/*class Components: Components
 		{
 			class SensorsManagerComponent
 			{
@@ -1444,7 +1444,7 @@ class CfgVehicles
 					};
 				};
 			};
-		};
+		};*/
 		class Wheels
 		{
 			class LF
@@ -1711,7 +1711,7 @@ class CfgVehicles
 		class TextureSources
 		{
 		};
-		textureList[]={};
+		textureList[]={};*/
 		class AnimationSources
 		{
 			class spinanim
@@ -1745,7 +1745,7 @@ class CfgVehicles
 			};
 			// _this spawn BHA_fnc_unlimited_mags;
 		};
-	};*/
+	};
 	class BHA_CeilingTurret: BHA_CeilingTurret_Base
 	{
 		author="Tiberian Genesis";
