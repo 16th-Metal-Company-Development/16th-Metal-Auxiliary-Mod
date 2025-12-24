@@ -70,6 +70,7 @@ class XtdGearInfos {
 
         // [16th] Custom Airborne Trooper Helmet variants
         class MET_Helmet_Airborne_Blackrose  { model = "MET_Custom_Airborne_Helmet"; camo = "Blackrose"; };
+        class MET_Helmet_Airborne_Frost      { model = "MET_Custom_Airborne_Helmet"; camo = "Frost"; };
         class MET_Helmet_Airborne_Jero       { model = "MET_Custom_Airborne_Helmet"; camo = "Jero"; };
         class MET_Helmet_Airborne_Noble      { model = "MET_Custom_Airborne_Helmet"; camo = "Noble"; };
         class MET_Helmet_Airborne_Vergil     { model = "MET_Custom_Airborne_Helmet"; camo = "Vergil"; };
