@@ -40,10 +40,10 @@ private _addBuildZone = {
         _veh setVariable ["MET_markerId", _markerName];
 
        private _marker = createMarker [_markerName, getPosASL _veh];
-        _marker setMarkerShape "ELLIPSE";
-        _marker setMarkerBrush "DiagGrid";
-        _marker setMarkerSize [_radius, _radius];
-        _marker setMarkerColor "ColorGreen";
+        _marker setMarkerShapeLocal "ELLIPSE";
+        _marker setMarkerBrushLocal "DiagGrid";
+        _marker setMarkerSizeLocal [_radius, _radius];
+        _marker setMarkerColorLocal "ColorGreen";
         _marker setMarkerAlpha 0.4;
 
         [_marker, _veh] spawn 
