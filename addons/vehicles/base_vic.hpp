@@ -890,10 +890,11 @@ class MET_BARC_SideCar: 3AS_BarcSideCar
 
 	class Turrets
 	{
-		class MainTurret: NewTurret
+		class MainTurret : NewTurret
 		{
 			stabilizedInAxes=4;
-			hasgunner=1;
+			hasGunner = true;
+			hideWeaponsGunner = true;
 			startEngine=0;
 			body="MainTurret";
 			gun="MainGun";
@@ -903,6 +904,8 @@ class MET_BARC_SideCar: 3AS_BarcSideCar
 			gunnerGetInAction="GetInLow";
 			gunnerGetOutAction="GetOutLow";
 			ejectDeadGunner=1;
+			lockWhenVehicleSpeed = -1;
+			lockWhenDriverOut = false;
 			memoryPointGun[]=
 			{
 				"usti hlavne3"
