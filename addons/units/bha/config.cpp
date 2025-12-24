@@ -10,7 +10,7 @@ class CfgFactionClasses
 {
 	class BHA_Units
 	{
-		displayName="Barysaw Holdings Authority";
+		displayName="[16th] Barysaw Holdings Authority";
 		priority=1;
 		side=2;
 	};
@@ -19,7 +19,7 @@ class CfgEditorCategories
 {
 	class BHA_Assets
 	{
-		displayName = "Barysaw Holdings Authority";
+		displayName = "[16th] Barysaw Holdings Authority";
 		priority=1;
 		side=2;
 	};
@@ -42,9 +42,17 @@ class CfgEditorSubcategories
 	{
 		displayName="Men (Initiates)";
 	};
-	class BHA_Cars
+	class BHA_ShockDroid
 	{
-		displayName="Cars";
+		displayName="Shock Droids";
+	};
+	class BHA_ShockDroidElite
+	{
+		displayName="Elite Shock Droids";
+	};
+	class BHA_ShockDroidWorker
+	{
+		displayName="Worker Droids";
 	};
 	class BHA_APCs
 	{

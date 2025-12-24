@@ -7,7 +7,7 @@ class CfgPatches
 		units[]={};
 		weapons[]=
 		{
-			"metal_dc15a"
+			"MET_D200"
 		};
 		magazines[]=
 		{
@@ -48,6 +48,8 @@ class CowsSlot;
 class UnderBarrelSlot;
 class MuzzleSlot;
 class PointerSlot;
+class CowsSlot_Rail;
+class PointerSlot_Rail;
 class CfgWeapons
 {
 	class WeaponSlotsInfo;
@@ -280,6 +282,99 @@ class CfgWeapons
 			inertia=0.1;
 		};
 	};
+	class InventoryFlashLightItem_Base_F;
+	class MET_Flashlight_Arkanian_1_F: ItemCore
+	{
+		author="$STR_3AS_Studio";
+		_generalMacro="acc_flashlight";
+		scope=2;
+		displayName="Flashlight";
+		descriptionUse="<t color='#9cf953'>Use: </t>Turn Flashlight ON/OFF";
+		picture="\A3\weapons_F\Data\UI\gear_accv_flashlight_CA.paa";
+		model="3as\3AS_Weapons\Greenfor\model\3AS_ArkanianBlasterRifle_Flash.p3d";
+		descriptionShort="Weapon mounted light.";
+		class ItemInfo: InventoryFlashLightItem_Base_F
+		{
+			mass=4;
+			class FlashLight
+			{
+				color[]={252,161,0};
+				ambient[]={0.988,0.631,0};
+				intensity=100;
+				size=1;
+				innerAngle=5;
+				outerAngle=100;
+				coneFadeCoef=8;
+				position="flash dir";
+				direction="flash";
+				useFlare=1;
+				flareSize=1.4;
+				flareMaxDistance=100;
+				dayLight=0;
+				class Attenuation
+				{
+					start=0;
+					constant=0.5;
+					linear=0.1;
+					quadratic=0.2;
+					hardLimitStart=27;
+					hardLimitEnd=34;
+				};
+				scale[]={0};
+			};
+		};
+		inertia=0.1;
+	};
+	class MET_Optic_Arkanian_1_F: ItemCore
+	{
+		scope=2;
+		displayName="Arkanian ACOG Optic";
+		picture="\3AS\3AS_Weapons\Data\Textures\Energy_Cell_Arsenal.paa";
+		model="3as\3AS_Weapons\Greenfor\model\3AS_ArkanianBlasterRifle_Scope1.p3d";
+		weaponInfoType="RscWeaponZeroing";
+		author="$STR_3AS_Studio";
+		class ItemInfo: InventoryOpticsItem_Base_F
+		{
+			mass=7;
+			modelOptics="z\MET\addons\weapons\scopes\big_cross_orange_full.p3d";
+			class OpticsModes
+			{
+				class 3AS_Green_Optic2
+				{
+					opticsID=1;
+					useModelOptics=1;
+					opticsPPEffects[]=
+					{
+						"OpticsCHAbera1",
+						"OpticsBlur1"
+					};
+					opticsZoomMin=0.125;
+					opticsZoomMax=0.25;
+					opticsZoomInit=0.125;
+					discreteDistance[]={100,300,400,500,600,700,800,900,1000};
+					discreteDistanceInitIndex=1;
+					distanceZoomMin=100;
+					distanceZoomMax=1000;
+					nFovLimit=0.07;
+					discreteFov[]={};
+					discreteInitIndex=0;
+					memoryPointCamera="opticView";
+					opticsFlare=1;
+					opticsDisablePeripherialVision=1;
+					cameraDir="";
+					visionMode[]=
+					{
+						"Normal",
+						"NVG"
+					};
+					modelOptics[]=
+					{
+						"z\MET\addons\weapons\scopes\big_cross_orange_full.p3d"
+					};
+				};
+			};
+		};
+	};
 	class MET_DLA13: SFA_rifle_base
 	{
 		scope=2;
@@ -480,6 +575,14 @@ class CfgWeapons
 					"MET_DLA13_scope"
 				};
 			};
+			class PointerSlot: PointerSlot
+			{
+				linkProxy="\A3\data_f\proxies\weapon_slots\SIDE";
+				compatibleItems[]=
+				{
+					"MET_Flashlight_Arkanian_1_F"
+				};
+			};
 		};
 		class LinkedItems
 		{
@@ -488,8 +591,13 @@ class CfgWeapons
 				slot="CowsSlot";
 				item="MET_DLA13_scope";
 			};
+			class LinkedItemsPointer
+			{
+				slot="PointerSlot";
+				item="MET_Flashlight_Arkanian_1_F";
+			};
 		};
-		class FlashLight
+		/*class FlashLight
 		{
 			color[]={180,160,130};
 			ambient[]={0.89999998,0.80000001,0.69999999};
@@ -514,7 +622,7 @@ class CfgWeapons
 				hardLimitEnd=34;
 			};
 			scale[]={0};
-		};
+		};*/
 	};
 	class MET_DLA13_C: SFA_rifle_base
 	{
@@ -711,32 +819,22 @@ class CfgWeapons
 			{
 				compatibleItems[]={};
 			};
-		};
-		class FlashLight
-		{
-			color[]={180,160,130};
-			ambient[]={0.89999998,0.80000001,0.69999999};
-			intensity=100;
-			size=1;
-			innerAngle=5;
-			outerAngle=100;
-			coneFadeCoef=10;
-			position="flash dir";
-			direction="flash";
-			useFlare=1;
-			flareSize=1.5;
-			flareMaxDistance=100;
-			dayLight=1;
-			class Attenuation
+			class PointerSlot: PointerSlot
 			{
-				start=0;
-				constant=0.5;
-				linear=0.1;
-				quadratic=0.2;
-				hardLimitStart=27;
-				hardLimitEnd=34;
+				linkProxy="\A3\data_f\proxies\weapon_slots\SIDE";
+				compatibleItems[]=
+				{
+					"MET_Flashlight_Arkanian_1_F"
+				};
 			};
-			scale[]={0};
+		};
+		class LinkedItems
+		{
+			class LinkedItemsPointer
+			{
+				slot="PointerSlot";
+				item="MET_Flashlight_Arkanian_1_F";
+			};
 		};
 	};
 	class MET_DLA13_C2: SFA_rifle_base
@@ -934,32 +1032,22 @@ class CfgWeapons
 			{
 				compatibleItems[]={};
 			};
-		};
-		class FlashLight
-		{
-			color[]={180,160,130};
-			ambient[]={0.89999998,0.80000001,0.69999999};
-			intensity=100;
-			size=1;
-			innerAngle=5;
-			outerAngle=100;
-			coneFadeCoef=10;
-			position="flash dir";
-			direction="flash";
-			useFlare=1;
-			flareSize=1.5;
-			flareMaxDistance=100;
-			dayLight=1;
-			class Attenuation
+			class PointerSlot: PointerSlot
 			{
-				start=0;
-				constant=0.5;
-				linear=0.1;
-				quadratic=0.2;
-				hardLimitStart=27;
-				hardLimitEnd=34;
+				linkProxy="\A3\data_f\proxies\weapon_slots\SIDE";
+				compatibleItems[]=
+				{
+					"MET_Flashlight_Arkanian_1_F"
+				};
 			};
-			scale[]={0};
+		};
+		class LinkedItems
+		{
+			class LinkedItemsPointer
+			{
+				slot="PointerSlot";
+				item="MET_Flashlight_Arkanian_1_F";
+			};
 		};
 	};
 	class MET_DLA13_ugl: MET_DLA13
@@ -1010,6 +1098,521 @@ class CfgWeapons
 			{
 				compatibleItems[]={};
 			};
+		};
+	};
+	class MET_E1_Reforged: SFA_rifle_base
+	{
+		author="Starforge Armory";
+		scope=2;
+		scopeArsenal=0;
+		displayName="[BHA] E1 Reforged Carbine";
+		descriptionShort="";
+		model="SFA_Main\SFA_Weapons_N\E1\E1.p3d";
+		recoil="3as_recoil_lightmed";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"SFA_Main\SFA_Weapons_N\E1\data\E1_Reforged_co.paa"
+		};
+		handAnim[]=
+		{
+			"OFP2_ManSkeleton",
+			"SFA_Main\SFA_Weapons_R\Anim\Boltblaster\boltblaster4.rtm"
+		};
+		magazines[]=
+		{
+			"MET_E1_mag"
+		};
+		magazineWell[]={};
+		modes[]=
+		{
+			"Single",
+			"FullAuto"
+		};
+		fireLightDiffuse[]={0,0,1};
+		drySound[]=
+		{
+			"\SFA_Main\SFA_Weapons_Core\data\sfx\SFA_dry.wav",
+			5,
+			1,
+			10
+		};
+		muzzles[]=
+		{
+			"this"
+		};
+		class FullAuto: Mode_FullAuto
+		{
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				closure1[]={};
+				closure2[]={};
+				soundClosure[]={};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				soundSetShot[]=
+				{
+					"E1R_Shot_SoundSet"
+				};
+			};
+			reloadTime=0.0545454545;
+			dispersion=0.000095;
+			minRange=0;
+			minRangeProbab=0.89999998;
+			midRange=15;
+			midRangeProbab=0.69999999;
+			maxRange=30;
+			maxRangeProbab=0.1;
+			aiRateOfFire=1e-006;
+		};
+		class fullauto_medium: FullAuto
+		{
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				closure1[]={};
+				closure2[]={};
+				soundClosure[]={};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				soundSetShot[]=
+				{
+					"E1R_Shot_SoundSet"
+				};
+			};
+			showToPlayer=0;
+			burst=3;
+			aiBurstTerminable=1;
+			minRange=2;
+			minRangeProbab=0.5;
+			midRange=75;
+			midRangeProbab=0.69999999;
+			maxRange=150;
+			maxRangeProbab=0.050000001;
+			aiRateOfFire=2;
+			aiRateOfFireDistance=200;
+		};
+		class Single: Mode_SemiAuto
+		{
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				closure1[]={};
+				closure2[]={};
+				soundClosure[]={};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				soundSetShot[]=
+				{
+					"E1R_Shot_SoundSet"
+				};
+			};
+			reloadTime=0.0545454545;
+			dispersion=0.00101;
+			minRange=5;
+			minRangeProbab=0.30000001;
+			midRange=25;
+			midRangeProbab=0.60000002;
+			maxRange=50;
+			maxRangeProbab=0.1;
+			aiRateOfFire=2;
+			aiRateOfFireDistance=25;
+		};
+		class single_medium_optics1: Single
+		{
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				closure1[]={};
+				closure2[]={};
+				soundClosure[]={};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				soundSetShot[]=
+				{
+					"E1R_Shot_SoundSet"
+				};
+			};
+			requiredOpticType=1;
+			showToPlayer=0;
+			minRange=2;
+			minRangeProbab=0.2;
+			midRange=450;
+			midRangeProbab=0.69999999;
+			maxRange=600;
+			maxRangeProbab=0.2;
+			aiRateOfFire=6;
+			aiRateOfFireDistance=600;
+		};
+		class single_far_optics2: single_medium_optics1
+		{
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				closure1[]={};
+				closure2[]={};
+				soundClosure[]={};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				soundSetShot[]=
+				{
+					"E1R_Shot_SoundSet"
+				};
+			};
+			requiredOpticType=2;
+			showToPlayer=0;
+			minRange=100;
+			minRangeProbab=0.1;
+			midRange=500;
+			midRangeProbab=0.60000002;
+			maxRange=900;
+			maxRangeProbab=0.050000001;
+			aiRateOfFire=8;
+			aiRateOfFireDistance=700;
+		};
+		weaponInfoType="RscOptics_nightstalker";
+		modelOptics="z\MET\addons\weapons\scopes\big_cross_orange_full.p3d";
+		class OpticsModes
+		{
+			class nctalkep
+			{
+				opticsID=1;
+				useModelOptics=1;
+				opticsPPEffects[]=
+				{
+					"OpticsCHAbera1",
+					"OpticsBlur1"
+				};
+				opticsZoomMin=0.025;
+				opticsZoomMax=0.0625;
+				opticsZoomInit=0.0625;
+				discreteDistance[]={300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600,1700,1800,1900,2000,2100,2200,2300,2400,2500,2600};
+				discreteDistanceInitIndex=2;
+				distanceZoomMin=100;
+				distanceZoomMax=2600;
+				memoryPointCamera="opticView";
+				visionMode[]=
+				{
+					"Normal",
+					"NVG",
+					"Ti"
+				};
+				thermalMode[]={5,6};
+				opticsFlare=1;
+				opticsDisablePeripherialVision=1;
+				cameraDir="";
+			};
+			class Iron: nctalkep
+			{
+				opticsID=2;
+				useModelOptics=0;
+				opticsPPEffects[]=
+				{
+					"",
+					""
+				};
+				opticsFlare=0;
+				opticsDisablePeripherialVision=0;
+				discreteDistance[]={200};
+				discreteDistanceInitIndex=0;
+				opticsZoomMin=0.25;
+				opticsZoomMax=1.25;
+				opticsZoomInit=0.75;
+				memoryPointCamera="eye";
+				visionMode[]={};
+			};
+		};
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			mass=68;
+			class CowsSlot: CowsSlot
+			{
+				compatibleItems[]={};
+			};
+			class MuzzleSlot: MuzzleSlot
+			{
+				compatibleItems[]={};
+			};
+			class PointerSlot: PointerSlot
+			{
+				compatibleItems[]={};
+			};
+			class UnderBarrelSlot: UnderBarrelSlot
+			{
+				compatibleItems[]={};
+			};
+		};
+		class GunParticles
+		{
+			class FirstEffect
+			{
+				directionName="Konec hlavne";
+				effectName="RifleAssaultCloud";
+				positionName="Usti hlavne";
+			};
+		};
+	};
+	class Rifle;
+	class Rifle_Base_F: Rifle
+	{
+		class WeaponSlotsInfo;
+		class GunParticles;
+	};
+	class MET_Arkanian_Base_F: Rifle_Base_F
+	{
+		author="$STR_3AS_Studio";
+		magazines[]=
+		{
+			"MET_Arkanian_mag"
+		};
+		reloadAction="3AS_GestureReloadOverHeat";
+		magazineReloadSwitchPhase=0.40000001;
+		discreteDistanceInitIndex=0;
+		recoil="3as_recoil_lightmed";
+		maxRecoilSway=0.022500001;
+		swayDecaySpeed=1.25;
+		inertia=0.40000001;
+		dexterity=1.75;
+		initSpeed=-1;
+		maxZeroing=100;
+		reloadMagazineSound[]=
+		{
+			"\3AS\3AS_Main\Sounds\Old\Blaster_reload.wss",
+			1,
+			1,
+			30
+		};
+		class GunParticles
+		{
+		};
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			class CowsSlot: CowsSlot
+			{
+				linkProxy="\A3\data_f\proxies\weapon_slots\TOP";
+				compatibleItems[]=
+				{
+					"MET_Optic_Arkanian_1_F"
+				};
+			};
+			class PointerSlot: PointerSlot
+			{
+				linkProxy="\A3\data_f\proxies\weapon_slots\SIDE";
+				compatibleItems[]=
+				{
+					"MET_Flashlight_Arkanian_1_F"
+				};
+			};
+			class UnderBarrelSlot: UnderBarrelSlot
+			{
+				linkProxy="\A3\data_f_mark\proxies\weapon_slots\UNDERBARREL";
+				compatibleItems[]={};
+			};
+		};
+		class LinkedItems
+		{
+			class LinkedItemsOptic
+			{
+				slot="CowsSlot";
+				item="MET_Optic_Arkanian_1_F";
+			};
+			class LinkedItemsPointer
+			{
+				slot="PointerSlot";
+				item="MET_Flashlight_Arkanian_1_F";
+			};
+		};
+		opticsZoomMin=0.25;
+		opticsZoomMax=1.25;
+		opticsZoomInit=0.75;
+		distanceZoomMin=400;
+		distanceZoomMax=400;
+		descriptionShort="Arkanian Rifle";
+		handAnim[]=
+		{
+			"OFP2_ManSkeleton",
+			"3as\3AS_Weapons\Greenfor\data\anims\ArkanianHand.rtm"
+		};
+		selectionFireAnim="zasleh";
+		fireLightDiffuse[]={7,110,176};
+		fireLightIntensity=0.02;
+		flash="gunfire";
+		flashSize=0.1;
+		modes[]=
+		{
+			"FullAuto",
+			"Single"
+		};
+		class FullAuto: Mode_FullAuto
+		{
+			reloadTime=0.0666666667;
+			dispersion=0.00106;
+			minRange=0;
+			minRangeProbab=0.89999998;
+			midRange=15;
+			midRangeProbab=0.69999999;
+			maxRange=30;
+			maxRangeProbab=0.1;
+			soundContinuous=0;
+			soundBurst=0;
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class BaseSoundModeType;
+			class StandardSound: BaseSoundModeType
+			{
+				soundSetShot[]=
+				{
+					"3AS_Arkanian_SoundSet"
+				};
+			};
+		};
+		class Single: Mode_SemiAuto
+		{
+			reloadTime=0.0666666667;
+			dispersion=0.00106;
+			minRange=2;
+			minRangeProbab=0.30000001;
+			midRange=150;
+			midRangeProbab=0.69999999;
+			maxRange=350;
+			maxRangeProbab=0.1;
+			soundContinuous=0;
+			soundBurst=0;
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class BaseSoundModeType;
+			class StandardSound: BaseSoundModeType
+			{
+				soundSetShot[]=
+				{
+					"3AS_Arkanian_SoundSet"
+				};
+			};
+		};
+	};
+	class MET_Arkanian_Stock_Base_F: MET_Arkanian_Base_F
+	{
+		magazines[]=
+		{
+			"MET_Arkanian_mag"
+		};
+		reloadAction="3AS_GestureReloadOverHeat";
+		magazineReloadSwitchPhase=0.40000001;
+		discreteDistanceInitIndex=0;
+		recoil="3as_recoil_light";
+		maxRecoilSway=0.0125;
+		swayDecaySpeed=1.25;
+		inertia=0.44999999;
+		dexterity=1.75;
+		initSpeed=-1;
+		maxZeroing=100;
+		opticsZoomMin=0.25;
+		opticsZoomMax=1.25;
+		opticsZoomInit=0.75;
+		distanceZoomMin=400;
+		distanceZoomMax=400;
+		descriptionShort="Arkanian Rifle with a Stock";
+		handAnim[]=
+		{
+			"OFP2_ManSkeleton",
+			"3as\3AS_Weapons\Greenfor\data\anims\ArkanianHandStock.rtm"
+		};
+		fireLightDiffuse[]={7,110,176};
+		fireLightIntensity=0.02;
+		flash="gunfire";
+		flashSize=0.1;
+	};
+	class MET_Arkanian_Stock_F: MET_Arkanian_Stock_Base_F
+	{
+		author="$STR_3AS_Studio";
+		scope=2;
+		scopeArsenal=0;
+		displayName="[BHA] Arkanian Blaster (Stock)";
+		model="3as\3AS_Weapons\Greenfor\model\3AS_ArkanianBlasterRifleStock.p3d";
+		picture="\3AS\3AS_Weapons\Greenfor\data\UI\3as_arks.paa";
+		weaponInfoType="RscWeaponZeroing";
+		class OpticsModes
+		{
+			class Ironsights
+			{
+				opticsID=1;
+				useModelOptics=0;
+				opticsFlare="true";
+				opticsPPEffects[]=
+				{
+					"OpticsCHAbera5",
+					"OpticsBlur5"
+				};
+				opticsDisablePeripherialVision=0.67000002;
+				opticsZoomMin=0.375;
+				opticsZoomMax=1.1;
+				opticsZoomInit=0.75;
+				memoryPointCamera="eye";
+				visionMode[]={};
+				distanceZoomMin=100;
+				distanceZoomMax=100;
+			};
+			class Scope: Ironsights
+			{
+				opticsID=2;
+				useModelOptics=1;
+				opticsPPEffects[]=
+				{
+					"OpticsCHAbera5",
+					"OpticsBlur5"
+				};
+				opticsDisablePeripherialVision=0.67000002;
+				opticsZoomMin=0.122173;
+				opticsZoomMax=0.122173;
+				opticsZoomInit=0.122173;
+				memoryPointCamera="opticView";
+				visionMode[]=
+				{
+					"Normal",
+					"NVG"
+				};
+				opticsFlare="true";
+				distanceZoomMin=100;
+				distanceZoomMax=100;
+				cameraDir="";
+			};
+		};
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			mass=65;
 		};
 	};
 	class MET_T20_rifle: SFA_rifle_base
@@ -2399,6 +3002,233 @@ class CfgWeapons
 			};
 		};
 	};
+	class MET_BHALasRifle: Rifle_Base_F
+	{
+		author="Rogue771";
+		scope=2;
+		scopeArsenal=0;
+		displayName="[BHA] XLR-01 Fastner Driver";
+		model="\TKE_Kuiper_Engagements\TKE_Weapons\TKE_UCNLasRifle.p3d";
+		picture="\TKE_Kuiper_Engagements\TKE_Weapons\ui\UCNLaser.paa";
+		UiPicture="\TKE_Kuiper_Engagements\TKE_Weapons\ui\UCNLaser.paa";
+		magazineReloadTime=99;
+		hiddenSelections[]=
+		{
+			"camo",
+			"camo1",
+			"camo2"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\TKE_Kuiper_Engagements\TKE_Weapons\data\TKE_UCNLasRifle1_co.paa",
+			"\TKE_Kuiper_Engagements\TKE_Weapons\data\TKE_UCNLasRifle2_co.paa",
+			"\TKE_Kuiper_Engagements\TKE_Weapons\data\TKE_UCNLasRifleSight_ca.paa"
+		};
+		handAnim[]=
+		{
+			"OFP2_ManSkeleton",
+			"\TKE_Kuiper_Engagements\TKE_Weapons\anims\XLRHandAnim.rtm"
+		};
+		selectionFireAnim="muzzleFlash";
+		reloadAction="WBK_TKE_UCN_Lasrifle_Reload";
+		magazines[]=
+		{
+			"BHA_Powerpack"
+		};
+		magazineWell[]=
+		{
+			"BHA_XLR_MagWell"
+		};
+		magazineReloadSwitchPhase=0.47999999;
+		initSpeed=-1;
+		recoil="recoil_TKE_MAW62x35";
+		htMin=11;
+		htMax=730;
+		inertia=0.60000002;
+		distanceZoomMin=400;
+		distanceZoomMax=400;
+		aimTransitionSpeed=1;
+		dexterity=1.4;
+		maxRecoilSway=0.1;
+		swayDecaySpeed=1.25;
+		maxZeroing=1200;
+		caseless[]=
+		{
+			"",
+			1,
+			1,
+			1
+		};
+		soundBullet[]=
+		{
+			"caseless",
+			1
+		};
+		drySound[]=
+		{
+			"A3\Sounds_F\arsenal\weapons\Rifles\MX\dry_Mx",
+			0.56234097,
+			1,
+			10
+		};
+		reloadMagazineSound[]=
+		{
+			"\TKE_Kuiper_Engagements\TKE_Weapons\sounds\TKE_UCN_LaserReload.ogg",
+			2.5,
+			1,
+			25
+		};
+		changeFiremodeSound[]=
+		{
+			"A3\Sounds_F\arsenal\weapons\Rifles\Katiba\firemode_katiba",
+			0.25118899,
+			1,
+			5
+		};
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			class CowsSlot: CowsSlot_Rail
+			{
+				iconPosition[]={0.44999999,0.28};
+				compatibleItems[]={};
+				iconScale=0.2;
+			};
+			class MuzzleSlot: MuzzleSlot
+			{
+				linkProxy="\A3\data_f\proxies\weapon_slots\MUZZLE";
+				compatibleItems[]={};
+				iconPosition[]={0,0.44999999};
+				iconScale=0.2;
+			};
+			class UnderBarrelSlot: UnderBarrelSlot
+			{
+				linkProxy="\a3\data_f_mark\proxies\weapon_slots\underbarrel";
+				iconPinpoint="center";
+				compatibleItems[]={};
+				iconPosition[]={0.2,0.69999999};
+				iconScale=0.2;
+			};
+			class PointerSlot: PointerSlot_Rail
+			{
+				compatibleItems[]={};
+				iconPosition[]={0.25,0.40000001};
+				iconScale=0.25;
+			};
+			mass=120;
+		};
+		modelOptics="z\MET\addons\weapons\scopes\big_cross_orange_med.p3d";
+		class OpticsModes
+		{
+			class Scope
+			{
+				opticsID=1;
+				useModelOptics=1;
+				opticsPPEffects[]=
+				{
+					"OpticsCHAbera1",
+					"OpticsBlur1"
+				};
+				opticsZoomMin=0.025;
+				opticsZoomMax=0.0625;
+				opticsZoomInit=0.0625;
+				discreteDistanceInitIndex=2;
+				discreteDistance[]={200};
+				distanceZoomMin=100;
+				distanceZoomMax=1200;
+				discretefov[]={0.0625,0.025};
+				discreteInitIndex=0;
+				memoryPointCamera="opticView";
+				visionMode[]=
+				{
+					"Ti",
+					"Normal"
+				};
+				thermalMode[]={4,5};
+				opticsFlare=1;
+				opticsDisablePeripherialVision=1;
+				cameraDir="";
+			};
+			class Iron: Scope
+			{
+				opticsID=2;
+				useModelOptics=0;
+				opticsPPEffects[]=
+				{
+					"",
+					""
+				};
+				opticsFlare=0;
+				opticsDisablePeripherialVision=0;
+				opticsZoomMin=0.15000001;
+				opticsZoomMax=0.5;
+				opticsZoomInit=0.5;
+				memoryPointCamera="eye";
+				visionMode[]={};
+				discretefov[]={};
+				distanceZoomMin=200;
+				distanceZoomMax=200;
+				discreteDistance[]={200};
+				discreteDistanceInitIndex=0;
+			};
+		};
+		modes[]=
+		{
+			"Single",
+			"single_medium_optics1",
+			"single_far_optics2"
+		};
+		class Single: Mode_SemiAuto
+		{
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class BaseSoundModeType;
+			class StandardSound: BaseSoundModeType
+			{
+				soundSetShot[]=
+				{
+					"WBK_TKE_Laser_SoundSet",
+					"M320_Tail_SoundSet",
+					"M320_InteriorTail_SoundSet"
+				};
+			};
+			reloadTime=1;
+			dispersion=0.00014999999;
+			minRange=2;
+			minRangeProbab=0.5;
+			midRange=200;
+			midRangeProbab=0.69999999;
+			maxRange=600;
+			maxRangeProbab=0.30000001;
+		};
+		class single_medium_optics1: Single
+		{
+			requiredOpticType=1;
+			showToPlayer=0;
+			minRange=2;
+			minRangeProbab=0.2;
+			midRange=450;
+			midRangeProbab=0.69999999;
+			maxRange=600;
+			maxRangeProbab=0.2;
+			aiRateOfFire=6;
+			aiRateOfFireDistance=600;
+		};
+		class single_far_optics2: single_medium_optics1
+		{
+			requiredOpticType=2;
+			showToPlayer=0;
+			minRange=100;
+			minRangeProbab=0.1;
+			midRange=500;
+			midRangeProbab=0.60000002;
+			maxRange=700;
+			maxRangeProbab=0.050000001;
+			aiRateOfFire=8;
+			aiRateOfFireDistance=700;
+		};
+	};
 	class MET_BHA_SBB3: arifle_MX_Base_F
 	{
 		JLTS_hasElectronics=0;
@@ -2851,6 +3681,32 @@ class CfgMagazines
 		tracersEvery=1;
 		mass=20;
 	};
+	class MET_E1_mag: MET_DC15A_mag
+	{
+		scope=2;
+		scopeArsenal=0;
+		author="16th Aux Team";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_ammo_o.paa";
+		modelSpecialIsProxy=0;
+		count=100;
+		displayName="E-1 Energy Cell";
+		ammo="MET_bullet_smg_orange";
+		tracersEvery=1;
+		mass=20;
+	};
+	class MET_Arkanian_mag: MET_DC15A_mag
+	{
+		scope=2;
+		scopeArsenal=0;
+		author="16th Aux Team";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_ammo_o.paa";
+		modelSpecialIsProxy=0;
+		count=40;
+		displayName="Arkanian Energy Cell";
+		ammo="MET_bullet_rifle_orange";
+		tracersEvery=1;
+		mass=20;
+	};
 	class MET_T20_mag: MET_DC15A_mag
 	{
 		scope=2;
@@ -2982,6 +3838,21 @@ class CfgMagazines
 		ammo="MET_bullet_Sniper_orange";
 		tracersEvery=1;
 		mass=40;
+	};
+	class 30Rnd_556x45_Stanag;
+	class BHA_Powerpack: 30Rnd_556x45_Stanag
+	{
+		scope=2;
+		scopeArsenal=0;
+		scopeCurator=2;
+		mass=30;
+		displayName="[BHA] Power Pack";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_sniper_o.paa";
+		ammo="BHA_LasProjectile";
+		count=20;
+		initSpeed=950;
+		tracersEvery=1;
+		descriptionShort="";
 	};
 	class BHA_AA_SINGLE: 3AS_JLTS_MK39_AA
 	{
@@ -3399,6 +4270,106 @@ class CfgAmmo
 			default_mat="SFA_ImpactPlasma";
 		};
 	};
+	class MET_bullet_smg_orange: SFA_bullet_carbine_blue
+	{
+		author="16th AUX Team";
+		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Yellow.p3d";
+		lightcolor[]={1,0.584,0};
+		hit=20;
+		flaresize=5;
+		tracerscale=1.1;
+		effectflare="FlareShell";
+		tracerstarttime=0;
+		tracerendtime=10;
+		nvgonly=0;
+		typicalspeed=920;
+		airlock=1;
+		irtarget=1;
+		cartridge="FxCartridge_CAS";
+		effectfly="met_plasma_orange";
+		brightness=1100;
+		timetolive=4;
+		initTime=0;
+		airfriction=0;
+		coefgravity=0;
+		deflecting=0;
+		class HitEffects: HitEffects
+		{
+			Hit_Foliage_green="SFA_ImpactPlasma";
+			Hit_Foliage_Dead="SFA_ImpactPlasma";
+			Hit_Foliage_Green_big="SFA_ImpactPlasma";
+			Hit_Foliage_Palm="SFA_ImpactPlasma";
+			Hit_Foliage_Pine="SFA_ImpactPlasma";
+			hitFoliage="SFA_ImpactPlasma";
+			hitGlass="SFA_ImpactPlasma";
+			hitGlassArmored="SFA_ImpactPlasma";
+			hitWood="SFA_ImpactPlasma";
+			hitMetal="SFA_ImpactPlasma";
+			hitMetalPlate="SFA_ImpactPlasma";
+			hitBuilding="SFA_ImpactPlasma";
+			hitPlastic="SFA_ImpactPlasma";
+			hitRubber="SFA_ImpactPlasma";
+			hitTyre="SFA_ImpactPlasma";
+			hitConcrete="SFA_ImpactPlasma";
+			hitMan="SFA_ImpactPlasma";
+			hitGroundSoft="SFA_ImpactPlasma";
+			hitGroundRed="SFA_ImpactPlasma";
+			hitGroundHard="SFA_ImpactPlasma";
+			hitWater="SFA_ImpactPlasma";
+			hitVirtual="SFA_ImpactPlasma";
+			default_mat="SFA_ImpactPlasma";
+		};
+	};
+	class MET_bullet_rifle_orange: SFA_bullet_carbine_blue
+	{
+		author="16th AUX Team";
+		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Yellow.p3d";
+		lightcolor[]={1,0.584,0};
+		hit=40;
+		flaresize=5;
+		tracerscale=1.1;
+		effectflare="FlareShell";
+		tracerstarttime=0;
+		tracerendtime=10;
+		nvgonly=0;
+		typicalspeed=920;
+		airlock=1;
+		irtarget=1;
+		cartridge="FxCartridge_CAS";
+		effectfly="met_plasma_orange";
+		brightness=1100;
+		timetolive=4;
+		initTime=0;
+		airfriction=0;
+		coefgravity=0;
+		deflecting=0;
+		class HitEffects: HitEffects
+		{
+			Hit_Foliage_green="SFA_ImpactPlasma";
+			Hit_Foliage_Dead="SFA_ImpactPlasma";
+			Hit_Foliage_Green_big="SFA_ImpactPlasma";
+			Hit_Foliage_Palm="SFA_ImpactPlasma";
+			Hit_Foliage_Pine="SFA_ImpactPlasma";
+			hitFoliage="SFA_ImpactPlasma";
+			hitGlass="SFA_ImpactPlasma";
+			hitGlassArmored="SFA_ImpactPlasma";
+			hitWood="SFA_ImpactPlasma";
+			hitMetal="SFA_ImpactPlasma";
+			hitMetalPlate="SFA_ImpactPlasma";
+			hitBuilding="SFA_ImpactPlasma";
+			hitPlastic="SFA_ImpactPlasma";
+			hitRubber="SFA_ImpactPlasma";
+			hitTyre="SFA_ImpactPlasma";
+			hitConcrete="SFA_ImpactPlasma";
+			hitMan="SFA_ImpactPlasma";
+			hitGroundSoft="SFA_ImpactPlasma";
+			hitGroundRed="SFA_ImpactPlasma";
+			hitGroundHard="SFA_ImpactPlasma";
+			hitWater="SFA_ImpactPlasma";
+			hitVirtual="SFA_ImpactPlasma";
+			default_mat="SFA_ImpactPlasma";
+		};
+	};
 	class MET_bullet_heavy_orange: SFA_bullet_carbine_blue
 	{
 		author="16th AUX Team";
@@ -3599,6 +4570,47 @@ class CfgAmmo
 			hitWater="SFA_ImpactPlasma";
 			hitVirtual="SFA_ImpactPlasma";
 			default_mat="SFA_ImpactPlasma";
+		};
+	};
+	class B_556x45_Ball;
+	class BHA_LasProjectile: B_556x45_Ball
+	{
+		airLock=1;
+		hit=250;
+		indirectHit=0;
+		indirectHitRange=0;
+		cost=50;
+		effectsFire="ChemlightLight_Red";
+		lightColor[]={1,1,1,0};
+		coefGravity=0.1;
+		typicalSpeed=920;
+		airFriction=-0.01;
+		waterFriction=-0.30000001;
+		model="\TKE_Kuiper_Engagements\TKE_Weapons\bullet\TKE_LasProjectile.p3d";
+		caliber=8;
+		timeToLive=2;
+		tracerScale=0.60000002;
+		tracerStartTime=0.0049999999;
+		tracerEndTime=3;
+		audibleFire=35;
+		dangerRadiusBulletClose=8;
+		dangerRadiusHit=12;
+		suppressionRadiusBulletClose=6;
+		suppressionRadiusHit=8;
+		aiAmmoUsageFlags=64;
+		class CamShakeExplode
+		{
+			power=2.2360699;
+			duration=0.40000001;
+			frequency=20;
+			distance=6.7082;
+		};
+		class CamShakeHit
+		{
+			power=5;
+			duration=0.2;
+			frequency=20;
+			distance=1;
 		};
 	};
 	class 3AS_PlasmaBase;

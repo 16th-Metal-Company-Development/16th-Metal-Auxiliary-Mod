@@ -1,4 +1,4 @@
-name = "The 16th Metal Company Aux Mod";
+name = "16th Metal Company Aux Mod";
 
 
 picture = "16th_logo.paa";

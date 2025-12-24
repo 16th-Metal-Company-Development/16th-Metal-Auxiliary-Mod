@@ -199,24 +199,33 @@ class cfgvehicles
 	class Aux212_Bantha_C_IFV;
 	class Aux212_Bantha_C_Mortar;
 	class Car;
-	class Car_F: Car
+	class Car_F : Car
 	{
 		class NewTurret;
 		class Sounds;
+		class Eventhandlers;
 		class HitPoints
 		{
-			class HitBody;
-			class HitEngine;
-			class HitFuel;
 			class HitHull;
+			class HitLFWheel;
+			class HitLF2Wheel;
+			class HitLBWheel;
+			class HitLMWheel;
+			class HitRFWheel;
+			class HitRF2Wheel;
+			class HitRBWheel;
+			class HitRMWheel;
+			class HitBody;
+			class HitFuel;
+			class HitEngine;
 		};
 	};
-	class Wheeled_APC_F: Car_F
+	class Wheeled_APC_F : Car_F
 	{
 		class ViewPilot;
 		class ViewOptics;
 		class ViewCargo;
-		class Sounds: Sounds
+		class Sounds : Sounds
 		{
 			class Engine;
 			class Movement;
@@ -224,7 +233,7 @@ class cfgvehicles
 		class NewTurret;
 		class Turrets
 		{
-			class MainTurret: NewTurret
+			class MainTurret : NewTurret
 			{
 				class ViewOptics;
 				class ViewGunner;
@@ -234,42 +243,43 @@ class cfgvehicles
 				};
 			};
 		};
+		class AnimationSources;
 	};
-class Optics_Commander_01: Optics_Armored
-{
-	class Wide;
-	class Medium;
-	class Narrow;
-};
-class Optics_Gunner_APC_01: Optics_Armored
-{
-	class Wide;
-	class Medium;
-	class Narrow;
-};
-class Optics_Metal_Bantha_T_Assault_Turret
-{
-	class Wide: RCWSOptics
+	class Optics_Commander_01: Optics_Armored
 	{
-		initFov="(36 / 120)";
-		minFov="(36 / 120)";
-		maxFov="(36 / 120)";
-		visionMode[]=
+		class Wide;
+		class Medium;
+		class Narrow;
+	};
+	class Optics_Gunner_APC_01: Optics_Armored
+	{
+		class Wide;
+		class Medium;
+		class Narrow;
+	};
+	class Optics_Metal_Bantha_T_Assault_Turret
+	{
+		class Wide: RCWSOptics
 		{
-			"Normal",
-			"NVG"
+			initFov="(36 / 120)";
+			minFov="(36 / 120)";
+			maxFov="(36 / 120)";
+			visionMode[]=
+			{
+				"Normal",
+				"NVG"
+			};
+			gunnerOpticsModel="\A3\weapons_f\reticle\optics_empty";
+			gunnerOpticsEffect[]={};
 		};
-		gunnerOpticsModel="\A3\weapons_f\reticle\optics_empty";
-		gunnerOpticsEffect[]={};
+		class Medium: Wide
+		{
+			gunnerOpticsModel="\A3\weapons_f\reticle\optics_empty";
+			initFov="(150 * 0.05625 / 120)";
+			minFov="(150 * 0.05625 / 120)";
+			maxFov="(150 * 0.05625 / 120)";
+		};
 	};
-	class Medium: Wide
-	{
-		gunnerOpticsModel="\A3\weapons_f\reticle\optics_empty";
-		initFov="(150 * 0.05625 / 120)";
-		minFov="(150 * 0.05625 / 120)";
-		maxFov="(150 * 0.05625 / 120)";
-	};
-};
 	class 3AS_Barc_501;
 	class 3AS_BarcSideCar;
 	class 3AS_ISP;
@@ -307,6 +317,15 @@ class CfgFunctions {
 class CfgWeapons 
 {
 	class CannonCore;
+	class MGun;
+	class gatling_20mm;
+	class 3AS_Hailfire_SAM_weapon;
+	class RocketPods;
+	class 3AS_Sabre_MG;
+	class 3AS_Sabre_Cannons_Super
+	{
+		class manual;
+	};
 
 	class MET_BARC_Repeater : CannonCore
 	{
@@ -430,6 +449,302 @@ class CfgWeapons
 		{
 			reloadTime = 0.1;
 			dispersion = 0.0011;
+		};
+	};
+
+	class MET_Juggernaut_AT_Cannon : 3AS_Sabre_Cannons_Super
+	{
+		displayName = "Juggernaut Top Cannon";
+		magazines[] =
+		{
+			"3AS_15Rnd_Jug_AT_Mag"
+		};
+		magazineReloadTime = 20;
+		reloadTime = 5;
+		class manual : manual
+		{
+			burst = 1;
+			dispersion = 0.0002;
+			magazineReloadTime = 5;
+			reloadTime = 1.5;
+
+			sounds[] =
+			{
+				"StandardSound"
+			};
+			class StandardSound
+			{
+				begin1[] =
+				{
+					"z\MET\addons\vehicles\vics\JUGG\MET_Sound_Juggertnaut_AT",
+					1.1220185,
+					1,
+					1100
+				};
+				soundBegin[] =
+				{
+					"begin1",
+					1
+				};
+				closure1[] = {};
+				soundClosure[] =
+				{
+					"closure1",
+					0.5
+				};
+			};
+		};
+		class GunParticles
+		{
+		};
+	};
+	class MET_Juggernaut_AA_Cannon : gatling_20mm
+	{
+		scope = 1;
+		displayName = "Juggernaut Gatling Cannon";
+		nameSound = "cannon";
+		cursor = "EmptyCursor";
+		cursorAim = "mg";
+		magazines[] =
+		{
+			"3AS_1000Rnd_Jug_AutoCannon_Mag"
+		};
+		canLock = 0;
+		ballisticsComputer = "4 + 2";
+		modes[] =
+		{
+			"manual",
+			"close",
+			"short",
+			"medium",
+			"far"
+		};
+		class GunParticles
+		{
+			class Effect
+			{
+				effectName = "MachineGun1";
+				positionName = "Usti hlavne";
+				directionName = "Konec hlavne";
+			};
+		};
+		class manual : CannonCore
+		{
+			displayName = "Gatling Cannon 20 mm";
+			autoFire = 1;
+			sounds[] =
+			{
+				"StandardSound"
+			};
+			class StandardSound
+			{
+				soundSetShot[] =
+				{
+					"3AS_JugGatling_Soundset"
+				};
+			};
+			reloadTime = 0.090000004;
+			dispersion = 0.0022;
+			soundContinuous = 0;
+			soundBurst = 0;
+			showToPlayer = 1;
+			burst = 5;
+			aiRateOfFire = 0.25;
+			aiRateOfFireDistance = 50;
+			minRange = 1;
+			minRangeProbab = 0.0099999998;
+			midRange = 2;
+			midRangeProbab = 0.0099999998;
+			maxRange = 3;
+			maxRangeProbab = 0.0099999998;
+			textureType = "fullAuto";
+		};
+		class close : manual
+		{
+			showToPlayer = 0;
+			burst = 15;
+			aiRateOfFire = 0.25;
+			aiRateOfFireDistance = 400;
+			minRange = 0;
+			minRangeProbab = 0.050000001;
+			midRange = 200;
+			midRangeProbab = 0.69999999;
+			maxRange = 400;
+			maxRangeProbab = 0.2;
+		};
+		class short : close
+		{
+			burst = 10;
+			aiRateOfFire = 0.5;
+			aiRateOfFireDistance = 500;
+			minRange = 300;
+			minRangeProbab = 0.2;
+			midRange = 400;
+			midRangeProbab = 0.69999999;
+			maxRange = 500;
+			maxRangeProbab = 0.2;
+		};
+		class medium : close
+		{
+			burst = 7;
+			aiRateOfFire = 1;
+			aiRateOfFireDistance = 900;
+			minRange = 400;
+			minRangeProbab = 0.2;
+			midRange = 700;
+			midRangeProbab = 0.69999999;
+			maxRange = 900;
+			maxRangeProbab = 0.2;
+		};
+		class far : close
+		{
+			burst = 4;
+			aiRateOfFire = 1.5;
+			aiRateOfFireDistance = 1500;
+			minRange = 800;
+			minRangeProbab = 0.2;
+			midRange = 1000;
+			midRangeProbab = 0.40000001;
+			maxRange = 1500;
+			maxRangeProbab = 0.0099999998;
+		};
+	};
+	class MET_Juggernaut_PD_Cannon : 3AS_Sabre_MG
+	{
+		class GunParticles
+		{
+		};
+		displayName = "Juggernaut Point Defense";
+		magazines[] =
+		{
+			"3AS_500Rnd_Jug_PD_Mag"
+		};
+		magazineReloadTime = 5;
+		reloadTime = 9.9999997e-005;
+		ballisticsComputer = "2 + 16";
+		class manual : MGun
+		{
+			displayName = "$STR_A3_LMG_RCWS0";
+			sounds[] =
+			{
+				"StandardSound"
+			};
+			class BaseSoundModeType;
+			class StandardSound : BaseSoundModeType
+			{
+				soundSetShot[] =
+				{
+					"3AS_ATRT_Shot_SoundSet"
+				};
+			};
+			soundContinuous = 0;
+			soundBurst = 0;
+			reloadTime = 0.105;
+			dispersion = 0.0016;
+			aiRateOfFire = 1;
+			aiRateOfFireDistance = 10;
+			minRange = 0;
+			minRangeProbab = 0.0099999998;
+			midRange = 1;
+			midRangeProbab = 0.0099999998;
+			maxRange = 2;
+			maxRangeProbab = 0.0099999998;
+		};
+		class close : manual
+		{
+			aiBurstTerminable = 1;
+			showToPlayer = 0;
+			burst = 8;
+			burstRangeMax = 16;
+			aiRateOfFire = 0.5;
+			aiRateOfFireDispersion = 2;
+			aiRateOfFireDistance = 50;
+			minRange = 0;
+			minRangeProbab = 0.80000001;
+			midRange = 20;
+			midRangeProbab = 0.69999999;
+			maxRange = 50;
+			maxRangeProbab = 0.2;
+		};
+		class short : close
+		{
+			aiBurstTerminable = 1;
+			showToPlayer = 0;
+			burst = 6;
+			burstRangeMax = 12;
+			aiRateOfFire = 1;
+			aiRateOfFireDispersion = 2;
+			aiRateOfFireDistance = 150;
+			minRange = 20;
+			minRangeProbab = 0.69999999;
+			midRange = 150;
+			midRangeProbab = 0.69999999;
+			maxRange = 300;
+			maxRangeProbab = 0.2;
+		};
+		class medium : close
+		{
+			aiBurstTerminable = 1;
+			showToPlayer = 0;
+			burst = 3;
+			burstRangeMax = 12;
+			aiRateOfFire = 2;
+			aiRateOfFireDispersion = 2;
+			aiRateOfFireDistance = 250;
+			minRange = 150;
+			minRangeProbab = 0.69999999;
+			midRange = 600;
+			midRangeProbab = 0.64999998;
+			maxRange = 800;
+			maxRangeProbab = 0.1;
+		};
+		class far : close
+		{
+			aiBurstTerminable = 1;
+			showToPlayer = 0;
+			burst = 3;
+			burstRangeMax = 8;
+			aiRateOfFire = 4;
+			aiRateOfFireDispersion = 4;
+			aiRateOfFireDistance = 600;
+			minRange = 600;
+			minRangeProbab = 0.64999998;
+			midRange = 800;
+			midRangeProbab = 0.40000001;
+			maxRange = 1200;
+			maxRangeProbab = 0.1;
+		};
+	};
+	class MET_Juggernaut_SAM : 3AS_Hailfire_SAM_weapon
+	{
+		displayName = "Juggernaut SAM System";
+		magazines[] =
+		{
+			"3AS_2Rnd_Jug_SAM_Mag"
+		};
+		class GunParticles
+		{
+			class FirstEffect
+			{
+				effectName = "MLRSFired";
+				positionName = "SAM_Backblast_Pos";
+				directionName = "SAM_Backblast_dir";
+			};
+			class SecondEffect
+			{
+				effectName = "MLRSFired";
+				positionName = "SAM_Backblast_2_Pos";
+				directionName = "SAM_Backblast_2_dir";
+			};
+		};
+	};
+	class missiles_titan;
+	class MET_Juggernaut_Missiles : missiles_titan
+	{
+		displayName = "Titans";
+		magazines[] =
+		{
+			"3AS_24Rnd_Jug_Missile_Mag"
 		};
 	};
 };

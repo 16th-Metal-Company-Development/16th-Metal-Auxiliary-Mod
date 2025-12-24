@@ -319,7 +319,7 @@ class CfgVehicles
 		armor=250;
 		armorStructural=3.25;
 		faction="BHA_Units";
-		editorCategory="BHA_Assets";
+		//editorCategory="BHA_Assets";
 		editorSubcategory="BHA_Statics";
 		crew="BHA_warbot";
 		displayName="AA Gun";

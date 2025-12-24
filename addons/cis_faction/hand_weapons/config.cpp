@@ -10,6 +10,12 @@ class CfgPatches
             "metal_inf_weap",
 			"JLTS_weapons_E5",
 			"ammo_cis_16",
+			"IDA_CIS",
+			"JLTS_weapons_E5C",
+			"JLTS_weapons_E5S",
+			"JLTS_weapons_E60R",
+			"JLTS_weapons_RG4D",
+			"JLTS_weapons_SBB3"
 		};
 		author="DJ, LCDR Wolf, Ronin, JLTS Team";
 		Name="handweapons_16";
