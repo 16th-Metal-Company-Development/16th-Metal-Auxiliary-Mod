@@ -34,4 +34,8 @@ class CfgEditorSubcategories
 	{
 		displayName="Men (Reserves)";
 	};
+	class Swamp_People_Emplacements
+	{
+		displayName="Emplacements";
+	};
 };

@@ -4,6 +4,11 @@ class CfgPatches
 	{
 		units[]={};
 		weapons[]={};
+		skipWhenMissingDependencies=1;
+		requiredAddons[]=
+		{
+			"sc_vtol"
+		};
 	};
 };
 class CfgFactionClasses

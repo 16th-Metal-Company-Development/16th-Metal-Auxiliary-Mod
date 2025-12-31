@@ -15,6 +15,10 @@ class CfgPatches
 		ammo[]=
 		{
 		};
+		requiredAddons[]=
+		{
+			"ShadowLegion_Aux_Weapons"
+		};
 	};
 };
 class CfgRecoils
@@ -68,7 +72,7 @@ class CfgWeapons
 	class MET_D200: hgun_Pistol_heavy_02_F
 	{
 		scope=2;
-		scopeArsenal=0;
+		scopeArsenal=1;
 		baseWeapon="MET_D200";
 		model="\SFA_Main\SFA_Weapons_S\D200\D200.p3d";
 		reloadAction="ReloadMagazine";
@@ -239,7 +243,7 @@ class CfgWeapons
 		author="16th Aux Team";
 		model="SFA_Main\SFA_Weapons_S\DLA13\DLA13_scope.p3d";
 		scope=2;
-		scopeArsenal=0;
+		scopeArsenal=1;
 		descriptionShort="";
 		weaponInfoType="RscWeaponZeroing";
 		class ItemInfo: InventoryOpticsItem_Base_F
@@ -378,7 +382,7 @@ class CfgWeapons
 	class MET_DLA13: SFA_rifle_base
 	{
 		scope=2;
-		scopeArsenal=0;
+		scopeArsenal=1;
 		author="16th Aux Team";
 		canShootInWater=1;
 		picture="\SFA_Main\SFA_Weapons_S\DLA13\data\ui\DLA13_ui.paa";
@@ -627,7 +631,7 @@ class CfgWeapons
 	class MET_DLA13_C: SFA_rifle_base
 	{
 		scope=2;
-		scopeArsenal=0;
+		scopeArsenal=1;
 		author="16th Aux Team";
 		canShootInWater=1;
 		model="\SFA_Main\SFA_Weapons_S\DLA13\DLA13_c.p3d";
@@ -840,7 +844,7 @@ class CfgWeapons
 	class MET_DLA13_C2: SFA_rifle_base
 	{
 		scope=2;
-		scopeArsenal=0;
+		scopeArsenal=1;
 		author="16th Aux Team";
 		canShootInWater=1;
 		model="\SFA_Main\SFA_Weapons_S\DLA13\DLA13_c2.p3d";
@@ -1052,7 +1056,7 @@ class CfgWeapons
 	};
 	class MET_DLA13_ugl: MET_DLA13
 	{
-		scopeArsenal=0;
+		scopeArsenal=1;
 		muzzles[]=
 		{
 			"this",
@@ -1104,11 +1108,11 @@ class CfgWeapons
 	{
 		author="Starforge Armory";
 		scope=2;
-		scopeArsenal=0;
+		scopeArsenal=1;
 		displayName="[BHA] E1 Reforged Carbine";
 		descriptionShort="";
 		model="SFA_Main\SFA_Weapons_N\E1\E1.p3d";
-		recoil="3as_recoil_lightmed";
+		recoil="MET_recoil_Z6";
 		hiddenSelections[]=
 		{
 			"camo1"
@@ -1130,7 +1134,10 @@ class CfgWeapons
 		modes[]=
 		{
 			"Single",
-			"FullAuto"
+			"FullAuto",
+			"fullauto_medium",
+			"single_medium_optics1",
+			"single_far_optics2"
 		};
 		fireLightDiffuse[]={0,0,1};
 		drySound[]=
@@ -1559,7 +1566,7 @@ class CfgWeapons
 	{
 		author="$STR_3AS_Studio";
 		scope=2;
-		scopeArsenal=0;
+		scopeArsenal=1;
 		displayName="[BHA] Arkanian Blaster (Stock)";
 		model="3as\3AS_Weapons\Greenfor\model\3AS_ArkanianBlasterRifleStock.p3d";
 		picture="\3AS\3AS_Weapons\Greenfor\data\UI\3as_arks.paa";
@@ -1615,10 +1622,409 @@ class CfgWeapons
 			mass=65;
 		};
 	};
+	class ShdwCmpny_DCX_19_FS;
+	class MET_DCX_19_FS_BHA: ShdwCmpny_DCX_19_FS
+	{
+		scope=2;
+		scopeArsenal=1;
+		author="16th Aux Team";
+		magazines[]=
+		{
+			"MET_DCX19_mag"
+		};
+		magazineWell[]={};
+		displayName="[BHA] DCX-19 FS";
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			mass=65;
+			class CowsSlot: CowsSlot
+			{
+				linkProxy="\A3\data_f\proxies\weapon_slots\TOP";
+				compatibleItems[]=
+				{
+					"ShdwCmpny_Optic_LEScope_DC15A"
+				};
+			};
+			class MuzzleSlot: MuzzleSlot
+			{
+				linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
+				compatibleItems[]=
+				{
+					"ShadwCmpany_Suppresor_Barrel_DCX19"
+				};
+			};
+			class UnderBarrelSlot: UnderBarrelSlot
+			{
+				linkProxy="\A3\data_f_mark\proxies\weapon_slots\UNDERBARREL";
+				compatibleItems[]={};
+			};
+		};
+		/*class LinkedItems
+		{
+			class LinkedItemsOptic
+			{
+				slot="CowsSlot";
+				item="ShdwCmpny_Optic_LEScope_DC15A";
+			};
+			class LinkedItemsMuzzle
+			{
+				slot="MuzzleSlot";
+				item="ShadwCmpany_Suppresor_Barrel_DCX19";
+			};
+		};*/
+		modes[]=
+		{
+			"FullAuto",
+			"Single"
+		};
+		class FullAuto: Mode_FullAuto
+		{
+			reloadTime=0.109090909;
+			dispersion=0.00056;
+			minRange=0;
+			minRangeProbab=0.89999998;
+			midRange=15;
+			midRangeProbab=0.69999999;
+			maxRange=30;
+			maxRangeProbab=0.1;
+			soundContinuous=0;
+			soundBurst=0;
+			sounds[] = 
+			{
+				"StandardSound",
+				"SilencedSound"
+			};
+			class BaseSoundModeType;
+			class StandardSound: BaseSoundModeType
+			{
+				begin1[] = {
+					"\ShadowLegion_Weapons\data\DCX19\DCX19_1.ogg",
+					1.99526,
+					1,
+					900
+				};
+				beginwater1[] = {
+					"\ShadowLegion_Weapons\data\Underwater_Firing.ogg",
+					1,
+					1,
+					200
+				};
+				soundBegin[] = {
+					"begin1",
+					0.1
+				};
+				soundBeginWater[] = 
+				{
+					"beginwater1",
+					0.5
+				};
+			};
+			class SilencedSound: BaseSoundModeType
+			{
+				begin1[] = {
+					"\ShadowLegion_Weapons\data\DCX19\DCX19_silenced_1.ogg",
+					0.630957,
+					1,
+					300
+				};
+				soundBegin[] = {
+					"begin1",
+					0.1
+				};
+			};
+		};
+		class Single: Mode_SemiAuto
+		{
+			reloadTime=0.109090909;
+			dispersion=0.00056;
+			minRange=2;
+			minRangeProbab=0.30000001;
+			midRange=150;
+			midRangeProbab=0.69999999;
+			maxRange=350;
+			maxRangeProbab=0.1;
+			soundContinuous=0;
+			soundBurst=0;
+			sounds[] = 
+			{
+				"StandardSound",
+				"SilencedSound"
+			};
+			class BaseSoundModeType;
+			class StandardSound: BaseSoundModeType
+			{
+				begin1[] = {
+					"\ShadowLegion_Weapons\data\DCX19\DCX19_1.ogg",
+					1.99526,
+					1,
+					900
+				};
+				beginwater1[] = {
+					"\ShadowLegion_Weapons\data\Underwater_Firing.ogg",
+					1,
+					1,
+					200
+				};
+				soundBegin[] = {
+					"begin1",
+					0.1
+				};
+				soundBeginWater[] = 
+				{
+					"beginwater1",
+					0.5
+				};
+			};
+			class SilencedSound: BaseSoundModeType
+			{
+				begin1[] = {
+					"\ShadowLegion_Weapons\data\DCX19\DCX19_silenced_1.ogg",
+					0.630957,
+					1,
+					300
+				};
+				soundBegin[] = {
+					"begin1",
+					0.1
+				};
+			};
+		};
+	};
+	class ShdwCmpny_DCX_19_GL_FS;
+	class MET_DCX_19_GL_FS_BHA: ShdwCmpny_DCX_19_GL_FS
+	{
+		scope=2;
+		scopeArsenal=1;
+		author="16th Aux Team";
+		magazines[]=
+		{
+			"MET_DCX19_mag"
+		};
+		magazineWell[]={};
+		displayName="[BHA] DCX-19 GL FS";
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			mass=65;
+			class CowsSlot: CowsSlot
+			{
+				linkProxy="\A3\data_f\proxies\weapon_slots\TOP";
+				compatibleItems[]=
+				{
+					"ShdwCmpny_Optic_LEScope_DC15A"
+				};
+			};
+			class MuzzleSlot: MuzzleSlot
+			{
+				linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
+				compatibleItems[]=
+				{
+					"ShadwCmpany_Suppresor_Barrel_DCX19"
+				};
+			};
+			class UnderBarrelSlot: UnderBarrelSlot
+			{
+				linkProxy="\A3\data_f_mark\proxies\weapon_slots\UNDERBARREL";
+				compatibleItems[]={};
+			};
+		};
+		/*class LinkedItems
+		{
+			class LinkedItemsOptic
+			{
+				slot="CowsSlot";
+				item="ShdwCmpny_Optic_LEScope_DC15A";
+			};
+			class LinkedItemsMuzzle
+			{
+				slot="MuzzleSlot";
+				item="ShadwCmpany_Suppresor_Barrel_DCX19";
+			};
+		};*/
+		class MET_DCX19_GL_F: UGL_F
+		{
+			displayName="[BHA] DCX19-GL";
+			descriptionShort="GL for the DCX19 Platform";
+			useModelOptics=0;
+			useExternalOptic=0;
+			magazines[]=
+			{
+				"MET_light_proton_mag",
+			};
+			magazineWell[]=
+			{
+				"UGL_40x36",
+				"3UGL_40x36",
+				"MET_GL_MagWell",
+				"MET_3GL_MagWell"
+			};
+			cameraDir="OP_look";
+			discreteDistance[]={50,75,100,150,200,250,300,350,400};
+			discreteDistanceCameraPoint[]=
+			{
+				"OP_eye_50",
+				"OP_eye_75",
+				"OP_eye_100",
+				"OP_eye_150",
+				"OP_eye_200",
+				"OP_eye_250",
+				"OP_eye_300",
+				"OP_eye_350",
+				"OP_eye_400"
+			};
+			discreteDistanceInitIndex=1;
+			reloadAction="GestureReloadMXUGL";
+			reloadMagazineSound[]=
+			{
+				"A3\Sounds_F\arsenal\weapons\Rifles\MX\Mx_UGL_reload",
+				1,
+				1,
+				10
+			};
+		};
+		muzzles[]=
+		{
+			"this",
+			"MET_DCX19_GL_F"
+		};
+		modes[]=
+		{
+			"FullAuto",
+			"Single"
+		};
+		class FullAuto: Mode_FullAuto
+		{
+			reloadTime=0.109090909;
+			dispersion=0.00056;
+			minRange=0;
+			minRangeProbab=0.89999998;
+			midRange=15;
+			midRangeProbab=0.69999999;
+			maxRange=30;
+			maxRangeProbab=0.1;
+			soundContinuous=0;
+			soundBurst=0;
+			sounds[] = 
+			{
+				"StandardSound",
+				"SilencedSound"
+			};
+			class BaseSoundModeType;
+			class StandardSound: BaseSoundModeType
+			{
+				begin1[] = {
+					"\ShadowLegion_Weapons\data\DCX19\DCX19_1.ogg",
+					1.99526,
+					1,
+					900
+				};
+				beginwater1[] = {
+					"\ShadowLegion_Weapons\data\Underwater_Firing.ogg",
+					1,
+					1,
+					200
+				};
+				soundBegin[] = {
+					"begin1",
+					0.1
+				};
+				soundBeginWater[] = 
+				{
+					"beginwater1",
+					0.5
+				};
+			};
+			class SilencedSound: BaseSoundModeType
+			{
+				begin1[] = {
+					"\ShadowLegion_Weapons\data\DCX19\DCX19_silenced_1.ogg",
+					0.630957,
+					1,
+					300
+				};
+				soundBegin[] = {
+					"begin1",
+					0.1
+				};
+			};
+		};
+		class Single: Mode_SemiAuto
+		{
+			reloadTime=0.109090909;
+			dispersion=0.00056;
+			minRange=2;
+			minRangeProbab=0.30000001;
+			midRange=150;
+			midRangeProbab=0.69999999;
+			maxRange=350;
+			maxRangeProbab=0.1;
+			soundContinuous=0;
+			soundBurst=0;
+			sounds[] = 
+			{
+				"StandardSound",
+				"SilencedSound"
+			};
+			class BaseSoundModeType;
+			class StandardSound: BaseSoundModeType
+			{
+				begin1[] = {
+					"\ShadowLegion_Weapons\data\DCX19\DCX19_1.ogg",
+					1.99526,
+					1,
+					900
+				};
+				beginwater1[] = {
+					"\ShadowLegion_Weapons\data\Underwater_Firing.ogg",
+					1,
+					1,
+					200
+				};
+				soundBegin[] = {
+					"begin1",
+					0.1
+				};
+				soundBeginWater[] = 
+				{
+					"beginwater1",
+					0.5
+				};
+			};
+			class SilencedSound: BaseSoundModeType
+			{
+				begin1[] = {
+					"\ShadowLegion_Weapons\data\DCX19\DCX19_silenced_1.ogg",
+					0.630957,
+					1,
+					300
+				};
+				soundBegin[] = {
+					"begin1",
+					0.1
+				};
+			};
+		};
+	};
+	class MET_DCX_19_FS_BHA_AI: MET_DCX_19_FS_BHA
+	{
+		displayName="[BHA] DCX-19 FS AI";
+		class LinkedItems
+		{
+			/*class LinkedItemsOptic
+			{
+				//slot="CowsSlot";
+				//item="ShdwCmpny_Optic_LEScope_DC15A";
+			};*/
+			class LinkedItemsMuzzle
+			{
+				//slot="MuzzleSlot";
+				//item="3AS_muzzle_DC15LE_F";
+			};
+		};
+	};
 	class MET_T20_rifle: SFA_rifle_base
 	{
 		scope=2;
-		scopeArsenal=0;
+		scopeArsenal=1;
 		author="16th Aux Team";
 		canShootInWater=1;
 		model="SFA_Main\SFA_Weapons_N\T20\T20_Rifle.p3d";
@@ -1851,7 +2257,7 @@ class CfgWeapons
 	{
 		author="16th Aux Team";
 		scope=2;
-		scopeArsenal=0;
+		scopeArsenal=1;
 		baseWeapon="MET_T20_AC";
 		displayName="[BHA] T-20 Assault cannon";
 		descriptionShort="assault cannon";
@@ -2038,7 +2444,7 @@ class CfgWeapons
 	{
 		author="16th Aux Team";
 		scope=2;
-		scopeArsenal=0;
+		scopeArsenal=1;
 		baseWeapon="MET_E403";
 		displayName="[BHA] E-403 Assault cannon";
 		picture="\SFA_Main\SFA_Weapons_R\E403\data\ui\E403_ui.paa";
@@ -2361,7 +2767,7 @@ class CfgWeapons
 	{
 		author="16th Aux Team";
 		scope=2;
-		scopeArsenal=0;
+		scopeArsenal=1;
 		baseWeapon="MET_EL34";
 		displayName="[BHA] EL-34 Assault cannon";
 		picture="\SFA_Main\SFA_Weapons_S\EL34\data\ui\EL34_ui.paa";
@@ -2546,7 +2952,7 @@ class CfgWeapons
 	{
 		author="16th Aux Team";
 		scope=2;
-		scopearsenal=0;
+		scopeArsenal=1;
 		baseWeapon="met_FHR1";
 		displayName="[BHA] FHR-1 Heavy Repeater";
 		descriptionShort="$STR_JLTS_descs_BlasterRotaryCannon";
@@ -2678,7 +3084,7 @@ class CfgWeapons
 	{
 		author="16th AUX Team";
 		scope=2;
-		scopeArsenal=0;
+		scopeArsenal=1;
 		displayName="[BHA] X-300";
 		descriptionShort="";
 		picture="";
@@ -3006,7 +3412,7 @@ class CfgWeapons
 	{
 		author="Rogue771";
 		scope=2;
-		scopeArsenal=0;
+		scopeArsenal=1;
 		displayName="[BHA] XLR-01 Fastner Driver";
 		model="\TKE_Kuiper_Engagements\TKE_Weapons\TKE_UCNLasRifle.p3d";
 		picture="\TKE_Kuiper_Engagements\TKE_Weapons\ui\UCNLaser.paa";
@@ -3237,7 +3643,7 @@ class CfgWeapons
 		JLTS_repairTime=25;
 		author="MrClock";
 		scope=2;
-		scopearsenal=0;
+		scopeArsenal=1;
 		displayName="[BHA] SB-B3 Scatter Blaster";
 		descriptionShort="$STR_JLTS_descs_BlasterScatter";
 		picture="\MRC\JLTS\weapons\SBB3\data\ui\SBB3_ui_ca.paa";
@@ -3552,7 +3958,7 @@ class CfgWeapons
 	{
 		author="16th AUX Team";
 		scope=2;
-		scopeArsenal=0;
+		scopeArsenal=1;
 		displayName="[BHA] HH-12 Smart Launcher";
 		_generalMacro="launch_Titan_short_base";
 		class Library
@@ -3656,7 +4062,7 @@ class CfgMagazines
 	class MET_D200_Pistol_mag: MET_blaster_pistol_battery
 	{
 		scope=2;
-		scopeArsenal=0;
+		scopeArsenal=1;
 		author="16th Aux Team";
 		picture="\3AS\3AS_Weapons\Data\UI\3as_pistol_o.paa";
 		modelSpecialIsProxy=0;
@@ -3671,7 +4077,7 @@ class CfgMagazines
 	class MET_DLA13_mag: MET_DC15A_mag
 	{
 		scope=2;
-		scopeArsenal=0;
+		scopeArsenal=1;
 		author="16th Aux Team";
 		picture="\3AS\3AS_Weapons\Data\UI\3as_ammo_o.paa";
 		modelSpecialIsProxy=0;
@@ -3684,7 +4090,7 @@ class CfgMagazines
 	class MET_E1_mag: MET_DC15A_mag
 	{
 		scope=2;
-		scopeArsenal=0;
+		scopeArsenal=1;
 		author="16th Aux Team";
 		picture="\3AS\3AS_Weapons\Data\UI\3as_ammo_o.paa";
 		modelSpecialIsProxy=0;
@@ -3697,7 +4103,7 @@ class CfgMagazines
 	class MET_Arkanian_mag: MET_DC15A_mag
 	{
 		scope=2;
-		scopeArsenal=0;
+		scopeArsenal=1;
 		author="16th Aux Team";
 		picture="\3AS\3AS_Weapons\Data\UI\3as_ammo_o.paa";
 		modelSpecialIsProxy=0;
@@ -3707,10 +4113,22 @@ class CfgMagazines
 		tracersEvery=1;
 		mass=20;
 	};
+	class ShdwCmpny_DCX19_40Rnd_EC50_Mag;
+	class MET_DCX19_mag: ShdwCmpny_DCX19_40Rnd_EC50_Mag
+	{
+		scope=2;
+		scopeArsenal=1;
+		author="16th Aux Team";
+		picture="\3AS\3AS_Weapons\Data\UI\3as_ammo_o.paa";
+		count=40;
+		displayName="DCX-19 Energy Cell";
+		ammo="MET_bullet_rifle_orange";
+		mass=20;
+	};
 	class MET_T20_mag: MET_DC15A_mag
 	{
 		scope=2;
-		scopeArsenal=0;
+		scopeArsenal=1;
 		author="16th Aux Team";
 		picture="\3AS\3AS_Weapons\Data\UI\3as_ammo_o.paa";
 		modelSpecialIsProxy=0;
@@ -3723,7 +4141,7 @@ class CfgMagazines
 	class MET_T20AC_mag: MET_DC15A_mag
 	{
 		scope=2;
-		scopeArsenal=0;
+		scopeArsenal=1;
 		author="16th Aux Team";
 		picture="\3AS\3AS_Weapons\Data\UI\3as_box_o.paa";
 		modelSpecialIsProxy=0;
@@ -3736,7 +4154,7 @@ class CfgMagazines
 	class MET_FHR1_mag: MET_DC15A_mag
 	{
 		scope=2;
-		scopearsenal=0;
+		scopeArsenal=1;
 		author="16th Aux Team";
 		picture="\3AS\3AS_Weapons\Data\UI\3as_box_o.paa";
 		modelSpecialIsProxy=0;
@@ -3749,7 +4167,7 @@ class CfgMagazines
 	class MET_Test_proton_mag: SFA_Base_mag
 	{
 		scope=2;
-		scopeArsenal=0;
+		scopeArsenal=1;
 		author="Starforge Armory";
 		picture="\SFA_Main\SFA_Weapons_R\ammo\icon\SFA_icon_mag.paa";
 		modelSpecialIsProxy=0;
@@ -3765,7 +4183,7 @@ class CfgMagazines
 	class MET_light_proton_mag: SFA_Base_mag
 	{
 		scope=2;
-		scopeArsenal=0;
+		scopeArsenal=1;
 		author="16th Aux Team";
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_he.paa";
 		modelSpecialIsProxy=0;
@@ -3781,7 +4199,7 @@ class CfgMagazines
 	class MET_medium_proton_mag: SFA_Base_mag
 	{
 		scope=2;
-		scopeArsenal=0;
+		scopeArsenal=1;
 		author="16th Aux Team";
 		picture="\3AS\3AS_Weapons\Data\UI\3as_nade_he.paa";
 		modelSpecialIsProxy=0;
@@ -3797,7 +4215,7 @@ class CfgMagazines
 	class MET_heavy_proton_mag: SFA_Base_mag
 	{
 		scope=2;
-		scopeArsenal=0;
+		scopeArsenal=1;
 		author="16th Aux Team";
 		picture="\3AS\3AS_Weapons\Data\UI\3as_box_o.paa";
 		modelSpecialIsProxy=0;
@@ -3813,7 +4231,7 @@ class CfgMagazines
 	class MET_EL34_mag: MET_DC15L_mag
 	{
 		scope=2;
-		scopearsenal=0;
+		scopeArsenal=1;
 		author="16th Aux Team";
 		picture="\3AS\3AS_Weapons\Data\UI\3as_box_o.paa";
 		modelSpecialIsProxy=0;
@@ -3829,7 +4247,7 @@ class CfgMagazines
 	class MET_X300_Sniper_mag: MET_DC15x_mag
 	{
 		scope=2;
-		scopeArsenal=0;
+		scopeArsenal=1;
 		author="16th Aux Team";
 		picture="\3AS\3AS_Weapons\Data\UI\3as_sniper_o.paa";
 		modelSpecialIsProxy=0;
@@ -3843,7 +4261,7 @@ class CfgMagazines
 	class BHA_Powerpack: 30Rnd_556x45_Stanag
 	{
 		scope=2;
-		scopeArsenal=0;
+		scopeArsenal=1;
 		scopeCurator=2;
 		mass=30;
 		displayName="[BHA] Power Pack";
@@ -3857,7 +4275,7 @@ class CfgMagazines
 	class BHA_AA_SINGLE: 3AS_JLTS_MK39_AA
 	{
 		scope=2;
-		scopeArsenal=0;
+		scopeArsenal=1;
 		displayName="HH-12 AA Rocket";
 		picture="\3AS\3AS_Weapons\Data\UI\3as_rocket_aa.paa";
 		ammo = "bha_aa_missile_van";
@@ -3869,7 +4287,7 @@ class CfgMagazines
 	class BHA_AA_Dub: 3AS_JLTS_MK39_AA
 	{
 		scope=2;
-		scopeArsenal=0;
+		scopeArsenal=1;
 		displayName="HH-12 Dual AA Rocket";
 		picture="\3AS\3AS_Weapons\Data\UI\3as_rocket_aa.paa";
 		ammo = "bha_aa_missile_van";
@@ -3881,7 +4299,7 @@ class CfgMagazines
 	class BHA_AA_OCT: 3AS_JLTS_MK39_AA
 	{
 		scope=2;
-		scopeArsenal=0;
+		scopeArsenal=1;
 		displayName="HH-12 Octuple AA Rocket";
 		picture="\3AS\3AS_Weapons\Data\UI\3as_rocket_at.paa";
 		ammo="bha_aa_missile_van";
@@ -3893,7 +4311,7 @@ class CfgMagazines
 	class BHA_AA_DEC: 3AS_JLTS_MK39_AA
 	{
 		scope=2;
-		scopeArsenal=0;
+		scopeArsenal=1;
 		displayName="HH-12 Decagoonal AA Rocket";
 		picture="\3AS\3AS_Weapons\Data\UI\3as_rocket_at.paa";
 		ammo="bha_aa_missile_van";
@@ -3905,7 +4323,7 @@ class CfgMagazines
 	class BHA_AP_SINGLE: 3AS_JLTS_MK39_AA
 	{
 		scope=2;
-		scopeArsenal=0;
+		scopeArsenal=1;
 		displayName="HH-12 AP Rocket";
 		picture="\3AS\3AS_Weapons\Data\UI\3as_rocket_he.paa";
 		ammo="bha_ap_missile";
@@ -3917,7 +4335,7 @@ class CfgMagazines
 	class BHA_AP_DUB: 3AS_JLTS_MK39_AA
 	{
 		scope=2;
-		scopeArsenal=0;
+		scopeArsenal=1;
 		displayName="HH-12 Dual AP Rocket";
 		picture="\3AS\3AS_Weapons\Data\UI\3as_rocket_he.paa";
 		ammo="bha_ap_missile";
@@ -3929,7 +4347,7 @@ class CfgMagazines
 	class BHA_AP_OCT: 3AS_JLTS_MK39_AA
 	{
 		scope=2;
-		scopeArsenal=0;
+		scopeArsenal=1;
 		displayName="HH-12 Octuple AP Rocket";
 		picture="\3AS\3AS_Weapons\Data\UI\3as_rocket_he.paa";
 		ammo="bha_ap_missile";
@@ -3941,7 +4359,7 @@ class CfgMagazines
 	class BHA_AP_DEC: 3AS_JLTS_MK39_AA
 	{
 		scope=2;
-		scopeArsenal=0;
+		scopeArsenal=1;
 		displayName="HH-12 Decagoonal AP Rocket";
 		picture="\3AS\3AS_Weapons\Data\UI\3as_rocket_he.paa";
 		ammo="bha_ap_missile";
@@ -3953,7 +4371,7 @@ class CfgMagazines
 	class BHA_AT_SINGLE: 3AS_JLTS_MK39_AA
 	{
 		scope=2;
-		scopeArsenal=0;
+		scopeArsenal=1;
 		displayName="HH-12 AT Rocket";
 		picture="\3AS\3AS_Weapons\Data\UI\3as_rocket_at.paa";
 		ammo="bha_at_wire_missile";
@@ -3965,7 +4383,7 @@ class CfgMagazines
 	class BHA_AT_DUB: 3AS_JLTS_MK39_AA
 	{
 		scope=2;
-		scopeArsenal=0;
+		scopeArsenal=1;
 		displayName="HH-12 Dual AT Rocket";
 		picture="\3AS\3AS_Weapons\Data\UI\3as_rocket_at.paa";
 		ammo="bha_at_wire_missile";
@@ -3977,7 +4395,7 @@ class CfgMagazines
 	class BHA_AT_OCT: 3AS_JLTS_MK39_AA
 	{
 		scope=2;
-		scopeArsenal=0;
+		scopeArsenal=1;
 		displayName="HH-12 Octuple AT Rocket";
 		picture="\3AS\3AS_Weapons\Data\UI\3as_rocket_at.paa";
 		ammo="bha_at_wire_missile";
@@ -3989,7 +4407,7 @@ class CfgMagazines
 	class BHA_AT_DEC: 3AS_JLTS_MK39_AA
 	{
 		scope=2;
-		scopeArsenal=0;
+		scopeArsenal=1;
 		displayName="HH-12 Decagoonal AT Rocket";
 		picture="\3AS\3AS_Weapons\Data\UI\3as_rocket_at.paa";
 		ammo="bha_at_wire_missile";
@@ -4062,6 +4480,11 @@ class CfgLights
 	{
 		diffuse[]={252,161,0,1};
 		intensity=10000;
+	};
+	class MET_plasmaOrange_medbig: MET_BlasterboltLight_Blue
+	{
+		diffuse[]={252,161,0,1};
+		intensity=15000;
 	};
 	class MET_plasmaOrange_big: MET_BlasterboltLight_Blue
 	{
@@ -4147,6 +4570,18 @@ class MET_plasma_large_orange
 	{
 		simulation="light";
 		type="MET_plasmaOrange_Large";
+		position[]={0,0,0};
+		intensity=1;
+		interval=1;
+		lifeTime=60;
+	};
+};
+class MET_plasma_orange_MedBig
+{
+	class MET_Orange_plasma
+	{
+		simulation="light";
+		type="MET_plasmaOrange_medbig";
 		position[]={0,0,0};
 		intensity=1;
 		interval=1;

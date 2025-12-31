@@ -757,6 +757,7 @@ class CfgWeapons
 	{
 		author="Rogue771";
 		scope=2;
+		scopeArsenal=1;
 		displayName="[BHA] ARES-04 Legionnaire Head";
 		picture="\TKE_Kuiper_Engagements\TKE_Uniforms\ui\MDLogoUI.paa";
 		model="\TKE_Kuiper_Engagements\TKE_Warbots\TKE_WarBotHead.p3d";
@@ -838,11 +839,54 @@ class CfgWeapons
 			};
 		};
 	};
+	class BHA_WarBotHeadMDMC: TKE_WarBotHead
+	{
+		author="Rogue771";
+		scope=2;
+		displayName="[MDMC] ARES-04 Legionnaire Head";
+		picture="\TKE_Kuiper_Engagements\TKE_Uniforms\ui\MDMCLogoUI.paa";
+		hiddenSelections[]=
+		{
+			"camo"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\TKE_Kuiper_Engagements\TKE_Warbots\data\TKE_WarBotHeadMDMC_co.paa"
+		};
+		class ItemInfo: ItemInfo
+		{
+			mass=10;
+			uniformModel="\TKE_Kuiper_Engagements\TKE_Warbots\TKE_WarBotHead.p3d";
+			modelSides[]={3,1};
+			hiddenSelections[]=
+			{
+				"camo"
+			};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointName="HitHead";
+					armor=50;
+					passThrough=0.1;
+					explosionShielding=30;
+				};
+				class Face
+				{
+					hitpointName="HitFace";
+					armor=45;
+					passThrough=0.25;
+					explosionShielding=25;
+				};
+			};
+		};
+	};
 	class TKE_WarbotUni_U_OP;
 	class BHA_WarbotUniWorker_U_I: TKE_WarbotUni_U_OP
 	{
 		author="Rogue771";
-		scope=1;
+		scope=2;
+		scopeArsenal=1;
 		allowedSlots[]=
 		{
 			"BACKPACK_SLOT"
@@ -854,14 +898,15 @@ class CfgWeapons
 		{
 			uniformModel="-";
 			uniformClass="BHA_WarbotUniWorker_inf_I";
-			containerClass="Supply90";
+			containerClass="Supply200";
 			mass=80;
 		};
 	};
 	class BHA_WarBotArmour: Vest_Camo_Base
 	{
 		author="Rogue771";
-		scope=1;
+		scope=2;
+		scopeArsenal=1;
 		displayName="[BHA] ARES-04 Legionnaire Armour";
 		picture="\TKE_Kuiper_Engagements\TKE_Uniforms\ui\MDLogoUI.paa";
 		model="\TKE_Kuiper_Engagements\TKE_Warbots\TKE_WarBotArmour.p3d";
@@ -877,7 +922,7 @@ class CfgWeapons
 		class ItemInfo: ItemInfo
 		{
 			uniformModel="\TKE_Kuiper_Engagements\TKE_Warbots\TKE_WarBotArmour.p3d";
-			containerClass="Supply80";
+			containerClass="Supply200";
 			mass=25;
 			hiddenSelections[]=
 			{
@@ -939,10 +984,90 @@ class CfgWeapons
 			};
 		};
 	};
+	class BHA_WarBotArmourMDMC: BHA_WarBotArmour
+	{
+		author="Rogue771";
+		scope=2;
+		displayName="[MDMC] ARES-04 Legionnaire Armour";
+		picture="\TKE_Kuiper_Engagements\TKE_Uniforms\ui\MDMCLogoUI.paa";
+		hiddenSelections[]=
+		{
+			"camo"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\TKE_Kuiper_Engagements\TKE_Warbots\data\TKE_WarBotArmourMDMC_co.paa"
+		};
+		class ItemInfo: ItemInfo
+		{
+			uniformModel="\TKE_Kuiper_Engagements\TKE_Warbots\TKE_WarBotArmour.p3d";
+			containerClass="Supply200";
+			mass=25;
+			hiddenSelections[]=
+			{
+				"camo"
+			};
+			hiddenSelectionsTextures[]=
+			{
+				"\TKE_Kuiper_Engagements\TKE_Warbots\data\TKE_WarBotArmourMDMC_co.paa"
+			};
+			class HitpointsProtectionInfo
+			{
+				class Neck
+				{
+					hitpointName="HitNeck";
+					armor=40;
+					passThrough=0.1;
+				};
+				class Arms
+				{
+					hitpointName="HitArms";
+					armor=45;
+					passThrough=0.1;
+				};
+				class Chest
+				{
+					hitpointName="HitChest";
+					armor=65;
+					passThrough=0.1;
+				};
+				class Diaphragm
+				{
+					hitpointName="HitDiaphragm";
+					armor=65;
+					passThrough=0.1;
+				};
+				class Abdomen
+				{
+					hitpointName="HitAbdomen";
+					armor=65;
+					passThrough=0.1;
+				};
+				class Pelvis
+				{
+					hitpointName="HitPelvis";
+					armor=1;
+					passThrough=0.1;
+				};
+				class Body
+				{
+					hitpointName="HitBody";
+					passThrough=0.6;
+				};
+				class Legs
+				{
+					hitpointName="HitLegs";
+					armor=45;
+					passThrough=0.1;
+				};
+			};
+		};
+	};
 	class BHA_WarbotUni_U_I: TKE_WarbotUni_U_OP
 	{
 		author="Rogue771";
 		scope=2;
+		scopeArsenal=1;
 		allowedSlots[]=
 		{
 			"BACKPACK_SLOT"
@@ -954,7 +1079,38 @@ class CfgWeapons
 		{
 			uniformModel="-";
 			uniformClass="BHA_WarbotUni_inf_I";
-			containerClass="Supply90";
+			containerClass="Supply200";
+			mass=100;
+		};
+	};
+	class BHA_WarbotUniMDMC_inf_B: TKE_WarbotUni_U_OP
+	{
+		author="Rogue771";
+		scope=2;
+		scopeArsenal=1;
+		allowedSlots[]=
+		{
+			"BACKPACK_SLOT"
+		};
+		hiddenSelections[]=
+		{
+			"camo",
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\TKE_Kuiper_Engagements\TKE_Warbots\data\TKE_BotLegsMDMC_co.paa",
+			"\TKE_Kuiper_Engagements\TKE_Warbots\data\TKE_BotTorsoMDMC_co.paa"
+		};
+		side=1;
+		displayName="[BHA] ARES-04 Elite Legionnaire chasis";
+		picture="\TKE_Kuiper_Engagements\TKE_Uniforms\ui\MDLogoUI.paa";
+		model="\A3\Characters_F\Common\Suitpacks\suitpack_blufor_soldier";
+		class ItemInfo: ItemInfo
+		{
+			uniformModel="-";
+			uniformClass="BHA_WarbotUni_Elite_inf_I";
+			containerClass="Supply200";
 			mass=100;
 		};
 	};
@@ -1657,6 +1813,202 @@ class CfgVehicles
 			class HitLegs: HitHands
 			{
 				armor=40;
+				material=-1;
+				name="legs";
+				passThrough=0.1;
+				radius=0.14;
+				explosionShielding=5;
+				visual="injury_legs";
+				minimalHit=1;
+				depends="0";
+			};
+			class Incapacitated: HitLegs
+			{
+				armor=1000;
+				material=-1;
+				name="body";
+				passThrough=1;
+				radius=0;
+				explosionShielding=1;
+				visual="";
+				minimalHit=0;
+				depends="(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
+			};
+			class HitLeftArm
+			{
+				armor=1;
+				material=-1;
+				name="hand_l";
+				passThrough=1;
+				radius=0.08;
+				explosionShielding=1;
+				visual="injury_hands";
+				minimalHit=0.01;
+			};
+			class HitRightArm: HitLeftArm
+			{
+				name="hand_r";
+			};
+			class HitLeftLeg
+			{
+				armor=10;
+				material=-1;
+				name="leg_l";
+				passThrough=1;
+				radius=0.1;
+				explosionShielding=1;
+				visual="injury_legs";
+				minimalHit=0.01;
+			};
+			class HitRightLeg: HitLeftLeg
+			{
+				name="leg_r";
+			};
+		};
+	};
+	class BHA_WarbotUni_Elite_inf_I: TKE_WarbotUni_base
+	{
+		scope=2;
+		scopeCurator=1;
+		scopeArsenal=1;
+		hiddenSelections[]=
+		{
+			"camo",
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\TKE_Kuiper_Engagements\TKE_Warbots\data\TKE_BotLegsMDMC_co.paa",
+			"\TKE_Kuiper_Engagements\TKE_Warbots\data\TKE_BotTorsoMDMC_co.paa"
+		};
+		side=1;
+		displayName="[BHA] ARES-04 Elite Legionnaire chasis";
+		backpack="";
+		uniformClass="BHA_WarbotUniMDMC_inf_B";
+		armor				= 3;	// total hit points (meaning global "health") of the object.
+									// keep constant among various soldiers so that the hit points armor coefficients remains on the same scale
+		armorStructural		= 0.6;	// divides all damage taken to total hit point, either directly or through hit point passThrough coefficient.
+									// must be adjusted for each model to achieve consistent total damage results
+		explosionShielding	= 0.1; // for consistent explosive damage after adjusting = ( armorStructural / 10 )
+		minTotalDamageThreshold	= 0.001;	// minimalHit for total damage
+		impactDamageMultiplier	= 0.5;		// multiplier for falling damage
+		class HitPoints
+		{
+			class HitFace
+			{
+				armor=1;
+				material=-1;
+				name="face_hub";
+				passThrough=0.5;
+				radius=0.08;
+				explosionShielding=0.1;
+				minimalHit=0.01;
+			};
+			class HitNeck: HitFace
+			{
+				armor=6;
+				material=-1;
+				name="neck";
+				passThrough=0.5;
+				radius=0.1;
+				explosionShielding=0.5;
+				minimalHit=0.01;
+			};
+			class HitHead: HitNeck
+			{
+				armor=1;
+				material=-1;
+				name="head";
+				passThrough=0.5;
+				radius=0.2;
+				explosionShielding=0.5;
+				minimalHit=0.01;
+				depends="HitFace max HitNeck";
+			};
+			class HitPelvis: HitHead
+			{
+				armor=30;
+				material=-1;
+				name="pelvis";
+				passThrough=0.2;
+				radius=0.24;
+				explosionShielding=5;
+				visual="injury_body";
+				minimalHit=0.05;
+				depends="0";
+			};
+			class HitAbdomen: HitPelvis
+			{
+				armor=9;
+				material=-1;
+				name="spine1";
+				passThrough=1;
+				radius=0.16;
+				explosionShielding=0.5;
+				visual="injury_body";
+				minimalHit=0.05;
+			};
+			class HitDiaphragm: HitAbdomen
+			{
+				armor=45;
+				material=-1;
+				name="spine2";
+				passThrough=0.2;
+				radius=0.18;
+				explosionShielding=5;
+				visual="injury_body";
+				minimalHit=0.25;
+			};
+			class HitChest: HitDiaphragm
+			{
+				armor=50;
+				material=-1;
+				name="spine3";
+				passThrough=0.2;
+				radius=0.18;
+				explosionShielding=5;
+				visual="injury_body";
+				minimalHit=0.30;
+			};
+			class HitBody: HitChest
+			{
+				armor=1000;
+				material=-1;
+				name="body";
+				passThrough=1;
+				radius=0;
+				explosionShielding=1.5;
+				visual="injury_body";
+				minimalHit=0.01;
+				depends="HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
+			};
+			class HitArms: HitBody
+			{
+				armor=35;
+				material=-1;
+				name="arms";
+				passThrough=0.1;
+				radius=0.1;
+				explosionShielding=5;
+				visual="injury_hands";
+				minimalHit=1;
+				depends="0";
+			};
+			class HitHands: HitArms
+			{
+				armor=30;
+				material=-1;
+				name="hands";
+				passThrough=0;
+				radius=0.1;
+				explosionShielding=5;
+				visual="injury_hands";
+				minimalHit=20;
+				depends="HitArms";
+			};
+			class HitLegs: HitHands
+			{
+				armor=50;
 				material=-1;
 				name="legs";
 				passThrough=0.1;

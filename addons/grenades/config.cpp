@@ -25,6 +25,7 @@ class CfgWeapons
 			"MetAux_Weaps_Thermal_Detonator_ThrowMuzzle",
 			"MetAux_Weaps_Thermal_Imploder_ThrowMuzzle",
 			"MetAux_Weaps_Thermal_Impacter_ThrowMuzzle",
+			"MetAux_Weaps_Thermal_Penetrator_ThrowMuzzle",
 			"MetAux_Weaps_Ctype_ThrowMuzzle",
 			"MetAux_Weaps_Flashnade_ThrowMuzzle",
 			"MetAux_Weaps_smoke_white_ThrowMuzzle",
@@ -61,6 +62,13 @@ class CfgWeapons
 			magazines[]=
 			{
 				"Met_Weapons_Mags_Thermal_Impacter"
+			};
+		};
+		class MetAux_Weaps_Thermal_Penetrator_ThrowMuzzle: ThrowMuzzle
+		{
+			magazines[]=
+			{
+				"MET_Weapons_Mags_Thermal_Penetrator"
 			};
 		};
 		class MetAux_Weaps_Ctype_ThrowMuzzle: ThrowMuzzle

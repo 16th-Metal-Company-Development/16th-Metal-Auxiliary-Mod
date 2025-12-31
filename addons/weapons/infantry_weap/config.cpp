@@ -7591,88 +7591,6 @@ class CfgWeapons
 		};
 	};
 	/*==============================================================================
-	==DC-19E
-	==============================================================================*/
-	class LFP_DC19
-	{
-		class WeaponSlotsInfo;
-	};
-	class MET_DC19: LFP_DC19
-	{
-		JLTS_hasElectronics=1;
-		JLTS_hasEMPProtection=1;
-		JLTS_friedItem="JLTS_DC15A_fried";
-		JLTS_repairTime=33;
-		displayName="[16th] DC-19E";
-		descriptionShort="Suppressed Blaster Carbine";
-		magazines[]=
-		{
-			"MET_DC19E_mag"
-		};
-		reloadAction="GestureReload_IDA_Reload_Blaster";
-		reloadMagazineSound[]=
-		{
-			"\Indecisive_Armoury_Sounds\Blaster_reload_Vent.ogg",
-			5,
-			1,
-			100
-		};
-		magazineWell[]={};
-		modelOptics="z\MET\addons\weapons\scopes\big_cross_blue_full.p3d";
-		class OpticsModes
-		{
-			class DC19scope_sights
-			{
-				opticsID=1;
-				useModelOptics=0;
-				opticsPPEffects[]=
-				{
-					"Default"
-				};
-				opticsFlare=0;
-				opticsDisablePeripherialVision=0;
-				opticsZoomMin=0.25;
-				opticsZoomMax=1.25;
-				opticsZoomInit=0.75;
-				memoryPointCamera="eye";
-				visionMode[]={};
-				distanceZoomMin=200;
-				distanceZoomMax=200;
-				cameraDir="";
-			};
-			class DC19scope_scope: DC19scope_sights
-			{
-				opticsID=2;
-				useModelOptics=1;
-				opticsPPEffects[]=
-				{
-					"OpticsCHAbera5",
-					"OpticsBlur5"
-				};
-				visionMode[]=
-				{
-					"Normal",
-					"NVG",
-					"TI"
-				};
-				thermalMode[]={0,1};
-				opticsZoomMin=0.010000001;
-				opticsZoomMax=0.1;
-				opticsZoomInit=0.1;
-				memoryPointCamera="opticView";
-				opticsFlare=1;
-				opticsDisablePeripherialVision=1;
-				distanceZoomMin=400;
-				distanceZoomMax=400;
-				weaponInfoType="RscWeaponEmpty";
-			};
-		};
-		class WeaponSlotsInfo: WeaponSlotsInfo
-		{
-			mass=70;
-		};
-	}
-	/*==============================================================================
 	==DC-20 Survival Rifle
 	==============================================================================*/
 	class IDA_DC23;
@@ -8012,6 +7930,88 @@ class CfgWeapons
 			};
 		};
 	};
+	/*==============================================================================
+	==DC-19E
+	==============================================================================*/
+	/*class LFP_DC19
+	{
+		class WeaponSlotsInfo;
+	};
+	class MET_DC19: LFP_DC19
+	{
+		JLTS_hasElectronics=1;
+		JLTS_hasEMPProtection=1;
+		JLTS_friedItem="JLTS_DC15A_fried";
+		JLTS_repairTime=33;
+		displayName="[16th] DC-19E";
+		descriptionShort="Suppressed Blaster Carbine";
+		magazines[]=
+		{
+			"MET_DC19E_mag"
+		};
+		reloadAction="GestureReload_IDA_Reload_Blaster";
+		reloadMagazineSound[]=
+		{
+			"\Indecisive_Armoury_Sounds\Blaster_reload_Vent.ogg",
+			5,
+			1,
+			100
+		};
+		magazineWell[]={};
+		modelOptics="z\MET\addons\weapons\scopes\big_cross_blue_full.p3d";
+		class OpticsModes
+		{
+			class DC19scope_sights
+			{
+				opticsID=1;
+				useModelOptics=0;
+				opticsPPEffects[]=
+				{
+					"Default"
+				};
+				opticsFlare=0;
+				opticsDisablePeripherialVision=0;
+				opticsZoomMin=0.25;
+				opticsZoomMax=1.25;
+				opticsZoomInit=0.75;
+				memoryPointCamera="eye";
+				visionMode[]={};
+				distanceZoomMin=200;
+				distanceZoomMax=200;
+				cameraDir="";
+			};
+			class DC19scope_scope: DC19scope_sights
+			{
+				opticsID=2;
+				useModelOptics=1;
+				opticsPPEffects[]=
+				{
+					"OpticsCHAbera5",
+					"OpticsBlur5"
+				};
+				visionMode[]=
+				{
+					"Normal",
+					"NVG",
+					"TI"
+				};
+				thermalMode[]={0,1};
+				opticsZoomMin=0.010000001;
+				opticsZoomMax=0.1;
+				opticsZoomInit=0.1;
+				memoryPointCamera="opticView";
+				opticsFlare=1;
+				opticsDisablePeripherialVision=1;
+				distanceZoomMin=400;
+				distanceZoomMax=400;
+				weaponInfoType="RscWeaponEmpty";
+			};
+		};
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			mass=70;
+		};
+	};*/
 	/*==============================================================================
 	==DC-19 Family
 	==============================================================================*/

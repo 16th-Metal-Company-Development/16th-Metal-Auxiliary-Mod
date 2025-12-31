@@ -79,6 +79,20 @@ class CfgMagazines
 		UiPicture="z\MET\addons\grenades\data\ui\MET_icon_mag_rep_nade_thermal_impacter_ui_ca.paa";
 		initSpeed=25;
 	};
+	class MET_Weapons_Mags_Thermal_Penetrator: MET_Weapons_Mags_Thermal_Detonator
+	{
+		scope=1;
+		displayName="[16th] Thermal Stick";
+		displayNameShort="Thermal Stick";
+		descriptionShort="Stick Grenade";
+		picture="\Indecisive_Armoury_Ammos\Data\Thermal_Penetrator\Thermal_Penetrator_UI.paa";
+		model="\Indecisive_Armoury_Ammos\Data\Thermal_Penetrator\IDA_Thermal_Penetrator.p3d";
+		ammo="MET_Thermal_Penetrator_Ammo";
+		//WBK_PlasmaKill_Color_String_Int = "Red";
+		//WBK_UseDisintegrate = "true";
+		initSpeed=16;
+		mass=10;
+	};
 	class MET_Weapons_Mags_Ctype: MET_Weapons_Mags_Thermal_Detonator
 	{
 		displayName="[16th] Throwable C-Type";
@@ -432,6 +446,25 @@ class CfgAmmo
 			"GrenadeHe_Tail_SoundSet",
 			"Explosion_Debris_SoundSet"
 		};
+	};
+	class IDA_grenade_Penetrator_ammo;
+	class MET_Thermal_Penetrator_Ammo: IDA_grenade_Penetrator_ammo
+	{
+		hit=1;
+		indirectHit=2000;
+		indirectHitRange=0.5;
+		dangerRadiusHit=120;
+		suppressionRadiusHit=120;
+		explosionEffectsRadius=100;
+		explosive=1;
+		ace_frag_enabled = 1;
+		ace_frag_skip = 0;
+		ace_frag_force = 1;
+		ace_frag_classes[] = { "ACE_frag_tiny", "ACE_frag_small", "ACE_frag_medium" };
+		ace_frag_metal = 30;
+		ace_frag_charge = 50;
+		ace_frag_gurney_c = 2000;
+		ace_frag_gurney_k = "3/5";
 	};
 };
 class CfgSoundShaders

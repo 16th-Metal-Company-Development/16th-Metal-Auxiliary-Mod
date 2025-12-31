@@ -23,5 +23,10 @@ include = [
 
 [version]
 major = 4
+<<<<<<< Updated upstream
 minor = 4
 patch = 4
+=======
+minor = 5
+patch = 0
+>>>>>>> Stashed changes

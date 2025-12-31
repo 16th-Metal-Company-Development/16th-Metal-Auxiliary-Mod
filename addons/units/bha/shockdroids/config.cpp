@@ -1,6 +1,6 @@
 class CfgPatches
 {
-	class BHA_Apostles
+	class BHA_ShockDroids
 	{
 		units[]=
 		{
@@ -8,7 +8,25 @@ class CfgPatches
 			"BHA_Legionnaire_Assembler",
 			"BHA_Legionnaire_Worker_Heavy",
 			"BHA_Legionnaire_Assembler_Heavy",
-			"BHA_ShockDroid"
+			"BHA_ShockDroid",
+			"BHA_ShockDroid_Heavy",
+			"BHA_ShockDroid_Farseer",
+			"BHA_ShockDroid_Farseer_Heavy",
+			"BHA_ShockDroid_Bishop",
+			"BHA_ShockDroid_Bishop_Heavy",
+			"BHA_EliteShockDroid",
+			"BHA_EliteShockDroid1",
+			"BHA_EliteShockDroid2",
+			"BHA_EliteShockDroid3",
+			"BHA_EliteShockDroid4",
+			"BHA_EliteShockDroid5",
+			"BHA_EliteShockDroid6",
+			"BHA_EliteShockDroid7",
+			"BHA_EliteShockDroid8",
+			"BHA_EliteShockDroid9",
+			"BHA_EliteShockDroid10",
+			"BHA_EliteShockDroid11",
+			"BHA_EliteShockDroid12"
 		};
 		weapons[]={};
 	};
@@ -24,6 +42,7 @@ class CfgVehicles
 		scopeCurator=0;
 		faction="BHA_Units";
 		editorSubCategory="BHA_ShockDroidWorker";
+		genericNames="BHA_Worker";
 		uniformClass="BHA_WarbotUniWorker_U_I";
 		//backpack="MET_SentinelPack_Night_Black";
 		/*armor				= 3;	// total hit points (meaning global "health") of the object.
@@ -235,20 +254,6 @@ class CfgVehicles
 			"ACE_Canteen",
 			"ACE_MRE_LambCurry",
 			"ACE_Flashlight_KSF1",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
 			"ACE_tourniquet",
 			"ACE_tourniquet",
 			"ACE_tourniquet",
@@ -264,20 +269,6 @@ class CfgVehicles
 			"ACE_Canteen",
 			"ACE_MRE_LambCurry",
 			"ACE_Flashlight_KSF1",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
 			"ACE_tourniquet",
 			"ACE_tourniquet",
 			"ACE_tourniquet",
@@ -475,6 +466,7 @@ class CfgVehicles
 		faction="BHA_Units";
 		editorSubCategory="BHA_ShockDroid";
 		uniformClass="BHA_WarbotUni_U_I";
+		genericNames="BHA_ShockUnit";
 		//#include "\ls\core\addons\cfg\droidSounds.hpp"
 		identityTypes[]=
 		{
@@ -508,20 +500,6 @@ class CfgVehicles
 			"ACE_Canteen",
 			"ACE_MRE_LambCurry",
 			"ACE_Flashlight_KSF1",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
 			"ACE_tourniquet",
 			"ACE_tourniquet",
 			"ACE_tourniquet",
@@ -537,20 +515,6 @@ class CfgVehicles
 			"ACE_Canteen",
 			"ACE_MRE_LambCurry",
 			"ACE_Flashlight_KSF1",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
 			"ACE_tourniquet",
 			"ACE_tourniquet",
 			"ACE_tourniquet",
@@ -596,7 +560,7 @@ class CfgVehicles
 		displayName="Legionnaire Shock Trooper (Light)";
 		identityTypes[]=
 		{
-			"LanguageENG_F",
+			"ls_b1BattleDroid",
 			"Head_NATO",
 			"NoGlasses"
 		};
@@ -647,20 +611,6 @@ class CfgVehicles
 		Items[]=
 		{
 			"ACE_Flashlight_KSF1",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
 			"ACE_tourniquet",
 			"ACE_tourniquet",
 			"ACE_tourniquet",
@@ -674,20 +624,6 @@ class CfgVehicles
 		respawnItems[]=
 		{
 			"ACE_Flashlight_KSF1",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
-			"LFP_item_bacta_bandage",
 			"ACE_tourniquet",
 			"ACE_tourniquet",
 			"ACE_tourniquet",
@@ -725,6 +661,1134 @@ class CfgVehicles
 			init = "_unit = _this select 0; if (local _unit) then { {_unit setSkill [_x, 0.95]; } forEach ['aimingAccuracy','aimingShake','aimingSpeed','commanding','courage','general','reloadSpeed','spotDistance','spotTime']; if !(isNil 'VCOM_AI_SetSkill') then { [_unit, 0.95] call VCOM_AI_SetSkill; }; };";
 		};
 	};
+	class BHA_ShockDroid_Heavy: BHA_ShockDroid
+	{
+		displayName="Legionnaire Shock Trooper (Heavy)";
+		linkedItems[]=
+		{
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemRadio",
+			"ACE_Altimeter",
+			"MET_NVG_Integrated_MU",
+			"None",
+			"BHA_WarBotArmour",
+			"BHA_WarBotHead"
+		};
+		respawnLinkedItems[]=
+		{
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemRadio",
+			"ACE_Altimeter",
+			"MET_NVG_Integrated_MU",
+			"None",
+			"BHA_WarBotArmour",
+			"BHA_WarBotHead"
+		};
+	};
+	class BHA_ShockDroid_Farseer: BHA_ShockDroidBase
+	{
+		side=2;
+		scope=2;
+		scopeCurator=2;
+		displayName="Legionnaire Shock Farseer";
+		identityTypes[]=
+		{
+			"ls_b1BattleDroid",
+			"Head_NATO",
+			"NoGlasses"
+		};
+		Weapons[]=
+		{
+			"MET_DCX_19_FS_BHA",
+			"Put",
+			"Throw"
+		};
+		respawnWeapons[]=
+		{
+			"MET_DCX_19_FS_BHA",
+			"Put",
+			"Throw"
+		};
+		Magazines[]=
+		{
+			"MET_DCX19_mag",
+			"MET_DCX19_mag",
+			"MET_DCX19_mag",
+			"MET_DCX19_mag",
+			"MET_DCX19_mag",
+			"MET_DCX19_mag",
+			"MET_DCX19_mag",
+			"MET_Weapons_Mags_Thermal_Detonator",
+			"MET_Weapons_Mags_Thermal_Detonator",
+			"MET_Weapons_Mags_Thermal_Detonator",
+			"MET_Smoke_Black",
+			"MET_Smoke_Black",
+			"MET_Smoke_Black"
+		};
+		respawnMagazines[]=
+		{
+			"MET_DCX19_mag",
+			"MET_DCX19_mag",
+			"MET_DCX19_mag",
+			"MET_DCX19_mag",
+			"MET_DCX19_mag",
+			"MET_DCX19_mag",
+			"MET_DCX19_mag",
+			"MET_Weapons_Mags_Thermal_Detonator",
+			"MET_Weapons_Mags_Thermal_Detonator",
+			"MET_Weapons_Mags_Thermal_Detonator",
+			"MET_Smoke_Black",
+			"MET_Smoke_Black",
+			"MET_Smoke_Black"
+		};
+		Items[]=
+		{
+			"ACE_Flashlight_KSF1",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_splint",
+			"ACE_splint",
+			"ACE_splint",
+			"ACE_splint",
+			"Weap_melee_knife"
+		};
+		respawnItems[]=
+		{
+			"ACE_Flashlight_KSF1",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_splint",
+			"ACE_splint",
+			"ACE_splint",
+			"ACE_splint",
+			"Weap_melee_knife"
+		};
+		linkedItems[]=
+		{
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemRadio",
+			"ACE_Altimeter",
+			"MET_NVG_Integrated_MU",
+			"None",
+			"BHA_WarBotHead"
+		};
+		respawnLinkedItems[]=
+		{
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemRadio",
+			"ACE_Altimeter",
+			"MET_NVG_Integrated_MU",
+			"None",
+			"BHA_WarBotHead"
+		};
+		/*class EventHandlers
+		{
+			init = "_unit = _this select 0; if (local _unit) then { {_unit setSkill [_x, 0.95]; } forEach ['aimingAccuracy','aimingShake','aimingSpeed','commanding','courage','general','reloadSpeed','spotDistance','spotTime']; if !(isNil 'VCOM_AI_SetSkill') then { [_unit, 0.95] call VCOM_AI_SetSkill; }; };";
+		};*/
+		class EventHandlers
+		{
+			init = "_unit = _this select 0; if (local _unit) then { {_unit setSkill [_x, 0.95]; } forEach ['aimingAccuracy','aimingShake','aimingSpeed','commanding','courage','general','reloadSpeed','spotDistance','spotTime']; if !(isNil 'VCOM_AI_SetSkill') then { [_unit, 0.95] call VCOM_AI_SetSkill; }; _unit addPrimaryWeaponItem 'ShdwCmpny_Optic_LEScope_DC15A'; _unit addPrimaryWeaponItem 'ShadwCmpany_Suppresor_Barrel_DCX19'; };";
+		};
+	};
+	class BHA_ShockDroid_Farseer_Heavy: BHA_ShockDroid_Farseer
+	{
+		displayName="Legionnaire Shock Farseer (Heavy)";
+		linkedItems[]=
+		{
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemRadio",
+			"ACE_Altimeter",
+			"MET_NVG_Integrated_MU",
+			"None",
+			"BHA_WarBotArmour",
+			"BHA_WarBotHead"
+		};
+		respawnLinkedItems[]=
+		{
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemRadio",
+			"ACE_Altimeter",
+			"MET_NVG_Integrated_MU",
+			"None",
+			"BHA_WarBotArmour",
+			"BHA_WarBotHead"
+		};
+	};
+	class BHA_ShockDroid_Bishop: BHA_ShockDroidBase
+	{
+		side=2;
+		scope=2;
+		scopeCurator=2;
+		displayName="Legionnaire Shock Bishop";
+		icon="iconManLeader";
+		identityTypes[]=
+		{
+			"ls_b1BattleDroid",
+			"Head_NATO",
+			"NoGlasses"
+		};
+		Weapons[]=
+		{
+			"MET_DCX_19_GL_FS_BHA",
+			"Put",
+			"Throw"
+		};
+		respawnWeapons[]=
+		{
+			"MET_DCX_19_GL_FS_BHA",
+			"Put",
+			"Throw"
+		};
+		Magazines[]=
+		{
+			"MET_DCX19_mag",
+			"MET_DCX19_mag",
+			"MET_DCX19_mag",
+			"MET_DCX19_mag",
+			"MET_DCX19_mag",
+			"MET_DCX19_mag",
+			"MET_DCX19_mag",
+			"MET_light_proton_mag",
+			"MET_light_proton_mag",
+			"MET_Weapons_Mags_Thermal_Detonator",
+			"MET_Weapons_Mags_Thermal_Detonator",
+			"MET_Weapons_Mags_Thermal_Detonator",
+			"MET_Smoke_Black",
+			"MET_Smoke_Black",
+			"MET_Smoke_Black"
+		};
+		respawnMagazines[]=
+		{
+			"MET_DCX19_mag",
+			"MET_DCX19_mag",
+			"MET_DCX19_mag",
+			"MET_DCX19_mag",
+			"MET_DCX19_mag",
+			"MET_DCX19_mag",
+			"MET_DCX19_mag",
+			"MET_light_proton_mag",
+			"MET_light_proton_mag",
+			"MET_Weapons_Mags_Thermal_Detonator",
+			"MET_Weapons_Mags_Thermal_Detonator",
+			"MET_Weapons_Mags_Thermal_Detonator",
+			"MET_Smoke_Black",
+			"MET_Smoke_Black",
+			"MET_Smoke_Black"
+		};
+		Items[]=
+		{
+			"ACE_Flashlight_KSF1",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_splint",
+			"ACE_splint",
+			"ACE_splint",
+			"ACE_splint",
+			"Weap_melee_knife"
+		};
+		respawnItems[]=
+		{
+			"ACE_Flashlight_KSF1",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_splint",
+			"ACE_splint",
+			"ACE_splint",
+			"ACE_splint",
+			"Weap_melee_knife"
+		};
+		linkedItems[]=
+		{
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemRadio",
+			"ACE_Altimeter",
+			"MET_NVG_Integrated_MU",
+			"None",
+			"BHA_WarBotHead"
+		};
+		respawnLinkedItems[]=
+		{
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemRadio",
+			"ACE_Altimeter",
+			"MET_NVG_Integrated_MU",
+			"None",
+			"BHA_WarBotHead"
+		};
+		/*class EventHandlers
+		{
+			init = "_unit = _this select 0; if (local _unit) then { {_unit setSkill [_x, 0.95]; } forEach ['aimingAccuracy','aimingShake','aimingSpeed','commanding','courage','general','reloadSpeed','spotDistance','spotTime']; if !(isNil 'VCOM_AI_SetSkill') then { [_unit, 0.95] call VCOM_AI_SetSkill; }; };";
+		};*/
+		class EventHandlers
+		{
+			init = "_unit = _this select 0; if (local _unit) then { {_unit setSkill [_x, 0.95]; } forEach ['aimingAccuracy','aimingShake','aimingSpeed','commanding','courage','general','reloadSpeed','spotDistance','spotTime']; if !(isNil 'VCOM_AI_SetSkill') then { [_unit, 0.95] call VCOM_AI_SetSkill; }; _unit addPrimaryWeaponItem 'ShdwCmpny_Optic_LEScope_DC15A'; _unit addPrimaryWeaponItem 'ShadwCmpany_Suppresor_Barrel_DCX19'; };";
+		};
+	};
+	class BHA_ShockDroid_Bishop_Heavy: BHA_ShockDroid_Bishop
+	{
+		displayName="Legionnaire Shock Bishop (Heavy)";
+		linkedItems[]=
+		{
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemRadio",
+			"ACE_Altimeter",
+			"MET_NVG_Integrated_MU",
+			"None",
+			"BHA_WarBotArmour",
+			"BHA_WarBotHead"
+		};
+		respawnLinkedItems[]=
+		{
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemRadio",
+			"ACE_Altimeter",
+			"MET_NVG_Integrated_MU",
+			"None",
+			"BHA_WarBotArmour",
+			"BHA_WarBotHead"
+		};
+	};
+	class BHA_EliteShockDroidBase: ls_droid_base
+	{
+		side=2;
+		scope=0;
+		scopeCurator=0;
+		faction="BHA_Units";
+		editorSubCategory="BHA_ShockDroidElite";
+		uniformClass="BHA_WarbotUniMDMC_inf_B";
+		identityTypes[]=
+		{
+			"ls_b1BattleDroid",
+			"NoGlasses"
+		};
+		Weapons[]=
+		{
+			"Put",
+			"Throw"
+		};
+		respawnWeapons[]=
+		{
+			"Put",
+			"Throw"
+		};
+		Magazines[]=
+		{
+			"MET_Smoke_Black",
+			"MET_Smoke_Black",
+			"MET_Smoke_Black"
+		};
+		respawnMagazines[]=
+		{
+			"MET_Smoke_Black",
+			"MET_Smoke_Black",
+			"MET_Smoke_Black"
+		};
+		Items[]=
+		{
+			"ACE_Canteen",
+			"ACE_MRE_LambCurry",
+			"ACE_Flashlight_KSF1",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_splint",
+			"ACE_splint",
+			"ACE_splint",
+			"ACE_splint",
+			"Weap_melee_knife"
+		};
+		respawnItems[]=
+		{
+			"ACE_Canteen",
+			"ACE_MRE_LambCurry",
+			"ACE_Flashlight_KSF1",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_splint",
+			"ACE_splint",
+			"ACE_splint",
+			"ACE_splint",
+			"Weap_melee_knife"
+		};
+		linkedItems[]=
+		{
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemRadio",
+			"ACE_Altimeter",
+			"MET_NVG_Integrated_MU",
+			"None",
+			"BHA_WarBotHeadMDMC"
+		};
+		respawnLinkedItems[]=
+		{
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemRadio",
+			"ACE_Altimeter",
+			"MET_NVG_Integrated_MU",
+			"None",
+			"BHA_WarBotHeadMDMC"
+		};
+		class EventHandlers
+		{
+			init = "_unit = _this select 0; if (local _unit) then { {_unit setSkill [_x, 0.95]; } forEach ['aimingAccuracy','aimingShake','aimingSpeed','commanding','courage','general','reloadSpeed','spotDistance','spotTime']; if !(isNil 'VCOM_AI_SetSkill') then { [_unit, 0.95] call VCOM_AI_SetSkill; }; };";
+		};
+	};
+	class BHA_EliteShockDroid: BHA_EliteShockDroidBase
+	{
+		side=2;
+		scope=2;
+		scopeCurator=2;
+		displayName="Legionnaire Elite Shock Trooper (Light)";
+		identityTypes[]=
+		{
+			"ls_b1BattleDroid",
+			"Head_NATO",
+			"NoGlasses"
+		};
+		Weapons[]=
+		{
+			"MET_E1_Reforged",
+			"Put",
+			"Throw"
+		};
+		respawnWeapons[]=
+		{
+			"MET_E1_Reforged",
+			"Put",
+			"Throw"
+		};
+		Magazines[]=
+		{
+			"MET_E1_mag",
+			"MET_E1_mag",
+			"MET_E1_mag",
+			"MET_E1_mag",
+			"MET_E1_mag",
+			"MET_E1_mag",
+			"MET_E1_mag",
+			"MET_Weapons_Mags_Thermal_Detonator",
+			"MET_Weapons_Mags_Thermal_Detonator",
+			"MET_Weapons_Mags_Thermal_Detonator",
+			"MET_Smoke_Black",
+			"MET_Smoke_Black",
+			"MET_Smoke_Black"
+		};
+		respawnMagazines[]=
+		{
+			"MET_E1_mag",
+			"MET_E1_mag",
+			"MET_E1_mag",
+			"MET_E1_mag",
+			"MET_E1_mag",
+			"MET_E1_mag",
+			"MET_E1_mag",
+			"MET_Weapons_Mags_Thermal_Detonator",
+			"MET_Weapons_Mags_Thermal_Detonator",
+			"MET_Weapons_Mags_Thermal_Detonator",
+			"MET_Smoke_Black",
+			"MET_Smoke_Black",
+			"MET_Smoke_Black"
+		};
+		Items[]=
+		{
+			"ACE_Flashlight_KSF1",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_splint",
+			"ACE_splint",
+			"ACE_splint",
+			"ACE_splint",
+			"Weap_melee_knife"
+		};
+		respawnItems[]=
+		{
+			"ACE_Flashlight_KSF1",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_splint",
+			"ACE_splint",
+			"ACE_splint",
+			"ACE_splint",
+			"Weap_melee_knife"
+		};
+		linkedItems[]=
+		{
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemRadio",
+			"ACE_Altimeter",
+			"MET_NVG_Integrated_MU",
+			"None",
+			"BHA_WarBotHeadMDMC"
+		};
+		respawnLinkedItems[]=
+		{
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemRadio",
+			"ACE_Altimeter",
+			"MET_NVG_Integrated_MU",
+			"None",
+			"BHA_WarBotHeadMDMC"
+		};
+		class EventHandlers
+		{
+			init = "_unit = _this select 0; if (local _unit) then { {_unit setSkill [_x, 0.95]; } forEach ['aimingAccuracy','aimingShake','aimingSpeed','commanding','courage','general','reloadSpeed','spotDistance','spotTime']; if !(isNil 'VCOM_AI_SetSkill') then { [_unit, 0.95] call VCOM_AI_SetSkill; }; };";
+		};
+	};
+	class BHA_EliteShockDroid1: BHA_EliteShockDroidBase
+	{
+		side=2;
+		scope=2;
+		scopeCurator=2;
+		displayName="Legionnaire Elite Shock Trooper 1";
+		identityTypes[]=
+		{
+			"ls_b1BattleDroid",
+			"Head_NATO",
+			"NoGlasses"
+		};
+		Weapons[]=
+		{
+			"MET_DLA13",
+			"Put",
+			"Throw"
+		};
+		respawnWeapons[]=
+		{
+			"MET_DLA13",
+			"Put",
+			"Throw"
+		};
+		linkedItems[]=
+		{
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemRadio",
+			"ACE_Altimeter",
+			"MET_NVG_Integrated_MU",
+			"None",
+			"BHA_WarBotHeadMDMC"
+		};
+		respawnLinkedItems[]=
+		{
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemRadio",
+			"ACE_Altimeter",
+			"MET_NVG_Integrated_MU",
+			"None",
+			"BHA_WarBotHeadMDMC"
+		};
+		class EventHandlers
+		{
+			init = "_unit = _this select 0; if (local _unit) then { {_unit setSkill [_x, 0.95]; } forEach ['aimingAccuracy','aimingShake','aimingSpeed','commanding','courage','general','reloadSpeed','spotDistance','spotTime']; if !(isNil 'VCOM_AI_SetSkill') then { [_unit, 0.95] call VCOM_AI_SetSkill; }; };";
+		};
+	};
+	class BHA_EliteShockDroid2: BHA_EliteShockDroidBase
+	{
+		side=2;
+		scope=2;
+		scopeCurator=2;
+		displayName="Legionnaire Elite Shock Trooper 2";
+		identityTypes[]=
+		{
+			"ls_b1BattleDroid",
+			"Head_NATO",
+			"NoGlasses"
+		};
+		Weapons[]=
+		{
+			"MET_DLA13_C",
+			"Put",
+			"Throw"
+		};
+		respawnWeapons[]=
+		{
+			"MET_DLA13_C",
+			"Put",
+			"Throw"
+		};
+		linkedItems[]=
+		{
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemRadio",
+			"ACE_Altimeter",
+			"MET_NVG_Integrated_MU",
+			"None",
+			"BHA_WarBotHeadMDMC"
+		};
+		respawnLinkedItems[]=
+		{
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemRadio",
+			"ACE_Altimeter",
+			"MET_NVG_Integrated_MU",
+			"None",
+			"BHA_WarBotHeadMDMC"
+		};
+		class EventHandlers
+		{
+			init = "_unit = _this select 0; if (local _unit) then { {_unit setSkill [_x, 0.95]; } forEach ['aimingAccuracy','aimingShake','aimingSpeed','commanding','courage','general','reloadSpeed','spotDistance','spotTime']; if !(isNil 'VCOM_AI_SetSkill') then { [_unit, 0.95] call VCOM_AI_SetSkill; }; };";
+		};
+	};
+	class BHA_EliteShockDroid3: BHA_EliteShockDroidBase
+	{
+		side=2;
+		scope=2;
+		scopeCurator=2;
+		displayName="Legionnaire Elite Shock Trooper 3";
+		identityTypes[]=
+		{
+			"ls_b1BattleDroid",
+			"Head_NATO",
+			"NoGlasses"
+		};
+		Weapons[]=
+		{
+			"MET_DLA13_C2",
+			"Put",
+			"Throw"
+		};
+		respawnWeapons[]=
+		{
+			"MET_DLA13_C2",
+			"Put",
+			"Throw"
+		};
+		linkedItems[]=
+		{
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemRadio",
+			"ACE_Altimeter",
+			"MET_NVG_Integrated_MU",
+			"None",
+			"BHA_WarBotHeadMDMC"
+		};
+		respawnLinkedItems[]=
+		{
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemRadio",
+			"ACE_Altimeter",
+			"MET_NVG_Integrated_MU",
+			"None",
+			"BHA_WarBotHeadMDMC"
+		};
+		class EventHandlers
+		{
+			init = "_unit = _this select 0; if (local _unit) then { {_unit setSkill [_x, 0.95]; } forEach ['aimingAccuracy','aimingShake','aimingSpeed','commanding','courage','general','reloadSpeed','spotDistance','spotTime']; if !(isNil 'VCOM_AI_SetSkill') then { [_unit, 0.95] call VCOM_AI_SetSkill; }; };";
+		};
+	};
+	class BHA_EliteShockDroid4: BHA_EliteShockDroidBase
+	{
+		side=2;
+		scope=2;
+		scopeCurator=2;
+		displayName="Legionnaire Elite Shock Trooper 4";
+		identityTypes[]=
+		{
+			"ls_b1BattleDroid",
+			"Head_NATO",
+			"NoGlasses"
+		};
+		Weapons[]=
+		{
+			"MET_DLA13_ugl",
+			"Put",
+			"Throw"
+		};
+		respawnWeapons[]=
+		{
+			"MET_DLA13_ugl",
+			"Put",
+			"Throw"
+		};
+		linkedItems[]=
+		{
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemRadio",
+			"ACE_Altimeter",
+			"MET_NVG_Integrated_MU",
+			"None",
+			"BHA_WarBotHeadMDMC"
+		};
+		respawnLinkedItems[]=
+		{
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemRadio",
+			"ACE_Altimeter",
+			"MET_NVG_Integrated_MU",
+			"None",
+			"BHA_WarBotHeadMDMC"
+		};
+		class EventHandlers
+		{
+			init = "_unit = _this select 0; if (local _unit) then { {_unit setSkill [_x, 0.95]; } forEach ['aimingAccuracy','aimingShake','aimingSpeed','commanding','courage','general','reloadSpeed','spotDistance','spotTime']; if !(isNil 'VCOM_AI_SetSkill') then { [_unit, 0.95] call VCOM_AI_SetSkill; }; };";
+		};
+	};
+	class BHA_EliteShockDroid5: BHA_EliteShockDroidBase
+	{
+		side=2;
+		scope=2;
+		scopeCurator=2;
+		displayName="Legionnaire Elite Shock Trooper 5";
+		identityTypes[]=
+		{
+			"ls_b1BattleDroid",
+			"Head_NATO",
+			"NoGlasses"
+		};
+		Weapons[]=
+		{
+			"MET_E1_Reforged",
+			"Put",
+			"Throw"
+		};
+		respawnWeapons[]=
+		{
+			"MET_E1_Reforged",
+			"Put",
+			"Throw"
+		};
+		linkedItems[]=
+		{
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemRadio",
+			"ACE_Altimeter",
+			"MET_NVG_Integrated_MU",
+			"None",
+			"BHA_WarBotHeadMDMC"
+		};
+		respawnLinkedItems[]=
+		{
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemRadio",
+			"ACE_Altimeter",
+			"MET_NVG_Integrated_MU",
+			"None",
+			"BHA_WarBotHeadMDMC"
+		};
+		class EventHandlers
+		{
+			init = "_unit = _this select 0; if (local _unit) then { {_unit setSkill [_x, 0.95]; } forEach ['aimingAccuracy','aimingShake','aimingSpeed','commanding','courage','general','reloadSpeed','spotDistance','spotTime']; if !(isNil 'VCOM_AI_SetSkill') then { [_unit, 0.95] call VCOM_AI_SetSkill; }; };";
+		};
+	};
+	class BHA_EliteShockDroid6: BHA_EliteShockDroidBase
+	{
+		side=2;
+		scope=2;
+		scopeCurator=2;
+		displayName="Legionnaire Elite Shock Trooper 6";
+		identityTypes[]=
+		{
+			"ls_b1BattleDroid",
+			"Head_NATO",
+			"NoGlasses"
+		};
+		Weapons[]=
+		{
+			"MET_X300_Sniper",
+			"Put",
+			"Throw"
+		};
+		respawnWeapons[]=
+		{
+			"MET_X300_Sniper",
+			"Put",
+			"Throw"
+		};
+		linkedItems[]=
+		{
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemRadio",
+			"ACE_Altimeter",
+			"MET_NVG_Integrated_MU",
+			"None",
+			"BHA_WarBotHeadMDMC"
+		};
+		respawnLinkedItems[]=
+		{
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemRadio",
+			"ACE_Altimeter",
+			"MET_NVG_Integrated_MU",
+			"None",
+			"BHA_WarBotHeadMDMC"
+		};
+		class EventHandlers
+		{
+			init = "_unit = _this select 0; if (local _unit) then { {_unit setSkill [_x, 0.95]; } forEach ['aimingAccuracy','aimingShake','aimingSpeed','commanding','courage','general','reloadSpeed','spotDistance','spotTime']; if !(isNil 'VCOM_AI_SetSkill') then { [_unit, 0.95] call VCOM_AI_SetSkill; }; };";
+		};
+	};
+	class BHA_EliteShockDroid7: BHA_EliteShockDroidBase
+	{
+		side=2;
+		scope=2;
+		scopeCurator=2;
+		displayName="Legionnaire Elite Shock Trooper 7";
+		identityTypes[]=
+		{
+			"ls_b1BattleDroid",
+			"Head_NATO",
+			"NoGlasses"
+		};
+		Weapons[]=
+		{
+			"MET_DCX_19_FS_BHA",
+			"Put",
+			"Throw"
+		};
+		respawnWeapons[]=
+		{
+			"MET_DCX_19_FS_BHA",
+			"Put",
+			"Throw"
+		};
+		linkedItems[]=
+		{
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemRadio",
+			"ACE_Altimeter",
+			"MET_NVG_Integrated_MU",
+			"None",
+			"BHA_WarBotHeadMDMC"
+		};
+		respawnLinkedItems[]=
+		{
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemRadio",
+			"ACE_Altimeter",
+			"MET_NVG_Integrated_MU",
+			"None",
+			"BHA_WarBotHeadMDMC"
+		};
+		class EventHandlers
+		{
+			init = "_unit = _this select 0; if (local _unit) then { {_unit setSkill [_x, 0.95]; } forEach ['aimingAccuracy','aimingShake','aimingSpeed','commanding','courage','general','reloadSpeed','spotDistance','spotTime']; if !(isNil 'VCOM_AI_SetSkill') then { [_unit, 0.95] call VCOM_AI_SetSkill; }; _unit addPrimaryWeaponItem 'ShdwCmpny_Optic_LEScope_DC15A'; _unit addPrimaryWeaponItem 'ShadwCmpany_Suppresor_Barrel_DCX19'; };";
+		};
+	};
+	class BHA_EliteShockDroid8: BHA_EliteShockDroidBase
+	{
+		side=2;
+		scope=2;
+		scopeCurator=2;
+		displayName="Legionnaire Elite Shock Trooper 8";
+		identityTypes[]=
+		{
+			"ls_b1BattleDroid",
+			"Head_NATO",
+			"NoGlasses"
+		};
+		Weapons[]=
+		{
+			"MET_DCX_19_GL_FS_BHA",
+			"Put",
+			"Throw"
+		};
+		respawnWeapons[]=
+		{
+			"MET_DCX_19_GL_FS_BHA",
+			"Put",
+			"Throw"
+		};
+		linkedItems[]=
+		{
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemRadio",
+			"ACE_Altimeter",
+			"MET_NVG_Integrated_MU",
+			"None",
+			"BHA_WarBotHeadMDMC"
+		};
+		respawnLinkedItems[]=
+		{
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemRadio",
+			"ACE_Altimeter",
+			"MET_NVG_Integrated_MU",
+			"None",
+			"BHA_WarBotHeadMDMC"
+		};
+		class EventHandlers
+		{
+			init = "_unit = _this select 0; if (local _unit) then { {_unit setSkill [_x, 0.95]; } forEach ['aimingAccuracy','aimingShake','aimingSpeed','commanding','courage','general','reloadSpeed','spotDistance','spotTime']; if !(isNil 'VCOM_AI_SetSkill') then { [_unit, 0.95] call VCOM_AI_SetSkill; }; _unit addPrimaryWeaponItem 'ShdwCmpny_Optic_LEScope_DC15A'; _unit addPrimaryWeaponItem 'ShadwCmpany_Suppresor_Barrel_DCX19'; };";
+		};
+	};
+	class BHA_EliteShockDroid9: BHA_EliteShockDroidBase
+	{
+		side=2;
+		scope=2;
+		scopeCurator=2;
+		displayName="Legionnaire Elite Shock Trooper 9";
+		identityTypes[]=
+		{
+			"ls_b1BattleDroid",
+			"Head_NATO",
+			"NoGlasses"
+		};
+		Weapons[]=
+		{
+			"MET_T20_rifle",
+			"Put",
+			"Throw"
+		};
+		respawnWeapons[]=
+		{
+			"MET_T20_rifle",
+			"Put",
+			"Throw"
+		};
+		linkedItems[]=
+		{
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemRadio",
+			"ACE_Altimeter",
+			"MET_NVG_Integrated_MU",
+			"None",
+			"BHA_WarBotHeadMDMC"
+		};
+		respawnLinkedItems[]=
+		{
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemRadio",
+			"ACE_Altimeter",
+			"MET_NVG_Integrated_MU",
+			"None",
+			"BHA_WarBotHeadMDMC"
+		};
+		class EventHandlers
+		{
+			init = "_unit = _this select 0; if (local _unit) then { {_unit setSkill [_x, 0.95]; } forEach ['aimingAccuracy','aimingShake','aimingSpeed','commanding','courage','general','reloadSpeed','spotDistance','spotTime']; if !(isNil 'VCOM_AI_SetSkill') then { [_unit, 0.95] call VCOM_AI_SetSkill; }; };";
+		};
+	};
+	class BHA_EliteShockDroid10: BHA_EliteShockDroidBase
+	{
+		side=2;
+		scope=2;
+		scopeCurator=2;
+		displayName="Legionnaire Elite Shock Trooper 10";
+		identityTypes[]=
+		{
+			"ls_b1BattleDroid",
+			"Head_NATO",
+			"NoGlasses"
+		};
+		Weapons[]=
+		{
+			"MET_T20_AC",
+			"Put",
+			"Throw"
+		};
+		respawnWeapons[]=
+		{
+			"MET_T20_AC",
+			"Put",
+			"Throw"
+		};
+		linkedItems[]=
+		{
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemRadio",
+			"ACE_Altimeter",
+			"MET_NVG_Integrated_MU",
+			"None",
+			"BHA_WarBotHeadMDMC"
+		};
+		respawnLinkedItems[]=
+		{
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemRadio",
+			"ACE_Altimeter",
+			"MET_NVG_Integrated_MU",
+			"None",
+			"BHA_WarBotHeadMDMC"
+		};
+		class EventHandlers
+		{
+			init = "_unit = _this select 0; if (local _unit) then { {_unit setSkill [_x, 0.95]; } forEach ['aimingAccuracy','aimingShake','aimingSpeed','commanding','courage','general','reloadSpeed','spotDistance','spotTime']; if !(isNil 'VCOM_AI_SetSkill') then { [_unit, 0.95] call VCOM_AI_SetSkill; }; };";
+		};
+	};
+	class BHA_EliteShockDroid11: BHA_EliteShockDroidBase
+	{
+		side=2;
+		scope=2;
+		scopeCurator=2;
+		displayName="Legionnaire Elite Shock Trooper 11";
+		identityTypes[]=
+		{
+			"ls_b1BattleDroid",
+			"Head_NATO",
+			"NoGlasses"
+		};
+		Weapons[]=
+		{
+			"MET_E403",
+			"Put",
+			"Throw"
+		};
+		respawnWeapons[]=
+		{
+			"MET_E403",
+			"Put",
+			"Throw"
+		};
+		linkedItems[]=
+		{
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemRadio",
+			"ACE_Altimeter",
+			"MET_NVG_Integrated_MU",
+			"None",
+			"BHA_WarBotHeadMDMC"
+		};
+		respawnLinkedItems[]=
+		{
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemRadio",
+			"ACE_Altimeter",
+			"MET_NVG_Integrated_MU",
+			"None",
+			"BHA_WarBotHeadMDMC"
+		};
+		class EventHandlers
+		{
+			init = "_unit = _this select 0; if (local _unit) then { {_unit setSkill [_x, 0.95]; } forEach ['aimingAccuracy','aimingShake','aimingSpeed','commanding','courage','general','reloadSpeed','spotDistance','spotTime']; if !(isNil 'VCOM_AI_SetSkill') then { [_unit, 0.95] call VCOM_AI_SetSkill; }; };";
+		};
+	};
+	class BHA_EliteShockDroid12: BHA_EliteShockDroidBase
+	{
+		side=2;
+		scope=2;
+		scopeCurator=2;
+		displayName="Legionnaire Elite Shock Trooper 12";
+		identityTypes[]=
+		{
+			"ls_b1BattleDroid",
+			"Head_NATO",
+			"NoGlasses"
+		};
+		Weapons[]=
+		{
+			"MET_EL34",
+			"Put",
+			"Throw"
+		};
+		respawnWeapons[]=
+		{
+			"MET_EL34",
+			"Put",
+			"Throw"
+		};
+		linkedItems[]=
+		{
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemRadio",
+			"ACE_Altimeter",
+			"MET_NVG_Integrated_MU",
+			"None",
+			"BHA_WarBotHeadMDMC"
+		};
+		respawnLinkedItems[]=
+		{
+			"ItemMap",
+			"ItemGPS",
+			"ItemCompass",
+			"ItemRadio",
+			"ACE_Altimeter",
+			"MET_NVG_Integrated_MU",
+			"None",
+			"BHA_WarBotHeadMDMC"
+		};
+		class EventHandlers
+		{
+			init = "_unit = _this select 0; if (local _unit) then { {_unit setSkill [_x, 0.95]; } forEach ['aimingAccuracy','aimingShake','aimingSpeed','commanding','courage','general','reloadSpeed','spotDistance','spotTime']; if !(isNil 'VCOM_AI_SetSkill') then { [_unit, 0.95] call VCOM_AI_SetSkill; }; };";
+		};
+	};
 };
 class CfgGroups
 {
@@ -733,12 +1797,12 @@ class CfgGroups
 		class BHA_Units
 		{
 			name="Barysaw Holdings Authority";
-			class BHA_Apostles_inf_Groups
+			class BHA_ShockDroid_Groups
 			{
-				name="Apostle Infantry Groups";
-				class BHA_Apostles_Squad
+				name="Shock Droid Groups";
+				class BHA_ShockDroid_Squad
 				{
-					name="Squad";
+					name="Squad (Light)";
 					scope=2;
 					side=2;
 					faction="BHA_Units";
@@ -746,49 +1810,106 @@ class CfgGroups
 					class Unit0
 					{
 						side=2;
-						vehicle="BHA_Apostles_Archbishop";
+						vehicle="BHA_ShockDroid_Bishop";
 						rank="SERGEANT";
 						position[]={0,0,0};
 					};
 					class Unit1
 					{
 						side=2;
-						vehicle="BHA_Apostles_Ascended";
+						vehicle="BHA_ShockDroid";
 						rank="PRIVATE";
 						position[]={1,-2,0};
 					};
 					class Unit2
 					{
 						side=2;
-						vehicle="BHA_Apostles_Immortal";
+						vehicle="BHA_ShockDroid";
 						rank="CORPORAL";
 						position[]={-1,-2,0};
 					};
 					class Unit3
 					{
 						side=2;
-						vehicle="BHA_Apostles_Diviner";
+						vehicle="BHA_ShockDroid";
 						rank="CORPORAL";
 						position[]={1,-3,0};
 					};
 					class Unit4
 					{
 						side=2;
-						vehicle="BHA_Apostles_Decimator";
+						vehicle="BHA_ShockDroid";
 						rank="CORPORAL";
 						position[]={-1,-3,0};
 					};
 					class Unit5
 					{
 						side=2;
-						vehicle="BHA_Apostles_Apostle";
+						vehicle="BHA_ShockDroid";
 						rank="CORPORAL";
 						position[]={1,-4,0};
 					};
 					class Unit6
 					{
 						side=2;
-						vehicle="BHA_Apostles_Annihilator";
+						vehicle="BHA_ShockDroid";
+						rank="CORPORAL";
+						position[]={-1,-4,0};
+					};
+				};
+				class BHA_ShockDroid_Heavy_Squad
+				{
+					name="Squad (Heavy)";
+					scope=2;
+					side=2;
+					faction="BHA_Units";
+					icon="\A3\ui_f\data\map\markers\nato\b_inf.paa";
+					class Unit0
+					{
+						side=2;
+						vehicle="BHA_ShockDroid_Bishop_Heavy";
+						rank="SERGEANT";
+						position[]={0,0,0};
+					};
+					class Unit1
+					{
+						side=2;
+						vehicle="BHA_ShockDroid_Farseer_Heavy";
+						rank="PRIVATE";
+						position[]={1,-2,0};
+					};
+					class Unit2
+					{
+						side=2;
+						vehicle="BHA_ShockDroid_Farseer_Heavy";
+						rank="CORPORAL";
+						position[]={-1,-2,0};
+					};
+					class Unit3
+					{
+						side=2;
+						vehicle="BHA_ShockDroid_Farseer_Heavy";
+						rank="CORPORAL";
+						position[]={1,-3,0};
+					};
+					class Unit4
+					{
+						side=2;
+						vehicle="BHA_ShockDroid_Farseer_Heavy";
+						rank="CORPORAL";
+						position[]={-1,-3,0};
+					};
+					class Unit5
+					{
+						side=2;
+						vehicle="BHA_ShockDroid_Farseer_Heavy";
+						rank="CORPORAL";
+						position[]={1,-4,0};
+					};
+					class Unit6
+					{
+						side=2;
+						vehicle="BHA_ShockDroid_Farseer_Heavy";
 						rank="CORPORAL";
 						position[]={-1,-4,0};
 					};

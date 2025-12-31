@@ -33,10 +33,11 @@ class CfgVehicles
 		editorSubCategory="BHA_Acolytes";
 		uniformClass="SC_Undersuit_Black";
 		backpack="MET_MDFBackpack_Black";
+		genericNames="RussianMen";
 		identityTypes[]=
 		{
-			"LanguageENG_F",
-			"Head_NATO",
+			"LanguageRUS_F",
+			"Head_Euro",
 			"G_NATO_default"
 		};
 		Weapons[]=
@@ -155,11 +156,11 @@ class CfgVehicles
 			"MET_MDF_Helmet_Black",
 			"MET_MDF_Heavy_Black"
 		};
-		class Attributes
+		/*class Attributes
 		{
 			// VCOM compatibility: set skill to max via VCOM attributes if present
 			VCOM_AISkill = 0.8;
-		};
+		};*/
 		class EventHandlers
 		{
 			init = "_unit = _this select 0; if (local _unit) then { {_unit setSkill [_x, 0.8]; } forEach ['aimingAccuracy','aimingShake','aimingSpeed','commanding','courage','general','reloadSpeed','spotDistance','spotTime']; if !(isNil 'VCOM_AI_SetSkill') then { [_unit, 0.8] call VCOM_AI_SetSkill; }; };";
@@ -174,10 +175,11 @@ class CfgVehicles
 		editorSubCategory="BHA_HG";
 		uniformClass="SC_Undersuit_Black";
 		backpack="MET_MDFBackpack_SSD";
+		genericNames="RussianMen";
 		identityTypes[]=
 		{
-			"LanguageENG_F",
-			"Head_NATO",
+			"LanguageRUS_F",
+			"Head_Euro",
 			"G_NATO_default"
 		};
 		Weapons[]=
@@ -192,14 +194,14 @@ class CfgVehicles
 		};
 		Magazines[]=
 		{
-			"MET_T20_mag",
-			"MET_T20_mag",
-			"MET_T20_mag",
-			"MET_T20_mag",
-			"MET_T20_mag",
-			"MET_T20_mag",
-			"MET_T20_mag",
-			"MET_T20_mag",
+			"MET_Arkanian_mag",
+			"MET_Arkanian_mag",
+			"MET_Arkanian_mag",
+			"MET_Arkanian_mag",
+			"MET_Arkanian_mag",
+			"MET_Arkanian_mag",
+			"MET_Arkanian_mag",
+			"MET_Arkanian_mag",
 			"MET_D200_Pistol_mag",
 			"MET_D200_Pistol_mag",
 			"MET_D200_Pistol_mag",
@@ -215,14 +217,14 @@ class CfgVehicles
 		};
 		respawnMagazines[]=
 		{
-			"MET_T20_mag",
-			"MET_T20_mag",
-			"MET_T20_mag",
-			"MET_T20_mag",
-			"MET_T20_mag",
-			"MET_T20_mag",
-			"MET_T20_mag",
-			"MET_T20_mag",
+			"MET_Arkanian_mag",
+			"MET_Arkanian_mag",
+			"MET_Arkanian_mag",
+			"MET_Arkanian_mag",
+			"MET_Arkanian_mag",
+			"MET_Arkanian_mag",
+			"MET_Arkanian_mag",
+			"MET_Arkanian_mag",
 			"MET_D200_Pistol_mag",
 			"MET_D200_Pistol_mag",
 			"MET_D200_Pistol_mag",
@@ -825,14 +827,14 @@ class CfgVehicles
 		//editorPreview="\HDC_Units_mod\data\Editor Previews\BHA\Apostles\BHA_Apostles_Apostle.jpg";
 		Weapons[]=
 		{
-			"MET_T20_rifle",
+			"MET_Arkanian_Stock_F",
 			"MET_D200",
 			"Put",
 			"Throw"
 		};
 		respawnWeapons[]=
 		{
-			"MET_T20_rifle",
+			"MET_Arkanian_Stock_F",
 			"MET_D200",
 			"Put",
 			"Throw"
@@ -847,14 +849,14 @@ class CfgVehicles
 		//editorPreview="\HDC_Units_mod\data\Editor Previews\BHA\Apostles\BHA_Apostles_Apostle.jpg";
 		Weapons[]=
 		{
-			"MET_T20_rifle",
+			"MET_Arkanian_Stock_F",
 			"MET_D200",
 			"Put",
 			"Throw"
 		};
 		respawnWeapons[]=
 		{
-			"MET_T20_rifle",
+			"MET_Arkanian_Stock_F",
 			"MET_D200",
 			"Put",
 			"Throw"
