@@ -183,12 +183,22 @@ class CfgVehicles
 			};
 		};*/
 	};
-	class LandVehicle;
+	class Land;
+	class LandVehicle: Land
+	{
+		class ViewPilot;
+		class NewTurret;
+	};
 	class StaticWeapon: LandVehicle
 	{
+		class AnimationSources;
 		class Turrets
 		{
-			class MainTurret;
+			class MainTurret: NewTurret
+			{
+				class ViewOptics;
+				class HitPoints;
+			};
 		};
 	};
 	class StaticMortar: StaticWeapon

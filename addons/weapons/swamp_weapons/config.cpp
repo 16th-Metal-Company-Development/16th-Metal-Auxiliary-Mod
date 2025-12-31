@@ -891,6 +891,27 @@ class CfgMagazines
 		mass=20;
 	};
 };
+class CfgLights
+{
+	class MET_BlasterboltLight_Blue;
+	class MET_plasmaGreen_medbig: MET_BlasterboltLight_Blue
+	{
+		diffuse[]={0,252,0,1};
+		intensity=15000;
+	};
+};
+class MET_plasma_Green_MedBig
+{
+	class MET_Green_plasma
+	{
+		simulation="light";
+		type="MET_plasmaGreen_medbig";
+		position[]={0,0,0};
+		intensity=1;
+		interval=1;
+		lifeTime=60;
+	};
+};
 class CfgAmmo
 {
 	class MET_HE_LauncherGrenade;

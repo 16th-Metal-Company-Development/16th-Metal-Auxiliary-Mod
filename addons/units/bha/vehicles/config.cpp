@@ -4,6 +4,7 @@ class CfgPatches
 	{
 		units[]={};
 		weapons[]={};
+		skipWhenMissingDependencies=1;
 		requiredaddons[]=
 		{
 			"sc_vtol",
@@ -2127,6 +2128,50 @@ class CfgAmmo
 		indirectHitRange=6;
 		coefGravity=0;
 	};
+	class BHA_MassDriver75_AP: Sh_125mm_APFSDS
+	{
+		cartridge="";
+		caliber=80;
+		model="SFA_Main\SFA_Weapons_Core\tracer_yellow.p3d";
+		effectfly="MET_plasma_orange_medbig";
+		hit=750;
+		explosionEffects="";
+		tracerScale=5;
+		indirectHit=15;
+		indirectHitRange=0.5;
+		coefGravity=0;
+	};
+	class BHA_MassDriver75_HE: Sh_125mm_HE
+	{
+		cartridge="";
+		caliber=80;
+		explosionEffects="";
+		model="SFA_Main\SFA_Weapons_Core\tracer_yellow.p3d";
+		effectfly="MET_plasma_orange_medbig";
+		hit=400;
+		tracerScale=5;
+		indirectHit=40;
+		indirectHitRange=6;
+		coefGravity=0;
+		ace_frag_enabled = 1;  // Deprecated
+        ace_frag_metal = 120;  // Amount of metal being fragmented (grams) - information below
+        ace_frag_charge = 100;  // Amount of explosive filler (grams) - information below
+        ace_frag_gurney_c = 2400;  // Gurney velocity constant for explosive type - information below
+        ace_frag_gurney_k = 3/5;  // Gurney velocity shape factor - information below
+        ace_frag_classes[] = {"ACE_frag_large", "ACE_frag_large_HD"};  // Type of fragments - information below
+        ace_frag_skip = 0;  // (Optional) Skip fragmentation for this ammo type (0-disabled, 1-enabled) - information below
+        ace_frag_force = 1;  // (Optional) Force fragmentation system (0-disabled, 1-enabled) - information below
+    };
+	class BHA_MassDriver75_AP_G: BHA_MassDriver75_AP
+	{
+		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Green.p3d";
+		effectfly="MET_plasma_Green_MedBig";
+	};
+	class BHA_MassDriver75_HE_G: BHA_MassDriver75_HE
+	{
+		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Green.p3d";
+		effectfly="MET_plasma_Green_MedBig";
+    };
 };
 class CfgMagazines
 {
@@ -2610,6 +2655,33 @@ class CfgMagazines
 		initSpeed=800;
 		tracersevery=1;
 		count=500;
+	};
+	//FG75
+	class 40Rnd_105mm_APFSDS_T_Green;
+	class BHA_75MW_AP: 40Rnd_105mm_APFSDS_T_Green
+	{
+		ammo = "BHA_MassDriver75_AP";
+		count = 10;
+		displayname = "75MW AP";
+		displaynameshort = "AP";
+		tracersevery = 1;
+		muzzleImpulseFactor[]={0,0};
+	};
+	class BHA_75MW_HE: BHA_75MW_AP
+	{
+		ammo = "BHA_MassDriver75_HE";
+		displayname = "75MW HE";
+		displaynameshort = "HE";
+	};
+	class BHA_75MW_AP_G: BHA_75MW_AP
+	{
+		ammo = "BHA_MassDriver75_AP_G";
+	};
+	class BHA_75MW_HE_G: BHA_75MW_AP_G
+	{
+		ammo = "BHA_MassDriver75_HE_G";
+		displayname = "75MW HE";
+		displaynameshort = "HE";
 	};
 };
 class Mode_Burst;
@@ -5663,4 +5735,48 @@ class CfgWeapons
 			maxRangeProbab=0.1;
 		};
 	};
+	class OPTRE_90mm_M512;
+  	class BHA_75mm_M75: OPTRE_90mm_M512 
+	{
+		displayName = "FG75 Mass Driver";
+		magazines[] = {
+		"BHA_75MW_HE",
+		"BHA_75MW_AP",
+		"BHA_75MW_HE_G",
+		"BHA_75MW_AP_G"
+		};
+		magazineReloadTime = 12;
+		reloadTime = 1;
+		class player: Mode_SemiAuto {
+		sounds[] = {
+			"StandardSound"
+		};
+		class StandardSound {
+			begin1[] = {
+			"z\MET\addons\units\bha\vehicles\turrets\sounds\emplaced_at_gun.ogg",
+			1,
+			1,
+			1500
+			};
+			soundBegin[] = {
+			"begin1",
+			1
+			};
+		};
+		soundContinuous = 0;
+		reloadTime = 1;
+		magazineReloadTime = 12;
+		autoReload = 1;
+		autoFire = 0;
+		dispersion = 0.00057;
+		aiRateOfFire = 1;
+		aiRateOfFireDistance = 10;
+		minRange = 0;
+		minRangeProbab = 0.01;
+		midRange = 1;
+		midRangeProbab = 0.01;
+		maxRange = 2;
+		maxRangeProbab = 0.01;
+		};
+  	};
 };

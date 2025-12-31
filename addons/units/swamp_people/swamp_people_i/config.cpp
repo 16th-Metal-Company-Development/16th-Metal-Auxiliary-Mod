@@ -216,9 +216,10 @@ class CfgVehicles
 		uniformClass="U_I_T_Sniper_F";
 		displayName="Swamp Officer";
 		icon="iconManOfficer";
+		genericNames="FrenchMen";
 		identityTypes[]=
 		{
-			"LanguageENG_F",
+			"LanguageFRE_F",
 			"ls_head_mirialan",
 			"NoGlasses"
 		};
@@ -250,8 +251,8 @@ class CfgVehicles
 			"MET_HE_Grenade",
 			"MET_HE_Grenade",
 			"MET_HE_Grenade",
-			"MET_Weapons_Mags_Thermal_Detonator",
-			"MET_Weapons_Mags_Thermal_Detonator"
+			"MET_Weapons_Mags_Thermal_Penetrator",
+			"MET_Weapons_Mags_Thermal_Penetrator"
 		};
 		respawnMagazines[]=
 		{
@@ -268,8 +269,8 @@ class CfgVehicles
 			"MET_HE_Grenade",
 			"MET_HE_Grenade",
 			"MET_HE_Grenade",
-			"MET_Weapons_Mags_Thermal_Detonator",
-			"MET_Weapons_Mags_Thermal_Detonator"
+			"MET_Weapons_Mags_Thermal_Penetrator",
+			"MET_Weapons_Mags_Thermal_Penetrator"
 		};
 		Items[]=
 		{
@@ -366,9 +367,10 @@ class CfgVehicles
 		uniformClass="U_I_T_Sniper_F";
 		displayName="Swamp Rifleman";
 		icon="iconMan";
+		genericNames="FrenchMen";
 		identityTypes[]=
 		{
-			"LanguageENG_F",
+			"LanguageFRE_F",
 			"ls_head_mirialan",
 			"NoGlasses"
 		};
@@ -395,8 +397,8 @@ class CfgVehicles
 			"MET_DC15A_mag",
 			"MET_DC15A_mag",
 			"MET_DC15A_mag",
-			"MET_Weapons_Mags_Thermal_Detonator",
-			"MET_Weapons_Mags_Thermal_Detonator"
+			"MET_Weapons_Mags_Thermal_Penetrator",
+			"MET_Weapons_Mags_Thermal_Penetrator"
 		};
 		respawnMagazines[]=
 		{
@@ -408,8 +410,8 @@ class CfgVehicles
 			"MET_DC15A_mag",
 			"MET_DC15A_mag",
 			"MET_DC15A_mag",
-			"MET_Weapons_Mags_Thermal_Detonator",
-			"MET_Weapons_Mags_Thermal_Detonator"
+			"MET_Weapons_Mags_Thermal_Penetrator",
+			"MET_Weapons_Mags_Thermal_Penetrator"
 		};
 		Items[]=
 		{
@@ -479,9 +481,10 @@ class CfgVehicles
 		uniformClass="U_I_T_Sniper_F";
 		displayName="Swamp Anti-Tank";
 		icon="iconManAT";
+		genericNames="FrenchMen";
 		identityTypes[]=
 		{
-			"LanguageENG_F",
+			"LanguageFRE_F",
 			"ls_head_mirialan",
 			"NoGlasses"
 		};
@@ -511,8 +514,8 @@ class CfgVehicles
 			"MET_DC15A_mag",
 			"MET_DC15A_mag",
 			"MET_MAND_AT_Single",
-			"MET_Weapons_Mags_Thermal_Detonator",
-			"MET_Weapons_Mags_Thermal_Detonator"
+			"MET_Weapons_Mags_Thermal_Penetrator",
+			"MET_Weapons_Mags_Thermal_Penetrator"
 		};
 		respawnMagazines[]=
 		{
@@ -525,8 +528,8 @@ class CfgVehicles
 			"MET_DC15A_mag",
 			"MET_DC15A_mag",
 			"MET_MAND_AT_Single",
-			"MET_Weapons_Mags_Thermal_Detonator",
-			"MET_Weapons_Mags_Thermal_Detonator"
+			"MET_Weapons_Mags_Thermal_Penetrator",
+			"MET_Weapons_Mags_Thermal_Penetrator"
 		};
 		Items[]=
 		{
@@ -596,9 +599,10 @@ class CfgVehicles
 		uniformClass="U_I_T_Sniper_F";
 		displayName="Swamp Machine Gunner";
 		icon="iconManMG";
+		genericNames="FrenchMen";
 		identityTypes[]=
 		{
-			"LanguageENG_F",
+			"LanguageFRE_F",
 			"ls_head_mirialan",
 			"NoGlasses"
 		};
@@ -619,15 +623,15 @@ class CfgVehicles
 		{
 			"MET_DC15L_mag",
 			"MET_DC15L_mag",
-			"MET_Weapons_Mags_Thermal_Detonator",
-			"MET_Weapons_Mags_Thermal_Detonator"
+			"MET_Weapons_Mags_Thermal_Penetrator",
+			"MET_Weapons_Mags_Thermal_Penetrator"
 		};
 		respawnMagazines[]=
 		{
 			"MET_DC15L_mag",
 			"MET_DC15L_mag",
-			"MET_Weapons_Mags_Thermal_Detonator",
-			"MET_Weapons_Mags_Thermal_Detonator"
+			"MET_Weapons_Mags_Thermal_Penetrator",
+			"MET_Weapons_Mags_Thermal_Penetrator"
 		};
 		Items[]=
 		{
@@ -697,9 +701,10 @@ class CfgVehicles
 		uniformClass="U_I_T_Sniper_F";
 		displayName="Swamp Sniper";
 		icon="JLTS_iconManSniper";
+		genericNames="FrenchMen";
 		identityTypes[]=
 		{
-			"LanguageENG_F",
+			"LanguageFRE_F",
 			"ls_head_mirialan",
 			"NoGlasses"
 		};
@@ -723,8 +728,8 @@ class CfgVehicles
 			"MET_Valken_mag",
 			"MET_Valken_mag",
 			"MET_Valken_mag",
-			"MET_Weapons_Mags_Thermal_Detonator",
-			"MET_Weapons_Mags_Thermal_Detonator"
+			"MET_Weapons_Mags_Thermal_Penetrator",
+			"MET_Weapons_Mags_Thermal_Penetrator"
 		};
 		respawnMagazines[]=
 		{
@@ -733,8 +738,8 @@ class CfgVehicles
 			"MET_Valken_mag",
 			"MET_Valken_mag",
 			"MET_Valken_mag",
-			"MET_Weapons_Mags_Thermal_Detonator",
-			"MET_Weapons_Mags_Thermal_Detonator"
+			"MET_Weapons_Mags_Thermal_Penetrator",
+			"MET_Weapons_Mags_Thermal_Penetrator"
 		};
 		Items[]=
 		{
@@ -799,7 +804,7 @@ class CfgGroups
 {
 	class INDEP
 	{
-		class SPR_Units
+		class SP_Units
 		{
 			name="[16th] Swamp People";
 			class SPR_Fighters_Groups
