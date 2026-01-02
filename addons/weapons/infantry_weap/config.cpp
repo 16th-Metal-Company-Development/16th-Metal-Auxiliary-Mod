@@ -361,8 +361,8 @@ class CfgWeapons
 	{
 		JLTS_hasElectronics=1;
 		JLTS_hasEMPProtection=1;
-		JLTS_friedItem="JLTS_DC15A_fried";
-		JLTS_repairTime=33;
+		JLTS_friedItem="MET_DC15A_LEG_fried";
+		JLTS_repairTime=30;
 		author="MrClock";
 		scope=2;
 		displayName="[16th] DC-15A MkI (Wood Stock)";
@@ -715,7 +715,7 @@ class CfgWeapons
 	};
 	class MET_DC15A_LEG_ugl: MET_DC15A_LEG
 	{
-		JLTS_friedItem="JLTS_DC15A_UGL_fried";
+		JLTS_friedItem="MET_DC15A_LEG_ugl_fried";
 		JLTS_repairTime=35;
 		displayName="[16th] DC-15A Mk I UBGL (Wood Stock)";
 		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_ugl_ui_ca.paa";	
@@ -801,7 +801,10 @@ class CfgWeapons
 	};
 	class MET_DC15A_PLASTIC: MET_DC15A_LEG
 	{
-		JLTS_friedItem="JLTS_DC15A_plastic_fried";
+		JLTS_hasElectronics=1;
+		JLTS_hasEMPProtection=0;
+		JLTS_friedItem="MET_DC15A_plastic_fried";
+		JLTS_repairTime=30;
 		displayName="[16th] DC-15A MkI";
 		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_plastic_ui_ca.paa";
 		model="\MRC\JLTS\weapons\DC15A\DC15A_plastic.p3d";
@@ -812,7 +815,7 @@ class CfgWeapons
 	};
 	class MET_DC15A_ugl_plastic: MET_DC15A_LEG_ugl
 	{
-		JLTS_friedItem="JLTS_DC15A_ugl_plastic_fried";
+		JLTS_friedItem="MET_DC15A_ugl_plastic_fried";
 		displayName="[16th] DC-15A Mk I UBGL";
 		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_ugl_plastic_ui_ca.paa";
 		model="\MRC\JLTS\weapons\DC15A\DC15A_ugl_plastic.p3d";
@@ -820,6 +823,113 @@ class CfgWeapons
 		{
 			"\MRC\JLTS\weapons\DC15A\data\DC15A_plastic_co.paa",
 			"\MRC\JLTS\weapons\DC15A\data\DC15A_ugl_co.paa"
+		};
+	};
+	/*==============================================================================
+	==DC-15A Legacy (Fried)
+	==============================================================================*/
+	class MET_DC15A_LEG_fried: MET_DC15A_LEG
+	{
+		baseWeapon="MET_DC15A_LEG_fried";
+		displayName="[16th] Fried DC-15A Mk I (Wood Stock)";
+		descriptionShort="$STR_JLTS_descs_BlasterFried";
+		scope=1;
+		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_fried_ui_ca.paa";
+		magazines[]={};
+		magazineWell[]={};
+		JLTS_isFried=1;
+		drySound[]=
+		{
+			"A3\Sounds_F\arsenal\weapons\Rifles\Mx\dry_Mx",
+			0.56234097,
+			1,
+			10
+		};
+		class Stun: Stun
+		{
+			displayName="$STR_JLTS_names_StunModeFried";
+			magazines[]={};
+			drySound[]=
+			{
+				"A3\Sounds_F\arsenal\weapons\Rifles\Mx\dry_Mx",
+				0.56234097,
+				1,
+				10
+			};
+		};
+	};
+	class MET_DC15A_LEG_ugl_fried: MET_DC15A_LEG_ugl
+	{
+		baseWeapon="MET_DC15A_LEG_ugl_fried";
+		displayName="[16th] Fried DC-15A Mk I UBGL (Wood Stock)";
+		descriptionShort="$STR_JLTS_descs_BlasterFried";
+		scope=1;
+		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_UGL_fried_ui_ca.paa";
+		muzzles[]=
+		{
+			"this"
+		};
+		magazines[]={};
+		magazineWell[]={};
+		JLTS_isFried=1;
+		drySound[]=
+		{
+			"A3\Sounds_F\arsenal\weapons\Rifles\Mx\dry_Mx",
+			0.56234097,
+			1,
+			10
+		};
+	};
+	class MET_DC15A_plastic_fried: MET_DC15A_PLASTIC
+	{
+		baseWeapon="MET_DC15A_plastic_fried";
+		displayName="[16th] Fried DC-15A Mk I";
+		descriptionShort="$STR_JLTS_descs_BlasterFried";
+		scope=1;
+		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_plastic_fried_ui_ca.paa";
+		magazines[]={};
+		magazineWell[]={};
+		JLTS_isFried=1;
+		drySound[]=
+		{
+			"A3\Sounds_F\arsenal\weapons\Rifles\Mx\dry_Mx",
+			0.56234097,
+			1,
+			10
+		};
+		class Stun: Stun
+		{
+			displayName="$STR_JLTS_names_StunModeFried";
+			magazines[]={};
+			drySound[]=
+			{
+				"A3\Sounds_F\arsenal\weapons\Rifles\Mx\dry_Mx",
+				0.56234097,
+				1,
+				10
+			};
+		};
+	};
+	class MET_DC15A_ugl_plastic_fried: MET_DC15A_ugl_plastic
+	{
+		baseWeapon="MET_DC15A_ugl_plastic_fried";
+		displayName="[16th] Fried DC-15A Mk I UBGL";
+		descriptionShort="$STR_JLTS_descs_BlasterFried";
+		scope=1;
+		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_UGL_plastic_fried_ui_ca.paa";
+		muzzles[]=
+		{
+			"this"
+		};
+		magazines[]={};
+		magazineWell[]={};
+		JLTS_isFried=1;
+		drySound[]=
+		{
+			"A3\Sounds_F\arsenal\weapons\Rifles\Mx\dry_Mx",
+			0.56234097,
+			1,
+			10
 		};
 	};
 	/*==============================================================================
@@ -1252,6 +1362,10 @@ class CfgWeapons
 	};
 	class MET_DC15A_F: MET_DC15A_Base_F
 	{
+		JLTS_hasElectronics=1;
+		JLTS_hasEMPProtection=0;
+		JLTS_friedItem="MET_DC15A_F_fried";
+		JLTS_repairTime=30;
 		author="$STR_3as_Studio";
 		baseWeapon="MET_DC15A_F";
 		//JLTS_friedItem="JLTS_DC15A_fried";
@@ -1268,7 +1382,10 @@ class CfgWeapons
 	{
 		author="$STR_3as_Studio";
 		baseWeapon="MET_DC15LE";
-		//JLTS_friedItem="JLTS_DC15A_fried";
+		JLTS_hasElectronics=1;
+		JLTS_hasEMPProtection=0;
+		JLTS_friedItem="MET_DC15LE_fried";
+		JLTS_repairTime=30;
 		scope=2;
 		displayName="[16th] DC-15LE";
 		model="\3AS\3AS_Weapons\Republic\DC15A\3AS_DC15A_F.p3d";
@@ -1571,6 +1688,10 @@ class CfgWeapons
 	==============================================================================*/
 	class MET_DC15A_GL: MET_DC15A_Base_F
 	{
+		JLTS_hasElectronics=1;
+		JLTS_hasEMPProtection=0;
+		JLTS_friedItem="MET_DC15A_GL_fried";
+		JLTS_repairTime=30;
 		author="$STR_3as_Studio";
 		baseWeapon="MET_DC15A_GL";
 		scope=2;
@@ -1593,19 +1714,84 @@ class CfgWeapons
 			mass=120;
 		};
 	};
+	/*==============================================================================
+	==DC-15A Mk II (Fried)
+	==============================================================================*/
+	class MET_DC15A_F_fried: MET_DC15A_F
+	{
+		baseWeapon="MET_DC15A_F_fried";
+		displayName="[16th] Fried DC-15A Mk II";
+		descriptionShort="$STR_JLTS_descs_BlasterFried";
+		scope=1;
+		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_plastic_fried_ui_ca.paa";
+		magazines[]={};
+		magazineWell[]={};
+		JLTS_isFried=1;
+		drySound[]=
+		{
+			"A3\Sounds_F\arsenal\weapons\Rifles\Mx\dry_Mx",
+			0.56234097,
+			1,
+			10
+		};
+	};
+	class MET_DC15LE_fried: MET_DC15LE
+	{
+		baseWeapon="MET_DC15LE_fried";
+		displayName="[16th] Fried DC-15LE Mk II";
+		descriptionShort="$STR_JLTS_descs_BlasterFried";
+		scope=1;
+		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_UGL_plastic_fried_ui_ca.paa";
+		muzzles[]=
+		{
+			"this"
+		};
+		magazines[]={};
+		magazineWell[]={};
+		JLTS_isFried=1;
+		drySound[]=
+		{
+			"A3\Sounds_F\arsenal\weapons\Rifles\Mx\dry_Mx",
+			0.56234097,
+			1,
+			10
+		};
+	};
+	class MET_DC15A_GL_fried: MET_DC15A_GL
+	{
+		baseWeapon="MET_DC15A_GL_fried";
+		displayName="[16th] Fried DC-15A Mk II UBGL";
+		descriptionShort="$STR_JLTS_descs_BlasterFried";
+		scope=1;
+		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_UGL_plastic_fried_ui_ca.paa";
+		muzzles[]=
+		{
+			"this"
+		};
+		magazines[]={};
+		magazineWell[]={};
+		JLTS_isFried=1;
+		drySound[]=
+		{
+			"A3\Sounds_F\arsenal\weapons\Rifles\Mx\dry_Mx",
+			0.56234097,
+			1,
+			10
+		};
+	};
+	/*==============================================================================
+	==DC-15S LEGACY
+	==============================================================================*/
 	class JLTS_DC15S: arifle_MX_Base_F
 	{
 		class GunParticles;
 		class WeaponSlotsInfo;
 	};
-	/*==============================================================================
-	==DC-15S LEGACY
-	==============================================================================*/
 	class MET_DC15S: JLTS_DC15S
 	{
 		JLTS_hasElectronics=1;
-		JLTS_hasEMPProtection=1;
-		JLTS_friedItem="JLTS_DC15S_fried";
+		JLTS_hasEMPProtection=0;
+		JLTS_friedItem="MET_DC15S_fried";
 		JLTS_repairTime=20;
 		JLTS_canHaveShield=1;
 		JLTS_shieldedWeapon="MET_DC15S_shield";
@@ -1614,14 +1800,14 @@ class CfgWeapons
 		displayName="[16th] DC-15S MkI";
 		descriptionShort="$STR_JLTS_descs_BlasterCarbine";
 		picture="\MRC\JLTS\weapons\DC15S\data\ui\DC15S_ui_ca.paa";
-		model="\MRC\JLTS\weapons\DC15S\DC15S.p3d";
+		model="\MRC\JLTS\weapons\DC15S\DC15S_new.p3d";
 		hiddenSelections[]=
 		{
 			"camo1"
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\MRC\JLTS\weapons\DC15S\data\DC15S_co.paa"
+			"\MRC\JLTS\weapons\DC15S\data\new\DC15S_co.paa"
 		};
 		handAnim[]=
 		{
@@ -1961,7 +2147,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\MRC\JLTS\weapons\DC15S\data\DC15S_co.paa",
+			"\MRC\JLTS\weapons\DC15S\data\new\DC15S_co.paa",
 			"\MRC\JLTS\weapons\Shield\data\shield_co.paa"
 		};
 		handAnim[]=
@@ -1987,6 +2173,40 @@ class CfgWeapons
 					"JLTS_riot_shield_GD_attachment",
 					"JLTS_riot_shield_droid_attachment"
 				};
+			};
+		};
+	};
+	/*==============================================================================
+	==DC-15S LEGACY (Fried)
+	==============================================================================*/
+	class MET_DC15S_fried: MET_DC15S
+	{
+		JLTS_isFried=1;
+		JLTS_shieldedWeapon="MET_DC15S_shield_fried";
+		baseWeapon="MET_DC15S_fried";
+		displayName="[16th] Fried DC-15S";
+		descriptionShort="$STR_JLTS_descs_BlasterFried";
+		scope=1;
+		picture="\MRC\JLTS\weapons\DC15S\data\ui\DC15S_fried_ui_ca.paa";
+		magazines[]={};
+		magazineWell[]={};
+		drySound[]=
+		{
+			"A3\Sounds_F\arsenal\weapons\Rifles\Mx\dry_Mx",
+			0.56234097,
+			1,
+			10
+		};
+		class Stun: Stun
+		{
+			displayName="$STR_JLTS_names_StunModeFried";
+			magazines[]={};
+			drySound[]=
+			{
+				"A3\Sounds_F\arsenal\weapons\Rifles\Mx\dry_Mx",
+				0.56234097,
+				1,
+				10
 			};
 		};
 	};
@@ -2322,6 +2542,10 @@ class CfgWeapons
 	};
 	class MET_DC15S_F: MET_DC15S_Base_F
 	{
+		JLTS_hasElectronics=1;
+		JLTS_hasEMPProtection=0;
+		JLTS_friedItem="MET_DC15S_F_fried";
+		JLTS_repairTime=20;
 		author="$STR_3as_Studio";
 		baseWeapon="MET_DC15S_F";
 		scope=2;
@@ -2331,18 +2555,39 @@ class CfgWeapons
 		UiPicture="\A3\weapons_f\data\UI\icon_regular_CA.paa";
 	};
 	/*==============================================================================
+	==DC-15S MkII (Fried)
+	==============================================================================*/
+	class MET_DC15S_F_fried: MET_DC15S_F
+	{
+		JLTS_isFried=1;
+		baseWeapon="MET_DC15S_F_fried";
+		displayName="[16th] Fried DC-15S MkII";
+		descriptionShort="$STR_JLTS_descs_BlasterFried";
+		scope=1;
+		picture="\MRC\JLTS\weapons\DC15S\data\ui\DC15S_fried_ui_ca.paa";
+		magazines[]={};
+		magazineWell[]={};
+		drySound[]=
+		{
+			"A3\Sounds_F\arsenal\weapons\Rifles\Mx\dry_Mx",
+			0.56234097,
+			1,
+			10
+		};
+	};
+	/*==============================================================================
 	==DC-15S GL
 	==============================================================================*/
 	class MET_DC15S_GL: MET_DC15S_Base_F
 	{
 		JLTS_hasElectronics=1;
-		JLTS_hasEMPProtection=1;
-		//JLTS_friedItem="JLTS_DP23_fried";
+		JLTS_hasEMPProtection=0;
+		JLTS_friedItem="MET_DC15S_GL_fried";
 		JLTS_repairTime=25;
 		author="$STR_3as_Studio";
 		baseWeapon="MET_DC15S_GL";
 		scope=2;
-		displayName="[16th] DC-15S GL";
+		displayName="[16th] DC-15S MkII GL";
 		model="\3AS\3AS_Weapons\Republic\DC15S\3AS_DC15S_GL.p3d";
 		picture="\3AS\3AS_Weapons\Republic\DC15S\Data\UI\3as_dc15sgl.paa";
 		UiPicture="\A3\weapons_f\data\UI\icon_regular_CA.paa";
@@ -2359,6 +2604,31 @@ class CfgWeapons
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
 			mass=90;
+		};
+	};
+	/*==============================================================================
+	==DC-15S GL MkII (Fried)
+	==============================================================================*/
+	class MET_DC15S_GL_fried: MET_DC15S_GL
+	{
+		JLTS_isFried=1;
+		baseWeapon="MET_DC15S_GL_fried";
+		displayName="[16th] Fried DC-15S MkII GL";
+		descriptionShort="$STR_JLTS_descs_BlasterFried";
+		scope=1;
+		picture="\MRC\JLTS\weapons\DC15S\data\ui\DC15S_fried_ui_ca.paa";
+		magazines[]={};
+		magazineWell[]={};
+		muzzles[]=
+		{
+			"this"
+		};
+		drySound[]=
+		{
+			"A3\Sounds_F\arsenal\weapons\Rifles\Mx\dry_Mx",
+			0.56234097,
+			1,
+			10
 		};
 	};
 	/*==============================================================================
@@ -13367,7 +13637,7 @@ class CfgMagazines
 		modelSpecial="";
 		modelSpecialIsProxy=0;
 		picture="\3AS\3AS_Weapons\Data\UI\3as_ammo_b.paa";
-		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
+		model="\MRC\JLTS\weapons\DC15S\DC15S_mag.p3d";
 		count=60;
 		displayName="[16th] Light Energy Cell";
 		displayNameShort="Energy Cell";
