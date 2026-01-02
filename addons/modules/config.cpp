@@ -2,7 +2,7 @@ class CfgPatches
 {
 	class modules
 	{
-		units[] = { "MET_Module_BuildZone","MET_Module_LogisticsBudget"};
+		units[] = { "MET_Module_BuildZone","MET_Module_LogisticsBudget","MET_Module_VehiclePad"};
 		requiredVersion = 1.0;
 		requiredAddons[] = { "A3_Modules_F" };
 	};
@@ -209,6 +209,131 @@ class CfgVehicles
 		};
 	};
 
+	class MET_Module_VehiclePad : Module_F 
+	{
+		scope = 2;
+		scopeCurator = 2;
+		displayName = "[16th] Vehicle Pad";
+		icon = "iconModule";
+		category = "MET_Category_Modules";
+
+		function = "MET_fnc_VehiclePad";
+		functionPriority = 1;
+		isGlobal = 2;
+		isTriggerActivated = 0;
+		isDisposable = 0;
+		is3DEN = 0;
+		curatorCanAttach = 0;
+
+		canSetArea = 0;
+		canSetAreaShape = 0;
+		canSetAreaHeight = 0;
+
+		class Attributes : AttributesBase 
+		{
+			class SpawnPreset : Combo
+			{
+				displayName = "Vehicle Preset";
+				tooltip = "Select which vehicles are available to spawn";
+				property = "MET_spawnPreset";
+				typeName = "STRING";
+
+				defaultValue = "MET_SupportPad_AllGround";
+
+				class Values
+				{
+					class AllGround
+					{
+						name = "All Ground";
+						value = "MET_SupportPad_AllGround";
+					};
+					class Air
+					{
+						name = "Air";
+						value = "MET_SupportPad_Air";
+					};
+					class Armor
+					{
+						name = "Armor";
+						value = "MET_SupportPad_Armor";
+					};
+					class Bantha
+					{
+						name = "Banthas Only";
+						value = "MET_SupportPad_Bantha";
+					};
+					class Speeders
+					{
+						name = "Speeders Only";
+						value = "MET_SupportPad_Speeders";
+					};
+					class BARC
+					{
+						name = "BARCs Only";
+						value = "MET_SupportPad_BARC";
+					};
+				};
+			};
+
+			class VehiclesCostPoints : Checkbox
+			{
+				displayName = "Enable Cost";
+				tooltip = "Spawning Vehicles will cost points from ACE Logistics Budget, Amounts defined in the Preset";
+				property = "MET_vehiclesCostPoints";
+				control = "Checkbox";
+				defaultValue = "false";
+			};
+
+			class AllowRepair : Checkbox
+			{
+				displayName = "Enable Repair";
+				property = "MET_allowRepair";
+				control = "Checkbox";
+				defaultValue = "true";
+			};
+
+			class AllowRefuel : Checkbox
+			{
+				displayName = "Enable Refuel";
+				property = "MET_allowRefuel";
+				control = "Checkbox";
+				defaultValue = "true";
+			};
+
+			class AllowRearm : Checkbox
+			{
+				displayName = "Enable Rearm";
+				property = "MET_allowRearm";
+				control = "Checkbox";
+				defaultValue = "true";
+			};
+
+			class AllowPylons : Checkbox
+			{
+				displayName = "Enable Pylon Editing";
+				property = "MET_allowPylons";
+				control = "Checkbox";
+				defaultValue = "true";
+			};
+
+			class AllowClearPad : Checkbox
+			{
+				displayName = "Enable Pad Clear Action";
+				property = "MET_allowClearPad";
+				control = "Checkbox";
+				defaultValue = "true";
+			};
+
+			class ModuleDescription : ModuleDescription {};
+		};
+
+		class ModuleDescription : ModuleDescription
+		{
+			description = "Vehicle Support Pad. Spawn, Repair, Configure. Must be synced to a Prop for scroll actions";
+
+			sync[] = {};
+		};
+	};
 };
 
 class CfgFunctions
@@ -223,6 +348,145 @@ class CfgFunctions
 
 			class BuildZone{};
 			class LogisticsBudget{};
+			class VehiclePad {};
+			class getSupportPadPresetValues {};
+			class spawnVehicle {};
+			class deleteVehicle {};
+		};
+	};
+};
+
+class MET_SupportPad_VehicleCosts
+{
+	Default = 500;
+
+	B_G_Offroad_01_F = 100;
+	B_G_Offroad_01_armed_F = 150;
+	B_G_Offroad_01_AT_F = 200;
+
+	MET_ARC_170 = 750;
+	MET_Ywing_V1 = 850;
+	MET_Z95_Base = 750;
+	MET_LAAT_MK1 = 1250;
+	MET_LAAT_Mk2 = 1000;
+	MET_LAAT_Mk2_Lamps = 900;
+	MET_LAATCMK2 = 750;
+
+	MET_ATTE_Base = 1500;
+	MET_Juggernaut = 1250;
+	MET_Tx130_Super_v1 = 1000;
+	MET_Tx130_Base_V1 = 750;
+	MET_Tx130_GL_v1 = 1000;
+
+	MET_Bantha_C_AA = 750;
+	MET_Bantha_C_IFV = 750;
+	MET_Bantha_C_Mortar = 750;
+	MET_Bantha_E_MSV = 250;
+	MET_Bantha_C_Unarmed = 250;
+	MET_Bantha_T_Assault = 500;
+	MET_Bantha_T_Cargo = 500;
+
+	MET_BARC = 150;
+	MET_BARC_SideCar = 300;
+	MET_ISP = 350;
+	MET_ISP_Transport = 175;
+};
+
+class MET_SupportPad_Presets 
+{
+	class Default
+	{
+		displayName = "Default";
+		vehicleClasses[] =
+		{
+			"B_G_Offroad_01_F",
+			"B_G_Offroad_01_armed_F",
+			"B_G_Offroad_01_AT_F"
+		};
+	};
+
+	class MET_SupportPad_Air : Default
+	{
+		displayName = "Air";
+		vehicleClasses[] =
+		{
+			"MET_ARC_170",
+			"MET_Ywing_V1",
+			"MET_Z95_Base",
+			"MET_LAAT_MK1",
+			"MET_LAAT_Mk2",
+			"MET_LAAT_Mk2_Lamps",
+			"MET_LAATCMK2"
+		};
+	};
+
+	class MET_SupportPad_Armor : Default
+	{
+		displayName = "Armor";
+		vehicleClasses[] =
+		{
+			"MET_ATTE_Base",
+			"MET_Juggernaut",
+			"MET_Tx130_Super_v1",
+			"MET_Tx130_Base_V1",
+			"MET_Tx130_GL_v1"
+		};
+	};
+
+	class MET_SupportPad_AllGround : Default
+	{
+		displayName = "All Ground";
+		vehicleClasses[] =
+		{
+			"MET_Bantha_C_AA",
+			"MET_Bantha_C_IFV",
+			"MET_Bantha_C_Mortar",
+			"MET_Bantha_E_MSV",
+			"MET_Bantha_C_Unarmed",
+			"MET_Bantha_T_Assault",
+			"MET_Bantha_T_Cargo",
+			"MET_BARC",
+			"MET_BARC_SideCar",
+			"MET_ISP_Transport",
+			"MET_ISP"
+
+		};
+	};
+
+	class MET_SupportPad_Bantha : Default
+	{
+		displayName = "Banthas Only";
+		vehicleClasses[] =
+		{
+			"MET_Bantha_C_AA",
+			"MET_Bantha_C_IFV",
+			"MET_Bantha_C_Mortar",		
+			"MET_Bantha_E_MSV",
+			"MET_Bantha_C_Unarmed",
+			"MET_Bantha_T_Assault",
+			"MET_Bantha_T_Cargo"
+		};
+	};
+
+	class MET_SupportPad_Speeders : Default
+	{
+		displayName = "Speeders Only";
+		vehicleClasses[] =
+		{		
+			"MET_ISP_Transport",
+			"MET_ISP",
+			"MET_BARC",
+			"MET_BARC_SideCar"
+		};
+	};
+
+	class MET_SupportPad_BARC : Default
+	{
+		displayName = "BARCs Only";
+		vehicleClasses[] =
+		{
+			"MET_BARC",
+			"MET_BARC_SideCar"
 		};
 	};
 };
