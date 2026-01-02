@@ -325,6 +325,7 @@ class CfgVehicles
 	{
 		author="Hazmat";
 		scope=2;
+		scopeCurator=2;
 		side=2;
 		armor=250;
 		armorStructural=3.25;

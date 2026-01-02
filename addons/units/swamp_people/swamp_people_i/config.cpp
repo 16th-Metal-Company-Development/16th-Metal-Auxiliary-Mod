@@ -216,7 +216,7 @@ class CfgVehicles
 		uniformClass="U_I_T_Sniper_F";
 		displayName="Swamp Officer";
 		icon="iconManOfficer";
-		genericNames="FrenchMen";
+		//genericNames="FrenchMen";
 		identityTypes[]=
 		{
 			"LanguageFRE_F",
@@ -367,7 +367,7 @@ class CfgVehicles
 		uniformClass="U_I_T_Sniper_F";
 		displayName="Swamp Rifleman";
 		icon="iconMan";
-		genericNames="FrenchMen";
+		//genericNames="FrenchMen";
 		identityTypes[]=
 		{
 			"LanguageFRE_F",
@@ -481,7 +481,7 @@ class CfgVehicles
 		uniformClass="U_I_T_Sniper_F";
 		displayName="Swamp Anti-Tank";
 		icon="iconManAT";
-		genericNames="FrenchMen";
+		//genericNames="FrenchMen";
 		identityTypes[]=
 		{
 			"LanguageFRE_F",
@@ -599,7 +599,7 @@ class CfgVehicles
 		uniformClass="U_I_T_Sniper_F";
 		displayName="Swamp Machine Gunner";
 		icon="iconManMG";
-		genericNames="FrenchMen";
+		//genericNames="FrenchMen";
 		identityTypes[]=
 		{
 			"LanguageFRE_F",
@@ -701,7 +701,7 @@ class CfgVehicles
 		uniformClass="U_I_T_Sniper_F";
 		displayName="Swamp Sniper";
 		icon="JLTS_iconManSniper";
-		genericNames="FrenchMen";
+		//genericNames="FrenchMen";
 		identityTypes[]=
 		{
 			"LanguageFRE_F",
