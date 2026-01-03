@@ -1167,6 +1167,15 @@ class MET_Helmet_Airborne_Blackrose : MET_Helmet_Airborne_Base
 		"z\MET\addons\Armor_Rewrite\Helmets\Textures\Custom\MET_AB_Blackrose_Helmet_CO.paa"
 	};
 };
+class MET_Helmet_Airborne_Frost : MET_Helmet_Airborne_Base
+{
+	scope = 2;
+	displayName = "[16th] Frost's Airborne Helmet";
+	hiddenSelectionsTextures[] =
+	{
+		"z\MET\addons\Armor_Rewrite\Helmets\Textures\Custom\MET_AB_Frost_Helmet_CO.paa"
+	};
+};
 class MET_Helmet_Airborne_Jero : MET_Helmet_Airborne_Base
 {
 	scope = 2;
