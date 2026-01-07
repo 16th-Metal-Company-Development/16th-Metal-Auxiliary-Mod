@@ -3,7 +3,7 @@
 class MET_LAAT_Mk2: 3as_LAAT_MK2
 {
 	displayName = "[16th] LAAT MK2";
-	author = "Denal";
+	author = "Hazmat";
 	scope = 2;
 	scopeCurator = 2;
 	faction = "metal_company";
@@ -20,11 +20,40 @@ class MET_LAAT_Mk2: 3as_LAAT_MK2
 	};
 	hiddenSelectionsTextures[] = 
 	{
-		"z\MET\addons\vehicles\vics\LAAT\16th_LAAT_Base.paa",
-		"z\MET\addons\vehicles\vics\LAAT\16th_LAAT_wings_base.paa",
-		"z\MET\addons\vehicles\vics\LAAT\Weapons_CO.paa",
+		"z\MET\addons\vehicles\vics\LAAT\16_laat_new\Hull_CO.paa",
+		"z\MET\addons\vehicles\vics\LAAT\16_laat_new\Wings_CO.paa",
+		"z\MET\addons\vehicles\vics\LAAT\16_laat_new\Weapons_CO.paa",
 		"z\MET\addons\vehicles\vics\LAAT\Weapon_Details_CO.paa",
 		"z\MET\addons\vehicles\vics\LAAT\16_Laat_Interior.paa"
+	};
+	class TextureSources
+	{
+		class Standard
+		{
+			displayName = "16th Standard";
+			author = "Hazmat";
+			textures[] = {
+				"z\MET\addons\vehicles\vics\LAAT\16_laat_new\Hull_CO.paa",
+				"z\MET\addons\vehicles\vics\LAAT\16_laat_new\Wings_CO.paa",
+				"z\MET\addons\vehicles\vics\LAAT\16_laat_new\Weapons_CO.paa",
+				"z\MET\addons\vehicles\vics\LAAT\Weapon_Details_CO.paa",
+				"z\MET\addons\vehicles\vics\LAAT\16_Laat_Interior.paa"
+			};
+			factions[] = {"metal_company"};
+		};
+		class ARC
+		{
+			displayName = "16th ARC LAAT/I";
+			author = "Hazmat";
+			textures[] = {
+				"z\MET\addons\vehicles\vics\LAAT\16_laat_new_arc\Hull_CO.paa",
+				"z\MET\addons\vehicles\vics\LAAT\16_laat_new_arc\Wings_CO.paa",
+				"z\MET\addons\vehicles\vics\LAAT\16_laat_new_arc\Weapons_CO.paa",
+				"z\MET\addons\vehicles\vics\LAAT\Weapon_Details_CO.paa",
+				"z\MET\addons\vehicles\vics\LAAT\Interior.paa"
+			};
+			factions[] = {"metal_company"};
+		};
 	};
 	ace_cargo_space = 20;  // Cargo space your vehicle has
     ace_cargo_hasCargo = 1;  // Enables cargo to be loaded inside the vehicle (1-yes, 0-no)
@@ -40,7 +69,7 @@ class MET_LAAT_Mk2: 3as_LAAT_MK2
 class MET_LAAT_Mk2_Lamps: 3as_LAAT_Mk2Lights
 {
 	displayName = "[16th] LAAT MK2 (Lamps)";
-	author = "Denal";
+	author = "Hazmat";
 	scope = 2;
 	scopeCurator = 2;
 	faction = "metal_company";
@@ -57,9 +86,9 @@ class MET_LAAT_Mk2_Lamps: 3as_LAAT_Mk2Lights
 	};
 	hiddenSelectionsTextures[] = 
 	{
-		"z\MET\addons\vehicles\vics\LAAT\16th_LAAT_Base.paa",
-		"z\MET\addons\vehicles\vics\LAAT\16th_LAAT_wings_base.paa",
-		"z\MET\addons\vehicles\vics\LAAT\Weapons_CO.paa",
+		"z\MET\addons\vehicles\vics\LAAT\16_laat_new\Hull_CO.paa",
+		"z\MET\addons\vehicles\vics\LAAT\16_laat_new\Wings_CO.paa",
+		"z\MET\addons\vehicles\vics\LAAT\16_laat_new\Weapons_CO.paa",
 		"z\MET\addons\vehicles\vics\LAAT\Weapon_Details_CO.paa",
 		"z\MET\addons\vehicles\vics\LAAT\16_Laat_Interior.paa"
 	};
@@ -77,7 +106,7 @@ class MET_LAAT_Mk2_Lamps: 3as_LAAT_Mk2Lights
 class MET_LAAT_MK1: 3as_LAAT_MK1
 {
 	displayName = "[16th] LAAT MK1";
-	author = "Denal";
+	author = "Hazmat";
 	scope = 2;
 	scopeCurator = 2;
 	faction = "metal_company";
@@ -90,9 +119,9 @@ class MET_LAAT_MK1: 3as_LAAT_MK1
 	};
 	hiddenSelectionsTextures[] = 
 	{
-		"z\MET\addons\vehicles\vics\LAAT\16th_LAAT_Base.paa",
-		"z\MET\addons\vehicles\vics\LAAT\16th_LAAT_wings_base.paa",
-		"z\MET\addons\vehicles\vics\LAAT\Weapons_CO.paa",
+		"z\MET\addons\vehicles\vics\LAAT\16_laat_new\Hull_CO.paa",
+		"z\MET\addons\vehicles\vics\LAAT\16_laat_new\Wings_CO.paa",
+		"z\MET\addons\vehicles\vics\LAAT\16_laat_new\Weapons_CO.paa",
 		"z\MET\addons\vehicles\vics\LAAT\Weapon_Details_CO.paa",
 		"z\MET\addons\vehicles\vics\LAAT\16_Laat_Interior.paa"
 	};
@@ -110,7 +139,7 @@ class MET_LAAT_MK1: 3as_LAAT_MK1
 class MET_ARC_170: 3as_arc_170_base
 {
 	displayName = "[16th] ARC 170";
-	author = "Denal";
+	author = "Hazmat";
 	scope = 2;
 	scopeCurator = 2;
 	faction = "metal_company";
@@ -132,7 +161,7 @@ class MET_ARC_170: 3as_arc_170_base
 class MET_Z95_Base: 3AS_Z95_Republic
 {
 	displayName = "[16th] Z95";
-	author = "Denal";
+	author = "Hazmat";
 	scope = 2;
 	scopeCurator = 2;
 	crew = "MET_P2_AR";
@@ -223,10 +252,10 @@ class MET_ATTE_Base: 3as_ATTE_Base
 	};
 	hiddenSelectionsTextures[] = 
 	{
-		"z\MET\addons\vehicles\vics\ATTE\16th_ATTE_Shell.paa",
+		"z\MET\addons\vehicles\vics\ATTE\16_atte_new\ATTE_Shell_co.paa",
 		"3as\3as_ATTE\data\Textures\3as_ATTE_Cockpit_co.paa",
 		"3as\3AS_ATTE\data\Textures\3AS_ATTE_Detail_co.paa",
-		"z\MET\addons\vehicles\vics\ATTE\16th_ATTE_Legs.paa",
+		"z\MET\addons\vehicles\vics\ATTE\16_atte_new\ATTE_Legs_co.paa",
 		"3as\3as_ATTE\data\Textures\3as_ATTE_Glass_ca.paa",
 		"3as\3as_ATTE\data\Textures\3as_atte_armor_co.paa"
 	};

@@ -884,6 +884,9 @@ class CfgWeapons
 	class TKE_WarbotUni_U_OP;
 	class BHA_WarbotUniWorker_U_I: TKE_WarbotUni_U_OP
 	{
+		JLTS_isDroid=1;
+		JLTS_hasEMPProtection=0;
+		JLTS_deathSounds="DeathDroid";
 		author="Rogue771";
 		scope=2;
 		scopeArsenal=1;
@@ -1065,6 +1068,9 @@ class CfgWeapons
 	};
 	class BHA_WarbotUni_U_I: TKE_WarbotUni_U_OP
 	{
+		JLTS_isDroid=1;
+		JLTS_hasEMPProtection=0;
+		JLTS_deathSounds="DeathDroid";
 		author="Rogue771";
 		scope=2;
 		scopeArsenal=1;
@@ -1085,6 +1091,9 @@ class CfgWeapons
 	};
 	class BHA_WarbotUniMDMC_inf_B: TKE_WarbotUni_U_OP
 	{
+		JLTS_isDroid=1;
+		JLTS_hasEMPProtection=1;
+		JLTS_deathSounds="DeathDroid";
 		author="Rogue771";
 		scope=2;
 		scopeArsenal=1;
@@ -1669,6 +1678,46 @@ class CfgVehicles
 				name="leg_r";
 			};
 		};
+		class Wounds
+		{
+			tex[]={};
+			mat[]=
+			{
+				"MRC\JLTS\Characters\DroidArmor\data\b1.rvmat",
+				"MRC\JLTS\Characters\DroidArmor\data\b1_injury.rvmat",
+				"MRC\JLTS\Characters\DroidArmor\data\b1_injury.rvmat",
+				"A3\Characters_F\Common\Data\basicbody.rvmat",
+				"A3\Characters_F\Common\Data\basicbody_injury.rvmat",
+				"A3\Characters_F\Common\Data\basicbody_injury.rvmat",
+				"a3\characters_f\heads\data\hl_white.rvmat",
+				"a3\characters_f\heads\data\hl_white_injury.rvmat",
+				"a3\characters_f\heads\data\hl_white_injury.rvmat",
+				"A3\Characters_F\Heads\Data\hl_white_bald_muscular.rvmat",
+				"A3\Characters_F\Heads\Data\hl_white_bald_muscular_injury.rvmat",
+				"A3\Characters_F\Heads\Data\hl_white_bald_muscular_injury.rvmat",
+				"A3\Characters_F\Heads\Data\hl_white_02_bald_muscular.rvmat",
+				"A3\Characters_F\Heads\Data\hl_white_02_bald_muscular_injury.rvmat",
+				"A3\Characters_F\Heads\Data\hl_white_02_bald_muscular_injury.rvmat",
+				"A3\Characters_F\Heads\Data\hl_black_bald_muscular.rvmat",
+				"A3\Characters_F\Heads\Data\hl_black_bald_muscular_injury.rvmat",
+				"A3\Characters_F\Heads\Data\hl_black_bald_muscular_injury.rvmat",
+				"A3\Characters_F\Heads\Data\hl_white_hairy_muscular.rvmat",
+				"A3\Characters_F\Heads\Data\hl_white_hairy_muscular_injury.rvmat",
+				"A3\Characters_F\Heads\Data\hl_white_hairy_muscular_injury.rvmat",
+				"A3\Characters_F\Heads\Data\hl_white_old.rvmat",
+				"A3\Characters_F\Heads\Data\hl_white_old_injury.rvmat",
+				"A3\Characters_F\Heads\Data\hl_white_old_injury.rvmat",
+				"A3\Characters_F\Heads\Data\hl_asian_bald_muscular.rvmat",
+				"A3\Characters_F\Heads\Data\hl_asian_bald_muscular_injury.rvmat",
+				"A3\Characters_F\Heads\Data\hl_asian_bald_muscular_injury.rvmat",
+				"A3\Characters_F_Exp\Heads\Data\hl_tanoan_bald_muscular.rvmat",
+				"A3\Characters_F_Exp\Heads\Data\hl_tanoan_bald_muscular_injury.rvmat",
+				"A3\Characters_F_Exp\Heads\Data\hl_tanoan_bald_muscular_injury.rvmat",
+				"A3\Characters_F_Exp\Heads\Data\hl_asian_02_bald_muscular.rvmat",
+				"A3\Characters_F_Exp\Heads\Data\hl_asian_02_bald_muscular_injury.rvmat",
+				"A3\Characters_F_Exp\Heads\Data\hl_asian_02_bald_muscular_injury.rvmat"
+			};
+		};
 	};
 	class BHA_WarbotUni_inf_I: TKE_WarbotUni_base
 	{
@@ -1865,6 +1914,46 @@ class CfgVehicles
 				name="leg_r";
 			};
 		};
+		class Wounds
+		{
+			tex[]={};
+			mat[]=
+			{
+				"MRC\JLTS\Characters\DroidArmor\data\b1.rvmat",
+				"MRC\JLTS\Characters\DroidArmor\data\b1_injury.rvmat",
+				"MRC\JLTS\Characters\DroidArmor\data\b1_injury.rvmat",
+				"A3\Characters_F\Common\Data\basicbody.rvmat",
+				"A3\Characters_F\Common\Data\basicbody_injury.rvmat",
+				"A3\Characters_F\Common\Data\basicbody_injury.rvmat",
+				"a3\characters_f\heads\data\hl_white.rvmat",
+				"a3\characters_f\heads\data\hl_white_injury.rvmat",
+				"a3\characters_f\heads\data\hl_white_injury.rvmat",
+				"A3\Characters_F\Heads\Data\hl_white_bald_muscular.rvmat",
+				"A3\Characters_F\Heads\Data\hl_white_bald_muscular_injury.rvmat",
+				"A3\Characters_F\Heads\Data\hl_white_bald_muscular_injury.rvmat",
+				"A3\Characters_F\Heads\Data\hl_white_02_bald_muscular.rvmat",
+				"A3\Characters_F\Heads\Data\hl_white_02_bald_muscular_injury.rvmat",
+				"A3\Characters_F\Heads\Data\hl_white_02_bald_muscular_injury.rvmat",
+				"A3\Characters_F\Heads\Data\hl_black_bald_muscular.rvmat",
+				"A3\Characters_F\Heads\Data\hl_black_bald_muscular_injury.rvmat",
+				"A3\Characters_F\Heads\Data\hl_black_bald_muscular_injury.rvmat",
+				"A3\Characters_F\Heads\Data\hl_white_hairy_muscular.rvmat",
+				"A3\Characters_F\Heads\Data\hl_white_hairy_muscular_injury.rvmat",
+				"A3\Characters_F\Heads\Data\hl_white_hairy_muscular_injury.rvmat",
+				"A3\Characters_F\Heads\Data\hl_white_old.rvmat",
+				"A3\Characters_F\Heads\Data\hl_white_old_injury.rvmat",
+				"A3\Characters_F\Heads\Data\hl_white_old_injury.rvmat",
+				"A3\Characters_F\Heads\Data\hl_asian_bald_muscular.rvmat",
+				"A3\Characters_F\Heads\Data\hl_asian_bald_muscular_injury.rvmat",
+				"A3\Characters_F\Heads\Data\hl_asian_bald_muscular_injury.rvmat",
+				"A3\Characters_F_Exp\Heads\Data\hl_tanoan_bald_muscular.rvmat",
+				"A3\Characters_F_Exp\Heads\Data\hl_tanoan_bald_muscular_injury.rvmat",
+				"A3\Characters_F_Exp\Heads\Data\hl_tanoan_bald_muscular_injury.rvmat",
+				"A3\Characters_F_Exp\Heads\Data\hl_asian_02_bald_muscular.rvmat",
+				"A3\Characters_F_Exp\Heads\Data\hl_asian_02_bald_muscular_injury.rvmat",
+				"A3\Characters_F_Exp\Heads\Data\hl_asian_02_bald_muscular_injury.rvmat"
+			};
+		};
 	};
 	class BHA_WarbotUni_Elite_inf_I: TKE_WarbotUni_base
 	{
@@ -2059,6 +2148,46 @@ class CfgVehicles
 			class HitRightLeg: HitLeftLeg
 			{
 				name="leg_r";
+			};
+		};
+		class Wounds
+		{
+			tex[]={};
+			mat[]=
+			{
+				"MRC\JLTS\Characters\DroidArmor\data\b1.rvmat",
+				"MRC\JLTS\Characters\DroidArmor\data\b1_injury.rvmat",
+				"MRC\JLTS\Characters\DroidArmor\data\b1_injury.rvmat",
+				"A3\Characters_F\Common\Data\basicbody.rvmat",
+				"A3\Characters_F\Common\Data\basicbody_injury.rvmat",
+				"A3\Characters_F\Common\Data\basicbody_injury.rvmat",
+				"a3\characters_f\heads\data\hl_white.rvmat",
+				"a3\characters_f\heads\data\hl_white_injury.rvmat",
+				"a3\characters_f\heads\data\hl_white_injury.rvmat",
+				"A3\Characters_F\Heads\Data\hl_white_bald_muscular.rvmat",
+				"A3\Characters_F\Heads\Data\hl_white_bald_muscular_injury.rvmat",
+				"A3\Characters_F\Heads\Data\hl_white_bald_muscular_injury.rvmat",
+				"A3\Characters_F\Heads\Data\hl_white_02_bald_muscular.rvmat",
+				"A3\Characters_F\Heads\Data\hl_white_02_bald_muscular_injury.rvmat",
+				"A3\Characters_F\Heads\Data\hl_white_02_bald_muscular_injury.rvmat",
+				"A3\Characters_F\Heads\Data\hl_black_bald_muscular.rvmat",
+				"A3\Characters_F\Heads\Data\hl_black_bald_muscular_injury.rvmat",
+				"A3\Characters_F\Heads\Data\hl_black_bald_muscular_injury.rvmat",
+				"A3\Characters_F\Heads\Data\hl_white_hairy_muscular.rvmat",
+				"A3\Characters_F\Heads\Data\hl_white_hairy_muscular_injury.rvmat",
+				"A3\Characters_F\Heads\Data\hl_white_hairy_muscular_injury.rvmat",
+				"A3\Characters_F\Heads\Data\hl_white_old.rvmat",
+				"A3\Characters_F\Heads\Data\hl_white_old_injury.rvmat",
+				"A3\Characters_F\Heads\Data\hl_white_old_injury.rvmat",
+				"A3\Characters_F\Heads\Data\hl_asian_bald_muscular.rvmat",
+				"A3\Characters_F\Heads\Data\hl_asian_bald_muscular_injury.rvmat",
+				"A3\Characters_F\Heads\Data\hl_asian_bald_muscular_injury.rvmat",
+				"A3\Characters_F_Exp\Heads\Data\hl_tanoan_bald_muscular.rvmat",
+				"A3\Characters_F_Exp\Heads\Data\hl_tanoan_bald_muscular_injury.rvmat",
+				"A3\Characters_F_Exp\Heads\Data\hl_tanoan_bald_muscular_injury.rvmat",
+				"A3\Characters_F_Exp\Heads\Data\hl_asian_02_bald_muscular.rvmat",
+				"A3\Characters_F_Exp\Heads\Data\hl_asian_02_bald_muscular_injury.rvmat",
+				"A3\Characters_F_Exp\Heads\Data\hl_asian_02_bald_muscular_injury.rvmat"
 			};
 		};
 	};
