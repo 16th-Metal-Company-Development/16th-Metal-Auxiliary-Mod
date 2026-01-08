@@ -16,5 +16,5 @@ class XtdGearInfos {
         class MET_9th_Belt_Bag          { model = "MET_9th_Belt_Bags"; camo = "Black"; };
         class MET_9th_Medical_Belt_Bag      { model = "MET_9th_Belt_Bags"; camo = "Medic"; };
 
-    }
+    };
 };

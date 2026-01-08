@@ -193,7 +193,7 @@ class CfgWeapons
 	#include "Vests\CfgWeapons.hpp"
 	#include "Facewear\CfgWeapons.hpp"
 	
-	class OPTRE_UNSC_CH252D_Helmet_Base;
+	/*class OPTRE_UNSC_CH252D_Helmet_Base;
 	class MET_UNSC_CH252D_Helmet: OPTRE_UNSC_CH252D_Helmet_Base
 	{
 		dlc="OPTRE";
@@ -245,7 +245,7 @@ class CfgWeapons
 		author="Article 2 Studios";
 		displayName="CH252D Helmet [Stripes]";
 		optreHUDStyle="Phase_2";
-	};
+	};*/
 };
 
 class CfgVehicles

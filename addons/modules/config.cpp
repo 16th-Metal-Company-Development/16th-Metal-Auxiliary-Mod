@@ -8,6 +8,14 @@ class CfgPatches
 	};
 };
 
+class Extended_PreInit_EventHandlers 
+{
+	class MET_Settings_PreInit
+	{
+		init = "call compile preprocessFileLineNumbers 'z\MET\addons\modules\Settings\XEH_preInit.sqf'";
+	};
+};
+
 class CfgFactionClasses
 {
 	class NO_CATEGORY;
@@ -334,6 +342,166 @@ class CfgVehicles
 			sync[] = {};
 		};
 	};
+
+	class MET_Module_WaveDefense_Eden : Module_F
+	{
+		scope = 2;
+		scopeCurator = 2;
+		displayName = "[16th] Wave Defense";
+		icon = "iconModule";
+		category = "MET_Category_Modules";
+
+		function = "MET_fnc_initModule";
+		functionPriority = 1;
+		isGlobal = 2;
+		isTriggerActivated = 1;
+		isDisposable = 1;
+		is3DEN = 0;
+		curatorCanAttach = 0;
+
+		canSetArea = 1;
+		canSetAreaShape = 0;
+		canSetAreaHeight = 0;
+
+		class AttributeValues
+		{
+			size3[] = { 100, 100, -1 };
+			isRectangle = 0;
+		};
+
+		class Attributes : AttributesBase
+		{
+			class SideToSpawn : Combo
+			{
+				displayName = "Side";
+				tooltip = "Side Wave Units should Spawn In";
+				property = "MET_Module_WaveDefense_Side";
+				typeName = "NUMBER";
+				defaultValue = "0"; // BLUFOR
+
+				class Values
+				{
+					class Opfor { name = "OPFOR";  value = 0; };
+					class Blufor { name = "BLUFOR"; value = 1; };
+					class Grefor { name = "GREFOR"; value = 2; };
+				};
+			};
+
+			class WaveCount : Edit
+			{
+				displayName = "Wave Count";
+				tooltip = "Maximum Number of Waves (-1 for Infinite)";
+				property = "MET_Module_WaveDefense_WaveCount";
+				typeName = "NUMBER";
+				defaultValue = "10";
+			};
+
+			class SetupTime : Edit
+			{
+				displayName = "Setup Time";
+				tooltip = "Time Before First Wave after Activation (Seconds)";
+				property = "MET_Module_WaveDefense_SetupTime";
+				typeName = "NUMBER";
+				defaultValue = "300";
+			};
+
+			class RespiteTime : Edit
+			{
+				displayName = "Respite Time";
+				tooltip = "Time Between Waves (Seconds)";
+				property = "MET_Module_WaveDefense_RespiteTime";
+				typeName = "NUMBER";
+				defaultValue = "120";
+			};
+
+			class WaitForClear : Checkbox
+			{
+				displayName = "Wait For Wave Clear";
+				tooltip = "If enabled, module will wait for all units from a previous wave to die before spawning the next wave";
+				property = "MET_Module_WaveDefense_WaitForClear";
+				defaultValue = "1";
+			};
+
+			// Infantry
+
+			class InfantryGroupSize : Edit
+			{
+				displayName = "Infantry Group Size";
+				tooltip = "How Many Units each Infatry Group should have";
+				property = "MET_Module_WaveDefense_InfantryGroupSize";
+				typeName = "NUMBER";
+				defaultValue = "7";
+			};
+
+			class InfantryGroupsPerWave : Edit
+			{
+				displayName = "Infantry Group Count";
+				tooltip = "Base Amount of Infantry Groups should spawn per wave";
+				property = "MET_Module_WaveDefense_InfantryGroupCount";
+				typeName = "NUMBER";
+				defaultValue = "3";
+			};
+
+			class InfantryDifficultyMultiplier : Edit
+			{
+				displayName = "Infantry Difficulty Modifier";
+				tooltip = "How Much Infantry Difficulty should icnrease per wave (Multiplier)";
+				property = "MET_Module_WaveDefense_InfantryDifficultyModifier";
+				typeName = "NUMBER";
+				defaultValue = "2";
+			};
+
+
+			// Air
+			class AirUnitsPerWave : Edit
+			{
+				displayName = "Air Unit Count";
+				tooltip = "Base Amount of Air Units to Spawn per Wave";
+				property = "MET_Module_WaveDefense_AirUnitsPerWave";
+				typeName = "NUMBER";
+				defaultValue = "1";
+			};
+
+			class AirDifficultyMultiplier : Edit
+			{
+				displayName = "Air Difficulty Modifier";
+				tooltip = "How Much Air Difficulty should icnrease per wave (Multiplier)";
+				property = "MET_Module_WaveDefense_AirDifficultyModifier";
+				typeName = "NUMBER";
+				defaultValue = "1.5";
+			};
+
+
+			// Armor
+			class ArmorUnitsPerWave : Edit
+			{
+				displayName = "Armor Unit Count";
+				tooltip = "Base Amount of Armor Units to Spawn per Wave";
+				property = "MET_Module_WaveDefense_ArmorUnitsPerWave";
+				typeName = "NUMBER";
+				defaultValue = "1";
+			};
+
+			class ArmorDifficultyMultiplier : Edit
+			{
+				displayName = "Armor Difficulty Modifier";
+				tooltip = "How Much Armor Difficulty should icnrease per wave (Multiplier)";
+				property = "MET_Module_WaveDefense_ArmorDifficultyModifier";
+				typeName = "NUMBER";
+				defaultValue = "1.5";
+			};
+
+			class ModuleDescription : ModuleDescription {};
+		};
+
+		class ModuleDescription : ModuleDescription
+		{
+			description = "Wave Defense";
+
+			sync[] = {};
+		};
+
+	};
 };
 
 class CfgFunctions
@@ -342,16 +510,45 @@ class CfgFunctions
 	{
 		tag = "MET"; 
 
-		class Modules
+		class Module_BuildZone
 		{
 			file = "z\MET\addons\modules\functions";
 
 			class BuildZone{};
-			class LogisticsBudget{};
+		};
+
+		class Module_LogisticsBudget
+		{
+			file = "z\MET\addons\modules\functions";
+
+			class LogisticsBudget {};
+		};
+
+		class Module_VehiclePad
+		{
+			file = "z\MET\addons\modules\functions";
+
 			class VehiclePad {};
 			class getSupportPadPresetValues {};
 			class spawnVehicle {};
 			class deleteVehicle {};
+		};
+
+		class WaveDefense_Init
+		{
+			file = "z\MET\addons\modules\functions\wavedefense\init";
+
+			class initModule {};
+		};
+
+		class WaveDefense_Core
+		{
+			file = "z\MET\addons\modules\functions\wavedefense\core";
+
+			class buildWaveComposition {};
+			class selectSpawnPositions {};
+			class spawnWave {};
+			class waveLoop {};
 		};
 	};
 };

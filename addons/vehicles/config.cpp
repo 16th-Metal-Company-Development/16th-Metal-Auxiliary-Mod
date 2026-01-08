@@ -6,6 +6,7 @@ class CfgPatches
 		units[] = 
 		{
 			"MET_LAAT_Mk2",
+			"MET_LAAT_Mk2_Lamps",
 			"MET_LAAT_MK1",
 			"MET_Oryx",
 			"LAAT_I_248th",

@@ -3107,7 +3107,7 @@
 				{
 					class VehicleSystemsDisplayManagerComponentLeft: VehicleSystemsTemplateLeftGunner
 					{
-						class Components: components
+						class Components: Components
 						{
 							class SensorDisplay
 							{
@@ -3120,7 +3120,7 @@
 					class VehicleSystemsDisplayManagerComponentRight: VehicleSystemsTemplateRightGunner
 					{
 						defaultDisplay="SensorDisplay";
-						class Components: components
+						class Components: Components
 						{
 							class SensorDisplay
 							{

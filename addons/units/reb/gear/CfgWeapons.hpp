@@ -15,7 +15,7 @@ class CfgWeapons
 		{
 			uniformModel = "-";
 			uniformClass = "MET_REB_Pathfinder_Base";
-			containerClass = Supply40;
+			containerClass = "Supply40";
 			mass = 40;
             type = 801;
             scope = 0;
@@ -34,7 +34,7 @@ class CfgWeapons
 		{
 			uniformModel = "-";
 			uniformClass = "MET_REB_Pathfinder_Base_R";
-			containerClass = Supply40;
+			containerClass = "Supply40";
 			mass = 40;
             type = 801;
             scope = 0;
