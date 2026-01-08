@@ -174,7 +174,7 @@ class MET_Uniform_Trooper_Base : JLTS_Clone_P2_DC15A
 			armor = 6;
 			material = -1;
 			name = "hand_l";
-			passThrough = 0.2
+			passThrough = 0.2;
 				radius = 0.079999998;
 			explosionShielding = 3;
 			visual = "injury_hands";
@@ -189,7 +189,7 @@ class MET_Uniform_Trooper_Base : JLTS_Clone_P2_DC15A
 			armor = 6;
 			material = -1;
 			name = "leg_l";
-			passThrough = 0.2
+			passThrough = 0.2;
 				radius = 0.1;
 			explosionShielding = 3;
 			visual = "injury_legs";
@@ -745,7 +745,7 @@ class MET_Uniform_Cold_Trooper_Base : JLTS_Clone_P2_DC15A
 			armor = 6;
 			material = -1;
 			name = "hand_l";
-			passThrough = 0.2
+			passThrough = 0.2;
 				radius = 0.079999998;
 			explosionShielding = 3;
 			visual = "injury_hands";
@@ -760,7 +760,7 @@ class MET_Uniform_Cold_Trooper_Base : JLTS_Clone_P2_DC15A
 			armor = 6;
 			material = -1;
 			name = "leg_l";
-			passThrough = 0.2
+			passThrough = 0.2;
 				radius = 0.1;
 			explosionShielding = 3;
 			visual = "injury_legs";
@@ -1077,7 +1077,7 @@ class MET_Uniform_Cold_NCO_Base : JLTS_Clone_P2_DC15A
 			armor = 6;
 			material = -1;
 			name = "hand_l";
-			passThrough = 0.2
+			passThrough = 0.2;
 				radius = 0.079999998;
 			explosionShielding = 3;
 			visual = "injury_hands";
@@ -1092,7 +1092,7 @@ class MET_Uniform_Cold_NCO_Base : JLTS_Clone_P2_DC15A
 			armor = 6;
 			material = -1;
 			name = "leg_l";
-			passThrough = 0.2
+			passThrough = 0.2;
 				radius = 0.1;
 			explosionShielding = 3;
 			visual = "injury_legs";
@@ -1409,7 +1409,7 @@ class MET_Uniform_Cold_Officer_Base : JLTS_Clone_P2_DC15A
 			armor = 6;
 			material = -1;
 			name = "hand_l";
-			passThrough = 0.2
+			passThrough = 0.2;
 				radius = 0.079999998;
 			explosionShielding = 3;
 			visual = "injury_hands";
@@ -1424,7 +1424,7 @@ class MET_Uniform_Cold_Officer_Base : JLTS_Clone_P2_DC15A
 			armor = 6;
 			material = -1;
 			name = "leg_l";
-			passThrough = 0.2
+			passThrough = 0.2;
 				radius = 0.1;
 			explosionShielding = 3;
 			visual = "injury_legs";
@@ -1741,7 +1741,7 @@ class MET_Uniform_Cold_Medic_Base : JLTS_Clone_P2_DC15A
 			armor = 6;
 			material = -1;
 			name = "hand_l";
-			passThrough = 0.2
+			passThrough = 0.2;
 				radius = 0.079999998;
 			explosionShielding = 3;
 			visual = "injury_hands";
@@ -1756,7 +1756,7 @@ class MET_Uniform_Cold_Medic_Base : JLTS_Clone_P2_DC15A
 			armor = 6;
 			material = -1;
 			name = "leg_l";
-			passThrough = 0.2
+			passThrough = 0.2;
 				radius = 0.1;
 			explosionShielding = 3;
 			visual = "injury_legs";
@@ -2073,7 +2073,7 @@ class MET_Uniform_Cold_EOD_Base : JLTS_Clone_P2_DC15A
 			armor = 6;
 			material = -1;
 			name = "hand_l";
-			passThrough = 0.2
+			passThrough = 0.2;
 				radius = 0.079999998;
 			explosionShielding = 3;
 			visual = "injury_hands";
@@ -2088,7 +2088,7 @@ class MET_Uniform_Cold_EOD_Base : JLTS_Clone_P2_DC15A
 			armor = 6;
 			material = -1;
 			name = "leg_l";
-			passThrough = 0.2
+			passThrough = 0.2;
 				radius = 0.1;
 			explosionShielding = 3;
 			visual = "injury_legs";

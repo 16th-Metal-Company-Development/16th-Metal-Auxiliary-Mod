@@ -1083,7 +1083,7 @@ class CfgVehicles
 		editorSubCategory="BHA_Initiates";
 		uniformClass="MET_Warbot_Uniform";
 		displayName="Warbot";
-		genericNames="BHA_Warbot"
+		genericNames="BHA_Warbot";
 		identityTypes[]=
 		{
 			"ls_b1BattleDroid",
@@ -1373,7 +1373,7 @@ class CfgVehicles
 		editorSubCategory="BHA_Initiates";
 		backpack="SC_Workerbot_Powerpack";
 		uniformClass="SC_Workerbot_Uniform";
-		genericNames="BHA_Worker"
+		genericNames="BHA_Worker";
 		identityTypes[]=
 		{
 			"ls_b1BattleDroid",

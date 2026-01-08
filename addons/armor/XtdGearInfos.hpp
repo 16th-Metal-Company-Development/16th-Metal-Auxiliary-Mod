@@ -186,5 +186,5 @@ class XtdGearInfos {
         class MET_Jumppack_Base  { model = "MET_Jump_Packs"; camo = "Trooper"; };
         class MET_Jumppack_RTO   { model = "MET_Jump_Packs"; camo = "RTO"; };
         class MET_Jumppack_Medic { model = "MET_Jump_Packs"; camo = "Medic"; };
-    }
+    };
 };
