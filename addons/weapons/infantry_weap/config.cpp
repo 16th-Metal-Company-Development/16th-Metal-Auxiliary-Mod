@@ -11005,7 +11005,7 @@ class CfgWeapons
 					thermalMode[]={1,2};
 					opticsFlare=1;
 					opticsDisablePeripherialVision=1;
-				}
+				};
 			};
 		};
 		inertia=0.2;
