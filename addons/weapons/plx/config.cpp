@@ -69,6 +69,10 @@ class CfgWeapons
 	};
 	class plx_16th: launch_B_Titan_Short_F
 	{
+		JLTS_hasElectronics=1;
+		JLTS_hasEMPProtection=0;
+		JLTS_friedItem="plx_16th_fried";
+		JLTS_repairTime=60;
 		scope=2;
 		displayName="[16th] PLX-1";
 		descriptionShort="PLX Multi Purpose Rocket Launcher";
@@ -136,9 +140,29 @@ class CfgWeapons
 			mass=200;
 		};
 	};
+	class plx_16th_fried: plx_16th
+	{
+		baseWeapon="plx_16th_fried";
+		displayName="[16th] Fried PLX-1";
+		descriptionShort="$STR_JLTS_descs_BlasterFried";
+		scope=1;
+		scopeArsenal=0;
+		picture="\MRC\JLTS\weapons\RPS6\data\ui\RPS6_fried_ui_ca.paa";
+		muzzles[]=
+		{
+			"this"
+		};
+		magazines[]={};
+		magazineWell[]={};
+		JLTS_isFried=1;
+	};
 	class 3AS_PLX1_F;
 	class MET_PLX1_AA: 3AS_PLX1_F
 	{
+		JLTS_hasElectronics=1;
+		JLTS_hasEMPProtection=0;
+		JLTS_friedItem="plx_16th_fried";
+		JLTS_repairTime=60;
 		displayName="[16th] PLX-1 AA Missile Launcher Platform";
 		magazines[]=
 		{
@@ -150,13 +174,29 @@ class CfgWeapons
 			mass=200;
 		};
 	};
+	class MET_PLX1_AA_fried: MET_PLX1_AA
+	{
+		baseWeapon="MET_PLX1_AA_fried";
+		displayName="[16th] Fried PLX-1 AA";
+		descriptionShort="$STR_JLTS_descs_BlasterFried";
+		scope=1;
+		scopeArsenal=0;
+		picture="\MRC\JLTS\weapons\RPS6\data\ui\RPS6_fried_ui_ca.paa";
+		muzzles[]=
+		{
+			"this"
+		};
+		magazines[]={};
+		magazineWell[]={};
+		JLTS_isFried=1;
+	};
 	class MET_RPS6_AA: 3AS_PLX1_F
 	{
 		displayName="[16th] RPS-6 Smart Launcher";
 		JLTS_hasElectronics=1;
-		JLTS_hasEMPProtection=1;
-		JLTS_friedItem="JLTS_RPS6_fried";
-		JLTS_repairTime=30;
+		JLTS_hasEMPProtection=0;
+		JLTS_friedItem="MET_RPS6_AA_fried";
+		JLTS_repairTime=60;
 		magazines[]=
 		{
 			"MET_AA_SINGLE",
@@ -185,6 +225,22 @@ class CfgWeapons
 			mass=150;
 		};
 	};
+	class MET_RPS6_AA_fried: MET_RPS6_AA
+	{
+		baseWeapon="MET_RPS6_AA_fried";
+		displayName="[16th] Fried RPS-6 Smart Launcher";
+		descriptionShort="$STR_JLTS_descs_BlasterFried";
+		scope=1;
+		scopeArsenal=0;
+		picture="\MRC\JLTS\weapons\RPS6\data\ui\RPS6_fried_ui_ca.paa";
+		muzzles[]=
+		{
+			"this"
+		};
+		magazines[]={};
+		magazineWell[]={};
+		JLTS_isFried=1;
+	};
 };
 class CfgMagazines
 {
@@ -193,6 +249,7 @@ class CfgMagazines
 	class MET_AA_SINGLE: 3AS_JLTS_MK39_AA
 	{
 		displayName="RPS-6 AA Rocket";
+		displayNameShort="RPS-6 AA Rack";
 		picture="\3AS\3AS_Weapons\Data\UI\3as_rocket_aa.paa";
 		ammo = "metal_aa_missile_van";
 		count=1;
@@ -202,6 +259,7 @@ class CfgMagazines
 	class MET_AP_SINGLE: 3AS_JLTS_MK39_AA
 	{
 		displayName="RPS-6 AP Rocket";
+		displayNameShort="RPS-6 AP Rack";
 		picture="\3AS\3AS_Weapons\Data\UI\3as_rocket_he.paa";
 		ammo="metal_ap_missile";
 		count=1;
@@ -211,6 +269,7 @@ class CfgMagazines
 	class MET_AT_SINGLE: 3AS_JLTS_MK39_AA
 	{
 		displayName="RPS-6 AT Rocket";
+		displayNameShort="RPS-6 AT Rack";
 		picture="\3AS\3AS_Weapons\Data\UI\3as_rocket_at.paa";
 		ammo="metal_at_wire_missile";
 		count=1;
@@ -224,6 +283,7 @@ class CfgMagazines
 		count=3;
 		model="\MRC\JLTS\weapons\PLX1\PLX1_mag.p3d";
 		picture="\3AS\3AS_Weapons\Data\UI\3as_rocket_at.paa";
+		displayNameShort="PLX AT Rack";
 		ammo="metal_at_missile";
 		initSpeed=20;
 		maxLeadSpeed=27.7778;
@@ -233,6 +293,7 @@ class CfgMagazines
 	class metal_ap_mag: metal_at_mag
 	{
 		displayName="PLX AP Rack";
+		displayNameShort="PLX AP Rack";
 		ammo="metal_ap_missile";
 		picture="\3AS\3AS_Weapons\Data\UI\3as_rocket_he.paa";
 		initSpeed=50;		
@@ -241,6 +302,7 @@ class CfgMagazines
 	class metal_aa_mag: metal_at_mag
 	{
 		displayName="PLX AA Rack";
+		displayNameShort="PLX AA Rack";
 		ammo="metal_aa_missile";
 		picture="\3AS\3AS_Weapons\Data\UI\3as_rocket_aa.paa";
 		initSpeed=40;
@@ -250,6 +312,7 @@ class CfgMagazines
 	class metal_aa_alt_mag: 3AS_JLTS_MK39_AA
 	{
 		displayName="PLX AA Rack";
+		displayNameShort="PLX AA Rack";
 		ammo="metal_aa_missile_van";
 		picture="\3AS\3AS_Weapons\Data\UI\3as_rocket_aa.paa";
 		initSpeed=40;
