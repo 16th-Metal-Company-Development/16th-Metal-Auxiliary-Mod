@@ -2,7 +2,7 @@ class cfgPatches
 {
 	class MET_REB_Faction
 	{
-		units[] = { "MET_REB_Rifleman_1 ","MET_REB_Rifleman_2","MET_REB_Autorifleman_1","MET_REB_Autorifleman_2","MET_REB_Marksman_1","MET_REB_Marksman_2","MET_REB_Grenadier","MET_REB_Light_Antitank","MET_REB_Crewman","MET_REB_PX_10" };
+		units[] = { "MET_REB_Rifleman_1","MET_REB_Rifleman_2","MET_REB_Autorifleman_1","MET_REB_Autorifleman_2","MET_REB_Marksman_1","MET_REB_Marksman_2","MET_REB_Grenadier","MET_REB_Light_Antitank","MET_REB_Crewman","MET_REB_PX_10" };
 		weapons[] = { "MET_REB_Pathfinder", "MET_REB_Pathfinder_R", "MET_REB_Pathfinder_Brown", "MET_REB_Pathfinder_Brown_R", "MET_REB_Pathfinder_Navy", "MET_REB_Pathfinder_Navy_R", "MET_REB_Pathfinder_Navy_Alt", "MET_REB_Pathfinder_Navy_Alt_R" };
 		requiredVersion = 0.1;
 		requiredAddons[] = {  };

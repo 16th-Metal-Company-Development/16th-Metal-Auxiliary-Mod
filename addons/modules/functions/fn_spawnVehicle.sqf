@@ -42,7 +42,7 @@ private _spawnVehicle = {
 
 if (_useCost) then 
 {
-	if !(([side _caller] call ace_fortify_fnc_getBudget) >= _cost) exitWith 
+	if (([side _caller] call ace_fortify_fnc_getBudget) < _cost) exitWith 
 	{
         if (!isNull _caller) then 
 		{

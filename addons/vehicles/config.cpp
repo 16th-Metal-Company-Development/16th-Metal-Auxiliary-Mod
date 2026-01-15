@@ -531,7 +531,7 @@ class CfgWeapons
 		};
 		class manual : CannonCore
 		{
-			displayName = "Gatling Cannon 20 mm";
+			displayName = "Gatling Cannon 20mm";
 			autoFire = 1;
 			sounds[] =
 			{
