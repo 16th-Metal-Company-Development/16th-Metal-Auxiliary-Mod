@@ -47,34 +47,34 @@ class ACEX_Fortify_Presets
     {
         displayName = "16th Engineers";
         objects[] = {
-            {"3AS_Barricade_2_C_Prop",8,"Barricades"},
-            {"3as_hbarricade",8,"Barricades"},
+            {"3AS_Barricade_2_C_Prop",5,"Barricades"},
+            {"3as_hbarricade",5,"Barricades"},
 
-            {"3as_hbarrier_3",8,"Walls"},      
-            {"3as_hbarrierWall_4",18,"Walls"},
-            {"3as_hbarrierWall_6",18,"Walls"},
-            {"3as_hbarrierWall_corner3",18,"Walls"},
-            {"3as_hbarrier_big4",18,"Walls"},
-            {"3as_hbarrier_big4",18,"Walls"},
-            {"3as_hbarrier_big6",18,"Walls"},
-            {"3as_hbarrier_big_corner",18,"Walls"},
+            {"3as_hbarrier_3",10,"Walls"},      
+            {"3as_hbarrierWall_4",10,"Walls"},
+            {"3as_hbarrierWall_6",10,"Walls"},
+            {"3as_hbarrierWall_corner3",10,"Walls"},
+            {"3as_hbarrier_big4",10,"Walls"},
+            {"3as_hbarrier_big4",10,"Walls"},
+            {"3as_hbarrier_big6",10,"Walls"},
+            {"3as_hbarrier_big_corner",10,"Walls"},
 
-            {"3as_hbarrier_bunker",18,"Buildings"},
-            {"3as_hbarrier_Tower",28,"Buildings"},
-            {"land_3AS_Imperial_Tower",38,"Buildings"},
-            {"land_3as_FOBBuilding1La",50,"Buildings"},
-            {"AS_Pad_GAR_Prop",75,"Buildings"},
+            {"3as_hbarrier_bunker",25,"Buildings"},
+            {"3as_hbarrier_Tower",25,"Buildings"},
+            {"land_3AS_Imperial_Tower",50,"Buildings"},
+            {"land_3as_FOBBuilding1La",75,"Buildings"},
+            {"AS_Pad_GAR_Prop",50,"Buildings"},
 
-            {"land_3as_Dragonsteeth",8,"Defenses"},
-            {"3AS_HeavyRepeater_Unarmoured",8,"Defenses"},
-            {"3AS_HeavyRepeater_Armoured",8,"Defenses"},
+            {"land_3as_Dragonsteeth",5,"Defenses"},
+            {"3AS_HeavyRepeater_Unarmoured",50,"Defenses"},
+            {"3AS_HeavyRepeater_Armoured",75,"Defenses"},
             {"Land_3AS_Generator_Shield_Small_Projector",100,"Defenses"},
 
-            {"land_3AS_Imperial_Checkpoint",3,"Misc."},
-            {"land_3AS_Imperial_Checkpoint_Long",3,"Misc."},
-            {"land_3AS_fob_light_reb_tall",8,"Misc."},
-            {"ls_flag_republic",1,"Misc."},            
-            {"TFAR_Land_Communication_F",300,"Misc."}
+            {"land_3AS_Imperial_Checkpoint",25,"Misc."},
+            {"land_3AS_Imperial_Checkpoint_Long",25,"Misc."},
+            {"land_3AS_fob_light_reb_tall",5,"Misc."},
+            {"ls_flag_republic",5,"Misc."},            
+            {"TFAR_Land_Communication_F",125,"Misc."}
         };
     };
 };
