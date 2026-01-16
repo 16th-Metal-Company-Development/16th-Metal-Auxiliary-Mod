@@ -814,6 +814,17 @@ class CfgWeapons
 			};
 		};
 	};
+	class ShdwCmpny_SPASS_Optre_F;
+	class MET_Swamp_KS23: ShdwCmpny_SPASS_Optre_F
+	{
+		displayName="[Swamp] KS-23 Shotgun";
+		magazines[]=
+		{
+			"MET_KS23_mag",
+			"MET_IQA11_mag"
+		};
+		magazineWell[]={};
+	};
 };
 class CfgMagazines
 {
@@ -890,6 +901,23 @@ class CfgMagazines
 		initSpeed = 1250;
 		mass=20;
 	};
+	class MET_KS23_mag: JLTS_DC15A_mag
+	{
+		JLTS_hasElectronics=1;
+		JLTS_hasEMPProtection=1;
+		author="Hazmat";
+		modelSpecial="";
+		modelSpecialIsProxy=0;
+		picture="\3AS\3AS_Weapons\Data\UI\3as_pellets_y.paa";
+		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
+		count=4;
+		displayName="[16th] KS-23 Shell";
+		displayNameShort="KS-23 Shell";
+		descriptionShort="Shell for the KS-23.";
+		ammo="MET_KS23_Shot_Green";
+		tracersEvery=1;
+		mass=20;
+	};
 };
 class CfgLights
 {
@@ -925,5 +953,42 @@ class CfgAmmo
 		Lightcolor[]={0,1,0};
 		model="Indecisive_Armoury_Ammos\Data\RifleGrenade\IDA_RifleGrenade.p3d";
 	};
-
+	class 3AS_PlasmaBase;
+	class MET_slug_green: 3AS_PlasmaBase
+	{
+		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Green.p3d";
+		lightcolor[]={0,1,0};
+		effectfly="MET_BlasterBoltGlow_Green_Fly";
+		hit=90;
+		indirectHit=0;
+		explosive=0;
+		indirectHitRange=0.5;
+		caliber=1;
+		timetolive=4;
+		tracerendtime=4;
+	};
+	class MET_KS23_Shot_Green: MET_slug_green
+	{
+		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Green.p3d";
+		effectfly="MET_BlasterBoltGlow_Green_Fly";
+		lightcolor[]={0,1,0};
+		hit=75;
+		simulationStep=9.9999997e-005;
+		cartridge="";
+		submunitionAmmo="MET_ks23_subminition_green";
+		submunitionConeType[]=
+		{
+			"poissondisc",
+			5
+		};
+		submunitionConeAngle=0.3;
+		triggerSpeedCoef[]={0.85000002,1};
+		triggerTime=0.001;
+		cost=1;
+	};
+	class MET_ks23_subminition_green: MET_slug_green
+	{
+		hit=75;
+		deflecting=2;
+	};
 };
