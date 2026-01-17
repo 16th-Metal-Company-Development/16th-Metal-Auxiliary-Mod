@@ -43,6 +43,7 @@ class CfgPatches
 			"MET_30Rnd_300mm_Mo_shells",
 			"MET_DC15L_Heavy_mag"
 		};
+		skipWhenMissingDependencies=1;
 		requiredAddons[] = 
 		{
 			"A3_Data_F",
@@ -51,7 +52,8 @@ class CfgPatches
 			"A3_Characters_F_Proxies",
 			"3AS_Main",
 			"3AS_VehicleWeapons",
-			"3AS_Static"
+			"3AS_Static",
+			"OPTRE_Weapons"
 		};
 	};
 };

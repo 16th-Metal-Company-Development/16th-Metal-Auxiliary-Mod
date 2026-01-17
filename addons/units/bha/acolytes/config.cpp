@@ -202,10 +202,6 @@ class CfgVehicles
 			"MET_Arkanian_mag",
 			"MET_Arkanian_mag",
 			"MET_Arkanian_mag",
-			"MET_D200_Pistol_mag",
-			"MET_D200_Pistol_mag",
-			"MET_D200_Pistol_mag",
-			"MET_D200_Pistol_mag",
 			"MET_Smoke_Black",
 			"MET_Smoke_Black",
 			"MET_Smoke_Black",
@@ -225,10 +221,6 @@ class CfgVehicles
 			"MET_Arkanian_mag",
 			"MET_Arkanian_mag",
 			"MET_Arkanian_mag",
-			"MET_D200_Pistol_mag",
-			"MET_D200_Pistol_mag",
-			"MET_D200_Pistol_mag",
-			"MET_D200_Pistol_mag",
 			"MET_Smoke_Black",
 			"MET_Smoke_Black",
 			"MET_Smoke_Black",
@@ -828,14 +820,12 @@ class CfgVehicles
 		Weapons[]=
 		{
 			"MET_Arkanian_Stock_F",
-			"MET_D200",
 			"Put",
 			"Throw"
 		};
 		respawnWeapons[]=
 		{
 			"MET_Arkanian_Stock_F",
-			"MET_D200",
 			"Put",
 			"Throw"
 		};
@@ -850,14 +840,12 @@ class CfgVehicles
 		Weapons[]=
 		{
 			"MET_Arkanian_Stock_F",
-			"MET_D200",
 			"Put",
 			"Throw"
 		};
 		respawnWeapons[]=
 		{
 			"MET_Arkanian_Stock_F",
-			"MET_D200",
 			"Put",
 			"Throw"
 		};
@@ -873,14 +861,12 @@ class CfgVehicles
 		Weapons[]=
 		{
 			"met_FHR1",
-			"MET_D200",
 			"Put",
 			"Throw"
 		};
 		respawnWeapons[]=
 		{
 			"met_FHR1",
-			"MET_D200",
 			"Put",
 			"Throw"
 		};
@@ -894,10 +880,6 @@ class CfgVehicles
 			"MET_FHR1_mag",
 			"MET_FHR1_mag",
 			"MET_FHR1_mag",
-			"MET_D200_Pistol_mag",
-			"MET_D200_Pistol_mag",
-			"MET_D200_Pistol_mag",
-			"MET_D200_Pistol_mag",
 			"BHA_AT_Single",
 			"BHA_AT_Single",
 			"BHA_AA_Single",
@@ -921,10 +903,6 @@ class CfgVehicles
 			"MET_FHR1_mag",
 			"MET_FHR1_mag",
 			"MET_FHR1_mag",
-			"MET_D200_Pistol_mag",
-			"MET_D200_Pistol_mag",
-			"MET_D200_Pistol_mag",
-			"MET_D200_Pistol_mag",
 			"BHA_AT_Single",
 			"BHA_AT_Single",
 			"BHA_AP_SINGLE",

@@ -8,7 +8,8 @@ class CfgPatches
 			"SP_Rifleman",
 			"SP_MG",
 			"SP_Sniper",
-			"SP_AT"
+			"SP_AT",
+			"SP_CQC"
 		};
 		weapons[]={};
 		requiredAddons[]=
