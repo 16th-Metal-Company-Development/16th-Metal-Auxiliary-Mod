@@ -1592,7 +1592,7 @@ class CfgVehicles
 					class CommanderOptics;
 					class ViewOptics;
 				};
-			}
+			};
 		};
 	};
 	class BHA_Firebrand_Rocket: SFA_hovertank_R_base

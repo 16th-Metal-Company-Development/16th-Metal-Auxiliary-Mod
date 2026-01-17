@@ -2,7 +2,7 @@ class CfgPatches
 {
 	class modules
 	{
-		units[] = { "MET_Module_BuildZone","MET_Module_LogisticsBudget","MET_Module_VehiclePad"};
+		units[] = { "MET_Module_BuildZone","MET_Module_LogisticsBudget","MET_Module_VehiclePad","MET_Module_WaveDefense_Eden"};
 		requiredVersion = 1.0;
 		requiredAddons[] = { "A3_Modules_F" };
 	};

@@ -21,7 +21,6 @@ class CfgPatches
 
 class CfgVehicles
 {
-	class B_Soldier_f;
 	class JLTS_Clone_backpack;
 	class JLTS_Clone_belt_bag;
 	class JLTS_Clone_backpack_RTO;
