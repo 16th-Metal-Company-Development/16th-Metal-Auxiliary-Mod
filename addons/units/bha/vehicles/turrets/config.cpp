@@ -10,6 +10,11 @@ class CfgPatches
 			"BHA_AA_Base"
 		};
 		weapons[]={};
+		skipWhenMissingDependencies=1;
+		requiredAddons[]=
+		{
+			"OPTRE_Weapons"
+		};
 	};
 };
 class CfgVehicles

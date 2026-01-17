@@ -2138,7 +2138,7 @@ class CfgWeapons
 		scope=1;
 		JLTS_isShielded=1;
 		JLTS_baseWeapon="MET_DC15S";
-		JLTS_friedItem="JLTS_DC15S_shield_fried";
+		JLTS_friedItem="MET_DC15S_shield_fried";
 		model="\MRC\JLTS\weapons\DC15S\DC15S_shielded.p3d";
 		hiddenSelections[]=
 		{
@@ -4381,7 +4381,7 @@ class CfgWeapons
 		};
 	};
 	/*==============================================================================
-	==E-15 (Fried)
+	==E-15
 	==============================================================================*/
 	class MET_E15: LMG_Mk200_F
 	{
@@ -4658,6 +4658,7 @@ class CfgWeapons
 		displayName="[16th] Fried E-15";
 		descriptionShort="$STR_JLTS_descs_BlasterFried";
 		scope=1;
+		scopeArsenal=0;
 		picture="\MRC\JLTS\weapons\Z6\data\ui\Z6_fried_ui_ca.paa";
 		muzzles[]=
 		{
@@ -4674,6 +4675,9 @@ class CfgWeapons
 			10
 		};
 	};
+	/*==============================================================================
+	==Z-6 Funny
+	==============================================================================*/
 	class MET_Z6_SOF: LMG_Mk200_F
 	{
 		JLTS_hasElectronics=1;
@@ -5515,6 +5519,7 @@ class CfgWeapons
 		displayName="[16th] Fried Firepuncher 773";
 		descriptionShort="$STR_JLTS_descs_BlasterFried";
 		scope=1;
+		scopeArsenal=0;
 		picture="\MRC\JLTS\weapons\DC15X\data\ui\DC15X_fried_ui_ca.paa";
 		muzzles[]=
 		{
@@ -5758,6 +5763,10 @@ class CfgWeapons
 	};
 	class MET_Valken38X_F: MET_Valken38X_Base_F
 	{
+		JLTS_hasElectronics=1;
+		JLTS_hasEMPProtection=0;
+		JLTS_friedItem="MET_Valken38X_F_fried";
+		JLTS_repairTime=40;
 		author="$STR_3as_Studio";
 		baseWeapon="MET_Valken38X_F";
 		scope=2;
@@ -5777,6 +5786,32 @@ class CfgWeapons
 				slot="UnderBarrelSlot";
 				item="3AS_bipod_VK38X_F";
 			};
+		};
+	};
+	/*==============================================================================
+	==Valken-38x (Fried)
+	==============================================================================*/
+	class MET_Valken38X_F_fried: MET_Valken38X_F
+	{
+		baseWeapon="MET_16_weapon_firepuncher_fried";
+		displayName="[16th] Fried Firepuncher 773";
+		descriptionShort="$STR_JLTS_descs_BlasterFried";
+		scope=1;
+		scopeArsenal=0;
+		picture="\MRC\JLTS\weapons\DC15X\data\ui\DC15X_fried_ui_ca.paa";
+		muzzles[]=
+		{
+			"this"
+		};
+		magazines[]={};
+		magazineWell[]={};
+		JLTS_isFried=1;
+		drySound[]=
+		{
+			"A3\Sounds_F\arsenal\weapons\Rifles\Mx\dry_Mx",
+			0.56234097,
+			1,
+			10
 		};
 	};
 	/*==============================================================================
@@ -6047,6 +6082,10 @@ class CfgWeapons
 	};
 	class MET_DP23_F: MET_DP23_Base_F
 	{
+		JLTS_hasElectronics=1;
+		JLTS_hasEMPProtection=0;
+		JLTS_friedItem="MET_DP23_MkII_fried";
+		JLTS_repairTime=25;
 		author="$STR_3as_Studio";
 		baseWeapon="MET_DP23_F";
 		scope=2;
@@ -6056,6 +6095,82 @@ class CfgWeapons
 		UiPicture="\A3\weapons_f\data\UI\icon_regular_CA.paa";
 	};
 	/*==============================================================================
+	==DP-23 GL
+	==============================================================================*/
+	class MET_DP23_GL: MET_DP23_Base_F
+	{
+		JLTS_hasElectronics=1;
+		JLTS_hasEMPProtection=0;
+		JLTS_friedItem="MET_DP23_GL_fried";
+		JLTS_repairTime=25;
+		author="$STR_3as_Studio";
+		baseWeapon="MET_DP23_GL";
+		scope=2;
+		displayName="[16th] DP-23 MkII GL";
+		model="\3AS\3AS_Weapons\Republic\DP23\3AS_DP23_GL.p3d";
+		picture="\3AS\3AS_Weapons\Republic\DP23\Data\UI\3as_dp23gl.paa";
+		UiPicture="\A3\weapons_f\data\UI\icon_regular_CA.paa";
+		handAnim[]=
+		{
+			"OFP2_ManSkeleton",
+			"3as\3AS_Weapons\Republic\DP23\Data\Anim\New_DP23GL_handanim.rtm"
+		};
+		muzzles[]=
+		{
+			"this",
+			"3AS_FL_F"
+		};
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			mass=100;
+		};
+	};
+	/*==============================================================================
+	==DP-23 MkII (Fried)
+	==============================================================================*/
+	class MET_DP23_MkII_fried: MET_DP23_F
+	{
+		JLTS_isFried=1;
+		baseWeapon="MET_DP23_MkII_fried";
+		displayName="[16th] (Fried) DP-23 Scattergun MkII";
+		descriptionShort="$STR_JLTS_descs_BlasterFried";
+		scope=1;
+		picture="\MRC\JLTS\weapons\DP23\data\ui\DP23_fried_ui_ca.paa";
+		muzzles[]=
+		{
+			"this"
+		};
+		magazines[]={};
+		drySound[]=
+		{
+			"A3\Sounds_F\arsenal\weapons\Rifles\Mx\dry_Mx",
+			0.56234097,
+			1,
+			10
+		};
+	};
+	class MET_DP23_GL_fried: MET_DP23_GL
+	{
+		JLTS_baseWeapon="MET_DP23_GL_fried";
+		JLTS_isFried=1;
+		displayName="[16th] (Fried) DP-23 (GL) MkII";
+		descriptionShort="$STR_JLTS_descs_BlasterFried";
+		scope=1;
+		picture="\MRC\JLTS\weapons\DP23\data\ui\DP23_fried_ui_ca.paa";
+		magazines[]={};
+		drySound[]=
+		{
+			"A3\Sounds_F\arsenal\weapons\Rifles\Mx\dry_Mx",
+			0.56234097,
+			1,
+			10
+		};
+		muzzles[]=
+		{
+			"this"
+		};
+	};
+	/*==============================================================================
 	==DP-12 Mk II
 	==============================================================================*/
 	class MET_DP12_F: MET_DP23_Base_F
@@ -6063,6 +6178,10 @@ class CfgWeapons
 		author="$STR_3as_Studio";
 		baseWeapon="MET_DP12_F";
 		scope=2;
+		JLTS_hasElectronics=1;
+		JLTS_hasEMPProtection=0;
+		JLTS_friedItem="MET_DP12_fried";
+		JLTS_repairTime=25;
 		displayName="[16th] DP-12 MkII";
 		model="\3AS\3AS_Weapons\Republic\DP23\3AS_DP23_F.p3d";
 		picture="\3AS\3AS_Weapons\Republic\DP23\Data\UI\3as_dp23.paa";
@@ -6314,30 +6433,27 @@ class CfgWeapons
 		};
 	};
 	/*==============================================================================
-	==DP-23 GL
+	==DP-12 MkII (Fried)
 	==============================================================================*/
-	class MET_DP23_GL: MET_DP23_Base_F
+	class MET_DP12_fried: MET_DP12_F
 	{
-		author="$STR_3as_Studio";
-		baseWeapon="MET_DP23_GL";
-		scope=2;
-		displayName="[16th] DP-23 MkII GL";
-		model="\3AS\3AS_Weapons\Republic\DP23\3AS_DP23_GL.p3d";
-		picture="\3AS\3AS_Weapons\Republic\DP23\Data\UI\3as_dp23gl.paa";
-		UiPicture="\A3\weapons_f\data\UI\icon_regular_CA.paa";
-		handAnim[]=
-		{
-			"OFP2_ManSkeleton",
-			"3as\3AS_Weapons\Republic\DP23\Data\Anim\New_DP23GL_handanim.rtm"
-		};
+		JLTS_isFried=1;
+		baseWeapon="MET_DP12_fried";
+		displayName="[16th] (Fried) DP-12 Scattergun MkI";
+		descriptionShort="$STR_JLTS_descs_BlasterFried";
+		scope=1;
+		picture="\MRC\JLTS\weapons\DP23\data\ui\DP23_fried_ui_ca.paa";
 		muzzles[]=
 		{
-			"this",
-			"3AS_FL_F"
+			"this"
 		};
-		class WeaponSlotsInfo: WeaponSlotsInfo
+		magazines[]={};
+		drySound[]=
 		{
-			mass=100;
+			"A3\Sounds_F\arsenal\weapons\Rifles\Mx\dry_Mx",
+			0.56234097,
+			1,
+			10
 		};
 	};
 	/*==============================================================================
@@ -6353,8 +6469,8 @@ class CfgWeapons
 		scope=2;
 		displayName="[16th] DP-23 Scattergun MkI";
 		JLTS_hasElectronics=1;
-		JLTS_hasEMPProtection=1;
-		JLTS_friedItem="JLTS_DP23_fried";
+		JLTS_hasEMPProtection=0;
+		JLTS_friedItem="MET_JLTS_DP23_fried";
 		JLTS_repairTime=25;
 		JLTS_canHaveShield=1;
 		JLTS_shieldedWeapon="MET_DP23_shield";
@@ -6505,6 +6621,49 @@ class CfgWeapons
 		};
 	};
 	/*==============================================================================
+	==DP-23 MkI (Fried)
+	==============================================================================*/
+	class MET_JLTS_DP23_fried: MET_JLTS_DP23
+	{
+		JLTS_isFried=1;
+		JLTS_shieldedWeapon="MET_DP23_shield_fried";
+		baseWeapon="MET_JLTS_DP23_fried";
+		displayName="[16th] (Fried) DP-23 Scattergun MkI";
+		descriptionShort="$STR_JLTS_descs_BlasterFried";
+		scope=1;
+		picture="\MRC\JLTS\weapons\DP23\data\ui\DP23_fried_ui_ca.paa";
+		muzzles[]=
+		{
+			"this"
+		};
+		magazines[]={};
+		drySound[]=
+		{
+			"A3\Sounds_F\arsenal\weapons\Rifles\Mx\dry_Mx",
+			0.56234097,
+			1,
+			10
+		};
+	};
+	class MET_DP23_shield_fried: MET_DP23_shield
+	{
+		JLTS_baseWeapon="MET_DP23_fried";
+		JLTS_isFried=1;
+		baseWeapon="MET_DP23_shield_fried";
+		displayName="[16th] (Fried) DP-23 (Shield) MkI";
+		descriptionShort="$STR_JLTS_descs_BlasterFried";
+		scope=1;
+		picture="\MRC\JLTS\weapons\DP23\data\ui\DP23_fried_ui_ca.paa";
+		magazines[]={};
+		drySound[]=
+		{
+			"A3\Sounds_F\arsenal\weapons\Rifles\Mx\dry_Mx",
+			0.56234097,
+			1,
+			10
+		};
+	};
+	/*==============================================================================
 	==DP-12 MkI
 	==============================================================================*/
 	class MET_JLTS_DP12: JLTS_DP23
@@ -6512,8 +6671,8 @@ class CfgWeapons
 		scope=2;
 		displayName="[16th] DP-12 Scattergun MkI";
 		JLTS_hasElectronics=1;
-		JLTS_hasEMPProtection=1;
-		JLTS_friedItem="JLTS_DP12_fried";
+		JLTS_hasEMPProtection=0;
+		JLTS_friedItem="MET_JLTS_DP12_fried";
 		JLTS_repairTime=25;
 		JLTS_canHaveShield=1;
 		JLTS_shieldedWeapon="MET_DP12_shield";
@@ -6812,7 +6971,7 @@ class CfgWeapons
 		scope=1;
 		JLTS_isShielded=1;
 		JLTS_baseWeapon="MET_JLTS_DP12";
-		JLTS_friedItem="JLTS_DP12_shield_fried";
+		JLTS_friedItem="MET_DP12_shield_fried";
 		model="\MRC\JLTS\weapons\DP23\DP23_shielded.p3d";
 		hiddenSelections[]=
 		{
@@ -6847,6 +7006,49 @@ class CfgWeapons
 					"JLTS_riot_shield_droid_attachment"
 				};
 			};
+		};
+	};
+	/*==============================================================================
+	==DP-12 MkI (Fried)
+	==============================================================================*/
+	class MET_JLTS_DP12_fried: MET_JLTS_DP12
+	{
+		JLTS_isFried=1;
+		JLTS_shieldedWeapon="MET_DP12_shield_fried";
+		baseWeapon="MET_JLTS_DP12_fried";
+		displayName="[16th] (Fried) DP-12 Scattergun MkI";
+		descriptionShort="$STR_JLTS_descs_BlasterFried";
+		scope=1;
+		picture="\MRC\JLTS\weapons\DP23\data\ui\DP23_fried_ui_ca.paa";
+		muzzles[]=
+		{
+			"this"
+		};
+		magazines[]={};
+		drySound[]=
+		{
+			"A3\Sounds_F\arsenal\weapons\Rifles\Mx\dry_Mx",
+			0.56234097,
+			1,
+			10
+		};
+	};
+	class MET_DP12_shield_fried: MET_DP12_shield
+	{
+		JLTS_baseWeapon="MET_DP12_fried";
+		JLTS_isFried=1;
+		baseWeapon="MET_DP12_shield_fried";
+		displayName="[16th] (Fried) DP-12 (Shield) MkI";
+		descriptionShort="$STR_JLTS_descs_BlasterFried";
+		scope=1;
+		picture="\MRC\JLTS\weapons\DP23\data\ui\DP23_fried_ui_ca.paa";
+		magazines[]={};
+		drySound[]=
+		{
+			"A3\Sounds_F\arsenal\weapons\Rifles\Mx\dry_Mx",
+			0.56234097,
+			1,
+			10
 		};
 	};
 	/*==============================================================================
@@ -9699,7 +9901,12 @@ class CfgWeapons
 	};
 	class MET_Chaingun_mkii: Launcher_Base_F
 	{
+		JLTS_hasElectronics=1;
+		JLTS_hasEMPProtection=0;
+		JLTS_friedItem="MET_Chaingun_mkii_fried";
+		JLTS_repairTime=25;
 		author="3AS";
+		cursor="srifle";
 		_generalMacro="launch_RPG32_F";
 		scope=2;
 		scopeArsenal=2;
@@ -9862,12 +10069,32 @@ class CfgWeapons
 			mass=300;
 		};
 	};
+	class MET_Chaingun_mkii_fried: MET_Chaingun_mkii
+	{
+		baseWeapon="MET_Chaingun_mkii_fried";
+		displayName="[16th] (Fried) Chaingun";
+		descriptionShort="$STR_JLTS_descs_BlasterFried";
+		scope=1;
+		scopeArsenal=0;
+		picture="\MRC\JLTS\weapons\RPS6\data\ui\RPS6_fried_ui_ca.paa";
+		muzzles[]=
+		{
+			"this"
+		};
+		magazines[]={};
+		magazineWell[]={};
+		JLTS_isFried=1;
+	};
 	/*==============================================================================
 	==SMGs
 	==============================================================================*/
 	class 3AS_Cinnagaran_Carbine_F;
 	class MET_Cinnagaran_Carbine_F: 3AS_Cinnagaran_Carbine_F
 	{
+		JLTS_hasElectronics=1;
+		JLTS_hasEMPProtection=0;
+		JLTS_friedItem="MET_Cinnagaran_Carbine_F_fried";
+		JLTS_repairTime=20;
 		scope=2;
 		displayName="[16th] Cinnagaran Carbine";
 		recoil="MET_recoil_CinCar";
@@ -10002,10 +10229,10 @@ class CfgWeapons
 	class MET_DC15SMG: JLTS_DC15S
 	{
 		JLTS_hasElectronics=1;
-		JLTS_hasEMPProtection=1;
-		recoil="MET_recoil_CinCar";
-		JLTS_friedItem="JLTS_DC15S_fried";
+		JLTS_hasEMPProtection=0;
+		JLTS_friedItem="MET_DC15SMG_fried";
 		JLTS_repairTime=20;
+		recoil="MET_recoil_CinCar";
 		JLTS_canHaveShield=1;
 		JLTS_shieldedWeapon="MET_DC15SMG_shield";
 		author="MrClock";
@@ -10355,6 +10582,7 @@ class CfgWeapons
 				compatibleItems[]={
 					"MET_holo_optic",
 					//"3AS_optic_holo_DC15S",
+					"stbtn_Optic_Holo_One_Blue",
 					"MET_optic_holo_scope",
 					"MET_Optic_Holo_Two_Blue",
 					"MET_Optic_Holo_Two_Red",
@@ -10396,7 +10624,7 @@ class CfgWeapons
 		scope=1;
 		JLTS_isShielded=1;
 		JLTS_baseWeapon="MET_DC15SMG";
-		JLTS_friedItem="JLTS_DC15SMG_shield_fried";
+		JLTS_friedItem="MET_DC15SMG_shield_fried";
 		model="\MRC\JLTS\weapons\DC15S\DC15S_shielded.p3d";
 		hiddenSelections[]=
 		{
@@ -10430,6 +10658,89 @@ class CfgWeapons
 					"JLTS_riot_shield_GD_attachment",
 					"JLTS_riot_shield_droid_attachment"
 				};
+			};
+		};
+	};
+	/*==============================================================================
+	==SMGs (Fried)
+	==============================================================================*/
+	class MET_Cinnagaran_Carbine_F_fried: MET_Cinnagaran_Carbine_F
+	{
+		JLTS_isFried=1;
+		baseWeapon="MET_Cinnagaran_Carbine_F_fried";
+		displayName="[16th] Fried Cinnagaran Carbine";
+		descriptionShort="$STR_JLTS_descs_BlasterFried";
+		scope=1;
+		picture="\MRC\JLTS\weapons\DC15S\data\ui\DC15S_fried_ui_ca.paa";
+		magazines[]={};
+		magazineWell[]={};
+		drySound[]=
+		{
+			"A3\Sounds_F\arsenal\weapons\Rifles\Mx\dry_Mx",
+			0.56234097,
+			1,
+			10
+		};
+	};
+	class MET_DC15SMG_fried: MET_DC15SMG
+	{
+		JLTS_isFried=1;
+		JLTS_shieldedWeapon="MET_DC15SMG_shield_fried";
+		baseWeapon="MET_DC15SMG_fried";
+		displayName="[16th] Fried DC-15SMG";
+		descriptionShort="$STR_JLTS_descs_BlasterFried";
+		scope=1;
+		picture="\MRC\JLTS\weapons\DC15S\data\ui\DC15S_fried_ui_ca.paa";
+		magazines[]={};
+		magazineWell[]={};
+		drySound[]=
+		{
+			"A3\Sounds_F\arsenal\weapons\Rifles\Mx\dry_Mx",
+			0.56234097,
+			1,
+			10
+		};
+		class Stun: Stun
+		{
+			displayName="$STR_JLTS_names_StunModeFried";
+			magazines[]={};
+			drySound[]=
+			{
+				"A3\Sounds_F\arsenal\weapons\Rifles\Mx\dry_Mx",
+				0.56234097,
+				1,
+				10
+			};
+		};
+	};
+	class MET_DC15SMG_shield_fried: MET_DC15SMG_shield
+	{
+		JLTS_isFried=1;
+		JLTS_baseWeapon="MET_DC15SMG";
+		baseWeapon="MET_DC15SMG_shield_fried";
+		displayName="[16th] Fried DC-15SMG (Shield)";
+		descriptionShort="$STR_JLTS_descs_BlasterFried";
+		scope=1;
+		picture="\MRC\JLTS\weapons\DC15S\data\ui\DC15S_fried_ui_ca.paa";
+		magazines[]={};
+		magazineWell[]={};
+		drySound[]=
+		{
+			"A3\Sounds_F\arsenal\weapons\Rifles\Mx\dry_Mx",
+			0.56234097,
+			1,
+			10
+		};
+		class Stun: Stun
+		{
+			displayName="$STR_JLTS_names_StunModeFried";
+			magazines[]={};
+			drySound[]=
+			{
+				"A3\Sounds_F\arsenal\weapons\Rifles\Mx\dry_Mx",
+				0.56234097,
+				1,
+				10
 			};
 		};
 	};
@@ -11245,6 +11556,64 @@ class CfgWeapons
 		};
 	};
 	class optic_Holosight;
+	class stbtn_Optic_Holo_One_Blue: optic_Holosight
+	{
+		displayName="[21-73] Sharp Recticle Blue";
+		author="Schlabbie";
+		model="z\MET\addons\weapons\holos\met_holo_3.p3d";
+		picture="JLTS_EA_Scopes\Data\Scope_1_Blue.paa";
+		scope=2;
+		descriptionShort="Holographic Scope";
+		weaponInfoType="RscWeaponZeroing";
+		class ItemInfo: InventoryOpticsItem_Base_F
+		{
+			mass=1;
+			modelOptics="\A3\Weapons_F\empty";
+			optics=1;
+			class OpticsModes
+			{
+				class ACO
+				{
+					opticsID=1;
+					useModelOptics=0;
+					opticsZoomMin=0.50;
+					opticsZoomMax=1.25;
+					opticsZoomInit=0.75;
+					memoryPointCamera="eye";
+					opticsFlare=0;
+					opticsDisablePeripherialVision=0;
+					distanceZoomMin=200;
+					distanceZoomMax=200;
+					cameraDir="";
+					visionMode[]={};
+					opticsPPEffects[]=
+					{
+						"OpticsBlur1"
+					};
+				};
+				class ACO_2: ACO
+				{
+					opticsID=1;
+					useModelOptics=0;
+					opticsZoomMin=0.1;
+					opticsZoomMax=0.1;
+					opticsZoomInit=0.1;
+					memoryPointCamera="eye";
+					opticsFlare=0;
+					opticsDisablePeripherialVision=0;
+					distanceZoomMin=200;
+					distanceZoomMax=200;
+					cameraDir="";
+					visionMode[]={};
+					opticsPPEffects[]=
+					{
+						"OpticsBlur1"
+					};
+				};
+			};
+		};
+		inertia=0;
+	};
 	class MET_Optic_Holo_One_Blue: optic_Holosight
 	{
 		displayName="Soft Recticle Blue";
@@ -13923,7 +14292,7 @@ class CfgMagazines
 		count=40;
 		displayName="[16th] DC-15A Energy Cell";
 		displayNameShort="Energy Cell";
-		descriptionShort="Energy cell for the DC-15A, and DC-15L";
+		descriptionShort="Energy cell for the DC-15A, and DC-15L </br>Ammo Count=50";
 		ammo="MET_blasterbolt";
 		tracersEvery=1;
 	};
@@ -14273,9 +14642,9 @@ class CfgMagazines
 		picture="\3AS\3AS_Weapons\Data\UI\3as_sniper_g.paa";
 		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
 		count=5;
-		displayName="[16th] DC-15XM Ionized Energy Cell";
+		displayName="[16th] DC-15X Ionized Energy Cell";
 		displayNameShort="Ionized Energy Cell";
-		descriptionShort="Ionized Energy Cell for the DC-15XM";
+		descriptionShort="Ionized Energy Cell for the DC-15X";
 		ammo="MET_blasterbolt_at_green";
 		WBK_PlasmaKill_Color_String_Int = "Green";
 		WBK_UseDisintegrate = "true";
@@ -14311,6 +14680,7 @@ class CfgMagazines
 		displayNameShort="DP-23 Slugs";
 		descriptionShort="Slugs for the DP-23";
 		picture="\3AS\3AS_Weapons\Data\UI\3as_shotgun_b.paa";
+		model="\MRC\JLTS\weapons\DP23\DP23_mag.p3d";
 		ammo="MET_slug_blue";
 		initSpeed=450;
 		count=10;
@@ -14326,6 +14696,7 @@ class CfgMagazines
 		displayNameShort="DP-23 Pellets";
 		descriptionShort="Pellets for the DP-23";
 		picture="\3AS\3AS_Weapons\Data\UI\3as_pellets_b.paa";
+		model="\MRC\JLTS\weapons\DP23\DP23_mag.p3d";
 		ammo="MET_pellet_blue";
 		initSpeed=380;
 		count=10;
@@ -14342,6 +14713,7 @@ class CfgMagazines
 		displayNameShort="DP-23 Doomsday";
 		descriptionShort="Doomsday Pellets for the DP-23";
 		picture="z\MET\addons\weapons\data\3as_doomsday_g.paa";
+		model="\MRC\JLTS\weapons\DP23\DP23_mag.p3d";
 		ammo="MET_pellet_doomsday";
 		WBK_PlasmaKill_Color_String_Int = "Green";
 		WBK_UseDisintegrate = "true";
@@ -14359,6 +14731,7 @@ class CfgMagazines
 		displayNameShort="DP-12 Slugs";
 		descriptionShort="Slugs for the DP-12";
 		picture="\3AS\3AS_Weapons\Data\UI\3as_shotgun_b.paa";
+		model="\MRC\JLTS\weapons\DP23\DP23_mag.p3d";
 		ammo="MET_DP12_slug_blue";
 		initSpeed=450;
 		count=32;
@@ -14374,6 +14747,7 @@ class CfgMagazines
 		displayNameShort="DP-12 Pellets";
 		descriptionShort="Pellets for the DP-12";
 		picture="\3AS\3AS_Weapons\Data\UI\3as_pellets_b.paa";
+		model="\MRC\JLTS\weapons\DP23\DP23_mag.p3d";
 		ammo="MET_DP12_pellet_blue";
 		initSpeed=380;
 		count=32;
@@ -20236,6 +20610,10 @@ class CfgAmmo
 			frequency=20;
 			distance=1;
 		};
+		SoundSetExplosion[]=
+		{
+			""
+		};
 	};
 	class MET_HE_Chaingun_Ammo: MET_AT_Chaingun_Ammo
 	{
@@ -21981,6 +22359,10 @@ class CfgAmmo
 		soundSetBulletFly[]=
 		{
 			"MET_plasma_bullet_flyby_soundSet"
+		};
+		SoundSetExplosion[]=
+		{
+			""
 		};
 		supersoniccracknear[]={};
 		supersoniccrackfar[]={};

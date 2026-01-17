@@ -8,7 +8,8 @@ class CfgPatches
 			"SP_Rifleman",
 			"SP_MG",
 			"SP_Sniper",
-			"SP_AT"
+			"SP_AT",
+			"SP_CQC"
 		};
 		weapons[]={};
 		requiredAddons[]=
@@ -662,6 +663,123 @@ class CfgVehicles
 			};";
 		};
 	};
+	class SP_CQC: I_Soldier_base_F
+	{
+		side=2;
+		scope=2;
+		scopeCurator=2;
+		faction="Swamp_People_Units";
+		editorSubCategory="Swamp_People_Fighters";
+		uniformClass="TKE_CombatUniRolledV2FCF_U_B";
+		displayName="Swamp CQC";
+		icon="iconMan";
+		//genericNames="FrenchMen";
+		identityTypes[]=
+		{
+			"LanguageFRE_F",
+			"ls_head_mirialan",
+			"NoGlasses"
+		};
+		backpack="SP_EVAPackFCF_AT";
+		Weapons[]=
+		{
+			"MET_Swamp_KS23",
+			"Put",
+			"Throw"
+		};
+		respawnWeapons[]=
+		{
+			"MET_Swamp_KS23",
+			"MET_RPS6_SMRT",
+			"Put",
+			"Throw"
+		};
+		Magazines[]=
+		{
+			"MET_KS23_mag",
+			"MET_KS23_mag",
+			"MET_KS23_mag",
+			"MET_KS23_mag",
+			"MET_KS23_mag",
+			"MET_KS23_mag",
+			"MET_KS23_mag",
+			"MET_KS23_mag",
+			"MET_KS23_mag",
+			"MET_Weapons_Mags_Thermal_Penetrator",
+			"MET_Weapons_Mags_Thermal_Penetrator"
+		};
+		respawnMagazines[]=
+		{
+			"MET_KS23_mag",
+			"MET_KS23_mag",
+			"MET_KS23_mag",
+			"MET_KS23_mag",
+			"MET_KS23_mag",
+			"MET_KS23_mag",
+			"MET_KS23_mag",
+			"MET_KS23_mag",
+			"MET_KS23_mag",
+			"MET_Weapons_Mags_Thermal_Penetrator",
+			"MET_Weapons_Mags_Thermal_Penetrator"
+		};
+		Items[]=
+		{
+			"LFP_item_bacta_bandage",
+			"LFP_item_bacta_bandage",
+			"LFP_item_bacta_bandage",
+			"LFP_item_bacta_bandage",
+			"LFP_item_bacta_bandage",
+			"LFP_item_bacta_bandage",
+			"LFP_item_bacta_bandage"
+		};
+		respawnItems[]=
+		{
+			"LFP_item_bacta_bandage",
+			"LFP_item_bacta_bandage",
+			"LFP_item_bacta_bandage",
+			"LFP_item_bacta_bandage",
+			"LFP_item_bacta_bandage",
+			"LFP_item_bacta_bandage",
+			"LFP_item_bacta_bandage"
+		};
+		linkedItems[]=
+		{
+			"ItemRadio",
+			"ItemMap",
+			"ItemCompass",
+			"ItemGPS",
+			"TKE_MercHelmV2FCF",
+			"TKE_FCFLArmour",
+			"sc_trojanrespirator"
+		};
+		respawnLinkedItems[]=
+		{
+			"ItemRadio",
+			"ItemMap",
+			"ItemCompass",
+			"ItemGPS",
+			"TKE_MercHelmV2FCF",
+			"TKE_FCFLArmour",
+			"sc_trojanrespirator"
+		};
+		class CustomSkillScript
+		{
+			init = "_unit = _this select 0; if (local _unit) then { \
+				_unit spawn { \
+					sleep 15; \
+					_unit setSkill ['aimingAccuracy', 1]; \
+					_unit setSkill ['aimingShake', 1]; \
+					_unit setSkill ['aimingSpeed', 1]; \
+					_unit setSkill ['commanding', 1]; \
+					_unit setSkill ['courage', 1]; \
+					_unit setSkill ['general', 1]; \
+					_unit setSkill ['reloadSpeed', 1]; \
+					_unit setSkill ['spotDistance', 1]; \
+					_unit setSkill ['spotTime', 1]; \
+				}; \
+			};";
+		};
+	};
 };
 class CfgGroups
 {
@@ -732,7 +850,7 @@ class CfgGroups
 					class Unit7
 					{
 						side=2;
-						vehicle="SP_Rifleman";
+						vehicle="SP_CQC";
 						rank="PRIVATE";
 						position[]={1,-5,0};
 					};

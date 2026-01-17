@@ -167,8 +167,8 @@ class CfgPatches
 			"MET_Vest_ARC_Winters",
 
 			// Custom Misc
-			"MET_UNSC_CH252D_Helmet",
-			"MET_UNSC_CH252D_Helmet_Stripes"
+			// "MET_UNSC_CH252D_Helmet",
+			// "MET_UNSC_CH252D_Helmet_Stripes"
 		};
 		requiredVersion=0.1;
 		requiredAddons[]=
