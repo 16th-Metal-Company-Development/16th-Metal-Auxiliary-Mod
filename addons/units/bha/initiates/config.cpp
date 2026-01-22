@@ -1777,9 +1777,9 @@ class CfgGroups
 {
 	class INDEP
 	{
-		class BHA_Units
+		class BHA_Groups
 		{
-			name="Barysaw Holdings Authority";
+			name="[16th] Barysaw Holdings Authority";
 			class BHA_Initiates_inf_Groups
 			{
 				name="Initiate Infantry Groups";
