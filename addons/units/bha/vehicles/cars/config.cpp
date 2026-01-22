@@ -615,7 +615,7 @@ class CfgVehicles
 			"sc_tracked\data\mantis\textures\turret_black_co.paa",
 			"sc_tracked\data\mantis\textures\brace_black_co.paa"
 		};
-		armor = 950;
+		armor = 1500;
 		class Turrets: Turrets
 		{
 			class MainTurret: MainTurret

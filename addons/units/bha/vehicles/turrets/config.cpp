@@ -13,7 +13,7 @@ class CfgPatches
 		skipWhenMissingDependencies=1;
 		requiredAddons[]=
 		{
-			"OPTRE_Weapons"
+			"OPTRE_Weapons_Turrets"
 		};
 	};
 };
@@ -26,16 +26,53 @@ class CfgVehicles
             class MainTurret;
         };
     };
-    class 3AS_Republic_Mortar
-    {
-        class Turrets
+	
+	class Land;
+	class LandVehicle: Land
+	{
+		class ViewPilot;
+		class NewTurret;
+	};
+	class StaticWeapon: LandVehicle
+	{
+		class AnimationSources;
+		class Turrets
 		{
-			class MainTurret
-            {
-                class Hitpoints;
-            };
-        };
-    };
+			class MainTurret: NewTurret
+			{
+				class ViewOptics;
+				class HitPoints;
+			};
+		};
+	};
+	class StaticMortar: StaticWeapon
+	{
+		class Turrets: Turrets
+		{
+			class MainTurret: MainTurret
+			{
+				class ViewOptics;
+			};
+		};
+	};
+	class Mortar_01_base_F: StaticMortar
+	{
+		class Turrets: Turrets
+		{
+			class MainTurret: MainTurret
+			{
+				class ViewOptics: ViewOptics
+				{
+				};
+				class Hitpoints;
+			};
+		};
+		class assembleInfo;
+	};
+	class B_Mortar_01_F: Mortar_01_base_F
+	{
+		class SimpleObject;
+	};
 	class BHA_HeavyRepeater_Armoured: 3AS_HeavyRepeater_Base
 	{
 		author="$STR_3AS_Studio";
@@ -106,18 +143,16 @@ class CfgVehicles
 			};
 		};*/
 	};
-	class BHA_Mortar: 3AS_Republic_Mortar
+	class BHA_Mortar: B_Mortar_01_F
 	{
 		author="$STR_3AS_Studio";
-		displayname="[BHA] Mortar";
+		model="3AS\3as_static\Mortar\model\republicmortar.p3d";
+		icon="3AS\3as_static\Mortar\Data\ui\Mortar_top_ca.paa";
+		displayname="[BHA] 60MW Mortar";
 		side=2;
-		hiddenSelections[]=
-		{
-			"Camo_1",
-			"Camo_2"
-		};
 		editorPreview="\3as\3as_static\images\3as_CIS_Mortar.jpg";
 		faction="BHA_Units";
+		editorCategory="BHA_Assets_2";
 		editorSubcategory="BHA_Statics";
 		crew="BHA_Initiates_Initiate";
 		class Turrets: Turrets
@@ -170,6 +205,11 @@ class CfgVehicles
 				"A3\Static_F_Gamma\data\StaticTurret_02_destruct.rvmat"
 			};
 		};
+		hiddenSelections[]=
+		{
+			"Camo_1",
+			"Camo_2"
+		};
 		hiddenSelectionsTextures[]=
 		{
             "z\MET\addons\units\bha\vehicles\turrets\data\black_base_co.paa",
@@ -180,6 +220,7 @@ class CfgVehicles
 			"\3as\3as_static\Mortar\data\base_cis.rvmat",
 			"\3as\3as_static\Mortar\data\tube_cis.rvmat"
 		};
+		scopeCurator=2;
 		/*class assembleInfo: assembleInfo
 		{
 			dissasembleTo[]=
@@ -187,48 +228,6 @@ class CfgVehicles
 				"3AS_CIS_Mortar_Bag"
 			};
 		};*/
-	};
-	class Land;
-	class LandVehicle: Land
-	{
-		class ViewPilot;
-		class NewTurret;
-	};
-	class StaticWeapon: LandVehicle
-	{
-		class AnimationSources;
-		class Turrets
-		{
-			class MainTurret: NewTurret
-			{
-				class ViewOptics;
-				class HitPoints;
-			};
-		};
-	};
-	class StaticMortar: StaticWeapon
-	{
-		class Turrets: Turrets
-		{
-			class MainTurret: MainTurret
-			{
-				class ViewOptics;
-			};
-		};
-	};
-	class Mortar_01_base_F: StaticMortar
-	{
-		class Turrets: Turrets
-		{
-			class MainTurret: MainTurret
-			{
-				class ViewOptics: ViewOptics
-				{
-				};
-				class Hitpoints;
-			};
-		};
-		class assembleInfo;
 	};
     class BHA_AU_44_Mortar: Mortar_01_base_F
     {
@@ -335,7 +334,7 @@ class CfgVehicles
 		armor=250;
 		armorStructural=3.25;
 		faction="BHA_Units";
-		editorCategory="BHA_Assets";
+		editorCategory="BHA_Assets_2";
 		editorSubcategory="BHA_Statics";
 		crew="BHA_warbot";
 		displayName="AA Gun";

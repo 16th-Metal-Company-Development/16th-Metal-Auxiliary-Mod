@@ -1,12 +1,13 @@
 class CfgPatches
 {
-	class BHA_Turrets
+	class BHA_Turrets_FG75
 	{
 		units[]=
 		{
 			"BHA_Static_FG75"
 		};
 		weapons[]={};
+		skipWhenMissingDependencies=1;
 		requiredAddons[]=
 		{
 			"A3_Static_F",

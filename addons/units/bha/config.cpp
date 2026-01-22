@@ -28,6 +28,12 @@ class CfgEditorCategories
 		priority=1;
 		side=2;
 	};
+	class BHA_Assets_2
+	{
+		displayName = "[16th] Barysaw Holdings Authority";
+		priority=1;
+		side=2;
+	};
 };
 class CfgEditorSubcategories
 {
@@ -58,6 +64,10 @@ class CfgEditorSubcategories
 	class BHA_ShockDroidWorker
 	{
 		displayName="Worker Droids";
+	};
+	class BHA_Cars
+	{
+		displayName="Cars";
 	};
 	class BHA_APCs
 	{
