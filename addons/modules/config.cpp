@@ -16,6 +16,13 @@ class Extended_PreInit_EventHandlers
 	};
 };
 
+#include "UI\BaseControls.hpp"
+
+class RscTitles
+{
+	#include "UI\MET_WaveHUD.hpp"
+};
+
 class CfgFactionClasses
 {
 	class NO_CATEGORY;
@@ -549,6 +556,15 @@ class CfgFunctions
 			class selectSpawnPositions {};
 			class spawnWave {};
 			class waveLoop {};
+		};
+
+		class WaveDefense_UI
+		{
+			file = "z\MET\addons\modules\functions\wavedefense\ui";
+
+			class updateWaveHUD {};
+			class showWaveHUD {};
+			class hideWaveHUD {};
 		};
 	};
 };
