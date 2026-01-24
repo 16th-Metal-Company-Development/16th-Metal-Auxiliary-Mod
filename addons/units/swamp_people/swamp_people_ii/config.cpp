@@ -6,6 +6,7 @@ class CfgPatches
 		{
 			"SP_Officer",
 			"SP_Rifleman",
+			"SP_Rifleman_Light",
 			"SP_MG",
 			"SP_Sniper",
 			"SP_AT",
@@ -274,6 +275,120 @@ class CfgVehicles
 			"MET_FA11_mag",
 			"MET_FA11_mag",
 			"Met_Swamp_HE_RifleGrenade",
+			"MET_Weapons_Mags_Thermal_Penetrator",
+			"MET_Weapons_Mags_Thermal_Penetrator"
+		};
+		Items[]=
+		{
+			"LFP_item_bacta_bandage",
+			"LFP_item_bacta_bandage",
+			"LFP_item_bacta_bandage",
+			"LFP_item_bacta_bandage",
+			"LFP_item_bacta_bandage",
+			"LFP_item_bacta_bandage",
+			"LFP_item_bacta_bandage"
+		};
+		respawnItems[]=
+		{
+			"LFP_item_bacta_bandage",
+			"LFP_item_bacta_bandage",
+			"LFP_item_bacta_bandage",
+			"LFP_item_bacta_bandage",
+			"LFP_item_bacta_bandage",
+			"LFP_item_bacta_bandage",
+			"LFP_item_bacta_bandage"
+		};
+		linkedItems[]=
+		{
+			"ItemRadio",
+			"ItemMap",
+			"ItemCompass",
+			"ItemGPS",
+			"TKE_MercHelmV2FCF",
+			"TKE_FCFLArmour",
+			"sc_trojanrespirator"
+		};
+		respawnLinkedItems[]=
+		{
+			"ItemRadio",
+			"ItemMap",
+			"ItemCompass",
+			"ItemGPS",
+			"TKE_MercHelmV2FCF",
+			"TKE_FCFLArmour",
+			"sc_trojanrespirator"
+		};
+		class CustomSkillScript
+		{
+			init = "_unit = _this select 0; if (local _unit) then { \
+				_unit spawn { \
+					sleep 15; \
+					_unit setSkill ['aimingAccuracy', 1]; \
+					_unit setSkill ['aimingShake', 1]; \
+					_unit setSkill ['aimingSpeed', 1]; \
+					_unit setSkill ['commanding', 1]; \
+					_unit setSkill ['courage', 1]; \
+					_unit setSkill ['general', 1]; \
+					_unit setSkill ['reloadSpeed', 1]; \
+					_unit setSkill ['spotDistance', 1]; \
+					_unit setSkill ['spotTime', 1]; \
+				}; \
+			};";
+		};
+	};
+	class SP_Rifleman_Light: I_Soldier_base_F
+	{
+		side=2;
+		scope=2;
+		scopeCurator=2;
+		faction="Swamp_People_Units";
+		editorSubCategory="Swamp_People_Fighters";
+		uniformClass="TKE_CombatUniRolledV2FCF_U_B";
+		displayName="Swamp Rifleman";
+		icon="iconMan";
+		//genericNames="FrenchMen";
+		identityTypes[]=
+		{
+			"LanguageFRE_F",
+			"ls_head_mirialan",
+			"NoGlasses"
+		};
+		backpack="TKE_EVAPackFCF";
+		Weapons[]=
+		{
+			"Metal_Swamp_FA11",
+			"Put",
+			"Throw"
+		};
+		respawnWeapons[]=
+		{
+			"Metal_Swamp_FA11",
+			"Put",
+			"Throw"
+		};
+		Magazines[]=
+		{
+			"MET_FA11_mag",
+			"MET_FA11_mag",
+			"MET_FA11_mag",
+			"MET_FA11_mag",
+			"MET_FA11_mag",
+			"MET_FA11_mag",
+			"MET_FA11_mag",
+			"MET_FA11_mag",
+			"MET_Weapons_Mags_Thermal_Penetrator",
+			"MET_Weapons_Mags_Thermal_Penetrator"
+		};
+		respawnMagazines[]=
+		{
+			"MET_FA11_mag",
+			"MET_FA11_mag",
+			"MET_FA11_mag",
+			"MET_FA11_mag",
+			"MET_FA11_mag",
+			"MET_FA11_mag",
+			"MET_FA11_mag",
+			"MET_FA11_mag",
 			"MET_Weapons_Mags_Thermal_Penetrator",
 			"MET_Weapons_Mags_Thermal_Penetrator"
 		};
@@ -916,6 +1031,146 @@ class CfgGroups
 					{
 						side=2;
 						vehicle="SP_Rifleman";
+						rank="SERGEANT";
+						position[]={0,0,0};
+					};
+					class Unit1
+					{
+						side=2;
+						vehicle="SP_Sniper";
+						rank="PRIVATE";
+						position[]={1,-2,0};
+					};
+				};
+			};
+			class SP_Fighters_Groups
+			{
+				name="[16th] Fighters (Light)";
+				class SP_Fighters_Squad
+				{
+					name="Squad";
+					scope=2;
+					side=2;
+					faction="SP_Units";
+					icon="\A3\ui_f\data\map\markers\nato\b_inf.paa";
+					class Unit0
+					{
+						side=2;
+						vehicle="SP_Officer";
+						rank="SERGEANT";
+						position[]={0,0,0};
+					};
+					class Unit1
+					{
+						side=2;
+						vehicle="SP_AT";
+						rank="PRIVATE";
+						position[]={1,-2,0};
+					};
+					class Unit2
+					{
+						side=2;
+						vehicle="SP_Rifleman_Light";
+						rank="PRIVATE";
+						position[]={-1,-2,0};
+					};
+					class Unit3
+					{
+						side=2;
+						vehicle="SP_Rifleman_Light";
+						rank="PRIVATE";
+						position[]={1,-3,0};
+					};
+					class Unit4
+					{
+						side=2;
+						vehicle="SP_Rifleman_Light";
+						rank="PRIVATE";
+						position[]={-1,-3,0};
+					};
+					class Unit5
+					{
+						side=2;
+						vehicle="SP_Rifleman_Light";
+						rank="PRIVATE";
+						position[]={1,-4,0};
+					};
+					class Unit6
+					{
+						side=2;
+						vehicle="SP_Rifleman_Light";
+						rank="PRIVATE";
+						position[]={-1,-4,0};
+					};
+					class Unit7
+					{
+						side=2;
+						vehicle="SP_CQC";
+						rank="PRIVATE";
+						position[]={1,-5,0};
+					};
+					class Unit8
+					{
+						side=2;
+						vehicle="SP_MG";
+						rank="PRIVATE";
+						position[]={-1,-5,0};
+					};
+					class Unit9
+					{
+						side=2;
+						vehicle="SP_MG";
+						rank="PRIVATE";
+						position[]={0,-6,0};
+					};
+				};
+				class SP_Fighter_Team
+				{
+					name="Team";
+					scope=2;
+					side=2;
+					faction="SP_Units";
+					icon="\A3\ui_f\data\map\markers\nato\b_inf.paa";
+					class Unit0
+					{
+						side=2;
+						vehicle="SP_Rifleman_Light";
+						rank="SERGEANT";
+						position[]={0,0,0};
+					};
+					class Unit1
+					{
+						side=2;
+						vehicle="SP_Rifleman_Light";
+						rank="PRIVATE";
+						position[]={1,-2,0};
+					};
+					class Unit2
+					{
+						side=2;
+						vehicle="SP_Rifleman_Light";
+						rank="PRIVATE";
+						position[]={-1,-2,0};
+					};
+					class Unit3
+					{
+						side=2;
+						vehicle="SP_MG";
+						rank="PRIVATE";
+						position[]={1,-3,0};
+					};
+				};
+				class SP_Fighter_Patrol
+				{
+					name="Patrol";
+					scope=2;
+					side=2;
+					faction="SP_Units";
+					icon="\A3\ui_f\data\map\markers\nato\b_inf.paa";
+					class Unit0
+					{
+						side=2;
+						vehicle="SP_Rifleman_Light";
 						rank="SERGEANT";
 						position[]={0,0,0};
 					};
