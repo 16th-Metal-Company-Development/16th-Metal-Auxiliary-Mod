@@ -7,11 +7,30 @@ class JLTS_CloneNVG_spec;
 class MET_NVG_Macrobinocular_Base : JLTS_CloneNVG
 {
 	scope = 2;
+	JLTS_hasElectronics=1;
+	JLTS_hasEMPProtection=0;
+	JLTS_friedItem="MET_NVG_Macrobinocular_Fried";
+	JLTS_repairTime=20;
 	displayName = "[16th] Macrobinoculars";
 	hiddenselectionsTextures[] =
 	{
 		"z\MET\addons\Armor_Rewrite\Facewear\Textures\Base\MET_NVG_Macrobinocular_CO.paa"
 	};
+};
+class MET_NVG_Macrobinocular_Fried : MET_NVG_Macrobinocular_Base
+{
+	JLTS_isFried=1;
+	displayName = "[16th] (Fried) Macrobinoculars";
+	hiddenselectionsTextures[] =
+	{
+		"z\MET\addons\Armor_Rewrite\Facewear\Textures\Base\MET_NVG_Macrobinocular_CO.paa"
+	};
+	scope = 1;
+	visionMode[] =
+	{
+		"Normal"
+	};
+	modelOptics = "";
 };
 class MET_NVG_Macrobinocular_Down : JLTS_CloneNVG_spec
 {

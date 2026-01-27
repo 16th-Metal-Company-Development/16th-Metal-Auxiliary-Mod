@@ -1043,7 +1043,7 @@ class CfgGroups
 					};
 				};
 			};
-			class SP_Fighters_Groups
+			class SP_Fighters_Lite_Groups
 			{
 				name="[16th] Fighters (Light)";
 				class SP_Fighters_Squad
