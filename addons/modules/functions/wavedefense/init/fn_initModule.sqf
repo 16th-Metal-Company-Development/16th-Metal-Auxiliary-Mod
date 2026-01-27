@@ -1,52 +1,38 @@
-// File: fn_initModule.sqf
 if (!isServer) exitWith {};
 
 params ["_logic"];
 
-#define DEBUG
+missionNamespace setVariable ["MET_aceLoaded", isClass (configFile >> "CfgPatches" >> "ace_main")];
 
-// Side
-private _sideID = _logic getVariable ["sideToSpawn", 0];
-private _sideToSpawn = [east, west, resistance] select _sideID;
-
-// Base Variables
+// Core Variables
+private _sideToSpawn = [east, west, resistance] select (_logic getVariable ["sideToSpawn", 0]);
 private _waveCount    = _logic getVariable ["waveCount", 10];
 private _setupTime    = _logic getVariable ["setupTime", 300];
 private _respiteTime  = _logic getVariable ["respiteTime", 120];
 private _waitForClear = _logic getVariable ["waitForClear", true];
 
-// Infantry Classes & Scaling
+// Infantry Variables
 private _infantryClassList = parseSimpleArray (missionNamespace getVariable ["MET_WaveDefense_InfantryList", "[]"]);
 private _infantryGroupSize = _logic getVariable ["infantryGroupSize", 7];
 private _infantryGroupsPW  = _logic getVariable ["infantryGroupsPerWave", 3];
 private _infantryMult      = _logic getVariable ["infantryDifficultyMultiplier", 2];
 
-// Air Classes & Scaling
+// Air Variables
 private _airClassList      = parseSimpleArray (missionNamespace getVariable ["MET_WaveDefense_AirList", "[]"]);
 private _airUnitsPW = _logic getVariable ["airUnitsPerWave", 1];
 private _airMult    = _logic getVariable ["airDifficultyMultiplier", 1.5];
 
-// Armor Classes & Scaling
+// Armor Variables
 private _armorClassList    = parseSimpleArray (missionNamespace getVariable ["MET_WaveDefense_ArmorList", "[]"]);
 private _armorUnitsPW = _logic getVariable ["armorUnitsPerWave", 1];
 private _armorMult    = _logic getVariable ["armorDifficultyMultiplier", 1.5];
 
-// Internal Variables
+// Global Variables 
 private _maxAliveUnits = parseNumber(missionNamespace getVariable ["MET_WaveDefense_MaximumConcurrentUnits", "500"]);
 private _delayBetweenGroups = parseNumber(missionNamespace getVariable ["MET_WaveDefense_DelayBetweenGroups", "0"]);
 
-#ifdef DEBUG
-diag_log format [
-    "[WaveDefense] Presets loaded | INF=%1 | AIR=%2 | ARM=%3",
-    _infantryClassList,
-    _airClassList,
-    _armorClassList
-];
-#endif
-
 // Build config hashmap
 private _config = createHashMapFromArray [
-
     ["sideToSpawn", _sideToSpawn],
     ["maxWaves", _waveCount],
     ["setupTime", _setupTime],
@@ -69,16 +55,17 @@ private _config = createHashMapFromArray [
     ["armorUnitsPerWave", _armorUnitsPW],
     ["armorDifficultyMultiplier", _armorMult],
 
-    // Runtime
-    ["moduleLogic", _logic],
+    // Global Vars
+    ["maxAliveUnits", _maxAliveUnits ],
+    ["delayBetweenGroups", _delayBetweenGroups ],
+
+    // Internal Vars
     ["currentWave", 0],
     ["waveActive", false],
-    ["aliveUnits", []],
-    ["maxAliveUnits", _maxAliveUnits ],
-    ["delayBetweenGroups", _delayBetweenGroups ]
-
+    ["aliveUnits", []]
 ];
-missionNamespace setVariable ["WD_Config", _config];
+
+missionNamespace setVariable ["MET_WD_Config", _config];
 
 // Start the wave loop
 [_logic, _config] spawn MET_fnc_waveLoop;

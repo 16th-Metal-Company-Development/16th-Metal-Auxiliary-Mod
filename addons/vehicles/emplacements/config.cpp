@@ -53,7 +53,7 @@ class CfgPatches
 			"3AS_Main",
 			"3AS_VehicleWeapons",
 			"3AS_Static",
-			"OPTRE_Weapons"
+			"OPTRE_Weapons_Turrets"
 		};
 	};
 };
@@ -1683,11 +1683,11 @@ class CfgAmmo
 
         hit = 225;
         indirectHit = 100;
-        indirectHitRange = 60;
+        indirectHitRange = 30;
         ace_frag_enabled = 1;
         ace_frag_classes[] = {"ace_frag_medium", "ace_frag_medium_HD","ace_frag_large", "ace_frag_large_HD"};
         ace_frag_metal = 9600;
-        ace_frag_charge = 1024;
+        ace_frag_charge = 2048;
         ace_frag_gurney_c = 2440;
         ace_frag_gurney_k = "1/2";
         ace_rearm_caliber = 120;
@@ -2014,7 +2014,7 @@ class CfgAmmo
 		effectFly="MET_BlasterBoltGlow_Medium_Blue_Fly";
 		hit=140;
 		indirectHit=90;
-		indirectHitRange=30;
+		indirectHitRange=15;
 		cost=200;
 		muzzleEffect="";
 		warheadName="HE";
@@ -2025,7 +2025,7 @@ class CfgAmmo
 		deflecting=0;
 		explosive=0.6;
         ace_frag_metal = 120;  // Amount of metal being fragmented (grams)
-        ace_frag_charge = 60;  // Amount of explosive filler (grams)
+        ace_frag_charge = 90;  // Amount of explosive filler (grams)
         ace_frag_gurney_c = 2300;  // Gurney velocity constant for explosive type
         ace_frag_gurney_k = 1/2;  // Gurney velocity shape factor
         ace_frag_classes[] = {"ACE_frag_medium_HD","ACE_frag_small_HD","ACE_frag_small"};  // Type of fragments

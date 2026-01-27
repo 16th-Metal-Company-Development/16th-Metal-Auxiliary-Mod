@@ -259,7 +259,7 @@ class MET_ATTE_Base: 3as_ATTE_Base
 		"3as\3as_ATTE\data\Textures\3as_ATTE_Glass_ca.paa",
 		"3as\3as_ATTE\data\Textures\3as_atte_armor_co.paa"
 	};
-	armor = 650;
+	armor = 415;
 	class EventHandlers: DefaultEventHandlers
 	{
 		init = "[_this select 0] call MET_fnc_addCrates;";

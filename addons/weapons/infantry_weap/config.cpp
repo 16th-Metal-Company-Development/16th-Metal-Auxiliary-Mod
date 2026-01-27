@@ -1839,6 +1839,14 @@ class CfgWeapons
 		class Stun: JLTS_stun_muzzle
 		{
 		};
+		modes[]=
+		{
+			"Single",
+			"FullAuto",
+			"fullauto_medium",
+			"single_medium_optics1",
+			"single_far_optics2"
+		};
 		class Single: Mode_SemiAuto
 		{
 			sounds[]=
@@ -14292,7 +14300,7 @@ class CfgMagazines
 		count=40;
 		displayName="[16th] DC-15A Energy Cell";
 		displayNameShort="Energy Cell";
-		descriptionShort="Energy cell for the DC-15A, and DC-15L </br>Ammo Count=50";
+		descriptionShort="Energy cell for the DC-15A, and DC-15L </br>Ammo Count=40";
 		ammo="MET_blasterbolt";
 		tracersEvery=1;
 	};

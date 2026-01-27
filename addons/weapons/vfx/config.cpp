@@ -593,6 +593,10 @@ class CfgLights
 	{
 		diffuse[] = { 214,191,124,1 };
 	};
+	class MET_BlasterboltMortar_Pink : MET_Medium_BlasterBoltLight_Blue
+	{
+		diffuse[] = { 240,113,255,1 };
+	};
 	class MET_BlasterboltLight_Blue
 	{
 		color[] = { 0,0,0,0 };
@@ -1256,6 +1260,15 @@ class MET_BlasterBoltGlow_Pink_Fly
 	{
 		simulation = "light";
 		type = "MET_BlasterBoltLight_Pink";
+		position[] = { 0,0,1 };
+	};
+};
+class MET_MortarBoltGlow_Pink_Fly
+{
+	class Light
+	{
+		simulation = "light";
+		type = "MET_BlasterboltMortar_Pink";
 		position[] = { 0,0,1 };
 	};
 };
