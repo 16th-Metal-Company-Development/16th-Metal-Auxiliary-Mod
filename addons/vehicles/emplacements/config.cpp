@@ -53,7 +53,7 @@ class CfgPatches
 			"3AS_Main",
 			"3AS_VehicleWeapons",
 			"3AS_Static",
-			"OPTRE_Weapons"
+			"OPTRE_Weapons_Turrets"
 		};
 	};
 };

@@ -34,13 +34,16 @@ class cfgFactionClasses
 
 class CfgEditorSubcategories
 {
-	
+	class METCIS_Turrets
+	{
+		displayName="Turrets";
+	};
 };
 
-class CfgVehicleClasses
+/*class CfgVehicleClasses
 {
 
-};
+};*/
 class CfgMarkerColors
 {
 	class Default

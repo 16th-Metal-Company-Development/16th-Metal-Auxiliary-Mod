@@ -7,6 +7,12 @@ class CfgPatches
 			"Swamp_Static_FG75"
 		};
 		weapons[]={};
+		skipWhenMissingDependencies=1;
+		requiredAddons[]=
+		{
+			"A3_Static_F",
+			"OPTRE_Weapons_Turrets"
+		};
 	};
 };
 class CfgVehicles
