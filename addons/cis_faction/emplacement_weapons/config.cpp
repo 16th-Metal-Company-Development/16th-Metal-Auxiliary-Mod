@@ -11,6 +11,7 @@ class CfgPatches
 		{
 			"MET_CIS_20Rnd_82mm_Mo_shells"
 		};
+		units[] ={};
 		skipWhenMissingDependencies=1;
 		requiredAddons[] = 
 		{
@@ -59,8 +60,8 @@ class CfgAmmo
 		caliber=8;
 		deflecting=0;
 		explosive=0.6;
-        ace_frag_metal = 40;  // Amount of metal being fragmented (grams)
-        ace_frag_charge = 15;  // Amount of explosive filler (grams)
+        ace_frag_metal = 75;  // Amount of metal being fragmented (grams)
+        ace_frag_charge = 25;  // Amount of explosive filler (grams)
         ace_frag_gurney_c = 2000;  // Gurney velocity constant for explosive type
         ace_frag_gurney_k = 1/2;  // Gurney velocity shape factor
         ace_frag_classes[] = {"ACE_frag_medium_HD","ACE_frag_small_HD","ACE_frag_small"};  // Type of fragments
