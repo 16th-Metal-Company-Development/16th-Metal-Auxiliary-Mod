@@ -329,8 +329,7 @@ class CfgAmmo
 			"Explosion_Debris_SoundSet"
 		};
 	};
-	class OPTRE_sticky_c7_explosion;
-	class MET_Weapons_Ammo_Grenades_Ctype: OPTRE_sticky_c7_explosion
+	class MET_Weapons_Ammo_Grenades_Ctype: grenade
 	{
 		hit=3000;
 		indirectHit=2500;

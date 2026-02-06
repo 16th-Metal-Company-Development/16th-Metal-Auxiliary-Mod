@@ -13,7 +13,8 @@ class CfgPatches
 		skipWhenMissingDependencies=1;
 		requiredAddons[]=
 		{
-			"OPTRE_Weapons_Turrets"
+			"OPTRE_Weapons_Turrets",
+			"OPTRE_Core"
 		};
 	};
 };
@@ -316,7 +317,7 @@ class CfgVehicles
             "OPTRE_Weapons_Turrets\AU_44_Mortar\data\mortar.rvmat",
             "OPTRE_Weapons_Turrets\AU_44_Mortar\data\mfd.rvmat"
         };
-        #include "\OPTRE_Weapons_Turrets\AU_44_Mortar\_mfd.hpp"
+        //#include "\OPTRE_Weapons_Turrets\AU_44_Mortar\_mfd.hpp"
     };
 	class SFA_AA_Base
 	{

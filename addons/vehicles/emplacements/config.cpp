@@ -5438,7 +5438,7 @@ class CfgVehicles
             "OPTRE_Weapons_Turrets\AU_44_Mortar\data\mortar.rvmat",
             "OPTRE_Weapons_Turrets\AU_44_Mortar\data\mfd.rvmat"
         };
-        #include "\OPTRE_Weapons_Turrets\AU_44_Mortar\_mfd.hpp"
+        //#include "\OPTRE_Weapons_Turrets\AU_44_Mortar\_mfd.hpp"
     };
 	class JLTS_Clone_backpack;
 	class MET_AU_44_Mortar_Bag: JLTS_Clone_backpack

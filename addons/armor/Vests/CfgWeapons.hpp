@@ -814,7 +814,7 @@ class MET_Vest_Cold_Officer : MET_Vest_Cold_Base
 
 
 // Airborne
-class MET_Vest_Airborne_NCO : MET_Vest_Airborne_Base
+class MET_Vest_Airborne_NCO : JLTS_CloneVestAirborneNCO
 {
 	scope = 2;
 	displayname = "[16th] Airborne NCO Vest";

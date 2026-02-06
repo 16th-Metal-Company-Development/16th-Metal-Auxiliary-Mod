@@ -11,7 +11,9 @@ class CfgPatches
 			"sc_units",
 			"sc_wheeled",
 			"BHA_Weapons",
-			"A3_Weapons_F"
+			"A3_Weapons_F",
+			"OPTRE_Core",
+			"OPTRE_Weapons_Turrets"
 		};
 	};
 };
