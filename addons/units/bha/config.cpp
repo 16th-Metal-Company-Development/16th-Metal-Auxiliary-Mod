@@ -7,7 +7,9 @@ class CfgPatches
 		skipWhenMissingDependencies=1;
 		requiredAddons[]=
 		{
-			"sc_vtol"
+			"sc_vtol",
+			"OPTRE_Core",
+			"OPTRE_Weapons_Turrets"
 		};
 	};
 };
