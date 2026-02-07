@@ -15,6 +15,7 @@ class CfgPatches
 		ammo[]=
 		{
 		};
+		skipWhenMissingDependencies=1;
 		requiredAddons[]=
 		{
 			"ShadowLegion_Aux_Weapons"
