@@ -9,6 +9,7 @@ class CfgPatches
 		{
 			""
 		};
+		skipWhenMissingDependencies=1;
 		requiredAddons[]=
 		{
 			"ace_medical_status",

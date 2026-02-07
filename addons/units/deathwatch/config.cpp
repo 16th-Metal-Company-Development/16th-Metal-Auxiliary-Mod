@@ -16,6 +16,7 @@ class CfgPatches
 			"MET_mandalorian_deathwatchCaptain"
 		};
 		weapons[]={};
+		skipWhenMissingDependencies=1;
 		requiredAddons[]=
 		{
 			"A3_characters_F",
