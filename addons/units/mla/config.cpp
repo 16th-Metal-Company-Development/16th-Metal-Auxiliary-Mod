@@ -5,6 +5,7 @@ class CfgPatches
 		units[] = { "MET_MLA_Rifleman_E5","MET_MLA_Rifleman_DC15S","MET_MLA_Autorifleman_DC15L","MET_MLA_Autorifleman_E5C","MET_MLA_Marksman_DC15X","MET_MLA_Marksman_E5S","MET_MLA_Grenadier","MET_MLA_Light_AntiTank_E60R","MET_MLA_Light_AntiTank_RPS6","MET_MLA_Crewman","MET_MLA_AAT","MET_MLA_ISP" };
 		weapons[] = { "MET_MLA_DC15L","MET_MLA_DC15X" };
 		requiredVersion = 0.1;
+		skipWhenMissingDependencies=1;
 		requiredAddons[] = {};
 	};
 };

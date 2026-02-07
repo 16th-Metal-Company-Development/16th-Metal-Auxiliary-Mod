@@ -4,6 +4,7 @@ class CfgPatches
 	{
 		units[]={};
 		weapons[]={};
+		skipWhenMissingDependencies=1;
 	};
 };
 class CfgFactionClasses

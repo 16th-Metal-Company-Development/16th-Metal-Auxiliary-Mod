@@ -11,6 +11,7 @@ class CfgPatches
 			"SPR_AT"
 		};
 		weapons[]={};
+		skipWhenMissingDependencies=1;
 		requiredAddons[]=
 		{
 			"IDA_INDEP",

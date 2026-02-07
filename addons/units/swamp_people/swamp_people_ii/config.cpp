@@ -13,6 +13,7 @@ class CfgPatches
 			"SP_CQC"
 		};
 		weapons[]={};
+		skipWhenMissingDependencies=1;
 		requiredAddons[]=
 		{
 			"IDA_INDEP",
