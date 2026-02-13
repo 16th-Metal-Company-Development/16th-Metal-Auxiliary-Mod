@@ -163,7 +163,7 @@ class CfgAmmo
 	class MET_HE_LauncherGrenade_CIS: MET_HE_LauncherGrenade
 	{
 		model="Indecisive_Armoury_Ammos\Data\40mm_Grenade\IDA_40mm_Grenade.p3d";
-		effectfly="MET_BlasterBoltGlow_Pink_Fly";
+		effectfly="MET_GrenadeBlasterBoltGlow_PinkFly";
 		lightcolor[]={0.941,0.443,1};
 		cost = 20;
 		aiAmmoUsageFlags = "64";
@@ -174,7 +174,7 @@ class CfgAmmo
 		indirectHit = 15;
 		indirectHitRange = 16;
 		explosionTime = 1;
-		effectfly="MET_BlasterBoltGlow_Pink_Fly";
+		effectfly="MET_GrenadeBlasterBoltGlow_Pink_Fly";
 		lightcolor[]={0.941,0.443,1};
 	};
 	class MET_40_GrenadeCluster_CIS_Sub2: MET_40_GrenadeCluster_CIS_Sub1
@@ -232,7 +232,7 @@ class CfgAmmo
 		submunitionInitialOffset[] = {0,0,0};
 		submunitionAutoleveling = 1;
 		submunitionDirectionType = "submunitionAutoleveling";
-		effectfly="MET_BlasterBoltGlow_Pink_Clust_Fly";
+		effectfly="MET_GrenadeBlasterBoltLight_Pink_Clust";
 		lightcolor[]={0.941,0.749,0.859};
 		directionalExplosion = 1;
 		triggerOnImpact = 1;
@@ -246,7 +246,7 @@ class CfgAmmo
 	class MET_HEAT_LauncherGrenade_CIS: MET_HEAT_LauncherGrenade
 	{
 		model="Indecisive_Armoury_Ammos\Data\40mm_Grenade\IDA_40mm_Grenade.p3d";
-		effectfly="MET_BlasterBoltGlow_Pink_HEAT_Fly";
+		effectfly="MET_GrenadeBlasterBoltGlow_Pink_HEAT_Fly";
 		lightcolor[]={0.957,0.557,1};
 		cost = 40;
 		aiAmmoUsageFlags="128 + 512";

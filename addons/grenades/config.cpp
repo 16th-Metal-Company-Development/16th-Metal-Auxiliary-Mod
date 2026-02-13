@@ -40,7 +40,8 @@ class CfgWeapons
 			"MetAux_Weaps_luma_Green_ThrowMuzzle",
 			"MetAux_Weaps_luma_Red_ThrowMuzzle",
 			"MetAux_Weaps_luma_Blue_ThrowMuzzle",
-			"MetAux_Weaps_luma_Yellow_ThrowMuzzle"
+			"MetAux_Weaps_luma_Yellow_ThrowMuzzle",
+			"MetAux_Weaps_DroidPopper_ThrowMuzzle"
 			//"MetAux_Weaps_smoke_mash_ThrowMuzzle"
 		};
 		class MetAux_Weaps_Thermal_Detonator_ThrowMuzzle: ThrowMuzzle
@@ -83,6 +84,13 @@ class CfgWeapons
 			magazines[]=
 			{
 				"Met_Weapons_Mags_flashnade"
+			};
+		};
+		class MetAux_Weaps_DroidPopper_ThrowMuzzle: ThrowMuzzle
+		{
+			magazines[]=
+			{
+				"Met_Weapons_Mags_DroidPopper"
 			};
 		};
 		class MetAux_Weaps_smoke_white_ThrowMuzzle: ThrowMuzzle

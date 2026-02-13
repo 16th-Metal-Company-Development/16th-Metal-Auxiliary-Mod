@@ -556,6 +556,92 @@ class CfgLights
 		ambient[] = { 0,0,0,0.5 };
 		intensity = 200000;
 	};
+	class MET_SmallGrenadeBlasterboltLight_Blue
+	{
+		color[] = { 0,0,0,0 };
+		diffuse[] = { 0,42,255,1 };
+		ambient[] = { 0,0,0,0.5 };
+		intensity = 665;
+		class Attenuation
+		{
+			start = 0;
+			constant = 0;
+			linear = 0;
+			quadratic = 255;
+			hardLimitStart = "1e20 * 0.7";
+			hardLimitEnd = 1e+020;
+		};
+		dayLight = 1;
+		useFlare = 1;
+		flareSize = 0.4;
+		flareMaxDistance = 6000;
+		position[] = { 0,0,-1 };
+	};
+	class MET_SmallGrenadeBlasterboltLight_Green : MET_SmallGrenadeBlasterboltLight_Blue
+	{
+		diffuse[] = { 0,255,0,1 };
+	};
+	class MET_SmallGrenadeBlasterboltLight_White : MET_SmallGrenadeBlasterboltLight_Blue
+	{
+		diffuse[] = { 255,255,200,1 };
+	};
+	class MET_SmallGrenadeBlasterboltLight_Yellow : MET_SmallGrenadeBlasterboltLight_Blue
+	{
+		diffuse[] = { 214,191,124,1 };
+	};
+	class MET_SmallGrenadeBlasterboltLight_Red : MET_SmallGrenadeBlasterboltLight_Blue
+	{
+		diffuse[] = { 255,0,0,1 };
+	};
+	class MET_GrenadeBlasterboltLight_Blue
+	{
+		color[] = { 0,0,0,0 };
+		diffuse[] = { 0,42,255,1 };
+		ambient[] = { 0,0,0,0.5 };
+		intensity = 700;
+		class Attenuation
+		{
+			start = 0;
+			constant = 0;
+			linear = 0;
+			quadratic = 255;
+			hardLimitStart = "1e20 * 0.7";
+			hardLimitEnd = 1e+020;
+		};
+		dayLight = 1;
+		useFlare = 1;
+		flareSize = 0.5;
+		flareMaxDistance = 6000;
+		position[] = { 0,0,-1 };
+	};
+	class MET_GrenadeBlasterboltLight_Red : MET_GrenadeBlasterboltLight_Blue
+	{
+		diffuse[] = { 255,0,0,1 };
+	};
+	class MET_GrenadeBlasterboltLight_Green : MET_GrenadeBlasterboltLight_Blue
+	{
+		diffuse[] = { 0,255,0,1 };
+	};
+	class MET_GrenadeBlasterboltLight_White : MET_GrenadeBlasterboltLight_Blue
+	{
+		diffuse[] = { 255,255,200,1 };
+	};
+	class MET_GrenadeBlasterboltLight_Yellow : MET_GrenadeBlasterboltLight_Blue
+	{
+		diffuse[] = { 214,191,124,1 };
+	};
+	class MET_GrenadeBlasterboltLight_Pink : MET_GrenadeBlasterboltLight_Blue
+	{
+		diffuse[] = { 240,113,255,1 };
+	};
+	class MET_GrenadeBlasterboltLight_Pink_Clust : MET_GrenadeBlasterboltLight_Blue
+	{
+		diffuse[] = { 204,68,219,1 };
+	};
+	class MET_GrenadeBlasterboltLight_Pink_HEAT : MET_GrenadeBlasterboltLight_Blue
+	{
+		diffuse[] = { 244,142,255,1 };
+	};
 	class MET_Medium_BlasterBoltLight_Blue
 	{
 		color[] = { 0,0,0,0 };
@@ -633,6 +719,29 @@ class CfgLights
 	class MET_BlasterboltLight_White : MET_BlasterboltLight_Blue
 	{
 		diffuse[] = { 255,255,200,1 };
+	};
+	class MET_BlasterboltLight_Stealth : MET_BlasterboltLight_Blue
+	{
+		diffuse[] = { 175,175,255,1 };
+		intensity = 2;
+		flareSize = 0.1;
+	};
+	class MET_BlasterboltLight_StealthIR : MET_BlasterboltLight_Blue
+	{
+		color[] = {0, 0, 0}; // No visible light
+        ambient[] = {0, 0, 0}; // No ambient light
+        intensity = 0; // No visible intensity
+        size = 1; // Size of the light
+        innerAngle = 0; // Inner cone angle
+        outerAngle = 360; // Outer cone angle
+        coneFadeCoef = 10; // How quickly the light fades
+        position[] = {0, 0, 0}; // Position of the light
+        direction[] = {0, 0, 1}; // Direction of the light
+        useFlare = 0; // Disable visible flare
+        flareSize = 0; // No visible flare
+        flareMaxDistance = 0; // No visible flare distance
+        dayLight = 0; // Not visible during the day
+        IRLight = 1; // Enable IR light (visible only under NVG)
 	};
 	class MET_BlasterboltLight_Yellow : MET_BlasterboltLight_Blue
 	{
@@ -1200,6 +1309,123 @@ class MET_BlasterBoltGlow_Stun_Fly
 		position[] = { 0,0,1 };
 	};
 };
+class MET_SmallGrenadeBlasterBoltGlow_Blue_Fly
+{
+	class Light
+	{
+		simulation = "light";
+		type = "MET_SmallGrenadeBlasterboltLight_Blue";
+		position[] = { 0,0,1 };
+	};
+};
+class MET_SmallGrenadeBlasterBoltGlow_Red_Fly
+{
+	class Light
+	{
+		simulation = "light";
+		type = "MET_SmallGrenadeBlasterboltLight_Red";
+		position[] = { 0,0,1 };
+	};
+};
+class MET_SmallGrenadeBlasterBoltGlow_Green_Fly
+{
+	class Light
+	{
+		simulation = "light";
+		type = "MET_SmallGrenadeBlasterboltLight_Green";
+		position[] = { 0,0,1 };
+	};
+};
+class MET_SmallGrenadeBlasterBoltGlow_Yellow_Fly
+{
+	class Light
+	{
+		simulation = "light";
+		type = "MET_SmallGrenadeBlasterboltLight_Yellow";
+		position[] = { 0,0,1 };
+	};
+};
+class MET_SmallGrenadeBlasterBoltGlow_White_Fly
+{
+	class Light
+	{
+		simulation = "light";
+		type = "MET_SmallGrenadeBlasterboltLight_White";
+		position[] = { 0,0,1 };
+	};
+};
+class MET_GrenadeBlasterBoltGlow_Blue_Fly
+{
+	class Light
+	{
+		simulation = "light";
+		type = "MET_GrenadeBlasterboltLight_Blue";
+		position[] = { 0,0,1 };
+	};
+};
+class MET_GrenadeBlasterBoltGlow_Red_Fly
+{
+	class Light
+	{
+		simulation = "light";
+		type = "MET_GrenadeBlasterboltLight_Red";
+		position[] = { 0,0,1 };
+	};
+};
+class MET_GrenadeBlasterBoltGlow_Green_Fly
+{
+	class Light
+	{
+		simulation = "light";
+		type = "MET_GrenadeBlasterboltLight_Green";
+		position[] = { 0,0,1 };
+	};
+};
+class MET_GrenadeBlasterBoltGlow_White_Fly
+{
+	class Light
+	{
+		simulation = "light";
+		type = "MET_GrenadeBlasterboltLight_White";
+		position[] = { 0,0,1 };
+	};
+};
+class MET_GrenadeBlasterBoltGlow_Yellow_Fly
+{
+	class Light
+	{
+		simulation = "light";
+		type = "MET_GrenadeBlasterboltLight_Yellow";
+		position[] = { 0,0,1 };
+	};
+};
+class MET_GrenadeBlasterBoltGlow_PinkFly
+{
+	class Light
+	{
+		simulation = "light";
+		type = "MET_GrenadeBlasterboltLight_Pink";
+		position[] = { 0,0,1 };
+	};
+};
+class MET_GrenadeBlasterBoltGlow_Pink_Clust_Fly
+{
+	class Light
+	{
+		simulation = "light";
+		type = "MET_GrenadeBlasterBoltLight_Pink_Clust";
+		position[] = { 0,0,1 };
+	};
+};
+class MET_GrenadeBlasterBoltGlow_Pink_HEAT_Fly
+{
+	class Light
+	{
+		simulation = "light";
+		type = "MET_GrenadeBlasterboltLight_Pink_HEAT";
+		position[] = { 0,0,1 };
+	};
+};
 class MET_BlasterBoltGlow_Blue_Fly
 {
 	class Light
@@ -1207,6 +1433,22 @@ class MET_BlasterBoltGlow_Blue_Fly
 		simulation = "light";
 		type = "MET_BlasterBoltLight_Blue";
 		position[] = { 0,0,1 };
+	};
+};
+class MET_BlasterBoltGlow_Stealth_Fly
+{
+	class Light
+	{
+		simulation = "light";
+		type = "MET_BlasterboltLight_Stealth";
+		position[] = { 0,0,1 };
+	};
+	class IRLight
+	{
+		simulation = "light";
+		type = "MET_BlasterboltLight_StealthIR";
+		position[] = { 0,0,1 };
+		nvgOnly = 1;
 	};
 };
 class MET_BlasterBoltGlow_LightBlue_Fly

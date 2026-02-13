@@ -57,7 +57,8 @@ class CfgPatches
 			"MET_DC17S_F",
 			"MET_DC17S_Dual_F",
 			"MET_DC17M_F",
-			"MET_pistol_DC15SA_F"
+			"MET_pistol_DC15SA_F",
+			"MET_E403_AC"
 		};
 		magazines[]=
 		{
@@ -211,6 +212,8 @@ class CfgPatches
 		};
 	};
 };
+#include "XtdGearModels.hpp"
+#include "XtdGearInfos.hpp"
 class Extended_FiredBIS_Eventhandlers
 {
     class CAManBase
@@ -4389,6 +4392,329 @@ class CfgWeapons
 		};
 	};
 	/*==============================================================================
+	==E-403
+	==============================================================================*/
+	/*class SFA_E403: LMG_Mk200_F
+	{
+		class WeaponSlotsInfo;
+	};*/
+	/*class MET_E403_AC: SFA_E403
+	{
+		author="Hazmat";
+		scopes=2;
+		scopeArsenal=2;
+		baseWeapons="MET_E403_AC";
+		displayName="[16th] E-403 Assault cannon";
+		WBK_UseHeavyWeaponFramework = "true";
+		discreteDistance[] = {100, 200, 300, 400, 500}; // Available zeroing distances
+        discreteDistanceInitIndex = 2; // Default zeroing is the 3rd value (300m)
+		reloadAction="GestureReload_IDA_Reload_Blaster";
+		reloadMagazineSound[]=
+		{
+			"\Indecisive_Armoury_Sounds\Blaster_reload_Vent.ogg",
+			5,
+			1,
+			100
+		};
+		magazines[]=
+		{
+			"MET_ProtonPack"
+		};
+		magazineWell[]=
+		{
+			"MET_E403_magwell"
+		};
+		modes[]=
+		{
+			"LowAuto",
+			"Auto",
+			"HighAuto"
+		};
+		caseless[]=
+		{
+			"",
+			1,
+			1,
+			1
+		};
+		soundBullet[]=
+		{
+			"caseless",
+			1
+		};
+		initSpeed = 210;
+		class Auto: Mode_FullAuto
+		{
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				closure1[]={};
+				closure2[]={};
+				soundClosure[]={};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				begin1[]=
+				{
+					"\SFA_Main\SFA_Weapons_R\E403\data\sfx\E403.wav",
+					1,
+					1,
+					1800
+				};
+				begin2[]=
+				{
+					"\SFA_Main\SFA_Weapons_R\E403\data\sfx\E403.wav",
+					1,
+					1,
+					1800
+				};
+				begin3[]=
+				{
+					"\SFA_Main\SFA_Weapons_R\E403\data\sfx\E403.wav",
+					1,
+					1,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					0.33000001,
+					"begin2",
+					0.33000001,
+					"begin3",
+					0.33000001
+				};
+			};
+			reloadTime=0.25;
+			dispersion=0.0030149999;
+			minRange=5;
+			minRangeProbab=0.30000001;
+			midRange=25;
+			midRangeProbab=0.60000002;
+			maxRange=50;
+			maxRangeProbab=0.1;
+			aiRateOfFire=2;
+			aiRateOfFireDistance=25;
+		};
+		class LowAuto: Auto
+		{
+			textureType="burst";
+			reloadTime=0.375;
+			dispersion=0.003015;
+			minRange=5;
+			minRangeProbab=0.30000001;
+			midRange=25;
+			midRangeProbab=0.60000002;
+			maxRange=50;
+			maxRangeProbab=0.1;
+			aiRateOfFire=2;
+			aiRateOfFireDistance=25;
+		};
+		class HighAuto: Auto
+		{
+			textureType="fastAuto";
+			reloadTime=0.1875;
+			dispersion=0.003015;
+			minRange=5;
+			minRangeProbab=0.30000001;
+			midRange=25;
+			midRangeProbab=0.60000002;
+			maxRange=50;
+			maxRangeProbab=0.1;
+			aiRateOfFire=2;
+			aiRateOfFireDistance=25;
+		};
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			mass=400;
+			class CowsSlot: CowsSlot
+			{
+				compatibleItems[]={};
+			};
+		};
+	};*/
+	class MET_E403AC2: LMG_Mk200_F
+	{
+		author="16th Aux Team";
+		scope=2;
+		scopeArsenal=2;
+		baseWeapon="MET_E403AC2";
+		displayName="[16th] E-403 Assault cannon";
+		picture="\SFA_Main\SFA_Weapons_R\E403\data\ui\E403_ui.paa";
+		model="SFA_Main\SFA_Weapons_R\E403\E403.p3d";
+		hiddenSelections[]=
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"SFA_Main\SFA_Weapons_R\E403\data\E403_co.paa"
+		};
+		recoil="recoil_pdw";
+		WBK_UseHeavyWeaponFramework = "true";	
+		maxZeroing=1200;
+		handAnim[]=
+		{
+			"OFP2_ManSkeleton",
+			"SFA_Main\SFA_Weapons_R\Anim\E403\E403_anim.rtm"
+		};
+		drySound[]=
+		{
+			"\SFA_Main\SFA_Weapons_Core\data\sfx\SFA_dry.wav",
+			5,
+			1,
+			10
+		};
+		fireLightDuration=0.050000001;
+		fireLightIntensity=0.40000001;
+		fireLightDiffuse[]={0,0,0.0099999998};
+		fireLightAmbient[]={0,0,0};
+		cameraDir="OP_look";
+		discreteInitIndex=0;
+		discretedistance[]={100,200,300,400};
+		discreteDistanceCameraPoint[]=
+		{
+			"OP_eye",
+			"OP_eye2",
+			"OP_eye3",
+			"OP_eye4"
+		};
+		reloadAction="GestureReload_IDA_Reload_Blaster";
+		reloadMagazineSound[]=
+		{
+			"\Indecisive_Armoury_Sounds\Blaster_reload_Vent.ogg",
+			5,
+			1,
+			100
+		};
+		magazines[]=
+		{
+			"MET_ProtonPack"
+		};
+		magazineWell[]=
+		{
+			"MET_E403_magwell"
+		};
+		modes[]=
+		{
+			"LowAuto",
+			"Auto",
+			"HighAuto"
+		};
+		caseless[]=
+		{
+			"",
+			1,
+			1,
+			1
+		};
+		soundBullet[]=
+		{
+			"caseless",
+			1
+		};
+		initSpeed = 210;
+		class Auto: Mode_FullAuto
+		{
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				closure1[]={};
+				closure2[]={};
+				soundClosure[]={};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				begin1[]=
+				{
+					"\SFA_Main\SFA_Weapons_R\E403\data\sfx\E403.wav",
+					1,
+					1,
+					1800
+				};
+				begin2[]=
+				{
+					"\SFA_Main\SFA_Weapons_R\E403\data\sfx\E403.wav",
+					1,
+					1,
+					1800
+				};
+				begin3[]=
+				{
+					"\SFA_Main\SFA_Weapons_R\E403\data\sfx\E403.wav",
+					1,
+					1,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					0.33000001,
+					"begin2",
+					0.33000001,
+					"begin3",
+					0.33000001
+				};
+			};
+			reloadTime=0.25;
+			dispersion=0.0030149999;
+			minRange=5;
+			minRangeProbab=0.30000001;
+			midRange=25;
+			midRangeProbab=0.60000002;
+			maxRange=50;
+			maxRangeProbab=0.1;
+			aiRateOfFire=2;
+			aiRateOfFireDistance=25;
+		};
+		class LowAuto: Auto
+		{
+			textureType="burst";
+			reloadTime=0.375;
+			dispersion=0.003015;
+			minRange=5;
+			minRangeProbab=0.30000001;
+			midRange=25;
+			midRangeProbab=0.60000002;
+			maxRange=50;
+			maxRangeProbab=0.1;
+			aiRateOfFire=2;
+			aiRateOfFireDistance=25;
+		};
+		class HighAuto: Auto
+		{
+			textureType="fastAuto";
+			reloadTime=0.1875;
+			dispersion=0.003015;
+			minRange=5;
+			minRangeProbab=0.30000001;
+			midRange=25;
+			midRangeProbab=0.60000002;
+			maxRange=50;
+			maxRangeProbab=0.1;
+			aiRateOfFire=2;
+			aiRateOfFireDistance=25;
+		};
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			mass=400;
+			class CowsSlot: CowsSlot
+			{
+				compatibleItems[]={};
+			};
+		};
+	};
+	/*==============================================================================
 	==E-15
 	==============================================================================*/
 	class MET_E15: LMG_Mk200_F
@@ -5190,6 +5516,56 @@ class CfgWeapons
 			0.56234097,
 			1,
 			10
+		};
+	};
+	/*==============================================================================
+	==DC-15X
+	==============================================================================*/
+	class JLTS_DC15X: arifle_MX_Base_F
+	{
+		class WeaponSlotsInfo;
+	};
+	class MET_DC15X_Special_Purp: JLTS_DC15X
+	{
+		displayName="[16th] DC-15X (Special Purpose)";
+		scope=2;
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			class CowsSlot: CowsSlot
+			{
+				linkProxy="\A3\data_f\proxies\weapon_slots\TOP";
+				compatibleItems[]=
+				{
+					"MET_Optic_Scope_WestarM5"
+				};
+			};
+			class PointerSlot: PointerSlot
+			{
+				linkProxy="\A3\data_f\proxies\weapon_slots\SIDE";
+				compatibleItems[]=
+				{
+					"acc_flashlight",
+					"acc_pointer_IR"
+				};
+			};
+			class UnderBarrelSlot: UnderBarrelSlot
+			{
+				linkProxy="\A3\data_f_mark\proxies\weapon_slots\UNDERBARREL";
+				compatibleItems[]={};
+			};
+			class MuzzleSlot: MuzzleSlot
+			{
+				linkProxy="\A3\data_f\proxies\weapon_slots\MUZZLE";
+				compatibleItems[]=
+				{
+					"ShadwCmpany_Suppresor_Module_DC15",
+					"ShadwCmpany_Suppresor_Module_DC19",
+					"ShadwCmpany_Suppresor_WestarM5",
+					"ShadwCmpany_Suppresor_Barrel_DCX19",
+					"ShadwCmpany_Suppresor_Barrel_DMR_DCX19",
+					"ShadwCmpany_Suppresor_Module_DC21"
+				};
+			};
 		};
 	};
 	/*==============================================================================
@@ -8711,21 +9087,44 @@ class CfgWeapons
 	/*==============================================================================
 	==DC-19E
 	==============================================================================*/
-	/*class LFP_DC19
+	/*class MET_LFP_rifle_base: Rifle
 	{
-		class WeaponSlotsInfo;
+		author="Last Force Project";
+		scope=1;
+		class WeaponSlotsInfo
+		{
+			class SlotInfo;
+		};
+		class GunParticles;
+		class AnimationSources;
 	};
-	class MET_DC19: LFP_DC19
+	class MET_DC19: MET_LFP_rifle_base
 	{
-		JLTS_hasElectronics=1;
-		JLTS_hasEMPProtection=1;
-		JLTS_friedItem="JLTS_DC15A_fried";
-		JLTS_repairTime=33;
-		displayName="[16th] DC-19E";
-		descriptionShort="Suppressed Blaster Carbine";
+		scope=2;
+		model="z\MET\addons\weapons\infantry_weap\models\dc19_mlod.p3d";
+		handAnim[]=
+		{
+			"OFP2_ManSkeleton",
+			"LF_Weapon_Unit\dc15s\anims\dc15s_testhand.rtm"
+		};
+		picture="z\MET\addons\weapons\data\dc19\tex\dc19.paa";
 		magazines[]=
 		{
 			"MET_DC19E_mag"
+		};
+		displayname="DC-19 carbine";
+		descriptionShort="Clone trooper carbine";
+		selectionFireAnim="zasleh";
+		class Library
+		{
+			libTextDesc="";
+		};
+		drySound[]=
+		{
+			"\3AS\3AS_Main\Sounds\Blaster_empty",
+			2,
+			1,
+			20
 		};
 		reloadAction="GestureReload_IDA_Reload_Blaster";
 		reloadMagazineSound[]=
@@ -8735,7 +9134,211 @@ class CfgWeapons
 			1,
 			100
 		};
-		magazineWell[]={};
+		soundBullet[]={};
+		modes[]=
+		{
+			"Single",
+			"FullAuto",
+			"close",
+			"short",
+			"medium"
+		};
+		fireLightDuration=0.050000001;
+		fireLightIntensity=0.40000001;
+		fireLightDiffuse[]={0,0,0.0099999998};
+		fireLightAmbient[]={0,0,0};
+		class Single: Mode_SemiAuto
+		{
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				closure1[]={};
+				closure2[]={};
+				soundClosure[]={};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				begin1[]=
+				{
+					"z\MET\addons\weapons\data\dc19\sounds\DC19.wss",
+					1,
+					1,
+					1800
+				};
+				begin2[]=
+				{
+					"z\MET\addons\weapons\data\dc19\sounds\DC19.wss",
+					1,
+					1,
+					1800
+				};
+				begin3[]=
+				{
+					"z\MET\addons\weapons\data\dc19\sounds\DC19.wss",
+					1,
+					1,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					0.33000001,
+					"begin2",
+					0.33000001,
+					"begin3",
+					0.33000001
+				};
+				beginwater1[]=
+				{
+					"z\MET\addons\weapons\data\dc19\sounds\DC19.wss",
+					1,
+					1,
+					1800
+				};
+				soundBeginWater[]=
+				{
+					"beginwater1",
+					0.33000001
+				};
+			};
+			reloadTime=0.15000001;
+			dispersion=9.9900001e-007;
+			minRange=5;
+			minRangeProbab=0.30000001;
+			midRange=25;
+			midRangeProbab=0.60000002;
+			maxRange=50;
+			maxRangeProbab=0.1;
+			aiRateOfFire=2;
+			aiRateOfFireDistance=25;
+		};
+		class FullAuto: Mode_FullAuto
+		{
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				closure1[]={};
+				closure2[]={};
+				soundClosure[]={};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				begin1[]=
+				{
+					"z\MET\addons\weapons\data\dc19\sounds\DC19.wss",
+					1,
+					1,
+					1800
+				};
+				begin2[]=
+				{
+					"z\MET\addons\weapons\data\dc19\sounds\DC19.wss",
+					1,
+					1,
+					1800
+				};
+				begin3[]=
+				{
+					"z\MET\addons\weapons\data\dc19\sounds\DC19.wss",
+					1,
+					1,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					0.33000001,
+					"begin2",
+					0.33000001,
+					"begin3",
+					0.33000001
+				};
+				beginwater1[]=
+				{
+					"z\MET\addons\weapons\data\dc19\sounds\DC19.wss",
+					1,
+					1,
+					1800
+				};
+				soundBeginWater[]=
+				{
+					"beginwater1",
+					0.33000001
+				};
+			};
+			reloadTime=0.15000001;
+			dispersion=0.0004545;
+			minRange=5;
+			minRangeProbab=0.30000001;
+			midRange=25;
+			midRangeProbab=0.60000002;
+			maxRange=50;
+			maxRangeProbab=0.1;
+			aiRateOfFire=2;
+			aiRateOfFireDistance=25;
+		};
+		class close: Single
+		{
+			showToPlayer=0;
+			aiRateOfFire=0.25;
+			aiRateOfFireDistance=400;
+			minRange=0;
+			minRangeProbab=0.050000001;
+			midRange=200;
+			midRangeProbab=0.69999999;
+			maxRange=400;
+			maxRangeProbab=0.2;
+		};
+		class short: close
+		{
+			aiRateOfFire=0.5;
+			aiRateOfFireDistance=500;
+			minRange=300;
+			minRangeProbab=0.2;
+			midRange=400;
+			midRangeProbab=0.69999999;
+			maxRange=500;
+			maxRangeProbab=0.2;
+		};
+		class medium: close
+		{
+			aiRateOfFire=1;
+			aiRateOfFireDistance=900;
+			minRange=400;
+			minRangeProbab=0.2;
+			midRange=700;
+			midRangeProbab=0.69999999;
+			maxRange=900;
+			maxRangeProbab=0.2;
+		};
+		inertia=1.4;
+		dexterity=1.7;
+		initSpeed=-1;
+		canShootInWater=1;
+		recoil="LFP_recoil";
+		maxRecoilSway=0.015;
+		swayDecaySpeed=1;
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			mass=60;
+			class CowsSlot: Cowsslot
+			{
+				compatibleItems[]=
+				{
+					""
+				};
+			};
+		};
 		modelOptics="z\MET\addons\weapons\scopes\big_cross_blue_full.p3d";
 		class OpticsModes
 		{
@@ -8760,36 +9363,545 @@ class CfgWeapons
 			};
 			class DC19scope_scope: DC19scope_sights
 			{
-				opticsID=2;
+				opticsID=1;
 				useModelOptics=1;
 				opticsPPEffects[]=
 				{
-					"OpticsCHAbera5",
-					"OpticsBlur5"
+					"OpticsCHAbera2",
+					"OpticsBlur3"
 				};
+				opticsZoomMin=0.0625;
+				opticsZoomMax=0.125;
+				opticsZoomInit=0.125;
+				discreteDistance[]={100,200,300,400,500,600,700,800,900,1000,1100,1200};
+				discreteDistanceInitIndex=1;
+				distanceZoomMin=300;
+				distanceZoomMax=1200;
+				discretefov[]=
+				{
+					"0.25/3",
+					"0.25/6",
+					"0.25/9",
+					"0.25/12",
+					"0.25/15"
+				};
+				discreteInitIndex=0;
+				memoryPointCamera="eye";
 				visionMode[]=
 				{
 					"Normal",
 					"NVG",
 					"TI"
 				};
-				thermalMode[]={0,1};
-				opticsZoomMin=0.010000001;
-				opticsZoomMax=0.1;
-				opticsZoomInit=0.1;
-				memoryPointCamera="opticView";
 				opticsFlare=1;
 				opticsDisablePeripherialVision=1;
-				distanceZoomMin=400;
-				distanceZoomMax=400;
-				weaponInfoType="RscWeaponEmpty";
+				cameraDir="";
 			};
+		};
+	};*/
+	/*==============================================================================
+	==DC-19E MkII
+	==============================================================================*/
+	class ShdwCmpny_DC19_F: Rifle_Long_Base_F
+	{
+		class WeaponSlotsInfo;
+	};
+	class MET_DC19MkII: ShdwCmpny_DC19_F
+	{
+		author="Hazmat";
+		scope=2;
+		magazines[]=
+		{
+			"MET_DC19E_mag",
+			"MET_DC15A_mag"
+		};
+		magazineWell[]=
+		{
+			"MET_DC19_MagWell"
+		};
+		displayname="[16th] DC-19E MkII";
+		descriptionShort="Stealth Carbine";
+		reloadAction="GestureReload_IDA_Reload_Blaster";
+		reloadMagazineSound[]=
+		{
+			"\Indecisive_Armoury_Sounds\Blaster_reload_Vent.ogg",
+			5,
+			1,
+			100
+		};
+		drySound[]=
+		{
+			"LF_Weapon_Unit\main\sounds\dc15_empty.wss",
+			0.39810717,
+			1,
+			20
+		};
+		recoil="3AS_recoil_DC15S";
+		modes[]=
+		{
+			"Single",
+			"Burst",
+			"FullAuto"
+		};
+		class FullAuto: Mode_FullAuto
+		{
+			sounds[]=
+			{
+				"StandardSound",
+				"SilencedSound"
+			};
+			class BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				closure1[]={};
+				closure2[]={};
+				soundClosure[]={};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				begin1[] = {"ShadowLegion_Weapons\data\DC15\DC15C2\DC15A3_Auto_1.ogg",1,1,900};
+				begin2[] = {"ShadowLegion_Weapons\data\DC15\DC15C2\DC15A3_Auto_1.ogg",1,1,900};
+				begin3[] = {"ShadowLegion_Weapons\data\DC15\DC15C2\DC15A3_Auto_2.ogg",1,1,900};
+				begin4[] = {"ShadowLegion_Weapons\data\DC15\DC15C2\DC15A3_Auto_1.ogg",1,1,900};
+				begin5[] = {"ShadowLegion_Weapons\data\DC15\DC15C2\DC15A3_Auto_1.ogg",1,1,900};
+				begin6[] = {"ShadowLegion_Weapons\data\DC15\DC15C2\DC15A3_Auto_1.ogg",1,1,900};
+				begin7[] = {"ShadowLegion_Weapons\data\DC15\DC15C2\DC15A3_Auto_3.ogg",1,1,200};
+				beginwater1[] = {"\ShadowLegion_Weapons\data\Underwater_Firing.ogg",1,1,200};
+				soundBegin[] = {"begin1",0.5,"begin2",0.5,"begin3",0.5,"begin4",0.5,"begin5",0.5,"begin6",0.5,"begin7",0.5};
+				soundBeginWater[] = {"beginwater1",0.5};
+			};
+			class SilencedSound: BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				begin1[] = {"ShadowLegion_Weapons\data\DC19Surpressed.ogg",2,1,300};
+				begin2[] = {"ShadowLegion_Weapons\data\DC19Surpressed.ogg",2,1,300};
+				begin3[] = {"ShadowLegion_Weapons\data\DC19Surpressed.ogg",2,1,300};
+				begin4[] = {"ShadowLegion_Weapons\data\DC19Surpressed.ogg",2,1,300};
+				begin5[] = {"ShadowLegion_Weapons\data\DC19Surpressed.ogg",2,1,300};
+				begin6[] = {"ShadowLegion_Weapons\data\DC19Surpressed.ogg",2,1,300};
+				beginwater1[] = {"\ShadowLegion_Weapons\data\Underwater_Firing.ogg",1,1,200};
+				soundBegin[] = {"begin1",0.5,"begin2",0.5,"begin3",0.5,"begin4",0.5,"begin5",0.5,"begin6",0.5};
+				soundBeginWater[] = {"beginwater1",0.5};
+			};
+			reloadTime=0.0857142857;
+			dispersion=0.0004;
+			minRange=0;
+			minRangeProbab=0.9;
+			midRange=15;
+			midRangeProbab=0.7;
+			maxRange=30;
+			maxRangeProbab=0.1;
+			aiRateOfFire=1e-006;
+		};
+		class Burst: Mode_Burst
+		{
+			sounds[]=
+			{
+				"StandardSound",
+				"SilencedSound"
+			};
+			class BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				closure1[]={};
+				closure2[]={};
+				soundClosure[]={};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				begin1[] = {"ShadowLegion_Weapons\data\DC15\DC15C2\DC15A3_Auto_1.ogg",1,1,900};
+				begin2[] = {"ShadowLegion_Weapons\data\DC15\DC15C2\DC15A3_Auto_1.ogg",1,1,900};
+				begin3[] = {"ShadowLegion_Weapons\data\DC15\DC15C2\DC15A3_Auto_2.ogg",1,1,900};
+				begin4[] = {"ShadowLegion_Weapons\data\DC15\DC15C2\DC15A3_Auto_1.ogg",1,1,900};
+				begin5[] = {"ShadowLegion_Weapons\data\DC15\DC15C2\DC15A3_Auto_1.ogg",1,1,900};
+				begin6[] = {"ShadowLegion_Weapons\data\DC15\DC15C2\DC15A3_Auto_1.ogg",1,1,900};
+				begin7[] = {"ShadowLegion_Weapons\data\DC15\DC15C2\DC15A3_Auto_3.ogg",1,1,200};
+				beginwater1[] = {"\ShadowLegion_Weapons\data\Underwater_Firing.ogg",1,1,200};
+				soundBegin[] = {"begin1",0.5,"begin2",0.5,"begin3",0.5,"begin4",0.5,"begin5",0.5,"begin6",0.5,"begin7",0.5};
+				soundBeginWater[] = {"beginwater1",0.5};
+			};
+			class SilencedSound: BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				begin1[] = {"ShadowLegion_Weapons\data\DC19Surpressed.ogg",2,1,300};
+				begin2[] = {"ShadowLegion_Weapons\data\DC19Surpressed.ogg",2,1,300};
+				begin3[] = {"ShadowLegion_Weapons\data\DC19Surpressed.ogg",2,1,300};
+				begin4[] = {"ShadowLegion_Weapons\data\DC19Surpressed.ogg",2,1,300};
+				begin5[] = {"ShadowLegion_Weapons\data\DC19Surpressed.ogg",2,1,300};
+				begin6[] = {"ShadowLegion_Weapons\data\DC19Surpressed.ogg",2,1,300};
+				beginwater1[] = {"\ShadowLegion_Weapons\data\Underwater_Firing.ogg",1,1,200};
+				soundBegin[] = {"begin1",0.5,"begin2",0.5,"begin3",0.5,"begin4",0.5,"begin5",0.5,"begin6",0.5};
+				soundBeginWater[] = {"beginwater1",0.5};
+			};
+			burst=2;
+			textureType="dual";
+			reloadTime=0.0666666667;
+			dispersion=0.0004;
+			minRange=0;
+			minRangeProbab=0.9;
+			midRange=15;
+			midRangeProbab=0.7;
+			maxRange=30;
+			maxRangeProbab=0.1;
+			aiRateOfFire=1e-006;
+		};
+		class Single: Mode_SemiAuto
+		{
+			sounds[]=
+			{
+				"StandardSound",
+				"SilencedSound"
+			};
+			class BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				closure1[]={};
+				closure2[]={};
+				soundClosure[]={};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				begin1[] = {"ShadowLegion_Weapons\data\DC15\DC15C2\DC15A3_Auto_1.ogg",1,1,900};
+				begin2[] = {"ShadowLegion_Weapons\data\DC15\DC15C2\DC15A3_Auto_1.ogg",1,1,900};
+				begin3[] = {"ShadowLegion_Weapons\data\DC15\DC15C2\DC15A3_Auto_2.ogg",1,1,900};
+				begin4[] = {"ShadowLegion_Weapons\data\DC15\DC15C2\DC15A3_Auto_1.ogg",1,1,900};
+				begin5[] = {"ShadowLegion_Weapons\data\DC15\DC15C2\DC15A3_Auto_1.ogg",1,1,900};
+				begin6[] = {"ShadowLegion_Weapons\data\DC15\DC15C2\DC15A3_Auto_1.ogg",1,1,900};
+				begin7[] = {"ShadowLegion_Weapons\data\DC15\DC15C2\DC15A3_Auto_3.ogg",1,1,200};
+				beginwater1[] = {"\ShadowLegion_Weapons\data\Underwater_Firing.ogg",1,1,200};
+				soundBegin[] = {"begin1",0.5,"begin2",0.5,"begin3",0.5,"begin4",0.5,"begin5",0.5,"begin6",0.5,"begin7",0.5};
+				soundBeginWater[] = {"beginwater1",0.5};
+			};
+			class SilencedSound: BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				begin1[] = {"ShadowLegion_Weapons\data\DC19Surpressed.ogg",2,1,300};
+				begin2[] = {"ShadowLegion_Weapons\data\DC19Surpressed.ogg",2,1,300};
+				begin3[] = {"ShadowLegion_Weapons\data\DC19Surpressed.ogg",2,1,300};
+				begin4[] = {"ShadowLegion_Weapons\data\DC19Surpressed.ogg",2,1,300};
+				begin5[] = {"ShadowLegion_Weapons\data\DC19Surpressed.ogg",2,1,300};
+				begin6[] = {"ShadowLegion_Weapons\data\DC19Surpressed.ogg",2,1,300};
+				beginwater1[] = {"\ShadowLegion_Weapons\data\Underwater_Firing.ogg",1,1,200};
+				soundBegin[] = {"begin1",0.5,"begin2",0.5,"begin3",0.5,"begin4",0.5,"begin5",0.5,"begin6",0.5};
+				soundBeginWater[] = {"beginwater1",0.5};
+			};
+			reloadTime=0.0857142857;
+			dispersion=0.0004;
+			minRange=0;
+			minRangeProbab=0.9;
+			midRange=15;
+			midRangeProbab=0.7;
+			maxRange=30;
+			maxRangeProbab=0.1;
+			aiRateOfFire=1e-006;
 		};
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
 			mass=70;
+			class CowsSlot: Cowsslot
+			{
+				compatibleItems[]=
+				{
+					"MET_optic_ACOG",
+					"ShadwCmpany_Electroscope",
+					"ShdwCmpny_Optic_Scope_WestarM5"
+				};
+			};
+			class MuzzleSlot: MuzzleSlot
+			{
+				compatibleItems[]=
+				{
+					"ShadwCmpany_Suppresor_Module_DC19"
+				};
+			};
+			class PointerSlot: PointerSlot
+			{
+				compatibleItems[]={};
+			};
 		};
-	};*/
+	};
+	class MET_DC19MkIIFolded: MET_DC19MkII
+	{
+		model = "\ShadowLegion_Weapons\data\DC15\DC19\models\DC19_S_Folded.p3d";
+		displayName="[16th] DC-19E MkII (Folded)";
+	};
+	/*==============================================================================
+	==DC-21
+	==============================================================================*/
+	class Pistol_Base_F;
+	class ShdwCmpny_pistol_DC21_Base: Pistol_Base_F
+	{
+		class WeaponSlotsInfo;
+	};
+	class MET_DC21: ShdwCmpny_pistol_DC21_Base
+	{
+		author="Hazmat";
+		scope=2;
+		displayName="[16th] DC-21";
+		recoil="MET_recoil_Raff";
+		magazines[]=
+		{
+			"MET_DC21_mag"
+		};
+		magazineWell[]=
+		{
+			"MET_DC21_MagWell"
+		};
+		modes[]=
+		{
+			"Single",
+			"Burst"
+		};
+		drySound[]=
+		{
+			"\3AS\3AS_Main\Sounds\Blaster_empty",
+			2,
+			1,
+			20
+		};
+		reloadAction="GestureReload_IDA_Reload_BlasterPistol";
+		reloadMagazineSound[]=
+		{
+			"\Indecisive_Armoury_Sounds\Blaster_reload_Vent.ogg",
+			5,
+			1,
+			100
+		};
+		class Burst: Mode_Burst
+		{
+			sounds[]=
+			{
+				"StandardSound",
+				"SilencedSound"
+			};
+			class BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				closure1[]={};
+				closure2[]={};
+				soundClosure[]={};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				begin1[]=
+				{
+					"\Indecisive_Armoury_Sounds\Republic\DC17.ogg",
+					1.25,
+					1,
+					1800
+				};
+				begin2[]=
+				{
+					"\Indecisive_Armoury_Sounds\Republic\DC17.ogg",
+					1.25,
+					1.025,
+					1800
+				};
+				begin3[]=
+				{
+					"\Indecisive_Armoury_Sounds\Republic\DC17.ogg",
+					1.25,
+					0.94999999,
+					1800
+				};
+				begin4[]=
+				{
+					"\Indecisive_Armoury_Sounds\Republic\DC17.ogg",
+					1.25,
+					1.05,
+					1800
+				};
+				begin5[]=
+				{
+					"\Indecisive_Armoury_Sounds\Republic\DC17.ogg",
+					1.25,
+					0.89999998,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					0.2,
+					"begin2",
+					0.2,
+					"begin3",
+					0.2,
+					"begin4",
+					0.2,
+					"begin5",
+					0.2
+				};
+				beginwater1[]=
+				{
+					"\Indecisive_Armoury_Sounds\Republic\DC17.ogg",
+					1,
+					1,
+					400
+				};
+				soundBeginWater[]=
+				{
+					"beginwater1",
+					1
+				};
+			};
+			class SilencedSound: BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				begin1[] = {"ShadowLegion_Weapons\data\surpressed_1.ogg",2,1,150};
+				begin2[] = {"ShadowLegion_Weapons\data\surpressed_2.ogg",2,1,150};
+				begin3[] = {"ShadowLegion_Weapons\data\surpressed_3.ogg",2,1,150};
+				begin4[] = {"ShadowLegion_Weapons\data\surpressed_4.ogg",2,1,150};
+				begin5[] = {"ShadowLegion_Weapons\data\surpressed_5.ogg",2,1,150};
+				begin6[] = {"ShadowLegion_Weapons\data\surpressed_6.ogg",2,1,150};
+				beginwater1[] = {"\ShadowLegion_Weapons\data\Underwater_Firing.ogg",1,1,150};
+				soundBegin[] = {"begin1",0.5,"begin2",0.5,"begin3",0.5,"begin4",0.5,"begin5",0.5,"begin6",0.5};
+				soundBeginWater[] = {"beginwater1",0.5};
+			};
+			burst=3;
+			textureType="burst";
+			reloadTime=0.0666666667;
+			dispersion=0.0004;
+			minRange=0;
+			minRangeProbab=0.9;
+			midRange=15;
+			midRangeProbab=0.7;
+			maxRange=30;
+			maxRangeProbab=0.1;
+			aiRateOfFire=1e-006;
+		};
+		class Single: Mode_SemiAuto
+		{
+			sounds[]=
+			{
+				"StandardSound",
+				"SilencedSound"
+			};
+			class BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				closure1[]={};
+				closure2[]={};
+				soundClosure[]={};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				begin1[]=
+				{
+					"\Indecisive_Armoury_Sounds\Republic\DC17.ogg",
+					1.25,
+					1,
+					1800
+				};
+				begin2[]=
+				{
+					"\Indecisive_Armoury_Sounds\Republic\DC17.ogg",
+					1.25,
+					1.025,
+					1800
+				};
+				begin3[]=
+				{
+					"\Indecisive_Armoury_Sounds\Republic\DC17.ogg",
+					1.25,
+					0.94999999,
+					1800
+				};
+				begin4[]=
+				{
+					"\Indecisive_Armoury_Sounds\Republic\DC17.ogg",
+					1.25,
+					1.05,
+					1800
+				};
+				begin5[]=
+				{
+					"\Indecisive_Armoury_Sounds\Republic\DC17.ogg",
+					1.25,
+					0.89999998,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					0.2,
+					"begin2",
+					0.2,
+					"begin3",
+					0.2,
+					"begin4",
+					0.2,
+					"begin5",
+					0.2
+				};
+				beginwater1[]=
+				{
+					"\Indecisive_Armoury_Sounds\Republic\DC17.ogg",
+					1,
+					1,
+					400
+				};
+				soundBeginWater[]=
+				{
+					"beginwater1",
+					1
+				};
+			};
+			class SilencedSound: BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				begin1[] = {"ShadowLegion_Weapons\data\surpressed_1.ogg",2,1,75};
+				begin2[] = {"ShadowLegion_Weapons\data\surpressed_2.ogg",2,1,75};
+				begin3[] = {"ShadowLegion_Weapons\data\surpressed_3.ogg",2,1,75};
+				begin4[] = {"ShadowLegion_Weapons\data\surpressed_4.ogg",2,1,75};
+				begin5[] = {"ShadowLegion_Weapons\data\surpressed_5.ogg",2,1,75};
+				begin6[] = {"ShadowLegion_Weapons\data\surpressed_6.ogg",2,1,75};
+				beginwater1[] = {"\ShadowLegion_Weapons\data\Underwater_Firing.ogg",1,1,75};
+				soundBegin[] = {"begin1",0.5,"begin2",0.5,"begin3",0.5,"begin4",0.5,"begin5",0.5,"begin6",0.5};
+				soundBeginWater[] = {"beginwater1",0.5};
+			};
+			reloadTime=0.0857142857;
+			dispersion=0.0004;
+			minRange=0;
+			minRangeProbab=0.9;
+			midRange=15;
+			midRangeProbab=0.7;
+			maxRange=30;
+			maxRangeProbab=0.1;
+			aiRateOfFire=1e-006;
+		};
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			mass=30;
+			class CowsSlot: Cowsslot
+			{
+				compatibleItems[]=
+				{
+					"OPTRE_M6C_Scope"
+				};
+			};
+			class MuzzleSlot: MuzzleSlot
+			{
+				compatibleItems[]=
+				{
+					"ShadwCmpany_Suppresor_Module_DC19",
+					"ShdwCmpny_Barrel_Module_DC21",
+					"ShadwCmpany_Suppresor_Module_DC21"
+				};
+			};
+			class PointerSlot: PointerSlot
+			{
+				compatibleItems[]=
+				{
+					"acc_flashlight_pistol"
+				};
+			};
+		};
+	};
 	/*==============================================================================
 	==DC-19 Family
 	==============================================================================*/
@@ -10167,8 +11279,7 @@ class CfgWeapons
 			soundBurst=0;
 			sounds[]=
 			{
-				"StandardSound",
-				"SilencedSound"
+				"StandardSound"
 			};
 			class BaseSoundModeType;
 			class StandardSound: BaseSoundModeType
@@ -10194,8 +11305,7 @@ class CfgWeapons
 			burst=5;
 			sounds[]=
 			{
-				"StandardSound",
-				"SilencedSound"
+				"StandardSound"
 			};
 			class BaseSoundModeType;
 			class StandardSound: BaseSoundModeType
@@ -10220,8 +11330,7 @@ class CfgWeapons
 			soundBurst=0;
 			sounds[]=
 			{
-				"StandardSound",
-				"SilencedSound"
+				"StandardSound"
 			};
 			class BaseSoundModeType;
 			class StandardSound: BaseSoundModeType
@@ -12158,6 +13267,71 @@ class CfgWeapons
 		};
 		inertia=0;
 	};
+	class ShadwCmpany_optic_Acog;
+	class ShadwCmpany_Electroscope;
+	class ShdwCmpny_Optic_Scope_WestarM5;
+	class MET_optic_ACOG: ShadwCmpany_optic_Acog
+	{
+		displayName="[16th] ACOG";
+		scope=2;
+		descriptionShort="Holographic Scope";
+		class ItemInfo: InventoryOpticsItem_Base_F
+		{
+			mass=4;
+			modelOptics = "\A3\Weapons_F\empty";
+			optics = 1;
+			class OpticsModes
+			{
+				class AMk1_Scope_nozoom
+				{
+					cameraDir = "";
+					distanceZoomMax = 200;
+					distanceZoomMin = 200;
+					memoryPointCamera = "opticview";
+					opticsDisablePeripherialVision = 1;
+					opticsFlare = 1;
+					opticsID = 1;
+					opticsPPEffects[] = {"OpticsRadialBlur1","OpticsBlur1"};
+					opticsZoomInit = 0.325;
+					opticsZoomMax = 0.325;
+					opticsZoomMin = 0.325;
+					useModelOptics = 0;
+					visionMode[] = {};
+				};
+				class AMk1_scope
+				{
+					distanceZoomMax = 300;
+					distanceZoomMin = 300;
+					memoryPointCamera = "opticview";
+					opticsDisablePeripherialVision = 1;
+					opticsFlare = 1;
+					opticsID = 2;
+					opticsPPEffects[] = {"OpticsRadialBlur1","OpticsBlur1"};
+					opticsZoomInit = 0.125;
+					opticsZoomMax = 0.125;
+					opticsZoomMin = 0.125;
+					useModelOptics = 0;
+					visionMode[] = {};
+				};
+				class AMkI
+				{
+					cameraDir = "";
+					distanceZoomMax = 200;
+					distanceZoomMin = 200;
+					memoryPointCamera = "eye";
+					opticsDisablePeripherialVision = 0;
+					opticsFlare = 0;
+					opticsID = 3;
+					opticsPPEffects[] = {"Default"};
+					opticsZoomInit = 0.75;
+					opticsZoomMax = 1.25;
+					opticsZoomMin = 0.25;
+					useModelOptics = 0;
+					visionMode[] = {};
+				};
+			};
+		}
+	}
 	/*==============================================================================
 	==RPS-6
 	==============================================================================*/
@@ -12327,7 +13501,6 @@ class CfgWeapons
 	/*==============================================================================
 	==DC-17
 	==============================================================================*/
-	class Pistol_Base_F;
 	class hgun_P07_F: Pistol_Base_F
 	{
 		class WeaponSlotsInfo;
@@ -12359,6 +13532,13 @@ class CfgWeapons
 			1,
 			100
 		};
+		drySound[]=
+		{
+			"MRC\JLTS\weapons\Core\sounds\weapon_dry.wss",
+			5,
+			1,
+			10
+		};
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -12388,13 +13568,6 @@ class CfgWeapons
 			"FullAuto"
 		};
 		fireLightDiffuse[]={0,0,1};
-		drySound[]=
-		{
-			"MRC\JLTS\weapons\Core\sounds\weapon_dry.wss",
-			5,
-			1,
-			10
-		};
 		muzzles[]=
 		{
 			"this",
@@ -13915,6 +15088,15 @@ class CfgMagazineWells
 			"MET_blaster_pistol_battery"
 		};
 	};
+	class MET_E403_magwell
+	{
+		MET_E403_Magazines[]=
+		{
+			"MET_ProtonPack",
+			"MET_HEATProtonPack",
+			"MET_ClusterProtonPack"
+		};
+	}
 	class MET_E15_MagWell
 	{
 		MET_E15_Magazines[]=
@@ -14068,11 +15250,34 @@ class CfgMagazineWells
 			"MET_blaster_pistol_battery",
 			"JLTS_E5_mag",
 			"3AS_60Rnd_EM50_RedPlasma",
-			"DBA_58x42mm_BP87D_x40_mag",
 			"Aux212_JLTS_E5_Mag",
 			"ls_magazine_e5",
 			"Metal_E5_Mag",
 			"Metal_E5_BX_Mag"
+		};
+	};
+	class MET_DC19_MagWell
+	{
+		MET_DC19_Mags[]=
+		{
+			"MET_DC19E_mag"
+		};
+		MET_DC15_Mags[]=
+		{
+			"MET_DC15A_mag",
+			"MET_DC15S_mag"
+		};
+	};
+	class MET_DC21_MagWell
+	{
+		MET_DC21_Mags[]=
+		{
+			"MET_DC21_mag",
+			"MET_DC21_Stealth_mag"
+		};
+		MET_DC17SA_Mags[]=
+		{
+			"MET_blaster_pistol_battery"
 		};
 	};
 	class MET_CinCar_MagWell
@@ -14332,10 +15537,11 @@ class CfgMagazines
 		count=20;
 		displayName="[16th] Stealth Energy Cell";
 		displayNameShort="Energy Cell";
-		descriptionShort="Energy cell for the DC-15A, DC-15S, and DC-15L";
+		descriptionShort="Energy cell for the DC-19E";
 		ammo="MET_blasterbolt_Stealth";
 		tracersEvery=1;
-		mass=0.5;
+		mass=7.5;
+		initSpeed = 310;
 	};
 	class MET_DC15L_mag: JLTS_DC15A_mag
 	{
@@ -14481,6 +15687,48 @@ class CfgMagazines
 		displayName="[16th] Z6 Energy Cell (Green)";
 		displayNameShort="Z6 Energy Cell (Green)";
 		ammo="MET_blasterbolt_low_green";
+	};
+	class MET_ProtonPack: MET_blaster_battery
+	{
+		author="Hazmat";
+		scope=2;
+		picture="\3AS\3AS_Weapons\Data\UI\3as_box_b.paa";
+		count=75;
+		displayName="[16th] E403 HE Proton Pack";
+		displayNameShort="E403 HE Proton Pack";
+		descriptionShort="HE Proton Pack for the E403";
+		ammo="MET_25HE_LauncherGrenade";
+		tracersEvery=1;
+		initSpeed=210;
+		mass=100;
+	};
+	class MET_HEATProtonPack: MET_blaster_battery
+	{
+		author="Hazmat";
+		scope=2;
+		picture="\3AS\3AS_Weapons\Data\UI\3as_box_y.paa";
+		count=75;
+		displayName="[16th] E403 HEAT Proton Pack";
+		displayNameShort="E403 HEAT Proton Pack";
+		descriptionShort="HEAT Proton Pack for the E403";
+		ammo="MET_25HEAT_LauncherGrenade";
+		tracersEvery=1;
+		initSpeed=210;
+		mass=100;
+	};
+	class MET_ClusterProtonPack: MET_blaster_battery
+	{
+		author="Hazmat";
+		scope=1;
+		picture="\3AS\3AS_Weapons\Data\UI\3as_box_g.paa";
+		count=25;
+		displayName="[16th] E403 Cluster Proton Pack";
+		displayNameShort="E403 Cluster Proton Pack";
+		descriptionShort="Cluster Proton Pack for the E403";
+		ammo="MET_25HE_ClusterShot";
+		tracersEvery=1;
+		initSpeed=210;
+		mass=150;
 	};
 	class MET_Valken_mag: JLTS_DC15A_mag
 	{
@@ -14796,6 +16044,35 @@ class CfgMagazines
 		tracersEvery=1;
 		initSpeed=250;
 		mass=5;
+	};
+	class MET_DC21_mag: MET_blaster_pistol_battery
+	{
+		author="Hazmat";
+		scope=2;
+		modelSpecial="";
+		modelSpecialIsProxy=0;
+		count=24;
+		displayName="[16th] DC-21 Energy Cell";
+		displayNameShort="DC-21 Energy Cell";
+		descriptionShort="Full Power Energy Cell for the DC-21";
+		ammo="MET_blasterbolt";
+		tracersEvery=1;
+		initSpeed=250;
+		mass=5;
+	};
+	class MET_DC21_Stealth_mag: MET_DC21_mag
+	{
+		JLTS_hasElectronics=1;
+		JLTS_hasEMPProtection=1;
+		author="Hazmat";
+		count=12;
+		displayName="[16th] Stealth Pistol Energy Cell";
+		displayNameShort="Energy Cell";
+		descriptionShort="Energy cell for the DC-21";
+		ammo="MET_blasterbolt_Stealth_low";
+		tracersEvery=1;
+		mass=7.5;
+		initSpeed = 150;
 	};
 	class MET_dual_blaster_pistol_battery: 100Rnd_65x39_caseless_mag
 	{
@@ -17459,9 +18736,17 @@ class CfgAmmo
 	};
 	class MET_blasterbolt_Stealth: MET_blasterbolt
 	{
-		model="";
-		effectfly="";
-		lightcolor[]={0,0,0};
+		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Blue.p3d";
+		effectfly="MET_BlasterBoltGlow_Stealth_Fly";
+		lightcolor[]={0.69,0.69,1};
+		hit=40;
+	};
+	class MET_blasterbolt_Stealth_low: MET_blasterbolt
+	{
+		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Blue.p3d";
+		effectfly="MET_BlasterBoltGlow_Stealth_Fly";
+		lightcolor[]={0.69,0.69,1};
+		hit=25;
 	};
 	class MET_blasterbolt_br: MET_blasterbolt_base
 	{
@@ -17888,19 +19173,53 @@ class CfgAmmo
 		indirectHitRange=9;
 		indirectHit=20;
 		effectflare="FlareShell";
-		effectfly="MET_BlasterBoltGlow_Blue_Fly";
+		effectfly="MET_GrenadeBlasterBoltGlow_Blue_Fly";
 		fuseDistance=0;
 		ExplosionEffects="GrenadeExplosion";
 		CraterEffects="GrenadeCrater";
 		lightcolor[]={0,0,1};
 		model="Indecisive_Armoury_Ammos\Data\40mm_Grenade\IDA_40mm_Grenade.p3d";
 	};
+	class MET_25HE_LauncherGrenade: G_40mm_HE
+	{
+		indirectHitRange=4;
+		indirectHit=15;
+		typicalSpeed=210;
+		initSpeed = 210;
+		effectflare="FlareShell";
+		effectfly="MET_SmallGrenadeBlasterBoltGlow_Blue_Fly";
+		fuseDistance=0;
+		//ExplosionEffects="GrenadeExplosion";
+		//CraterEffects="GrenadeCrater";
+		coefGravity=0.2;
+		lightcolor[]={0,0,1};
+		model="Indecisive_Armoury_Ammos\Data\40mm_Grenade\IDA_40mm_Grenade.p3d";
+		ace_frag_classes[]=
+		{
+			"ACE_frag_tiny",
+			"ACE_frag_tiny_HD",
+			"ACE_frag_small_HD"
+		};
+		ace_frag_enabled=1;
+		ace_frag_metal=15;
+		ace_frag_charge=6;
+		ace_frag_gurney_c=2000;
+		ace_frag_gurney_k="3/5";
+		ExplosionEffects = "ExploAmmoExplosion";
+		CraterEffects = "ExploAmmoCrater";
+		explosionSoundEffect="DefaultExplosion";
+		soundHit1[] = {"A3\Sounds_F\arsenal\explosives\Shells\Explosion_shell_01", 3.1622777, 1, 1500};
+		soundHit2[] = {"A3\Sounds_F\arsenal\explosives\Shells\Explosion_shell_02", 3.1622777, 1, 1500};
+		soundHit3[] = {"A3\Sounds_F\arsenal\explosives\Shells\Explosion_shell_03", 3.1622777, 1, 1500};
+		soundHit4[] = {"A3\Sounds_F\arsenal\explosives\Shells\Explosion_shell_04", 3.1622777, 1, 1500};
+		multiSoundHit[] = {"soundHit1", 0.25, "soundHit2", 0.25, "soundHit3", 0.25, "soundHit4", 0.25};
+	};
 	class MET_40_GrenadeCluster_Sub1: MET_HE_LauncherGrenade
 	{
 		indirectHit = 15;
 		indirectHitRange = 16;
 		explosionTime = 1;
-		effectfly="MET_BlasterBoltGlow_White_Fly";
+		effectfly="MET_GrenadeBlasterBoltGlow_White_Fly";
 		lightcolor[]={1,1,0.784};
 	};
 	class MET_40_GrenadeCluster_Sub2: MET_40_GrenadeCluster_Sub1
@@ -17958,7 +19277,41 @@ class CfgAmmo
 		submunitionInitialOffset[] = {0,0,0};
 		submunitionAutoleveling = 1;
 		submunitionDirectionType = "submunitionAutoleveling";
-		effectfly="MET_BlasterBoltGlow_Green_Fly";
+		effectfly="MET_GrenadeBlasterBoltGlow_Green_Fly";
+		lightcolor[]={0,1,0};
+		directionalExplosion = 1;
+		triggerOnImpact = 1;
+		triggerDistance = 0;
+		explosionTime = -1;
+	};
+	class MET_25_GrenadeCluster_Sub1: MET_25HE_LauncherGrenade
+	{
+		indirectHit = 15;
+		indirectHitRange = 16;
+		explosionTime = 0.5;
+		effectfly="MET_SmallGrenadeBlasterBoltGlow_White_Fly";
+		lightcolor[]={1,1,0.784};
+	};
+	class MET_25_GrenadeCluster_Sub2: MET_25_GrenadeCluster_Sub1
+	{
+		explosionTime = 0.6;
+	};
+	class MET_25_GrenadeCluster_Sub3: MET_25_GrenadeCluster_Sub1
+	{
+		explosionTime = 0.7;
+	};
+	class MET_25HE_ClusterShot: MET_25HE_LauncherGrenade
+	{
+		submunitionAmmo[] = {"MET_25_GrenadeCluster_Sub1",0.33,"MET_25_GrenadeCluster_Sub2",0.33,"MET_25_GrenadeCluster_Sub3",0.33};
+		submunitionInitSpeed = 6;
+		submunitionConeAngle = 120;
+		submunitionConeAngleHorizontal = 270;
+		submunitionConeType[] = {"randomupcone",3};
+		submunitionParentSpeedCoef = 0;
+		submunitionInitialOffset[] = {0,0,0};
+		submunitionAutoleveling = 1;
+		submunitionDirectionType = "submunitionAutoleveling";
+		effectfly="MET_SmallGrenadeBlasterBoltGlow_Green_Fly";
 		lightcolor[]={0,1,0};
 		directionalExplosion = 1;
 		triggerOnImpact = 1;
@@ -17971,7 +19324,7 @@ class CfgAmmo
 		indirectHitRange=9;
 		indirectHit=20;
 		effectflare="FlareShell";
-		effectfly="MET_BlasterBoltGlow_Red_Fly";
+		effectfly="MET_GrenadeBlasterBoltGlow_Red_Fly";
 		fuseDistance=0;
 		ExplosionEffects="GrenadeExplosion";
 		CraterEffects="GrenadeCrater";
@@ -17988,7 +19341,7 @@ class CfgAmmo
 		simulation="shotShell";
 		model="Indecisive_Armoury_Ammos\Data\40mm_Grenade\IDA_40mm_Grenade.p3d";
 		effectflare="FlareShell";
-		effectfly="MET_BlasterBoltGlow_Yellow_Fly";
+		effectfly="MET_GrenadeBlasterBoltGlow_Yellow_Fly";
 		lightcolor[]={.839,0.749,0.486};
 		hit=650;
 		indirectHit=9;
@@ -18075,6 +19428,100 @@ class CfgAmmo
 			distance=1;
 		};
 	};
+	class MET_25HEAT_LauncherGrenade: MET_25HE_LauncherGrenade
+	{
+		ace_frag_enabled=0;
+		explosionSoundEffect="DefaultExplosion";
+		simulation="shotShell";
+		model="Indecisive_Armoury_Ammos\Data\40mm_Grenade\IDA_40mm_Grenade.p3d";
+		effectflare="FlareShell";
+		effectfly="MET_SmallGrenadeBlasterBoltGlow_Yellow_Fly";
+		lightcolor[]={.839,0.749,0.486};
+		hit=350;
+		indirectHit=5;
+		indirectHitRange=1;
+		warheadName="HEAT";
+		visibleFire=1;
+		audibleFire=30;
+		visibleFireTime=3;
+		dangerRadiusHit=60;
+		suppressionRadiusHit=24;
+		explosive=0.40000001;
+		cost=10;
+		deflecting=5;
+		airFriction=-0.001;
+		fuseDistance=5;
+		whistleDist=20;
+		typicalSpeed=185;
+		caliber=2.5;
+		soundHit1[]=
+		{
+			"A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_01",
+			3.1622777,
+			1,
+			1500
+		};
+		soundHit2[]=
+		{
+			"A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_02",
+			3.1622777,
+			1,
+			1500
+		};
+		soundHit3[]=
+		{
+			"A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_03",
+			3.1622777,
+			1,
+			1500
+		};
+		soundHit4[]=
+		{
+			"A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_04",
+			3.1622777,
+			1,
+			1500
+		};
+		multiSoundHit[]=
+		{
+			"soundHit1",
+			0.25,
+			"soundHit2",
+			0.25,
+			"soundHit3",
+			0.25,
+			"soundHit4",
+			0.25
+		};
+		class CamShakeExplode
+		{
+			power=4;
+			duration=0.80000001;
+			frequency=20;
+			distance=75.7771;
+		};
+		class CamShakeHit
+		{
+			power=25;
+			duration=0.40000001;
+			frequency=20;
+			distance=1;
+		};
+		class CamShakeFire
+		{
+			power=0;
+			duration=0.2;
+			frequency=20;
+			distance=0;
+		};
+		class CamShakePlayerFire
+		{
+			power=0;
+			duration=0.1;
+			frequency=20;
+			distance=1;
+		};
+	};
 	class MET_RocketGrenade_HE: G_40mm_HE
 	{
 		explosionSoundEffect="DefaultExplosion";
@@ -18082,7 +19529,7 @@ class CfgAmmo
 		simulation="shotShell";
 		model="Indecisive_Armoury_Ammos\Data\RifleGrenade\IDA_RifleGrenade.p3d";
 		effectflare="FlareShell";
-		effectfly="MET_BlasterBoltGlow_Green_Fly";
+		effectfly="MET_GrenadeBlasterBoltGlow_Green_Fly";
 		lightcolor[]={0,1,0};
 		coefGravity=0.1;
 		hit=80;
@@ -18216,7 +19663,7 @@ class CfgAmmo
 			"Mortar_Exp_SoundSet"
 		};
 		simulation="shotShell";
-		effectFly="MET_BlasterBoltGlow_Blue_Fly";
+		effectFly="MET_GrenadeBlasterBoltGlow_Blue_Fly";
 		lightcolor[]={0,0,1};
 		model="Indecisive_Armoury_Ammos\Data\40mm_Grenade\IDA_40mm_Grenade.p3d";
 		aiAmmoUsageFlags="64";
@@ -18337,7 +19784,7 @@ class CfgAmmo
 			"Mortar_Exp_SoundSet"
 		};
 		simulation="shotShell";
-		effectFly="MET_BlasterBoltGlow_Yellow_Fly";
+		effectFly="MET_GrenadeBlasterBoltGlow_Yellow_Fly";
 		lightcolor[]={0,0,1};
 		model="Indecisive_Armoury_Ammos\Data\40mm_Grenade\IDA_40mm_Grenade.p3d";
 		aiAmmoUsageFlags="64";
