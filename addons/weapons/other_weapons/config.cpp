@@ -2757,10 +2757,7 @@ class CfgWeapons
 			mass=180;
 			class CowsSlot: CowsSlot
 			{
-				compatibleItems[]=
-				{
-					"SFA_Holosight_blue"
-				};
+				compatibleItems[]={};
 			};
 		};
 	};
