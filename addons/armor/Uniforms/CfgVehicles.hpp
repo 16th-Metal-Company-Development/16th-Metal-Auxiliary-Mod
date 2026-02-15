@@ -210,6 +210,12 @@ class MET_Uniform_Trooper_Base : JLTS_Clone_P2_DC15A
 		tex[] = {};
 		mat[] =
 		{
+			"MRC\JLTS\Characters\CloneArmor\data\Clone_armor1.rvmat",
+			"MRC\JLTS\Characters\CloneArmor\data\Clone_armor1_injury.rvmat",
+			"MRC\JLTS\Characters\CloneArmor\data\Clone_armor1_injury.rvmat",
+			"MRC\JLTS\Characters\CloneArmor\data\Clone_armor2.rvmat",
+			"MRC\JLTS\Characters\CloneArmor\data\Clone_armor2_injury.rvmat",
+			"MRC\JLTS\Characters\CloneArmor\data\Clone_armor2_injury.rvmat",
 			"A3\Characters_F\Common\Data\basicbody.rvmat",
 			"A3\Characters_F\Common\Data\basicbody_injury.rvmat",
 			"A3\Characters_F\Common\Data\basicbody_injury.rvmat",
