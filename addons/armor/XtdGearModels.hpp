@@ -23,12 +23,13 @@ class XtdGearModels {
                     "Arch", "Avalanche", "Beige", "Ben", "Blackrose",
                     "Blatt", "Blowfish", "Bopit", "Butcher", "Chet",
                     "Chetiah", "Cougar", "Creed", "Fish", "Frost",
-                    "Gambit", "Hazmat", "Hellwolf", "Hevy", "Hood", "Karma",
-                    "Longshot", "Maia", "Mace", "Maple", "Maxson", "Merlin",
-                    "Moldy", "Nix", "Noble", "Orpheus", "Prez", "Ronin",
-                    "Roz", "Sam", "Ska", "Six", "Smith",
-                    "Spice", "Sunto", "Talk", "Vergil", "William",
-                    "Winters", "Wolf"
+                    "Gambit", "Hazmat", "Hellwolf", "Hevy", "Hood",
+                    "Karma", "Longshot", "Maia", "Mace", "Maple",
+                    "Maxson", "Merlin", "Moldy", "Nix", "Noble",
+                    "Orpheus", "Otto", "Prez", "Ronin", "Roz",
+                    "Sam", "Ska", "Six", "Smith", "Spice",
+                    "Sunto", "Talk", "Vergil", "William", "Winters",
+                    "Wolf"
                 };
             };
         };

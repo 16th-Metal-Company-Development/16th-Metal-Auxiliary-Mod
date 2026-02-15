@@ -16,8 +16,9 @@ class cfgPatches
 			"MET_Weapons_Mags_flashnade",
 			"MET_Weapons_Mags_Thermal_Detonator",
 			"MET_Weapons_Mags_Thermal_Imploder",
-			"MET_Weapons_Mags_Thermal_Impacter"
-			
+			"MET_Weapons_Mags_Thermal_Impacter",
+			"MET_Weapons_Mags_Thermal_Penetrator",
+			"MET_Weapons_Mags_DroidPopper"
 		};
 		ammo[]=
 		{
@@ -26,7 +27,9 @@ class cfgPatches
 			"MET_Weapons_Ammo_Grenades_Impacter",
 			"MET_Weapons_Ammo_Grenades_Ctype",
 			//"MET_Weapons_Ammo_Grenades_CISDetonator",
-			"MET_Weapons_Ammo_Grenades_flash"
+			"MET_Weapons_Ammo_Grenades_flash",
+			"MET_Weapons_Ammo_Grenades_Penetrator",
+			"MET_Weapons_Ammo_Grenades_DroidPopper"
 		};
 	};
 };
@@ -127,13 +130,24 @@ class CfgMagazines
 	};*/
 	class MET_Weapons_Mags_flashnade: ACE_M84
 	{
-		author="501st Aux Team";
+		author="16th Aux Mod";
 		displayName="[16th] C-25 Flash Grenade";
 		displayNameShort="Flash Grenade";
 		descriptionShort="Clone Wars Flashbang";
 		model="\MRC\JLTS\weapons\Grenades\grenade_emp.p3d";
 		ammo="MET_Weapons_Ammo_Grenades_flash";
 		picture="\MRC\JLTS\weapons\grenades\data\ui\grenade_emp_ui_ca.paa";
+	};
+	class MET_Weapons_Mags_DroidPopper: ACE_M84
+	{
+		author="Hazmat";
+		displayName="[16th] V-6 Haywire Grenade";
+		displayNameShort="Droid Popper";
+		descriptionShort="The V-6 Haywire Grenade, Affectionately named the 'Droid Popper'";
+		model="\MRC\JLTS\weapons\Grenades\grenade_emp.p3d";
+		ammo="MET_DroidPop_ammo";
+		picture="212th\Weapons\212th_Grenades\data\textures\Termaldetmk3icon.paa";
+		initSpeed=25;
 	};
 };
 class CfgAmmo
@@ -451,7 +465,7 @@ class CfgAmmo
 	{
 		hit=1;
 		indirectHit=2000;
-		indirectHitRange=0.5;
+		indirectHitRange=1;
 		dangerRadiusHit=120;
 		suppressionRadiusHit=120;
 		explosionEffectsRadius=100;
@@ -464,6 +478,72 @@ class CfgAmmo
 		ace_frag_charge = 50;
 		ace_frag_gurney_c = 2000;
 		ace_frag_gurney_k = "3/5";
+	};
+	class GrenadeHand_stone;
+	class MET_DroidPop_ammo: GrenadeHand_stone
+	{
+		JLTS_isEMPAmmo=1;
+		ace_frag_enabled=0;
+		/*ace_grenades_pullPinSound[]=
+		{
+			"MRC\JLTS\weapons\Grenades\sounds\grenade_primed.wss",
+			1.5,
+			1,
+			10
+		};*/
+		ace_grenades_pullPinSound[]=
+		{
+			"z\MET\addons\grenades\offensive\sounds\Droid_Popper_Arm.wss",
+			3,
+			1,
+			10
+		};
+		soundHit[] = {
+    		{"z\MET\addons\grenades\offensive\sounds\Droid_Popper_impact_1.ogg", 10, 1, 50},
+    		{"z\MET\addons\grenades\offensive\sounds\Droid_Popper_impact_2.ogg", 10, 1, 50}
+		};
+		timeToLive=3;
+		explosionTime=2.2625;
+		author="Hazmat";
+		hit=0.0099999998;
+		indirectHit=0.0099999998;
+		explosive=0.0099999998;
+		indirectHitRange=10;
+		model="212th\Weapons\212th_Grenades\data\212th_thermaldet.p3d";
+		explosionEffects="JLTS_fx_exp_EMP";
+		grenadeBurningSound[]=
+		{
+			"EMPSoundLoop1",
+			0.5
+		};
+		soundFly[]=
+		{
+			"z\MET\addons\grenades\offensive\sounds\Droid_Popper_Charge.ogg",
+			10,
+			1,
+			90
+		};
+		EMPSoundLoop1[]=
+		{
+			"z\MET\addons\grenades\offensive\sounds\Droid_Popper_Charge.ogg",
+			0.125893,
+			1,
+			70
+		};
+		SoundSetExplosion[]=
+		{
+			"MET_GrenadeEMP_Exp_SoundSet",
+			"MET_GrenadeEMP_Tail_SoundSet",
+			"Explosion_Debris_SoundSet"
+		};
+		aiAmmoUsageFlags=0;
+		class CamShakeExplode
+		{
+			distance=10;
+			duration=1;
+			frequency=20;
+			power=0;
+		};
 	};
 };
 class CfgSoundShaders
@@ -643,6 +723,78 @@ class CfgSoundShaders
 			{2200,0}
 		};
 	};
+	class GrenadeHe_closeExp_SoundShader;
+	class MET_GrenadeEMP_closeExp_SoundShader: GrenadeHe_closeExp_SoundShader
+	{
+		samples[]=
+		{
+			
+			{
+				"z\MET\addons\grenades\offensive\sounds\Droid_Popper_Detonate.ogg",
+				1
+			}
+		};
+	};
+	class GrenadeHe_midExp_SoundShader;
+	class MET_GrenadeEMP_midExp_SoundShader: GrenadeHe_midExp_SoundShader
+	{
+		samples[]=
+		{
+			
+			{
+				"z\MET\addons\grenades\offensive\sounds\Droid_Popper_Detonate.ogg",
+				1
+			}
+		};
+	};
+	class GrenadeHe_distExp_SoundShader;
+	class MET_GrenadeEMP_distExp_SoundShader: GrenadeHe_distExp_SoundShader
+	{
+		samples[]=
+		{
+			
+			{
+				"z\MET\addons\grenades\offensive\sounds\Droid_Popper_Detonate.ogg",
+				1
+			}
+		};
+	};
+	class GrenadeHe_tailForest_SoundShader;
+	class MET_GrenadeEMP_tailForest_SoundShader: GrenadeHe_tailForest_SoundShader
+	{
+		samples[]=
+		{
+			
+			{
+				"z\MET\addons\grenades\offensive\sounds\Droid_Popper_Detonate.ogg",
+				1
+			}
+		};
+	};
+	class GrenadeHe_tailMeadows_SoundShader;
+	class MET_GrenadeEMP_tailMeadows_SoundShader: GrenadeHe_tailMeadows_SoundShader
+	{
+		samples[]=
+		{
+			
+			{
+				"z\MET\addons\grenades\offensive\sounds\Droid_Popper_Detonate.ogg",
+				1
+			}
+		};
+	};
+	class GrenadeHe_tailHouses_SoundShader;
+	class MET_GrenadeEMP_tailHouses_SoundShader: GrenadeHe_tailHouses_SoundShader
+	{
+		samples[]=
+		{
+			
+			{
+				"z\MET\addons\grenades\offensive\sounds\Droid_Popper_Detonate.ogg",
+				1
+			}
+		};
+	};
 };
 class CfgSoundSets
 {
@@ -690,6 +842,26 @@ class CfgSoundSets
 		{
 			"MET_SoundShader_flash_stun_closeExp",
 			"MET_SoundShader_flash_stun_midExp"
+		};
+	};
+	class GrenadeHe_Exp_SoundSet;
+	class MET_GrenadeEMP_Exp_SoundSet: GrenadeHe_Exp_SoundSet
+	{
+		soundShaders[]=
+		{
+			"MET_GrenadeEMP_closeExp_SoundShader",
+			"MET_GrenadeEMP_midExp_SoundShader",
+			"MET_GrenadeEMP_distExp_SoundShader"
+		};
+	};
+	class GrenadeHe_Tail_SoundSet;
+	class MET_GrenadeEMP_Tail_SoundSet: GrenadeHe_Tail_SoundSet
+	{
+		soundShaders[]=
+		{
+			"MET_GrenadeEMP_tailForest_SoundShader",
+			"MET_GrenadeEMP_tailMeadows_SoundShader",
+			"MET_GrenadeEMP_tailHouses_SoundShader"
 		};
 	};
 };
