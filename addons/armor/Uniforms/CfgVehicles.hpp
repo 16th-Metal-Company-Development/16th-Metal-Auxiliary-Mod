@@ -254,12 +254,12 @@ class MET_Uniform_Trooper_Cadet_Base : MET_Uniform_Trooper_Base
 	scope = 1;
 	displayName = "[16th] Cadet";
 	uniformClass = "MET_Uniform_Trooper_Cadet";
-	hiddenselectionsTextures[] =
+	hiddenSelectionsTextures[]=
 	{
-		"z\MET\addons\Armor_Rewrite\Uniforms\Textures\Base\MET_Cadet_Uniform1_CO.paa",
-		"z\MET\addons\Armor_Rewrite\Uniforms\Textures\Base\MET_Cadet_Uniform2_CO.paa"
+		"\MRC\JLTS\characters\CloneArmor\data\Clone_armor1_co.paa",
+		"\MRC\JLTS\characters\CloneArmor\data\Clone_armor2_co.paa"
 	};
-	hiddenSelectionsMaterials[] =
+	hiddenSelectionsMaterials[]=
 	{
 		"\MRC\JLTS\characters\CloneArmor\data\clone_armor1_clean.rvmat",
 		"\MRC\JLTS\characters\CloneArmor\data\clone_armor2_clean.rvmat"
