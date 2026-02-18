@@ -9637,8 +9637,8 @@ class CfgWeapons
 	/*==============================================================================
 	==DC-21
 	==============================================================================*/
-	/*class Pistol_Base_F;
-	class ShdwCmpny_pistol_DC21_Base: Pistol_Base_F
+	class Pistol_Base_F;
+	/*class ShdwCmpny_pistol_DC21_Base: Pistol_Base_F
 	{
 		class WeaponSlotsInfo
 		{
