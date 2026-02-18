@@ -5806,6 +5806,7 @@ class CfgWeapons
 		author="Legion Studios";
 		displayName="[16th] 773 Firepuncher";
 		baseWeapon="MET_16_weapon_firepuncher";
+		recoil="MET_recoil_VK38X";
 		magazines[]=
 		{
 			"MET_ARC_773_mag"
@@ -6177,8 +6178,8 @@ class CfgWeapons
 	==============================================================================*/
 	class MET_Valken38X_F_fried: MET_Valken38X_F
 	{
-		baseWeapon="MET_16_weapon_firepuncher_fried";
-		displayName="[16th] Fried Firepuncher 773";
+		baseWeapon="MET_Valken38X_F_fried";
+		displayName="[16th] Fried Valken-38X";
 		descriptionShort="$STR_JLTS_descs_BlasterFried";
 		scope=1;
 		scopeArsenal=0;
@@ -9402,9 +9403,14 @@ class CfgWeapons
 	/*==============================================================================
 	==DC-19E MkII
 	==============================================================================*/
-	class ShdwCmpny_DC19_F: Rifle_Long_Base_F
+	/*class ShdwCmpny_DC19_F: Rifle_Long_Base_F
 	{
-		class WeaponSlotsInfo;
+		class WeaponSlotsInfo
+		{
+			class Cowsslot;
+			class MuzzleSlot;
+			class PointerSlot;
+		};
 	};
 	class MET_DC19MkII: ShdwCmpny_DC19_F
 	{
@@ -9631,10 +9637,15 @@ class CfgWeapons
 	/*==============================================================================
 	==DC-21
 	==============================================================================*/
-	class Pistol_Base_F;
+	/*class Pistol_Base_F;
 	class ShdwCmpny_pistol_DC21_Base: Pistol_Base_F
 	{
-		class WeaponSlotsInfo;
+		class WeaponSlotsInfo
+		{
+			class Cowsslot;
+			class MuzzleSlot;
+			class PointerSlot;
+		};
 	};
 	class MET_DC21: ShdwCmpny_pistol_DC21_Base
 	{
@@ -12066,13 +12077,9 @@ class CfgWeapons
 		displayName="[16th] EPL-2";
 		magazines[]=
 		{
-			"MET_3Rnd_HE_Grenade_shell"
+			"MET_3Rnd_EMP_Grenade_shell"
 		};
-		magazineWell[]=
-		{
-			"MET_GL_Magwell",
-			"MET_3GL_MagWell"
-		};
+		magazineWell[]={};
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
 			mass=60;
@@ -16691,6 +16698,16 @@ class CfgMagazines
 		ammo="MET_GL_Smoke_Clust_Yellow";
 	};
 	class 3AS_6Rnd_HE_Grenade_shell;
+	class MET_3Rnd_EMP_Grenade_shell: 3AS_6Rnd_HE_Grenade_shell
+	{
+		author="Hazmat";
+		count=6;
+		displayName="[16th] 6 Round EMP Grenade";
+		displayNameShort="[16th] EMP Grenades";
+		descriptionShort="EMP grenade. Useful against things like:<br /> Battle Droids<br /> Enemy Weapons<br /> Times when you shouldn't frag a room.";
+		ammo="MET_EMP_LauncherGrenade";
+		mass=12;
+	};
 	class MET_3Rnd_HE_Grenade_shell: 3AS_6Rnd_HE_Grenade_shell
 	{
 		author="Hazmat";
@@ -19179,6 +19196,30 @@ class CfgAmmo
 		CraterEffects="GrenadeCrater";
 		lightcolor[]={0,0,1};
 		model="Indecisive_Armoury_Ammos\Data\40mm_Grenade\IDA_40mm_Grenade.p3d";
+	};
+	class MET_EMP_LauncherGrenade: MET_HE_LauncherGrenade
+	{
+		hit=0.0099999998;
+		indirectHit=0.0099999998;
+		explosive=0.0099999998;
+		indirectHitRange=15;
+		timeToLive=4;
+		effectflare="FlareShell";
+		effectfly="MET_GrenadeBlasterBoltGlow_White_Fly";
+		fuseDistance=0;
+		//ExplosionEffects="GrenadeExplosion";
+		CraterEffects="GrenadeCrater";
+		lightcolor[]={1,1,0.784};
+		model="Indecisive_Armoury_Ammos\Data\40mm_Grenade\IDA_40mm_Grenade.p3d";
+		explosionEffects="JLTS_fx_exp_EMP";
+		SoundSetExplosion[]=
+		{
+			"MET_GrenadeEMP_Exp_SoundSet",
+			"MET_GrenadeEMP_Tail_SoundSet",
+			"Explosion_Debris_SoundSet"
+		};
+		JLTS_isEMPAmmo=1;
+		ace_frag_enabled=0;
 	};
 	class MET_25HE_LauncherGrenade: G_40mm_HE
 	{

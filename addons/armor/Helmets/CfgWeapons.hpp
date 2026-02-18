@@ -49,9 +49,9 @@ class MET_Helmet_Trooper_Cadet : MET_Helmet_Trooper_Base
 {
 	scope = 2;
 	displayName = "[16th] Cadet Helmet";
-	hiddenSelectionsTextures[] =
-	{
-		"z\MET\addons\Armor_Rewrite\Helmets\Textures\Base\MET_Cadet_Helmet.paa"
+	hiddenSelectionsTextures[]=
+	{	
+		"MRC\JLTS\characters\CloneArmor\data\Clone_Helmet_P2_co.paa"
 	};
 };
 class MET_Helmet_Trooper_Veteran : MET_Helmet_Trooper_Base

@@ -17,7 +17,8 @@ class CfgPatches
 };
 class CfgVehicles
 {
-    class BHA_Static_FG75
+	class StaticMGWeapon;
+    class BHA_Static_FG75: StaticMGWeapon
     {
         class Turrets
         {

@@ -28,6 +28,7 @@ class CfgPatches
             "metal_death_weap",
 			"LF_Medicial_Pack"
 		};
+		skipWhenMissingDependencies=1;
 	};
 };
 class ItemInfo;
