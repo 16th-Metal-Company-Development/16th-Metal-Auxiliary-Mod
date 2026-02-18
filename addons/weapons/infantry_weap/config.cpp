@@ -9403,7 +9403,7 @@ class CfgWeapons
 	/*==============================================================================
 	==DC-19E MkII
 	==============================================================================*/
-	class ShdwCmpny_DC19_F: Rifle_Long_Base_F
+	/*class ShdwCmpny_DC19_F: Rifle_Long_Base_F
 	{
 		class WeaponSlotsInfo;
 	};
@@ -9632,7 +9632,7 @@ class CfgWeapons
 	/*==============================================================================
 	==DC-21
 	==============================================================================*/
-	class Pistol_Base_F;
+	/*class Pistol_Base_F;
 	class ShdwCmpny_pistol_DC21_Base: Pistol_Base_F
 	{
 		class WeaponSlotsInfo;
