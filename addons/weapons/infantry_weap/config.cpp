@@ -9405,7 +9405,12 @@ class CfgWeapons
 	==============================================================================*/
 	/*class ShdwCmpny_DC19_F: Rifle_Long_Base_F
 	{
-		class WeaponSlotsInfo;
+		class WeaponSlotsInfo
+		{
+			class Cowsslot;
+			class MuzzleSlot;
+			class PointerSlot;
+		};
 	};
 	class MET_DC19MkII: ShdwCmpny_DC19_F
 	{
@@ -9635,7 +9640,12 @@ class CfgWeapons
 	/*class Pistol_Base_F;
 	class ShdwCmpny_pistol_DC21_Base: Pistol_Base_F
 	{
-		class WeaponSlotsInfo;
+		class WeaponSlotsInfo
+		{
+			class Cowsslot;
+			class MuzzleSlot;
+			class PointerSlot;
+		};
 	};
 	class MET_DC21: ShdwCmpny_pistol_DC21_Base
 	{
