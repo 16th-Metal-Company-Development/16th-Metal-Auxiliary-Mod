@@ -1162,6 +1162,15 @@ class MET_Vest_Officer_L_Ronin : MET_Vest_Officer_L_Base
 		"z\MET\addons\Armor_Rewrite\Vests\Textures\Custom\MET_Vest_Officer_Ronin_CO.paa"
 	};
 };
+class MET_Vest_Officer_L_Phoenix : MET_Vest_Officer_L_Base
+{
+	scope = 2;
+	displayname = "[16th] Phoenix's Vest";
+	hiddenSelectionsTextures[] =
+	{
+		"z\MET\addons\Armor_Rewrite\Vests\Textures\Custom\MET_Vest_Officer_Phoenix_CO.paa"
+	};
+};
 class MET_Vest_Commander_Merlin : MET_Vest_Commander_Base
 {
 	scope = 2;

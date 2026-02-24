@@ -7,13 +7,6 @@ class CfgPatches
 		units[]={};
 		weapons[]=
 		{
-			"MET_DC15A_LEG",
-			"MET_DC15A_LEG_ugl",
-			"MET_DC15A_PLASTIC",
-			"MET_DC15A_ugl_plastic",
-			"MET_DC15A_F",
-			"MET_DC15LE",
-			"MET_DC15A_GL",
 			"MET_DC15S",
 			"MET_DC15S_shield",
 			"MET_DC15S_F",
@@ -360,7 +353,7 @@ class CfgWeapons
 	/*==============================================================================
 	==DC-15A Legacy
 	==============================================================================*/
-	class MET_DC15A_LEG: JLTS_DC15A
+	/*class MET_DC15A_LEG: JLTS_DC15A
 	{
 		JLTS_hasElectronics=1;
 		JLTS_hasEMPProtection=1;
@@ -831,7 +824,7 @@ class CfgWeapons
 	/*==============================================================================
 	==DC-15A Legacy (Fried)
 	==============================================================================*/
-	class MET_DC15A_LEG_fried: MET_DC15A_LEG
+	/*class MET_DC15A_LEG_fried: MET_DC15A_LEG
 	{
 		baseWeapon="MET_DC15A_LEG_fried";
 		displayName="[16th] Fried DC-15A Mk I (Wood Stock)";
@@ -938,7 +931,7 @@ class CfgWeapons
 	/*==============================================================================
 	==DC-15A
 	==============================================================================*/
-	class MET_DC15A_Base_F: Rifle_Base_F
+	/*class MET_DC15A_Base_F: Rifle_Base_F
 	{
 		JLTS_hasElectronics=1;
 		JLTS_hasEMPProtection=0;
@@ -1351,13 +1344,13 @@ class CfgWeapons
 			1,
 			20
 		};
-		/*reloadMagazineSound[]=
+		reloadMagazineSound[]=
 		{
 			"\3AS\3AS_Main\Sounds\DC15A\DC15aReload",
 			1,
 			1,
 			30
-		};*/
+		};
 		ace_overheating_mrbs=3000;
 		ace_overheating_slowdownFactor=1;
 		ace_overheating_allowSwapBarrel=0;
@@ -1381,7 +1374,7 @@ class CfgWeapons
 	/*==============================================================================
 	==DC-15LE
 	==============================================================================*/
-	class MET_DC15LE: MET_DC15A_Base_F
+	/*class MET_DC15LE: MET_DC15A_Base_F
 	{
 		author="$STR_3as_Studio";
 		baseWeapon="MET_DC15LE";
@@ -1689,7 +1682,7 @@ class CfgWeapons
 	/*==============================================================================
 	==DC-15A GL
 	==============================================================================*/
-	class MET_DC15A_GL: MET_DC15A_Base_F
+	/*class MET_DC15A_GL: MET_DC15A_Base_F
 	{
 		JLTS_hasElectronics=1;
 		JLTS_hasEMPProtection=0;
@@ -1720,7 +1713,7 @@ class CfgWeapons
 	/*==============================================================================
 	==DC-15A Mk II (Fried)
 	==============================================================================*/
-	class MET_DC15A_F_fried: MET_DC15A_F
+	/*class MET_DC15A_F_fried: MET_DC15A_F
 	{
 		baseWeapon="MET_DC15A_F_fried";
 		displayName="[16th] Fried DC-15A Mk II";
@@ -1790,7 +1783,7 @@ class CfgWeapons
 		class GunParticles;
 		class WeaponSlotsInfo;
 	};
-	class MET_DC15S: JLTS_DC15S
+	/*class MET_DC15S: JLTS_DC15S
 	{
 		JLTS_hasElectronics=1;
 		JLTS_hasEMPProtection=0;
@@ -2190,7 +2183,7 @@ class CfgWeapons
 	/*==============================================================================
 	==DC-15S LEGACY (Fried)
 	==============================================================================*/
-	class MET_DC15S_fried: MET_DC15S
+	/*class MET_DC15S_fried: MET_DC15S
 	{
 		JLTS_isFried=1;
 		JLTS_shieldedWeapon="MET_DC15S_shield_fried";
@@ -2255,7 +2248,7 @@ class CfgWeapons
 	/*==============================================================================
 	==DC-15S
 	==============================================================================*/
-	class MET_DC15S_Base_F: Rifle_Base_F
+	/*class MET_DC15S_Base_F: Rifle_Base_F
 	{
 		JLTS_hasElectronics=1;
 		JLTS_hasEMPProtection=1;
@@ -2576,7 +2569,7 @@ class CfgWeapons
 			1,
 			1,
 			30
-		};*/
+		};
 		ace_overheating_mrbs=3000;
 		ace_overheating_slowdownFactor=1;
 		ace_overheating_allowSwapBarrel=0;
@@ -2599,7 +2592,7 @@ class CfgWeapons
 	/*==============================================================================
 	==DC-15S MkII (Fried)
 	==============================================================================*/
-	class MET_DC15S_F_fried: MET_DC15S_F
+	/*class MET_DC15S_F_fried: MET_DC15S_F
 	{
 		JLTS_isFried=1;
 		baseWeapon="MET_DC15S_F_fried";
@@ -2620,7 +2613,7 @@ class CfgWeapons
 	/*==============================================================================
 	==DC-15S GL
 	==============================================================================*/
-	class MET_DC15S_GL: MET_DC15S_Base_F
+	/*class MET_DC15S_GL: MET_DC15S_Base_F
 	{
 		JLTS_hasElectronics=1;
 		JLTS_hasEMPProtection=0;
@@ -2651,7 +2644,7 @@ class CfgWeapons
 	/*==============================================================================
 	==DC-15S GL MkII (Fried)
 	==============================================================================*/
-	class MET_DC15S_GL_fried: MET_DC15S_GL
+	/*class MET_DC15S_GL_fried: MET_DC15S_GL
 	{
 		JLTS_isFried=1;
 		baseWeapon="MET_DC15S_GL_fried";

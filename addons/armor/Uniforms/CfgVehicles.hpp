@@ -2726,6 +2726,35 @@ class MET_Uniform_Trooper_Fool_Base : MET_Uniform_Trooper_Base
 		"JLTS_CloneNVG"
 	};
 };
+class MET_Uniform_Trooper_Phoenix_Base : MET_Uniform_Trooper_Base
+{
+	scope = 1;
+	displayName = "[16th] Phoenix";
+	uniformClass = "MET_Uniform_Trooper_Phoenix";
+	hiddenselectionsTextures[] =
+	{
+		"z\MET\addons\Armor_Rewrite\Uniforms\Textures\Custom\MET_Phoenix_Uniform1_CO.paa",
+		"z\MET\addons\Armor_Rewrite\Uniforms\Textures\Custom\MET_Phoenix_Uniform2_CO.paa"
+	};
+	linkedItems[] =
+	{
+		"MET_Helmet_Pilot_Phoenix",
+		"ItemMap",
+		"JLTS_clone_comlink",
+		"ItemCompass",
+		"ItemWatch",
+		"JLTS_CloneNVG"
+	};
+	respawnLinkedItems[] =
+	{
+		"MET_Helmet_Pilot_Phoenix",
+		"ItemMap",
+		"JLTS_clone_comlink",
+		"ItemCompass",
+		"ItemWatch",
+		"JLTS_CloneNVG"
+	};
+};
 class MET_Uniform_Trooper_Hazmat_Base : MET_Uniform_Trooper_Base
 {
 	scope = 1;
