@@ -1,21 +1,19 @@
 class CfgPatches
 {
-	class metal_inf_weap
+	class met_rep_rifle_dc15c
 	{
 		author="";
 		requiredVersion=0.1;
 		units[]={};
 		weapons[]=
 		{
-			"MET_DC15S",
-			"MET_DC15S_F",
-			"MET_DC15S_GL"
+			"MET_DC15C_F",
+			"MET_DC15C_GL"
 		};
 		skipWhenMissingDependencies=1;
 		requiredAddons[]=
 		{
-			"JLTS_weapons_DC15S",
-			"3AS_Weapons_Republic_DC15S"
+			"3AS_Weapons_Republic_DC15C"
 		};
 	};
 };
@@ -25,6 +23,12 @@ class CfgRecoils
 {
 	class recoil_default;
 	class Default;
+	class MET_recoil_DC15C: recoil_default
+	{
+		muzzleOuter[]={0,0.6,0.40000001,0.40000001};
+		kickBack[]={0.059999999,0.150000004};
+		temporary=0.0060000001;
+	};
 };
 class UGL_F;
 class Mode_SemiAuto;
@@ -66,495 +70,11 @@ class CfgWeapons
 		class WeaponSlotsInfo;
 		class GunParticles;
 	};
-	class arifle_MX_Base_F: Rifle_Base_F
-	{
-		class GunParticles;
-		class WeaponSlotsInfo;
-	};
-	class JLTS_DC15A: arifle_MX_Base_F
-	{
-		class WeaponSlotsInfo;
-		class GunParticles;
-	};
 	/*==============================================================================
-	==DC-15S LEGACY
+	==DC-15C
 	==============================================================================*/
-	class JLTS_DC15S: arifle_MX_Base_F
+	class MET_DC15C_Base_F: Rifle_Base_F
 	{
-		class GunParticles;
-		class WeaponSlotsInfo;
-	};
-	class MET_DC15S: JLTS_DC15S
-	{
-		JLTS_hasElectronics=1;
-		JLTS_hasEMPProtection=0;
-		JLTS_friedItem="MET_DC15S_fried";
-		JLTS_repairTime=20;
-		JLTS_canHaveShield=1;
-		JLTS_shieldedWeapon="MET_DC15S_shield";
-		author="MrClock";
-		scope=2;
-		displayName="[16th] DC-15S MkI";
-		descriptionShort="$STR_JLTS_descs_BlasterCarbine";
-		picture="\MRC\JLTS\weapons\DC15S\data\ui\DC15S_ui_ca.paa";
-		model="\MRC\JLTS\weapons\DC15S\DC15S_new.p3d";
-		hiddenSelections[]=
-		{
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\MRC\JLTS\weapons\DC15S\data\new\DC15S_co.paa"
-		};
-		handAnim[]=
-		{
-			"OFP2_ManSkeleton",
-			"\MRC\JLTS\weapons\DC15S\anims\DC15S_handanim.rtm"
-		};
-		reloadAction="GestureReload_JLTS_DC15S";
-		magazines[]=
-		{
-			"MET_DC15S_Mag"
-		};
-		magazineWell[]=
-		{
-			"MET_DC15S_MagWell"
-		};
-		fireLightDiffuse[]={0,0,1};
-		drySound[]=
-		{
-			"MRC\JLTS\weapons\Core\sounds\weapon_dry.wss",
-			5,
-			1,
-			10
-		};
-		muzzles[]=
-		{
-			"this",
-			"Stun"
-		};
-		class Stun: JLTS_stun_muzzle
-		{
-		};
-		modes[]=
-		{
-			"Single",
-			"FullAuto",
-			"fullauto_medium",
-			"single_medium_optics1",
-			"single_far_optics2"
-		};
-		class Single: Mode_SemiAuto
-		{
-			sounds[]=
-			{
-				"StandardSound"
-			};
-			class BaseSoundModeType
-			{
-				weaponSoundEffect="";
-				closure1[]={};
-				closure2[]={};
-				soundClosure[]={};
-			};
-			class StandardSound: BaseSoundModeType
-			{
-				weaponSoundEffect="";
-				begin1[]=
-				{
-					"MRC\JLTS\weapons\DC15A\sounds\dc15a_fire",
-					1,
-					1,
-					1800
-				};
-				soundBegin[]=
-				{
-					"begin1",
-					1
-				};
-			};
-			reloadTime=0.075;
-			recoil="recoil_single_mx";
-			recoilProne="recoil_single_prone_mx";
-			dispersion=0.00086999999;
-			minRange=2;
-			minRangeProbab=0.5;
-			midRange=200;
-			midRangeProbab=0.69999999;
-			maxRange=400;
-			maxRangeProbab=0.30000001;
-		};
-		class FullAuto: Mode_FullAuto
-		{
-			sounds[]=
-			{
-				"StandardSound"
-			};
-			class BaseSoundModeType
-			{
-				weaponSoundEffect="";
-				closure1[]={};
-				closure2[]={};
-				soundClosure[]={};
-			};
-			class StandardSound: BaseSoundModeType
-			{
-				weaponSoundEffect="";
-				begin1[]=
-				{
-					"MRC\JLTS\weapons\DC15A\sounds\dc15a_fire",
-					1,
-					1,
-					1800
-				};
-				soundBegin[]=
-				{
-					"begin1",
-					1
-				};
-			};
-			reloadTime=0.075;
-			dispersion=0.00087;
-			recoil="recoil_auto_mx";
-			recoilProne="recoil_auto_prone_mx";
-			minRange=0;
-			minRangeProbab=0.89999998;
-			midRange=15;
-			midRangeProbab=0.69999999;
-			maxRange=30;
-			maxRangeProbab=0.1;
-			aiRateOfFire=1e-006;
-		};
-		class fullauto_medium: FullAuto
-		{
-			sounds[]=
-			{
-				"StandardSound"
-			};
-			class BaseSoundModeType
-			{
-				weaponSoundEffect="";
-				closure1[]={};
-				closure2[]={};
-				soundClosure[]={};
-			};
-			class StandardSound: BaseSoundModeType
-			{
-				weaponSoundEffect="";
-				begin1[]=
-				{
-					"MRC\JLTS\weapons\DC15A\sounds\dc15a_fire",
-					1,
-					1,
-					1800
-				};
-				soundBegin[]=
-				{
-					"begin1",
-					1
-				};
-			};
-			showToPlayer=0;
-			burst=3;
-			aiBurstTerminable=1;
-			minRange=2;
-			minRangeProbab=0.5;
-			midRange=75;
-			midRangeProbab=0.69999999;
-			maxRange=150;
-			maxRangeProbab=0.050000001;
-			aiRateOfFire=2;
-			aiRateOfFireDistance=200;
-		};
-		class single_medium_optics1: Single
-		{
-			sounds[]=
-			{
-				"StandardSound"
-			};
-			class BaseSoundModeType
-			{
-				weaponSoundEffect="";
-				closure1[]={};
-				closure2[]={};
-				soundClosure[]={};
-			};
-			class StandardSound: BaseSoundModeType
-			{
-				weaponSoundEffect="";
-				begin1[]=
-				{
-					"MRC\JLTS\weapons\DC15A\sounds\dc15a_fire",
-					1,
-					1,
-					1800
-				};
-				soundBegin[]=
-				{
-					"begin1",
-					1
-				};
-			};
-			requiredOpticType=1;
-			showToPlayer=0;
-			minRange=2;
-			minRangeProbab=0.2;
-			midRange=450;
-			midRangeProbab=0.69999999;
-			maxRange=600;
-			maxRangeProbab=0.2;
-			aiRateOfFire=6;
-			aiRateOfFireDistance=600;
-		};
-		class single_far_optics2: single_medium_optics1
-		{
-			sounds[]=
-			{
-				"StandardSound"
-			};
-			class BaseSoundModeType
-			{
-				weaponSoundEffect="";
-				closure1[]={};
-				closure2[]={};
-				soundClosure[]={};
-			};
-			class StandardSound: BaseSoundModeType
-			{
-				weaponSoundEffect="";
-				begin1[]=
-				{
-					"MRC\JLTS\weapons\DC15A\sounds\dc15a_fire",
-					1,
-					1,
-					1800
-				};
-				soundBegin[]=
-				{
-					"begin1",
-					1
-				};
-			};
-			requiredOpticType=2;
-			showToPlayer=0;
-			minRange=100;
-			minRangeProbab=0.1;
-			midRange=500;
-			midRangeProbab=0.60000002;
-			maxRange=700;
-			maxRangeProbab=0.050000001;
-			aiRateOfFire=8;
-			aiRateOfFireDistance=700;
-		};
-		modelOptics="z\MET\addons\weapons\scopes\big_cross_blue_full.p3d";
-		class OpticsModes
-		{
-			class DC15scope_sights
-			{
-				opticsID=1;
-				useModelOptics=0;
-				opticsPPEffects[]=
-				{
-					"Default"
-				};
-				opticsFlare=0;
-				opticsDisablePeripherialVision=0;
-				opticsZoomMin=0.25;
-				opticsZoomMax=1.25;
-				opticsZoomInit=0.75;
-				memoryPointCamera="eye";
-				visionMode[]={};
-				distanceZoomMin=200;
-				distanceZoomMax=200;
-				cameraDir="";
-			};
-			class DC15scope_scope: DC15scope_sights
-			{
-				opticsID=2;
-				useModelOptics=1;
-				opticsPPEffects[]=
-				{
-					"OpticsCHAbera5",
-					"OpticsBlur5"
-				};
-				visionMode[]=
-				{
-					"Normal",
-					"NVG"
-				};
-				opticsZoomMin=0.107;
-				opticsZoomMax=0.107;
-				opticsZoomInit=0.107;
-				memoryPointCamera="opticView";
-				opticsFlare=1;
-				opticsDisablePeripherialVision=1;
-				distanceZoomMin=400;
-				distanceZoomMax=400;
-				weaponInfoType="RscWeaponEmpty";
-			};
-		};
-		class WeaponSlotsInfo: WeaponSlotsInfo
-		{
-			mass=60;
-			class CowsSlot: CowsSlot
-			{
-				compatibleItems[]={
-					"MET_holo_optic",
-					//"3AS_optic_holo_DC15S",
-					"MET_optic_holo_scope",
-					"MET_optic_holo_test",
-					"MET_Optic_Holo_Two_Blue",
-					"MET_Optic_Holo_Two_Red",
-					"MET_Optic_Holo_Two_Yellow",
-					"MET_Optic_Holo_Two_Green",
-					"MET_Optic_Holo_One_Blue",
-					"MET_Optic_Holo_One_Green",
-					"MET_Optic_Holo_One_Red",
-					"MET_Optic_Holo_One_Yellow"
-				};
-			};
-			class MuzzleSlot: MuzzleSlot
-			{
-				compatibleItems[]={};
-			};
-			class PointerSlot: PointerSlot
-			{
-				compatibleItems[]={};
-			};
-			class UnderBarrelSlot: UnderBarrelSlot
-			{
-				compatibleItems[]={};
-			};
-		};
-		class GunParticles
-		{
-			class FirstEffect
-			{
-				directionName="Konec hlavne";
-				effectName="RifleAssaultCloud";
-				positionName="Usti hlavne";
-			};
-		};
-	};
-	class MET_DC15S_shield: MET_DC15S
-	{
-		displayName="[16th] DC-15S (Shield) MkI";
-		baseWeapon="MET_DC15S";
-		scope=1;
-		JLTS_isShielded=1;
-		JLTS_baseWeapon="MET_DC15S";
-		JLTS_friedItem="MET_DC15S_shield_fried";
-		model="\MRC\JLTS\weapons\DC15S\DC15S_shielded.p3d";
-		hiddenSelections[]=
-		{
-			"camo1",
-			"camo2"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\MRC\JLTS\weapons\DC15S\data\new\DC15S_co.paa",
-			"\MRC\JLTS\weapons\Shield\data\shield_co.paa"
-		};
-		handAnim[]=
-		{
-			"OFP2_ManSkeleton",
-			"\MRC\JLTS\weapons\DC15S\anims\DC15S_shielded_handanim.rtm"
-		};
-		reloadAction="GestureReload";
-		inertia=0.80000001;
-		recoil="recoil_pdw";
-		class WeaponSlotsInfo: WeaponSlotsInfo
-		{
-			mass=500;
-			class UnderBarrelSlot: UnderBarrelSlot
-			{
-				compatibleItems[]=
-				{
-					"JLTS_riot_shield_attachment",
-					"JLTS_riot_shield_212_attachment",
-					"JLTS_riot_shield_501_attachment",
-					"JLTS_riot_shield_101_attachment",
-					"JLTS_riot_shield_CG_attachment",
-					"JLTS_riot_shield_GD_attachment",
-					"JLTS_riot_shield_droid_attachment"
-				};
-			};
-		};
-	};
-	/*==============================================================================
-	==DC-15S LEGACY (Fried)
-	==============================================================================*/
-	class MET_DC15S_fried: MET_DC15S
-	{
-		JLTS_isFried=1;
-		JLTS_shieldedWeapon="MET_DC15S_shield_fried";
-		baseWeapon="MET_DC15S_fried";
-		displayName="[16th] Fried DC-15S";
-		descriptionShort="$STR_JLTS_descs_BlasterFried";
-		scope=1;
-		picture="\MRC\JLTS\weapons\DC15S\data\ui\DC15S_fried_ui_ca.paa";
-		magazines[]={};
-		magazineWell[]={};
-		drySound[]=
-		{
-			"A3\Sounds_F\arsenal\weapons\Rifles\Mx\dry_Mx",
-			0.56234097,
-			1,
-			10
-		};
-		class Stun: Stun
-		{
-			displayName="$STR_JLTS_names_StunModeFried";
-			magazines[]={};
-			drySound[]=
-			{
-				"A3\Sounds_F\arsenal\weapons\Rifles\Mx\dry_Mx",
-				0.56234097,
-				1,
-				10
-			};
-		};
-	};
-	class MET_DC15S_shield_fried: MET_DC15S_shield
-	{
-		JLTS_isFried=1;
-		JLTS_baseWeapon="MET_DC15S";
-		baseWeapon="MET_DC15S_shield_fried";
-		displayName="[16th] Fried DC-15S (Shield)";
-		descriptionShort="$STR_JLTS_descs_BlasterFried";
-		scope=1;
-		picture="\MRC\JLTS\weapons\DC15S\data\ui\DC15S_fried_ui_ca.paa";
-		magazines[]={};
-		magazineWell[]={};
-		drySound[]=
-		{
-			"A3\Sounds_F\arsenal\weapons\Rifles\Mx\dry_Mx",
-			0.56234097,
-			1,
-			10
-		};
-		class Stun: Stun
-		{
-			displayName="$STR_JLTS_names_StunModeFried";
-			magazines[]={};
-			drySound[]=
-			{
-				"A3\Sounds_F\arsenal\weapons\Rifles\Mx\dry_Mx",
-				0.56234097,
-				1,
-				10
-			};
-		};
-	};
-	/*==============================================================================
-	==DC-15S
-	==============================================================================*/
-	class MET_DC15S_Base_F: Rifle_Base_F
-	{
-		JLTS_hasElectronics=1;
-		JLTS_hasEMPProtection=1;
-		JLTS_friedItem="JLTS_DC15S_fried";
-		JLTS_repairTime=20;
 		author="$STR_3as_Studio";
 		magazines[]=
 		{
@@ -567,7 +87,7 @@ class CfgWeapons
 		magazineReloadSwitchPhase=0.5;
 		class Library
 		{
-			libTextDesc="$STR_3AS_Weapons_Republic_DC15S_Library";
+			libTextDesc="$STR_3AS_Weapons_Republic_DC15C_Library";
 		};
 		reloadAction="GestureReload_IDA_Reload_Blaster";
 		reloadMagazineSound[]=
@@ -577,24 +97,27 @@ class CfgWeapons
 			1,
 			100
 		};
-		recoil="3AS_recoil_DC15S";
+		recoil="MET_recoil_DC15C";
 		maxZeroing=0;
 		discreteDistanceInitIndex=0;
 		maxRecoilSway=0.0125;
 		swayDecaySpeed=1.25;
-		inertia=0.40000001;
+		inertia=0.60000002;
 		aimTransitionSpeed=0.80000001;
-		dexterity=1.6;
+		dexterity=1.4;
 		initSpeed=-1;
 		class GunParticles: GunParticles
 		{
 		};
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
-			mass=60;
+			mass=80;
 			class CowsSlot: CowsSlot
 			{
-				compatibleItems[]={};
+				compatibleItems[]=
+				{
+					"MET_optic_DC15C_F"
+				};
 			};
 			class MuzzleSlot: MuzzleSlot
 			{
@@ -611,16 +134,17 @@ class CfgWeapons
 		};
 		distanceZoomMin=300;
 		distanceZoomMax=300;
-		descriptionShort="$STR_3AS_Weapons_Republic_DC15S_DesShort";
+		descriptionShort="$STR_3AS_Weapons_Republic_DC15C_DesShort";
 		handAnim[]=
 		{
 			"OFP2_ManSkeleton",
-			"3as\3AS_Weapons\Republic\DC15S\Data\Anim\New_DC15S_Handanim.rtm"
+			"3as\3AS_Weapons\Republic\DC15C\Data\Anim\New_DC15C_Handanim.rtm"
 		};
 		modes[]=
 		{
-			"FullAuto",
 			"Single",
+			"Burst",
+			//"FullAuto",
 			"close",
 			"short",
 			"medium",
@@ -639,18 +163,50 @@ class CfgWeapons
 			{
 				soundSetShot[]=
 				{
-					"3AS_DC15S_Shot_SoundSet"
+					"3AS_DC15C_Shot_SoundSet"
 				};
 			};
 			class SilencedSound: BaseSoundModeType
 			{
 				soundSetShot[]=
 				{
-					"3AS_DC15S_Shot_SoundSet"
+					"3AS_DC15C_Shot_SoundSet"
+				};
+			};
+			reloadTime=0.12;
+			dispersion=0.00029;
+			minRange=0;
+			minRangeProbab=0.89999998;
+			midRange=15;
+			midRangeProbab=0.69999999;
+			maxRange=50;
+			maxRangeProbab=0.050000001;
+			aiRateOfFire=1e-006;
+		};
+		class Burst: Mode_Burst
+		{
+			sounds[]=
+			{
+				"StandardSound",
+				"SilencedSound"
+			};
+			class BaseSoundModeType;
+			class StandardSound: BaseSoundModeType
+			{
+				soundSetShot[]=
+				{
+					"3AS_DC15C_Shot_SoundSet"
+				};
+			};
+			class SilencedSound: BaseSoundModeType
+			{
+				soundSetShot[]=
+				{
+					"3AS_DC15C_Shot_SoundSet"
 				};
 			};
 			reloadTime=0.075;
-			dispersion=0.00087;
+			dispersion=0.00029;
 			minRange=0;
 			minRangeProbab=0.89999998;
 			midRange=15;
@@ -661,8 +217,8 @@ class CfgWeapons
 		};
 		class Single: Mode_SemiAuto
 		{
-			reloadTime=0.075;
-			dispersion=0.00087;
+			reloadTime=0.12;
+			dispersion=0.00029;
 			minRange=2;
 			minRangeProbab=0.5;
 			midRange=150;
@@ -681,34 +237,34 @@ class CfgWeapons
 			{
 				soundSetShot[]=
 				{
-					"3AS_DC15S_Shot_SoundSet"
+					"3AS_DC15C_Shot_SoundSet"
 				};
 			};
 			class SilencedSound: BaseSoundModeType
 			{
 				soundSetShot[]=
 				{
-					"3AS_DC15S_Shot_SoundSet"
+					"3AS_DC15C_Shot_SoundSet"
 				};
 			};
 		};
-		class close: FullAuto
+		class close: Burst
 		{
-			burst=8;
+			burst=3;
 			aiRateOfFire=0.5;
-			aiRateOfFireDistance=20;
-			minRange=10;
+			aiRateOfFireDistance=25;
+			minRange=15;
 			minRangeProbab=0.3;
-			midRange=20;
+			midRange=25;
 			midRangeProbab=0.9;
-			maxRange=30;
+			maxRange=35;
 			maxRangeProbab=0.9;
 			showToPlayer=0;
 		};
 		class short: close
 		{
-			burst=6;
-			aiRateOfFire=2;
+			burst=3;
+			aiRateOfFire=1;
 			aiRateOfFireDistance=50;
 			minRange=25;
 			minRangeProbab=0.8;
@@ -719,8 +275,8 @@ class CfgWeapons
 		};
 		class medium: close
 		{
-			burst=4;
-			aiRateOfFire=4;
+			burst=3;
+			aiRateOfFire=2;
 			aiRateOfFireDistance=100;
 			minRange=50;
 			minRangeProbab=0.8;
@@ -734,8 +290,8 @@ class CfgWeapons
 			//reloadTime=0.15;
 			//requiredOpticType=1;
 			showToPlayer=0;
-			burst=2;
-			aiRateOfFire=8;
+			burst=1;
+			aiRateOfFire=3;
 			aiRateOfFireDistance=200;
 			minRange=100;
 			minRangeProbab=1;
@@ -748,7 +304,7 @@ class CfgWeapons
 		{
 			//reloadTime=0.15;
 			burst=1;
-			aiRateOfFire=16;
+			aiRateOfFire=5;
 			//requiredOpticType=2;
 			minRange=200;
 			minRangeProbab=0.85;
@@ -758,7 +314,7 @@ class CfgWeapons
 			maxRangeProbab=0.5;
 			aiRateOfFireDistance=400;
 		};
-		class GL_1GL_F: UGL_F
+		class ELGM: UGL_F
 		{
 			displayName="UBGL";
 			descriptionShort="Underbarrel Grenade Launcher";
@@ -802,7 +358,7 @@ class CfgWeapons
 		modelOptics="z\MET\addons\weapons\scopes\big_cross_blue_full.p3d";
 		class OpticsModes
 		{
-			class Holosights
+			class Ironsights
 			{
 				opticsID=1;
 				useModelOptics=0;
@@ -820,7 +376,7 @@ class CfgWeapons
 				distanceZoomMin=100;
 				distanceZoomMax=100;
 			};
-			class Holoscope: Holosights
+			class HoloScope: Ironsights
 			{
 				opticsID=2;
 				useModelOptics=1;
@@ -876,28 +432,28 @@ class CfgWeapons
 		ace_overheating_allowSwapBarrel=0;
 		ace_overheating_dispersion=0.75;
 	};
-	class MET_DC15S_F: MET_DC15S_Base_F
+	class MET_DC15C_F: MET_DC15C_Base_F
 	{
 		JLTS_hasElectronics=1;
 		JLTS_hasEMPProtection=0;
-		JLTS_friedItem="MET_DC15S_F_fried";
-		JLTS_repairTime=20;
+		JLTS_friedItem="MET_DC15C_fried";
+		JLTS_repairTime=25;
 		author="$STR_3as_Studio";
-		baseWeapon="MET_DC15S_F";
+		baseWeapon="MET_DC15C_F";
 		scope=2;
-		displayName="[16th] DC-15S MkII";
-		model="\3AS\3AS_Weapons\Republic\DC15S\3AS_DC15S_F.p3d";
-		picture="\3AS\3AS_Weapons\Republic\DC15S\Data\UI\3as_dc15s.paa";
+		displayName="[16th] DC-15C";
+		model="\3AS\3AS_Weapons\Republic\DC15C\3AS_DC15C_F.p3d";
+		picture="\3AS\3AS_Weapons\Republic\DC15C\Data\UI\3as_dc15c.paa";
 		UiPicture="\A3\weapons_f\data\UI\icon_regular_CA.paa";
 	};
 	/*==============================================================================
-	==DC-15S MkII (Fried)
+	==DC-15C (Fried)
 	==============================================================================*/
-	class MET_DC15S_F_fried: MET_DC15S_F
+	class MET_DC15C_fried: MET_DC15C_F
 	{
 		JLTS_isFried=1;
-		baseWeapon="MET_DC15S_F_fried";
-		displayName="[16th] Fried DC-15S MkII";
+		baseWeapon="MET_DC15C_fried";
+		displayName="[16th] Fried DC-15C";
 		descriptionShort="$STR_JLTS_descs_BlasterFried";
 		scope=1;
 		picture="\MRC\JLTS\weapons\DC15S\data\ui\DC15S_fried_ui_ca.paa";
@@ -912,44 +468,44 @@ class CfgWeapons
 		};
 	};
 	/*==============================================================================
-	==DC-15S GL
+	==DC-15C GL
 	==============================================================================*/
-	class MET_DC15S_GL: MET_DC15S_Base_F
+	class MET_DC15C_GL: MET_DC15C_Base_F
 	{
 		JLTS_hasElectronics=1;
 		JLTS_hasEMPProtection=0;
-		JLTS_friedItem="MET_DC15S_GL_fried";
-		JLTS_repairTime=25;
+		JLTS_friedItem="MET_DC15C_GL_fried";
+		JLTS_repairTime=30;
 		author="$STR_3as_Studio";
-		baseWeapon="MET_DC15S_GL";
+		baseWeapon="MET_DC15C_GL";
 		scope=2;
-		displayName="[16th] DC-15S MkII GL";
-		model="\3AS\3AS_Weapons\Republic\DC15S\3AS_DC15S_GL.p3d";
-		picture="\3AS\3AS_Weapons\Republic\DC15S\Data\UI\3as_dc15sgl.paa";
+		displayName="[16th] DC-15C GL";
+		model="\3AS\3AS_Weapons\Republic\DC15C\3AS_DC15C_GL.p3d";
+		picture="\3AS\3AS_Weapons\Republic\DC15C\Data\UI\3as_dc15cgl.paa";
 		UiPicture="\A3\weapons_f\data\UI\icon_regular_CA.paa";
-		handAnim[]=
-		{
-			"OFP2_ManSkeleton",
-			"3as\3AS_Weapons\Republic\DC15S\Data\Anim\New_DC15SGL_Handanim.rtm"
-		};
 		muzzles[]=
 		{
 			"this",
-			"GL_1GL_F"
+			"ELGM"
+		};
+		handAnim[]=
+		{
+			"OFP2_ManSkeleton",
+			"3as\3AS_Weapons\Republic\DC15C\Data\Anim\New_DC15CGL_Handanim.rtm"
 		};
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
-			mass=90;
+			mass=110;
 		};
 	};
 	/*==============================================================================
-	==DC-15S GL MkII (Fried)
+	==DC-15C GL (Fried)
 	==============================================================================*/
-	class MET_DC15S_GL_fried: MET_DC15S_GL
+	class MET_DC15C_GL_fried: MET_DC15C_GL
 	{
 		JLTS_isFried=1;
-		baseWeapon="MET_DC15S_GL_fried";
-		displayName="[16th] Fried DC-15S MkII GL";
+		baseWeapon="MET_DC15C_GL_fried";
+		displayName="[16th] Fried DC-15C GL";
 		descriptionShort="$STR_JLTS_descs_BlasterFried";
 		scope=1;
 		picture="\MRC\JLTS\weapons\DC15S\data\ui\DC15S_fried_ui_ca.paa";
@@ -965,23 +521,6 @@ class CfgWeapons
 			0.56234097,
 			1,
 			10
-		};
-	};
-};
-class CfgMagazineWells
-{
-	class MET_DC15A_MagWell
-	{
-		MET_Magazines[]=
-		{
-			"MET_DC15A_mag"
-		};
-	};
-	class MET_DC15LE_MagWell
-	{
-		MET_HeavyMagazines[]=
-		{
-			"MET_DC15LE_mag"
 		};
 	};
 };

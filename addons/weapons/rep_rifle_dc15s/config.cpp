@@ -1,6 +1,6 @@
 class CfgPatches
 {
-	class metal_inf_weap
+	class met_rep_rifle_dc15s
 	{
 		author="";
 		requiredVersion=0.1;
@@ -970,18 +970,11 @@ class CfgWeapons
 };
 class CfgMagazineWells
 {
-	class MET_DC15A_MagWell
+	class MET_DC15S_MagWell
 	{
-		MET_Magazines[]=
+		MET_LightMagazines[]=
 		{
-			"MET_DC15A_mag"
-		};
-	};
-	class MET_DC15LE_MagWell
-	{
-		MET_HeavyMagazines[]=
-		{
-			"MET_DC15LE_mag"
+			"MET_DC15S_Mag"
 		};
 	};
 };

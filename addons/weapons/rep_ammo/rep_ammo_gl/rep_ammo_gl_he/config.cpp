@@ -1,0 +1,301 @@
+class CfgPatches
+{
+	class metal_rep_ammo_glhe
+	{
+		author="";
+		requiredVersion=0.1;
+		units[]={};
+		ammo[]=
+		{
+			"MET_HE_LauncherGrenade",
+			"MET_25HE_LauncherGrenade",
+			"MET_Nuclear_LauncherGrenade",
+			"MET_RocketGrenade_HE",
+			"MET_60HE"
+		};
+		requiredAddons[]=
+		{
+			"metal_weapons",
+			"metal_rep_ammo",
+			"metal_rep_ammo_base",
+			"metal_rep_ammo_glcore"
+		};
+	};
+};
+class CfgAmmo
+{
+	class G_40mm_HE;
+	class MET_HE_LauncherGrenade: G_40mm_HE
+	{
+		ace_frag_enabled=1;
+		indirectHitRange=9;
+		indirectHit=20;
+		effectflare="FlareShell";
+		effectfly="MET_GrenadeBlasterBoltGlow_Blue_Fly";
+		fuseDistance=0;
+		ExplosionEffects="GrenadeExplosion";
+		CraterEffects="GrenadeCrater";
+		lightcolor[]={0,0,1};
+		model="Indecisive_Armoury_Ammos\Data\40mm_Grenade\IDA_40mm_Grenade.p3d";
+	};
+	class MET_25HE_LauncherGrenade: G_40mm_HE
+	{
+		indirectHitRange=4;
+		indirectHit=15;
+		typicalSpeed=210;
+		initSpeed = 210;
+		effectflare="FlareShell";
+		effectfly="MET_SmallGrenadeBlasterBoltGlow_Blue_Fly";
+		fuseDistance=0;
+		//ExplosionEffects="GrenadeExplosion";
+		//CraterEffects="GrenadeCrater";
+		coefGravity=0.2;
+		lightcolor[]={0,0,1};
+		model="Indecisive_Armoury_Ammos\Data\40mm_Grenade\IDA_40mm_Grenade.p3d";
+		ace_frag_classes[]=
+		{
+			"ACE_frag_tiny",
+			"ACE_frag_tiny_HD",
+			"ACE_frag_small_HD"
+		};
+		ace_frag_enabled=1;
+		ace_frag_metal=15;
+		ace_frag_charge=6;
+		ace_frag_gurney_c=2000;
+		ace_frag_gurney_k="3/5";
+		ExplosionEffects = "ExploAmmoExplosion";
+		CraterEffects = "ExploAmmoCrater";
+		explosionSoundEffect="DefaultExplosion";
+		soundHit1[] = {"A3\Sounds_F\arsenal\explosives\Shells\Explosion_shell_01", 3.1622777, 1, 1500};
+		soundHit2[] = {"A3\Sounds_F\arsenal\explosives\Shells\Explosion_shell_02", 3.1622777, 1, 1500};
+		soundHit3[] = {"A3\Sounds_F\arsenal\explosives\Shells\Explosion_shell_03", 3.1622777, 1, 1500};
+		soundHit4[] = {"A3\Sounds_F\arsenal\explosives\Shells\Explosion_shell_04", 3.1622777, 1, 1500};
+		multiSoundHit[] = {"soundHit1", 0.25, "soundHit2", 0.25, "soundHit3", 0.25, "soundHit4", 0.25};
+	};
+	class MET_Nuclear_LauncherGrenade: G_40mm_HE
+	{
+		ace_frag_enabled=1;
+		indirectHitRange=9;
+		indirectHit=20;
+		effectflare="FlareShell";
+		effectfly="MET_GrenadeBlasterBoltGlow_Red_Fly";
+		fuseDistance=0;
+		ExplosionEffects="GrenadeExplosion";
+		CraterEffects="GrenadeCrater";
+		lightcolor[]={1,0,0};
+		FSNB_IsNuclear = 1;
+		//FSNB_Yield = 99999;
+		FSNB_Yield = 0.0002267962; // 25kt
+		model="Indecisive_Armoury_Ammos\Data\40mm_Grenade\IDA_40mm_Grenade.p3d";
+	};
+	class MET_RocketGrenade_HE: G_40mm_HE
+	{
+		explosionSoundEffect="DefaultExplosion";
+		ace_frag_enabled=1;
+		simulation="shotShell";
+		model="Indecisive_Armoury_Ammos\Data\RifleGrenade\IDA_RifleGrenade.p3d";
+		effectflare="FlareShell";
+		effectfly="MET_GrenadeBlasterBoltGlow_Green_Fly";
+		lightcolor[]={0,1,0};
+		coefGravity=0.1;
+		hit=80;
+		indirectHit=20;
+		indirectHitRange=6;
+		warheadName="HE";
+		visibleFire=1;
+		audibleFire=30;
+		visibleFireTime=3;
+		dangerRadiusHit=60;
+		suppressionRadiusHit=24;
+		explosive=1;
+		cost=10;
+		deflecting=0;
+		airFriction=-0.001;
+		fuseDistance=15;
+		whistleDist=16;
+		typicalSpeed=185;
+		caliber=2;
+		timeToLive = 30;
+		soundHit1[]=
+		{
+			"A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_01",
+			3.1622777,
+			1,
+			1500
+		};
+		soundHit2[]=
+		{
+			"A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_02",
+			3.1622777,
+			1,
+			1500
+		};
+		soundHit3[]=
+		{
+			"A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_03",
+			3.1622777,
+			1,
+			1500
+		};
+		soundHit4[]=
+		{
+			"A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_04",
+			3.1622777,
+			1,
+			1500
+		};
+		multiSoundHit[]=
+		{
+			"soundHit1",
+			0.25,
+			"soundHit2",
+			0.25,
+			"soundHit3",
+			0.25,
+			"soundHit4",
+			0.25
+		};
+		class CamShakeExplode
+		{
+			power=8;
+			duration=1.2;
+			frequency=20;
+			distance=74.596397;
+		};
+		class CamShakeHit
+		{
+			power=20;
+			duration=0.40000001;
+			frequency=20;
+			distance=1;
+		};
+		class CamShakeFire
+		{
+			power=0;
+			duration=0.2;
+			frequency=20;
+			distance=0;
+		};
+		class CamShakePlayerFire
+		{
+			power=0;
+			duration=0.1;
+			frequency=20;
+			distance=1;
+		};
+	};
+	class MET_60HE: G_40mm_HE
+	{
+		ace_frag_enabled=1;
+		ace_frag_metal=610;
+		ace_frag_charge=300;
+		ace_frag_gurney_c=2440;
+		ace_frag_gurney_k="3/5";
+		ace_frag_classes[]=
+		{
+			"ACE_frag_small_HD"
+		};
+		ace_frag_skip=0;
+		ace_frag_force=1;
+		explosionSoundEffect="";
+		SoundSetExplosion[]=
+		{
+			"Mortar_Exp_SoundSet"
+		};
+		simulation="shotShell";
+		effectFly="MET_GrenadeBlasterBoltGlow_Blue_Fly";
+		lightcolor[]={0,0,1};
+		model="Indecisive_Armoury_Ammos\Data\40mm_Grenade\IDA_40mm_Grenade.p3d";
+		aiAmmoUsageFlags="64";
+		tracerScale=1.6;
+		tracerStartTime=0.1;
+		tracerEndTime=20;
+		brightness=100000;
+		hit=150;
+		indirectHit=140;
+		explosionForceCoef=8;
+		indirectHitRange=16;
+		warheadName="HE";
+		visibleFire=1;
+		audibleFire=30;
+		visibleFireTime=3;
+		dangerRadiusHit=60;
+		suppressionRadiusHit=24;
+		explosive=0.75;
+		cost=25;
+		deflecting=0;
+		airFriction=-0.0049999999;
+		fuseDistance=0;
+		whistleDist=16;
+		typicalSpeed=10;
+		caliber=2;
+		timeToLive=15;
+		soundHit1[]=
+		{
+			"A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_01",
+			1.1622777,
+			0.60000002,
+			1500
+		};
+		soundHit2[]=
+		{
+			"A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_02",
+			1.1622777,
+			0.60000002,
+			1500
+		};
+		soundHit3[]=
+		{
+			"A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_03",
+			1.1622777,
+			0.60000002,
+			1500
+		};
+		soundHit4[]=
+		{
+			"A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_04",
+			1.1622777,
+			0.60000002,
+			1500
+		};
+		multiSoundHit[]=
+		{
+			"soundHit1",
+			0.25,
+			"soundHit2",
+			0.25,
+			"soundHit3",
+			0.25,
+			"soundHit4",
+			0.25
+		};
+		class CamShakeExplode
+		{
+			power=8;
+			duration=1.2;
+			frequency=20;
+			distance=74.596397;
+		};
+		class CamShakeHit
+		{
+			power=20;
+			duration=0.40000001;
+			frequency=20;
+			distance=1;
+		};
+		class CamShakeFire
+		{
+			power=0;
+			duration=0.2;
+			frequency=20;
+			distance=0;
+		};
+		class CamShakePlayerFire
+		{
+			power=0;
+			duration=0.1;
+			frequency=20;
+			distance=1;
+		};
+	};
+};

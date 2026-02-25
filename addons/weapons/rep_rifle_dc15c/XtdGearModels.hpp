@@ -1,15 +1,10 @@
 class XtdGearModels {
     class CfgWeapons {
-        // DC-15S Blaster Rifle
-        class dc15s {
-            label = "DC-15S";
+        // DC-15C Blaster Rifle
+        class dc15c {
+            label = "DC-15C";
             author = "16th Mod Team";
-            options[] = { "Gen", "GL" };
-            class Gen {
-                values[] = {
-                    "Mk I", "Mk II"
-                };
-            };
+            options[] = { "GL" };
             class GL {
                 values[] = {
                     "Removed", "Installed"

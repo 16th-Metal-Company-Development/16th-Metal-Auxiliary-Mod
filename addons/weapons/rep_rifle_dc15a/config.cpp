@@ -1,6 +1,6 @@
 class CfgPatches
 {
-	class metal_inf_weap
+	class met_rep_rifle_dc15a
 	{
 		author="";
 		requiredVersion=0.1;
