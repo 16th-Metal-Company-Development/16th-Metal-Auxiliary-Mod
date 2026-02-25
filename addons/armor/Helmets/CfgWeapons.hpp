@@ -843,6 +843,15 @@ class MET_Helmet_Trooper_Creed : MET_Helmet_Trooper_Base
 		"z\MET\addons\Armor_Rewrite\Helmets\Textures\Custom\MET_Creed_Helmet_CO.paa"
 	};
 };
+class MET_Helmet_Trooper_Dubs : MET_Helmet_Trooper_Base
+{
+	scope = 2;
+	displayName = "[16th] Dubs's Helmet";
+	hiddenSelectionsTextures[] =
+	{
+		"z\MET\addons\Armor_Rewrite\Helmets\Textures\Custom\MET_Dubs_Helmet_CO.paa"
+	};
+};
 class MET_Helmet_Trooper_Fish : MET_Helmet_Trooper_Base
 {
 	scope = 2;
@@ -924,7 +933,7 @@ class MET_Helmet_Trooper_Karma : MET_Helmet_Trooper_Base
 };
 class MET_Helmet_Trooper_Kick : MET_Helmet_Trooper_Base
 {
-	scope = 0;
+	scope = 2;
 	displayName = "[16th] Kick's Helmet";
 	hiddenSelectionsTextures[] =
 	{
@@ -1127,6 +1136,15 @@ class MET_Helmet_Trooper_Talk : MET_Helmet_Trooper_Base
 	hiddenSelectionsTextures[] =
 	{
 		"z\MET\addons\Armor_Rewrite\Helmets\Textures\Custom\MET_Talk_Helmet_CO.paa"
+	};
+};
+class MET_Helmet_Trooper_Tavion : MET_Helmet_Trooper_Base
+{
+	scope = 2;
+	displayName = "[16th] Tavion's Helmet";
+	hiddenSelectionsTextures[] =
+	{
+		"z\MET\addons\Armor_Rewrite\Helmets\Textures\Custom\MET_Tavion_Helmet_CO.paa"
 	};
 };
 class MET_Helmet_Trooper_Vergil : MET_Helmet_Trooper_Base

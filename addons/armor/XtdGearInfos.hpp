@@ -25,6 +25,7 @@ class XtdGearInfos {
         class MET_Helmet_Trooper_Chetiah     { model = "MET_Custom_Helmet"; camo = "Chetiah"; };
         class MET_Helmet_Trooper_Cougar      { model = "MET_Custom_Helmet"; camo = "Cougar"; };
         class MET_Helmet_Trooper_Creed       { model = "MET_Custom_Helmet"; camo = "Creed"; };
+        class MET_Helmet_Trooper_Dubs        { model = "MET_Custom_Helmet"; camo = "Dubs"; };
         class MET_Helmet_Trooper_Fish        { model = "MET_Custom_Helmet"; camo = "Fish"; };
         class MET_Helmet_Trooper_Frost       { model = "MET_Custom_Helmet"; camo = "Frost"; };
         class MET_Helmet_Trooper_Gambit      { model = "MET_Custom_Helmet"; camo = "Gambit"; };
@@ -55,6 +56,7 @@ class XtdGearInfos {
         class MET_Helmet_Trooper_Spice       { model = "MET_Custom_Helmet"; camo = "Spice"; };
         class MET_Helmet_Trooper_Sunto       { model = "MET_Custom_Helmet"; camo = "Sunto"; };
         class MET_Helmet_Trooper_Talk        { model = "MET_Custom_Helmet"; camo = "Talk"; };
+        class MET_Helmet_Trooper_Tavion      { model = "MET_Custom_Helmet"; camo = "Tavion"; };
         class MET_Helmet_Trooper_Vergil      { model = "MET_Custom_Helmet"; camo = "Vergil"; };
         class MET_Helmet_Trooper_William     { model = "MET_Custom_Helmet"; camo = "William"; };
         class MET_Helmet_Trooper_Winters     { model = "MET_Custom_Helmet"; camo = "Winters"; };
