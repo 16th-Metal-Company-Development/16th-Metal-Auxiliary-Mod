@@ -110,11 +110,11 @@ class CfgWeapons
 		recoil="MET_recoil_VK38X";
 		maxZeroing=1400;
 		discreteDistanceInitIndex=0;
-		maxRecoilSway=0.0125;
-		swayDecaySpeed=1.25;
-		inertia=0.60000002;
-		aimTransitionSpeed=0.80000001;
-		dexterity=1.2;
+		maxRecoilSway=0.6; //smaller = Easier to Control During Sustained fire
+		swayDecaySpeed=0.8; //higher = Less Sway Over Time
+		inertia=2; //higher = More Weight
+		aimTransitionSpeed=0.5; //higher = Faster Aim Transition
+		dexterity=0.9; //higher = More Maneuverable
 		initSpeed=-1;
 		class GunParticles: GunParticles
 		{

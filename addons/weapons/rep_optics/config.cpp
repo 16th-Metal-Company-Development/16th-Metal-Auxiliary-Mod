@@ -37,7 +37,8 @@ class CfgPatches
 			"3AS_Weapons_Republic_DC15A",
 			"3AS_Weapons_Republic_Valken38X",
 			"metal_weapons",
-			"3AS_Weapons_Greenfor"
+			"3AS_Weapons_Greenfor",
+			"3AS_Weapons_ACC"
 		};
 	};
 };
@@ -448,7 +449,7 @@ class CfgWeapons
 				};*/
 			};
 		};
-		inertia=0.2;
+		inertia=0.3;
 	};
 	class MET_optic_VK38X_F: ItemCore
 	{

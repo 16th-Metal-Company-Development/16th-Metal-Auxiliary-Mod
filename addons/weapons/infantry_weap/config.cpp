@@ -26,8 +26,8 @@ class CfgPatches
 		};
 	};
 };
-#include "XtdGearModels.hpp"
-#include "XtdGearInfos.hpp"
+//#include "XtdGearModels.hpp"
+//#include "XtdGearInfos.hpp"
 class Extended_FiredBIS_Eventhandlers
 {
     class CAManBase

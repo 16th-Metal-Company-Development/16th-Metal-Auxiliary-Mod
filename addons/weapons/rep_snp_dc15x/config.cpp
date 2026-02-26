@@ -59,8 +59,9 @@ class CowsSlot;
 class UnderBarrelSlot;
 class MuzzleSlot;
 class PointerSlot;
-class 3AS_MuzzleSlot_DC17S;
-class 3AS_CowsSlot_DC17S;
+class 3AS_MuzzleSlot_DC15X;
+class 3AS_CowsSlot_DC15X;
+class 3AS_UnderBarrelSlot_DC15X;
 class CfgWeapons
 {
 	class UGL_F;
@@ -84,7 +85,7 @@ class CfgWeapons
 	/*==============================================================================
 	==DC-15X
 	==============================================================================*/
-	class MET_DC15X_Base_F: Rifle_Base_F
+	/*class MET_DC15X_Base_F: Rifle_Base_F
 	{
 		author="$STR_3as_Studio";
 		magazines[]=
@@ -113,11 +114,11 @@ class CfgWeapons
 		cursor="srifle";
 		maxZeroing=1400;
 		discreteDistanceInitIndex=0;
-		maxRecoilSway=0.0125;
-		swayDecaySpeed=1.25;
-		inertia=1.1;
-		aimTransitionSpeed=0.5;
-		dexterity=1.1;
+		maxRecoilSway=0.7; //smaller = Easier to Control During Sustained fire
+		swayDecaySpeed=0.7; //higher = Less Sway Over Time
+		inertia=2.5; //higher = More Weight
+		aimTransitionSpeed=0.4; //higher = Faster Aim Transition
+		dexterity=0.8; //higher = More Maneuverable
 		initSpeed=-1;
 		class GunParticles: GunParticles
 		{
@@ -281,7 +282,7 @@ class CfgWeapons
 			1,
 			30
 		};*/
-		ace_overheating_mrbs=3000;
+		/*ace_overheating_mrbs=3000;
 		ace_overheating_slowdownFactor=1;
 		ace_overheating_allowSwapBarrel=0;
 		ace_overheating_dispersion=0.75;
@@ -299,6 +300,121 @@ class CfgWeapons
 		model="\3AS\3AS_Weapons\Republic\DC15X\3AS_DC15X_F.p3d";
 		picture="\3AS\3AS_Weapons\Republic\DC15X\Data\UI\3as_dc15x.paa";
 		UiPicture="\A3\weapons_f\data\UI\icon_regular_CA.paa";
+		class LinkedItems
+		{
+			class LinkedItemsOptic
+			{
+				slot="CowsSlot";
+				item="MET_optic_DC15X_F";
+			};
+			class LinkedItemsUnderBarrel
+			{
+				slot="UnderBarrelSlot";
+				item="3AS_bipod_DC15X_F";
+			};
+		};
+	};*/
+	/*==============================================================================
+	==DC-15X Fixing
+	==============================================================================*/
+	class 3AS_DC15X_Base_F: Rifle_Base_F
+	{
+		class WeaponSlotsInfo;
+		class GunParticles;
+	};
+	class MET_DC15X_F: 3AS_DC15X_Base_F
+	{
+		JLTS_hasElectronics=1;
+		JLTS_hasEMPProtection=0;
+		JLTS_friedItem="MET_DC15X_F_fried";
+		JLTS_repairTime=40;
+		author="$STR_3as_Studio";
+		baseWeapon="MET_DC15X_F2";
+		scope=2;
+		displayName="[16th] DC-15X";
+		model="\3AS\3AS_Weapons\Republic\DC15X\3AS_DC15X_F.p3d";
+		picture="\3AS\3AS_Weapons\Republic\DC15X\Data\UI\3as_dc15x.paa";
+		UiPicture="\A3\weapons_f\data\UI\icon_regular_CA.paa";
+		reloadAction="GestureReload_IDA_Reload_Blaster";
+		reloadMagazineSound[]=
+		{
+			"\Indecisive_Armoury_Sounds\Blaster_reload_Vent.ogg",
+			5,
+			1,
+			100
+		};
+		magazines[]=
+		{
+			"MET_DC15x_mag",
+			"MET_DC15x_at_mag"
+		};
+		magazineWell[]=
+		{
+			"MET_DC15x_MagWell"
+		};
+		recoil="MET_recoil_DC15X";
+		cursor="srifle";
+		class Single: Mode_SemiAuto
+		{
+			reloadTime=0.80000001;
+			dispersion=0.000000000000000001;
+			minRange=2;
+			minRangeProbab=0.1;
+			midRange=250;
+			midRangeProbab=0.69999999;
+			maxRange=350;
+			maxRangeProbab=0.050000001;
+			soundContinuous=0;
+			soundBurst=0;
+			sounds[]=
+			{
+				"StandardSound",
+				"SilencedSound"
+			};
+			class BaseSoundModeType;
+			class StandardSound: BaseSoundModeType
+			{
+				soundSetShot[]=
+				{
+					"3AS_DLT19X_Shot_SoundSet"
+				};
+			};
+			class SilencedSound: BaseSoundModeType
+			{
+				soundSetShot[]=
+				{
+					"3AS_DLT19X_Shot_SoundSet"
+				};
+			};
+			aiRateOfFire=3;
+			aiRateOfFireDistance=500;
+		};
+		maxRecoilSway=0.7; //smaller = Easier to Control During Sustained fire
+		swayDecaySpeed=0.7; //higher = Less Sway Over Time
+		inertia=2.5; //higher = More Weight
+		aimTransitionSpeed=0.4; //higher = Faster Aim Transition
+		dexterity=0.8; //higher = More Maneuverable
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			mass=280;
+			class CowsSlot: 3AS_CowsSlot_DC15X
+			{
+				compatibleItems[]=
+				{
+					"MET_optic_DC15X_F"
+				};
+			};
+			class MuzzleSlot: 3AS_MuzzleSlot_DC15X
+			{
+				iconPosition[]={0,0.44999999};
+				iconScale=0.2;
+			};
+			class UnderBarrelSlot: 3AS_UnderBarrelSlot_DC15X
+			{
+				iconPosition[]={0.23999999,0.69999999};
+				iconScale=0.30000001;
+			};
+		};
 		class LinkedItems
 		{
 			class LinkedItemsOptic

@@ -435,6 +435,11 @@ class CfgWeapons
 			"Burst",
 			"FullAuto"
 		};
+		maxRecoilSway=0.04; //smaller = Easier to Control During Sustained fire
+		swayDecaySpeed=2; //higher = Less Sway Over Time
+		inertia=0.4; //higher = More Weight
+		aimTransitionSpeed=1.2; //higher = Faster Aim Transition
+		dexterity=1.8; //higher = More Maneuverable
 		class FullAuto: Mode_FullAuto
 		{
 			sounds[]=

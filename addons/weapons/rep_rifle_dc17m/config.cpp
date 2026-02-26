@@ -62,10 +62,11 @@ class CfgWeapons
 		magazineReloadSwitchPhase=0.40000001;
 		discreteDistanceInitIndex=0;
 		recoil="recoil_SMG_03";
-		maxRecoilSway=0.0099999998;
-		swayDecaySpeed=1.25;
-		inertia=0.40000001;
-		dexterity=1.7;
+		maxRecoilSway=0.2;
+		swayDecaySpeed=1.5;
+		inertia=1.1;
+		aimTransitionSpeed=0.6;
+		dexterity=1;
 		initSpeed=-1;
 		maxZeroing=100;
 		class GunParticles: GunParticles

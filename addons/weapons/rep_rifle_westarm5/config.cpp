@@ -91,10 +91,11 @@ class CfgWeapons
 		magazineReloadSwitchPhase=0.40000001;
 		discreteDistanceInitIndex=0;
 		recoil="MET_recoil_Z6";
-		maxRecoilSway=0.0125;
-		swayDecaySpeed=1.25;
-		inertia=0.5;
-		dexterity=1.5;
+		maxRecoilSway=0.04; //smaller = Easier to Control During Sustained fire
+		swayDecaySpeed=2; //higher = Less Sway Over Time
+		inertia=0.7; //higher = More Weight
+		aimTransitionSpeed=1.5; //higher = Faster Aim Transition
+		dexterity=2; //higher = More Maneuverable
 		initSpeed=-1;
 		maxZeroing=100;
 		class GunParticles: GunParticles
@@ -481,10 +482,11 @@ class CfgWeapons
 		magazineReloadSwitchPhase=0.40000001;
 		discreteDistanceInitIndex=0;
 		recoil="MET_recoil_Z6";
-		maxRecoilSway=0.0125;
-		swayDecaySpeed=1.25;
-		inertia=0.5;
-		dexterity=1.5;
+		maxRecoilSway=0.04; //smaller = Easier to Control During Sustained fire
+		swayDecaySpeed=2; //higher = Less Sway Over Time
+		inertia=0.7; //higher = More Weight
+		aimTransitionSpeed=1.5; //higher = Faster Aim Transition
+		dexterity=2; //higher = More Maneuverable
 		initSpeed=-1;
 		maxZeroing=100;
 		class GunParticles: GunParticles

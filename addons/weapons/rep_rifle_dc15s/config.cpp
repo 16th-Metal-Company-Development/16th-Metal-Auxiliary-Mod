@@ -120,6 +120,11 @@ class CfgWeapons
 		{
 			"MET_DC15S_MagWell"
 		};
+		maxRecoilSway=0.06; //smaller = Easier to Control During Sustained fire
+		swayDecaySpeed=1.9; //higher = Less Sway Over Time
+		inertia=0.5; //higher = More Weight
+		aimTransitionSpeed=1; //higher = Faster Aim Transition
+		dexterity=1.6; //higher = More Maneuverable
 		fireLightDiffuse[]={0,0,1};
 		drySound[]=
 		{
@@ -461,7 +466,11 @@ class CfgWeapons
 			"\MRC\JLTS\weapons\DC15S\anims\DC15S_shielded_handanim.rtm"
 		};
 		reloadAction="GestureReload";
-		inertia=0.80000001;
+		maxRecoilSway=1; //smaller = Easier to Control During Sustained fire
+		swayDecaySpeed=0.2; //higher = Less Sway Over Time
+		inertia=2; //higher = More Weight
+		aimTransitionSpeed=0.8; //higher = Faster Aim Transition
+		dexterity=0.7; //higher = More Maneuverable
 		recoil="recoil_pdw";
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
@@ -580,11 +589,11 @@ class CfgWeapons
 		recoil="3AS_recoil_DC15S";
 		maxZeroing=0;
 		discreteDistanceInitIndex=0;
-		maxRecoilSway=0.0125;
-		swayDecaySpeed=1.25;
-		inertia=0.40000001;
-		aimTransitionSpeed=0.80000001;
-		dexterity=1.6;
+		maxRecoilSway=0.06; //smaller = Easier to Control During Sustained fire
+		swayDecaySpeed=1.9; //higher = Less Sway Over Time
+		inertia=0.5; //higher = More Weight
+		aimTransitionSpeed=1; //higher = Faster Aim Transition
+		dexterity=1.6; //higher = More Maneuverable
 		initSpeed=-1;
 		class GunParticles: GunParticles
 		{
@@ -937,6 +946,11 @@ class CfgWeapons
 			"this",
 			"GL_1GL_F"
 		};
+		maxRecoilSway=0.08; //smaller = Easier to Control During Sustained fire
+		swayDecaySpeed=1.65; //higher = Less Sway Over Time
+		inertia=0.7; //higher = More Weight
+		aimTransitionSpeed=0.9; //higher = Faster Aim Transition
+		dexterity=1.4; //higher = More Maneuverable
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
 			mass=90;

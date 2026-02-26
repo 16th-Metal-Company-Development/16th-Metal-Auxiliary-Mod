@@ -1348,6 +1348,20 @@ class MET_Helmet_Pilot_Phoenix : MET_Helmet_Pilot_Base
 		""
 	};
 };
+class MET_Helmet_Pilot_Cerberus : MET_Helmet_Pilot_Base
+{
+	scope = 2;
+	displayName = "[16th] Cerberus's Helmet";
+	hiddenSelectionsTextures[] =
+	{
+		"z\MET\addons\Armor_Rewrite\Helmets\Textures\Custom\MET_PLT_Cerberus_Helmet_CO.paa",
+		"z\MET\addons\Armor_Rewrite\Helmets\Textures\Custom\MET_PLT_Cerberus_Helmet_CO.paa",
+		"",
+		"3AS\3AS_Characters\Clones\Headgear\Textures\PilotP2\Phase_2_Pilot_Tubes_co.paa",
+		"z\MET\addons\Armor_Rewrite\Helmets\Textures\Custom\MET_PLT_Cerberus_Helmet_CO.paa",
+		""
+	};
+};
 
 // Misc
 class MET_Helmet_Trooper_Avalanche : MET_Helmet_Trooper_Illum

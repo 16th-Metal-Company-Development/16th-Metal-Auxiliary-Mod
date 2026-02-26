@@ -2002,7 +2002,20 @@ class CfgVehicles
 				magazine="MET_LumaYellow";
 				count=10;
 			};
+            class _xx_BNA_KC_jetpacks_fuelCan_mag
+            {
+                magazine="BNA_KC_jetpacks_fuelCan_mag";
+                count=10;
+            };
 		};
+		class TransportItems
+		{
+            class _xx_BNA_KC_jetpacks_fuelCan_mag
+            {
+                magazine="BNA_KC_jetpacks_fuelCan_mag";
+                count=10;
+            };
+        };
 	};
     class Box_MET_Ordinance: Box_MET_Base
 	{

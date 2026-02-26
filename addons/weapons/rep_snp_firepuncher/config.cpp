@@ -156,6 +156,11 @@ class CfgWeapons
 					cameraDir="";
 				};
 		};
+		maxRecoilSway=0.4; //smaller = Easier to Control During Sustained fire
+		swayDecaySpeed=1; //higher = Less Sway Over Time
+		inertia=1.8; //higher = More Weight
+		aimTransitionSpeed=0.6; //higher = Faster Aim Transition
+		dexterity=1; //higher = More Maneuverable
 	};
 	/*==============================================================================
 	==Firepuncher 773 (Fried)

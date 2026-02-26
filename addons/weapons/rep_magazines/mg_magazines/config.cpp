@@ -97,6 +97,23 @@ class CfgMagazines
 		initSpeed=250;
 		mass=50;
 	};
+	class MET_z6_para_mag: MET_blaster_battery
+	{
+		author="Hazmat";
+		scope=2;
+		modelSpecial="";
+		modelSpecialIsProxy=0;
+		picture="\3AS\3AS_Weapons\Data\UI\3as_box_b.paa";
+		model="\MRC\JLTS\weapons\z6\z6_mag.p3d";
+		count=150;
+		displayName="[16th] Z6 Para Energy Cell";
+		displayNameShort="Z6 Energy Cell";
+		descriptionShort="Energy cell for the Z6";
+		ammo="MET_blasterbolt_low";
+		tracersEvery=1;
+		initSpeed=250;
+		mass=25;
+	};
 	class MET_blaster_battery_heavy: 100Rnd_65x39_caseless_mag
 	{
 		author="Hazmat";
@@ -122,7 +139,17 @@ class CfgMagazines
 		displayName="[16th] Z6 Energy Cell (Green)";
 		displayNameShort="Z6 Energy Cell (Green)";
 		ammo="MET_blasterbolt_low_green";
-	};class MET_Chaingun_Light_Drum_Mag: CA_LauncherMagazine
+	};
+	class MET_z6_para_mag_green: MET_z6_para_mag
+	{
+		author="Hazmat";
+		scope=2;
+		picture="\3AS\3AS_Weapons\Data\UI\3as_box_g.paa";
+		displayName="[16th] Z6 Para Energy Cell (Green)";
+		displayNameShort="Z6 Energy Cell (Green)";
+		ammo="MET_blasterbolt_low_green";
+	};
+	class MET_Chaingun_Light_Drum_Mag: CA_LauncherMagazine
 	{
 		author="Hazmat and 3AS";
 		scope=2;

@@ -116,6 +116,11 @@ class CfgWeapons
 			1,
 			100
 		};
+		maxRecoilSway=0.08; //smaller = Easier to Control During Sustained fire
+		swayDecaySpeed=1.65; //higher = Less Sway Over Time
+		inertia=0.7; //higher = More Weight
+		aimTransitionSpeed=0.9; //higher = Faster Aim Transition
+		dexterity=1.4; //higher = More Maneuverable
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
 			mass=60;
@@ -573,6 +578,11 @@ class CfgWeapons
 				weaponInfoType="RscWeaponEmpty";
 			};
 		};
+		maxRecoilSway=0.08; //smaller = Easier to Control During Sustained fire
+		swayDecaySpeed=1.65; //higher = Less Sway Over Time
+		inertia=0.7; //higher = More Weight
+		aimTransitionSpeed=0.9; //higher = Faster Aim Transition
+		dexterity=1.4; //higher = More Maneuverable
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
 			mass=60;

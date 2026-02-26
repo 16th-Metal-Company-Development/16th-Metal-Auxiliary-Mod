@@ -8,13 +8,15 @@ class CfgPatches
 		weapons[]=
 		{
 			"MET_Z6",
-			"MET_Z6_MkII"
+			"MET_Z6_MkII",
+			"MET_Z6_Para"
 		};
 		skipWhenMissingDependencies=1;
 		requiredAddons[]=
 		{
 			"JLTS_weapons_Z6",
-			"IDA_Republic"
+			"IDA_Republic",
+			"ls_weapons_zseries"
 		};
 	};
 };
@@ -105,7 +107,6 @@ class CfgWeapons
 			"Dud"
 		};
 		author="Hazmat";
-		inertia=0;
 		canShootInWater=1;
 		scope=2;
 		autoReload="true";
@@ -295,6 +296,8 @@ class CfgWeapons
 		};
 		class close
 		{
+			displayName="close";
+			multiplier=1.2;
 			reloadTime=0.03;
 			burst=26;
 			dispersion = 0.00079;
@@ -374,6 +377,11 @@ class CfgWeapons
 			midRangeProbab=0;
 			maxRangeProbab=0;
 		};*/
+		maxRecoilSway=0.02; //smaller = Easier to Control During Sustained fire
+		swayDecaySpeed=1; //higher = Less Sway Over Time
+		inertia=1.8; //higher = More Weight
+		aimTransitionSpeed=0.6; //higher = Faster Aim Transition
+		dexterity=0.4; //higher = More Maneuverable
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
 			mass=270;
@@ -450,7 +458,6 @@ class CfgWeapons
 			"Dud"
 		};
 		author="Indecisive Armoury Team";
-		inertia=0;
 		canShootInWater=1;
 		scope=2;
 		autoReload="true";
@@ -563,6 +570,8 @@ class CfgWeapons
 		};
 		class close
 		{
+			displayName="close";
+			multiplier=1.2;
 			reloadTime=0.03;
 			dispersion = 0.00079;
 			textureType = "fullAuto";
@@ -633,6 +642,11 @@ class CfgWeapons
 		};
 		aiDispersionCoefY=24;
 		aiDispersionCoefX=21;
+		maxRecoilSway=0.02; //smaller = Easier to Control During Sustained fire
+		swayDecaySpeed=1; //higher = Less Sway Over Time
+		inertia=1.8; //higher = More Weight
+		aimTransitionSpeed=0.6; //higher = Faster Aim Transition
+		dexterity=0.4; //higher = More Maneuverable
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
 			mass=270;
@@ -940,6 +954,393 @@ class CfgWeapons
 		baseWeapon="MET_Z6_Dumb";
 		scope=0;
 	};
+	/*==============================================================================
+	==Z6 Para
+	==============================================================================*/
+	class ls_weapon_z6_base;
+	class ls_weapon_z6: ls_weapon_z6_base
+	{
+		class WeaponSlotsInfo;
+	};
+	class MET_Z6_Para: ls_weapon_z6
+	{
+		displayName="[16th] Z6 Para Rotary Cannon Mk I";
+		baseWeapon = "MET_Z6_Para";
+		recoil="MET_recoil_Z6";
+		magazines[]=
+		{
+			"MET_z6_para_mag",
+			"MET_z6_para_mag_green"
+		};
+		magazineWell[]=
+		{
+			"MET_Z6_Para_MagWell"
+		};
+		modes[]=
+		{
+			"slowerAuto",
+			"Auto",
+			"fullerAuto",
+			"close",
+			"short",
+			"medium",
+			"far_optic1",
+			"far_optic2"
+			//"maxAuto"
+		};
+		autoReload="true";
+		reloadAction="";
+		ace_clearJamAction="";
+		WBK_UseHeavyWeaponFramework = "true";
+		reloadMagazineSound[]=
+		{
+			"z\MET\addons\weapons\infantry_weap\sounds\republic\z-6\Z6_reload.ogg",
+			1.5,
+			1,
+			100
+		};
+		class Auto: Mode_FullAuto
+		{
+			class BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				closure1[]={};
+				closure2[]={};
+				soundClosure[]={};
+			};
+			sounds[] = {"StandardSound"};
+			class StandardSound {
+				soundSetShot[] = {"ls_z6_Shot_SoundSet", "ls_mediumBlaster_Tail_SoundSet"};
+			};
+			reloadTime=0.0666666667;
+			magazines[]=
+			{
+				//"MET_blaster_battery",
+				"MET_blaster_battery_Red",
+				"MET_blaster_battery_Green",
+				"MET_blaster_battery_Yellow"
+			};
+			dispersion=0.003;
+			burst=1;
+			soundContinuous="false";
+			soundBurst="true";
+			minRange=2;
+			minRangeProbab=0.5;
+			midRange=100;
+			midRangeProbab=0.075000003;
+			maxRange=10000;
+			maxRangeProbab=0.30000001;
+		};
+		class fullerAuto: Auto
+		{
+			reloadTime=0.05;
+			dispersion=0.006;
+			textureType="fastAuto";
+			minRangeProbab=0;
+			midRangeProbab=0;
+			maxRangeProbab=0;
+		};
+		class slowerAuto: Auto
+		{
+			reloadTime=0.1;
+			dispersion=0.004;
+			textureType="burst";
+			minRangeProbab=0;
+			midRangeProbab=0;
+			maxRangeProbab=0;
+		};
+		class close
+		{
+			displayName="close";
+			multiplier=1.2;
+			reloadTime=0.0375;
+			dispersion = 0.00079;
+			textureType = "fullAuto";
+			burst=26;
+			aiRateOfFire=0.5;
+			minRange=100;
+			minRangeProbab=0.3;
+			midRange=200;
+			midRangeProbab=0.9;
+			maxRange=300;
+			maxRangeProbab=0.9;
+			showToPlayer=0;
+			aiRateOfFireDistance=200;
+		};
+		class short: close
+		{
+			burst=26;
+			aiRateOfFire=1;
+			minRange=200;
+			minRangeProbab=0.8;
+			midRange=300;
+			midRangeProbab=0.9;
+			maxRange=400;
+			maxRangeProbab=0.9;
+			aiRateOfFireDistance=200;
+		};
+		class medium: close
+		{
+			reloadTime=0.06;
+			burst=13;
+			aiRateOfFire=2;
+			minRange=300;
+			minRangeProbab=0.8;
+			midRange=400;
+			midRangeProbab=0.9;
+			maxRange=500;
+			maxRangeProbab=0.9;
+			aiRateOfFireDistance=500;
+		};
+		class far_optic1: medium
+		{
+			reloadTime=0.1;
+			//requiredOpticType=1;
+			showToPlayer=0;
+			burst=9;
+			aiRateOfFire=3;
+			minRange=300;
+			minRangeProbab=1;
+			midRange=500;
+			midRangeProbab=0.85;
+			maxRange=700;
+			maxRangeProbab=0.75;
+			aiRateOfFireDistance=500;
+		};
+		class far_optic2: far_optic1
+		{
+			reloadTime=0.1;
+			burst=9;
+			aiRateOfFire=5;
+			//requiredOpticType=2;
+			minRange=500;
+			minRangeProbab=0.85;
+			midRange=750;
+			midRangeProbab=0.7;
+			maxRange=1000;
+			maxRangeProbab=0.5;
+			aiRateOfFireDistance=750;
+		};
+		aiDispersionCoefY=24;
+		aiDispersionCoefX=21;
+		maxRecoilSway=0.04; //smaller = Easier to Control During Sustained fire
+		swayDecaySpeed=1.4; //higher = Less Sway Over Time
+		inertia=1.4; //higher = More Weight
+		aimTransitionSpeed=0.7; //higher = Faster Aim Transition
+		dexterity=0.4; //higher = More Maneuverable
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			mass=200;
+			class CowsSlot: CowsSlot
+			{
+				compatibleItems[]={};
+			};
+			class MuzzleSlot: MuzzleSlot
+			{
+				compatibleItems[]={};
+			};
+			class PointerSlot: PointerSlot
+			{
+				compatibleItems[]={};
+			};
+			class UnderBarrelSlot: UnderBarrelSlot
+			{
+				compatibleItems[]={};
+			};
+		};
+	};
+	class 3AS_Z6_Base_F;
+	class 3AS_Z6_F: 3AS_Z6_Base_F
+	{
+		class WeaponSlotsInfo;
+	};
+	class MET_Z6_Para_MkII: 3AS_Z6_F
+	{
+		displayName="[16th] Z6 Para Rotary Cannon Mk II";
+		baseWeapon = "MET_Z6_Para_MkII";
+		recoil="MET_recoil_Z6";
+		magazines[]=
+		{
+			"MET_z6_para_mag",
+			"MET_z6_para_mag_green"
+		};
+		magazineWell[]=
+		{
+			"MET_Z6_Para_MagWell"
+		};
+		modes[]=
+		{
+			"slowerAuto",
+			"Auto",
+			"fullerAuto",
+			"close",
+			"short",
+			"medium",
+			"far_optic1",
+			"far_optic2"
+			//"maxAuto"
+		};
+		autoReload="true";
+		reloadAction="";
+		ace_clearJamAction="";
+		WBK_UseHeavyWeaponFramework = "true";
+		reloadMagazineSound[]=
+		{
+			"z\MET\addons\weapons\infantry_weap\sounds\republic\z-6\Z6_reload.ogg",
+			1.5,
+			1,
+			100
+		};
+		class Auto: Mode_FullAuto
+		{
+			class BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				closure1[]={};
+				closure2[]={};
+				soundClosure[]={};
+			};
+			sounds[] = {"StandardSound"};
+			class StandardSound {
+				soundSetShot[] = {"3AS_Z6_SoundSet"};
+			};
+			reloadTime=0.0666666667;
+			magazines[]=
+			{
+				//"MET_blaster_battery",
+				"MET_blaster_battery_Red",
+				"MET_blaster_battery_Green",
+				"MET_blaster_battery_Yellow"
+			};
+			dispersion=0.003;
+			burst=1;
+			soundContinuous="false";
+			soundBurst="true";
+			minRange=2;
+			minRangeProbab=0.5;
+			midRange=100;
+			midRangeProbab=0.075000003;
+			maxRange=10000;
+			maxRangeProbab=0.30000001;
+		};
+		class fullerAuto: Auto
+		{
+			reloadTime=0.05;
+			dispersion=0.006;
+			textureType="fastAuto";
+			minRangeProbab=0;
+			midRangeProbab=0;
+			maxRangeProbab=0;
+		};
+		class slowerAuto: Auto
+		{
+			reloadTime=0.1;
+			dispersion=0.004;
+			textureType="burst";
+			minRangeProbab=0;
+			midRangeProbab=0;
+			maxRangeProbab=0;
+		};
+		class close
+		{
+			displayName="close";
+			multiplier=1.2;
+			reloadTime=0.0375;
+			dispersion = 0.00079;
+			textureType = "fullAuto";
+			burst=26;
+			aiRateOfFire=0.5;
+			minRange=100;
+			minRangeProbab=0.3;
+			midRange=200;
+			midRangeProbab=0.9;
+			maxRange=300;
+			maxRangeProbab=0.9;
+			showToPlayer=0;
+			aiRateOfFireDistance=200;
+		};
+		class short: close
+		{
+			burst=26;
+			aiRateOfFire=1;
+			minRange=200;
+			minRangeProbab=0.8;
+			midRange=300;
+			midRangeProbab=0.9;
+			maxRange=400;
+			maxRangeProbab=0.9;
+			aiRateOfFireDistance=200;
+		};
+		class medium: close
+		{
+			reloadTime=0.06;
+			burst=13;
+			aiRateOfFire=2;
+			minRange=300;
+			minRangeProbab=0.8;
+			midRange=400;
+			midRangeProbab=0.9;
+			maxRange=500;
+			maxRangeProbab=0.9;
+			aiRateOfFireDistance=500;
+		};
+		class far_optic1: medium
+		{
+			reloadTime=0.1;
+			//requiredOpticType=1;
+			showToPlayer=0;
+			burst=9;
+			aiRateOfFire=3;
+			minRange=300;
+			minRangeProbab=1;
+			midRange=500;
+			midRangeProbab=0.85;
+			maxRange=700;
+			maxRangeProbab=0.75;
+			aiRateOfFireDistance=500;
+		};
+		class far_optic2: far_optic1
+		{
+			reloadTime=0.1;
+			burst=9;
+			aiRateOfFire=5;
+			//requiredOpticType=2;
+			minRange=500;
+			minRangeProbab=0.85;
+			midRange=750;
+			midRangeProbab=0.7;
+			maxRange=1000;
+			maxRangeProbab=0.5;
+			aiRateOfFireDistance=750;
+		};
+		aiDispersionCoefY=24;
+		aiDispersionCoefX=21;
+		maxRecoilSway=0.04; //smaller = Easier to Control During Sustained fire
+		swayDecaySpeed=1.4; //higher = Less Sway Over Time
+		inertia=1.4; //higher = More Weight
+		aimTransitionSpeed=0.7; //higher = Faster Aim Transition
+		dexterity=0.4; //higher = More Maneuverable
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			mass=200;
+			class CowsSlot: CowsSlot
+			{
+				compatibleItems[]={};
+			};
+			class MuzzleSlot: MuzzleSlot
+			{
+				compatibleItems[]={};
+			};
+			class PointerSlot: PointerSlot
+			{
+				compatibleItems[]={};
+			};
+			class UnderBarrelSlot: UnderBarrelSlot
+			{
+				compatibleItems[]={};
+			};
+		};
+	};
 };
 class CfgMagazineWells
 {
@@ -949,6 +1350,16 @@ class CfgMagazineWells
 		{
 			"MET_blaster_battery",
 			"MET_blaster_pistol_battery",
+			"MET_DC15S_Mag",
+			"MET_blaster_pistol_battery"
+		};
+	};
+	class MET_Z6_Para_MagWell
+	{
+		MET_Z6ParaMagazines[]=
+		{
+			"MET_z6_para_mag",
+			"MET_z6_para_mag_green",
 			"MET_DC15S_Mag",
 			"MET_blaster_pistol_battery"
 		};

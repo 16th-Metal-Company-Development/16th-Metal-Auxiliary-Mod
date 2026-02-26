@@ -86,7 +86,6 @@ class CfgWeapons
 		IDA_StunWeapon="MET_T15_Stun";
 		author="Indecisive Armoury Team";
 		scope=2;
-		inertia=0;
 		canShootInWater=1;
 		displayName="[16th] T-15 Heavy Repeating Blaster";
 		magazines[]=
@@ -358,9 +357,14 @@ class CfgWeapons
 				cameraDir="";
 			};
 		};
+		maxRecoilSway=0.04; //smaller = Easier to Control During Sustained fire
+		swayDecaySpeed=1.2; //higher = Less Sway Over Time
+		inertia=1.5; //higher = More Weight
+		aimTransitionSpeed=0.6; //higher = Faster Aim Transition
+		dexterity=0.6; //higher = More Maneuverable
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
-			mass=80;
+			mass=170;
 			class CowsSlot: CowsSlot
 			{
 				compatibleItems[]=

@@ -207,11 +207,11 @@ class CfgWeapons
 			maxRange=900;
 			maxRangeProbab=0.2;
 		};
-		inertia=1.4;
-		dexterity=1.7;
-		initSpeed=-1;
-		maxRecoilSway=0.015;
-		swayDecaySpeed=1;
+		maxRecoilSway=1; //smaller = Easier to Control During Sustained fire
+		swayDecaySpeed=0.4; //higher = Less Sway Over Time
+		inertia=3; //higher = More Weight
+		aimTransitionSpeed=0.4; //higher = Faster Aim Transition
+		dexterity=0.5; //higher = More Maneuverable
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
 			mass=380;

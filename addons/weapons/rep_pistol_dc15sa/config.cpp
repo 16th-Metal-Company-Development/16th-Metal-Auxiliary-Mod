@@ -100,6 +100,11 @@ class CfgWeapons
 				weaponInfoType="RscWeaponEmpty";
 			};
 		};
+		maxRecoilSway=0.02; //smaller = Easier to Control During Sustained fire
+		swayDecaySpeed=2; //higher = Less Sway Over Time
+		inertia=0.2; //higher = More Weight
+		aimTransitionSpeed=3; //higher = Faster Aim Transition
+		dexterity=3; //higher = More Maneuverable
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
 			mass=25;

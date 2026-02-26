@@ -310,9 +310,14 @@ class CfgWeapons
 		};
 		aiDispersionCoefY=24;
 		aiDispersionCoefX=21;
+		maxRecoilSway=0.03; //smaller = Easier to Control During Sustained fire
+		swayDecaySpeed=1.1; //higher = Less Sway Over Time
+		inertia=1.6; //higher = More Weight
+		aimTransitionSpeed=0.6; //higher = Faster Aim Transition
+		dexterity=0.5; //higher = More Maneuverable
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
-			mass=270;
+			mass=250;
 			class CowsSlot: CowsSlot
 			{
 				compatibleItems[]=

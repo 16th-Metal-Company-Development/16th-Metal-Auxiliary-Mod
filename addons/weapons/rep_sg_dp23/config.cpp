@@ -115,11 +115,11 @@ class CfgWeapons
 		recoil="3as_recoil_heavy";
 		maxZeroing=1400;
 		discreteDistanceInitIndex=0;
-		maxRecoilSway=0.0125;
-		swayDecaySpeed=1.25;
-		inertia=0.60000002;
-		aimTransitionSpeed=0.80000001;
-		dexterity=1.4;
+		maxRecoilSway=0.09; //smaller = Easier to Control During Sustained fire
+		swayDecaySpeed=1.4; //higher = Less Sway Over Time
+		inertia=0.8; //higher = More Weight
+		aimTransitionSpeed=0.8; //higher = Faster Aim Transition
+		dexterity=1.3; //higher = More Maneuverable
 		initSpeed=-1;
 		class GunParticles: GunParticles
 		{
@@ -749,6 +749,11 @@ class CfgWeapons
 		{
 			"MET_DP23_MagWell"
 		};
+		maxRecoilSway=0.09; //smaller = Easier to Control During Sustained fire
+		swayDecaySpeed=1.4; //higher = Less Sway Over Time
+		inertia=0.8; //higher = More Weight
+		aimTransitionSpeed=0.8; //higher = Faster Aim Transition
+		dexterity=1.3; //higher = More Maneuverable
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
 			mass = 80;
@@ -960,6 +965,11 @@ class CfgWeapons
 			1,
 			100
 		};
+		maxRecoilSway=0.09; //smaller = Easier to Control During Sustained fire
+		swayDecaySpeed=1.4; //higher = Less Sway Over Time
+		inertia=0.8; //higher = More Weight
+		aimTransitionSpeed=0.8; //higher = Faster Aim Transition
+		dexterity=1.3; //higher = More Maneuverable
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
 			mass = 80;

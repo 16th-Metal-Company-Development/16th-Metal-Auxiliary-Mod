@@ -79,6 +79,11 @@ class CfgWeapons
 		{
 			"MET_DC20_MagWell"
 		};
+		maxRecoilSway=0.05; //smaller = Easier to Control During Sustained fire
+		swayDecaySpeed=1.8; //higher = Less Sway Over Time
+		inertia=0.5; //higher = More Weight
+		aimTransitionSpeed=1.1; //higher = Faster Aim Transition
+		dexterity=1.7; //higher = More Maneuverable
 		recoil="3AS_recoil_DC15S";
 		modelOptics="z\MET\addons\weapons\scopes\big_cross_blue_full.p3d";
 		class OpticsModes

@@ -271,6 +271,11 @@ class CfgWeapons
 			aiRateOfFire=2;
 			aiRateOfFireDistance=25;
 		};
+		maxRecoilSway=0.02; //smaller = Easier to Control During Sustained fire
+		swayDecaySpeed=2; //higher = Less Sway Over Time
+		inertia=0.2; //higher = More Weight
+		aimTransitionSpeed=3; //higher = Faster Aim Transition
+		dexterity=3; //higher = More Maneuverable
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
 			mass=20;
@@ -423,6 +428,11 @@ class CfgWeapons
 			aiRateOfFire=2;
 			aiRateOfFireDistance=25;
 		};
+		maxRecoilSway=0.02; //smaller = Easier to Control During Sustained fire
+		swayDecaySpeed=2; //higher = Less Sway Over Time
+		inertia=0.2; //higher = More Weight
+		aimTransitionSpeed=3; //higher = Faster Aim Transition
+		dexterity=3; //higher = More Maneuverable
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
 			mass=50;
@@ -651,6 +661,11 @@ class CfgWeapons
 			aiRateOfFire=2;
 			aiRateOfFireDistance=25;
 		};
+		maxRecoilSway=0.02; //smaller = Easier to Control During Sustained fire
+		swayDecaySpeed=2; //higher = Less Sway Over Time
+		inertia=0.2; //higher = More Weight
+		aimTransitionSpeed=3; //higher = Faster Aim Transition
+		dexterity=3; //higher = More Maneuverable
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
 			mass=20;
@@ -921,9 +936,11 @@ class CfgWeapons
 			maxRangeProbab=0.1;
 			aiRateOfFire=2;
 		};
-		inertia=0.30000001;
-		aimTransitionSpeed=1.5;
-		dexterity=1.7;
+		maxRecoilSway=0.02; //smaller = Easier to Control During Sustained fire
+		swayDecaySpeed=2; //higher = Less Sway Over Time
+		inertia=0.2; //higher = More Weight
+		aimTransitionSpeed=3; //higher = Faster Aim Transition
+		dexterity=3; //higher = More Maneuverable
 		fireLightDiffuse[]={7,36,190,1};
 		fireLightIntensity=0.02;
 		flashSize=0.1;
@@ -1066,6 +1083,11 @@ class CfgWeapons
 				};
 			};
 		};
+		maxRecoilSway=0.03; //smaller = Easier to Control During Sustained fire
+		swayDecaySpeed=1.9; //higher = Less Sway Over Time
+		inertia=0.3; //higher = More Weight
+		aimTransitionSpeed=3; //higher = Faster Aim Transition
+		dexterity=3; //higher = More Maneuverable
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
 			mass=40;

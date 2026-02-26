@@ -100,11 +100,11 @@ class CfgWeapons
 		recoil="MET_recoil_DC15C";
 		maxZeroing=0;
 		discreteDistanceInitIndex=0;
-		maxRecoilSway=0.0125;
-		swayDecaySpeed=1.25;
-		inertia=0.60000002;
-		aimTransitionSpeed=0.80000001;
-		dexterity=1.4;
+		maxRecoilSway=0.08; //smaller = Easier to Control During Sustained fire
+		swayDecaySpeed=1.65; //higher = Less Sway Over Time
+		inertia=0.7; //higher = More Weight
+		aimTransitionSpeed=0.9; //higher = Faster Aim Transition
+		dexterity=1.4; //higher = More Maneuverable
 		initSpeed=-1;
 		class GunParticles: GunParticles
 		{
@@ -493,6 +493,11 @@ class CfgWeapons
 			"OFP2_ManSkeleton",
 			"3as\3AS_Weapons\Republic\DC15C\Data\Anim\New_DC15CGL_Handanim.rtm"
 		};
+		maxRecoilSway=0.09; //smaller = Easier to Control During Sustained fire
+		swayDecaySpeed=1.4; //higher = Less Sway Over Time
+		inertia=0.8; //higher = More Weight
+		aimTransitionSpeed=0.8; //higher = Faster Aim Transition
+		dexterity=1.3; //higher = More Maneuverable
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
 			mass=110;

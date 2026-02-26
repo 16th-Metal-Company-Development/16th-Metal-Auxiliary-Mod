@@ -134,6 +134,11 @@ class CfgWeapons
 		{
 			"MET_DC15A_MagWell"
 		};
+		maxRecoilSway=0.1;
+		swayDecaySpeed=1.5;
+		inertia=1.1;
+		aimTransitionSpeed=0.8;
+		dexterity=1;
 		modes[]=
 		{
 			"Single",
@@ -456,6 +461,11 @@ class CfgWeapons
 		displayName="[16th] DC-15A Mk I UBGL (Wood Stock)";
 		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_ugl_ui_ca.paa";	
 		model="\MRC\JLTS\weapons\DC15A\DC15A_ugl.p3d";
+		maxRecoilSway=0.12;
+		swayDecaySpeed=1.25;
+		inertia=1.3;
+		aimTransitionSpeed=0.7;
+		dexterity=0.8;
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -701,11 +711,11 @@ class CfgWeapons
 		};
 		maxZeroing=0;
 		discreteDistanceInitIndex=0;
-		maxRecoilSway=0.0125;
-		swayDecaySpeed=1.25;
-		inertia=0.60000002;
-		aimTransitionSpeed=0.80000001;
-		dexterity=1.4;
+		maxRecoilSway=0.08; //smaller = Easier to Control During Sustained fire
+		swayDecaySpeed=1.6; //higher = Less Sway Over Time
+		inertia=1; //higher = More Weight
+		aimTransitionSpeed=0.7; //higher = Faster Aim Transition
+		dexterity=1.1; //higher = More Maneuverable
 		initSpeed=-1;
 		class GunParticles: GunParticles
 		{
@@ -1445,6 +1455,11 @@ class CfgWeapons
 			"this",
 			"EGLM"
 		};
+		maxRecoilSway=0.2;
+		swayDecaySpeed=1.5;
+		inertia=1.1;
+		aimTransitionSpeed=0.6;
+		dexterity=1;
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
 			mass=120;
