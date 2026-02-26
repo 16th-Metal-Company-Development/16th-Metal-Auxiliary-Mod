@@ -21,6 +21,8 @@ class CfgPatches
 class CfgMagazines
 {
 	class 1Rnd_HE_Grenade_shell;
+	class 3AS_6Rnd_HE_Grenade_shell;
+	class CA_Magazine;
 	class MET_Clust_Grenade_shell: 1Rnd_HE_Grenade_shell
 	{
 		author="Hazmat";

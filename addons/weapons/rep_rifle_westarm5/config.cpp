@@ -7,11 +7,12 @@ class CfgPatches
 		units[]={};
 		weapons[]=
 		{
-			"MET_DP23_F",
-			"MET_DP23_GL",
-			"MET_DP12_F",
-			"MET_JLTS_DP23",
-			"MET_JLTS_DP12"
+			"MET_WestarM5_F",
+			"MET_WestarM5_blockii_F",
+			"MET_WestarM5_GL",
+			"MET_WestarM5_blockii_GL",
+			"MET_WestarM5_blockii_UBSG",
+			"MET_WestarM5_blockii_UBSGB"
 		};
 		skipWhenMissingDependencies=1;
 		requiredAddons[]=

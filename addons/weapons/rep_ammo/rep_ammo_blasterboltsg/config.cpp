@@ -28,6 +28,7 @@ class CfgPatches
 class CfgAmmo
 {
 	class 3AS_PlasmaBase;
+	class MET_blasterbolt_base;
 	class MET_slug_blue: 3AS_PlasmaBase
 	{
 		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Blue.p3d";

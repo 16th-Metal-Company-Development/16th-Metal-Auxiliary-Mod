@@ -28,6 +28,7 @@ class CfgMagazines
 {
 	class 100Rnd_65x39_caseless_mag;
 	class JLTS_DC15A_mag;
+	class CA_LauncherMagazine;
 	class MET_DC15L_mag: JLTS_DC15A_mag
 	{
 		JLTS_hasElectronics=1;

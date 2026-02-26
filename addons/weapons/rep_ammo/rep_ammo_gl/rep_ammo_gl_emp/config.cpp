@@ -1,6 +1,6 @@
 class CfgPatches
 {
-	class metal_rep_ammo_blasterboltglhe
+	class metal_rep_ammo_glemp
 	{
 		author="";
 		requiredVersion=0.1;
@@ -13,7 +13,7 @@ class CfgPatches
 			"metal_weapons",
 			"metal_rep_ammo",
 			"metal_rep_ammo_base",
-			"metal_rep_ammo_blasterboltglcore"
+			"metal_rep_ammo_glcore"
 		};
 	};
 };

@@ -59,7 +59,7 @@ class CfgAmmo
 	{
 		model="\3AS\3AS_Weapons\Data\tracer_blue_dual.p3d";
 	};
-	class MET_blasterbolt_Stealth_low: MET_blasterbolt
+	class MET_blasterbolt_Stealth_low: MET_blasterbolt_base
 	{
 		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Blue.p3d";
 		effectfly="MET_BlasterBoltGlow_Stealth_Fly";

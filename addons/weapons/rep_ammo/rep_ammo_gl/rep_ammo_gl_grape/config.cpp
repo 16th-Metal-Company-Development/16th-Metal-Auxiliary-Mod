@@ -22,6 +22,7 @@ class CfgPatches
 class CfgAmmo
 {
 	class MET_pellet_blue;
+	class MET_slug_blue;
 	class MET_GrapeShot_blue: MET_pellet_blue
 	{
 		hit=150;

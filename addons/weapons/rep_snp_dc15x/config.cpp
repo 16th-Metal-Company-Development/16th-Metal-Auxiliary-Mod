@@ -14,7 +14,10 @@ class CfgPatches
 		requiredAddons[]=
 		{
 			"JLTS_weapons_DC15X",
-			"3AS_Weapons_Republic_DC15X"
+			"3AS_Weapons_Republic_DC15X",
+			"3AS_Weapons_Republic",
+			"met_rep_optics",
+			"metal_rep_snp_magazines"
 		};
 	};
 };

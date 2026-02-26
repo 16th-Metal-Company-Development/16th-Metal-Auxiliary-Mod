@@ -25,6 +25,7 @@ class CfgAmmo
 {
 	class MET_HE_LauncherGrenade;
 	class MET_60HE;
+	class MET_25HE_LauncherGrenade;
 	class MET_40_GrenadeCluster_Sub1: MET_HE_LauncherGrenade
 	{
 		indirectHit = 15;
