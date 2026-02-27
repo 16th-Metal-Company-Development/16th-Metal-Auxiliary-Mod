@@ -770,6 +770,24 @@ class MET_Uniform_Trooper_Fool : MET_Uniform_Trooper
 		uniformclass = "MET_Uniform_Trooper_Fool_Base";
 	};
 };
+class MET_Uniform_Trooper_Phoenix : MET_Uniform_Trooper
+{
+	scope = 2;
+	displayName = "[16th] Phoenix's Armor";
+	class ItemInfo : ItemInfo
+	{
+		uniformclass = "MET_Uniform_Trooper_Phoenix_Base";
+	};
+};
+class MET_Uniform_Trooper_Cerberus : MET_Uniform_Trooper
+{
+	scope = 2;
+	displayName = "[16th] Cerberus's Armor";
+	class ItemInfo : ItemInfo
+	{
+		uniformclass = "MET_Uniform_Trooper_Cerberus_Base";
+	};
+};
 class MET_Uniform_Trooper_Hazmat : MET_Uniform_Trooper
 {
 	scope = 2;

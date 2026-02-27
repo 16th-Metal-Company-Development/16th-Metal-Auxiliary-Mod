@@ -22,13 +22,13 @@ class XtdGearModels {
                 values[] = {
                     "Arch", "Avalanche", "Beige", "Ben", "Blackrose",
                     "Blatt", "Blowfish", "Bopit", "Butcher", "Chet",
-                    "Chetiah", "Cougar", "Creed", "Fish", "Frost",
+                    "Chetiah", "Cougar", "Creed", "Dubs", "Fish", "Frost",
                     "Gambit", "Hazmat", "Hellwolf", "Hevy", "Hood",
                     "Karma", "Longshot", "Maia", "Mace", "Maple",
                     "Maxson", "Merlin", "Moldy", "Nix", "Noble",
                     "Orpheus", "Otto", "Prez", "Ronin", "Roz",
                     "Sam", "Ska", "Six", "Smith", "Spice",
-                    "Sunto", "Talk", "Vergil", "William", "Winters",
+                    "Sunto", "Talk", "Tavion", "Vergil", "William", "Winters",
                     "Wolf"
                 };
             };

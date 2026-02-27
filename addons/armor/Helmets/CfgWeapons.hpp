@@ -843,6 +843,15 @@ class MET_Helmet_Trooper_Creed : MET_Helmet_Trooper_Base
 		"z\MET\addons\Armor_Rewrite\Helmets\Textures\Custom\MET_Creed_Helmet_CO.paa"
 	};
 };
+class MET_Helmet_Trooper_Dubs : MET_Helmet_Trooper_Base
+{
+	scope = 2;
+	displayName = "[16th] Dubs's Helmet";
+	hiddenSelectionsTextures[] =
+	{
+		"z\MET\addons\Armor_Rewrite\Helmets\Textures\Custom\MET_Dubs_Helmet_CO.paa"
+	};
+};
 class MET_Helmet_Trooper_Fish : MET_Helmet_Trooper_Base
 {
 	scope = 2;
@@ -924,7 +933,7 @@ class MET_Helmet_Trooper_Karma : MET_Helmet_Trooper_Base
 };
 class MET_Helmet_Trooper_Kick : MET_Helmet_Trooper_Base
 {
-	scope = 0;
+	scope = 2;
 	displayName = "[16th] Kick's Helmet";
 	hiddenSelectionsTextures[] =
 	{
@@ -1129,6 +1138,15 @@ class MET_Helmet_Trooper_Talk : MET_Helmet_Trooper_Base
 		"z\MET\addons\Armor_Rewrite\Helmets\Textures\Custom\MET_Talk_Helmet_CO.paa"
 	};
 };
+class MET_Helmet_Trooper_Tavion : MET_Helmet_Trooper_Base
+{
+	scope = 2;
+	displayName = "[16th] Tavion's Helmet";
+	hiddenSelectionsTextures[] =
+	{
+		"z\MET\addons\Armor_Rewrite\Helmets\Textures\Custom\MET_Tavion_Helmet_CO.paa"
+	};
+};
 class MET_Helmet_Trooper_Vergil : MET_Helmet_Trooper_Base
 {
 	scope = 2;
@@ -1313,6 +1331,34 @@ class MET_Helmet_Pilot_Fool : MET_Helmet_Pilot_Base
 		"",
 		"3AS\3AS_Characters\Clones\Headgear\Textures\PilotP2\Phase_2_Pilot_Tubes_co.paa",
 		"z\MET\addons\Armor_Rewrite\Helmets\Textures\Custom\MET_PLT_Fool_Helmet_CO.paa",
+		""
+	};
+};
+class MET_Helmet_Pilot_Phoenix : MET_Helmet_Pilot_Base
+{
+	scope = 2;
+	displayName = "[16th] Phoenix's Helmet";
+	hiddenSelectionsTextures[] =
+	{
+		"z\MET\addons\Armor_Rewrite\Helmets\Textures\Custom\MET_PLT_Phoenix_Helmet_CO.paa",
+		"z\MET\addons\Armor_Rewrite\Helmets\Textures\Custom\MET_PLT_Phoenix_Helmet_CO.paa",
+		"",
+		"3AS\3AS_Characters\Clones\Headgear\Textures\PilotP2\Phase_2_Pilot_Tubes_co.paa",
+		"z\MET\addons\Armor_Rewrite\Helmets\Textures\Custom\MET_PLT_Phoenix_Helmet_CO.paa",
+		""
+	};
+};
+class MET_Helmet_Pilot_Cerberus : MET_Helmet_Pilot_Base
+{
+	scope = 2;
+	displayName = "[16th] Cerberus's Helmet";
+	hiddenSelectionsTextures[] =
+	{
+		"z\MET\addons\Armor_Rewrite\Helmets\Textures\Custom\MET_PLT_Cerberus_Helmet_CO.paa",
+		"z\MET\addons\Armor_Rewrite\Helmets\Textures\Custom\MET_PLT_Cerberus_Helmet_CO.paa",
+		"",
+		"3AS\3AS_Characters\Clones\Headgear\Textures\PilotP2\Phase_2_Pilot_Tubes_co.paa",
+		"z\MET\addons\Armor_Rewrite\Helmets\Textures\Custom\MET_PLT_Cerberus_Helmet_CO.paa",
 		""
 	};
 };
