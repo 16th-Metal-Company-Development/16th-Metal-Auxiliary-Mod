@@ -22,6 +22,9 @@ class Mode_FullAuto: Mode_SemiAuto
 	class BaseSoundModeType;
 	class StandardSound;
 };
+class CowsSlot;
+class PointerSlot;
+class UnderBarrelSlot;
 /*
  _______ ______________ _______________ _______________ _________
  ____/ / ____/  ______/ ____/___   ___/ ____/  /   /  / ____/    |    / /
@@ -36,12 +39,7 @@ class CfgWeapons
 	class Rifle;
 	class Rifle_Base_F: Rifle
 	{
-		class WeaponSlotsInfo
-		{
-			class CowsSlot;
-			class PointerSlot;
-			class UnderBarrelSlot;
-		};
+		class WeaponSlotsInfo;
 		class GunParticles;
 	};
 	/*==============================================================================
