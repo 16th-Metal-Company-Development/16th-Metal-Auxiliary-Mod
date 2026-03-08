@@ -1,6 +1,6 @@
 class CfgPatches
 {
-	class met_rep_rifle_dc15c_mkiii
+	class met_rep_rifle_dc15c
 	{
 		author="";
 		requiredVersion=0.1;
@@ -13,21 +13,9 @@ class CfgPatches
 		skipWhenMissingDependencies=1;
 		requiredAddons[]=
 		{
-			"3AS_Weapons_Republic_DC15C"
+			"met_rep_rifle_dc15c",
+			"ShadowLegion_Aux_Weapons"
 		};
-	};
-};
-#include "XtdGearModels.hpp"
-#include "XtdGearInfos.hpp"
-class CfgRecoils
-{
-	class recoil_default;
-	class Default;
-	class MET_recoil_DC15C: recoil_default
-	{
-		muzzleOuter[]={0,0.6,0.40000001,0.40000001};
-		kickBack[]={0.059999999,0.150000004};
-		temporary=0.0060000001;
 	};
 };
 class UGL_F;
@@ -70,12 +58,24 @@ class CfgWeapons
 		class WeaponSlotsInfo;
 		class GunParticles;
 	};
+	class ShdwCmpny_DC15C_Base_F;
+	class ShdwCmpny_DC15C_F: ShdwCmpny_DC15C_Base_F
+	{
+		class WeaponSlotsInfo;
+	};
 	/*==============================================================================
 	==DC-15C
 	==============================================================================*/
-	class MET_DC15C_Base_F: Rifle_Base_F
+	class MET_DC15C_MkIII: ShdwCmpny_DC15C_F
 	{
+		JLTS_hasElectronics=1;
+		JLTS_hasEMPProtection=0;
+		JLTS_friedItem="MET_DC15C_MkIII_fried";
+		JLTS_repairTime=25;
 		author="$STR_3as_Studio";
+		baseWeapon="MET_DC15C_MkIII";
+		scope=2;
+		displayName="[16th] DC-15C Mk III";
 		magazines[]=
 		{
 			"MET_DC15S_Mag"
@@ -83,11 +83,6 @@ class CfgWeapons
 		magazineWell[]=
 		{
 			"MET_DC15S_MagWell"
-		};
-		magazineReloadSwitchPhase=0.5;
-		class Library
-		{
-			libTextDesc="$STR_3AS_Weapons_Republic_DC15C_Library";
 		};
 		reloadAction="GestureReload_IDA_Reload_Blaster";
 		reloadMagazineSound[]=
@@ -106,9 +101,6 @@ class CfgWeapons
 		aimTransitionSpeed=0.9; //higher = Faster Aim Transition
 		dexterity=1.4; //higher = More Maneuverable
 		initSpeed=-1;
-		class GunParticles: GunParticles
-		{
-		};
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
 			mass=80;
@@ -116,12 +108,19 @@ class CfgWeapons
 			{
 				compatibleItems[]=
 				{
-					"MET_optic_DC15C_F"
+					"MET_optic_DC15C_F",
+					"MET_optic_ACOG",
+					"ShadwCmpany_optic_Reflex_Mk1",
+					"ShadwCmpany_optic_Reflex_Mk1_Alt1",
+					"ShadwCmpany_optic_Reflex_Mk1_Alt2"
 				};
 			};
 			class MuzzleSlot: MuzzleSlot
 			{
-				compatibleItems[]={};
+				compatibleItems[]=
+				{
+					"ShdwCmpny_Muzzle_LE_DC15A_Unsur"
+				};
 			};
 			class PointerSlot: PointerSlot
 			{
@@ -132,19 +131,11 @@ class CfgWeapons
 				compatibleItems[]={};
 			};
 		};
-		distanceZoomMin=300;
-		distanceZoomMax=300;
-		descriptionShort="$STR_3AS_Weapons_Republic_DC15C_DesShort";
-		handAnim[]=
-		{
-			"OFP2_ManSkeleton",
-			"3as\3AS_Weapons\Republic\DC15C\Data\Anim\New_DC15C_Handanim.rtm"
-		};
 		modes[]=
 		{
 			"Single",
 			"Burst",
-			//"FullAuto",
+			"FullAuto",
 			"close",
 			"short",
 			"medium",
@@ -161,19 +152,27 @@ class CfgWeapons
 			class BaseSoundModeType;
 			class StandardSound: BaseSoundModeType
 			{
-				soundSetShot[]=
-				{
-					"3AS_DC15C_Shot_SoundSet"
-				};
+				begin1[] = {"ShadowLegion_Weapons\data\DC15_1.ogg",1,1,900};
+				begin2[] = {"ShadowLegion_Weapons\data\DC15_1.ogg",1,1,900};
+				begin3[] = {"ShadowLegion_Weapons\data\DC15_1.ogg",1,1,900};
+				begin4[] = {"ShadowLegion_Weapons\data\DC15_2.ogg",1,1,900};
+				begin5[] = {"ShadowLegion_Weapons\data\DC15_1.ogg",1,1,900};
+				begin6[] = {"ShadowLegion_Weapons\data\DC15_1.ogg",1,1,900};
+				beginwater1[] = {"\ShadowLegion_Weapons\data\Underwater_Firing.ogg",1,1,200};
+				soundBegin[] = {"begin1",0.5,"begin2",0.5,"begin3",0.5,"begin4",0.5,"begin5",0.5,"begin6",0.5};
+				soundBeginWater[] = {"beginwater1",0.5};
 			};
 			class SilencedSound: BaseSoundModeType
 			{
-				soundSetShot[]=
-				{
-					"3AS_DC15C_Shot_SoundSet"
-				};
+				begin1[] = {"ShadowLegion_Weapons\data\surpressed_1.ogg",2,1,200};
+				begin2[] = {"ShadowLegion_Weapons\data\surpressed_2.ogg",2,1,200};
+				begin3[] = {"ShadowLegion_Weapons\data\surpressed_3.ogg",2,1,200};
+				begin4[] = {"ShadowLegion_Weapons\data\surpressed_4.ogg",2,1,200};
+				begin5[] = {"ShadowLegion_Weapons\data\surpressed_5.ogg",2,1,200};
+				begin6[] = {"ShadowLegion_Weapons\data\surpressed_6.ogg",2,1,200};
+				soundBegin[] = {"begin1",0.5,"begin2",0.5,"begin3",0.5,"begin4",0.5,"begin5",0.5,"begin6",0.5};
 			};
-			reloadTime=0.12;
+			reloadTime=0.2;
 			dispersion=0.00029;
 			minRange=0;
 			minRangeProbab=0.89999998;
@@ -193,17 +192,25 @@ class CfgWeapons
 			class BaseSoundModeType;
 			class StandardSound: BaseSoundModeType
 			{
-				soundSetShot[]=
-				{
-					"3AS_DC15C_Shot_SoundSet"
-				};
+				begin1[] = {"ShadowLegion_Weapons\data\DC15_1.ogg",1,1,900};
+				begin2[] = {"ShadowLegion_Weapons\data\DC15_1.ogg",1,1,900};
+				begin3[] = {"ShadowLegion_Weapons\data\DC15_1.ogg",1,1,900};
+				begin4[] = {"ShadowLegion_Weapons\data\DC15_2.ogg",1,1,900};
+				begin5[] = {"ShadowLegion_Weapons\data\DC15_1.ogg",1,1,900};
+				begin6[] = {"ShadowLegion_Weapons\data\DC15_1.ogg",1,1,900};
+				beginwater1[] = {"\ShadowLegion_Weapons\data\Underwater_Firing.ogg",1,1,200};
+				soundBegin[] = {"begin1",0.5,"begin2",0.5,"begin3",0.5,"begin4",0.5,"begin5",0.5,"begin6",0.5};
+				soundBeginWater[] = {"beginwater1",0.5};
 			};
 			class SilencedSound: BaseSoundModeType
 			{
-				soundSetShot[]=
-				{
-					"3AS_DC15C_Shot_SoundSet"
-				};
+				begin1[] = {"ShadowLegion_Weapons\data\surpressed_1.ogg",2,1,200};
+				begin2[] = {"ShadowLegion_Weapons\data\surpressed_2.ogg",2,1,200};
+				begin3[] = {"ShadowLegion_Weapons\data\surpressed_3.ogg",2,1,200};
+				begin4[] = {"ShadowLegion_Weapons\data\surpressed_4.ogg",2,1,200};
+				begin5[] = {"ShadowLegion_Weapons\data\surpressed_5.ogg",2,1,200};
+				begin6[] = {"ShadowLegion_Weapons\data\surpressed_6.ogg",2,1,200};
+				soundBegin[] = {"begin1",0.5,"begin2",0.5,"begin3",0.5,"begin4",0.5,"begin5",0.5,"begin6",0.5};
 			};
 			reloadTime=0.075;
 			dispersion=0.00029;
@@ -235,17 +242,25 @@ class CfgWeapons
 			class BaseSoundModeType;
 			class StandardSound: BaseSoundModeType
 			{
-				soundSetShot[]=
-				{
-					"3AS_DC15C_Shot_SoundSet"
-				};
+				begin1[] = {"ShadowLegion_Weapons\data\DC15_1.ogg",1,1,900};
+				begin2[] = {"ShadowLegion_Weapons\data\DC15_1.ogg",1,1,900};
+				begin3[] = {"ShadowLegion_Weapons\data\DC15_1.ogg",1,1,900};
+				begin4[] = {"ShadowLegion_Weapons\data\DC15_2.ogg",1,1,900};
+				begin5[] = {"ShadowLegion_Weapons\data\DC15_1.ogg",1,1,900};
+				begin6[] = {"ShadowLegion_Weapons\data\DC15_1.ogg",1,1,900};
+				beginwater1[] = {"\ShadowLegion_Weapons\data\Underwater_Firing.ogg",1,1,200};
+				soundBegin[] = {"begin1",0.5,"begin2",0.5,"begin3",0.5,"begin4",0.5,"begin5",0.5,"begin6",0.5};
+				soundBeginWater[] = {"beginwater1",0.5};
 			};
 			class SilencedSound: BaseSoundModeType
 			{
-				soundSetShot[]=
-				{
-					"3AS_DC15C_Shot_SoundSet"
-				};
+				begin1[] = {"ShadowLegion_Weapons\data\surpressed_1.ogg",2,1,200};
+				begin2[] = {"ShadowLegion_Weapons\data\surpressed_2.ogg",2,1,200};
+				begin3[] = {"ShadowLegion_Weapons\data\surpressed_3.ogg",2,1,200};
+				begin4[] = {"ShadowLegion_Weapons\data\surpressed_4.ogg",2,1,200};
+				begin5[] = {"ShadowLegion_Weapons\data\surpressed_5.ogg",2,1,200};
+				begin6[] = {"ShadowLegion_Weapons\data\surpressed_6.ogg",2,1,200};
+				soundBegin[] = {"begin1",0.5,"begin2",0.5,"begin3",0.5,"begin4",0.5,"begin5",0.5,"begin6",0.5};
 			};
 		};
 		class close: Burst
@@ -353,8 +368,6 @@ class CfgWeapons
 				10
 			};
 		};
-		aiDispersionCoefY=6;
-		aiDispersionCoefX=4;
 		modelOptics="z\MET\addons\weapons\scopes\big_cross_blue_full.p3d";
 		class OpticsModes
 		{
@@ -413,46 +426,14 @@ class CfgWeapons
 			"caseless",
 			1
 		};
-		drySound[]=
-		{
-			"\3AS\3AS_Main\Sounds\Blaster_empty",
-			2,
-			1,
-			20
-		};
-		/*reloadMagazineSound[]=
-		{
-			"\3AS\3AS_Main\Sounds\Old\Blaster_reload.wss",
-			1,
-			1,
-			30
-		};*/
-		ace_overheating_mrbs=3000;
-		ace_overheating_slowdownFactor=1;
-		ace_overheating_allowSwapBarrel=0;
-		ace_overheating_dispersion=0.75;
-	};
-	class MET_DC15C_F: MET_DC15C_Base_F
-	{
-		JLTS_hasElectronics=1;
-		JLTS_hasEMPProtection=0;
-		JLTS_friedItem="MET_DC15C_fried";
-		JLTS_repairTime=25;
-		author="$STR_3as_Studio";
-		baseWeapon="MET_DC15C_F";
-		scope=2;
-		displayName="[16th] DC-15C";
-		model="\3AS\3AS_Weapons\Republic\DC15C\3AS_DC15C_F.p3d";
-		picture="\3AS\3AS_Weapons\Republic\DC15C\Data\UI\3as_dc15c.paa";
-		UiPicture="\A3\weapons_f\data\UI\icon_regular_CA.paa";
 	};
 	/*==============================================================================
 	==DC-15C (Fried)
 	==============================================================================*/
-	class MET_DC15C_fried: MET_DC15C_F
+	class MET_DC15C_MkIII_fried: MET_DC15C_MkIII
 	{
 		JLTS_isFried=1;
-		baseWeapon="MET_DC15C_fried";
+		baseWeapon="MET_DC15C_MkIII_fried";
 		displayName="[16th] Fried DC-15C";
 		descriptionShort="$STR_JLTS_descs_BlasterFried";
 		scope=1;
@@ -470,28 +451,26 @@ class CfgWeapons
 	/*==============================================================================
 	==DC-15C GL
 	==============================================================================*/
-	class MET_DC15C_GL: MET_DC15C_Base_F
+	class MET_DC15C_MkIII_GL: MET_DC15C_MkIII
 	{
 		JLTS_hasElectronics=1;
 		JLTS_hasEMPProtection=0;
-		JLTS_friedItem="MET_DC15C_GL_fried";
+		JLTS_friedItem="MET_DC15C_MkIII_GL_fried";
 		JLTS_repairTime=30;
 		author="$STR_3as_Studio";
-		baseWeapon="MET_DC15C_GL";
+		baseWeapon="MET_DC15C_MkIII_GL";
 		scope=2;
-		displayName="[16th] DC-15C GL";
-		model="\3AS\3AS_Weapons\Republic\DC15C\3AS_DC15C_GL.p3d";
-		picture="\3AS\3AS_Weapons\Republic\DC15C\Data\UI\3as_dc15cgl.paa";
-		UiPicture="\A3\weapons_f\data\UI\icon_regular_CA.paa";
+		displayName="[16th] DC-15C Mk III GL";
+		model = "\ShadowLegion_Weapons\data\DC15\DC15C\model\DC15_C_GL.p3d";
+		picture = "\ShadowLegion_Weapons\data\DC15\DC15C\UI\DC15C_GL_UI.paa";
 		muzzles[]=
 		{
 			"this",
 			"ELGM"
 		};
-		handAnim[]=
-		{
+		handAnim[] = {
 			"OFP2_ManSkeleton",
-			"3as\3AS_Weapons\Republic\DC15C\Data\Anim\New_DC15CGL_Handanim.rtm"
+			"\ShadowLegion_Weapons\data\DC15\DC15C\anim\ReloadBASE_DC15C_GL.rtm"
 		};
 		maxRecoilSway=0.09; //smaller = Easier to Control During Sustained fire
 		swayDecaySpeed=1.4; //higher = Less Sway Over Time
@@ -506,10 +485,10 @@ class CfgWeapons
 	/*==============================================================================
 	==DC-15C GL (Fried)
 	==============================================================================*/
-	class MET_DC15C_GL_fried: MET_DC15C_GL
+	class MET_DC15C_MkIII_GL_fried: MET_DC15C_MkIII_GL
 	{
 		JLTS_isFried=1;
-		baseWeapon="MET_DC15C_GL_fried";
+		baseWeapon="MET_DC15C_MkIII_GL_fried";
 		displayName="[16th] Fried DC-15C GL";
 		descriptionShort="$STR_JLTS_descs_BlasterFried";
 		scope=1;

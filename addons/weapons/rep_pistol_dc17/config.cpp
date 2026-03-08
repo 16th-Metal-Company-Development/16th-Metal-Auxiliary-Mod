@@ -36,6 +36,10 @@ class Mode_Burst;
 class Mode_FullAuto;
 class 3AS_MuzzleSlot_DC17S;
 class 3AS_CowsSlot_DC17S;
+class UnderBarrelSlot;
+class PointerSlot;
+class CowsSlot;
+class MuzzleSlot;
 class CfgWeapons
 {
 	/*==============================================================================
@@ -49,13 +53,7 @@ class CfgWeapons
 	class Pistol;
 	class Pistol_Base_F: Pistol
 	{
-		class WeaponSlotsInfo
-		{
-			class MuzzleSlot;
-			class CowsSlot;
-			class PointerSlot;
-			class UnderBarrelSlot;
-		};
+		class WeaponSlotsInfo;
 	};
 	class hgun_P07_F: Pistol_Base_F
 	{
@@ -63,13 +61,7 @@ class CfgWeapons
 	};
 	class JLTS_DC17SA: hgun_P07_F
 	{
-		class WeaponSlotsInfo
-		{
-			class MuzzleSlot;
-			class CowsSlot;
-			class PointerSlot;
-			class UnderBarrelSlot;
-		};
+		class WeaponSlotsInfo;
 	};
 	class MET_DC17SA: JLTS_DC17SA
 	{

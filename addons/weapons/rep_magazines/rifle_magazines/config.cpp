@@ -26,21 +26,23 @@ class CfgPatches
 class CfgMagazines
 {
 	class JLTS_DC15A_mag;
-	class MET_DC15A_mag: JLTS_DC15A_mag
+	class CA_Magazine;
+	class MET_DC15A_mag: CA_Magazine
 	{
 		JLTS_hasElectronics=1;
 		JLTS_hasEMPProtection=1;
 		author="Hazmat";
-		modelSpecial="";
-		modelSpecialIsProxy=0;
+		modelSpecialIsProxy=1;
 		picture="\3AS\3AS_Weapons\Data\UI\3as_ammo_b.paa";
 		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
+		modelSpecial = "\ShadowLegion_Weapons\data\Magazines\DC15\Models\DC15_Mag.p3d";
 		count=40;
 		displayName="[16th] DC-15A Energy Cell";
 		displayNameShort="Energy Cell";
 		descriptionShort="Energy cell for the DC-15A, and DC-15L </br>Ammo Count=40";
 		ammo="MET_blasterbolt";
 		tracersEvery=1;
+		scope=2;
 	};
 	class MET_DC15S_Mag: JLTS_DC15A_mag
 	{
@@ -48,7 +50,7 @@ class CfgMagazines
 		JLTS_hasEMPProtection=1;
 		author="Hazmat";
 		modelSpecial="";
-		modelSpecialIsProxy=0;
+		modelSpecialIsProxy=1;
 		picture="\3AS\3AS_Weapons\Data\UI\3as_ammo_b.paa";
 		model="\MRC\JLTS\weapons\DC15S\DC15S_mag.p3d";
 		count=60;
@@ -63,8 +65,8 @@ class CfgMagazines
 		JLTS_hasElectronics=1;
 		JLTS_hasEMPProtection=1;
 		author="Hazmat";
-		modelSpecial="";
-		modelSpecialIsProxy=0;
+		modelSpecial = "\ShadowLegion_Weapons\data\Magazines\DC15\Models\DC15_Mag.p3d";
+		modelSpecialIsProxy=1;
 		picture="\3AS\3AS_Weapons\Data\UI\3as_ammo_b.paa";
 		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
 		count=20;
