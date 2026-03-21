@@ -117,7 +117,6 @@ class CfgWeapons
 		picture="\MRC\JLTS\weapons\Z6\data\ui\Z6_ui_ca.paa";
 		UiPicture="\MRC\JLTS\weapons\Z6\data\ui\Z6_ui_ca.paa";
 		model="\MRC\JLTS\weapons\Z6\Z6.p3d";
-		WBK_UseHeavyWeaponFramework = "true";
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -412,6 +411,12 @@ class CfgWeapons
 			};
 		};
 	};
+	class MET_Z6_Hvy: MET_Z6
+	{
+		displayName="[16th] Z6 Rotary Cannon (Heavy)";
+		baseWeapon = "MET_Z6_Hvy";
+		WBK_UseHeavyWeaponFramework = "true";
+	};
 	/*==============================================================================
 	==Z6 (Fried)
 	==============================================================================*/
@@ -466,7 +471,6 @@ class CfgWeapons
 		descriptionShort="";
 		picture="Indecisive_Armoury_Weapons_REPUBLIC\Data\Z6\Z6_ui.paa";
 		model="Indecisive_Armoury_Weapons_REPUBLIC\Data\Z6\Model\IDA_Z6.p3d";
-		WBK_UseHeavyWeaponFramework = "true";
 		magazines[]=
 		{
 			"MET_blaster_battery",
@@ -677,6 +681,12 @@ class CfgWeapons
 			};
 		};
 	};
+	class MET_Z6_MkII_Hvy: MET_Z6_MkII
+	{
+		displayName="[16th] Z6 Rotary Cannon Mk II (Heavy)";
+		baseWeapon = "MET_Z6_MkII_Hvy";
+		WBK_UseHeavyWeaponFramework = "true";
+	};
 	/*==============================================================================
 	==Z6 MkII (Fried)
 	==============================================================================*/
@@ -734,8 +744,7 @@ class CfgWeapons
 		descriptionShort="Rapid Fire. Reloads automatically.";
 		picture="\MRC\JLTS\weapons\Z6\data\ui\Z6_ui_ca.paa";
 		UiPicture="\MRC\JLTS\weapons\Z6\data\ui\Z6_ui_ca.paa";
-		model="\MRC\JLTS\weapons\Z6\Z6.p3d";
-		WBK_UseHeavyWeaponFramework = "true";	
+		model="\MRC\JLTS\weapons\Z6\Z6.p3d";	
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -991,7 +1000,6 @@ class CfgWeapons
 		autoReload="true";
 		reloadAction="";
 		ace_clearJamAction="";
-		WBK_UseHeavyWeaponFramework = "true";
 		reloadMagazineSound[]=
 		{
 			"z\MET\addons\weapons\infantry_weap\sounds\republic\z-6\Z6_reload.ogg",
@@ -1012,7 +1020,7 @@ class CfgWeapons
 			class StandardSound {
 				soundSetShot[] = {"ls_z6_Shot_SoundSet", "ls_mediumBlaster_Tail_SoundSet"};
 			};
-			reloadTime=0.0666666667;
+			reloadTime=0.08; //750 RPM
 			magazines[]=
 			{
 				//"MET_blaster_battery",
@@ -1033,7 +1041,7 @@ class CfgWeapons
 		};
 		class fullerAuto: Auto
 		{
-			reloadTime=0.05;
+			reloadTime=0.06; //1000
 			dispersion=0.006;
 			textureType="fastAuto";
 			minRangeProbab=0;
@@ -1042,7 +1050,7 @@ class CfgWeapons
 		};
 		class slowerAuto: Auto
 		{
-			reloadTime=0.1;
+			reloadTime=0.12; //600 RPM
 			dispersion=0.004;
 			textureType="burst";
 			minRangeProbab=0;
@@ -1148,6 +1156,12 @@ class CfgWeapons
 				compatibleItems[]={};
 			};
 		};
+	};
+	class MET_Z6_Para_Hvy: MET_Z6_Para
+	{
+		displayName="[16th] Z6 Para Rotary Cannon (Heavy)";
+		baseWeapon = "MET_Z6_Para_Hvy";
+		WBK_UseHeavyWeaponFramework = "true";
 	};
 	class 3AS_Z6_Base_F;
 	class 3AS_Z6_F: 3AS_Z6_Base_F
@@ -1183,7 +1197,6 @@ class CfgWeapons
 		autoReload="true";
 		reloadAction="";
 		ace_clearJamAction="";
-		WBK_UseHeavyWeaponFramework = "true";
 		reloadMagazineSound[]=
 		{
 			"z\MET\addons\weapons\infantry_weap\sounds\republic\z-6\Z6_reload.ogg",
@@ -1204,7 +1217,7 @@ class CfgWeapons
 			class StandardSound {
 				soundSetShot[] = {"3AS_Z6_SoundSet"};
 			};
-			reloadTime=0.0666666667;
+			reloadTime=0.0666666667; //900 RPM
 			magazines[]=
 			{
 				//"MET_blaster_battery",
@@ -1225,7 +1238,7 @@ class CfgWeapons
 		};
 		class fullerAuto: Auto
 		{
-			reloadTime=0.05;
+			reloadTime=0.05; //1200 RPM
 			dispersion=0.006;
 			textureType="fastAuto";
 			minRangeProbab=0;
@@ -1234,7 +1247,7 @@ class CfgWeapons
 		};
 		class slowerAuto: Auto
 		{
-			reloadTime=0.1;
+			reloadTime=0.1; //650 RPM
 			dispersion=0.004;
 			textureType="burst";
 			minRangeProbab=0;
@@ -1340,6 +1353,12 @@ class CfgWeapons
 				compatibleItems[]={};
 			};
 		};
+	};
+	class MET_Z6_Para_MkII_Hvy: MET_Z6_Para_MkII
+	{
+		displayName="[16th] Z6 Para Rotary Cannon Mk II (Heavy)";
+		baseWeapon = "MET_Z6_Para_MkII";
+		WBK_UseHeavyWeaponFramework = "true";
 	};
 };
 class CfgMagazineWells
