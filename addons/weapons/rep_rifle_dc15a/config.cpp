@@ -12,6 +12,7 @@ class CfgPatches
 			"MET_DC15A_PLASTIC",
 			"MET_DC15A_ugl_plastic",
 			"MET_DC15A_F",
+			"MET_DC15AM_F",
 			"MET_DC15LE",
 			"MET_DC15A_GL"
 		};
@@ -29,6 +30,13 @@ class CfgRecoils
 {
 	class recoil_default;
 	class Default;
+	class recoil_15AM : recoil_default
+	{
+		muzzleOuter[] = { 1,10,1,1 };
+		kickBack[] = { 0.30000001,0.30000001 };
+		temporary = 0.055;
+		permanent = 0.055;
+	};
 };
 class UGL_F;
 class Mode_SemiAuto;
@@ -41,6 +49,234 @@ class Mode_FullAuto: Mode_SemiAuto
 {
 	class BaseSoundModeType;
 	class StandardSound;
+};
+
+class CfgMovesBasic
+{
+	class Default;
+	class StandBase;
+	class HealBase : Default
+	{
+		disableWeapons = 1;
+		disableWeaponsLong = 1;
+		showWeaponAim = 0;
+		canPullTrigger = 0;
+		duty = 0.2;
+		limitGunMovement = 0;
+		aiming = "empty";
+		aimingBody = "empty";
+		actions = "HealActionBase";
+		looped = 0;
+	};
+	class ManActions
+	{
+		DC15AM_Reload[] =
+		{
+			"DC15AM_Reload",
+			"Gesture"
+		};
+	};
+};
+class CfgGesturesMale
+{
+	class ManActions
+	{
+	};
+	class Actions;
+	class Default;
+	class BlendAnims
+	{
+		DC15AM_AdjustWeaponAnim[] =
+		{
+			"weapon",
+			1,
+			"head",
+			1,
+			"neck1",
+			1,
+			"neck",
+			1,
+			"LeftShoulder",
+			1,
+			"LeftArm",
+			1,
+			"LeftArmRoll",
+			1,
+			"LeftForeArm",
+			1,
+			"LeftForeArmRoll",
+			1,
+			"LeftHand",
+			1,
+			"LeftHandRing",
+			1,
+			"LeftHandPinky1",
+			1,
+			"LeftHandPinky2",
+			1,
+			"LeftHandPinky3",
+			1,
+			"LeftHandRing1",
+			1,
+			"LeftHandRing2",
+			1,
+			"LeftHandRing3",
+			1,
+			"LeftHandMiddle1",
+			1,
+			"LeftHandMiddle2",
+			1,
+			"LeftHandMiddle3",
+			1,
+			"LeftHandIndex1",
+			1,
+			"LeftHandIndex2",
+			1,
+			"LeftHandIndex3",
+			1,
+			"LeftHandThumb1",
+			1,
+			"LeftHandThumb2",
+			1,
+			"LeftHandThumb3",
+			1,
+			"RightShoulder",
+			1,
+			"RightArm",
+			1,
+			"RightArmRoll",
+			1,
+			"RightForeArm",
+			1,
+			"RightForeArmRoll",
+			1,
+			"RightHand",
+			1,
+			"RightHandRing",
+			1,
+			"RightHandPinky1",
+			1,
+			"RightHandPinky2",
+			1,
+			"RightHandPinky3",
+			1,
+			"RightHandRing1",
+			1,
+			"RightHandRing2",
+			1,
+			"RightHandRing3",
+			1,
+			"RightHandMiddle1",
+			1,
+			"RightHandMiddle2",
+			1,
+			"RightHandMiddle3",
+			1,
+			"RightHandIndex1",
+			1,
+			"RightHandIndex2",
+			1,
+			"RightHandIndex3",
+			1,
+			"RightHandThumb1",
+			1,
+			"RightHandThumb2",
+			1,
+			"RightHandThumb3",
+			1,
+			"Spine",
+			1,
+			"Spine1",
+			1,
+			"Spine2",
+			1,
+			"Spine3",
+			1,
+			"pelvis",
+			"MaskStart"
+		};
+	};
+	class States
+	{
+		class GestureReloadMX;
+		class DC15AM_Reload : GestureReloadMX
+		{
+			file = "z\MET\addons\weapons\tempanims\GestureReloadSpringfieldRifle.rtm";
+			speed = -16;
+			rightHandIKCurve[] = { 0,1,0.02,0,0.94999999,0,1,1 };
+			leftHandIKCurve[] = { 0,1,0.050000001,0,0.75,0,0.81999999,1 };
+		};
+	};
+};
+
+class CfgSoundSets
+{
+	class Rifle_Shot_Base_SoundSet;
+	class DC15AM_SoundSet : Rifle_Shot_Base_SoundSet
+	{
+		soundShaders[] =
+		{
+			"DC15AM_Close",
+			"DC15AM_Far"
+		};
+		volumeFactor = 1;
+		volumeCurve = "InverseSquare2Curve";
+		sound3DProcessingType = "WeaponMediumShot3DProcessingType";
+		distanceFilter = "weaponShotDistanceFreqAttenuationFilter";
+		occlusionFactor = 0.5;
+		obstructionFactor = 0.30000001;
+		spatial = 1;
+		doppler = 0;
+		loop = 0;
+	};
+};
+class CfgSoundShaders
+{
+	class DC15AM_Close
+	{
+		samples[] =
+		{
+
+			{
+				"z\MET\addons\weapons\tempsounds\DC15AM_Shot_1.ogg",
+				1
+			},
+
+			{
+				"z\MET\addons\weapons\tempsounds\DC15AM_Shot_2.ogg",
+				1
+			}
+		};
+		volume = 1;
+		range = 100;
+		rangeCurve[] =
+		{
+			{0,1},
+			{40,1},
+			{100,0.80000001},
+			{3800,0}
+		};
+	};
+	class DC15AM_Far
+	{
+		samples[] =
+		{
+
+			{
+				"z\MET\addons\weapons\tempsounds\DC15AM_Far.ogg",
+				1
+			}
+		};
+		volume = 1;
+		range = 3800;
+		rangeCurve[] =
+		{
+			{0,0},
+			{40,0.5},
+			{150,1},
+			{3800,0}
+		};
+	};
 };
 /*
  _______ ______________ _______________ _______________ _________
@@ -1122,6 +1358,241 @@ class CfgWeapons
 		UiPicture="\A3\weapons_f\data\UI\icon_regular_CA.paa";
 	};
 	/*==============================================================================
+	==DC-15A Meme
+	==============================================================================*/
+	class MET_DC15AM_F : MET_DC15A_Base_F
+	{
+		baseWeapon = "MET_DC15AM_F";
+		scope = 2;
+		displayName = "[16th] DC-15AM";
+		model = "\3AS\3AS_Weapons\Republic\DC15A\3AS_DC15A_F.p3d";
+		picture = "\3AS\3AS_Weapons\Republic\DC15A\Data\UI\3as_dc15a.paa";
+		UiPicture = "\A3\weapons_f\data\UI\icon_regular_CA.paa";
+		author = "$STR_3as_Studio";
+		magazines[] =
+		{
+			"MET_DC15AM_Mag"
+		};
+		magazineWell[] =
+		{
+			"MET_DC15AM_MagWell"
+		};
+		magazineReloadSwitchPhase = 0.5;
+		class Library
+		{
+			libTextDesc = "$STR_3AS_Weapons_Republic_DC15A_Library";
+		};
+		recoil="recoil_15AM"
+		reloadAction = "DC15AM_Reload";
+		maxZeroing = 0;
+		discreteDistanceInitIndex = 0;
+		maxRecoilSway = 0.08; //smaller = Easier to Control During Sustained fire
+		swayDecaySpeed = 1.6; //higher = Less Sway Over Time
+		inertia = 1; //higher = More Weight
+		aimTransitionSpeed = 0.7; //higher = Faster Aim Transition
+		dexterity = 1.1; //higher = More Maneuverable
+		initSpeed = -1;
+		class GunParticles : GunParticles
+		{
+			class Effect1
+			{
+				effectName = "StarterPistolCloud1";
+				positionName = "usti hlavne";
+				directionName = "konec hlavne";
+			};
+			class Effect2
+			{
+				effectName = "StarterPistolCloud2";
+				positionName = "konec hlavne";
+				directionName = "usti hlavne";
+			};
+		};
+		class WeaponSlotsInfo : WeaponSlotsInfo
+		{
+			mass = 90;
+			class CowsSlot : CowsSlot
+			{
+				compatibleItems[] = {};
+				iconPicture = "";
+			};
+			class MuzzleSlot : MuzzleSlot
+			{
+				compatibleItems[] = {};
+			};
+			class PointerSlot : PointerSlot
+			{
+				compatibleItems[] = {};
+			};
+			class UnderBarrelSlot : UnderBarrelSlot
+			{
+				compatibleItems[] = {};
+			};
+		};
+		distanceZoomMin = 300;
+		distanceZoomMax = 300;
+		descriptionShort = "Yes";
+		handAnim[] =
+		{
+			"OFP2_ManSkeleton",
+			"z\MET\addons\weapons\tempanims\musket_Idle.rtm"
+		};
+		modes[] =
+		{
+			"Single",
+			"far_optic1",
+			"medium_optic2",
+			"far_optic2"
+		};
+		class Single : Mode_SemiAuto
+		{
+			sounds[] =
+			{
+				"StandardSound"
+			};
+			class BaseSoundModeType
+			{
+				closure1[] =
+				{
+					"A3\Sounds_F\arsenal\weapons\SMG\PDW2000\closure_pdw2000_01",
+					0.50118721,
+					1,
+					10
+				};
+				closure2[] =
+				{
+					"A3\Sounds_F\arsenal\weapons\SMG\PDW2000\closure_pdw2000_02",
+					0.50118721,
+					1.1,
+					10
+				};
+				soundClosure[] =
+				{
+					"closure1",
+					0.5,
+					"closure2",
+					0.5
+				};
+			};
+			class StandardSound : BaseSoundModeType
+			{
+				soundsetshot[] =
+				{
+					"DC15AM_SoundSet",
+					"HunterShotgun_01_Tail_SoundSet",
+					"GM6Lynx_InteriorTail_SoundSet"
+				};
+			};
+			reloadTime = 0.69999999;
+			recoil = "recoil_auto_primary_3outof10";
+			recoilProne = "recoil_auto_primary_prone_3outof10";
+			dispersion = 0.0031999;
+			aiRateOfFire = 7;
+			aiRateOfFireDistance = 1000;
+			aiRateOfFireDispersion = 3;
+			minRange = 0;
+			minRangeProbab = 0.40000001;
+			midRange = 500;
+			midRangeProbab = 0.80000001;
+			maxRange = 1600;
+			maxRangeProbab = 0.0099999998;
+		};
+		class far_optic1 : Single
+		{
+			showToPlayer = 0;
+			aiRateOfFire = 3;
+			aiRateOfFireDistance = 300;
+			aiRateOfFireDispersion = 2;
+			minRange = 1;
+			minRangeProbab = 0.40000001;
+			midRange = 150;
+			midRangeProbab = 0.69999999;
+			maxRange = 500;
+			maxRangeProbab = 0.1;
+		};
+		class medium_optic2 : Single
+		{
+			showToPlayer = 0;
+			aiRateOfFire = 4;
+			aiRateOfFireDistance = 500;
+			aiRateOfFireDispersion = 3;
+			minRange = 150;
+			minRangeProbab = 0.2;
+			midRange = 500;
+			midRangeProbab = 0.69999999;
+			maxRange = 1000;
+			maxRangeProbab = 0.050000001;
+			requiredOpticType = 2;
+		};
+		class far_optic2 : far_optic1
+		{
+			aiRateOfFire = 8;
+			aiRateOfFireDistance = 1000;
+			aiRateOfFireDispersion = 4;
+			minRange = 250;
+			minRangeProbab = 0.2;
+			midRange = 750;
+			midRangeProbab = 0.69999999;
+			maxRange = 2000;
+			maxRangeProbab = 0.050000001;
+			requiredOpticType = 2;
+		};
+		aiDispersionCoefX = 6;
+		aiDispersionCoefY = 8;
+		modelOptics = "z\MET\addons\weapons\scopes\big_cross_blue_full.p3d";
+		class OpticsModes
+		{
+			class HoloSight
+			{
+				opticsID = 1;
+				useModelOptics = 0;
+				opticsFlare = 0;
+				opticsPPEffects[] =
+				{
+					"Default"
+				};
+				opticsDisablePeripherialVision = 0;
+				opticsZoomMin = 0.25;
+				opticsZoomMax = 1.25;
+				opticsZoomInit = 0.75;
+				memoryPointCamera = "eye";
+				visionMode[] = {};
+				distanceZoomMin = 200;
+				distanceZoomMax = 200;
+				cameraDir = "";
+			};
+		};
+		caseless[] =
+		{
+			"",
+			1,
+			1,
+			1
+		};
+		soundBullet[] =
+		{
+			"caseless",
+			1
+		};
+		drySound[] =
+		{
+			"\3AS\3AS_Main\Sounds\Blaster_empty",
+			2,
+			1,
+			20
+		};
+		reloadMagazineSound[] =
+		{
+			"z\MET\addons\weapons\tempsounds\ReloadAnimationSound.ogg",
+			2.5999999,
+			1,
+			30
+		};
+		ace_overheating_mrbs = 3000;
+		ace_overheating_slowdownFactor = 1;
+		ace_overheating_allowSwapBarrel = 0;
+		ace_overheating_dispersion = 0.75;
+	};
+	/*==============================================================================
 	==DC-15LE
 	==============================================================================*/
 	class MET_DC15LE: MET_DC15A_Base_F
@@ -1538,6 +2009,13 @@ class CfgMagazineWells
 		MET_Magazines[]=
 		{
 			"MET_DC15A_mag"
+		};
+	};
+	class MET_DC15AM_MagWell
+	{
+		MET_Magazines[] =
+		{
+			"MET_DC15AM_Mag"
 		};
 	};
 	class MET_DC15LE_MagWell

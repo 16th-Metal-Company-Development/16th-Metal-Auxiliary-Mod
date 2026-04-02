@@ -44,6 +44,25 @@ class CfgMagazines
 		tracersEvery=1;
 		scope=2;
 	};
+	class MET_DC15AM_Mag : JLTS_DC15A_mag
+	{
+		JLTS_hasElectronics = 1;
+		JLTS_hasEMPProtection = 1;
+		author = "Chet";
+		modelSpecial = "";
+		modelSpecialIsProxy = 0;
+		picture = "\3AS\3AS_Weapons\Data\UI\3as_sniper_g.paa";
+		model = "\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
+		count = 1;
+		displayName = "[16th] DC-15AM Slug";
+		displayNameShort = "Slug";
+		descriptionShort = "Hiss";
+		ammo = "MET_blasterbolt_at_green";
+		WBK_PlasmaKill_Color_String_Int = "Green";
+		WBK_UseDisintegrate = "true";
+		tracersEvery = 1;
+		initSpeed = 1650;
+	};
 	class MET_DC15S_Mag: JLTS_DC15A_mag
 	{
 		JLTS_hasElectronics=1;
