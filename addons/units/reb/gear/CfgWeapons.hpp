@@ -6,7 +6,7 @@ class CfgWeapons
 	class MET_REB_Pathfinder : Uniform_Base
 	{
 		author = "Chet";
-		scope = 0;
+		scope = 1;
 		displayName = "[REB] Pathfinder Fatigues";
 		picture = "\ls\core\addons\main\data\ui\ls_logo_ca.paa";
 		model = "\ls\core\addons\characters\uniforms\pathfinder\ls_uniform_pathfinder.p3d";
@@ -18,14 +18,14 @@ class CfgWeapons
 			containerClass = "Supply40";
 			mass = 40;
             type = 801;
-            scope = 0;
+            scope = 1;
 		};
 	};
 
     class MET_REB_Pathfinder_R : Uniform_Base 
     {
         author = "Chet";
-		scope = 0;
+		scope = 1;
 		displayName = "[REB] Pathfinder Fatigues (Rolled)";
 		picture = "\ls\core\addons\main\data\ui\ls_logo_ca.paa";
 		model = "\ls\core\addons\characters\uniforms\pathfinder\ls_uniform_pathfinder_r.p3d";
@@ -37,7 +37,7 @@ class CfgWeapons
 			containerClass = "Supply40";
 			mass = 40;
             type = 801;
-            scope = 0;
+            scope = 1;
 		};
     };
 
@@ -45,7 +45,7 @@ class CfgWeapons
     {
         displayName = "[REB] Pathfinder Fatigues (L. Brown)";
 
-        class ItemInfo : UniformItem
+		class ItemInfo : ItemInfo
 		{
 			uniformClass = "MET_REB_Pathfinder_Brown_Base";
 		};
@@ -55,7 +55,7 @@ class CfgWeapons
     {
         displayName = "[REB] Pathfinder Fatigues (L. Brown, Rolled)";
 
-        class ItemInfo : UniformItem
+		class ItemInfo : ItemInfo
 		{
 			uniformClass = "MET_REB_Pathfinder_Brown_Base_R";
 		};
@@ -65,7 +65,7 @@ class CfgWeapons
     {
         displayName = "[REB] Pathfinder Fatigues (Navy)";
 
-		class ItemInfo : UniformItem
+		class ItemInfo : ItemInfo
 		{
 			uniformClass = "MET_REB_Pathfinder_Navy_Base";
 		};
@@ -75,7 +75,7 @@ class CfgWeapons
     {
         displayName = "[REB] Pathfinder Fatigues (Navy, Rolled)";
 		
-        class ItemInfo : UniformItem
+		class ItemInfo : ItemInfo
 		{
 			uniformClass = "MET_REB_Pathfinder_Navy_Base_R";
 		};
@@ -85,7 +85,7 @@ class CfgWeapons
     {
         displayName = "[REB] Pathfinder Fatigues (Navy Alt)";
 
-        class ItemInfo : UniformItem
+		class ItemInfo : ItemInfo
 		{
 			uniformClass = "MET_REB_Pathfinder_Navy_Alt_Base";
 		};
@@ -95,7 +95,7 @@ class CfgWeapons
     {
         displayName = "[REB] Pathfinder Fatigues (Navy Alt, Rolled)";
 
-        class ItemInfo : UniformItem
+		class ItemInfo : ItemInfo
 		{
 			uniformClass = "MET_REB_Pathfinder_Navy_Alt_Base_R";
 		};

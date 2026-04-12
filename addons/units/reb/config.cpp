@@ -528,7 +528,7 @@ class CfgGroups {
 						position[] = { 10,-10,0 };
 						rank = "PRIVATE";
 						side = 0;
-						vehicle = "MET_REB_Rifleman_1 ";
+						vehicle = "MET_REB_Rifleman_1";
 					};
 				};
 
@@ -543,7 +543,7 @@ class CfgGroups {
 						position[] = { 0,0,0 };
 						rank = "SERGEANT";
 						side = 0;
-						vehicle = "MET_REB_Rifleman_1 ";
+						vehicle = "MET_REB_Rifleman_1";
 					};
 					class Unit1 {
 						position[] = { 5,-5,0 };
@@ -576,7 +576,7 @@ class CfgGroups {
 						position[] = { 0,0,0 };
 						rank = "SERGEANT";
 						side = 0;
-						vehicle = "MET_REB_Rifleman_1 ";
+						vehicle = "MET_REB_Rifleman_1";
 					};
 					class Unit1 {
 						position[] = { 5,-5,0 };
@@ -588,7 +588,7 @@ class CfgGroups {
 						position[] = { -5,-5,0 };
 						rank = "PRIVATE";
 						side = 0;
-						vehicle = "MET_REB_Rifleman_1 ";
+						vehicle = "MET_REB_Rifleman_1";
 					};
 					class Unit3 {
 						position[] = { 10,-10,0 };
@@ -618,7 +618,7 @@ class CfgGroups {
 						position[] = { 20,-20,0 };
 						rank = "PRIVATE";
 						side = 0;
-						vehicle = "MET_REB_Rifleman_1 ";
+						vehicle = "MET_REB_Rifleman_1";
 					};
 				};
 
