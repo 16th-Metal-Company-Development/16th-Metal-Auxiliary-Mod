@@ -132,7 +132,7 @@ class CfgWeapons
 			reloadAction="GestureReloadPistol";
 			reloadMagazineSound[]=
 			{
-				"A3\Sounds_F\arsenal\weapons\Pistols\P07\reload_P07",
+				"A3\Sounds_F\arsenal\weapons\Pistols\P07\reload_P07.wss",
 				1,
 				1,
 				10
@@ -374,7 +374,7 @@ class CfgWeapons
 			reloadAction="GestureReloadPistol";
 			reloadMagazineSound[]=
 			{
-				"A3\Sounds_F\arsenal\weapons\Pistols\P07\reload_P07",
+				"A3\Sounds_F\arsenal\weapons\Pistols\P07\reload_P07.wss",
 				1,
 				1,
 				10
@@ -524,7 +524,7 @@ class CfgWeapons
 			reloadAction="GestureReloadPistol";
 			reloadMagazineSound[]=
 			{
-				"A3\Sounds_F\arsenal\weapons\Pistols\P07\reload_P07",
+				"A3\Sounds_F\arsenal\weapons\Pistols\P07\reload_P07.wss",
 				1,
 				1,
 				10
@@ -970,7 +970,7 @@ class CfgWeapons
 		};
 		drySound[]=
 		{
-			"\3AS\3AS_Main\Sounds\Blaster_empty",
+			"\3AS\3AS_Main\Sounds\Blaster_empty.wss",
 			2,
 			1,
 			20

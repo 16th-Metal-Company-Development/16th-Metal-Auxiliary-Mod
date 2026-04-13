@@ -202,14 +202,14 @@ class CfgVehicles
 				};
 				soundServo[]=
 				{
-					"A3\Sounds_F\vehicles\soft\noises\servo_turret_MRAP01",
+					"A3\Sounds_F\vehicles\soft\noises\servo_turret_MRAP01.wss",
 					0.17782794,
 					1,
 					10
 				};
 				soundServoVertical[]=
 				{
-					"A3\Sounds_F\vehicles\soft\noises\servo_turret_MRAP01",
+					"A3\Sounds_F\vehicles\soft\noises\servo_turret_MRAP01.wss",
 					0.17782794,
 					1,
 					10
@@ -633,14 +633,14 @@ class CfgVehicles
 						stabilizedInAxes=3;
 						soundServo[]=
 						{
-							"A3\Sounds_F\vehicles\armor\noises\servo_armor_comm",
+							"A3\Sounds_F\vehicles\armor\noises\servo_armor_comm.wss",
 							1,
 							1,
 							30
 						};
 						soundServoVertical[]=
 						{
-							"A3\Sounds_F\vehicles\armor\noises\servo_armor_comm",
+							"A3\Sounds_F\vehicles\armor\noises\servo_armor_comm.wss",
 							1,
 							1,
 							30
@@ -797,14 +797,14 @@ class CfgVehicles
 				initElev=5;
 				soundServo[]=
 				{
-					"A3\Sounds_F\vehicles\armor\noises\servo_armor_gunner",
+					"A3\Sounds_F\vehicles\armor\noises\servo_armor_gunner.wss",
 					0.56234133,
 					1,
 					50
 				};
 				soundServoVertical[]=
 				{
-					"A3\Sounds_F\vehicles\armor\noises\servo_armor_gunner_vertical",
+					"A3\Sounds_F\vehicles\armor\noises\servo_armor_gunner_vertical.wss",
 					0.56234133,
 					1,
 					50
@@ -1015,7 +1015,7 @@ class CfgVehicles
 						stabilizedInAxes=3;
 						soundServo[]=
 						{
-							"A3\Sounds_F\vehicles\armor\noises\servo_best",
+							"A3\Sounds_F\vehicles\armor\noises\servo_best.wss",
 							"db-40",
 							1,
 							50
@@ -1214,7 +1214,7 @@ class CfgVehicles
 				initOutTurn=0;
 				soundServo[]=
 				{
-					"A3\Sounds_F\vehicles\armor\noises\servo_best",
+					"A3\Sounds_F\vehicles\armor\noises\servo_best.wss",
 					"db-40",
 					1,
 					50
@@ -1319,7 +1319,7 @@ class CfgVehicles
 						stabilizedInAxes=3;
 						soundServo[]=
 						{
-							"A3\Sounds_F\vehicles\armor\noises\servo_best",
+							"A3\Sounds_F\vehicles\armor\noises\servo_best.wss",
 							"db-40",
 							1,
 							50
@@ -1511,7 +1511,7 @@ class CfgVehicles
 				initOutTurn=0;
 				soundServo[]=
 				{
-					"A3\Sounds_F\vehicles\armor\noises\servo_best",
+					"A3\Sounds_F\vehicles\armor\noises\servo_best.wss",
 					"db-40",
 					1,
 					50
@@ -1649,7 +1649,7 @@ class CfgVehicles
 						stabilizedInAxes=3;
 						soundServo[]=
 						{
-							"A3\Sounds_F\vehicles\armor\noises\servo_best",
+							"A3\Sounds_F\vehicles\armor\noises\servo_best.wss",
 							"db-40",
 							1,
 							50
@@ -1843,7 +1843,7 @@ class CfgVehicles
 				initOutTurn=0;
 				soundServo[]=
 				{
-					"A3\Sounds_F\vehicles\armor\noises\servo_best",
+					"A3\Sounds_F\vehicles\armor\noises\servo_best.wss",
 					"db-40",
 					1,
 					50

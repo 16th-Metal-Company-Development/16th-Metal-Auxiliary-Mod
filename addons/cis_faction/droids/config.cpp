@@ -2,10 +2,7 @@ class CfgPatches
 {
 	class MET_Droids
 	{
-		units[]=
-		{
-			""
-		};
+		units[]={};
 		weapons[]={};
 	};
 };

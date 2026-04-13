@@ -1487,7 +1487,7 @@ class CfgWeapons
 					visionMode[] = {};
 				};
 			};
-		}
+		};
 	};
 };
 class CfgMagazines

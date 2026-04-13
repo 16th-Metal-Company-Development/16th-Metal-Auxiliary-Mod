@@ -33,7 +33,7 @@ class CfgPatches
 };
 class CfgVehicles
 {
-	class I_Soldier_base_F;
+
 	class ls_droid_base;
 	class BHA_WorkerDroidBase: ls_droid_base
 	{

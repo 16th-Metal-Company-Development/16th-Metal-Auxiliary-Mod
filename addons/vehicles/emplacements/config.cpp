@@ -102,7 +102,7 @@ class CfgAmmo
 		tracerStartTime=0;
 		tracerEndTime=10;
 		deflecting=0;
-		model="3AS\3as_Weapons\Data\tracer_green";
+		model="3AS\3as_Weapons\Data\tracer_green.p3d";
 		effectFly="3AS_PlasmaBolt_Medium_Green_Fly";
 	};
 	class MET_greenPlasma_aa_he: MET_B_GreenPlasma_127_GPR
@@ -1478,56 +1478,56 @@ class CfgAmmo
 		hit=300;
 		soundHit1[]=
 		{
-			"A3\Sounds_F\arsenal\explosives\shells\Artillery_shell_explosion_01",
+			"A3\Sounds_F\arsenal\explosives\shells\Artillery_shell_explosion_01.wss",
 			1.7782794,
 			1,
 			2000
 		};
 		soundHit2[]=
 		{
-			"A3\Sounds_F\arsenal\explosives\shells\Artillery_shell_explosion_02",
+			"A3\Sounds_F\arsenal\explosives\shells\Artillery_shell_explosion_02.wss",
 			1.7782794,
 			1,
 			2000
 		};
 		soundHit3[]=
 		{
-			"A3\Sounds_F\arsenal\explosives\shells\Artillery_shell_explosion_03",
+			"A3\Sounds_F\arsenal\explosives\shells\Artillery_shell_explosion_03.wss",
 			1.7782794,
 			1,
 			2000
 		};
 		soundHit4[]=
 		{
-			"A3\Sounds_F\arsenal\explosives\shells\Artillery_shell_explosion_04",
+			"A3\Sounds_F\arsenal\explosives\shells\Artillery_shell_explosion_04.wss",
 			1.7782794,
 			1,
 			2000
 		};
 		soundHit5[]=
 		{
-			"A3\Sounds_F\arsenal\explosives\shells\Artillery_shell_explosion_05",
+			"A3\Sounds_F\arsenal\explosives\shells\Artillery_shell_explosion_05.wss",
 			1.7782794,
 			1,
 			2000
 		};
 		soundHit6[]=
 		{
-			"A3\Sounds_F\arsenal\explosives\shells\Artillery_shell_explosion_06",
+			"A3\Sounds_F\arsenal\explosives\shells\Artillery_shell_explosion_06.wss",
 			1.7782794,
 			1,
 			2000
 		};
 		soundHit7[]=
 		{
-			"A3\Sounds_F\arsenal\explosives\shells\Artillery_shell_explosion_07",
+			"A3\Sounds_F\arsenal\explosives\shells\Artillery_shell_explosion_07.wss",
 			1.7782794,
 			1,
 			2000
 		};
 		soundHit8[]=
 		{
-			"A3\Sounds_F\arsenal\explosives\shells\Artillery_shell_explosion_08",
+			"A3\Sounds_F\arsenal\explosives\shells\Artillery_shell_explosion_08.wss",
 			1.7782794,
 			1,
 			2000
@@ -1585,56 +1585,56 @@ class CfgAmmo
 		hit=300;
 		soundHit1[]=
 		{
-			"A3\Sounds_F\arsenal\explosives\shells\Artillery_shell_explosion_01",
+			"A3\Sounds_F\arsenal\explosives\shells\Artillery_shell_explosion_01.wss",
 			1.7782794,
 			1,
 			2000
 		};
 		soundHit2[]=
 		{
-			"A3\Sounds_F\arsenal\explosives\shells\Artillery_shell_explosion_02",
+			"A3\Sounds_F\arsenal\explosives\shells\Artillery_shell_explosion_02.wss",
 			1.7782794,
 			1,
 			2000
 		};
 		soundHit3[]=
 		{
-			"A3\Sounds_F\arsenal\explosives\shells\Artillery_shell_explosion_03",
+			"A3\Sounds_F\arsenal\explosives\shells\Artillery_shell_explosion_03.wss",
 			1.7782794,
 			1,
 			2000
 		};
 		soundHit4[]=
 		{
-			"A3\Sounds_F\arsenal\explosives\shells\Artillery_shell_explosion_04",
+			"A3\Sounds_F\arsenal\explosives\shells\Artillery_shell_explosion_04.wss",
 			1.7782794,
 			1,
 			2000
 		};
 		soundHit5[]=
 		{
-			"A3\Sounds_F\arsenal\explosives\shells\Artillery_shell_explosion_05",
+			"A3\Sounds_F\arsenal\explosives\shells\Artillery_shell_explosion_05.wss",
 			1.7782794,
 			1,
 			2000
 		};
 		soundHit6[]=
 		{
-			"A3\Sounds_F\arsenal\explosives\shells\Artillery_shell_explosion_06",
+			"A3\Sounds_F\arsenal\explosives\shells\Artillery_shell_explosion_06.wss",
 			1.7782794,
 			1,
 			2000
 		};
 		soundHit7[]=
 		{
-			"A3\Sounds_F\arsenal\explosives\shells\Artillery_shell_explosion_07",
+			"A3\Sounds_F\arsenal\explosives\shells\Artillery_shell_explosion_07.wss",
 			1.7782794,
 			1,
 			2000
 		};
 		soundHit8[]=
 		{
-			"A3\Sounds_F\arsenal\explosives\shells\Artillery_shell_explosion_08",
+			"A3\Sounds_F\arsenal\explosives\shells\Artillery_shell_explosion_08.wss",
 			1.7782794,
 			1,
 			2000
@@ -2235,7 +2235,7 @@ class CfgMagazines
 		ammo="MET_Smoke_300mm_AMOS_White";
 		count=12;
 		nameSound="smoke";
-		[]={1.2,8};
+		muzzleImpulseFactor[]={1.2,8};
 	};
 	class MET_12Rnd_300mm_Mo_Clust_smoke: VehicleMagazine
 	{
@@ -2248,7 +2248,7 @@ class CfgMagazines
 		ammo="MET_Smoke_Cluster_300mm_AMOS_White";
 		count=12;
 		nameSound="smoke";
-		[]={1.2,8};
+		muzzleImpulseFactor[]={1.2,8};
 	};
 	class MET_12Rnd_300mm_Mo_flare: VehicleMagazine
 	{
@@ -2559,7 +2559,7 @@ class CfgWeapons
 		nameSound="cannon";
 		sound[]=
 		{
-			"A3\sounds_f\dummysound",
+			"A3\sounds_f\dummysound.wss",
 			2.5118864,
 			1,
 			1800
@@ -3090,7 +3090,7 @@ class CfgWeapons
 		};
 		reloadSound[]=
 		{
-			"A3\Sounds_F\vehicles\armor\noises\reload_tank_cannon_2",
+			"A3\Sounds_F\vehicles\armor\noises\reload_tank_cannon_2.wss",
 			31.622778,
 			1,
 			15
@@ -3157,7 +3157,7 @@ class CfgWeapons
 			};
 			reloadSound[]=
 			{
-				"A3\sounds_f\dummysound",
+				"A3\sounds_f\dummysound.wss",
 				1,
 				1,
 				20
@@ -3220,7 +3220,7 @@ class CfgWeapons
 			};
 			reloadSound[]=
 			{
-				"A3\sounds_f\dummysound",
+				"A3\sounds_f\dummysound.wss",
 				1,
 				1,
 				20
@@ -3289,8 +3289,8 @@ class CfgWeapons
     {
         displayname = "SGM-120 120MW";
         //Maybe we change sound if we get
-            reloadSound[] = {"A3\Sounds_F\arsenal\weapons_static\Mortar\reload_mortar", 1, 1, 20};
-            reloadMagazineSound[] = {"A3\Sounds_F\arsenal\weapons_static\Mortar\reload_magazine_Mortar", 1, 1, 20};
+            reloadSound[] = {"A3\Sounds_F\arsenal\weapons_static\Mortar\reload_mortar.wss", 1, 1, 20};
+            reloadMagazineSound[] = {"A3\Sounds_F\arsenal\weapons_static\Mortar\reload_magazine_Mortar.wss", 1, 1, 20};
             soundServo[] = {"", 0.0001, 1};
         //
 
@@ -3377,7 +3377,7 @@ class CfgWeapons
 		scope=1;
         displayname = "SGMT-120 120MW Twin Mortar";
         //Maybe we change sound if we get
-            reloadMagazineSound[] = {"A3\Sounds_F\arsenal\weapons_static\Mortar\reload_magazine_Mortar", 1, 1, 20};
+            reloadMagazineSound[] = {"A3\Sounds_F\arsenal\weapons_static\Mortar\reload_magazine_Mortar.wss", 1, 1, 20};
             soundServo[] = {"", 0.0001, 1};
         //
 		nameSound="cannon";
@@ -3404,7 +3404,7 @@ class CfgWeapons
 		};
 		reloadSound[]=
 		{
-			"A3\Sounds_F\vehicles\armor\noises\reload_tank_cannon_2",
+			"A3\Sounds_F\vehicles\armor\noises\reload_tank_cannon_2.wss",
 			31.622778,
 			1,
 			15
@@ -3445,7 +3445,7 @@ class CfgWeapons
 			};
 			reloadSound[]=
 			{
-				"A3\sounds_f\dummysound",
+				"A3\sounds_f\dummysound.wss",
 				1,
 				1,
 				20
@@ -3545,14 +3545,14 @@ class CfgWeapons
 		};
 		reloadSound[]=
 		{
-			"A3\Sounds_F\arsenal\weapons_static\Mortar\reload_mortar",
+			"A3\Sounds_F\arsenal\weapons_static\Mortar\reload_mortar.wss",
 			1,
 			1,
 			20
 		};
 		reloadMagazineSound[]=
 		{
-			"A3\Sounds_F\arsenal\weapons_static\Mortar\reload_magazine_Mortar",
+			"A3\Sounds_F\arsenal\weapons_static\Mortar\reload_magazine_Mortar.wss",
 			1,
 			1,
 			20
@@ -3610,7 +3610,7 @@ class CfgWeapons
 			};
 			reloadSound[]=
 			{
-				"A3\Sounds_F\arsenal\weapons_static\Mortar\reload_mortar",
+				"A3\Sounds_F\arsenal\weapons_static\Mortar\reload_mortar.wss",
 				1,
 				1,
 				20
@@ -3673,7 +3673,7 @@ class CfgWeapons
 			};
 			reloadSound[]=
 			{
-				"A3\Sounds_F\arsenal\weapons_static\Mortar\reload_mortar",
+				"A3\Sounds_F\arsenal\weapons_static\Mortar\reload_mortar.wss",
 				1,
 				1,
 				20
@@ -4189,7 +4189,7 @@ class CfgVehicles
 		{
 			libTextDesc="$STR_A3_CfgVehicles_mbt_01_arty_base_Library0";
 		};
-		model="3AS\3AS_AV7\model\3AS_av7";
+		model="3AS\3AS_AV7\model\3AS_av7.p3d";
 		faction="metal_company";
 		editorSubcategory="metal_co_EdSubCat_Dragon";
 		icon="3as\3AS_AV7\data\UI\AV7_top_ca.paa";
@@ -5155,14 +5155,14 @@ class CfgVehicles
 				initElev=10;
 				soundServo[]=
 				{
-					"A3\Sounds_F\vehicles\armor\noises\servo_armor_gunner",
+					"A3\Sounds_F\vehicles\armor\noises\servo_armor_gunner.wss",
 					0.15848932,
 					1,
 					30
 				};
 				soundServoVertical[]=
 				{
-					"A3\Sounds_F\vehicles\armor\noises\servo_armor_gunner_vertical",
+					"A3\Sounds_F\vehicles\armor\noises\servo_armor_gunner_vertical.wss",
 					0.15848932,
 					1,
 					30
@@ -5394,9 +5394,9 @@ class CfgVehicles
 				maxelev = 22.5;
 
                 disableSoundAttenuation = 0;
-                soundElevation[] = {"A3\Sounds_F\vehicles\soft\noises\servo_turret_MRAP03", 0.316228, 1, 10};
-				soundServo[] = {"A3\Sounds_F\vehicles\soft\noises\servo_turret_MRAP03", 0.177828, 1, 10};
-				soundServoVertical[] = {"A3\Sounds_F\vehicles\soft\noises\servo_turret_MRAP03", 0.316228, 1, 30};
+                soundElevation[] = {"A3\Sounds_F\vehicles\soft\noises\servo_turret_MRAP03.wss", 0.316228, 1, 10};
+				soundServo[] = {"A3\Sounds_F\vehicles\soft\noises\servo_turret_MRAP03.wss", 0.177828, 1, 10};
+				soundServoVertical[] = {"A3\Sounds_F\vehicles\soft\noises\servo_turret_MRAP03.wss", 0.316228, 1, 30};
             };
         };
         class AnimationSources

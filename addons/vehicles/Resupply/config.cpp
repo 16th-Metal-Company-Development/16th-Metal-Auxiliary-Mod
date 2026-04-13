@@ -20,7 +20,10 @@ class CfgPatches
 			"MET_RocExpBox_F",
 			"MET_MedicalBox_F",
 			"MET_RadioBox_F",
-            "Box_MET_Ammo",
+			"MET_MortarBox_F",
+			"MET_EwebBox_F",
+			"MET_EODBox_F",
+            /*"Box_MET_Ammo",
             "Box_MET_Airborne",
             "Box_MET_FieldAssets",
             "Box_MET_Ordinance",
@@ -30,7 +33,7 @@ class CfgPatches
             "Box_MET_ARF",
             "Box_MET_ARC",
             "Box_MET_CommandoGroup",
-            "Box_MET_Turrets"
+            "Box_MET_Turrets"*/
 		};
 		weapons[] = {};
 	};

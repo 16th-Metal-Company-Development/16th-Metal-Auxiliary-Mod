@@ -1102,7 +1102,7 @@ class CfgVehicles
 				};
 				soundServoVertical[]=
 				{
-					"A3\Sounds_F\vehicles\armor\noises\servo_armor_gunner_vertical",
+					"A3\Sounds_F\vehicles\armor\noises\servo_armor_gunner_vertical.wss",
 					0.15848932,
 					1,
 					30
@@ -1578,7 +1578,7 @@ class CfgVehicles
 				};
 				soundServoVertical[]=
 				{
-					"A3\Sounds_F\vehicles\armor\noises\servo_armor_gunner_vertical",
+					"A3\Sounds_F\vehicles\armor\noises\servo_armor_gunner_vertical.wss",
 					0.15848932,
 					1,
 					30
@@ -1943,7 +1943,7 @@ class CfgVehicles
 				};
 				soundServoVertical[]=
 				{
-					"A3\Sounds_F\vehicles\armor\noises\servo_armor_gunner_vertical",
+					"A3\Sounds_F\vehicles\armor\noises\servo_armor_gunner_vertical.wss",
 					0.15848932,
 					1,
 					30

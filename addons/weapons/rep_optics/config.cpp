@@ -1394,6 +1394,6 @@ class CfgWeapons
 					visionMode[] = {};
 				};
 			};
-		}
+		};
 	};
 };

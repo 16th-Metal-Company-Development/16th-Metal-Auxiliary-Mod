@@ -3,7 +3,19 @@ class CfgPatches
 	class handweapons_16
 	{	
 		units[]={};
-		weapons[]={};
+		weapons[]=
+		{
+			"Metal_E5",
+			"Metal_E5_BX",
+			"Metal_E5C_Stock",
+			"Metal_E5S",
+			"Metal_RG4D",
+			"Metal_SBB3",
+			"Metal_E60R_AT",
+			"Metal_E60R_AA",
+			"Metal_CIS_EPL2"
+
+		};
 		requiredAddons[]=
 		{
 			"A3_characters_F",
@@ -559,7 +571,7 @@ class CfgWeapons
 		magazines[]={};
 		drySound[]=
 		{
-			"A3\Sounds_F\arsenal\weapons\Rifles\Mx\dry_Mx",
+			"A3\Sounds_F\arsenal\weapons\Rifles\Mx\dry_Mx.wss",
 			0.56234097,
 			1,
 			10
@@ -623,7 +635,7 @@ class CfgWeapons
 		magazines[]={};
 		drySound[]=
 		{
-			"A3\Sounds_F\arsenal\weapons\Rifles\Mx\dry_Mx",
+			"A3\Sounds_F\arsenal\weapons\Rifles\Mx\dry_Mx.wss",
 			0.56234097,
 			1,
 			10
@@ -913,7 +925,7 @@ class CfgWeapons
 		magazines[]={};
 		drySound[]=
 		{
-			"A3\Sounds_F\arsenal\weapons\Rifles\Mx\dry_Mx",
+			"A3\Sounds_F\arsenal\weapons\Rifles\Mx\dry_Mx.wss",
 			0.56234097,
 			1,
 			10
@@ -985,7 +997,7 @@ class CfgWeapons
 		magazines[]={};
 		drySound[]=
 		{
-			"A3\Sounds_F\arsenal\weapons\Rifles\Mx\dry_Mx",
+			"A3\Sounds_F\arsenal\weapons\Rifles\Mx\dry_Mx.wss",
 			0.56234097,
 			1,
 			10
@@ -1219,7 +1231,7 @@ class CfgWeapons
 		JLTS_isFried=1;
 		drySound[]=
 		{
-			"A3\Sounds_F\arsenal\weapons\Rifles\Mx\dry_Mx",
+			"A3\Sounds_F\arsenal\weapons\Rifles\Mx\dry_Mx.wss",
 			0.56234097,
 			1,
 			10
@@ -1520,7 +1532,7 @@ class CfgWeapons
 		JLTS_isFried=1;
 		drySound[]=
 		{
-			"A3\Sounds_F\arsenal\weapons\Rifles\Mx\dry_Mx",
+			"A3\Sounds_F\arsenal\weapons\Rifles\Mx\dry_Mx.wss",
 			0.56234097,
 			1,
 			10
@@ -1686,7 +1698,7 @@ class CfgWeapons
 		magazines[]={};
 		drySound[]=
 		{
-			"A3\Sounds_F\arsenal\weapons\Rifles\Mx\dry_Mx",
+			"A3\Sounds_F\arsenal\weapons\Rifles\Mx\dry_Mx.wss",
 			0.56234097,
 			1,
 			10
@@ -2038,7 +2050,7 @@ class CfgWeapons
 		magazines[]={};
 		drySound[]=
 		{
-			"A3\Sounds_F\arsenal\weapons\Rifles\Mx\dry_Mx",
+			"A3\Sounds_F\arsenal\weapons\Rifles\Mx\dry_Mx.wss",
 			0.56234097,
 			1,
 			10

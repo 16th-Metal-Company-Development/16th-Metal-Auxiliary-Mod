@@ -13,7 +13,16 @@ class CfgPatches
 			"MET_mandalorian_deathwatchHeavyAA",
 			"MET_mandalorian_deathwatchCQB",
 			"MET_mandalorian_deathwatchSergeant",
-			"MET_mandalorian_deathwatchCaptain"
+			"MET_mandalorian_deathwatchCaptain",
+
+			"MET_mandalorianBackpack_journeyman",
+			"MET_mandalorianBackpack_heavy",
+			"MET_mandalorianBackpack_medic",
+			"MET_mandalorianBackpack_cqb",
+			"MET_mandalorianBackpack_sniper",
+			"MET_mandalorianBackpack_at",
+			"MET_mandalorianBackpack_aa",
+			"MET_mandalorianBackpack_command",
 		};
 		weapons[]={};
 		requiredAddons[]=

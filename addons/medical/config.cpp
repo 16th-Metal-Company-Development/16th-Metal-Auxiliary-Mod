@@ -5,10 +5,7 @@ class CfgPatches
 		author="";
 		requiredVersion=0.1;
 		units[]={};
-		weapons[]=
-		{
-			""
-		};
+		weapons[]={};
 		skipWhenMissingDependencies=1;
 		requiredAddons[]=
 		{

@@ -146,14 +146,14 @@ class CfgWeapons
 		};
 		reloadSound[]=
 		{
-			"A3\Sounds_F\arsenal\weapons_static\Mortar\reload_mortar",
+			"A3\Sounds_F\arsenal\weapons_static\Mortar\reload_mortar.wss",
 			1,
 			1,
 			20
 		};
 		reloadMagazineSound[]=
 		{
-			"A3\Sounds_F\arsenal\weapons_static\Mortar\reload_magazine_Mortar",
+			"A3\Sounds_F\arsenal\weapons_static\Mortar\reload_magazine_Mortar.wss",
 			1,
 			1,
 			20
@@ -211,7 +211,7 @@ class CfgWeapons
 			};
 			reloadSound[]=
 			{
-				"A3\Sounds_F\arsenal\weapons_static\Mortar\reload_mortar",
+				"A3\Sounds_F\arsenal\weapons_static\Mortar\reload_mortar.wss",
 				1,
 				1,
 				20
@@ -274,7 +274,7 @@ class CfgWeapons
 			};
 			reloadSound[]=
 			{
-				"A3\Sounds_F\arsenal\weapons_static\Mortar\reload_mortar",
+				"A3\Sounds_F\arsenal\weapons_static\Mortar\reload_mortar.wss",
 				1,
 				1,
 				20

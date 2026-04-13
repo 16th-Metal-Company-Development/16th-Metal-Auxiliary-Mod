@@ -96,7 +96,7 @@ class CfgWeapons
 		};
 		drySound[]=
 		{
-			"\3AS\3AS_Main\Sounds\Blaster_empty",
+			"\3AS\3AS_Main\Sounds\Blaster_empty.wss",
 			2,
 			1,
 			20
@@ -321,7 +321,7 @@ class CfgWeapons
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
 			mass=30;
-			class CowsSlot: Cowsslot
+			class CowsSlot : CowsSlot
 			{
 				compatibleItems[]=
 				{

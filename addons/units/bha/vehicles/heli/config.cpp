@@ -269,26 +269,26 @@ class CfgVehicles
 		};
 		soundEngineOnInt[]=
 		{
-			"SFA_Main\SFA_Vehicles_S\Dragonfly\data\sfx\flight_on",
+			"SFA_Main\SFA_Vehicles_S\Dragonfly\data\sfx\flight_on.wss",
 			0.44668359,
 			1
 		};
 		soundEngineOnExt[]=
 		{
-			"SFA_Main\SFA_Vehicles_S\Dragonfly\data\sfx\flight_on",
+			"SFA_Main\SFA_Vehicles_S\Dragonfly\data\sfx\flight_on.wss",
 			1.5848932,
 			1,
 			600
 		};
 		soundEngineOffInt[]=
 		{
-			"SFA_Main\SFA_Vehicles_S\Dragonfly\data\sfx\flight_off",
+			"SFA_Main\SFA_Vehicles_S\Dragonfly\data\sfx\flight_off.wss",
 			0.44668359,
 			1
 		};
 		soundEngineOffExt[]=
 		{
-			"SFA_Main\SFA_Vehicles_S\Dragonfly\data\sfx\flight_off",
+			"SFA_Main\SFA_Vehicles_S\Dragonfly\data\sfx\flight_off.wss",
 			1.5848932,
 			1,
 			600
@@ -337,7 +337,7 @@ class CfgVehicles
 			{
 				sound[]=
 				{
-					"SFA_Main\SFA_Vehicles_S\Dragonfly\data\sfx\flight_idle",
+					"SFA_Main\SFA_Vehicles_S\Dragonfly\data\sfx\flight_idle.wss",
 					1.7782794,
 					1,
 					2000
@@ -349,7 +349,7 @@ class CfgVehicles
 			{
 				sound[]=
 				{
-					"SFA_Main\SFA_Vehicles_S\Dragonfly\data\sfx\flight_idle",
+					"SFA_Main\SFA_Vehicles_S\Dragonfly\data\sfx\flight_idle.wss",
 					1.4125376,
 					0.80000001,
 					3000
@@ -375,7 +375,7 @@ class CfgVehicles
 			{
 				sound[]=
 				{
-					"SFA_Main\SFA_Vehicles_S\Dragonfly\data\sfx\flight_idle",
+					"SFA_Main\SFA_Vehicles_S\Dragonfly\data\sfx\flight_idle.wss",
 					0.79432821,
 					1
 				};
@@ -386,7 +386,7 @@ class CfgVehicles
 			{
 				sound[]=
 				{
-					"SFA_Main\SFA_Vehicles_S\Dragonfly\data\sfx\flight_idle",
+					"SFA_Main\SFA_Vehicles_S\Dragonfly\data\sfx\flight_idle.wss",
 					1,
 					0.80000001
 				};
@@ -397,7 +397,7 @@ class CfgVehicles
 			{
 				sound[]=
 				{
-					"A3\Sounds_F\vehicles\air\noises\heli_damage_transmission_ext_1",
+					"A3\Sounds_F\vehicles\air\noises\heli_damage_transmission_ext_1.wss",
 					1,
 					1,
 					250
@@ -409,7 +409,7 @@ class CfgVehicles
 			{
 				sound[]=
 				{
-					"A3\Sounds_F\vehicles\air\noises\heli_damage_transmission_ext_2",
+					"A3\Sounds_F\vehicles\air\noises\heli_damage_transmission_ext_2.wss",
 					1,
 					1,
 					150
@@ -421,7 +421,7 @@ class CfgVehicles
 			{
 				sound[]=
 				{
-					"A3\Sounds_F\vehicles\air\noises\heli_damage_transmission_int_1",
+					"A3\Sounds_F\vehicles\air\noises\heli_damage_transmission_int_1.wss",
 					1,
 					1,
 					150
@@ -433,7 +433,7 @@ class CfgVehicles
 			{
 				sound[]=
 				{
-					"A3\Sounds_F\vehicles\air\noises\heli_damage_transmission_int_2",
+					"A3\Sounds_F\vehicles\air\noises\heli_damage_transmission_int_2.wss",
 					1,
 					1,
 					150
@@ -445,7 +445,7 @@ class CfgVehicles
 			{
 				sound[]=
 				{
-					"A3\Sounds_F\vehicles\air\noises\heli_alarm_bluefor",
+					"A3\Sounds_F\vehicles\air\noises\heli_alarm_bluefor.wss",
 					0.31622776,
 					1
 				};
@@ -456,7 +456,7 @@ class CfgVehicles
 			{
 				sound[]=
 				{
-					"A3\Sounds_F\vehicles\air\noises\heli_alarm_bluefor",
+					"A3\Sounds_F\vehicles\air\noises\heli_alarm_bluefor.wss",
 					0.22387211,
 					1,
 					20
@@ -468,7 +468,7 @@ class CfgVehicles
 			{
 				sound[]=
 				{
-					"A3\Sounds_F\vehicles\air\noises\heli_alarm_rotor_low",
+					"A3\Sounds_F\vehicles\air\noises\heli_alarm_rotor_low.wss",
 					0.31622776,
 					1
 				};
@@ -479,7 +479,7 @@ class CfgVehicles
 			{
 				sound[]=
 				{
-					"A3\Sounds_F\vehicles\air\noises\heli_alarm_rotor_low",
+					"A3\Sounds_F\vehicles\air\noises\heli_alarm_rotor_low.wss",
 					0.22387211,
 					1,
 					20
@@ -515,7 +515,7 @@ class CfgVehicles
 			{
 				sound[]=
 				{
-					"A3\Sounds_F\vehicles\air\noises\wheelsInt",
+					"A3\Sounds_F\vehicles\air\noises\wheelsInt.wss",
 					1,
 					1,
 					100
@@ -539,7 +539,7 @@ class CfgVehicles
 			{
 				sound[]=
 				{
-					"A3\Sounds_F\vehicles\air\noises\scrubTreeInt",
+					"A3\Sounds_F\vehicles\air\noises\scrubTreeInt.wss",
 					1,
 					1,
 					100
@@ -551,7 +551,7 @@ class CfgVehicles
 			{
 				sound[]=
 				{
-					"A3\Sounds_F\vehicles\air\noises\scrubTreeExt",
+					"A3\Sounds_F\vehicles\air\noises\scrubTreeExt.wss",
 					1,
 					1,
 					100
@@ -563,7 +563,7 @@ class CfgVehicles
 			{
 				sound[]=
 				{
-					"A3\Sounds_F\vehicles\noises\rain1_ext",
+					"A3\Sounds_F\vehicles\noises\rain1_ext.wss",
 					1,
 					1,
 					100
@@ -575,7 +575,7 @@ class CfgVehicles
 			{
 				sound[]=
 				{
-					"A3\Sounds_F\vehicles\noises\rain1_int",
+					"A3\Sounds_F\vehicles\noises\rain1_int.wss",
 					1,
 					1,
 					100
@@ -587,7 +587,7 @@ class CfgVehicles
 			{
 				sound[]=
 				{
-					"A3\Sounds_F\vehicles\air\noises\SL_engineDownEXT",
+					"A3\Sounds_F\vehicles\air\noises\SL_engineDownEXT.wss",
 					1.2589254,
 					1,
 					500
@@ -599,7 +599,7 @@ class CfgVehicles
 			{
 				sound[]=
 				{
-					"A3\Sounds_F\vehicles\air\noises\SL_engineUpEXT",
+					"A3\Sounds_F\vehicles\air\noises\SL_engineUpEXT.wss",
 					1.2589254,
 					1,
 					500
@@ -611,7 +611,7 @@ class CfgVehicles
 			{
 				sound[]=
 				{
-					"A3\Sounds_F\vehicles\air\noises\SL_engineDownINT",
+					"A3\Sounds_F\vehicles\air\noises\SL_engineDownINT.wss",
 					1,
 					1,
 					500
@@ -623,7 +623,7 @@ class CfgVehicles
 			{
 				sound[]=
 				{
-					"A3\Sounds_F\vehicles\air\noises\SL_engineUpINT",
+					"A3\Sounds_F\vehicles\air\noises\SL_engineUpINT.wss",
 					1,
 					1,
 					500
@@ -635,7 +635,7 @@ class CfgVehicles
 			{
 				sound[]=
 				{
-					"A3\Sounds_F\vehicles\air\noises\wind_closed",
+					"A3\Sounds_F\vehicles\air\noises\wind_closed.wss",
 					0.33095738,
 					1,
 					50
@@ -647,7 +647,7 @@ class CfgVehicles
 			{
 				sound[]=
 				{
-					"A3\Sounds_F\vehicles\noises\vehicle_stress2c",
+					"A3\Sounds_F\vehicles\noises\vehicle_stress2c.wss",
 					0.60000002,
 					1,
 					50
@@ -659,7 +659,7 @@ class CfgVehicles
 			{
 				sound[]=
 				{
-					"A3\Sounds_F\vehicles\noises\vehicle_stress3",
+					"A3\Sounds_F\vehicles\noises\vehicle_stress3.wss",
 					1,
 					1,
 					50
@@ -679,7 +679,7 @@ class CfgVehicles
 				{
 					sound[]=
 					{
-						"SFA_Main\SFA_Vehicles_S\Dragonfly\data\sfx\flight_idle",
+						"SFA_Main\SFA_Vehicles_S\Dragonfly\data\sfx\flight_idle.wss",
 						1.7782794,
 						1,
 						800
@@ -691,7 +691,7 @@ class CfgVehicles
 				{
 					sound[]=
 					{
-						"SFA_Main\SFA_Vehicles_S\Dragonfly\data\sfx\flight_idle",
+						"SFA_Main\SFA_Vehicles_S\Dragonfly\data\sfx\flight_idle.wss",
 						1.4125376,
 						0.80000001,
 						2000
@@ -717,7 +717,7 @@ class CfgVehicles
 				{
 					sound[]=
 					{
-						"SFA_Main\SFA_Vehicles_S\Dragonfly\data\sfx\flight_idle",
+						"SFA_Main\SFA_Vehicles_S\Dragonfly\data\sfx\flight_idle.wss",
 						0.79432821,
 						1
 					};
@@ -728,7 +728,7 @@ class CfgVehicles
 				{
 					sound[]=
 					{
-						"SFA_Main\SFA_Vehicles_S\Dragonfly\data\sfx\flight_idle",
+						"SFA_Main\SFA_Vehicles_S\Dragonfly\data\sfx\flight_idle.wss",
 						1,
 						0.80000001
 					};
@@ -739,7 +739,7 @@ class CfgVehicles
 				{
 					sound[]=
 					{
-						"A3\Sounds_F\vehicles\air\noises\heli_damage_transmission_ext_1",
+						"A3\Sounds_F\vehicles\air\noises\heli_damage_transmission_ext_1.wss",
 						1,
 						1,
 						150
@@ -751,7 +751,7 @@ class CfgVehicles
 				{
 					sound[]=
 					{
-						"A3\Sounds_F\vehicles\air\noises\heli_damage_transmission_ext_2",
+						"A3\Sounds_F\vehicles\air\noises\heli_damage_transmission_ext_2.wss",
 						1,
 						1,
 						150
@@ -763,7 +763,7 @@ class CfgVehicles
 				{
 					sound[]=
 					{
-						"A3\Sounds_F\vehicles\air\noises\heli_damage_transmission_int_1",
+						"A3\Sounds_F\vehicles\air\noises\heli_damage_transmission_int_1.wss",
 						1,
 						1,
 						150
@@ -775,7 +775,7 @@ class CfgVehicles
 				{
 					sound[]=
 					{
-						"A3\Sounds_F\vehicles\air\noises\heli_damage_transmission_int_2",
+						"A3\Sounds_F\vehicles\air\noises\heli_damage_transmission_int_2.wss",
 						1,
 						1,
 						150
@@ -787,7 +787,7 @@ class CfgVehicles
 				{
 					sound[]=
 					{
-						"A3\Sounds_F\vehicles\air\noises\heli_alarm_bluefor",
+						"A3\Sounds_F\vehicles\air\noises\heli_alarm_bluefor.wss",
 						0.31622776,
 						1
 					};
@@ -798,7 +798,7 @@ class CfgVehicles
 				{
 					sound[]=
 					{
-						"A3\Sounds_F\vehicles\air\noises\heli_alarm_bluefor",
+						"A3\Sounds_F\vehicles\air\noises\heli_alarm_bluefor.wss",
 						0.22387211,
 						1,
 						20
@@ -810,7 +810,7 @@ class CfgVehicles
 				{
 					sound[]=
 					{
-						"A3\Sounds_F\vehicles\air\noises\heli_alarm_rotor_low",
+						"A3\Sounds_F\vehicles\air\noises\heli_alarm_rotor_low.wss",
 						0.31622776,
 						1
 					};
@@ -821,7 +821,7 @@ class CfgVehicles
 				{
 					sound[]=
 					{
-						"A3\Sounds_F\vehicles\air\noises\heli_alarm_rotor_low",
+						"A3\Sounds_F\vehicles\air\noises\heli_alarm_rotor_low.wss",
 						0.22387211,
 						1,
 						20
@@ -856,7 +856,7 @@ class CfgVehicles
 				{
 					sound[]=
 					{
-						"A3\Sounds_F\vehicles\air\noises\wheelsInt",
+						"A3\Sounds_F\vehicles\air\noises\wheelsInt.wss",
 						1,
 						1,
 						100
@@ -868,7 +868,7 @@ class CfgVehicles
 				{
 					sound[]=
 					{
-						"",
+						"A3\Sounds_F\vehicles\air\noises\scrubBuildingExt.wss",
 						1,
 						1,
 						100
@@ -880,7 +880,7 @@ class CfgVehicles
 				{
 					sound[]=
 					{
-						"A3\Sounds_F\vehicles\air\noises\scrubTreeInt",
+						"A3\Sounds_F\vehicles\air\noises\scrubTreeInt.wss",
 						1,
 						1,
 						100
@@ -892,7 +892,7 @@ class CfgVehicles
 				{
 					sound[]=
 					{
-						"A3\Sounds_F\vehicles\air\noises\scrubTreeExt",
+						"A3\Sounds_F\vehicles\air\noises\scrubTreeExt.wss",
 						1,
 						1,
 						100
@@ -904,7 +904,7 @@ class CfgVehicles
 				{
 					sound[]=
 					{
-						"A3\Sounds_F\vehicles\noises\rain1_ext",
+						"A3\Sounds_F\vehicles\noises\rain1_ext.wss",
 						1,
 						1,
 						100
@@ -916,7 +916,7 @@ class CfgVehicles
 				{
 					sound[]=
 					{
-						"A3\Sounds_F\vehicles\noises\rain1_int",
+						"A3\Sounds_F\vehicles\noises\rain1_int.wss",
 						1,
 						1,
 						100
@@ -928,7 +928,7 @@ class CfgVehicles
 				{
 					sound[]=
 					{
-						"A3\Sounds_F\vehicles\air\noises\SL_engineDownEXT",
+						"A3\Sounds_F\vehicles\air\noises\SL_engineDownEXT.wss",
 						1,
 						1,
 						500
@@ -940,7 +940,7 @@ class CfgVehicles
 				{
 					sound[]=
 					{
-						"A3\Sounds_F\vehicles\air\noises\SL_engineUpEXT",
+						"A3\Sounds_F\vehicles\air\noises\SL_engineUpEXT.wss",
 						1,
 						1,
 						500
@@ -952,7 +952,7 @@ class CfgVehicles
 				{
 					sound[]=
 					{
-						"A3\Sounds_F\vehicles\air\noises\SL_engineDownINT",
+						"A3\Sounds_F\vehicles\air\noises\SL_engineDownINT.wss",
 						1,
 						1,
 						500
@@ -964,7 +964,7 @@ class CfgVehicles
 				{
 					sound[]=
 					{
-						"A3\Sounds_F\vehicles\air\noises\SL_engineUpINT",
+						"A3\Sounds_F\vehicles\air\noises\SL_engineUpINT.wss",
 						1,
 						1,
 						500
@@ -976,7 +976,7 @@ class CfgVehicles
 				{
 					sound[]=
 					{
-						"A3\Sounds_F\vehicles\air\noises\wind_closed",
+						"A3\Sounds_F\vehicles\air\noises\wind_closed.wss",
 						0.33095738,
 						1,
 						50
@@ -988,7 +988,7 @@ class CfgVehicles
 				{
 					sound[]=
 					{
-						"A3\Sounds_F\vehicles\noises\vehicle_stress2c",
+						"A3\Sounds_F\vehicles\noises\vehicle_stress2c.wss",
 						0.60000002,
 						1,
 						50
@@ -1000,7 +1000,7 @@ class CfgVehicles
 				{
 					sound[]=
 					{
-						"A3\Sounds_F\vehicles\noises\vehicle_stress3",
+						"A3\Sounds_F\vehicles\noises\vehicle_stress3.wss",
 						1,
 						1,
 						50
@@ -1415,14 +1415,14 @@ class CfgVehicles
 				proxyindex=1;
 				soundServo[]=
 				{
-					"A3\Sounds_F\vehicles\armor\noises\servo_armor_gunner",
+					"A3\Sounds_F\vehicles\armor\noises\servo_armor_gunner.wss",
 					0.36234099,
 					1,
 					20
 				};
 				soundServoVertical[]=
 				{
-					"A3\Sounds_F\vehicles\armor\noises\servo_armor_gunner_vertical",
+					"A3\Sounds_F\vehicles\armor\noises\servo_armor_gunner_vertical.wss",
 					0.36234099,
 					1,
 					30

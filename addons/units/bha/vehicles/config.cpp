@@ -170,7 +170,7 @@ class CfgAmmo
 		tracerStartTime=0;
 		tracerEndTime=10;
 		deflecting=0;
-		model="3AS\3as_Weapons\Data\tracer_yellow";
+		model="3AS\3as_Weapons\Data\tracer_yellow.p3d";
 		effectFly="MET_plasma_orange";
 	};
 	class MET_B_OrangePlasma_127_AP: B_20mm_AP
@@ -204,7 +204,7 @@ class CfgAmmo
 		tracerStartTime=0;
 		tracerEndTime=10;
 		deflecting=0;
-		model="3AS\3as_Weapons\Data\tracer_yellow";
+		model="3AS\3as_Weapons\Data\tracer_yellow.p3d";
 		effectFly="MET_plasma_orange";
 	};
 	class B_40mm_GPR;
@@ -239,7 +239,7 @@ class CfgAmmo
 		tracerStartTime=0;
 		tracerEndTime=10;
 		deflecting=0;
-		model="3AS\3as_Weapons\Data\tracer_yellow";
+		model="3AS\3as_Weapons\Data\tracer_yellow.p3d";
 		effectFly="MET_plasma_orange";
 	};
 	class B_40mm_AP;
@@ -274,7 +274,7 @@ class CfgAmmo
 		tracerStartTime=0;
 		tracerEndTime=10;
 		deflecting=0;
-		model="3AS\3as_Weapons\Data\tracer_yellow";
+		model="3AS\3as_Weapons\Data\tracer_yellow.p3d";
 		effectFly="MET_plasma_orange";
 	};
 	class MET_B_OrangePlasma_40_AP: B_40mm_AP
@@ -303,7 +303,7 @@ class CfgAmmo
 		tracerStartTime=0;
 		tracerEndTime=10;
 		deflecting=0;
-		model="3AS\3as_Weapons\Data\tracer_yellow";
+		model="3AS\3as_Weapons\Data\tracer_yellow.p3d";
 		effectFly="MET_plasma_orange";
 	};
 	class ShellBase;
@@ -328,7 +328,7 @@ class CfgAmmo
 		timeToLive=15;
 		whistleOnFire=1;
 		whistleDist=14;
-		model="\3AS\3AS_Weapons\Data\tracer_shell_yellow";
+		model="\3AS\3AS_Weapons\Data\tracer_shell_yellow.p3d";
 		tracerScale=3;
 		tracerStartTime=0;
 		tracerEndTime=15;
@@ -337,28 +337,28 @@ class CfgAmmo
 		effectFly="MET_plasma_orange_big";
 		soundHit1[]=
 		{
-			"A3\Sounds_F\arsenal\explosives\shells\Tank_shell_explosion_01",
+			"A3\Sounds_F\arsenal\explosives\shells\Tank_shell_explosion_01.wss",
 			1.7782794,
 			1,
 			1800
 		};
 		soundHit2[]=
 		{
-			"A3\Sounds_F\arsenal\explosives\shells\Tank_shell_explosion_02",
+			"A3\Sounds_F\arsenal\explosives\shells\Tank_shell_explosion_02.wss",
 			1.7782794,
 			1,
 			1800
 		};
 		soundHit3[]=
 		{
-			"A3\Sounds_F\arsenal\explosives\shells\Tank_shell_explosion_03",
+			"A3\Sounds_F\arsenal\explosives\shells\Tank_shell_explosion_03.wss",
 			1.7782794,
 			1,
 			1800
 		};
 		soundHit4[]=
 		{
-			"A3\Sounds_F\arsenal\explosives\shells\Tank_shell_explosion_04",
+			"A3\Sounds_F\arsenal\explosives\shells\Tank_shell_explosion_04.wss",
 			1.7782794,
 			1,
 			1800
@@ -676,154 +676,154 @@ class CfgAmmo
 		};
 		soundDefault1[]=
 		{
-			"3AS\3AS_VehicleWeapons\Impacts\Explosions\3AS_Explosion_1.ogg",
+			"3AS\3AS_VehicleWeapons\Impacts\Explosions\3AS_Explosion_1.wss",
 			6,
 			1,
 			1000
 		};
 		soundDefault2[]=
 		{
-			"3AS\3AS_VehicleWeapons\Impacts\Explosions\3AS_Explosion_2.ogg",
+			"3AS\3AS_VehicleWeapons\Impacts\Explosions\3AS_Explosion_2.wss",
 			6,
 			1,
 			1000
 		};
 		soundDefault3[]=
 		{
-			"3AS\3AS_VehicleWeapons\Impacts\Explosions\3AS_Explosion_3.ogg",
+			"3AS\3AS_VehicleWeapons\Impacts\Explosions\3AS_Explosion_3.wss",
 			6,
 			1,
 			1000
 		};
 		soundDefault4[]=
 		{
-			"3AS\3AS_VehicleWeapons\Impacts\Explosions\3AS_Explosion_4.ogg",
+			"3AS\3AS_VehicleWeapons\Impacts\Explosions\3AS_Explosion_4.wss",
 			6,
 			1,
 			1000
 		};
 		soundDefault5[]=
 		{
-			"3AS\3AS_VehicleWeapons\Impacts\Explosions\3AS_Explosion_5.ogg",
+			"3AS\3AS_VehicleWeapons\Impacts\Explosions\3AS_Explosion_5.wss",
 			6,
 			1,
 			1000
 		};
 		soundDefault6[]=
 		{
-			"3AS\3AS_VehicleWeapons\Impacts\Explosions\3AS_Explosion_6.ogg",
+			"3AS\3AS_VehicleWeapons\Impacts\Explosions\3AS_Explosion_6.wss",
 			6,
 			1,
 			1000
 		};
 		soundDefault7[]=
 		{
-			"3AS\3AS_VehicleWeapons\Impacts\Explosions\3AS_Explosion_7.ogg",
+			"3AS\3AS_VehicleWeapons\Impacts\Explosions\3AS_Explosion_7.wss",
 			6,
 			1,
 			1000
 		};
 		soundDefault8[]=
 		{
-			"3AS\3AS_VehicleWeapons\Impacts\Explosions\3AS_Explosion_8.ogg",
+			"3AS\3AS_VehicleWeapons\Impacts\Explosions\3AS_Explosion_8.wss",
 			6,
 			1,
 			1000
 		};
 		soundDefault9[]=
 		{
-			"3AS\3AS_VehicleWeapons\Impacts\Explosions\3AS_Explosion_9.ogg",
+			"3AS\3AS_VehicleWeapons\Impacts\Explosions\3AS_Explosion_9.wss",
 			6,
 			1,
 			1000
 		};
 		soundDefault10[]=
 		{
-			"3AS\3AS_VehicleWeapons\Impacts\Explosions\3AS_Explosion_10.ogg",
+			"3AS\3AS_VehicleWeapons\Impacts\Explosions\3AS_Explosion_10.wss",
 			6,
 			1,
 			1000
 		};
 		soundDefault11[]=
 		{
-			"3AS\3AS_VehicleWeapons\Impacts\Explosions\3AS_Explosion_11.ogg",
+			"3AS\3AS_VehicleWeapons\Impacts\Explosions\3AS_Explosion_11.wss",
 			6,
 			1,
 			1000
 		};
 		soundDefault12[]=
 		{
-			"3AS\3AS_VehicleWeapons\Impacts\Explosions\3AS_Explosion_12.ogg",
+			"3AS\3AS_VehicleWeapons\Impacts\Explosions\3AS_Explosion_12.wss",
 			6,
 			1,
 			1000
 		};
 		soundDefault13[]=
 		{
-			"3AS\3AS_VehicleWeapons\Impacts\Explosions\3AS_Explosion_13.ogg",
+			"3AS\3AS_VehicleWeapons\Impacts\Explosions\3AS_Explosion_13.wss",
 			6,
 			1,
 			1000
 		};
 		soundDefault14[]=
 		{
-			"3AS\3AS_VehicleWeapons\Impacts\Explosions\3AS_Explosion_14.ogg",
+			"3AS\3AS_VehicleWeapons\Impacts\Explosions\3AS_Explosion_14.wss",
 			6,
 			1,
 			1000
 		};
 		soundDefault15[]=
 		{
-			"3AS\3AS_VehicleWeapons\Impacts\Explosions\3AS_Explosion_15.ogg",
+			"3AS\3AS_VehicleWeapons\Impacts\Explosions\3AS_Explosion_15.wss",
 			6,
 			1,
 			1000
 		};
 		soundDefault16[]=
 		{
-			"3AS\3AS_VehicleWeapons\Impacts\Explosions\3AS_Explosion_16.ogg",
+			"3AS\3AS_VehicleWeapons\Impacts\Explosions\3AS_Explosion_16.wss",
 			6,
 			1,
 			1000
 		};
 		soundDefault17[]=
 		{
-			"3AS\3AS_VehicleWeapons\Impacts\Explosions\3AS_Explosion_17.ogg",
+			"3AS\3AS_VehicleWeapons\Impacts\Explosions\3AS_Explosion_17.wss",
 			6,
 			1,
 			1000
 		};
 		soundDefault18[]=
 		{
-			"3AS\3AS_VehicleWeapons\Impacts\Explosions\3AS_Explosion_18.ogg",
+			"3AS\3AS_VehicleWeapons\Impacts\Explosions\3AS_Explosion_18.wss",
 			6,
 			1,
 			1000
 		};
 		soundDefault19[]=
 		{
-			"3AS\3AS_VehicleWeapons\Impacts\Explosions\3AS_Explosion_19.ogg",
+			"3AS\3AS_VehicleWeapons\Impacts\Explosions\3AS_Explosion_19.wss",
 			6,
 			1,
 			1000
 		};
 		soundDefault20[]=
 		{
-			"3AS\3AS_VehicleWeapons\Impacts\Explosions\3AS_Explosion_20.ogg",
+			"3AS\3AS_VehicleWeapons\Impacts\Explosions\3AS_Explosion_20.wss",
 			6,
 			1,
 			1000
 		};
 		soundDefault21[]=
 		{
-			"3AS\3AS_VehicleWeapons\Impacts\Explosions\3AS_Explosion_21.ogg",
+			"3AS\3AS_VehicleWeapons\Impacts\Explosions\3AS_Explosion_21.wss",
 			6,
 			1,
 			1000
 		};
 		soundDefault22[]=
 		{
-			"3AS\3AS_VehicleWeapons\Impacts\Explosions\3AS_Explosion_22.ogg",
+			"3AS\3AS_VehicleWeapons\Impacts\Explosions\3AS_Explosion_22.wss",
 			6,
 			1,
 			1000
@@ -1822,56 +1822,56 @@ class CfgAmmo
 		hit=300;
 		soundHit1[]=
 		{
-			"A3\Sounds_F\arsenal\explosives\shells\Artillery_shell_explosion_01",
+			"A3\Sounds_F\arsenal\explosives\shells\Artillery_shell_explosion_01.wss",
 			1.7782794,
 			1,
 			2000
 		};
 		soundHit2[]=
 		{
-			"A3\Sounds_F\arsenal\explosives\shells\Artillery_shell_explosion_02",
+			"A3\Sounds_F\arsenal\explosives\shells\Artillery_shell_explosion_02.wss",
 			1.7782794,
 			1,
 			2000
 		};
 		soundHit3[]=
 		{
-			"A3\Sounds_F\arsenal\explosives\shells\Artillery_shell_explosion_03",
+			"A3\Sounds_F\arsenal\explosives\shells\Artillery_shell_explosion_03.wss",
 			1.7782794,
 			1,
 			2000
 		};
 		soundHit4[]=
 		{
-			"A3\Sounds_F\arsenal\explosives\shells\Artillery_shell_explosion_04",
+			"A3\Sounds_F\arsenal\explosives\shells\Artillery_shell_explosion_04.wss",
 			1.7782794,
 			1,
 			2000
 		};
 		soundHit5[]=
 		{
-			"A3\Sounds_F\arsenal\explosives\shells\Artillery_shell_explosion_05",
+			"A3\Sounds_F\arsenal\explosives\shells\Artillery_shell_explosion_05.wss",
 			1.7782794,
 			1,
 			2000
 		};
 		soundHit6[]=
 		{
-			"A3\Sounds_F\arsenal\explosives\shells\Artillery_shell_explosion_06",
+			"A3\Sounds_F\arsenal\explosives\shells\Artillery_shell_explosion_06.wss",
 			1.7782794,
 			1,
 			2000
 		};
 		soundHit7[]=
 		{
-			"A3\Sounds_F\arsenal\explosives\shells\Artillery_shell_explosion_07",
+			"A3\Sounds_F\arsenal\explosives\shells\Artillery_shell_explosion_07.wss",
 			1.7782794,
 			1,
 			2000
 		};
 		soundHit8[]=
 		{
-			"A3\Sounds_F\arsenal\explosives\shells\Artillery_shell_explosion_08",
+			"A3\Sounds_F\arsenal\explosives\shells\Artillery_shell_explosion_08.wss",
 			1.7782794,
 			1,
 			2000
@@ -1954,28 +1954,28 @@ class CfgAmmo
 		effectFly="BHA_aaplasmaorange";
 		soundHit1[]=
 		{
-			"A3\Sounds_F\arsenal\explosives\grenades\Explosion_mini_grenade_01",
+			"A3\Sounds_F\arsenal\explosives\grenades\Explosion_mini_grenade_01.wss",
 			1.7782794,
 			1,
 			1300
 		};
 		soundHit2[]=
 		{
-			"A3\Sounds_F\arsenal\explosives\grenades\Explosion_mini_grenade_02",
+			"A3\Sounds_F\arsenal\explosives\grenades\Explosion_mini_grenade_02.wss",
 			1.7782794,
 			1,
 			1300
 		};
 		soundHit3[]=
 		{
-			"A3\Sounds_F\arsenal\explosives\grenades\Explosion_mini_grenade_03",
+			"A3\Sounds_F\arsenal\explosives\grenades\Explosion_mini_grenade_03.wss",
 			1.7782794,
 			1,
 			1300
 		};
 		soundHit4[]=
 		{
-			"A3\Sounds_F\arsenal\explosives\grenades\Explosion_mini_grenade_04",
+			"A3\Sounds_F\arsenal\explosives\grenades\Explosion_mini_grenade_04.wss",
 			1.7782794,
 			1,
 			1300
@@ -2804,7 +2804,7 @@ class CfgWeapons
 		nameSound="cannon";
 		sound[]=
 		{
-			"A3\sounds_f\dummysound",
+			"A3\sounds_f\dummysound.wss",
 			2.5118864,
 			1,
 			1800
@@ -3221,7 +3221,7 @@ class CfgWeapons
 			{
 				begin1[]=
 				{
-					"3AS\3AS_Weapons\PLX1\Sounds\PLX_Fire.ogg",
+					"3AS\3AS_Weapons\PLX1\Sounds\PLX_Fire.wss",
 					3.1622777,
 					1,
 					2000
@@ -4274,14 +4274,14 @@ class CfgWeapons
 		nameSound="cannon";
 		reloadSound[]=
 		{
-			"A3\Sounds_F\arsenal\weapons_vehicles\cannon_120mm\Cannon_120mm_Reload_01",
+			"A3\Sounds_F\arsenal\weapons_vehicles\cannon_120mm\Cannon_120mm_Reload_01.wss",
 			2.5118864,
 			1,
 			10
 		};
 		reloadMagazineSound[]=
 		{
-			"A3\Sounds_F\arsenal\weapons_vehicles\cannon_120mm\Cannon_120mm_Reload_01",
+			"A3\Sounds_F\arsenal\weapons_vehicles\cannon_120mm\Cannon_120mm_Reload_01.wss",
 			2.5118864,
 			1,
 			10
@@ -4472,7 +4472,7 @@ class CfgWeapons
 				weaponSoundEffect="";
 				begin1[]=
 				{
-					"\SFA_Main\SFA_Weapons_R\E403\data\sfx\E403.wav",
+					"\SFA_Main\SFA_Weapons_R\E403\data\sfx\E403.ogg",
 					1,
 					1,
 					1800
@@ -4713,7 +4713,7 @@ class CfgWeapons
 			"BHA_AT_DEC",
 			"BHA_AA_DEC"
 		};
-		lockToneSound[] = { "A3\Sounds_F\arsenal\weapons_rockets\lock_tone_01", 1, 1, 100 };
+		lockToneSound[] = { "A3\Sounds_F\arsenal\weapons_rockets\lock_tone_01.wss", 1, 1, 100 };
 	};
 	class BHA_mortar_60mm: CannonCore
 	{
@@ -4736,14 +4736,14 @@ class CfgWeapons
 		};
 		reloadSound[]=
 		{
-			"A3\Sounds_F\arsenal\weapons_static\Mortar\reload_mortar",
+			"A3\Sounds_F\arsenal\weapons_static\Mortar\reload_mortar.wss",
 			1,
 			1,
 			20
 		};
 		reloadMagazineSound[]=
 		{
-			"A3\Sounds_F\arsenal\weapons_static\Mortar\reload_magazine_Mortar",
+			"A3\Sounds_F\arsenal\weapons_static\Mortar\reload_magazine_Mortar.wss",
 			1,
 			1,
 			20
@@ -4801,7 +4801,7 @@ class CfgWeapons
 			};
 			reloadSound[]=
 			{
-				"A3\Sounds_F\arsenal\weapons_static\Mortar\reload_mortar",
+				"A3\Sounds_F\arsenal\weapons_static\Mortar\reload_mortar.wss",
 				1,
 				1,
 				20
@@ -4864,7 +4864,7 @@ class CfgWeapons
 			};
 			reloadSound[]=
 			{
-				"A3\Sounds_F\arsenal\weapons_static\Mortar\reload_mortar",
+				"A3\Sounds_F\arsenal\weapons_static\Mortar\reload_mortar.wss",
 				1,
 				1,
 				20
@@ -4924,8 +4924,8 @@ class CfgWeapons
     {
         displayname = "SGM-120 120MW";
         //Maybe we change sound if we get
-            reloadSound[] = {"A3\Sounds_F\arsenal\weapons_static\Mortar\reload_mortar", 1, 1, 20};
-            reloadMagazineSound[] = {"A3\Sounds_F\arsenal\weapons_static\Mortar\reload_magazine_Mortar", 1, 1, 20};
+            reloadSound[] = {"A3\Sounds_F\arsenal\weapons_static\Mortar\reload_mortar.wss", 1, 1, 20};
+            reloadMagazineSound[] = {"A3\Sounds_F\arsenal\weapons_static\Mortar\reload_magazine_Mortar.wss", 1, 1, 20};
             soundServo[] = {"", 0.0001, 1};
         //
 
@@ -5034,7 +5034,7 @@ class CfgWeapons
 		};
 		reloadSound[]=
 		{
-			"A3\Sounds_F\vehicles\armor\noises\reload_tank_cannon_2",
+			"A3\Sounds_F\vehicles\armor\noises\reload_tank_cannon_2.wss",
 			31.622778,
 			1,
 			15
@@ -5096,7 +5096,7 @@ class CfgWeapons
 			};
 			reloadSound[]=
 			{
-				"A3\sounds_f\dummysound",
+				"A3\sounds_f\dummysound.wss",
 				1,
 				1,
 				20
@@ -5159,7 +5159,7 @@ class CfgWeapons
 			};
 			reloadSound[]=
 			{
-				"A3\sounds_f\dummysound",
+				"A3\sounds_f\dummysound.wss",
 				1,
 				1,
 				20

@@ -272,9 +272,9 @@ class CfgVehicles
 				maxelev = 22.5;
 
                 disableSoundAttenuation = 0;
-                soundElevation[] = {"A3\Sounds_F\vehicles\soft\noises\servo_turret_MRAP03", 0.316228, 1, 10};
-				soundServo[] = {"A3\Sounds_F\vehicles\soft\noises\servo_turret_MRAP03", 0.177828, 1, 10};
-				soundServoVertical[] = {"A3\Sounds_F\vehicles\soft\noises\servo_turret_MRAP03", 0.316228, 1, 30};
+                soundElevation[] = {"A3\Sounds_F\vehicles\soft\noises\servo_turret_MRAP03.wss", 0.316228, 1, 10};
+				soundServo[] = {"A3\Sounds_F\vehicles\soft\noises\servo_turret_MRAP03.wss", 0.177828, 1, 10};
+				soundServoVertical[] = {"A3\Sounds_F\vehicles\soft\noises\servo_turret_MRAP03.wss", 0.316228, 1, 30};
             };
         };
         class AnimationSources
@@ -385,14 +385,14 @@ class CfgVehicles
 				maxTurn=360;
 				soundServo[]=
 				{
-					"A3\Sounds_F\vehicles\boat\Boat_Armed_01\servo_boat_comm",
+					"A3\Sounds_F\vehicles\boat\Boat_Armed_01\servo_boat_comm.wss",
 					1.4125376,
 					1,
 					30
 				};
 				soundServoVertical[]=
 				{
-					"A3\Sounds_F\vehicles\boat\Boat_Armed_01\servo_boat_comm_vertical",
+					"A3\Sounds_F\vehicles\boat\Boat_Armed_01\servo_boat_comm_vertical.wss",
 					1.4125376,
 					1,
 					30

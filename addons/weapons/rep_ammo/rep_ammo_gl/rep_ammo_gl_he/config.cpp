@@ -66,10 +66,10 @@ class CfgAmmo
 		ExplosionEffects = "ExploAmmoExplosion";
 		CraterEffects = "ExploAmmoCrater";
 		explosionSoundEffect="DefaultExplosion";
-		soundHit1[] = {"A3\Sounds_F\arsenal\explosives\Shells\Explosion_shell_01", 3.1622777, 1, 1500};
-		soundHit2[] = {"A3\Sounds_F\arsenal\explosives\Shells\Explosion_shell_02", 3.1622777, 1, 1500};
-		soundHit3[] = {"A3\Sounds_F\arsenal\explosives\Shells\Explosion_shell_03", 3.1622777, 1, 1500};
-		soundHit4[] = {"A3\Sounds_F\arsenal\explosives\Shells\Explosion_shell_04", 3.1622777, 1, 1500};
+		soundHit1[] = {"A3\Sounds_F\arsenal\explosives\Shells\Explosion_shell_01.wss", 3.1622777, 1, 1500};
+		soundHit2[] = {"A3\Sounds_F\arsenal\explosives\Shells\Explosion_shell_02.wss", 3.1622777, 1, 1500};
+		soundHit3[] = {"A3\Sounds_F\arsenal\explosives\Shells\Explosion_shell_03.wss", 3.1622777, 1, 1500};
+		soundHit4[] = {"A3\Sounds_F\arsenal\explosives\Shells\Explosion_shell_04.wss", 3.1622777, 1, 1500};
 		multiSoundHit[] = {"soundHit1", 0.25, "soundHit2", 0.25, "soundHit3", 0.25, "soundHit4", 0.25};
 	};
 	class MET_Nuclear_LauncherGrenade: G_40mm_HE
@@ -118,28 +118,28 @@ class CfgAmmo
 		timeToLive = 30;
 		soundHit1[]=
 		{
-			"A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_01",
+			"A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_01.wss",
 			3.1622777,
 			1,
 			1500
 		};
 		soundHit2[]=
 		{
-			"A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_02",
+			"A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_02.wss",
 			3.1622777,
 			1,
 			1500
 		};
 		soundHit3[]=
 		{
-			"A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_03",
+			"A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_03.wss",
 			3.1622777,
 			1,
 			1500
 		};
 		soundHit4[]=
 		{
-			"A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_04",
+			"A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_04.wss",
 			3.1622777,
 			1,
 			1500
@@ -232,28 +232,28 @@ class CfgAmmo
 		timeToLive=15;
 		soundHit1[]=
 		{
-			"A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_01",
+			"A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_01.wss",
 			1.1622777,
 			0.60000002,
 			1500
 		};
 		soundHit2[]=
 		{
-			"A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_02",
+			"A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_02.wss",
 			1.1622777,
 			0.60000002,
 			1500
 		};
 		soundHit3[]=
 		{
-			"A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_03",
+			"A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_03.wss",
 			1.1622777,
 			0.60000002,
 			1500
 		};
 		soundHit4[]=
 		{
-			"A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_04",
+			"A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_04.wss",
 			1.1622777,
 			0.60000002,
 			1500

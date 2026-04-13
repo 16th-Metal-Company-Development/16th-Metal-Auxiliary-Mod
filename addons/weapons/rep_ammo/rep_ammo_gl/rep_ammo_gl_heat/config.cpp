@@ -51,28 +51,28 @@ class CfgAmmo
 		caliber=3;
 		soundHit1[]=
 		{
-			"A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_01",
+			"A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_01.wss",
 			3.1622777,
 			1,
 			1500
 		};
 		soundHit2[]=
 		{
-			"A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_02",
+			"A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_02.wss",
 			3.1622777,
 			1,
 			1500
 		};
 		soundHit3[]=
 		{
-			"A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_03",
+			"A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_03.wss",
 			3.1622777,
 			1,
 			1500
 		};
 		soundHit4[]=
 		{
-			"A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_04",
+			"A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_04.wss",
 			3.1622777,
 			1,
 			1500
@@ -146,28 +146,28 @@ class CfgAmmo
 		caliber=2.5;
 		soundHit1[]=
 		{
-			"A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_01",
+			"A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_01.wss",
 			3.1622777,
 			1,
 			1500
 		};
 		soundHit2[]=
 		{
-			"A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_02",
+			"A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_02.wss",
 			3.1622777,
 			1,
 			1500
 		};
 		soundHit3[]=
 		{
-			"A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_03",
+			"A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_03.wss",
 			3.1622777,
 			1,
 			1500
 		};
 		soundHit4[]=
 		{
-			"A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_04",
+			"A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_04.wss",
 			3.1622777,
 			1,
 			1500
@@ -274,28 +274,28 @@ class CfgAmmo
 		submunitionInitialOffset[]={0,0,-0.2};
 		soundHit1[]=
 		{
-			"A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_01",
+			"A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_01.wss",
 			1.1622777,
 			1.4,
 			1500
 		};
 		soundHit2[]=
 		{
-			"A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_02",
+			"A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_02.wss",
 			1.1622777,
 			1.4,
 			1500
 		};
 		soundHit3[]=
 		{
-			"A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_03",
+			"A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_03.wss",
 			1.1622777,
 			1.4,
 			1500
 		};
 		soundHit4[]=
 		{
-			"A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_04",
+			"A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_04.wss",
 			1.1622777,
 			1.4,
 			1500

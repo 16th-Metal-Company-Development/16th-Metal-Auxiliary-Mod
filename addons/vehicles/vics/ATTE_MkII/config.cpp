@@ -4,7 +4,6 @@ class CfgPatches
 	{
 		units[] = 
 		{
-            "MET_ATTE_Base",
 			"MET_ATTE_MkII"
 		};
 		weapons[] = 
@@ -42,14 +41,14 @@ class CfgWeapons
 		nameSound="cannon";
 		reloadSound[]=
 		{
-			"A3\Sounds_F\arsenal\weapons_vehicles\cannon_120mm\Cannon_120mm_Reload_01",
+			"A3\Sounds_F\arsenal\weapons_vehicles\cannon_120mm\Cannon_120mm_Reload_01.wss",
 			2.5118864,
 			1,
 			10
 		};
 		reloadMagazineSound[]=
 		{
-			"A3\Sounds_F\arsenal\weapons_vehicles\cannon_120mm\Cannon_120mm_Reload_01",
+			"A3\Sounds_F\arsenal\weapons_vehicles\cannon_120mm\Cannon_120mm_Reload_01.wss",
 			2.5118864,
 			1,
 			10
@@ -611,13 +610,13 @@ class CfgVehicles
 		attenuationEffectType="TankAttenuation";
 		soundGetIn[]=
 		{
-			"A3\sounds_f\vehicles\armor\noises\get_in_out",
+			"A3\sounds_f\vehicles\armor\noises\get_in_out.wss",
 			0.56234097,
 			1
 		};
 		soundGetOut[]=
 		{
-			"A3\sounds_f\vehicles\armor\noises\get_in_out",
+			"A3\sounds_f\vehicles\armor\noises\get_in_out.wss",
 			0.56234097,
 			1,
 			20
@@ -4089,14 +4088,14 @@ class CfgVehicles
 				};
 				soundServo[]=
 				{
-					"A3\Sounds_F\vehicles\armor\noises\servo_armor_gunner",
+					"A3\Sounds_F\vehicles\armor\noises\servo_armor_gunner.wss",
 					0.56234097,
 					1,
 					30
 				};
 				soundServoVertical[]=
 				{
-					"A3\Sounds_F\vehicles\armor\noises\servo_armor_gunner_vertical",
+					"A3\Sounds_F\vehicles\armor\noises\servo_armor_gunner_vertical.wss",
 					0.56234097,
 					1,
 					30

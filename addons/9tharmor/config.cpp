@@ -2,8 +2,23 @@ class CfgPatches
 {
 	class 9tharmorcompat
 	{
-		units[] = {};
-		weapons[] = {};
+		units[] = 
+		{
+			"MET_9th_Backpack",
+			"MET_9th_Medical_Backpack",
+			"Met_9th_EOD_Backpack",
+			"MET_9th_Belt_Bag",
+			"MET_9th_Medical_Belt_Bag",
+			"MET_9th_Mini_LR_Attachment",
+			"MET_9th_RTO_Pack",
+			"MET_9th_RTO_Backpack",
+			"MET_9th_INF_Armor"
+		};
+		weapons[] = 
+		{
+			"MET_9th_P2_Helmet",
+			"MET_9th_INF_Armor"
+		};
 		requiredVersion = 0.1;
 		requiredAddons[] =
 		{
