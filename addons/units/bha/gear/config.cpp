@@ -7,6 +7,8 @@ class CfgPatches
 		};
 		weapons[]=
 		{
+			"MET_Warbot_Uniform",
+			"MET_EliminatorUpArmorVest"
 		};
 		requiredVersion=0.1;
 		requiredAddons[]=
@@ -18,7 +20,7 @@ class CfgPatches
 	};
 };
 
-class HitPoints;
+
 class CfgWeapons
 {
 	class ItemInfo;

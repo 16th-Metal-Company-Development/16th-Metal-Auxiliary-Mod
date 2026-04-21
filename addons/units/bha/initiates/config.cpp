@@ -8,7 +8,6 @@ class CfgPatches
 			"BHA_Initiates_Trutheseeker",
 			"BHA_Initiates_Annihilator",
 			"BHA_warbot",
-			"SP_Officer",
 			"BHA_SuicideBot_Soldier_Base"
 		};
 		weapons[]={};
