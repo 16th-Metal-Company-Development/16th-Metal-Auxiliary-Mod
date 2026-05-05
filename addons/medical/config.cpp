@@ -33,17 +33,12 @@ class CfgEditorSubcategories
 		displayName="[16th] Medical Assets";
 	};
 };
+
+
 class ace_medical_treatment
 {
 	class Bandaging
 	{
-		class BasicBandage
-		{
-			effectiveness=5;
-			reopeningChance=0;
-			reopeningMinDelay=0;
-			reopeningMaxDelay=0;
-		};
 		class FieldDressing
 		{
 			effectiveness=1;
@@ -209,488 +204,6 @@ class ace_medical_treatment
 			class PunctureWoundLarge: PunctureWound
 			{
 				effectiveness=0.89999998;
-			};
-		};
-		class PackingBandage: FieldDressing
-		{
-			class Abrasion
-			{
-				effectiveness=3;
-				reopeningChance=0.60000002;
-				reopeningMinDelay=800;
-				reopeningMaxDelay=1500;
-			};
-			class AbrasionMinor: Abrasion
-			{
-				effectiveness=3;
-			};
-			class AbrasionMedium: Abrasion
-			{
-				effectiveness=2.5;
-				reopeningChance=0.89999998;
-			};
-			class AbrasionLarge: Abrasion
-			{
-				effectiveness=2;
-				reopeningChance=1;
-			};
-			class Avulsion: Abrasion
-			{
-				effectiveness=1;
-				reopeningChance=0.69999999;
-				reopeningMinDelay=1000;
-				reopeningMaxDelay=1600;
-			};
-			class AvulsionMinor: Avulsion
-			{
-				effectiveness=1;
-			};
-			class AvulsionMedium: Avulsion
-			{
-				effectiveness=0.89999998;
-			};
-			class AvulsionLarge: Avulsion
-			{
-				effectiveness=0.75;
-			};
-			class Contusion: Abrasion
-			{
-				effectiveness=1;
-				reopeningChance=0;
-				reopeningMinDelay=0;
-				reopeningMaxDelay=0;
-			};
-			class ContusionMinor: Contusion
-			{
-			};
-			class ContusionMedium: Contusion
-			{
-			};
-			class ContusionLarge: Contusion
-			{
-			};
-			class Crush: Abrasion
-			{
-				effectiveness=1;
-				reopeningChance=0.5;
-				reopeningMinDelay=600;
-				reopeningMaxDelay=1000;
-			};
-			class CrushMinor: Crush
-			{
-				effectiveness=1;
-				reopeningChance=0.60000002;
-			};
-			class CrushMedium: Crush
-			{
-				effectiveness=0.69999999;
-				reopeningChance=0.69999999;
-			};
-			class CrushLarge: Crush
-			{
-				effectiveness=0.60000002;
-				reopeningChance=0.80000001;
-			};
-			class Cut: Abrasion
-			{
-				effectiveness=4;
-				reopeningChance=0.40000001;
-				reopeningMinDelay=700;
-				reopeningMaxDelay=1000;
-			};
-			class CutMinor: Cut
-			{
-				effectiveness=4;
-				reopeningChance=0.60000002;
-			};
-			class CutMedium: Cut
-			{
-				effectiveness=3;
-				reopeningChance=0.69999999;
-			};
-			class CutLarge: Cut
-			{
-				effectiveness=1;
-				reopeningChance=0.80000001;
-			};
-			class Laceration: Abrasion
-			{
-				effectiveness=0.94999999;
-				reopeningChance=0.64999998;
-				reopeningMinDelay=500;
-				reopeningMaxDelay=2000;
-			};
-			class LacerationMinor: Laceration
-			{
-				effectiveness=0.94999999;
-				reopeningChance=0.64999998;
-			};
-			class LacerationMedium: Laceration
-			{
-				effectiveness=0.69999999;
-				reopeningChance=0.80000001;
-			};
-			class LacerationLarge: Laceration
-			{
-				effectiveness=0.5;
-				reopeningChance=0.89999998;
-			};
-			class VelocityWound: Abrasion
-			{
-				effectiveness=2;
-				reopeningChance=1;
-				reopeningMinDelay=800;
-				reopeningMaxDelay=2000;
-			};
-			class VelocityWoundMinor: VelocityWound
-			{
-				effectiveness=2;
-			};
-			class VelocityWoundMedium: VelocityWound
-			{
-				effectiveness=1.5;
-			};
-			class VelocityWoundLarge: VelocityWound
-			{
-				effectiveness=1;
-			};
-			class PunctureWound: Abrasion
-			{
-				effectiveness=2;
-				reopeningChance=1;
-				reopeningMinDelay=1000;
-				reopeningMaxDelay=3000;
-			};
-			class PunctureWoundMinor: PunctureWound
-			{
-				effectiveness=2;
-			};
-			class PunctureWoundMedium: PunctureWound
-			{
-				effectiveness=1.3;
-			};
-			class PunctureWoundLarge: PunctureWound
-			{
-				effectiveness=0.89999998;
-			};
-		};
-		class ElasticBandage: FieldDressing
-		{
-			class Abrasion
-			{
-				effectiveness=4;
-				reopeningChance=0.60000002;
-				reopeningMinDelay=80;
-				reopeningMaxDelay=150;
-			};
-			class AbrasionMinor: Abrasion
-			{
-				effectiveness=4;
-			};
-			class AbrasionMedium: Abrasion
-			{
-				effectiveness=3;
-				reopeningChance=0.89999998;
-			};
-			class AbrasionLarge: Abrasion
-			{
-				effectiveness=2.5;
-				reopeningChance=1;
-			};
-			class Avulsion: Abrasion
-			{
-				effectiveness=2;
-				reopeningChance=0.69999999;
-				reopeningMinDelay=100;
-				reopeningMaxDelay=160;
-			};
-			class AvulsionMinor: Avulsion
-			{
-				effectiveness=2;
-			};
-			class AvulsionMedium: Avulsion
-			{
-				effectiveness=1.4;
-			};
-			class AvulsionLarge: Avulsion
-			{
-				effectiveness=1;
-			};
-			class Contusion: Abrasion
-			{
-				effectiveness=2;
-				reopeningChance=0;
-				reopeningMinDelay=0;
-				reopeningMaxDelay=0;
-			};
-			class ContusionMinor: Contusion
-			{
-			};
-			class ContusionMedium: Contusion
-			{
-			};
-			class ContusionLarge: Contusion
-			{
-			};
-			class Crush: Abrasion
-			{
-				effectiveness=2;
-				reopeningChance=0.5;
-				reopeningMinDelay=60;
-				reopeningMaxDelay=100;
-			};
-			class CrushMinor: Crush
-			{
-				effectiveness=2;
-				reopeningChance=0.60000002;
-			};
-			class CrushMedium: Crush
-			{
-				effectiveness=1.7;
-				reopeningChance=0.69999999;
-			};
-			class CrushLarge: Crush
-			{
-				effectiveness=1.6;
-				reopeningChance=0.80000001;
-			};
-			class Cut: Abrasion
-			{
-				effectiveness=5;
-				reopeningChance=0.40000001;
-				reopeningMinDelay=70;
-				reopeningMaxDelay=100;
-			};
-			class CutMinor: Cut
-			{
-				effectiveness=5;
-				reopeningChance=0.60000002;
-			};
-			class CutMedium: Cut
-			{
-				effectiveness=3.5;
-				reopeningChance=0.69999999;
-			};
-			class CutLarge: Cut
-			{
-				effectiveness=2;
-				reopeningChance=0.80000001;
-			};
-			class Laceration: Abrasion
-			{
-				effectiveness=2;
-				reopeningChance=0.64999998;
-				reopeningMinDelay=50;
-				reopeningMaxDelay=200;
-			};
-			class LacerationMinor: Laceration
-			{
-				effectiveness=2;
-				reopeningChance=0.64999998;
-			};
-			class LacerationMedium: Laceration
-			{
-				effectiveness=1.5;
-				reopeningChance=0.80000001;
-			};
-			class LacerationLarge: Laceration
-			{
-				effectiveness=1;
-				reopeningChance=0.89999998;
-			};
-			class VelocityWound: Abrasion
-			{
-				effectiveness=2.2;
-				reopeningChance=1;
-				reopeningMinDelay=80;
-				reopeningMaxDelay=200;
-			};
-			class VelocityWoundMinor: VelocityWound
-			{
-				effectiveness=2.2;
-			};
-			class VelocityWoundMedium: VelocityWound
-			{
-				effectiveness=1.75;
-			};
-			class VelocityWoundLarge: VelocityWound
-			{
-				effectiveness=1.5;
-			};
-			class PunctureWound: Abrasion
-			{
-				effectiveness=2.5;
-				reopeningChance=1;
-				reopeningMinDelay=100;
-				reopeningMaxDelay=300;
-			};
-			class PunctureWoundMinor: PunctureWound
-			{
-				effectiveness=2.5;
-			};
-			class PunctureWoundMedium: PunctureWound
-			{
-				effectiveness=2;
-			};
-			class PunctureWoundLarge: PunctureWound
-			{
-				effectiveness=1.5;
-			};
-		};
-		class QuikClot: FieldDressing
-		{
-			class Abrasion
-			{
-				effectiveness=2;
-				reopeningChance=0;
-				reopeningMinDelay=800;
-				reopeningMaxDelay=1500;
-			};
-			class AbrasionMinor: Abrasion
-			{
-				effectiveness=2;
-			};
-			class AbrasionMedium: Abrasion
-			{
-				effectiveness=1;
-				reopeningChance=0.40000001;
-			};
-			class AbrasionLarge: Abrasion
-			{
-				effectiveness=0.69999999;
-				reopeningChance=0.5;
-			};
-			class Avulsion: Abrasion
-			{
-				effectiveness=0.69999999;
-				reopeningChance=0.2;
-				reopeningMinDelay=1000;
-				reopeningMaxDelay=1600;
-			};
-			class AvulsionMinor: Avulsion
-			{
-				effectiveness=0.69999999;
-			};
-			class AvulsionMedium: Avulsion
-			{
-				effectiveness=0.64999998;
-			};
-			class AvulsionLarge: Avulsion
-			{
-				effectiveness=0.5;
-			};
-			class Contusion: Abrasion
-			{
-				effectiveness=1;
-				reopeningChance=0;
-				reopeningMinDelay=0;
-				reopeningMaxDelay=0;
-			};
-			class ContusionMinor: Contusion
-			{
-			};
-			class ContusionMedium: Contusion
-			{
-			};
-			class ContusionLarge: Contusion
-			{
-			};
-			class Crush: Abrasion
-			{
-				effectiveness=0.60000002;
-				reopeningChance=0.5;
-				reopeningMinDelay=600;
-				reopeningMaxDelay=1000;
-			};
-			class CrushMinor: Crush
-			{
-				effectiveness=0.60000002;
-				reopeningChance=0;
-			};
-			class CrushMedium: Crush
-			{
-				effectiveness=0.5;
-			};
-			class CrushLarge: Crush
-			{
-				effectiveness=0.40000001;
-			};
-			class Cut: Abrasion
-			{
-				effectiveness=2;
-				reopeningChance=0.2;
-				reopeningMinDelay=700;
-				reopeningMaxDelay=1000;
-			};
-			class CutMinor: Cut
-			{
-				effectiveness=2;
-			};
-			class CutMedium: Cut
-			{
-				effectiveness=1;
-			};
-			class CutLarge: Cut
-			{
-				effectiveness=0.60000002;
-			};
-			class Laceration: Abrasion
-			{
-				effectiveness=0.69999999;
-				reopeningChance=0.40000001;
-				reopeningMinDelay=500;
-				reopeningMaxDelay=2000;
-			};
-			class LacerationMinor: Laceration
-			{
-				effectiveness=0.69999999;
-				reopeningChance=0.40000001;
-			};
-			class LacerationMedium: Laceration
-			{
-				effectiveness=0.69999999;
-			};
-			class LacerationLarge: Laceration
-			{
-				effectiveness=0.5;
-			};
-			class VelocityWound: Abrasion
-			{
-				effectiveness=1;
-				reopeningChance=0.5;
-				reopeningMinDelay=800;
-				reopeningMaxDelay=2000;
-			};
-			class VelocityWoundMinor: VelocityWound
-			{
-				effectiveness=1;
-			};
-			class VelocityWoundMedium: VelocityWound
-			{
-				effectiveness=0.75;
-			};
-			class VelocityWoundLarge: VelocityWound
-			{
-				effectiveness=0.5;
-			};
-			class PunctureWound: Abrasion
-			{
-				effectiveness=1;
-				reopeningChance=0.5;
-				reopeningMinDelay=1000;
-				reopeningMaxDelay=3000;
-			};
-			class PunctureWoundMinor: PunctureWound
-			{
-				effectiveness=1;
-			};
-			class PunctureWoundMedium: PunctureWound
-			{
-				effectiveness=0.69999999;
-			};
-			class PunctureWoundLarge: PunctureWound
-			{
-				effectiveness=0.40000001;
 			};
 		};
 		class MET_ClothBandage: FieldDressing
@@ -1558,6 +1071,76 @@ class ace_medical_treatment
 				reopeningChance=0.40000001;
 			};
 		};
+
+		class MET_LFP_BactaBandage
+		{
+			class Abrasion
+			{
+				effectiveness = 8;
+				reopeningChance = 0.3;
+				reopeningMaxDelay = 1000;
+				reopeningMinDelay = 200;
+			};
+			class AbrasionMinor : Abrasion
+			{
+				effectiveness = 6;
+			};
+			class AbrasionMedium : Abrasion
+			{
+				effectiveness = 5;
+				reopeningChance = 0.7;
+			};
+			class AbrasionLarge : Abrasion
+			{
+				effectiveness = 6;
+				reopeningChance = 0.9;
+			};
+			class Avulsion : Abrasion
+			{
+				effectiveness = 6;
+				reopeningChance = 0.5;
+				reopeningMaxDelay = 200;
+				reopeningMinDelay = 120;
+			};
+			class AvulsionMinor : Avulsion
+			{
+				effectiveness = 5;
+				reopeningChance = 0;
+			};
+			class AvulsionMedium : Avulsion
+			{
+				effectiveness = 4;
+				reopeningChance = 0;
+			};
+			class AvulsionLarge : Avulsion
+			{
+				effectiveness = 3;
+				reopeningChance = 0;
+			};
+			class Contusion : Abrasion
+			{
+				effectiveness = 5;
+				reopeningChance = 0;
+				reopeningMinDelay = 0;
+				reopeningMaxDelay = 0;
+			};
+			class ContusionMinor : Contusion
+			{
+			};
+			class ContusionMedium : Contusion
+			{
+			};
+			class ContusionLarge : Contusion
+			{
+			};
+			class Crush : Abrasion
+			{
+				effectiveness = 5;
+				reopeningChance = 0.2;
+				reopeningMinDelay = 200;
+				reopeningMaxDelay = 1000;
+			};
+		};
 	};
 	class Medication
 	{
@@ -1786,6 +1369,23 @@ class ace_medical_treatment_actions
 	class SurgicalKit;
 	class PersonalAidKit;
 	class AEDPlacePads;
+
+	class MET_LFP_BactaBandage : BasicBandage
+	{
+		displayName = "Bacta Bandage";
+		displayNameProgress = "Using...";	
+		condition = "ace_medical_treatment_fnc_canBandage";
+		consumeItem = 1;
+		medicRequired = 0;
+		treatmentLocations = "TREATMENT_LOCATIONS_ALL";
+		treatmentTime = 3;
+		allowSelfTreatment = 1;
+		items[] =
+		{
+			"MET_LFP_BactaBandage"
+		};
+		litter[] = { {"ACE_MedicalLitter_QuickClot"},{"ACE_MedicalLitter_clean"},{{"ACE_MedicalLitter_bandage2","ACE_MedicalLitter_bandage3"}} };
+	};
 	class MET_ClothBandage: BasicBandage
 	{
 		displayName="$STR_GW_Medical_Display_ClothBandage";
@@ -1978,9 +1578,28 @@ class CfgVehicles
 {
 	class MapBoard_altis_F;
 	class Item_Base_F;
+	class MET_LFP_BactaBandage_Item : Item_Base_F
+	{
+		scope = 0;
+		scopeCurator = 2;
+		editorcategory = "MET_Med";
+		editorsubcategory = "MET_Med_Assets";
+		displayName = "[16th] Bacta Bandage";
+		author = "Chet";
+		model = "\z\ace\addons\medical_treatment\data\QuikClot.p3d";
+		vehicleClass = "Items";
+		class TransportItems
+		{
+			class _xx_MET_LFP_BactaBandage
+			{
+				name = "MET_LFP_BactaBandage";
+				count = 1;
+			};
+		};
+	};
 	class MET_ClothBandage_Item: Item_Base_F
 	{
-		scope=2;
+		scope=0;
 		scopeCurator=2;
 		editorcategory="MET_Med";
 		editorsubcategory="MET_Med_Assets";
@@ -1999,7 +1618,7 @@ class CfgVehicles
 	};
 	class MET_BactaBandage_Item: Item_Base_F
 	{
-		scope=2;
+		scope=0;
 		scopeCurator=2;
 		editorcategory="MET_Med";
 		editorsubcategory="MET_Med_Assets";
@@ -2018,7 +1637,7 @@ class CfgVehicles
 	};
 	class MET_BactaSpray_Item: Item_Base_F
 	{
-		scope=2;
+		scope=0;
 		scopeCurator=2;
 		editorcategory="MET_Med";
 		editorsubcategory="MET_Med_Assets";
@@ -2037,7 +1656,7 @@ class CfgVehicles
 	};
 	class MET_BactaPatch_Item: Item_Base_F
 	{
-		scope=2;
+		scope=0;
 		scopeCurator=2;
 		editorcategory="MET_Med";
 		editorsubcategory="MET_Med_Assets";
@@ -2056,7 +1675,7 @@ class CfgVehicles
 	};
 	class MET_Stim_Perigen_Item: Item_Base_F
 	{
-		scope=2;
+		scope=0;
 		scopeCurator=2;
 		editorcategory="MET_Med";
 		editorsubcategory="MET_Med_Assets";
@@ -2075,7 +1694,7 @@ class CfgVehicles
 	};
 	class MET_Stim_Enkephalin_Item: Item_Base_F
 	{
-		scope=2;
+		scope=0;
 		scopeCurator=2;
 		editorcategory="MET_Med";
 		editorsubcategory="MET_Med_Assets";
@@ -2094,7 +1713,7 @@ class CfgVehicles
 	};
 	class MET_Stim_Kyrprax_Item: Item_Base_F
 	{
-		scope=2;
+		scope=0;
 		scopeCurator=2;
 		editorcategory="MET_Med";
 		editorsubcategory="MET_Med_Assets";
@@ -2113,7 +1732,7 @@ class CfgVehicles
 	};
 	class MET_Stim_Myocaine_Item: Item_Base_F
 	{
-		scope=2;
+		scope=0;
 		scopeCurator=2;
 		editorcategory="MET_Med";
 		editorsubcategory="MET_Med_Assets";
@@ -2132,7 +1751,7 @@ class CfgVehicles
 	};
 	class MET_Stim_Reedug_Item: Item_Base_F
 	{
-		scope=2;
+		scope=0;
 		scopeCurator=2;
 		editorcategory="MET_Med";
 		editorsubcategory="MET_Med_Assets";
@@ -2151,7 +1770,7 @@ class CfgVehicles
 	};
 	class MET_Injector_Myoplexaril_Item: Item_Base_F
 	{
-		scope=2;
+		scope=0;
 		scopeCurator=2;
 		editorcategory="MET_Med";
 		editorsubcategory="MET_Med_Assets";
@@ -2170,7 +1789,7 @@ class CfgVehicles
 	};
 	class MET_Injector_Polybiotics_Item: Item_Base_F
 	{
-		scope=2;
+		scope=0;
 		scopeCurator=2;
 		editorcategory="MET_Med";
 		editorsubcategory="MET_Med_Assets";
@@ -2189,7 +1808,7 @@ class CfgVehicles
 	};
 	class MET_Injector_Nyex_Item: Item_Base_F
 	{
-		scope=2;
+		scope=0;
 		scopeCurator=2;
 		editorcategory="MET_Med";
 		editorsubcategory="MET_Med_Assets";
@@ -2208,7 +1827,7 @@ class CfgVehicles
 	};
 	class MET_Vasko250_Item: Item_Base_F
 	{
-		scope=2;
+		scope=0;
 		scopeCurator=2;
 		editorcategory="MET_Med";
 		editorsubcategory="MET_Med_Assets";
@@ -2227,7 +1846,7 @@ class CfgVehicles
 	};
 	class MET_Vasko500_Item: Item_Base_F
 	{
-		scope=2;
+		scope=0;
 		scopeCurator=2;
 		editorcategory="MET_Med";
 		editorsubcategory="MET_Med_Assets";
@@ -2246,7 +1865,7 @@ class CfgVehicles
 	};
 	class MET_Vasko1000_Item: Item_Base_F
 	{
-		scope=2;
+		scope=0;
 		scopeCurator=2;
 		editorcategory="MET_Med";
 		editorsubcategory="MET_Med_Assets";
@@ -2265,7 +1884,7 @@ class CfgVehicles
 	};
 	class MET_BactaPack_Item: Item_Base_F
 	{
-		scope=2;
+		scope=0;
 		scopeCurator=2;
 		editorcategory="MET_Med";
 		editorsubcategory="MET_Med_Assets";
@@ -2284,7 +1903,7 @@ class CfgVehicles
 	};
 	class MET_Cauterizer_Item: Item_Base_F
 	{
-		scope=2;
+		scope=0;
 		scopeCurator=2;
 		editorcategory="MET_Med";
 		editorsubcategory="MET_Med_Assets";
@@ -2326,9 +1945,21 @@ class CfgWeapons
 			mass=60;
 		};
 	};
+	class MET_LFP_BactaBandage : ACE_ItemCore
+	{
+		scope = 2;
+		displayName = "[16th] Bacta Bandage";
+		author = "Chet";
+		model = "\z\ace\addons\medical_treatment\data\QuikClot.p3d";
+		picture = "\z\ace\addons\medical_treatment\ui\quickclot_ca.paa";
+		class ItemInfo : CBA_MiscItem_ItemInfo
+		{
+			mass = 0.5;
+		};
+	};
 	class MET_Item_ClothBandage: ACE_ItemCore
 	{
-		scope=2;
+		scope=0;
 		author="Krinix";
 		displayName="[16th] Cloth Bandage";
 		model="\TK\GW\GW_Medical_Assets\BandageCloth.p3d";
@@ -2340,7 +1971,7 @@ class CfgWeapons
 	};
 	class GW_BactaBandage: ACE_ItemCore
 	{
-		scope=2;
+		scope=0;
 		author="Krinix";
 		displayName="[16th] Bacta Bandage";
 		model="\TK\GW\GW_Medical_Assets\BandageBacta.p3d";
@@ -2352,7 +1983,7 @@ class CfgWeapons
 	};
 	class GW_BactaSpray: ACE_ItemCore
 	{
-		scope=2;
+		scope=0;
 		author="Krinix";
 		displayName="[16th] Bacta Spray";
 		model="\TK\GW\GW_Medical_Assets\BactaSpray.p3d";
@@ -2364,7 +1995,7 @@ class CfgWeapons
 	};
 	class GW_BactaPatch: ACE_ItemCore
 	{
-		scope=2;
+		scope=0;
 		author="Krinix";
 		displayName="[16th] Bacta Patch";
 		model="\TK\GW\GW_Medical_Assets\BactaPatch.p3d";
@@ -2376,7 +2007,7 @@ class CfgWeapons
 	};
 	class GW_Stim_Perigen: ACE_ItemCore
 	{
-		scope=2;
+		scope=0;
 		author="Krinix";
 		displayName="$STR_GW_Medical_Display_Stim_Perigen";
 		model="\TK\GW\GW_Medical_Assets\StimGreen.p3d";
@@ -2388,7 +2019,7 @@ class CfgWeapons
 	};
 	class GW_Stim_Enkephalin: ACE_ItemCore
 	{
-		scope=2;
+		scope=0;
 		author="Krinix";
 		displayName="$STR_GW_Medical_Display_Stim_Enkephalin";
 		model="\TK\GW\GW_Medical_Assets\StimRed.p3d";
@@ -2400,7 +2031,7 @@ class CfgWeapons
 	};
 	class GW_Stim_Kyrprax: ACE_ItemCore
 	{
-		scope=2;
+		scope=0;
 		author="Krinix";
 		displayName="$STR_GW_Medical_Display_Stim_Kyrprax";
 		model="\TK\GW\GW_Medical_Assets\StimYellow.p3d";
@@ -2412,7 +2043,7 @@ class CfgWeapons
 	};
 	class GW_Stim_Myocaine: ACE_ItemCore
 	{
-		scope=2;
+		scope=0;
 		author="Krinix";
 		displayName="$STR_GW_Medical_Display_Stim_Myocaine";
 		model="\TK\GW\GW_Medical_Assets\StimBlue.p3d";
@@ -2424,7 +2055,7 @@ class CfgWeapons
 	};
 	class GW_Stim_Reedug: ACE_ItemCore
 	{
-		scope=2;
+		scope=0;
 		author="Krinix";
 		displayName="$STR_GW_Medical_Display_Stim_Reedug";
 		model="\TK\GW\GW_Medical_Assets\StimBlack.p3d";
@@ -2436,7 +2067,7 @@ class CfgWeapons
 	};
 	class GW_Injector_Myoplexaril: ACE_ItemCore
 	{
-		scope=2;
+		scope=0;
 		author="Krinix";
 		displayName="$STR_GW_Medical_Display_Injector_Myoplexaril";
 		model="\TK\GW\GW_Medical_Assets\InjectorBlue.p3d";
@@ -2448,7 +2079,7 @@ class CfgWeapons
 	};
 	class GW_Injector_Polybiotics: ACE_ItemCore
 	{
-		scope=2;
+		scope=0;
 		author="Krinix";
 		displayName="$STR_GW_Medical_Display_Injector_Polybiotics";
 		model="\TK\GW\GW_Medical_Assets\InjectorYellow.p3d";
@@ -2460,7 +2091,7 @@ class CfgWeapons
 	};
 	class GW_Injector_Nyex: ACE_ItemCore
 	{
-		scope=2;
+		scope=0;
 		author="Krinix";
 		displayName="$STR_GW_Medical_Display_Injector_Nyex";
 		model="\TK\GW\GW_Medical_Assets\InjectorRed.p3d";
@@ -2472,7 +2103,7 @@ class CfgWeapons
 	};
 	class MET_ITEM_Vasko1000: ACE_ItemCore
 	{
-		scope=2;
+		scope=0;
 		author="Krinix";
 		displayName="[16th] Vasko 1000ml";
 		model="\TK\GW\GW_Medical_Assets\Vasko1000ml.p3d";
@@ -2502,7 +2133,7 @@ class CfgWeapons
 	};
 	class MET_ITEM_BactaPack: ACE_ItemCore
 	{
-		scope=2;
+		scope=0;
 		author="Krinix and a touch of Hazmat";
 		displayName="[16th] Bacta Pack";
 		model="\TK\GW\GW_Medical_Assets\BactaCanister.p3d";
@@ -2514,7 +2145,7 @@ class CfgWeapons
 	};
 	class MET_ITEM_Cauterizer: ACE_ItemCore
 	{
-		scope=2;
+		scope=0;
 		author="Krinix";
 		displayName="[16th] AED-S";
 		model="\TK\GW\GW_Medical_Assets\Cauterizer.p3d";
