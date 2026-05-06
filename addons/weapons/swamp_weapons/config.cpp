@@ -73,7 +73,7 @@ class CfgWeapons
 	class MET_Swamp_optic_DC15C_F: ItemCore
 	{
 		author="$STR_3as_Studio";
-		scope=2;
+		scope=1;
 		displayName="FA-11 Scope";
 		picture="\a3\Weapons_F\acc\Data\UI\icon_optic_MRCO_ca.paa";
 		model="\3AS\3AS_Weapons\Republic\ACC\3AS_acco_DC15C_Scope_F.p3d";
@@ -160,7 +160,7 @@ class CfgWeapons
 	{
 		IDA_StunWeapon="Metal_Swamp_FA11_Stun";
 		author="Indecisive Armoury Team";
-		scope=2;
+		scope=1;
 		displayName="[Swamp] FA-11 Heavy Blaster Rifle";
 		descriptionShort="";
 		magazines[]=
@@ -431,7 +431,7 @@ class CfgWeapons
 	{
 		IDA_StunWeapon="MET_Swamp_M41_Stun";
 		author="Indecisive Armoury Team";
-		scope=2;
+		scope=1;
 		inertia=0;
 		canShootInWater=1;
 		displayName="[Swamp] M-41 Heavy Repeating Blaster";
@@ -657,7 +657,7 @@ class CfgWeapons
 	};
 	class MET_Swamp_IQA11: IDA_IQA11
 	{
-		scope=2;
+		scope=1;
 		displayName="[Swamp] IQA-11 Targeting Blaster";
 		descriptionShort="";
 		baseWeapon="MET_Swamp_IQA11";
@@ -774,7 +774,7 @@ class CfgWeapons
 	class MET_Swamp_TargetingScope: optic_lrps
 	{
 		author="Indecisive Armoury Team";
-		scope=2;
+		scope=1;
 		displayname="FP-1 Targeting Scope";
 		picture="\Indecisive_Armoury_Weapons_INDEP\Data\TargetingScope\TargetingScope_ui.paa";
 		model="\Indecisive_Armoury_Weapons_INDEP\Data\TargetingScope\Model\IDA_TargetingScope.p3d";
@@ -817,6 +817,7 @@ class CfgWeapons
 	class ShdwCmpny_SPASS_Optre_F;
 	class MET_Swamp_KS23: ShdwCmpny_SPASS_Optre_F
 	{
+		scope = 1;
 		displayName="[Swamp] KS-23 Shotgun";
 		magazines[]=
 		{

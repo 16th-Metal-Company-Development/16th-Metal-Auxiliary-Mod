@@ -73,8 +73,8 @@ class CfgWeapons
 	class ls_scatterMuzzle_base;
 	class met_weapon_westar35c : ls_weapon_westar35c_base
 	{
-		scope = 2;
-		scopeArsenal = 2;
+		scope = 1;
+		scopeArsenal = 1;
 		author = "Hazmat";
 		displayname = "[Mando] Westar-35C";
 		baseWeapon = "met_weapon_westar35c";
@@ -196,8 +196,8 @@ class CfgWeapons
 	};
 	class MET_weapon_westar35s : ls_weapon_westar35s_base
 	{
-		scope = 2;
-		scopeArsenal = 2;
+		scope = 1;
+		scopeArsenal = 1;
 		author = "Hazmat";
 		baseWeapon = "MET_weapon_westar35s";
 		displayName = "[Mando] Westar-35S";
@@ -301,8 +301,8 @@ class CfgWeapons
 		};
 	};
 	class MET_cows_westar35s_scope : ItemCore {
-		scope = 2;
-		scopeArsenal = 2;
+		scope = 1;
+		scopeArsenal = 1;
 		author = "Hazmat";
 		displayName = "Westar-35S Holosight";
 		descriptionShort = "";
@@ -369,8 +369,8 @@ class CfgWeapons
 	class ls_weapon_westar35sa_base;
 	class MET_weapon_westar35sa : ls_weapon_westar35sa_base
 	{
-		scope = 2;
-		scopeArsenal = 2;
+		scope = 1;
+		scopeArsenal = 1;
 		author = "Hazmat";
 		baseWeapon = "MET_weapon_westar35sa";
 		displayName = "[Mando] Westar-35SA";
@@ -462,8 +462,8 @@ class CfgWeapons
 	class ls_weapon_firepuncher_base;
 	class MET_weapon_firepuncher : ls_weapon_firepuncher_base
 	{
-		scope = 2;
-		scopeArsenal = 2;
+		scope = 1;
+		scopeArsenal = 1;
 		author = "Legion Studios";
 		displayName = "[Mando] Mando 773 Firepuncher";
 		baseWeapon = "MET_weapon_firepuncher";
@@ -557,7 +557,7 @@ class CfgWeapons
 	};
 	class MET_RPS6_SMRT : 3AS_PLX1_F
 	{
-		scopeArsenal = 2;
+		scopeArsenal = 1;
 		displayName = "[Mando] Mandalorian RPS-6 Smart Launcher";
 		JLTS_hasElectronics = 1;
 		JLTS_hasEMPProtection = 1;
@@ -612,8 +612,8 @@ class CfgWeapons
 		author = "Hazmat";
 		inertia = 0;
 		canShootInWater = 1;
-		scope = 2;
-		scopeArsenal = 2;
+		scope = 1;
+		scopeArsenal = 1;
 		autoReload = "true";
 		baseWeapon = "MET_MANDALORIAN_Z6";
 		displayName = "[Mando] Mando Z6 rotary cannon";
@@ -1025,7 +1025,7 @@ class CfgMagazines
 	class MET_yellow_pellet_mag : CA_Magazine
 	{
 		author = "Hazmat";
-		scope = 2;
+		scope = 1;
 		displayName = "[16th] Westar-35S Energy Cell (Pellets)";
 		displayNameShort = "Westar-35S Pellets";
 		descriptionShort = "Pellets for the Westar-35S";
@@ -1040,7 +1040,7 @@ class CfgMagazines
 	class MET_yellow_pellet_mag_bird : CA_Magazine
 	{
 		author = "Hazmat";
-		scope = 2;
+		scope = 1;
 		displayName = "[16th] Westar-35S Energy Cell (Birdshot)";
 		displayNameShort = "Westar-35S Birdshot";
 		descriptionShort = "Birdshot for the Westar-35S";
@@ -1067,7 +1067,7 @@ class CfgMagazines
 	class MET_Westar35SA_mag : 100Rnd_65x39_caseless_mag
 	{
 		author = "Hazmat";
-		scope = 2;
+		scope = 1;
 		modelSpecial = "";
 		modelSpecialIsProxy = 0;
 		picture = "\3AS\3AS_Weapons\Data\UI\3as_pistol_y.paa";
@@ -1084,7 +1084,7 @@ class CfgMagazines
 	class MET_blaster_battery_mand : 100Rnd_65x39_caseless_mag
 	{
 		author = "Hazmat";
-		scope = 2;
+		scope = 1;
 		modelSpecial = "";
 		modelSpecialIsProxy = 0;
 		picture = "\3AS\3AS_Weapons\Data\UI\3as_box_y.paa";
