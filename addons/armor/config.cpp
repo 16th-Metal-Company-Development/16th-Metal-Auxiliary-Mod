@@ -142,6 +142,7 @@ class CfgPatches
 			"MET_Helmet_Trooper_Gambit",
 			"MET_Helmet_Trooper_Hazmat",
 			"MET_Helmet_Trooper_Hellwolf",
+			"MET_Helmet_Trooper_Header",
 			"MET_Helmet_Trooper_Hevy",
 			"MET_Helmet_Trooper_Hood",
 			"MET_Helmet_Trooper_Karma",
@@ -184,6 +185,7 @@ class CfgPatches
 			"MET_Helmet_Airborne_Vergil",
 
 			// Custom ARF
+			"MET_Helmet_ARF_Alouminochar",
 			"MET_Helmet_ARF_Blue",
 			"MET_Helmet_ARF_Chet",
 			"MET_Helmet_ARF_Convor",

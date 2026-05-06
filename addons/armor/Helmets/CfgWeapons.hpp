@@ -904,6 +904,15 @@ class MET_Helmet_Trooper_Hellwolf : MET_Helmet_Trooper_Base
 		"z\MET\addons\Armor_Rewrite\Helmets\Textures\Custom\MET_Hellwolf_Helmet_CO.paa"
 	};
 };
+class MET_Helmet_Trooper_Header : MET_Helmet_Trooper_Base
+{
+	scope = 2;
+	displayName = "[16th] Header's Helmet";
+	hiddenSelectionsTextures[] =
+	{
+		"z\MET\addons\Armor_Rewrite\Helmets\Textures\Custom\MET_Header_Helmet_CO.paa"
+	};
+};
 class MET_Helmet_Trooper_Hevy : MET_Helmet_Trooper_Base
 {
 	scope = 2;
@@ -1250,6 +1259,15 @@ class MET_Helmet_Airborne_Vergil : MET_Helmet_Airborne_Base
 };
 
 // ARF 
+class MET_Helmet_ARF_Alouminochar : MET_Helmet_ARF_Base
+{
+	scope = 2;
+	displayName = "[16th] Alouminochar's ARF Helmet";
+	hiddenSelectionsTextures[] =
+	{
+		"z\MET\addons\Armor_Rewrite\Helmets\Textures\Custom\MET_ARF_Alouminochar_Helmet_CO.paa"
+	};
+};
 class MET_Helmet_ARF_Blue : MET_Helmet_ARF_Base
 {
 	scope = 2;
