@@ -1,4 +1,4 @@
-class CfgPatches
+	class CfgPatches
 {
 	class met_rep_rifle_dc15s
 	{
@@ -779,7 +779,6 @@ class CfgWeapons
 			};
 			magazineWell[]=
 			{
-				"UGL_40x36",
 				"MET_GL_MagWell"
 			};
 			cameraDir="OP_look";

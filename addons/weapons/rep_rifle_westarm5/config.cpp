@@ -334,8 +334,6 @@ class CfgWeapons
 			};
 			magazineWell[]=
 			{
-				"UGL_40x36",
-				"3UGL_40x36",
 				"MET_GL_MagWell",
 				"MET_3GL_MagWell"
 			};
@@ -737,8 +735,6 @@ class CfgWeapons
 			};
 			magazineWell[]=
 			{
-				"UGL_40x36",
-				"3UGL_40x36",
 				"MET_GL_MagWell",
 				"MET_3GL_MagWell"
 			};
