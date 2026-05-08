@@ -4,7 +4,12 @@ class XtdGearModels {
         class dc15c {
             label = "DC-15C";
             author = "16th Mod Team";
-            options[] = { "GL" };
+            options[] = { "Gen", "GL" };
+            class Gen {
+                values[] = {
+                    "Mk II", "Mk III"
+                };
+            };
             class GL {
                 values[] = {
                     "Removed", "Installed"

@@ -146,14 +146,14 @@ class CfgWeapons
 		};
 		drySound[]=
 		{
-			"A3\Sounds_F\arsenal\weapons\Launchers\RPG32\Dry_RPG32",
+			"A3\Sounds_F\arsenal\weapons\Launchers\RPG32\Dry_RPG32.wss",
 			0.44668359,
 			1,
 			20
 		};
 		reloadMagazineSound[]=
 		{
-			"A3\Sounds_F\arsenal\weapons\Launchers\RPG32\reload_RPG32",
+			"A3\Sounds_F\arsenal\weapons\Launchers\RPG32\reload_RPG32.wss",
 			0.25118864,
 			1,
 			10

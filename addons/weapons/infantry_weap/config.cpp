@@ -76,6 +76,12 @@ class CfgRecoils
 		kickBack[]={0.059999999,0.090000004};
 		temporary=0.0060000001;
 	};
+	class MET_recoil_Westar : recoil_default
+	{
+		muzzleOuter[] = { 0,0.09,0.38,0.38 };
+		kickBack[] = { 0.025,0.03 };
+		temporary = 0.005;
+	};
 	class recoil_dc15XM: Default
 	{
 		muzzleOuter[]={0.5,2,0.8,1};
@@ -1487,7 +1493,7 @@ class CfgWeapons
 					visionMode[] = {};
 				};
 			};
-		}
+		};
 	};
 };
 class CfgMagazines

@@ -28,6 +28,10 @@ class CfgPatches
 class JLTS_stun_muzzle;
 class Mode_SemiAuto;
 class Mode_FullAuto;
+class MuzzleSlot;
+class CowsSlot;
+class PointerSlot;
+class UnderBarrelSlot;
 class CfgWeapons
 {
 	/*
@@ -36,13 +40,7 @@ class CfgWeapons
 	class Pistol;
 	class Pistol_Base_F: Pistol
 	{
-		class WeaponSlotsInfo
-		{
-			class MuzzleSlot;
-			class CowsSlot;
-			class PointerSlot;
-			class UnderBarrelSlot;
-		};
+		class WeaponSlotsInfo;
 		class GunParticles;
 	};
 	class MET_C_RK3_Base_F : Pistol_Base_F
@@ -204,7 +202,7 @@ class CfgWeapons
 		};
 		drySound[] =
 		{
-			"\3AS\3AS_Main\Sounds\Blaster_empty",
+			"\3AS\3AS_Main\Sounds\Blaster_empty.wss",
 			2,
 			1,
 			20

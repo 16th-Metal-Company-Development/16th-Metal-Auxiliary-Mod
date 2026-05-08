@@ -73,12 +73,7 @@ class CfgWeapons
 	class Pistol_Base_F;
 	class ShdwCmpny_pistol_DC21_Base: Pistol_Base_F
 	{
-		class WeaponSlotsInfo
-		{
-			class Cowsslot;
-			class MuzzleSlot;
-			class PointerSlot;
-		};
+		class WeaponSlotsInfo;
 	};
 	class MET_DC21: ShdwCmpny_pistol_DC21_Base
 	{
@@ -101,7 +96,7 @@ class CfgWeapons
 		};
 		drySound[]=
 		{
-			"\3AS\3AS_Main\Sounds\Blaster_empty",
+			"\3AS\3AS_Main\Sounds\Blaster_empty.wss",
 			2,
 			1,
 			20
@@ -326,7 +321,7 @@ class CfgWeapons
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
 			mass=30;
-			class CowsSlot: Cowsslot
+			class CowsSlot : CowsSlot
 			{
 				compatibleItems[]=
 				{

@@ -1,6 +1,6 @@
 class CfgPatches
 {
-	class met_rep_rifle_dc15c
+	class met_rep_rifle_dc15c_mkiii
 	{
 		author="";
 		requiredVersion=0.1;
@@ -326,7 +326,6 @@ class CfgWeapons
 			};
 			magazineWell[]=
 			{
-				"UGL_40x36",
 				"MET_GL_MagWell"
 			};
 			cameraDir="OP_look";
@@ -347,7 +346,7 @@ class CfgWeapons
 			reloadAction="GestureReloadMXUGL";
 			reloadMagazineSound[]=
 			{
-				"A3\Sounds_F\arsenal\weapons\Rifles\MX\Mx_UGL_reload",
+				"A3\Sounds_F\arsenal\weapons\Rifles\MX\Mx_UGL_reload.wss",
 				1,
 				1,
 				10
@@ -415,7 +414,7 @@ class CfgWeapons
 		};
 		drySound[]=
 		{
-			"\3AS\3AS_Main\Sounds\Blaster_empty",
+			"\3AS\3AS_Main\Sounds\Blaster_empty.wss",
 			2,
 			1,
 			20
@@ -461,7 +460,7 @@ class CfgWeapons
 		magazineWell[]={};
 		drySound[]=
 		{
-			"A3\Sounds_F\arsenal\weapons\Rifles\Mx\dry_Mx",
+			"A3\Sounds_F\arsenal\weapons\Rifles\Mx\dry_Mx.wss",
 			0.56234097,
 			1,
 			10
@@ -522,7 +521,7 @@ class CfgWeapons
 		};
 		drySound[]=
 		{
-			"A3\Sounds_F\arsenal\weapons\Rifles\Mx\dry_Mx",
+			"A3\Sounds_F\arsenal\weapons\Rifles\Mx\dry_Mx.wss",
 			0.56234097,
 			1,
 			10

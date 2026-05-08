@@ -24,7 +24,7 @@ class MET_LAAT_Mk2: 3as_LAAT_MK2
 		"z\MET\addons\vehicles\vics\LAAT\16_laat_new\Wings_CO.paa",
 		"z\MET\addons\vehicles\vics\LAAT\16_laat_new\Weapons_CO.paa",
 		"z\MET\addons\vehicles\vics\LAAT\Weapon_Details_CO.paa",
-		"z\MET\addons\vehicles\vics\LAAT\16_Laat_Interior.paa"
+		"z\MET\addons\vehicles\vics\LAAT\16th_Laat_Interior.paa"
 	};
 	class TextureSources
 	{
@@ -37,7 +37,7 @@ class MET_LAAT_Mk2: 3as_LAAT_MK2
 				"z\MET\addons\vehicles\vics\LAAT\16_laat_new\Wings_CO.paa",
 				"z\MET\addons\vehicles\vics\LAAT\16_laat_new\Weapons_CO.paa",
 				"z\MET\addons\vehicles\vics\LAAT\Weapon_Details_CO.paa",
-				"z\MET\addons\vehicles\vics\LAAT\16_Laat_Interior.paa"
+				"z\MET\addons\vehicles\vics\LAAT\16th_Laat_Interior.paa"
 			};
 			factions[] = {"metal_company"};
 		};
@@ -50,7 +50,7 @@ class MET_LAAT_Mk2: 3as_LAAT_MK2
 				"z\MET\addons\vehicles\vics\LAAT\16_laat_new_arc\Wings_CO.paa",
 				"z\MET\addons\vehicles\vics\LAAT\16_laat_new_arc\Weapons_CO.paa",
 				"z\MET\addons\vehicles\vics\LAAT\Weapon_Details_CO.paa",
-				"z\MET\addons\vehicles\vics\LAAT\Interior.paa"
+				"z\MET\addons\vehicles\vics\LAAT\16th_Laat_Interior.paa"
 			};
 			factions[] = {"metal_company"};
 		};
@@ -90,7 +90,7 @@ class MET_LAAT_Mk2_Lamps: 3as_LAAT_Mk2Lights
 		"z\MET\addons\vehicles\vics\LAAT\16_laat_new\Wings_CO.paa",
 		"z\MET\addons\vehicles\vics\LAAT\16_laat_new\Weapons_CO.paa",
 		"z\MET\addons\vehicles\vics\LAAT\Weapon_Details_CO.paa",
-		"z\MET\addons\vehicles\vics\LAAT\16_Laat_Interior.paa"
+		"z\MET\addons\vehicles\vics\LAAT\16th_Laat_Interior.paa"
 	};
 	ace_cargo_space = 20;  // Cargo space your vehicle has
     ace_cargo_hasCargo = 1;  // Enables cargo to be loaded inside the vehicle (1-yes, 0-no)
@@ -123,7 +123,7 @@ class MET_LAAT_MK1: 3as_LAAT_MK1
 		"z\MET\addons\vehicles\vics\LAAT\16_laat_new\Wings_CO.paa",
 		"z\MET\addons\vehicles\vics\LAAT\16_laat_new\Weapons_CO.paa",
 		"z\MET\addons\vehicles\vics\LAAT\Weapon_Details_CO.paa",
-		"z\MET\addons\vehicles\vics\LAAT\16_Laat_Interior.paa"
+		"z\MET\addons\vehicles\vics\LAAT\16th_Laat_Interior.paa"
 	};
 	ace_cargo_space = 20;  // Cargo space your vehicle has
     ace_cargo_hasCargo = 1;  // Enables cargo to be loaded inside the vehicle (1-yes, 0-no)
@@ -713,7 +713,7 @@ class MET_BARC: 3AS_Barc_501
 			dampingRate = 0.4;
 			dampingRateDamaged = 1;
 			dampingRateDestroyed = 1000;
-			frictionVsSlipGraph[] = {[0,1.75],[0.5,1.35],[1,1.2]};
+			frictionVsSlipGraph[] = {{0,1.75},{0.5,1.35},{1,1.2}};
 			latStiffX = 25;
 			latStiffY = 200;
 			mass = 50;
@@ -741,7 +741,7 @@ class MET_BARC: 3AS_Barc_501
 			dampingRate = 0.4;
 			dampingRateDamaged = 1;
 			dampingRateDestroyed = 1000;
-			frictionVsSlipGraph[] = {[0,1.75],[0.5,1.35],[1,1.2]};
+			frictionVsSlipGraph[] = {{0,1.75},{0.5,1.35},{1,1.2}};
 			latStiffX = 25;
 			latStiffY = 200;
 			mass = 50;
@@ -769,7 +769,7 @@ class MET_BARC: 3AS_Barc_501
 			dampingRate = 0.4;
 			dampingRateDamaged = 1;
 			dampingRateDestroyed = 1000;
-			frictionVsSlipGraph[] = {[0,1.75],[0.5,1.35],[1,1.2]};
+			frictionVsSlipGraph[] = {{0,1.75},{0.5,1.35},{1,1.2}};
 			latStiffX = 25;
 			latStiffY = 200;
 			mass = 50;
@@ -797,7 +797,7 @@ class MET_BARC: 3AS_Barc_501
 			dampingRate = 0.4;
 			dampingRateDamaged = 1;
 			dampingRateDestroyed = 1000;
-			frictionVsSlipGraph[] = {[0,1.75],[0.5,1.35],[1,1.2]};
+			frictionVsSlipGraph[] = {{0,1.75},{0.5,1.35},{1,1.2}};
 			latStiffX = 25;
 			latStiffY = 200;
 			mass = 50;
@@ -922,8 +922,8 @@ class MET_BARC_SideCar: 3AS_BarcSideCar
 		class MainTurret : NewTurret
 		{
 			stabilizedInAxes=4;
-			hasGunner = true;
-			hideWeaponsGunner = true;
+			hasGunner=1;
+			hideWeaponsGunner=1;
 			startEngine=0;
 			body="MainTurret";
 			gun="MainGun";
@@ -934,7 +934,7 @@ class MET_BARC_SideCar: 3AS_BarcSideCar
 			gunnerGetOutAction="GetOutLow";
 			ejectDeadGunner=1;
 			lockWhenVehicleSpeed = -1;
-			lockWhenDriverOut = false;
+			lockWhenDriverOut=0;
 			memoryPointGun[]=
 			{
 				"usti hlavne3"
@@ -954,7 +954,7 @@ class MET_BARC_SideCar: 3AS_BarcSideCar
 			turretFollowFreeLook=1;
 			soundServoVertical[]=
 			{
-				"A3\Sounds_F\vehicles\boat\Boat_Armed_01\servo_boat_comm_vertical",
+				"A3\Sounds_F\vehicles\boat\Boat_Armed_01\servo_boat_comm_vertical.wss",
 				1.4125376,
 				1,
 				30
@@ -972,7 +972,7 @@ class MET_BARC_SideCar: 3AS_BarcSideCar
 			maxVerticalRotSpeed=1.8;
 			soundServo[]=
 			{
-				"A3\Sounds_F\vehicles\armor\noises\servo_best",
+				"A3\Sounds_F\vehicles\armor\noises\servo_best.wss",
 				"db-40",
 				1,
 				50
@@ -1028,7 +1028,7 @@ class MET_BARC_SideCar: 3AS_BarcSideCar
 			dampingRate = 0.4;
 			dampingRateDamaged = 1;
 			dampingRateDestroyed = 1000;
-			frictionVsSlipGraph[] = {[0,1.75],[0.5,1.35],[1,1.2]};
+			frictionVsSlipGraph[] = {{0,1.75},{0.5,1.35},{1,1.2}};
 			latStiffX = 25;
 			latStiffY = 200;
 			mass = 50;
@@ -1056,7 +1056,7 @@ class MET_BARC_SideCar: 3AS_BarcSideCar
 			dampingRate = 0.4;
 			dampingRateDamaged = 1;
 			dampingRateDestroyed = 1000;
-			frictionVsSlipGraph[] = {[0,1.75],[0.5,1.35],[1,1.2]};
+			frictionVsSlipGraph[] = {{0,1.75},{0.5,1.35},{1,1.2}};
 			latStiffX = 25;
 			latStiffY = 200;
 			mass = 50;
@@ -1084,7 +1084,7 @@ class MET_BARC_SideCar: 3AS_BarcSideCar
 			dampingRate = 0.4;
 			dampingRateDamaged = 1;
 			dampingRateDestroyed = 1000;
-			frictionVsSlipGraph[] = {[0,1.75],[0.5,1.35],[1,1.2]};
+			frictionVsSlipGraph[] = {{0,1.75},{0.5,1.35},{1,1.2}};
 			latStiffX = 25;
 			latStiffY = 200;
 			mass = 50;
@@ -1112,7 +1112,7 @@ class MET_BARC_SideCar: 3AS_BarcSideCar
 			dampingRate = 0.4;
 			dampingRateDamaged = 1;
 			dampingRateDestroyed = 1000;
-			frictionVsSlipGraph[] = {[0,1.75],[0.5,1.35],[1,1.2]};
+			frictionVsSlipGraph[] = {{0,1.75},{0.5,1.35},{1,1.2}};
 			latStiffX = 25;
 			latStiffY = 200;
 			mass = 50;

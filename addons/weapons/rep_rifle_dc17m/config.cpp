@@ -202,7 +202,7 @@ class CfgWeapons
 		};
 		drySound[]=
 		{
-			"\3AS\3AS_Main\Sounds\Blaster_empty",
+			"\3AS\3AS_Main\Sounds\Blaster_empty.wss",
 			2,
 			1,
 			20
@@ -219,7 +219,7 @@ class CfgWeapons
 	{
 		scope=2;
 		displayName="[16th] DC-17M Carbine";
-		model="3AS\3AS_Weapons\DC17M\3AS_DC17M_f";
+		model="3AS\3AS_Weapons\DC17M\3AS_DC17M_f.p3d";
 		picture="\3AS\3AS_Weapons\DC17M\data\UI\3as_dc17m.paa";
 		weaponInfoType="RscWeaponZeroing";
 		modelOptics="z\MET\addons\weapons\scopes\big_cross_blue_easy.p3d";

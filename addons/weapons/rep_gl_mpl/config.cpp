@@ -199,21 +199,21 @@ class CfgWeapons
 		};
 		changeFiremodeSound[]=
 		{
-			"A3\Sounds_F\arsenal\weapons\UGL\Firemode_ugl",
+			"A3\Sounds_F\arsenal\weapons\UGL\Firemode_ugl.wss",
 			0.316228,
 			1,
 			5
 		};
 		reloadMagazineSound[]=
 		{
-			"A3\Sounds_F\arsenal\weapons\UGL\Reload_UGL",
+			"A3\Sounds_F\arsenal\weapons\UGL\Reload_UGL.wss",
 			0.56234097,
 			1,
 			10
 		};
 		drySound[]=
 		{
-			"A3\Sounds_F\arsenal\weapons\UGL\Dry_ugl",
+			"A3\Sounds_F\arsenal\weapons\UGL\Dry_ugl.wss",
 			0.56234097,
 			1,
 			10

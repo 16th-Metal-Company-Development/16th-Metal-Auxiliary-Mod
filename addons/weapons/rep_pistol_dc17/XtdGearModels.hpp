@@ -4,10 +4,10 @@ class XtdGearModels {
         class dc17sa {
             label = "DC-17SA";
             author = "16th Mod Team";
-            options[] = { "Gen"};
+            options[] = { "Gen" };
             class Gen {
                 values[] = {
-                    "Mk I", "Mk II"
+                    "Mk I", "Mk II", "Mk III"
                 };
             };
         };

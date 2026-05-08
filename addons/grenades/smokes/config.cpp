@@ -338,7 +338,7 @@ class HTASmokeEffect3
 class CfgAmmo
 {
 	class SmokeShell;
-	class SmokeShellOrange;
+	// class SmokeShellOrange;
 	class Met_Ammo_smoke_white: SmokeShell
 	{
 		model="3AS\3AS_Equipment\model\3AS_smokegrenade.p3d";

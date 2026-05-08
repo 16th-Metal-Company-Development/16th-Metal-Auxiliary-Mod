@@ -685,7 +685,7 @@ class CfgWeapons
 		magazineWell[]={};
 		drySound[]=
 		{
-			"A3\Sounds_F\arsenal\weapons\Rifles\Mx\dry_Mx",
+			"A3\Sounds_F\arsenal\weapons\Rifles\Mx\dry_Mx.wss",
 			0.56234097,
 			1,
 			10
@@ -704,7 +704,7 @@ class CfgWeapons
 		magazineWell[]={};
 		drySound[]=
 		{
-			"A3\Sounds_F\arsenal\weapons\Rifles\Mx\dry_Mx",
+			"A3\Sounds_F\arsenal\weapons\Rifles\Mx\dry_Mx.wss",
 			0.56234097,
 			1,
 			10
@@ -715,7 +715,7 @@ class CfgWeapons
 			magazines[]={};
 			drySound[]=
 			{
-				"A3\Sounds_F\arsenal\weapons\Rifles\Mx\dry_Mx",
+				"A3\Sounds_F\arsenal\weapons\Rifles\Mx\dry_Mx.wss",
 				0.56234097,
 				1,
 				10
@@ -735,7 +735,7 @@ class CfgWeapons
 		magazineWell[]={};
 		drySound[]=
 		{
-			"A3\Sounds_F\arsenal\weapons\Rifles\Mx\dry_Mx",
+			"A3\Sounds_F\arsenal\weapons\Rifles\Mx\dry_Mx.wss",
 			0.56234097,
 			1,
 			10
@@ -746,7 +746,7 @@ class CfgWeapons
 			magazines[]={};
 			drySound[]=
 			{
-				"A3\Sounds_F\arsenal\weapons\Rifles\Mx\dry_Mx",
+				"A3\Sounds_F\arsenal\weapons\Rifles\Mx\dry_Mx.wss",
 				0.56234097,
 				1,
 				10

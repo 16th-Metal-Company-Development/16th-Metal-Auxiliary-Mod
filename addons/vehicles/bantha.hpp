@@ -12,41 +12,41 @@
 		//class ACE_SelfActions;
 		soundGetIn[]=
 		{
-			"A3\sounds_f\vehicles\armor\noises\get_in_out",
+			"A3\sounds_f\vehicles\armor\noises\get_in_out.wss",
 			0.56234133,
 			1
 		};
 		soundGetOut[]=
 		{
-			"A3\sounds_f\vehicles\armor\noises\get_in_out",
+			"A3\sounds_f\vehicles\armor\noises\get_in_out.wss",
 			0.56234133,
 			1,
 			20
 		};
 		soundTurnIn[]=
 		{
-			"A3\Sounds_F\vehicles\noises\Turn_in_out",
+			"A3\Sounds_F\vehicles\noises\Turn_in_out.wss",
 			1.7782794,
 			1,
 			20
 		};
 		soundTurnOut[]=
 		{
-			"A3\Sounds_F\vehicles\noises\Turn_in_out",
+			"A3\Sounds_F\vehicles\noises\Turn_in_out.wss",
 			1.7782794,
 			1,
 			20
 		};
 		soundTurnInInternal[]=
 		{
-			"A3\Sounds_F\vehicles\noises\Turn_in_out",
+			"A3\Sounds_F\vehicles\noises\Turn_in_out.wss",
 			1.7782794,
 			1,
 			20
 		};
 		soundTurnOutInternal[]=
 		{
-			"A3\Sounds_F\vehicles\noises\Turn_in_out",
+			"A3\Sounds_F\vehicles\noises\Turn_in_out.wss",
 			1.7782794,
 			1,
 			20
@@ -85,21 +85,21 @@
 		};
 		soundBushCollision1[]=
 		{
-			"A3\Sounds_F\vehicles\crashes\helis\Heli_coll_bush_int_1",
+			"A3\Sounds_F\vehicles\crashes\helis\Heli_coll_bush_int_1.wss",
 			0.17782794,
 			1,
 			100
 		};
 		soundBushCollision2[]=
 		{
-			"A3\Sounds_F\vehicles\crashes\helis\Heli_coll_bush_int_2",
+			"A3\Sounds_F\vehicles\crashes\helis\Heli_coll_bush_int_2.wss",
 			0.17782794,
 			1,
 			100
 		};
 		soundBushCollision3[]=
 		{
-			"A3\Sounds_F\vehicles\crashes\helis\Heli_coll_bush_int_3",
+			"A3\Sounds_F\vehicles\crashes\helis\Heli_coll_bush_int_3.wss",
 			0.17782794,
 			1,
 			100
@@ -115,28 +115,28 @@
 		};
 		soundGeneralCollision1[]=
 		{
-			"A3\Sounds_F\vehicles\crashes\armors\tank_crash_default_1",
+			"A3\Sounds_F\vehicles\crashes\armors\tank_crash_default_1.wss",
 			1,
 			1,
 			100
 		};
 		soundGeneralCollision2[]=
 		{
-			"A3\Sounds_F\vehicles\crashes\armors\tank_crash_default_2",
+			"A3\Sounds_F\vehicles\crashes\armors\tank_crash_default_2.wss",
 			1,
 			1,
 			100
 		};
 		soundGeneralCollision3[]=
 		{
-			"A3\Sounds_F\vehicles\crashes\armors\tank_crash_default_3",
+			"A3\Sounds_F\vehicles\crashes\armors\tank_crash_default_3.wss",
 			1,
 			1,
 			100
 		};
 		soundGeneralCollision4[]=
 		{
-			"A3\Sounds_F\vehicles\crashes\armors\tank_crash_default_4",
+			"A3\Sounds_F\vehicles\crashes\armors\tank_crash_default_4.wss",
 			1,
 			1,
 			100
@@ -154,28 +154,28 @@
 		};
 		buildCrash0[]=
 		{
-			"A3\Sounds_F\vehicles\crashes\armors\tank_coll_building_1",
+			"A3\Sounds_F\vehicles\crashes\armors\tank_coll_building_1.wss",
 			1,
 			1,
 			200
 		};
 		buildCrash1[]=
 		{
-			"A3\Sounds_F\vehicles\crashes\armors\tank_coll_building_2",
+			"A3\Sounds_F\vehicles\crashes\armors\tank_coll_building_2.wss",
 			1,
 			1,
 			200
 		};
 		buildCrash2[]=
 		{
-			"A3\Sounds_F\vehicles\crashes\armors\tank_coll_building_3",
+			"A3\Sounds_F\vehicles\crashes\armors\tank_coll_building_3.wss",
 			1,
 			1,
 			200
 		};
 		buildCrash3[]=
 		{
-			"A3\Sounds_F\vehicles\crashes\armors\tank_coll_building_4",
+			"A3\Sounds_F\vehicles\crashes\armors\tank_coll_building_4.wss",
 			1,
 			1,
 			200
@@ -193,28 +193,28 @@
 		};
 		WoodCrash0[]=
 		{
-			"A3\Sounds_F\vehicles\crashes\armors\tank_coll_wood_1",
+			"A3\Sounds_F\vehicles\crashes\armors\tank_coll_wood_1.wss",
 			1,
 			1,
 			200
 		};
 		WoodCrash1[]=
 		{
-			"A3\Sounds_F\vehicles\crashes\armors\tank_coll_wood_2",
+			"A3\Sounds_F\vehicles\crashes\armors\tank_coll_wood_2.wss",
 			1,
 			1,
 			200
 		};
 		WoodCrash2[]=
 		{
-			"A3\Sounds_F\vehicles\crashes\armors\tank_coll_wood_3",
+			"A3\Sounds_F\vehicles\crashes\armors\tank_coll_wood_3.wss",
 			1,
 			1,
 			200
 		};
 		WoodCrash3[]=
 		{
-			"A3\Sounds_F\vehicles\crashes\armors\tank_coll_wood_4",
+			"A3\Sounds_F\vehicles\crashes\armors\tank_coll_wood_4.wss",
 			1,
 			1,
 			200
@@ -232,28 +232,28 @@
 		};
 		ArmorCrash0[]=
 		{
-			"A3\Sounds_F\vehicles\crashes\armors\tank_coll_armor_1",
+			"A3\Sounds_F\vehicles\crashes\armors\tank_coll_armor_1.wss",
 			1,
 			1,
 			200
 		};
 		ArmorCrash1[]=
 		{
-			"A3\Sounds_F\vehicles\crashes\armors\tank_coll_armor_2",
+			"A3\Sounds_F\vehicles\crashes\armors\tank_coll_armor_2.wss",
 			1,
 			1,
 			200
 		};
 		ArmorCrash2[]=
 		{
-			"A3\Sounds_F\vehicles\crashes\armors\tank_coll_armor_3",
+			"A3\Sounds_F\vehicles\crashes\armors\tank_coll_armor_3.wss",
 			1,
 			1,
 			200
 		};
 		ArmorCrash3[]=
 		{
-			"A3\Sounds_F\vehicles\crashes\armors\tank_coll_armor_4",
+			"A3\Sounds_F\vehicles\crashes\armors\tank_coll_armor_4.wss",
 			1,
 			1,
 			200
@@ -275,7 +275,7 @@
 			{
 				sound[]=
 				{
-					"212th\Vehicles\212th_APC02\data\sounds\Engine_ext",
+					"212th\Vehicles\212th_APC02\data\sounds\Engine_ext.ogg",
 					0.3548134,
 					1,
 					200
@@ -287,7 +287,7 @@
 			{
 				sound[]=
 				{
-					"212th\Vehicles\212th_APC02\data\sounds\Engine_ext",
+					"212th\Vehicles\212th_APC02\data\sounds\Engine_ext.ogg",
 					0.39810717,
 					1,
 					200
@@ -299,7 +299,7 @@
 			{
 				sound[]=
 				{
-					"212th\Vehicles\212th_APC02\data\sounds\Engine_ext",
+					"212th\Vehicles\212th_APC02\data\sounds\Engine_ext.ogg",
 					0.44668359,
 					1,
 					200
@@ -311,7 +311,7 @@
 			{
 				sound[]=
 				{
-					"212th\Vehicles\212th_APC02\data\sounds\Engine_ext",
+					"212th\Vehicles\212th_APC02\data\sounds\Engine_ext.ogg",
 					0.50118721,
 					1,
 					250
@@ -323,7 +323,7 @@
 			{
 				sound[]=
 				{
-					"212th\Vehicles\212th_APC02\data\sounds\Engine_ext",
+					"212th\Vehicles\212th_APC02\data\sounds\Engine_ext.ogg",
 					0.56234133,
 					1,
 					300
@@ -335,7 +335,7 @@
 			{
 				sound[]=
 				{
-					"212th\Vehicles\212th_APC02\data\sounds\Engine_ext",
+					"212th\Vehicles\212th_APC02\data\sounds\Engine_ext.ogg",
 					0.63095737,
 					1,
 					300
@@ -347,7 +347,7 @@
 			{
 				sound[]=
 				{
-					"212th\Vehicles\212th_APC02\data\sounds\Engine_ext",
+					"212th\Vehicles\212th_APC02\data\sounds\Engine_ext.ogg",
 					0.70794576,
 					1,
 					300
@@ -442,7 +442,7 @@
 			{
 				sound[]=
 				{
-					"212th\Vehicles\212th_APC02\data\sounds\Engine_int",
+					"212th\Vehicles\212th_APC02\data\sounds\Engine_int.ogg",
 					0.3548134,
 					1
 				};
@@ -453,7 +453,7 @@
 			{
 				sound[]=
 				{
-					"212th\Vehicles\212th_APC02\data\sounds\Engine_int",
+					"212th\Vehicles\212th_APC02\data\sounds\Engine_int.ogg",
 					0.39810717,
 					1
 				};
@@ -464,7 +464,7 @@
 			{
 				sound[]=
 				{
-					"212th\Vehicles\212th_APC02\data\sounds\Engine_int",
+					"212th\Vehicles\212th_APC02\data\sounds\Engine_int.ogg",
 					0.44668359,
 					1
 				};
@@ -475,7 +475,7 @@
 			{
 				sound[]=
 				{
-					"212th\Vehicles\212th_APC02\data\sounds\Engine_int",
+					"212th\Vehicles\212th_APC02\data\sounds\Engine_int.ogg",
 					0.50118721,
 					1
 				};
@@ -486,7 +486,7 @@
 			{
 				sound[]=
 				{
-					"212th\Vehicles\212th_APC02\data\sounds\Engine_int",
+					"212th\Vehicles\212th_APC02\data\sounds\Engine_int.ogg",
 					0.56234133,
 					1
 				};
@@ -497,7 +497,7 @@
 			{
 				sound[]=
 				{
-					"212th\Vehicles\212th_APC02\data\sounds\Engine_int",
+					"212th\Vehicles\212th_APC02\data\sounds\Engine_int.ogg",
 					0.63095737,
 					1
 				};
@@ -574,7 +574,7 @@
 			{
 				sound[]=
 				{
-					"A3\sounds_f\vehicles\armor\noises\noise_tank_int_1",
+					"A3\sounds_f\vehicles\armor\noises\noise_tank_int_1.wss",
 					0.50118721,
 					1
 				};
@@ -585,7 +585,7 @@
 			{
 				sound[]=
 				{
-					"A3\sounds_f\vehicles\armor\noises\noise_tank_ext_1",
+					"A3\sounds_f\vehicles\armor\noises\noise_tank_ext_1.wss",
 					0.63095737,
 					1,
 					150
@@ -597,7 +597,7 @@
 			{
 				sound[]=
 				{
-					"A3\Sounds_F\vehicles\soft\tires\ext_tires_dirt_soft_1",
+					"A3\Sounds_F\vehicles\soft\tires\ext_tires_dirt_soft_1.wss",
 					1,
 					1,
 					60
@@ -609,7 +609,7 @@
 			{
 				sound[]=
 				{
-					"A3\Sounds_F\vehicles\soft\tires\ext-tires-sand1",
+					"A3\Sounds_F\vehicles\soft\tires\ext-tires-sand1.wss",
 					1,
 					1,
 					60
@@ -621,7 +621,7 @@
 			{
 				sound[]=
 				{
-					"A3\Sounds_F\vehicles\soft\tires\ext_tires_dirt_soft_2",
+					"A3\Sounds_F\vehicles\soft\tires\ext_tires_dirt_soft_2.wss",
 					1,
 					1,
 					60
@@ -633,7 +633,7 @@
 			{
 				sound[]=
 				{
-					"A3\Sounds_F\vehicles\soft\tires\ext-tires-mud2",
+					"A3\Sounds_F\vehicles\soft\tires\ext-tires-mud2.wss",
 					1,
 					1,
 					60
@@ -645,7 +645,7 @@
 			{
 				sound[]=
 				{
-					"A3\Sounds_F\vehicles\soft\tires\ext_tires_gravel_1",
+					"A3\Sounds_F\vehicles\soft\tires\ext_tires_gravel_1.wss",
 					1,
 					1,
 					60
@@ -657,7 +657,7 @@
 			{
 				sound[]=
 				{
-					"A3\Sounds_F\vehicles\soft\tires\ext_tires_asfalt_2",
+					"A3\Sounds_F\vehicles\soft\tires\ext_tires_asfalt_2.wss",
 					1,
 					1,
 					60
@@ -669,7 +669,7 @@
 			{
 				sound[]=
 				{
-					"A3\Sounds_F\vehicles\soft\noises\noise_int_car_3",
+					"A3\Sounds_F\vehicles\soft\noises\noise_int_car_3.wss",
 					1.5848932,
 					1,
 					90
@@ -681,7 +681,7 @@
 			{
 				sound[]=
 				{
-					"A3\Sounds_F\vehicles\soft\tires\int_tires_dirt_soft_1",
+					"A3\Sounds_F\vehicles\soft\tires\int_tires_dirt_soft_1.wss",
 					0.70794576,
 					1
 				};
@@ -692,7 +692,7 @@
 			{
 				sound[]=
 				{
-					"A3\Sounds_F\vehicles\soft\tires\int-tires-sand2",
+					"A3\Sounds_F\vehicles\soft\tires\int-tires-sand2.wss",
 					0.70794576,
 					1
 				};
@@ -703,7 +703,7 @@
 			{
 				sound[]=
 				{
-					"A3\Sounds_F\vehicles\soft\tires\int_tires_dirt_soft_2",
+					"A3\Sounds_F\vehicles\soft\tires\int_tires_dirt_soft_2.wss",
 					0.70794576,
 					1
 				};
@@ -714,7 +714,7 @@
 			{
 				sound[]=
 				{
-					"A3\Sounds_F\vehicles\soft\tires\int-tires-mud2",
+					"A3\Sounds_F\vehicles\soft\tires\int-tires-mud2.wss",
 					0.70794576,
 					1
 				};
@@ -725,7 +725,7 @@
 			{
 				sound[]=
 				{
-					"A3\Sounds_F\vehicles\soft\tires\int_tires_gravel_1",
+					"A3\Sounds_F\vehicles\soft\tires\int_tires_gravel_1.wss",
 					0.70794576,
 					1
 				};
@@ -736,7 +736,7 @@
 			{
 				sound[]=
 				{
-					"A3\Sounds_F\vehicles\soft\tires\int_tires_asfalt_2",
+					"A3\Sounds_F\vehicles\soft\tires\int_tires_asfalt_2.wss",
 					0.70794576,
 					1
 				};
@@ -747,7 +747,7 @@
 			{
 				sound[]=
 				{
-					"A3\Sounds_F\vehicles\soft\noises\noise_int_car_3",
+					"A3\Sounds_F\vehicles\soft\noises\noise_int_car_3.wss",
 					0.50118721,
 					1
 				};
@@ -758,7 +758,7 @@
 			{
 				sound[]=
 				{
-					"A3\Sounds_F\vehicles\soft\noises\slipping_tires_loop_04",
+					"A3\Sounds_F\vehicles\soft\noises\slipping_tires_loop_04.wss",
 					1,
 					1,
 					100
@@ -770,7 +770,7 @@
 			{
 				sound[]=
 				{
-					"A3\Sounds_F\vehicles\soft\noises\slipping_tires_loop_02",
+					"A3\Sounds_F\vehicles\soft\noises\slipping_tires_loop_02.wss",
 					1,
 					1,
 					100
@@ -782,7 +782,7 @@
 			{
 				sound[]=
 				{
-					"A3\Sounds_F\vehicles\soft\noises\slipping_tires_loop_02",
+					"A3\Sounds_F\vehicles\soft\noises\slipping_tires_loop_02.wss",
 					1,
 					1,
 					100
@@ -794,7 +794,7 @@
 			{
 				sound[]=
 				{
-					"A3\Sounds_F\vehicles\soft\noises\slipping_tires_loop_02",
+					"A3\Sounds_F\vehicles\soft\noises\slipping_tires_loop_02.wss",
 					1,
 					1,
 					100
@@ -806,7 +806,7 @@
 			{
 				sound[]=
 				{
-					"A3\Sounds_F\vehicles\soft\noises\slipping_tires_loop_04",
+					"A3\Sounds_F\vehicles\soft\noises\slipping_tires_loop_04.wss",
 					1,
 					1,
 					100
@@ -818,7 +818,7 @@
 			{
 				sound[]=
 				{
-					"A3\Sounds_F\vehicles\soft\noises\slipping_tires_loop_02",
+					"A3\Sounds_F\vehicles\soft\noises\slipping_tires_loop_02.wss",
 					1,
 					1,
 					100
@@ -830,7 +830,7 @@
 			{
 				sound[]=
 				{
-					"A3\Sounds_F\vehicles\soft\noises\slipping_tires_loop_02",
+					"A3\Sounds_F\vehicles\soft\noises\slipping_tires_loop_02.wss",
 					1,
 					1,
 					100
@@ -842,7 +842,7 @@
 			{
 				sound[]=
 				{
-					"A3\Sounds_F\vehicles\soft\noises\slipping_tires_loop_02",
+					"A3\Sounds_F\vehicles\soft\noises\slipping_tires_loop_02.wss",
 					1,
 					1,
 					100
@@ -854,7 +854,7 @@
 			{
 				sound[]=
 				{
-					"A3\Sounds_F\vehicles\soft\noises\slipping_tires_loop_04_int",
+					"A3\Sounds_F\vehicles\soft\noises\slipping_tires_loop_04_int.wss",
 					1,
 					1
 				};
@@ -865,7 +865,7 @@
 			{
 				sound[]=
 				{
-					"A3\Sounds_F\vehicles\soft\noises\slipping_tires_loop_02_int",
+					"A3\Sounds_F\vehicles\soft\noises\slipping_tires_loop_02_int.wss",
 					1,
 					1
 				};
@@ -876,7 +876,7 @@
 			{
 				sound[]=
 				{
-					"A3\Sounds_F\vehicles\soft\noises\slipping_tires_loop_02_int",
+					"A3\Sounds_F\vehicles\soft\noises\slipping_tires_loop_02_int.wss",
 					1,
 					1
 				};
@@ -887,7 +887,7 @@
 			{
 				sound[]=
 				{
-					"A3\Sounds_F\vehicles\soft\noises\slipping_tires_loop_02_int",
+					"A3\Sounds_F\vehicles\soft\noises\slipping_tires_loop_02_int.wss",
 					1,
 					1
 				};
@@ -898,7 +898,7 @@
 			{
 				sound[]=
 				{
-					"A3\Sounds_F\vehicles\soft\noises\slipping_tires_loop_04_int",
+					"A3\Sounds_F\vehicles\soft\noises\slipping_tires_loop_04_int.wss",
 					1,
 					1
 				};
@@ -909,7 +909,7 @@
 			{
 				sound[]=
 				{
-					"A3\Sounds_F\vehicles\soft\noises\slipping_tires_loop_02_int",
+					"A3\Sounds_F\vehicles\soft\noises\slipping_tires_loop_02_int.wss",
 					1,
 					1
 				};
@@ -920,7 +920,7 @@
 			{
 				sound[]=
 				{
-					"A3\Sounds_F\vehicles\soft\noises\slipping_tires_loop_02_int",
+					"A3\Sounds_F\vehicles\soft\noises\slipping_tires_loop_02_int.wss",
 					1,
 					1
 				};
@@ -931,7 +931,7 @@
 			{
 				sound[]=
 				{
-					"A3\Sounds_F\vehicles\soft\noises\slipping_tires_loop_02_int",
+					"A3\Sounds_F\vehicles\soft\noises\slipping_tires_loop_02_int.wss",
 					1,
 					1
 				};
@@ -942,7 +942,7 @@
 			{
 				sound[]=
 				{
-					"A3\Sounds_F\vehicles\noises\rain1_ext",
+					"A3\Sounds_F\vehicles\noises\rain1_ext.wss",
 					1,
 					1,
 					100
@@ -954,7 +954,7 @@
 			{
 				sound[]=
 				{
-					"A3\Sounds_F\vehicles\noises\rain1_int",
+					"A3\Sounds_F\vehicles\noises\rain1_int.wss",
 					1,
 					1,
 					100
@@ -1354,14 +1354,14 @@
 						};
 						soundServo[]=
 						{
-							"A3\Sounds_F\vehicles\armor\APC\noises\servo_APC_comm",
+							"A3\Sounds_F\vehicles\armor\APC\noises\servo_APC_comm.wss",
 							1,
 							1,
 							30
 						};
 						soundServoVertical[]=
 						{
-							"A3\Sounds_F\vehicles\armor\APC\noises\servo_APC_comm",
+							"A3\Sounds_F\vehicles\armor\APC\noises\servo_APC_comm.wss",
 							1,
 							1,
 							30
@@ -1471,7 +1471,7 @@
 				};
 				soundServo[]=
 				{
-					"A3\sounds_f\dummysound",
+					"A3\sounds_f\dummysound.wss",
 					0.0099999998,
 					1,
 					30
@@ -2586,14 +2586,14 @@
 				};
 				soundServo[]=
 				{
-					"A3\Sounds_F\vehicles\armor\APC\noises\servo_APC_gunner",
+					"A3\Sounds_F\vehicles\armor\APC\noises\servo_APC_gunner.wss",
 					0.56234133,
 					1,
 					30
 				};
 				soundServoVertical[]=
 				{
-					"A3\Sounds_F\vehicles\armor\APC\noises\servo_APC_gunner_vertical",
+					"A3\Sounds_F\vehicles\armor\APC\noises\servo_APC_gunner_vertical.wss",
 					0.56234133,
 					1,
 					30
@@ -2744,14 +2744,14 @@
 				};
 				soundServo[]=
 				{
-					"A3\Sounds_F\vehicles\armor\APC\noises\servo_APC_gunner",
+					"A3\Sounds_F\vehicles\armor\APC\noises\servo_APC_gunner.wss",
 					0.56234133,
 					1,
 					30
 				};
 				soundServoVertical[]=
 				{
-					"A3\Sounds_F\vehicles\armor\APC\noises\servo_APC_gunner_vertical",
+					"A3\Sounds_F\vehicles\armor\APC\noises\servo_APC_gunner_vertical.wss",
 					0.56234133,
 					1,
 					30
@@ -3002,14 +3002,14 @@
 				gunEnd="z_gunR_chamber";
 				soundServo[]=
 				{
-					"A3\Sounds_F\vehicles\armor\APC\noises\servo_APC_gunner",
+					"A3\Sounds_F\vehicles\armor\APC\noises\servo_APC_gunner.wss",
 					0.56234133,
 					1,
 					30
 				};
 				soundServoVertical[]=
 				{
-					"A3\Sounds_F\vehicles\armor\APC\noises\servo_APC_gunner_vertical",
+					"A3\Sounds_F\vehicles\armor\APC\noises\servo_APC_gunner_vertical.wss",
 					0.56234133,
 					1,
 					30
@@ -3091,14 +3091,14 @@
 				};
 				soundServo[]=
 				{
-					"A3\Sounds_F\vehicles\armor\APC\noises\servo_APC_gunner",
+					"A3\Sounds_F\vehicles\armor\APC\noises\servo_APC_gunner.wss",
 					0.56234133,
 					1,
 					30
 				};
 				soundServoVertical[]=
 				{
-					"A3\Sounds_F\vehicles\armor\APC\noises\servo_APC_gunner_vertical",
+					"A3\Sounds_F\vehicles\armor\APC\noises\servo_APC_gunner_vertical.wss",
 					0.56234133,
 					1,
 					30
@@ -3226,14 +3226,14 @@
 				};
 				soundServo[]=
 				{
-					"A3\Sounds_F\vehicles\armor\APC\noises\servo_APC_gunner",
+					"A3\Sounds_F\vehicles\armor\APC\noises\servo_APC_gunner.wss",
 					0.56234133,
 					1,
 					30
 				};
 				soundServoVertical[]=
 				{
-					"A3\Sounds_F\vehicles\armor\APC\noises\servo_APC_gunner_vertical",
+					"A3\Sounds_F\vehicles\armor\APC\noises\servo_APC_gunner_vertical.wss",
 					0.56234133,
 					1,
 					30
@@ -3322,14 +3322,14 @@
 				};
 				soundServo[]=
 				{
-					"A3\Sounds_F\vehicles\armor\APC\noises\servo_APC_comm",
+					"A3\Sounds_F\vehicles\armor\APC\noises\servo_APC_comm.wss",
 					1,
 					1,
 					30
 				};
 				soundServoVertical[]=
 				{
-					"A3\Sounds_F\vehicles\armor\APC\noises\servo_APC_comm",
+					"A3\Sounds_F\vehicles\armor\APC\noises\servo_APC_comm.wss",
 					1,
 					1,
 					30
@@ -3940,14 +3940,14 @@
 		};
 		soundGetOut[]=
 		{
-			"A3\sounds_f\dummysound",
+			"A3\sounds_f\dummysound.wss",
 			0.00099999993,
 			1,
 			5
 		};
 		soundGetIn[]=
 		{
-			"A3\sounds_f\dummysound",
+			"A3\sounds_f\dummysound.wss",
 			0.00031622773,
 			1,
 			5

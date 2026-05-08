@@ -109,7 +109,7 @@ class CfgMagazines
 		nameSound="satchelcharge";
 		sound[]=
 		{
-			"A3\sounds_f\dummysound",
+			"A3\sounds_f\dummysound.wss",
 			0.00031622776,
 			1,
 			10
@@ -117,7 +117,7 @@ class CfgMagazines
 		ammo="MET_Weapons_Ammo_Grenades_Ctype";
 		picture="z\MET\addons\grenades\data\ui\met_icon_mag_rep_nade_dtype_ui_ca.paa";
 		uiPicture="z\MET\addons\grenades\data\ui\met_icon_mag_rep_nade_dtype_ui_ca.paa";
-		model="ls_weapons\explosives\detPack\ls_explosives_detpack";
+		model="ls_weapons\explosives\detPack\ls_explosives_detpack.p3d";
 	};
 	/*class MET_Weapons_Mags_CISDetonator: MET_Weapons_Mags_Thermal_Detonator
 	{
@@ -283,7 +283,7 @@ class CfgAmmo
 		fuseDistance = 0;
 		explosionEffects = "GrenadeExplosion";
 		CraterEffects = "GrenadeCrater";
-		soundFly[] = { "A3\sounds_f\weapons\explosions\explosion_grenade_1", 1, 1, 200 };
+		soundFly[] = { "A3\sounds_f\weapons\explosions\explosion_grenade_1.wss", 1, 1, 200 };
 		SoundSetExplosion[] = { "Grenade_Exp_SoundSet", "Grenade_Tail_SoundSet", "Explosion_Debris_SoundSet" };
 		model = "\A3\Weapons_F\ammo\handgrenade.p3d";
 		timeToLive = 10;

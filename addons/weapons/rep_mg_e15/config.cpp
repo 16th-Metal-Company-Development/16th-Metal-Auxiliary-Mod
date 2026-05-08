@@ -368,7 +368,7 @@ class CfgWeapons
 		JLTS_isFried=1;
 		drySound[]=
 		{
-			"A3\Sounds_F\arsenal\weapons\Rifles\Mx\dry_Mx",
+			"A3\Sounds_F\arsenal\weapons\Rifles\Mx\dry_Mx.wss",
 			0.56234097,
 			1,
 			10

@@ -90,7 +90,7 @@ class CfgWeapons
 		};
 		magazineReloadSwitchPhase=0.40000001;
 		discreteDistanceInitIndex=0;
-		recoil="MET_recoil_Z6";
+		recoil="MET_recoil_Westar";
 		maxRecoilSway=0.04; //smaller = Easier to Control During Sustained fire
 		swayDecaySpeed=2; //higher = Less Sway Over Time
 		inertia=0.7; //higher = More Weight
@@ -334,8 +334,6 @@ class CfgWeapons
 			};
 			magazineWell[]=
 			{
-				"UGL_40x36",
-				"3UGL_40x36",
 				"MET_GL_MagWell",
 				"MET_3GL_MagWell"
 			};
@@ -357,7 +355,7 @@ class CfgWeapons
 			reloadAction="GestureReloadMXUGL";
 			reloadMagazineSound[]=
 			{
-				"A3\Sounds_F\arsenal\weapons\Rifles\MX\Mx_UGL_reload",
+				"A3\Sounds_F\arsenal\weapons\Rifles\MX\Mx_UGL_reload.wss",
 				1,
 				1,
 				10
@@ -379,7 +377,7 @@ class CfgWeapons
 		};
 		drySound[]=
 		{
-			"\3AS\3AS_Main\Sounds\Blaster_empty",
+			"\3AS\3AS_Main\Sounds\Blaster_empty.wss",
 			2,
 			1,
 			20
@@ -481,7 +479,7 @@ class CfgWeapons
 		};
 		magazineReloadSwitchPhase=0.40000001;
 		discreteDistanceInitIndex=0;
-		recoil="MET_recoil_Z6";
+		recoil="MET_recoil_Westar";
 		maxRecoilSway=0.04; //smaller = Easier to Control During Sustained fire
 		swayDecaySpeed=2; //higher = Less Sway Over Time
 		inertia=0.7; //higher = More Weight
@@ -737,8 +735,6 @@ class CfgWeapons
 			};
 			magazineWell[]=
 			{
-				"UGL_40x36",
-				"3UGL_40x36",
 				"MET_GL_MagWell",
 				"MET_3GL_MagWell"
 			};
@@ -760,7 +756,7 @@ class CfgWeapons
 			reloadAction="GestureReloadMXUGL";
 			reloadMagazineSound[]=
 			{
-				"A3\Sounds_F\arsenal\weapons\Rifles\MX\Mx_UGL_reload",
+				"A3\Sounds_F\arsenal\weapons\Rifles\MX\Mx_UGL_reload.wss",
 				1,
 				1,
 				10
@@ -782,7 +778,7 @@ class CfgWeapons
 		};
 		drySound[]=
 		{
-			"\3AS\3AS_Main\Sounds\Blaster_empty",
+			"\3AS\3AS_Main\Sounds\Blaster_empty.wss",
 			2,
 			1,
 			20

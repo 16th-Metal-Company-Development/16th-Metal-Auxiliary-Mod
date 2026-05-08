@@ -31,8 +31,10 @@ class XtdGearInfos {
         class MET_Helmet_Trooper_Gambit      { model = "MET_Custom_Helmet"; camo = "Gambit"; };
         class MET_Helmet_Trooper_Hazmat      { model = "MET_Custom_Helmet"; camo = "Hazmat"; };
         class MET_Helmet_Trooper_Hellwolf    { model = "MET_Custom_Helmet"; camo = "Hellwolf"; };
+        class MET_Helmet_Trooper_Header      { model = "MET_Custom_Helmet"; camo = "Header"; };
         class MET_Helmet_Trooper_Hevy        { model = "MET_Custom_Helmet"; camo = "Hevy"; };
         class MET_Helmet_Trooper_Hood        { model = "MET_Custom_Helmet"; camo = "Hood"; };
+        class MET_Helmet_Trooper_Kick        { model = "MET_Custom_Helmet"; camo = "Kick"; };
         class MET_Helmet_Trooper_Karma       { model = "MET_Custom_Helmet"; camo = "Karma"; };
         class MET_Helmet_Trooper_Krieg       { model = "MET_Custom_Helmet"; camo = "Krieg"; };
         class MET_Helmet_Trooper_Longshot    { model = "MET_Custom_Helmet"; camo = "Longshot"; };
@@ -73,6 +75,7 @@ class XtdGearInfos {
 
         // [16th] Custom Airborne Trooper Helmet variants
         class MET_Helmet_Airborne_Blackrose  { model = "MET_Custom_Airborne_Helmet"; camo = "Blackrose"; };
+        class MET_Helmet_Airborne_Blowfish   { model = "MET_Custom_Airborne_Helmet"; camo = "Blowfish"; };
         class MET_Helmet_Airborne_Frost      { model = "MET_Custom_Airborne_Helmet"; camo = "Frost"; };
         class MET_Helmet_Airborne_Jero       { model = "MET_Custom_Airborne_Helmet"; camo = "Jero"; };
         class MET_Helmet_Airborne_Noble      { model = "MET_Custom_Airborne_Helmet"; camo = "Noble"; };
@@ -83,6 +86,7 @@ class XtdGearInfos {
         class MET_Helmet_ARF_NCO             { model = "MET_ARF_Helmet"; camo = "NCO"; };
 
         // [16th] Custom ARF variants
+        class MET_Helmet_ARF_Alouminochar    { model = "MET_Custom_ARF_Helmet"; camo = "Alouminochar"; };
         class MET_Helmet_ARF_Blue            { model = "MET_Custom_ARF_Helmet"; camo = "Blue"; };
         class MET_Helmet_ARF_Chet            { model = "MET_Custom_ARF_Helmet"; camo = "Chet"; };
         class MET_Helmet_ARF_Convor          { model = "MET_Custom_ARF_Helmet"; camo = "Convor"; };
@@ -100,6 +104,8 @@ class XtdGearInfos {
         class MET_Helmet_Pilot_Base          { model = "MET_Thunder_Helmet"; camo = "Pilot"; };
         class MET_Helmet_Pilot_Fool          { model = "MET_Thunder_Helmet"; camo = "Fool"; };
         class MET_Helmet_Pilot_Sunto         { model = "MET_Thunder_Helmet"; camo = "Sunto"; };
+        class MET_Helmet_Pilot_Phoenix       { model = "MET_Thunder_Helmet"; camo = "Phoenix"; };
+        class MET_Helmet_Pilot_Cerberus      { model = "MET_Thunder_Helmet"; camo = "Cerberus"; };
 
         // [16th] Trooper Armor variants (Phase 2)
         class MET_Uniform_Trooper_Cadet      { model = "MET_Trooper_Armor"; camo = "Cadet"; };

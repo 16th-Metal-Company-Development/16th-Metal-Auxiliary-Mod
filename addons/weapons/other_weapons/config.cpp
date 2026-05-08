@@ -18,7 +18,7 @@ class CfgPatches
 		skipWhenMissingDependencies=1;
 		requiredAddons[]=
 		{
-			"ShadowLegion_Aux_Weapons"
+			"SFA_Weapons_S"
 		};
 	};
 };
@@ -1876,7 +1876,7 @@ class CfgWeapons
 			reloadAction="GestureReloadMXUGL";
 			reloadMagazineSound[]=
 			{
-				"A3\Sounds_F\arsenal\weapons\Rifles\MX\Mx_UGL_reload",
+				"A3\Sounds_F\arsenal\weapons\Rifles\MX\Mx_UGL_reload.wss",
 				1,
 				1,
 				10
@@ -3470,7 +3470,7 @@ class CfgWeapons
 		};
 		drySound[]=
 		{
-			"A3\Sounds_F\arsenal\weapons\Rifles\MX\dry_Mx",
+			"A3\Sounds_F\arsenal\weapons\Rifles\MX\dry_Mx.wss",
 			0.56234097,
 			1,
 			10
@@ -3484,7 +3484,7 @@ class CfgWeapons
 		};
 		changeFiremodeSound[]=
 		{
-			"A3\Sounds_F\arsenal\weapons\Rifles\Katiba\firemode_katiba",
+			"A3\Sounds_F\arsenal\weapons\Rifles\Katiba\firemode_katiba.wss",
 			0.25118899,
 			1,
 			5
@@ -4173,7 +4173,7 @@ class CfgMagazines
 		displayName="E403 Proton mag";
 		displayNameShort="";
 		descriptionShort="";
-		ammo="MET_gl_orange";
+		ammo="MET_25HE_orange";
 		tracersEvery=1;
 		initSpeed=920;
 		mass=25;
@@ -4189,7 +4189,7 @@ class CfgMagazines
 		displayName="E403 light Proton mag";
 		displayNameShort="";
 		descriptionShort="";
-		ammo="MET_gl_orange";
+		ammo="MET_25HE_orange";
 		tracersEvery=1;
 		initSpeed=320;
 		mass=20;
@@ -4205,7 +4205,7 @@ class CfgMagazines
 		displayName="E403 Medium Proton mag";
 		displayNameShort="";
 		descriptionShort="";
-		ammo="MET_gl_orange";
+		ammo="MET_25HE_orange";
 		tracersEvery=1;
 		initSpeed=320;
 		mass=200;
@@ -4221,7 +4221,7 @@ class CfgMagazines
 		displayName="E403 Heavy Proton mag";
 		displayNameShort="";
 		descriptionShort="";
-		ammo="MET_gl_orange";
+		ammo="MET_25HE_orange";
 		tracersEvery=1;
 		initSpeed=320;
 		mass=400;
@@ -4853,7 +4853,8 @@ class CfgAmmo
 			default_mat="SFA_ImpactPlasma";
 		};
 	};
-	class MET_gl_orange: GrenadeBase
+	class MET_25HE_LauncherGrenade;
+	class MET_25HE_orange: MET_25HE_LauncherGrenade
 	{
 		author="16th AUX Team";
 		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Yellow.p3d";
@@ -4866,9 +4867,9 @@ class CfgAmmo
 		nvgonly=0;
 		timetolive=8;
 		effectfly="met_plasma_orange";
-		hit=200;
-		indirecthit=25;
-		indirecthitrange=12;
+		hit=100;
+		indirecthit=17;
+		indirecthitrange=3;
 		warheadName="HE";
 		visibleFire=1;
 		audibleFire=30;
@@ -4888,28 +4889,28 @@ class CfgAmmo
 		aiAmmoUsageFlags="32 + 64 + 128 + 512";
 		soundHit1[]=
 		{
-			"A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_01",
+			"A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_01.wss",
 			3.1622777,
 			1,
 			1500
 		};
 		soundHit2[]=
 		{
-			"A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_02",
+			"A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_02.wss",
 			3.1622777,
 			1,
 			1500
 		};
 		soundHit3[]=
 		{
-			"A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_03",
+			"A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_03.wss",
 			3.1622777,
 			1,
 			1500
 		};
 		soundHit4[]=
 		{
-			"A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_04",
+			"A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_04.wss",
 			3.1622777,
 			1,
 			1500

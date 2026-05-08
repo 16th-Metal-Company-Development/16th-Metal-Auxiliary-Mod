@@ -391,12 +391,7 @@ class CfgWeapons
 	==============================================================================*/
 	class ShdwCmpny_DC19_F: Rifle_Base_F
 	{
-		class WeaponSlotsInfo
-		{
-			class Cowsslot;
-			class MuzzleSlot;
-			class PointerSlot;
-		};
+		class WeaponSlotsInfo;
 	};
 	class MET_DC19MkII: ShdwCmpny_DC19_F
 	{
@@ -561,27 +556,27 @@ class CfgWeapons
 			class StandardSound: BaseSoundModeType
 			{
 				weaponSoundEffect="";
-				begin1[] = {"ShadowLegion_Weapons\data\DC15\DC15C2\DC15A3_Auto_1.ogg",1,1,900};
-				begin2[] = {"ShadowLegion_Weapons\data\DC15\DC15C2\DC15A3_Auto_1.ogg",1,1,900};
-				begin3[] = {"ShadowLegion_Weapons\data\DC15\DC15C2\DC15A3_Auto_2.ogg",1,1,900};
-				begin4[] = {"ShadowLegion_Weapons\data\DC15\DC15C2\DC15A3_Auto_1.ogg",1,1,900};
-				begin5[] = {"ShadowLegion_Weapons\data\DC15\DC15C2\DC15A3_Auto_1.ogg",1,1,900};
-				begin6[] = {"ShadowLegion_Weapons\data\DC15\DC15C2\DC15A3_Auto_1.ogg",1,1,900};
-				begin7[] = {"ShadowLegion_Weapons\data\DC15\DC15C2\DC15A3_Auto_3.ogg",1,1,200};
-				beginwater1[] = {"\ShadowLegion_Weapons\data\Underwater_Firing.ogg",1,1,200};
+				begin1[] = {"ShadowLegion_Weapons\data\DC15\DC15C2\DC15A3_Auto_1.ogg",0.8,1,900};
+				begin2[] = {"ShadowLegion_Weapons\data\DC15\DC15C2\DC15A3_Auto_1.ogg",0.8,1,900};
+				begin3[] = {"ShadowLegion_Weapons\data\DC15\DC15C2\DC15A3_Auto_2.ogg",0.8,1,900};
+				begin4[] = {"ShadowLegion_Weapons\data\DC15\DC15C2\DC15A3_Auto_1.ogg",0.8,1,900};
+				begin5[] = {"ShadowLegion_Weapons\data\DC15\DC15C2\DC15A3_Auto_1.ogg",0.8,1,900};
+				begin6[] = {"ShadowLegion_Weapons\data\DC15\DC15C2\DC15A3_Auto_1.ogg",0.8,1,900};
+				begin7[] = {"ShadowLegion_Weapons\data\DC15\DC15C2\DC15A3_Auto_3.ogg",0.8,1,900};
+				beginwater1[] = {"\ShadowLegion_Weapons\data\Underwater_Firing.ogg",0.8,1,200};
 				soundBegin[] = {"begin1",0.5,"begin2",0.5,"begin3",0.5,"begin4",0.5,"begin5",0.5,"begin6",0.5,"begin7",0.5};
 				soundBeginWater[] = {"beginwater1",0.5};
 			};
 			class SilencedSound: BaseSoundModeType
 			{
 				weaponSoundEffect="";
-				begin1[] = {"ShadowLegion_Weapons\data\DC19Surpressed.ogg",2,1,300};
-				begin2[] = {"ShadowLegion_Weapons\data\DC19Surpressed.ogg",2,1,300};
-				begin3[] = {"ShadowLegion_Weapons\data\DC19Surpressed.ogg",2,1,300};
-				begin4[] = {"ShadowLegion_Weapons\data\DC19Surpressed.ogg",2,1,300};
-				begin5[] = {"ShadowLegion_Weapons\data\DC19Surpressed.ogg",2,1,300};
-				begin6[] = {"ShadowLegion_Weapons\data\DC19Surpressed.ogg",2,1,300};
-				beginwater1[] = {"\ShadowLegion_Weapons\data\Underwater_Firing.ogg",1,1,200};
+				begin1[] = {"ShadowLegion_Weapons\data\DC19Surpressed.ogg",0.8,1,300};
+				begin2[] = {"ShadowLegion_Weapons\data\DC19Surpressed.ogg",0.8,1,300};
+				begin3[] = {"ShadowLegion_Weapons\data\DC19Surpressed.ogg",0.8,1,300};
+				begin4[] = {"ShadowLegion_Weapons\data\DC19Surpressed.ogg",0.8,1,300};
+				begin5[] = {"ShadowLegion_Weapons\data\DC19Surpressed.ogg",0.8,1,300};
+				begin6[] = {"ShadowLegion_Weapons\data\DC19Surpressed.ogg",0.8,1,300};
+				beginwater1[] = {"\ShadowLegion_Weapons\data\Underwater_Firing.ogg",0.8,1,200};
 				soundBegin[] = {"begin1",0.5,"begin2",0.5,"begin3",0.5,"begin4",0.5,"begin5",0.5,"begin6",0.5};
 				soundBeginWater[] = {"beginwater1",0.5};
 			};
@@ -616,7 +611,10 @@ class CfgWeapons
 			};
 			class PointerSlot: PointerSlot
 			{
-				compatibleItems[]={};
+				compatibleItems[]=
+				{
+					"ShdwCmpny_IR_MPD"
+				};
 			};
 		};
 	};
