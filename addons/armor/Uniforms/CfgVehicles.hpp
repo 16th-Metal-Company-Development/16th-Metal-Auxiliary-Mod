@@ -3112,6 +3112,11 @@ class MET_Uniform_Trooper_Sunto_Base : MET_Uniform_Trooper_Base
 		"z\MET\addons\Armor_Rewrite\Uniforms\Textures\Custom\MET_Sunto_Uniform1_CO.paa",
 		"z\MET\addons\Armor_Rewrite\Uniforms\Textures\Custom\MET_Sunto_Uniform2_CO.paa"
 	};
+	hiddenSelectionsMaterials[] =
+	{
+		"\MRC\JLTS\characters\CloneArmor\data\clone_armor1_clean.rvmat",
+		"\MRC\JLTS\characters\CloneArmor\data\clone_armor2_clean.rvmat"
+	};
 	linkedItems[] =
 	{
 		"MET_Helmet_Trooper_Sunto",
