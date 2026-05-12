@@ -1,4 +1,4 @@
-class CfgPatches
+	class CfgPatches
 {
 	class met_rep_rifle_dc15s
 	{
@@ -506,7 +506,7 @@ class CfgWeapons
 		magazineWell[]={};
 		drySound[]=
 		{
-			"A3\Sounds_F\arsenal\weapons\Rifles\Mx\dry_Mx.wss.wss",
+			"A3\Sounds_F\arsenal\weapons\Rifles\Mx\dry_Mx.wss",
 			0.56234097,
 			1,
 			10
@@ -517,7 +517,7 @@ class CfgWeapons
 			magazines[]={};
 			drySound[]=
 			{
-				"A3\Sounds_F\arsenal\weapons\Rifles\Mx\dry_Mx.wss.wss",
+				"A3\Sounds_F\arsenal\weapons\Rifles\Mx\dry_Mx.wss",
 				0.56234097,
 				1,
 				10
@@ -779,7 +779,6 @@ class CfgWeapons
 			};
 			magazineWell[]=
 			{
-				"UGL_40x36",
 				"MET_GL_MagWell"
 			};
 			cameraDir="OP_look";

@@ -90,7 +90,7 @@ class CfgWeapons
 		};
 		magazineReloadSwitchPhase=0.40000001;
 		discreteDistanceInitIndex=0;
-		recoil="MET_recoil_Z6";
+		recoil="MET_recoil_Westar";
 		maxRecoilSway=0.04; //smaller = Easier to Control During Sustained fire
 		swayDecaySpeed=2; //higher = Less Sway Over Time
 		inertia=0.7; //higher = More Weight
@@ -334,8 +334,6 @@ class CfgWeapons
 			};
 			magazineWell[]=
 			{
-				"UGL_40x36",
-				"3UGL_40x36",
 				"MET_GL_MagWell",
 				"MET_3GL_MagWell"
 			};
@@ -481,7 +479,7 @@ class CfgWeapons
 		};
 		magazineReloadSwitchPhase=0.40000001;
 		discreteDistanceInitIndex=0;
-		recoil="MET_recoil_Z6";
+		recoil="MET_recoil_Westar";
 		maxRecoilSway=0.04; //smaller = Easier to Control During Sustained fire
 		swayDecaySpeed=2; //higher = Less Sway Over Time
 		inertia=0.7; //higher = More Weight
@@ -737,8 +735,6 @@ class CfgWeapons
 			};
 			magazineWell[]=
 			{
-				"UGL_40x36",
-				"3UGL_40x36",
 				"MET_GL_MagWell",
 				"MET_3GL_MagWell"
 			};

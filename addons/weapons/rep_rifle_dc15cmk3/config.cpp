@@ -341,7 +341,6 @@ class CfgWeapons
 			};
 			magazineWell[]=
 			{
-				"UGL_40x36",
 				"MET_GL_MagWell"
 			};
 			cameraDir="OP_look";

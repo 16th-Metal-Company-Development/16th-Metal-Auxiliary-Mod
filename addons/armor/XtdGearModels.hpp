@@ -23,8 +23,8 @@ class XtdGearModels {
                     "Arch", "Avalanche", "Beige", "Ben", "Blackrose",
                     "Blatt", "Blowfish", "Bopit", "Butcher", "Chet",
                     "Chetiah", "Cougar", "Creed", "Dubs", "Fish", "Frost",
-                    "Gambit", "Hazmat", "Hellwolf", "Hevy", "Hood",
-                    "Karma", "Longshot", "Maia", "Mace", "Maple",
+                    "Gambit", "Hazmat", "Header", "Hellwolf", "Hevy", "Hood",
+                    "Karma", "Kick", "Longshot", "Maia", "Mace", "Maple",
                     "Maxson", "Merlin", "Moldy", "Nix", "Noble",
                     "Orpheus", "Otto", "Prez", "Ronin", "Roz",
                     "Sam", "Ska", "Six", "Smith", "Spice",
@@ -52,7 +52,7 @@ class XtdGearModels {
             options[] = { "camo" };
             class camo {
                 values[] = {
-                    "Blackrose", "Frost", "Jero", "Noble", "Vergil"
+                    "Blackrose", "Blowfish", "Frost", "Jero", "Noble", "Vergil"
                 };
             };
         };
@@ -71,7 +71,10 @@ class XtdGearModels {
             author = "16th Mod Team";
             options[] = { "camo" };
             class camo {
-                values[] = { "Blue", "Chet", "Convor", "Kix", "Maple", "Tavion" };
+                values[] = { 
+                    "Alouminochar", "Blue", "Chet", 
+                    "Convor", "Kix", "Maple", "Tavion" 
+                };
             };
         };
 
@@ -91,7 +94,7 @@ class XtdGearModels {
             author = "16th Mod Team";
             options[] = { "camo" };
             class camo {
-                values[] = { "Pilot", "Fool", "Sunto" };
+                values[] = { "Pilot", "Fool", "Sunto", "Phoenix", "Cerberus"};
             };
         };
 
