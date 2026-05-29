@@ -323,6 +323,7 @@ class CfgPatches
 			"MET_Uniform_Trooper_Blatt",
 			"MET_Uniform_Trooper_Bopit",
 			"MET_Uniform_Trooper_Cougar",
+			"MET_Uniform_Trooper_Convor",
 			"MET_Uniform_Trooper_Fool",
 			"MET_Uniform_Trooper_Phoenix",
 			"MET_Uniform_Trooper_Cerberus",

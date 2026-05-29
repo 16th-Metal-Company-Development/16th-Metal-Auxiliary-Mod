@@ -760,6 +760,15 @@ class MET_Uniform_Trooper_Cougar : MET_Uniform_Trooper
 	{
 		uniformclass = "MET_Uniform_Trooper_Cougar_Base";
 	};
+}
+class MET_Uniform_Trooper_Convor : MET_Uniform_Trooper
+{
+	scope = 2;
+	displayName = "[16th] Convor's Armor";
+	class ItemInfo : ItemInfo
+	{
+		uniformclass = "MET_Uniform_Trooper_Convor_Base";
+	};
 };
 class MET_Uniform_Trooper_Fool : MET_Uniform_Trooper
 {

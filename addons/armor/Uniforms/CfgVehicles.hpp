@@ -2697,6 +2697,35 @@ class MET_Uniform_Trooper_Cougar_Base : MET_Uniform_Trooper_Base
 		"JLTS_CloneNVG"
 	};
 };
+class MET_Uniform_Trooper_Convor_Base : MET_Uniform_Trooper_Base
+{
+	scope = 1;
+	displayName = "[16th] Convor";
+	uniformClass = "MET_Uniform_Trooper_Convor";
+	hiddenselectionsTextures[] =
+	{
+		"z\MET\addons\Armor_Rewrite\Uniforms\Textures\Custom\MET_Convor_Uniform1_CO.paa",
+		"z\MET\addons\Armor_Rewrite\Uniforms\Textures\Custom\MET_Convor_Uniform2_CO.paa"
+	};
+	linkedItems[] =
+	{
+		"MET_Helmet_ARF_Convor",
+		"ItemMap",
+		"JLTS_clone_comlink",
+		"ItemCompass",
+		"ItemWatch",
+		"JLTS_CloneNVG"
+	};
+	respawnLinkedItems[] =
+	{
+		"MET_Helmet_ARF_Convor",
+		"ItemMap",
+		"JLTS_clone_comlink",
+		"ItemCompass",
+		"ItemWatch",
+		"JLTS_CloneNVG"
+	};
+};
 class MET_Uniform_Trooper_Fool_Base : MET_Uniform_Trooper_Base
 {
 	scope = 1;
