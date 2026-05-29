@@ -132,7 +132,9 @@ class XtdGearInfos {
         class MET_Uniform_Trooper_Blackrose  { model = "MET_Custom_Armor"; camo = "Blackrose"; };
         class MET_Uniform_Trooper_Blatt      { model = "MET_Custom_Armor"; camo = "Blatt"; };
         class MET_Uniform_Trooper_Bopit      { model = "MET_Custom_Armor"; camo = "Bopit"; };
+        class MET_Uniform_Trooper_Cerberus   { model = "MET_Custom_Armor"; camo = "Cerberus"; };
         class MET_Uniform_Trooper_Cougar     { model = "MET_Custom_Armor"; camo = "Cougar"; };
+        class MET_Uniform_Trooper_Convor     { model = "MET_Custom_Armor"; camo = "Convor"; };
         class MET_Uniform_Trooper_Fool       { model = "MET_Custom_Armor"; camo = "Fool"; };
         class MET_Uniform_Trooper_Hazmat     { model = "MET_Custom_Armor"; camo = "Hazmat"; };
         class MET_Uniform_Trooper_Hood       { model = "MET_Custom_Armor"; camo = "Hood"; };
@@ -143,6 +145,7 @@ class XtdGearInfos {
         class MET_Uniform_Trooper_Moldy_Zeus { model = "MET_Custom_Armor"; camo = "Moldy Zeus"; };
         class MET_Uniform_Trooper_Nix        { model = "MET_Custom_Armor"; camo = "Nix"; };
         class MET_Uniform_Trooper_Noble      { model = "MET_Custom_Armor"; camo = "Noble"; };
+        class MET_Uniform_Trooper_Phoenix    { model = "MET_Custom_Armor"; camo = "Phoenix"; };
         class MET_Uniform_Trooper_Prez       { model = "MET_Custom_Armor"; camo = "Prez"; };
         class MET_Uniform_Trooper_Ronin      { model = "MET_Custom_Armor"; camo = "Ronin"; };
         class MET_Uniform_Trooper_Roz        { model = "MET_Custom_Armor"; camo = "Roz"; };
