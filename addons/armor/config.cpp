@@ -179,6 +179,7 @@ class CfgPatches
 			"MET_Helmet_Airborne_Blackrose",
 			"MET_Helmet_Airborne_Blowfish",
 			"MET_Helmet_Airborne_Frost",
+			"MET_Helmet_Airborne_Hellwolf",
 			"MET_Helmet_Airborne_Jero",
 			"MET_Helmet_Airborne_Noble",
 			"MET_Helmet_Airborne_Kick",

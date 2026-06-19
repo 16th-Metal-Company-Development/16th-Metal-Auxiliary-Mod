@@ -77,6 +77,7 @@ class XtdGearInfos {
         class MET_Helmet_Airborne_Blackrose  { model = "MET_Custom_Airborne_Helmet"; camo = "Blackrose"; };
         class MET_Helmet_Airborne_Blowfish   { model = "MET_Custom_Airborne_Helmet"; camo = "Blowfish"; };
         class MET_Helmet_Airborne_Frost      { model = "MET_Custom_Airborne_Helmet"; camo = "Frost"; };
+        class MET_Helmet_Airborne_Hellwolf      { model = "MET_Custom_Airborne_Helmet"; camo = "Hellwolf"; };
         class MET_Helmet_Airborne_Jero       { model = "MET_Custom_Airborne_Helmet"; camo = "Jero"; };
         class MET_Helmet_Airborne_Noble      { model = "MET_Custom_Airborne_Helmet"; camo = "Noble"; };
         class MET_Helmet_Airborne_Vergil     { model = "MET_Custom_Airborne_Helmet"; camo = "Vergil"; };
