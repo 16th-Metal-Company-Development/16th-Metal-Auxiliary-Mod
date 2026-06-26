@@ -1186,6 +1186,16 @@ class MET_Vest_SNCO_Vergil : JLTS_CloneVestAirborneNCO
 		"z\MET\addons\Armor_Rewrite\Vests\Textures\Custom\MET_Vest_SNCO_Rig_Vergil_CO.paa"
 	};
 };
+class MET_Vest_SNCO_Hazmat : MET_Vest_SNCO_Base
+{
+	scope = 2;
+	displayname = "[16th] Hazmat's Vest";
+	hiddenSelectionsTextures[] =
+	{
+		"z\MET\addons\Armor_Rewrite\Vests\Textures\Custom\MET_Vest_SNCO_Kama_Hazmat_CO.paa",
+		"z\MET\addons\Armor_Rewrite\Vests\Textures\Custom\MET_Vest_SNCO_Pauldron_Hazmat_CO.paa"
+	};
+};
 
 // ARC
 class MET_Vest_ARC_Blackrose : MET_Vest_ARC_Base

@@ -9,6 +9,10 @@ class CfgPatches
 		{
 			"MET_DC15L_F"
 		};
+		magazines[]=
+		{
+			"ACE_DC15L_SpareBarrel"
+		};
 		skipWhenMissingDependencies=1;
 		requiredAddons[]=
 		{
@@ -81,6 +85,16 @@ class CfgWeapons
 	==============================================================================*/
 	class MET_DC15L_Base_F: Rifle_Base_F
 	{
+		ACE_overheating_mrbs=30000; //Mean Rounds Between Stoppages (this will be scaled based on the barrel temp)
+		ACE_Overheating_Dispersion[]={0,0.0008,0.0012,0.0024}; //Dispersion Factor, increases the dispersion of the projectile (this will be scaled based on the barrel temp)
+		ACE_Overheating_SlowdownFactor[]={1,1,0.9,0.8}; //Slowdown Factor, reduces the velocity of the projectile (this will be scaled based on the barrel temp)
+		ACE_Overheating_JamChance[]={0,0.0005,0.0001,0.004};
+		ACE_Overheating_allowSwapBarrel=1; // 1 to enable barrel swap. 0 to disable. Meant for machine guns where you can easily swap the barrel without dismantling the whole weapon.
+		ACE_Overheating_barrelClassname="ACE_DC15L_SpareBarrel";
+		ace_overheating_jamTypesAllowed[] = {"Feed", "Dud"}; // Allowed and default values are ["Eject", "Extract", "Feed", "Fire", "Dud"]. In the example here a revolver does not eject, extract, or feed on each shot so those values are removed.
+		ace_overheating_closedBolt = 0; // Open bolt, can't cook off from barrel heat.
+        ace_overheating_barrelMass = 6.5; // Mass of the area heated by firing, not strictly just the barrel. Higher mass gives slower heat buildup and faster cooling. Default estimation is 55% of weapon weight in kg.
+		ACE_clearJamAction = "GestureReloadMX"; // Custom jam clearing action. Default uses reload animation, use an empty string to undefine
 		author="$STR_3as_Studio";
 		magazines[]=
 		{
@@ -333,10 +347,6 @@ class CfgWeapons
 			1,
 			30
 		};*/
-		ace_overheating_mrbs=3000;
-		ace_overheating_slowdownFactor=1;
-		ace_overheating_allowSwapBarrel=0;
-		ace_overheating_dispersion=0.75;
 	};
 	class MET_DC15L_F: MET_DC15L_Base_F
 	{
@@ -372,6 +382,18 @@ class CfgWeapons
 			1,
 			10
 		};
+	};
+};
+class CfgMagazines
+{
+	class ACE_SpareBarrel;
+	class ACE_DC15L_SpareBarrel: ACE_SpareBarrel
+	{
+		scope=2;
+		author="SPS Team";
+		scopeCurator=2;
+		displayName="[16th] DC-15L Spare barrel";
+		mass=6.5;
 	};
 };
 class CfgMagazineWells

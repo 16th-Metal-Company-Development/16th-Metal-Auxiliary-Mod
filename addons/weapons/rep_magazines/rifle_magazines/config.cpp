@@ -43,6 +43,15 @@ class CfgMagazines
 		ammo="MET_blasterbolt";
 		tracersEvery=1;
 		scope=2;
+		mass=10;
+	};
+	class MET_DC15A_stendo_mag: MET_DC15A_mag
+	{
+		count=75;
+		displayName="[16th] Valken-38r Extended Energy Cell";
+		displayNameShort="Energy Cell";
+		descriptionShort="Energy cell for the Valken-38r </br>Ammo Count=75";
+		mass=18;
 	};
 	class MET_DC15AM_Mag : JLTS_DC15A_mag
 	{

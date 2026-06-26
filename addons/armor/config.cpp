@@ -179,6 +179,7 @@ class CfgPatches
 			"MET_Helmet_Airborne_Blackrose",
 			"MET_Helmet_Airborne_Blowfish",
 			"MET_Helmet_Airborne_Frost",
+			"MET_Helmet_Airborne_Hellwolf",
 			"MET_Helmet_Airborne_Jero",
 			"MET_Helmet_Airborne_Noble",
 			"MET_Helmet_Airborne_Kick",
@@ -244,6 +245,7 @@ class CfgPatches
 			"MET_Vest_Officer_L_Ronin",
 			"MET_Vest_Commander_Merlin",
 			"MET_Vest_SNCO_Vergil",
+			"MET_Vest_SNCO_Hazmat",
 
 			// Custom ARC Vests
 			"MET_Vest_ARC_Blackrose",

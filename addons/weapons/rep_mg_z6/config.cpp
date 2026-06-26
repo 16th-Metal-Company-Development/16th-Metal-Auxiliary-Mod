@@ -91,21 +91,20 @@ class CfgWeapons
 	==============================================================================*/
 	class MET_Z6: LMG_Mk200_F
 	{
+		ACE_overheating_mrbs=40000; //Mean Rounds Between Stoppages (this will be scaled based on the barrel temp)
+		ACE_Overheating_Dispersion[]={0,0.001,0.002,0.006}; //Dispersion Factor, increases the dispersion of the projectile (this will be scaled based on the barrel temp)
+		ACE_Overheating_SlowdownFactor[]={1,0.9,0.75,0.6}; //Slowdown Factor, reduces the velocity of the projectile (this will be scaled based on the barrel temp)
+		ACE_Overheating_JamChance[]={0,0.0006,0.001,0.008};
+		ACE_Overheating_allowSwapBarrel=1; // 1 to enable barrel swap. 0 to disable. Meant for machine guns where you can easily swap the barrel without dismantling the whole weapon.
+		ACE_Overheating_barrelClassname="ACE_Z6_SpareBarrel";
+		ace_overheating_jamTypesAllowed[] = {"Feed", "Dud"}; // Allowed and default values are ["Eject", "Extract", "Feed", "Fire", "Dud"]. In the example here a revolver does not eject, extract, or feed on each shot so those values are removed.
+		ace_overheating_closedBolt = 0; // Closed bolt, can cook off from barrel heat.
+        ace_overheating_barrelMass = 3; // Mass of the area heated by firing, not strictly just the barrel. Higher mass gives slower heat buildup and faster cooling. Default estimation is 55% of weapon weight in kg.
+		ACE_clearJamAction = "GestureReloadMX"; // Custom jam clearing action. Default uses reload animation, use an empty string to undefine
 		JLTS_hasElectronics=1;
 		JLTS_hasEMPProtection=0;
 		JLTS_friedItem="MET_Z6_fried";
 		JLTS_repairTime=40;
-		ace_overheating_mrbs=40000;
-		ace_overheating_slowdownFactor=0;
-		ace_overheating_allowSwapBarrel=0;
-		ace_overheating_dispersion=1;
-		ace_overheating_closedBolt=0;
-		ace_overheating_barrelMass=1;
-		ace_overheating_jamTypesAllowed[]=
-		{
-			"Fire",
-			"Dud"
-		};
 		author="Hazmat";
 		canShootInWater=1;
 		scope=2;
@@ -144,7 +143,6 @@ class CfgWeapons
 			"\MRC\JLTS\weapons\Z6\anims\Z6_handanim.rtm"
 		};
 		reloadAction="";
-		ace_clearJamAction="";
 		magazineWell[]={
 			"MET_Z6_MagWell"
 		};
@@ -447,21 +445,20 @@ class CfgWeapons
 	==============================================================================*/
 	class MET_Z6_MkII: arifle_MX_Base_F
 	{
+		ACE_overheating_mrbs=60000; //Mean Rounds Between Stoppages (this will be scaled based on the barrel temp)
+		ACE_Overheating_Dispersion[]={0,0.0009,0.0013,0.0026}; //Dispersion Factor, increases the dispersion of the projectile (this will be scaled based on the barrel temp)
+		ACE_Overheating_SlowdownFactor[]={1,0.9,0.75,0.6}; //Slowdown Factor, reduces the velocity of the projectile (this will be scaled based on the barrel temp)
+		ACE_Overheating_JamChance[]={0,0.00015000001,0.00075000001,0.0037499999};
+		ACE_Overheating_allowSwapBarrel=1; // 1 to enable barrel swap. 0 to disable. Meant for machine guns where you can easily swap the barrel without dismantling the whole weapon.
+		ACE_Overheating_barrelClassname="ACE_Z6_SpareBarrel";
+		ace_overheating_jamTypesAllowed[] = {"Feed", "Dud"}; // Allowed and default values are ["Eject", "Extract", "Feed", "Fire", "Dud"]. In the example here a revolver does not eject, extract, or feed on each shot so those values are removed.
+		ace_overheating_closedBolt = 0; // Closed bolt, can cook off from barrel heat.
+        ace_overheating_barrelMass = 3; // Mass of the area heated by firing, not strictly just the barrel. Higher mass gives slower heat buildup and faster cooling. Default estimation is 55% of weapon weight in kg.
+		ACE_clearJamAction = "GestureReloadMX"; // Custom jam clearing action. Default uses reload animation, use an empty string to undefine
 		JLTS_hasElectronics=1;
 		JLTS_hasEMPProtection=0;
 		JLTS_friedItem="MET_Z6_MkII_fried";
 		JLTS_repairTime=40;
-		ace_overheating_mrbs=40000;
-		ace_overheating_slowdownFactor=0;
-		ace_overheating_allowSwapBarrel=0;
-		ace_overheating_dispersion=1;
-		ace_overheating_closedBolt=0;
-		ace_overheating_barrelMass=1;
-		ace_overheating_jamTypesAllowed[]=
-		{
-			"Fire",
-			"Dud"
-		};
 		author="Indecisive Armoury Team";
 		canShootInWater=1;
 		scope=2;
@@ -490,7 +487,6 @@ class CfgWeapons
 			"\MRC\JLTS\weapons\Z6\anims\Z6_handanim.rtm"
 		};
 		reloadAction="";
-		ace_clearJamAction="";
 		fireLightDiffuse[]={0.5,0.5,0.5};
 		drySound[]=
 		{
@@ -717,21 +713,20 @@ class CfgWeapons
 	==============================================================================*/
 	class MET_Z6_SOF: LMG_Mk200_F
 	{
+		ACE_overheating_mrbs=60000; //Mean Rounds Between Stoppages (this will be scaled based on the barrel temp)
+		ACE_Overheating_Dispersion[]={0,0.0009,0.0013,0.0026}; //Dispersion Factor, increases the dispersion of the projectile (this will be scaled based on the barrel temp)
+		ACE_Overheating_SlowdownFactor[]={1,0.9,0.75,0.6}; //Slowdown Factor, reduces the velocity of the projectile (this will be scaled based on the barrel temp)
+		ACE_Overheating_JamChance[]={0,0.00015000001,0.00075000001,0.0037499999};
+		ACE_Overheating_allowSwapBarrel=1; // 1 to enable barrel swap. 0 to disable. Meant for machine guns where you can easily swap the barrel without dismantling the whole weapon.
+		ACE_Overheating_barrelClassname="ACE_Z6_SpareBarrel";
+		ace_overheating_jamTypesAllowed[] = {"Feed", "Dud"}; // Allowed and default values are ["Eject", "Extract", "Feed", "Fire", "Dud"]. In the example here a revolver does not eject, extract, or feed on each shot so those values are removed.
+		ace_overheating_closedBolt = 0; // Closed bolt, can cook off from barrel heat.
+        ace_overheating_barrelMass = 3; // Mass of the area heated by firing, not strictly just the barrel. Higher mass gives slower heat buildup and faster cooling. Default estimation is 55% of weapon weight in kg.
+		ACE_clearJamAction = "GestureReloadMX"; // Custom jam clearing action. Default uses reload animation, use an empty string to undefine
 		JLTS_hasElectronics=1;
 		JLTS_hasEMPProtection=1;
 		JLTS_friedItem="JLTS_DP23_fried";
 		JLTS_repairTime=25;
-		ace_overheating_mrbs=40000;
-		ace_overheating_slowdownFactor=0;
-		ace_overheating_allowSwapBarrel=0;
-		ace_overheating_dispersion=1;
-		ace_overheating_closedBolt=0;
-		ace_overheating_barrelMass=1;
-		ace_overheating_jamTypesAllowed[]=
-		{
-			"Fire",
-			"Dud"
-		};
 		author="Hazmat";
 		inertia=0;
 		canShootInWater=1;
@@ -773,7 +768,6 @@ class CfgWeapons
 			"\MRC\JLTS\weapons\Z6\anims\Z6_handanim.rtm"
 		};
 		reloadAction="";
-		ace_clearJamAction="";
 		magazineWell[]={
 			"MET_Z6_MagWell"
 		};
@@ -973,6 +967,16 @@ class CfgWeapons
 	};
 	class MET_Z6_Para: ls_weapon_z6
 	{
+		ACE_overheating_mrbs=50000; //Mean Rounds Between Stoppages (this will be scaled based on the barrel temp)
+		ACE_Overheating_Dispersion[]={0,0.0009,0.0013,0.0026}; //Dispersion Factor, increases the dispersion of the projectile (this will be scaled based on the barrel temp)
+		ACE_Overheating_SlowdownFactor[]={1,0.9,0.75,0.6}; //Slowdown Factor, reduces the velocity of the projectile (this will be scaled based on the barrel temp)
+		ACE_Overheating_JamChance[]={0,0.00015000001,0.00075000001,0.0037499999};
+		ACE_Overheating_allowSwapBarrel=1; // 1 to enable barrel swap. 0 to disable. Meant for machine guns where you can easily swap the barrel without dismantling the whole weapon.
+		ACE_Overheating_barrelClassname="ACE_Z6_SpareBarrel";
+		ace_overheating_jamTypesAllowed[] = {"Feed", "Dud"}; // Allowed and default values are ["Eject", "Extract", "Feed", "Fire", "Dud"]. In the example here a revolver does not eject, extract, or feed on each shot so those values are removed.
+		ace_overheating_closedBolt = 0; // Closed bolt, can cook off from barrel heat.
+        ace_overheating_barrelMass = 2.5; // Mass of the area heated by firing, not strictly just the barrel. Higher mass gives slower heat buildup and faster cooling. Default estimation is 55% of weapon weight in kg.
+		ACE_clearJamAction = "GestureReloadMX"; // Custom jam clearing action. Default uses reload animation, use an empty string to undefine
 		displayName="[16th] Z6 Para Rotary Cannon Mk I";
 		baseWeapon = "MET_Z6_Para";
 		recoil="MET_recoil_Z6";
@@ -999,7 +1003,6 @@ class CfgWeapons
 		};
 		autoReload="true";
 		reloadAction="";
-		ace_clearJamAction="";
 		reloadMagazineSound[]=
 		{
 			"z\MET\addons\weapons\infantry_weap\sounds\republic\z-6\Z6_reload.ogg",
@@ -1170,6 +1173,16 @@ class CfgWeapons
 	};
 	class MET_Z6_Para_MkII: 3AS_Z6_F
 	{
+		ACE_overheating_mrbs=60000; //Mean Rounds Between Stoppages (this will be scaled based on the barrel temp)
+		ACE_Overheating_Dispersion[]={0,0.0009,0.0013,0.0026}; //Dispersion Factor, increases the dispersion of the projectile (this will be scaled based on the barrel temp)
+		ACE_Overheating_SlowdownFactor[]={1,0.9,0.75,0.6}; //Slowdown Factor, reduces the velocity of the projectile (this will be scaled based on the barrel temp)
+		ACE_Overheating_JamChance[]={0,0.00015000001,0.00075000001,0.0037499999};
+		ACE_Overheating_allowSwapBarrel=1; // 1 to enable barrel swap. 0 to disable. Meant for machine guns where you can easily swap the barrel without dismantling the whole weapon.
+		ACE_Overheating_barrelClassname="ACE_Z6_SpareBarrel";
+		ace_overheating_jamTypesAllowed[] = {"Feed", "Dud"}; // Allowed and default values are ["Eject", "Extract", "Feed", "Fire", "Dud"]. In the example here a revolver does not eject, extract, or feed on each shot so those values are removed.
+		ace_overheating_closedBolt = 0; // Closed bolt, can cook off from barrel heat.
+        ace_overheating_barrelMass = 3; // Mass of the area heated by firing, not strictly just the barrel. Higher mass gives slower heat buildup and faster cooling. Default estimation is 55% of weapon weight in kg.
+		ACE_clearJamAction = "GestureReloadMX"; // Custom jam clearing action. Default uses reload animation, use an empty string to undefine
 		displayName="[16th] Z6 Para Rotary Cannon Mk II";
 		baseWeapon = "MET_Z6_Para_MkII";
 		recoil="MET_recoil_Z6";
@@ -1196,7 +1209,6 @@ class CfgWeapons
 		};
 		autoReload="true";
 		reloadAction="";
-		ace_clearJamAction="";
 		reloadMagazineSound[]=
 		{
 			"z\MET\addons\weapons\infantry_weap\sounds\republic\z-6\Z6_reload.ogg",
@@ -1359,6 +1371,18 @@ class CfgWeapons
 		displayName="[16th] Z6 Para Rotary Cannon Mk II (Heavy)";
 		baseWeapon = "MET_Z6_Para_MkII";
 		WBK_UseHeavyWeaponFramework = "true";
+	};
+};
+class CfgMagazines
+{
+	class ACE_SpareBarrel;
+	class ACE_Z6_SpareBarrel: ACE_SpareBarrel
+	{
+		scope=2;
+		author="SPS Team";
+		scopeCurator=2;
+		displayName="[16th] Z6 Spare barrel";
+		mass=19;
 	};
 };
 class CfgMagazineWells
