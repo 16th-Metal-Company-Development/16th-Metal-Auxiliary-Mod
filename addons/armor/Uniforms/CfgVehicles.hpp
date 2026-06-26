@@ -2726,6 +2726,60 @@ class MET_Uniform_Trooper_Convor_Base : MET_Uniform_Trooper_Base
 		"JLTS_CloneNVG"
 	};
 };
+class MET_Uniform_Trooper_Beige_Base : MET_Uniform_Trooper_Base
+{
+	scope = 1;
+	displayName = "[16th] Beige";
+	uniformClass = "MET_Uniform_Trooper_Beige";
+	hiddenselectionsTextures[] =
+	{
+		"z\MET\addons\Armor_Rewrite\Uniforms\Textures\Custom\MET_Beige_Uniform1_CO.paa",
+		"z\MET\addons\Armor_Rewrite\Uniforms\Textures\Custom\MET_Beige_Uniform2_CO.paa"
+	};
+	linkedItems[] =
+	{
+		"MET_Helmet_Trooper_Beige",
+		"ItemMap",
+		"JLTS_clone_comlink",
+		"ItemCompass",
+		"ItemWatch"
+	};
+	respawnLinkedItems[] =
+	{
+		"MET_Helmet_Trooper_Beige",
+		"ItemMap",
+		"JLTS_clone_comlink",
+		"ItemCompass",
+		"ItemWatch"
+	};
+};
+class MET_Uniform_Trooper_Sam_Base : MET_Uniform_Trooper_Base
+{
+	scope = 1;
+	displayName = "[16th] Sam";
+	uniformClass = "MET_Uniform_Trooper_Sam";
+	hiddenselectionsTextures[] =
+	{
+		"z\MET\addons\Armor_Rewrite\Uniforms\Textures\Custom\MET_Sam_Uniform1_CO.paa",
+		"z\MET\addons\Armor_Rewrite\Uniforms\Textures\Custom\MET_Sam_Uniform2_CO.paa"
+	};
+	linkedItems[] =
+	{
+		"MET_Helmet_Trooper_Sam",
+		"ItemMap",
+		"JLTS_clone_comlink",
+		"ItemCompass",
+		"ItemWatch"
+	};
+	respawnLinkedItems[] =
+	{
+		"MET_Helmet_Trooper_Sam",
+		"ItemMap",
+		"JLTS_clone_comlink",
+		"ItemCompass",
+		"ItemWatch"
+	};
+};
 class MET_Uniform_Trooper_Fool_Base : MET_Uniform_Trooper_Base
 {
 	scope = 1;

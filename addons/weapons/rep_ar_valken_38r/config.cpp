@@ -1,6 +1,6 @@
 class CfgPatches
 {
-	class met_rep_mg_dc15l_mk3
+	class met_rep_ar_valken38r
 	{
 		author="";
 		requiredVersion=0.1;
@@ -17,8 +17,6 @@ class CfgPatches
 		};
 	};
 };
-#include "XtdGearModels.hpp"
-#include "XtdGearInfos.hpp"
 class CfgRecoils
 {
 	class recoil_default;
@@ -79,8 +77,8 @@ class CfgWeapons
 		class WeaponSlotsInfo;
 		class GunParticles;
 	};
-	class ShdwCmpny_DC15L_Base_F;
-	class ShdwCmpny_DC15L_F: ShdwCmpny_DC15L_Base_F
+	class ShdwCmpny_Valken38R_Base_F;
+	class ShdwCmpny_Valken38R_F: ShdwCmpny_Valken38R_Base_F
 	{
 		class WeaponSlotsInfo;
 		class GunParticles;
@@ -88,35 +86,34 @@ class CfgWeapons
 	/*==============================================================================
 	==DC-15L
 	==============================================================================*/
-	class MET_DC15L_F_Mk3: ShdwCmpny_DC15L_F
+	class MET_Valken38r: ShdwCmpny_Valken38R_F
 	{
-		ACE_overheating_mrbs=40000; //Mean Rounds Between Stoppages (this will be scaled based on the barrel temp)
+		ACE_overheating_mrbs=80000; //Mean Rounds Between Stoppages (this will be scaled based on the barrel temp)
 		ACE_Overheating_Dispersion[]={0,0.00079999998,0.0012000001,0.0024000001}; //Dispersion Factor, increases the dispersion of the projectile (this will be scaled based on the barrel temp)
 		ACE_Overheating_SlowdownFactor[]={1,1,0.9,0.8}; //Slowdown Factor, reduces the velocity of the projectile (this will be scaled based on the barrel temp)
 		ACE_Overheating_JamChance[]={0,0.00015000001,0.00075000001,0.0037499999};
-		ACE_Overheating_allowSwapBarrel=1; // 1 to enable barrel swap. 0 to disable. Meant for machine guns where you can easily swap the barrel without dismantling the whole weapon.
-		ACE_Overheating_barrelClassname="ACE_DC15L_SpareBarrel";
+		ACE_Overheating_allowSwapBarrel=0; // 1 to enable barrel swap. 0 to disable. Meant for machine guns where you can easily swap the barrel without dismantling the whole weapon.
+		//ACE_Overheating_barrelClassname="ACE_LAMG_SpareBarrel";
 		ace_overheating_jamTypesAllowed[] = {"Feed", "Dud"}; // Allowed and default values are ["Eject", "Extract", "Feed", "Fire", "Dud"]. In the example here a revolver does not eject, extract, or feed on each shot so those values are removed.
 		ace_overheating_closedBolt = 0; // Closed bolt, can cook off from barrel heat.
-        ace_overheating_barrelMass = 6.5; // Mass of the area heated by firing, not strictly just the barrel. Higher mass gives slower heat buildup and faster cooling. Default estimation is 55% of weapon weight in kg.
+        ace_overheating_barrelMass = 6; // Mass of the area heated by firing, not strictly just the barrel. Higher mass gives slower heat buildup and faster cooling. Default estimation is 55% of weapon weight in kg.
 		ACE_clearJamAction = "GestureReloadMX"; // Custom jam clearing action. Default uses reload animation, use an empty string to undefine
-		
 		JLTS_hasElectronics=1;
 		JLTS_hasEMPProtection=0;
-		JLTS_friedItem="MET_DC15L_F_Mk3_fried";
+		JLTS_friedItem="MET_Valken38r_fried";
 		JLTS_repairTime=40;
 		magazines[]=
 		{
-			"MET_DC15L_mag"
+			"MET_DC15A_stendo_mag"
 		};
 		magazineWell[]=
 		{
-			"MET_DC15L_MagWell"
+			"MET_Valken38r_MagWell"
 		};
 		author="$STR_3as_Studio";
-		baseWeapon="MET_DC15L_F_Mk3";
+		baseWeapon="MET_Valken38r";
 		scope=2;
-		displayName="[16th] DC-15L Mk 3";
+		displayName="[16th] Valken-38R";
 		reloadAction="GestureReload_IDA_Reload_Blaster";
 		reloadMagazineSound[]=
 		{
@@ -126,19 +123,19 @@ class CfgWeapons
 			100
 		};
 		recoil="MET_recoil_DC15L";
-		maxRecoilSway=0.04; //smaller = Easier to Control During Sustained fire
-		swayDecaySpeed=1.2; //higher = Less Sway Over Time
-		inertia=1.5; //higher = More Weight
-		aimTransitionSpeed=0.6; //higher = Faster Aim Transition
-		dexterity=0.6; //higher = More Maneuverable
+		maxRecoilSway=0.03; //smaller = Easier to Control During Sustained fire
+		swayDecaySpeed=1.4; //higher = Less Sway Over Time
+		inertia=1.3; //higher = More Weight
+		aimTransitionSpeed=0.9; //higher = Faster Aim Transition
+		dexterity=0.8; //higher = More Maneuverable
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
-			mass=170;
+			mass=120;
 			class CowsSlot: CowsSlot
 			{
 				compatibleItems[]=
 				{
-					"MET_optic_DC15L_F"
+					"MET_optic_ACOG"
 				};
 			};
 			class PointerSlot: PointerSlot
@@ -148,9 +145,7 @@ class CfgWeapons
 			class UnderBarrelSlot: UnderBarrelSlot
 			{
 				compatibleItems[]=
-				{
-					"ShdwCmpny_Bipod_Valken"
-				};
+				{};
 			};
 			class MuzzleSlot: MuzzleSlot
 			{
@@ -159,8 +154,8 @@ class CfgWeapons
 		};
 		modes[]=
 		{
+			"Single",
 			"SlowAuto",
-			"MediumAuto",
 			"FastAuto",
 			"close",
 			"short",
@@ -168,9 +163,102 @@ class CfgWeapons
 			"far_optic1",
 			"far_optic2"
 		};
-		class SlowAuto: Mode_FullAuto
+		class Single: Mode_SemiAuto
 		{
 			reloadTime=0.15;
+			dispersion=0.00079;
+			minRange=0;
+			minRangeProbab=0.89999998;
+			midRange=15;
+			midRangeProbab=0.69999999;
+			maxRange=30;
+			maxRangeProbab=0.1;
+			soundContinuous=0;
+			soundBurst=0;
+			sounds[]=
+			{
+				"StandardSound",
+				"SilencedSound"
+			};
+			class BaseSoundModeType;
+			class StandardSound: BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				begin1[]=
+				{
+					"\Indecisive_Armoury_Sounds\Republic\DC15A.ogg",
+					1.25,
+					1,
+					1800
+				};
+				begin2[]=
+				{
+					"\Indecisive_Armoury_Sounds\Republic\DC15A.ogg",
+					1.25,
+					1.025,
+					1800
+				};
+				begin3[]=
+				{
+					"\Indecisive_Armoury_Sounds\Republic\DC15A.ogg",
+					1.25,
+					0.94999999,
+					1800
+				};
+				begin4[]=
+				{
+					"\Indecisive_Armoury_Sounds\Republic\DC15A.ogg",
+					1.25,
+					1.05,
+					1800
+				};
+				begin5[]=
+				{
+					"\Indecisive_Armoury_Sounds\Republic\DC15A.ogg",
+					1.25,
+					0.89999998,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					0.2,
+					"begin2",
+					0.2,
+					"begin3",
+					0.2,
+					"begin4",
+					0.2,
+					"begin5",
+					0.2
+				};
+				beginwater1[]=
+				{
+					"\Indecisive_Armoury_Sounds\Republic\DC15A.ogg",
+					1,
+					1,
+					400
+				};
+				soundBeginWater[]=
+				{
+					"beginwater1",
+					1
+				};
+			};
+			class SilencedSound: BaseSoundModeType
+			{
+				begin1[] = {"\ShadowLegion_Weapons\data\E-32\EE-3 single2_Supressed.ogg",1.12202,1,300};
+				begin2[] = {"\ShadowLegion_Weapons\data\E-32\EE-3 single2_Supressed.ogg",1.12202,1,300};
+				begin3[] = {"\ShadowLegion_Weapons\data\E-32\EE-3 single2_Supressed.ogg",1.12202,1,300};
+				begin4[] = {"\ShadowLegion_Weapons\data\E-32\EE-3 single2_Supressed.ogg",1.12202,1,300};
+				begin5[] = {"\ShadowLegion_Weapons\data\E-32\EE-3 single2_Supressed.ogg",1.12202,1,300};
+				begin6[] = {"\ShadowLegion_Weapons\data\E-32\EE-3 single2_Supressed.ogg",1.12202,1,300};
+				soundBegin[] = {"begin1",0.5,"begin2",0.5,"begin3",0.5,"begin4",0.5,"begin5",0.5,"begin6",0.5};
+			};
+		};
+		class SlowAuto: Mode_FullAuto
+		{
+			reloadTime=0.109090909;
 			dispersion=0.00079;
 			minRange=0;
 			minRangeProbab=0.89999998;
@@ -189,15 +277,67 @@ class CfgWeapons
 			class BaseSoundModeType;
 			class StandardSound: BaseSoundModeType
 			{
-				begin1[] = {"ShadowLegion_Weapons\data\DC15_1.ogg",1,1,900};
-				begin2[] = {"ShadowLegion_Weapons\data\DC15_1.ogg",1,1,900};
-				begin3[] = {"ShadowLegion_Weapons\data\DC15_1.ogg",1,1,900};
-				begin4[] = {"ShadowLegion_Weapons\data\DC15_2.ogg",1,1,900};
-				begin5[] = {"ShadowLegion_Weapons\data\DC15_1.ogg",1,1,900};
-				begin6[] = {"ShadowLegion_Weapons\data\DC15_1.ogg",1,1,900};
-				beginwater1[] = {"\ShadowLegion_Weapons\data\Underwater_Firing.ogg",1,1,200};
-				soundBegin[] = {"begin1",0.5,"begin2",0.5,"begin3",0.5,"begin4",0.5,"begin5",0.5,"begin6",0.5};
-				soundBeginWater[] = {"beginwater1",0.5};
+				weaponSoundEffect="";
+				begin1[]=
+				{
+					"\Indecisive_Armoury_Sounds\Republic\DC15A.ogg",
+					1.25,
+					1,
+					1800
+				};
+				begin2[]=
+				{
+					"\Indecisive_Armoury_Sounds\Republic\DC15A.ogg",
+					1.25,
+					1.025,
+					1800
+				};
+				begin3[]=
+				{
+					"\Indecisive_Armoury_Sounds\Republic\DC15A.ogg",
+					1.25,
+					0.94999999,
+					1800
+				};
+				begin4[]=
+				{
+					"\Indecisive_Armoury_Sounds\Republic\DC15A.ogg",
+					1.25,
+					1.05,
+					1800
+				};
+				begin5[]=
+				{
+					"\Indecisive_Armoury_Sounds\Republic\DC15A.ogg",
+					1.25,
+					0.89999998,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					0.2,
+					"begin2",
+					0.2,
+					"begin3",
+					0.2,
+					"begin4",
+					0.2,
+					"begin5",
+					0.2
+				};
+				beginwater1[]=
+				{
+					"\Indecisive_Armoury_Sounds\Republic\DC15A.ogg",
+					1,
+					1,
+					400
+				};
+				soundBeginWater[]=
+				{
+					"beginwater1",
+					1
+				};
 			};
 			class SilencedSound: BaseSoundModeType
 			{
@@ -210,27 +350,18 @@ class CfgWeapons
 				soundBegin[] = {"begin1",0.5,"begin2",0.5,"begin3",0.5,"begin4",0.5,"begin5",0.5,"begin6",0.5};
 			};
 		};
-		class MediumAuto: SlowAuto
+		class FastAuto: SlowAuto
 		{
-			reloadTime=0.0857142857142857;
+			reloadTime=0.0705882353;
 			dispersion=0.00079;
 			textureType="fullAuto";
 			minRangeProbab=0;
 			midRangeProbab=0;
 			maxRangeProbab=0;
 		};
-		class FastAuto: SlowAuto
+		class close: FastAuto
 		{
-			reloadTime=0.06;
-			dispersion=0.00079;
-			textureType="fastAuto";
-			minRangeProbab=0;
-			midRangeProbab=0;
-			maxRangeProbab=0;
-		};
-		class close: MediumAuto
-		{
-			reloadTime=0.06;
+			reloadTime=0.0705882353;
 			burst=12;
 			aiRateOfFire=0.5;
 			aiRateOfFireDistance=50;
@@ -302,10 +433,10 @@ class CfgWeapons
 	/*==============================================================================
 	==DC-15L (Fried)
 	==============================================================================*/
-	class MET_DC15L_F_Mk3_fried: MET_DC15L_F_Mk3
+	class MET_Valken38r_Mk3_fried: MET_Valken38r
 	{
-		baseWeapon="MET_DC15L_F_Mk3_fried";
-		displayName="[16th] Fried DC-15L Mk3";
+		baseWeapon="MET_Valken38r_Mk3_fried";
+		displayName="[16th] Fried Valken-38r";
 		descriptionShort="$STR_JLTS_descs_BlasterFried";
 		scope=1;
 		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_plastic_fried_ui_ca.paa";
@@ -318,6 +449,18 @@ class CfgWeapons
 			0.56234097,
 			1,
 			10
+		};
+	};
+};
+class CfgMagazineWells
+{
+	class MET_Valken38r_MagWell
+	{
+		MET_Magazines[]=
+		{
+			"MET_DC15S_mag",
+			"MET_DC15A_mag",
+			"MET_DC15A_stendo_mag"
 		};
 	};
 };

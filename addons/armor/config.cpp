@@ -245,6 +245,7 @@ class CfgPatches
 			"MET_Vest_Officer_L_Ronin",
 			"MET_Vest_Commander_Merlin",
 			"MET_Vest_SNCO_Vergil",
+			"MET_Vest_SNCO_Hazmat",
 
 			// Custom ARC Vests
 			"MET_Vest_ARC_Blackrose",

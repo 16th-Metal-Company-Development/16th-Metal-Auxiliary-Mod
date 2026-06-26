@@ -1266,6 +1266,15 @@ class MET_Helmet_Airborne_Vergil : MET_Helmet_Airborne_Base
 		"z\MET\addons\Armor_Rewrite\Helmets\Textures\Custom\MET_AB_Vergil_Helmet_CO.paa"
 	};
 };
+class MET_Helmet_Airborne_Hellwolf : MET_Helmet_Airborne_Base
+{
+	scope = 2;
+	displayName = "[16th] Hellwolf's Airborne Helmet";
+	hiddenSelectionsTextures[] =
+	{
+		"z\MET\addons\Armor_Rewrite\Helmets\Textures\Custom\MET_AB_Hellwolf_Helmet_CO.paa"
+	};
+};
 
 // ARF 
 class MET_Helmet_ARF_Alouminochar : MET_Helmet_ARF_Base

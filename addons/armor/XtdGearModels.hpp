@@ -52,7 +52,12 @@ class XtdGearModels {
             options[] = { "camo" };
             class camo {
                 values[] = {
+<<<<<<< Updated upstream
                     "Blackrose", "Blowfish", "Frost", "Hellwolf", "Jero", "Noble", "Vergil"
+=======
+                    "Blackrose", "Blowfish", "Frost", "Jero", "Noble", 
+                    "Vergil", "Hellwolf"
+>>>>>>> Stashed changes
                 };
             };
         };
@@ -118,11 +123,11 @@ class XtdGearModels {
             options[] = { "camo" };
             class camo {
                 values[] = {
-                    "Avalanche", "Ben", "Blackrose", "Blatt", "Bopit", 
+                    "Avalanche", "Beige", "Ben", "Blackrose", "Blatt", "Bopit", 
                     "Cerberus", "Cougar", "Convor", "Fool", 
                     "Hazmat", "Hood", "Kix", "Maxson", "Merlin",
                     "Moldy", "MoldyZeus", "Nix", "Phoenix", "Noble",
-                    "Prez", "Ronin", "Roz", "Six", "Sunto", "Vergil",
+                    "Prez", "Ronin", "Roz", "Sam", "Six", "Sunto", "Vergil",
                     "Winters"
                 };
             };
