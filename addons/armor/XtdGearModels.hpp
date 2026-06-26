@@ -52,12 +52,8 @@ class XtdGearModels {
             options[] = { "camo" };
             class camo {
                 values[] = {
-<<<<<<< Updated upstream
-                    "Blackrose", "Blowfish", "Frost", "Hellwolf", "Jero", "Noble", "Vergil"
-=======
-                    "Blackrose", "Blowfish", "Frost", "Jero", "Noble", 
-                    "Vergil", "Hellwolf"
->>>>>>> Stashed changes
+                    "Blackrose", "Blowfish", "Frost", "Hellwolf", "Jero", 
+                    "Noble", "Vergil"
                 };
             };
         };
