@@ -19,6 +19,7 @@ include = [
     "addons/Indecisive_Armoury_Ammos.pbo",
     "addons/Kobra.pbo",
     "addons/WBK_HeavyWeaponsFramework.pbo",
+    "addons/Revo_reducedWeaponSway.pbo"
 ]
 
 [version]
