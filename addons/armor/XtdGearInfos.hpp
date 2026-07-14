@@ -81,7 +81,6 @@ class XtdGearInfos {
         class MET_Helmet_Airborne_Jero       { model = "MET_Custom_Airborne_Helmet"; camo = "Jero"; };
         class MET_Helmet_Airborne_Noble      { model = "MET_Custom_Airborne_Helmet"; camo = "Noble"; };
         class MET_Helmet_Airborne_Vergil     { model = "MET_Custom_Airborne_Helmet"; camo = "Vergil"; };
-        class MET_Helmet_Airborne_Hellwolf   { model = "MET_Custom_Airborne_Helmet"; camo = "Hellwolf"; };
 
         // [16th] ARF variants
         class MET_Helmet_ARF_Base            { model = "MET_ARF_Helmet"; camo = "Trooper"; };
