@@ -3264,13 +3264,23 @@
 		gunnerCanSee="4+2+8+32+16";
 		ace_refuel_fuelCargo=2500;
 		ace_rearm_defaultSupply=1000;
-		ace_cargo_space=0;
+		ace_cargo_space=4;
 		ace_cargo_hasCargo=1;
 		ace_repair_canRepair=1;
 		ace_refuel_hooks[]=
 		{
 			{0.80000001,-2.9000001,0.60000002},
 			{0,0,-20}
+		};
+		class ace_cargo 
+		{
+			class cargo 
+			{
+				class ACE_FuelCanister { // Doesn't have to have the same name as the item you're adding
+					type = "Land_CanisterFuel_F";
+					amount = 4;
+				};
+			};
 		};
 		cargoAction[]=
 		{
