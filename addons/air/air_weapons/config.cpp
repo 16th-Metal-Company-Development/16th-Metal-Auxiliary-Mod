@@ -16,6 +16,90 @@ class CfgPatches
 		};
 	};
 };
+class CfgSoundShaders
+{
+	class MET_LAAT_Shot_SoundShader
+	{
+		samples[]=
+		{
+			
+			{
+				"z\MET\addons\air\air_weapons\sounds\laat_cannon_shot.ogg",
+				1
+			},
+			
+			{
+				"z\MET\addons\air\air_weapons\sounds\laat_cannon_shot2.ogg",
+				1
+			},
+			
+			{
+				"z\MET\addons\air\air_weapons\sounds\laat_cannon_shot3.ogg",
+				1
+			}
+		};
+		volume=3;
+		range=3500;
+	};
+	class MET_ARC_Shot_SoundShader
+	{
+		samples[]=
+		{
+			
+			{
+				"z\MET\addons\air\air_weapons\sounds\arc_cannon_shot1.ogg",
+				1
+			},
+			
+			{
+				"z\MET\addons\air\air_weapons\sounds\arc_cannon_shot2.ogg",
+				1
+			},
+			
+			{
+				"z\MET\addons\air\air_weapons\sounds\arc_cannon_shot3.ogg",
+				1
+			}
+		};
+		volume=3;
+		range=2500;
+	};
+};
+class CfgSoundSets
+{
+	class MET_LAAT_Shot_SoundSet
+	{
+		soundShaders[]=
+		{
+			"MET_LAAT_Shot_SoundShader"
+		};
+		volumeFactor=1;
+		volumeCurve="InverseSquare2Curve";
+		sound3DProcessingType="WeaponMediumShot3DProcessingType";
+		distanceFilter="weaponShotDistanceFreqAttenuationFilter";
+		occlusionFactor=0.5;
+		obstructionFactor=0.30000001;
+		spatial=1;
+		doppler=0;
+		loop=0;
+	};
+	class MET_ARC_Shot_SoundSet
+	{
+		soundShaders[]=
+		{
+			"MET_ARC_Shot_SoundShader"
+		};
+		volumeFactor=1;
+		volumeCurve="InverseSquare2Curve";
+		sound3DProcessingType="WeaponMediumShot3DProcessingType";
+		distanceFilter="weaponShotDistanceFreqAttenuationFilter";
+		occlusionFactor=0.5;
+		obstructionFactor=0.30000001;
+		spatial=1;
+		doppler=0;
+		loop=0;
+	};
+};
 class Mode_SemiAuto;
 class CfgWeapons
 {
@@ -49,7 +133,7 @@ class CfgWeapons
 		};
 		class Low: LowROF
 		{
-			reloadTime=0.2;
+			reloadTime=0.15;
 			displayName="";
 			burst=1;
 			textureType="burst";
@@ -62,7 +146,7 @@ class CfgWeapons
 			{
 				soundSetShot[]=
 				{
-					"3AS_LAAT_Shot_SoundSet"
+					"MET_LAAT_Shot_SoundSet"
 				};
 			};
 		};
@@ -168,5 +252,77 @@ class CfgWeapons
 		};
 		model="a3\weapons_f\empty.p3d";
 		lockAcquire = 1; // automatic acquisition of the closest target in missileLockCone
+	};
+    class rockets_Skyfire;
+	class mass_rocket_Launcher: rockets_Skyfire
+	{
+		displayName="[16th] Mass Rocket Launcher";
+		magazines[]=
+		{
+			"MET_Mass_Rocket_Mag"
+		};
+		canLock=0;
+		ballisticsComputer=8;
+	};
+	class MET_ARC_Medium_Cannon: Cannon_30mm_Plane_CAS_02_F
+	{
+		displayName="Blastech ME518 Medium Blaster Cannon";
+		canLock=0;
+		ballisticsComputer="4 + 2 + 8";
+		magazines[]=
+		{
+			"MET_ARC_MediumMag"
+		};
+		reloadTime=0.059999999;
+		class LowROF: LowROF
+		{
+			reloadTime=0.15;
+			displayName="Blastech ME518 Medium Blaster Cannon";
+			canLock=2;
+			burst=2;
+			class BaseSoundModeType;
+			class StandardSound: BaseSoundModeType
+			{
+				soundSetShot[]=
+				{
+					"MET_ARC_Shot_SoundSet"
+				};
+			};
+		};
+		class GunParticles
+		{
+		};
+	};
+	class MET_ARC_Medium_Cannon_Rear: Cannon_30mm_Plane_CAS_02_F
+	{
+		displayName="Blastech LE396 Blaster Cannon";
+		canLock=0;
+		ballisticsComputer="4 + 2 + 8";
+		magazines[]=
+		{
+			"MET_ARC_CannonMag"
+		};
+		reloadTime=0.059999999;
+		class LowROF: LowROF
+		{
+			reloadTime=0.059999999;
+			displayName="";
+			burst=1;
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class BaseSoundModeType;
+			class StandardSound: BaseSoundModeType
+			{
+				soundSetShot[]=
+				{
+					"3AS_YwingBlaster_SoundSet"
+				};
+			};
+		};
+		class GunParticles
+		{
+		};
 	};
 };

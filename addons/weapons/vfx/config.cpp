@@ -843,6 +843,16 @@ class CfgLights
 		flareSize = 1.5;
 		flareMaxDistance = 6000;
 	};
+	class MET_MissileDark_Blue : MET_MissileLight_Base
+	{
+		color[] = { 20,20,190 };
+		diffuse[] = { 20,20,190,1 };
+		intensity = 30000;
+		dayLight = 1;
+		useFlare = 1;
+		flareSize = 1.5;
+		flareMaxDistance = 6000;
+	};
 	class MET_MissileLight_Pink : MET_MissileLight_Base
 	{
 		color[] = { 0.941,0.443,1 };
@@ -1181,6 +1191,31 @@ class MET_MissileGlow_Blue_fly
 	{
 		simulation = "light";
 		type = "MET_MissileLight_Blue";
+		position[] = { 0,0,0 };
+	};
+	class GrenadeSparks
+	{
+		simulation = "particles";
+		type = "MET_GrenadeSparks";
+		position[] = { 0,0,0 };
+		intensity = 1;
+		interval = 1;
+		lifeTime = 0.1;
+	};
+	class Smoke
+	{
+		simulation = "particles";
+		type = "Missile4";
+		position[] = { 0,0,0 };
+		qualityLevel = -1;
+	};
+};
+class MET_MissileGlow_DarkBlue_fly
+{
+	class Light
+	{
+		simulation = "light";
+		type = "MET_MissileDark_Blue";
 		position[] = { 0,0,0 };
 	};
 	class GrenadeSparks
