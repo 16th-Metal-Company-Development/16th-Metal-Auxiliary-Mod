@@ -1807,12 +1807,12 @@ class CfgVehicles
 			class muzzle_rot_laser
 			{
 				source="ammorandom";
-				weapon="ParticleBeamCannon";
+				weapon="MET_CompositeBeamCannon";
 			};
 			class muzzle_rot_laser_R
 			{
 				source="ammorandom";
-				weapon="ParticleBeamCannon_R";
+				weapon="MET_CompositeBeamCannon_R";
 			};
 			class Laser_L
 			{
@@ -2041,7 +2041,7 @@ class CfgVehicles
 			{
 				weapons[]=
 				{
-					"ParticleBeamCannon"
+					"MET_CompositeBeamCannon"
 				};
 				magazines[]=
 				{
@@ -2229,7 +2229,7 @@ class CfgVehicles
 				memorypointsgetingunnerdir="pos_cargo";
 				weapons[]=
 				{
-					"ParticleBeamCannon_R"
+					"MET_CompositeBeamCannon_R"
 				};
 				magazines[]=
 				{
@@ -2499,7 +2499,7 @@ class CfgVehicles
 		};
 		class Eventhandlers: EventHandlers
 		{
-			fired="_this execVM '\3AS\3AS_Laat\LAATI\scripts\fired_laser.sqf';";
+			fired="_this execVM '\3AS\3AS_Laat\LAATI\scripts\fired_laser.sqf'; if (missionNamespace getVariable ['MET_disableBeamHooks', false]) exitWith {}; private _metW = _this select 1; if (_metW in ['MET_CompositeBeamCannon','MET_CompositeBeamCannon_R']) then { if (!isNil 'MET_fnc_beamOnFired') then {_this call MET_fnc_beamOnFired;}; if (!isNil 'MET_fnc_beamVisualOnFired') then {_this call MET_fnc_beamVisualOnFired;}; };";
 		};
 		class VehicleTransport
 		{

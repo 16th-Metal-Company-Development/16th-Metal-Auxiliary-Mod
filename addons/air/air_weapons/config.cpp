@@ -101,6 +101,24 @@ class CfgSoundSets
 	};
 };
 class Mode_SemiAuto;
+class CfgFunctions
+{
+	class MET
+	{
+		class AirWeapons
+		{
+			file = "z\MET\addons\air\air_weapons\functions";
+			class beamPostInit
+			{
+				postInit = 1;
+			};
+			class beamOnFired {};
+			class beamRegisterFire {};
+			class beamLoopTick {};
+			class beamVisualOnFired {};
+		};
+	};
+};
 class CfgWeapons
 {
 	class CannonCore;
@@ -154,7 +172,7 @@ class CfgWeapons
 		{
 			reloadTime=0.0375;
 			textureType="fullAuto";
-		}
+		};
 		class close: LowROF
 		{
 			showToPlayer=0;
@@ -324,5 +342,162 @@ class CfgWeapons
 		class GunParticles
 		{
 		};
+	};
+	class MGun;
+	class LMG_RCWS;
+	class MET_CompositeBeamCannon: LMG_RCWS
+	{
+		displayName="Composite Beam";
+		magazineReloadTime=10;
+		ballisticsComputer=2;
+		aiDispersionCoefY=0.5;
+		aiDispersionCoefX=0.5;
+		scope=1;
+		class GunParticles
+		{
+		};
+		class manual: MGun
+		{
+			displayName="Heavy Repeater";
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class BaseSoundModeType
+			{
+				closure1[]=
+				{
+					"A3\sounds_f\weapons\gatling\gatling_rotation_short_2",
+					0.316228,
+					1,
+					20
+				};
+				closure2[]=
+				{
+					"A3\sounds_f\weapons\gatling\gatling_rotation_short_3",
+					0.316228,
+					1,
+					20
+				};
+				soundClosure[]=
+				{
+					"closure1",
+					0.5,
+					"closure2",
+					0.5
+				};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				begin1[]=
+				{
+					"3AS\3AS_Laat\sounds\LAAT_Cannon.wav",
+					1.99526,
+					1,
+					1500
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					0.33000001
+				};
+				soundsetshot[]=
+				{
+					"3AS_LAAT_SoundSet"
+				};
+			};
+			soundContinuous=1;
+			soundBurst=0;
+			multiplier=1;
+			reloadTime=0.033333302;
+			dispersion=0;
+			aiRateOfFire=0.5;
+			aiRateOfFireDistance=10;
+			minRange=0;
+			minRangeProbab=0.0099999998;
+			midRange=1;
+			midRangeProbab=0.0099999998;
+			maxRange=2;
+			maxRangeProbab=0.0099999998;
+		};
+		class close: manual
+		{
+			soundBurst=0;
+			aiBurstTerminable=1;
+			showToPlayer=0;
+			burst=1;
+			burstRangeMax=42;
+			aiRateOfFire=0.04;
+			aiRateOfFireDispersion=0;
+			aiRateOfFireDistance=50;
+			minRange=0;
+			minRangeProbab=0.69999999;
+			midRange=100;
+			midRangeProbab=0.75;
+			maxRange=300;
+			maxRangeProbab=0.2;
+		};
+		class short: close
+		{
+			aiBurstTerminable=1;
+			showToPlayer=0;
+			burst=1;
+			burstRangeMax=36;
+			aiRateOfFire=0.04;
+			aiRateOfFireDispersion=0;
+			aiRateOfFireDistance=150;
+			minRange=100;
+			minRangeProbab=0.75;
+			midRange=300;
+			midRangeProbab=0.75;
+			maxRange=600;
+			maxRangeProbab=0.2;
+		};
+		class medium: close
+		{
+			aiBurstTerminable=1;
+			showToPlayer=0;
+			burst=1;
+			burstRangeMax=30;
+			aiRateOfFire=0.04;
+			aiRateOfFireDispersion=0;
+			aiRateOfFireDistance=300;
+			minRange=300;
+			minRangeProbab=0.75;
+			midRange=600;
+			midRangeProbab=0.64999998;
+			maxRange=800;
+			maxRangeProbab=0.1;
+		};
+		class far: close
+		{
+			aiBurstTerminable=1;
+			showToPlayer=0;
+			burst=1;
+			burstRangeMax=12;
+			aiRateOfFire=0.04;
+			aiRateOfFireDispersion=0;
+			aiRateOfFireDistance=800;
+			minRange=800;
+			minRangeProbab=0.64999998;
+			midRange=1000;
+			midRangeProbab=0.30000001;
+			maxRange=1500;
+			maxRangeProbab=0.050000001;
+		};
+		drySound[]=
+		{
+			"A3\Sounds_F\arsenal\weapons_vehicles\LMG_Minigun_65mm\LMGMinigun65mm_dry.wss",
+			1,
+			1,
+			10
+		};
+		magazines[]=
+		{
+			"Laser_Battery_F"
+		};
+	};
+	class MET_CompositeBeamCannon_R: MET_CompositeBeamCannon
+	{
 	};
 };

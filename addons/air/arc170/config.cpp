@@ -5100,12 +5100,12 @@ class CfgVehicles
 				discreteDistanceInitIndex=5;
 				weapons[]=
 				{
-					"3AS_ARC_Light_Canon_Rear",
+					"MET_ARC_Medium_Cannon_Rear",
 					"CMFlareLauncher"
 				};
 				magazines[]=
 				{
-					"3AS_ARC_500Rnd_Light_Shells",
+					"MET_ARC_CannonMag",
 					"240Rnd_CMFlare_Chaff_Magazine"
 				};
 				minElev=-5;
@@ -5136,12 +5136,12 @@ class CfgVehicles
 				animationSourceGun="maingun2";
 				weapons[]=
 				{
-					"3AS_ARC_Heavy_Canon"
+					"MET_ARC_Medium_Cannon_Rear"
 				};
 				magazines[]=
 				{
-					"3AS_PylonWeapon_ARC_240Rnd_Heavy_Shells",
-					"3AS_PylonWeapon_ARC_240Rnd_Heavy_Shells"
+					"MET_ARC_CannonMag",
+					"MET_ARC_CannonMag"
 				};
 				gunnerName="Co-pilot";
 				gunBeg="usti hlavne b2";
@@ -5441,7 +5441,8 @@ class CfgVehicles
 						{
 							"B_BIM9X_DUAL_RAIL",
 							"B_AGM65_RAIL",
-							"REP_AGM_RAIL"
+							"REP_AGM_RAIL",
+							"B_MISSILE_PYLON"
 						};
 						attachment="PylonRack_Missile_BIM9X_x2";
 						priority=10;
@@ -5462,7 +5463,8 @@ class CfgVehicles
 							"B_AGM65_RAIL",
 							"B_AGM65_DUAL_RAIL",
 							"ARC_AGM_PYLON",
-							"B_BOMB_PYLON"
+							"B_BOMB_PYLON",
+							"B_MISSILE_PYLON"
 						};
 						attachment="PylonMissile_1Rnd_Bomb_04_F";
 						priority=9;
@@ -5482,7 +5484,9 @@ class CfgVehicles
 							"B_AGM65_RAIL",
 							"B_AGM65_DUAL_RAIL",
 							"B_HARM_RAIL",
-							"ARC_AGM_PYLON"
+							"ARC_AGM_PYLON",
+							"B_BOMB_PYLON",
+							"B_MISSILE_PYLON"
 						};
 						attachment="PylonRack_Missile_AMRAAM_D_x1";
 						priority=7;
@@ -5628,22 +5632,22 @@ class CfgVehicles
 			class Muzzle_Flash
 			{
 				source="ammorandom";
-				weapon="3AS_ARC_Light_Canon";
+				weapon="MET_ARC_Medium_Cannon";
 			};
 			class Muzzle_Flash2
 			{
 				source="ammorandom";
-				weapon="3AS_ARC_Light_Canon_Rear";
+				weapon="MET_ARC_Medium_Cannon_Rear";
 			};
 			class Muzzle_Flash3
 			{
 				source="ammorandom";
-				weapon="3AS_ARC_Heavy_Canon";
+				weapon="MET_ARC_Medium_Cannon_Rear";
 			};
 			class recoil_source
 			{
 				source="reload";
-				weapon="3AS_ARC_Heavy_Canon";
+				weapon="MET_ARC_Medium_Cannon_Rear";
 			};
 		};
 		class UserActions: UserActions
