@@ -121,6 +121,28 @@ class CfgFunctions
 };
 class CfgWeapons
 {
+	class LauncherCore;
+	class RocketPods: LauncherCore
+	{
+		scope=1;
+		cursor="EmptyCursor";
+		cursorAim="rocket";
+		type=65536;
+		reloadTime=0.2;
+		magazineReloadTime=0.2;
+		minRange=50;
+		minRangeProbab=0.1;
+		midRange=600;
+		midRangeProbab=0.25;
+		maxRange=2500;
+		maxRangeProbab=0.050000001;
+		canLock=2;
+		weaponLockDelay=3;
+		nameSound="rockets";
+		textureType="semi";
+		aiDispersionCoefY=0.5;
+		aiDispersionCoefX=0.5;
+	};
 	class CannonCore;
 	class Cannon_30mm_Plane_CAS_02_F: CannonCore
 	{
@@ -270,17 +292,159 @@ class CfgWeapons
 		};
 		model="a3\weapons_f\empty.p3d";
 		lockAcquire = 1; // automatic acquisition of the closest target in missileLockCone
+		weaponLockDelay=2;
+		weaponLockSystem=2;
 	};
     class rockets_Skyfire;
 	class mass_rocket_Launcher: rockets_Skyfire
 	{
 		displayName="[16th] Mass Rocket Launcher";
+		descriptionShort="Mass Driver Rocket Launcher";
+		displayNameShort="MDR";
 		magazines[]=
 		{
 			"MET_Mass_Rocket_Mag"
 		};
 		canLock=0;
-		ballisticsComputer=8;
+		ballisticsComputer=8;modes[]=
+		{
+			"Far_AI",
+			"Medium_AI",
+			"Close_AI",
+			"Single",
+			"Two",
+			"Four",
+			"Burst"
+		};
+		class Far_AI: RocketPods
+		{
+			displayName="$STR_A3_missiles_dar0";
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class StandardSound
+			{
+				begin1[]=
+				{
+					"A3\Sounds_F\weapons\Rockets\missile_2",
+					1.1220185,
+					1,
+					1100
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+			};
+			autoFire=0;
+			reloadTime=0.079999998;
+			dispersion=0.025;
+			aiBurstTerminable=1;
+			showToPlayer=0;
+			burst=1;
+			burstRangeMax=4;
+			aiRateOfFire=4;
+			aiRateOfFireDispersion=4;
+			aiRateOfFireDistance=1000;
+			minRange=1000;
+			minRangeProbab=0.69999999;
+			midRange=1500;
+			midRangeProbab=0.69999999;
+			maxRange=3200;
+			maxRangeProbab=0.1;
+		};
+		class Medium_AI: Far_AI
+		{
+			aiBurstTerminable=1;
+			showToPlayer=0;
+			burst=1;
+			burstRangeMax=6;
+			aiRateOfFire=3;
+			aiRateOfFireDispersion=3;
+			aiRateOfFireDistance=1000;
+			minRange=400;
+			minRangeProbab=0.1;
+			midRange=800;
+			midRangeProbab=0.69999999;
+			maxRange=1200;
+			maxRangeProbab=0.75;
+		};
+		class Close_AI: Far_AI
+		{
+			aiBurstTerminable=1;
+			showToPlayer=0;
+			burst=1;
+			burstRangeMax=42;
+			aiRateOfFire=0.5;
+			aiRateOfFireDispersion=1;
+			aiRateOfFireDistance=50;
+			minRange=0;
+			minRangeProbab=0.40000001;
+			midRange=100;
+			midRangeProbab=0.69999999;
+			maxRange=300;
+			maxRangeProbab=0.2;
+		};
+		class Burst: RocketPods
+		{
+			displayName="Ripple [ALL]";
+			textureType="fullAuto";
+			autoFire=1;
+			burst=1;
+			reloadTime=0.079999998;
+			dispersion=0.025;
+			aiRateOfFire=1;
+			aiRateOfFireDistance=10;
+			minRange=0;
+			minRangeProbab=0.0099999998;
+			midRange=1;
+			midRangeProbab=0.0099999998;
+			maxRange=2;
+			maxRangeProbab=0.0099999998;
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class StandardSound
+			{
+				begin1[]=
+				{
+					"A3\Sounds_F\weapons\Rockets\missile_2",
+					1.1220185,
+					1,
+					1100
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+			};
+			soundContinuous=0;
+		};
+		class Single: Burst
+		{
+			displayName="Single [1]";
+			autoFire=0;
+			salvo=1;
+			textureType="semi";
+		};
+		class Two: Single
+		{
+			displayName="Ripple [2]";
+			salvo=2;
+			burst=1;
+			textureType="dual";
+		};
+		class Four: Single
+		{
+			displayName="Ripple [4]";
+			salvo=2;
+			burst=2;
+			textureType="burst";
+		};
 	};
 	class MET_ARC_Medium_Cannon: Cannon_30mm_Plane_CAS_02_F
 	{
@@ -499,5 +663,108 @@ class CfgWeapons
 	};
 	class MET_CompositeBeamCannon_R: MET_CompositeBeamCannon
 	{
+	};
+	class MissileLauncher;
+	class MET_Proton_Torp_Launch: MissileLauncher
+	{
+		displayName="AGM-02 Heavy Proton Torpedo Launcher";
+		displayNameShort="HPT";
+		magazines[]=
+		{
+			"MET_1Rnd_Proton_Torp",
+			"MET_3Rnd_Proton_Torp"
+		};
+		holdsterAnimValue=3;
+		reloadTime=0.1;
+		magazineReloadTime=0.1;
+		showAimCursorInternal=0;
+		textureType="semi";
+		weaponLockDelay=3;
+		weaponLockSystem=2;
+		cmImmunity=0.40000001;
+		lockingTargetSound[]=
+		{
+			"\A3\Sounds_F\weapons\Rockets\locked_1",
+			0.56234133,
+			1
+		};
+		lockedTargetSound[]=
+		{
+			"\A3\Sounds_F\weapons\Rockets\locked_3",
+			0.56234133,
+			2.5
+		};
+		sounds[]=
+		{
+			"StandardSound"
+		};
+		class StandardSound
+		{
+			begin1[]=
+			{
+				"z\MET\addons\air\air_weapons\sounds\fire_missile.ogg",
+				1.7782794,
+				1,
+				3500
+			};
+			soundBegin[]=
+			{
+				"begin1",
+				1
+			};
+		};
+		modes[]=
+		{
+			"TopDown"
+		};
+		class Direct: MissileLauncher
+		{
+			textureType="semi";
+			displayName="Heavy Proton Torpedo";
+			reloadTime=0.1;
+			magazineReloadTime=0.1;
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class StandardSound
+			{
+				begin1[]=
+				{
+					"A3\Sounds_F_EPC\Weapons\missile_epc_1",
+					1.7782794,
+					1,
+					3500
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+			};
+			lockingTargetSound[]=
+			{
+				"\A3\Sounds_F\weapons\Rockets\locked_1",
+				0.56234133,
+				1
+			};
+			lockedTargetSound[]=
+			{
+				"\A3\Sounds_F\weapons\Rockets\locked_3",
+				0.56234133,
+				2.5
+			};
+			minRange=360;
+			minRangeProbab=0.40000001;
+			midRange=1500;
+			midRangeProbab=1;
+			maxRange=8000;
+			maxRangeProbab=0.94999999;
+		};
+		class TopDown: Direct
+		{
+			//displayName="Heavy Proton Torpedo [Direct]";
+			textureType="topDown";
+		};
 	};
 };

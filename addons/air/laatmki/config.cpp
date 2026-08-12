@@ -1729,7 +1729,7 @@ class CfgVehicles
 						};
 						attachment="MET_Mass_Rocket_Mag";
 						priority=10;
-						maxweight=300;
+						maxweight=2500;
 						UIposition[]={0.5,0.25};
 					};
 					class pylons2: pylons1
@@ -1741,11 +1741,11 @@ class CfgVehicles
 					{
 						hardpoints[]=
 						{
+							"B_BIM9X_DUAL_RAIL",
 							"B_AMRAAM_D_RAIL",
 							"B_AMRAAM_D_DUAL_RAIL",
 							"B_AGM65_RAIL",
 							"B_AGM65_DUAL_RAIL",
-							"MET_Mass_Rocket_Mag",
 							"B_MISSILE_PYLON",
 							"B_BOMB_PYLON",
 							"UNI_SCALPEL"

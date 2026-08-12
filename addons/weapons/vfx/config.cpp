@@ -1260,6 +1260,31 @@ class MET_MissileGlow_Pink_fly
 		qualityLevel = -1;
 	};
 };
+class MET_MissileGlow_LightPink_fly
+{
+	class Light
+	{
+		simulation = "light";
+		type = "MET_MissileLight_Pink";
+		position[] = { 0,0,0 };
+	};
+	class GrenadeSparks
+	{
+		simulation = "particles";
+		type = "MET_GrenadeSparks";
+		position[] = { 0,0,0 };
+		intensity = 1;
+		interval = 1;
+		lifeTime = 0.1;
+	};
+	class Smoke
+	{
+		simulation = "particles";
+		type = "Missile4";
+		position[] = { 0,0,0 };
+		qualityLevel = -1;
+	};
+};
 class MET_MissileGlow_Red_fly
 {
 	class Light

@@ -227,7 +227,13 @@ class CfgAmmo
 	class ammo_Penetrator_Base;
 	class metal_Penetrator: ammo_Penetrator_Base
 	{
-		hit=1300;
+		hit=800;
+		warheadName="TandemHEAT";
+		caliber=50;
+	};
+	class metal_Heavy_Penetrator: ammo_Penetrator_Base
+	{
+		hit=1900;
 		warheadName="TandemHEAT";
 		caliber=50;
 	};
@@ -239,7 +245,7 @@ class CfgAmmo
         description = "Mass Driver Missile";
         descriptionShort = "MDM";
 		warheadName="AT";
-		hit=1500;
+		hit=700;
 		model="\A3\Weapons_F\Ammo\Missile_AT_02_fly_F";
 		effectFly="3AS_Rocket_effect_Blue_fly";
 		effectsMissile="3AS_Rocket_effect_Blue_fly";
@@ -372,6 +378,10 @@ class CfgAmmo
     class Metal_Mass_Rocket: R_80mm_HE
     {
 		model="\A3\Weapons_F\Ammo\Rocket_02_fly_F";
+		displayname="Mass Rockets";
+        displayNameShort = "MR";
+        description = "Mass Rockets";
+        descriptionShort = "MR";
 		hit=400;
 		indirectHit=75;
 		indirectHitRange=30;
@@ -388,5 +398,15 @@ class CfgAmmo
 		timeToLive=15;
 		effectFly="MET_MissileGlow_DarkBlue_fly";
 		effectsMissile="MET_MissileGlow_DarkBlue_fly";
+	};
+	class Metal_Proton_Torpedo: Missile_AGM_02_F
+	{
+		displayname="Heavy Proton Torpedo";
+        displayNameShort = "HPT";
+        description = "Heavy Proton Torpedo";
+        descriptionShort = "HPT";
+		warheadName="HEAT";
+		hit=1500;
+		effectsMissile="MET_MissileGlow_LightPink_fly";
 	};
 };
