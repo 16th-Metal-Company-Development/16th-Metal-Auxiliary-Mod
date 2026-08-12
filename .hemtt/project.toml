@@ -24,5 +24,5 @@ include = [
 
 [version]
 major = 4
-minor = 12
+minor = 13
 patch = 2

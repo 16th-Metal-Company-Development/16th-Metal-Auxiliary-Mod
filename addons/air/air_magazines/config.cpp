@@ -47,8 +47,71 @@ class CfgMagazines
 	{
 		displayName="Mass Driver Missiles AT";
 		displayNameShort="MDM AT";
-		count=32;
+		count=16;
 		model="3AS\3AS_arc170\Model\torrent_rail_x1";
 		ammo="Metal_Mass_Driver_Missile_AT";
+	};
+	class PylonRack_19Rnd_Rocket_Skyfire;
+	class MET_Mass_Rocket_Mag: PylonRack_19Rnd_Rocket_Skyfire
+	{
+		displayName="[16th] Mass Driver Rocket Pod";
+		displayNameShort="MDR";
+		count=19;
+		model="\A3\Weapons_F\DynamicLoadout\PylonPod_Rocket_Skyfire_F.p3d";
+		muzzlePos="muzzlePos";
+		muzzleEnd="muzzleEnd";
+		hardpoints[]=
+		{
+			"B_MISSILE_PYLON",
+			"B_SHIEKER"
+		};
+		pylonWeapon="mass_rocket_Launcher";
+		ammo="Metal_Mass_Rocket";
+		mass=208;
+	};
+	class 60RND_40MM_GPR_shells;
+	class MET_ARC_MediumMag: 60RND_40MM_GPR_shells
+	{
+		displayName="Medium Blaster Cannon Rounds";
+		displayNameShort="APHE";
+		count=1000;
+		model="a3\weapons_f\empty.p3d";
+		muzzleImpulseFactor[]={0.050000001,0.022};
+		nameSound="mgun";
+		ammo="Metal_APHE_Cannon_Shell";
+	};
+	class MET_ARC_CannonMag: 60RND_40MM_GPR_shells
+	{
+		displayName="Blaster Cannon Rounds";
+		displayNameShort="APHE";
+		count=1000;
+		model="a3\weapons_f\empty.p3d";
+		muzzleImpulseFactor[]={0.050000001,0.022};
+		nameSound="mgun";
+		ammo="Metal_APHE_Cannon_Shell";
+	};
+	class 6Rnd_Missile_AGM_02_F;
+	class MET_1Rnd_Proton_Torp: 6Rnd_Missile_AGM_02_F
+	{
+		displayName="[16th] AGM-02 Heavy Proton Torpedo";
+		displayNameShort="HPT";
+		model="\A3\Weapons_F_Jets\Ammo\PylonPod_Missile_AGM_02_Rail_x1_F";
+		count=1;
+		ammo="Metal_Proton_Torpedo";
+		hardpoints[]=
+		{
+			"B_MISSILE_PYLON"
+		};
+		pylonWeapon="MET_Proton_Torp_Launch";
+		mass=361;
+	};
+	class MET_3Rnd_Proton_Torp: MET_1Rnd_Proton_Torp
+	{
+		displayName="[16th] AGM-02 Heavy Proton Torpedo 3x";
+		displayNameShort="HPT";
+		model="\A3\Weapons_F\DynamicLoadout\PylonPod_3x_Missile_AGM_02_F.p3d";
+		count=3;
+		mirrorMissilesIndexes[]={2,1,3};
+		mass=1020;
 	};
 };

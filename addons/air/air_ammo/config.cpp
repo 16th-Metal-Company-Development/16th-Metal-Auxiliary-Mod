@@ -23,9 +23,9 @@ class CfgAmmo
 	{
 		displayname="Medium Blaster Cannon";
 		warheadName="GP Plasma";
-		hit=100;
+		hit=125;
 		indirecthit=50;
-		indirecthitrange=5;
+		indirecthitrange=15;
 		caliber=4.6;
 		airlock=1;
 		model="3as\3as_weapons\data\tracer_green.p3d";
@@ -40,10 +40,45 @@ class CfgAmmo
 	{
 		displayname="Medium Blaster Cannon";
 		warheadName="AP Plasma";
-		hit=250;
+		hit=300;
 		indirecthit=20;
 		indirecthitrange=1;
-		caliber=55;
+		caliber=45;
+		airlock=1;
+		model="3as\3as_weapons\data\tracer_green.p3d";
+		effectFly="3AS_PlasmaBolt_Medium_Green_Fly";
+		aiAmmoUsageFlags="64+ 128 + 512";
+		soundSetSonicCrack[]=
+		{
+			"3AS_HeavyPlasma_Flyby_SoundSet"
+		};
+	};
+	class Metal_APHE_Cannon_Shell: B_40mm_GPR
+	{
+		displayname="Medium Blaster Cannon";
+		warheadName="GP Plasma";
+		hit=250;
+		indirecthit=30;
+		indirecthitrange=10;
+		caliber=4.6;
+		airlock=1;
+		model="3as\3as_weapons\data\tracer_green.p3d";
+		effectFly="3AS_PlasmaBolt_Medium_Green_Fly";
+		aiAmmoUsageFlags="64+ 128 + 512";
+		soundSetSonicCrack[]=
+		{
+			"3AS_HeavyPlasma_Flyby_SoundSet"
+		};
+	};
+    class B_20mm;
+	class Metal_APHE_LightCannon_Shell: B_20mm
+	{
+		displayname="Blaster Cannon";
+		warheadName="GP Plasma";
+		hit=120;
+		indirecthit=45;
+		indirecthitrange=4;
+		caliber=4.6;
 		airlock=1;
 		model="3as\3as_weapons\data\tracer_green.p3d";
 		effectFly="3AS_PlasmaBolt_Medium_Green_Fly";
@@ -192,19 +227,25 @@ class CfgAmmo
 	class ammo_Penetrator_Base;
 	class metal_Penetrator: ammo_Penetrator_Base
 	{
-		hit=900;
+		hit=800;
 		warheadName="TandemHEAT";
-		caliber=30;
+		caliber=50;
 	};
-	class M_Scalpel_AT;
-	class Metal_Mass_Driver_Missile_AT: M_Scalpel_AT
+	class metal_Heavy_Penetrator: ammo_Penetrator_Base
+	{
+		hit=1900;
+		warheadName="TandemHEAT";
+		caliber=50;
+	};
+	class Missile_AGM_02_F;
+	class Metal_Mass_Driver_Missile_AT: Missile_AGM_02_F
 	{
 		displayname="Mass Driver Missile";
         displayNameShort = "MDM";
         description = "Mass Driver Missile";
         descriptionShort = "MDM";
 		warheadName="AT";
-		hit=1500;
+		hit=700;
 		model="\A3\Weapons_F\Ammo\Missile_AT_02_fly_F";
 		effectFly="3AS_Rocket_effect_Blue_fly";
 		effectsMissile="3AS_Rocket_effect_Blue_fly";
@@ -239,7 +280,7 @@ class CfgAmmo
 		trackLead = 1; // Missile intercepts
 		trackOversteer = 1; // Missiles flies straight to its target
 		cameraViewAvailable = 1; // pilot can see the missile's flight from missile's perspective
-		weaponLockDelay = 0; // Immediate lock if the locking conditions are met
+		weaponLockDelay = 0.5; // Lock onto target in half a second
         /*class ace_missileguidance: ace_missileguidance {
             canVanillaLock = 1;
             enabled = 1; // Missile Guidance must be explicitly enabled
@@ -332,5 +373,40 @@ class CfgAmmo
                 };
             };
         };*/
+	};
+    class R_80mm_HE;
+    class Metal_Mass_Rocket: R_80mm_HE
+    {
+		model="\A3\Weapons_F\Ammo\Rocket_02_fly_F";
+		displayname="Mass Rockets";
+        displayNameShort = "MR";
+        description = "Mass Rockets";
+        descriptionShort = "MR";
+		hit=400;
+		indirectHit=75;
+		indirectHitRange=30;
+		warheadName="HE";
+		cost=100;
+		maxSpeed=590;
+		initTime=0.0020000001;
+		thrustTime=0.69;
+		thrust=1060;
+		airFriction=0.090000004;
+		sideAirFriction=0.0049999999;
+		fuseDistance=50;
+		whistleDist=30;
+		timeToLive=15;
+		effectFly="MET_MissileGlow_DarkBlue_fly";
+		effectsMissile="MET_MissileGlow_DarkBlue_fly";
+	};
+	class Metal_Proton_Torpedo: Missile_AGM_02_F
+	{
+		displayname="Heavy Proton Torpedo";
+        displayNameShort = "HPT";
+        description = "Heavy Proton Torpedo";
+        descriptionShort = "HPT";
+		warheadName="HEAT";
+		hit=1500;
+		effectsMissile="MET_MissileGlow_LightPink_fly";
 	};
 };
