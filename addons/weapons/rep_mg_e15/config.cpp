@@ -79,6 +79,16 @@ class CfgWeapons
 	==============================================================================*/
 	class MET_E15: LMG_Mk200_F
 	{
+		ACE_overheating_mrbs=60000; //Mean Rounds Between Stoppages (this will be scaled based on the barrel temp)
+		ACE_Overheating_Dispersion[]={0,0.0009,0.0013,0.0026}; //Dispersion Factor, increases the dispersion of the projectile (this will be scaled based on the barrel temp)
+		ACE_Overheating_SlowdownFactor[]={1,0.9,0.75,0.6}; //Slowdown Factor, reduces the velocity of the projectile (this will be scaled based on the barrel temp)
+		ACE_Overheating_JamChance[]={0,0.00015000001,0.00075000001,0.0037499999};
+		ACE_Overheating_allowSwapBarrel=1; // 1 to enable barrel swap. 0 to disable. Meant for machine guns where you can easily swap the barrel without dismantling the whole weapon.
+		ACE_Overheating_barrelClassname="ACE_E15_SpareBarrel";
+		ace_overheating_jamTypesAllowed[] = {"Feed", "Dud"}; // Allowed and default values are ["Eject", "Extract", "Feed", "Fire", "Dud"]. In the example here a revolver does not eject, extract, or feed on each shot so those values are removed.
+		ace_overheating_closedBolt = 0; // Closed bolt, can cook off from barrel heat.
+        ace_overheating_barrelMass = 9; // Mass of the area heated by firing, not strictly just the barrel. Higher mass gives slower heat buildup and faster cooling. Default estimation is 55% of weapon weight in kg.
+		ACE_clearJamAction = "GestureReloadMX"; // Custom jam clearing action. Default uses reload animation, use an empty string to undefine
 		JLTS_hasElectronics=1;
 		JLTS_hasEMPProtection=1;
 		JLTS_friedItem="MET_E15_fried";
@@ -88,7 +98,6 @@ class CfgWeapons
 		scopeArsenal=2;
 		baseWeapon="MET_E15";
 		reloadAction="";
-		ace_clearJamAction="";
 		autoReload="true";
 		displayName="[16th] E-15 Assault cannon";
 		descriptionShort="Assault Cannon";
@@ -373,6 +382,18 @@ class CfgWeapons
 			1,
 			10
 		};
+	};
+};
+class CfgMagazines
+{
+	class ACE_SpareBarrel;
+	class ACE_E15_SpareBarrel: ACE_SpareBarrel
+	{
+		scope=2;
+		author="SPS Team";
+		scopeCurator=2;
+		displayName="[16th] E15 Spare barrel";
+		mass=14;
 	};
 };
 class CfgMagazineWells

@@ -6,6 +6,7 @@ class XtdGearModels {
             author = "16th Mod Team";
             options[] = { "Gen", "Size", "Heavy" };
             class Gen {
+                label = "Generation";
                 values[] = {
                     "Mk I", "Mk II"
                 };

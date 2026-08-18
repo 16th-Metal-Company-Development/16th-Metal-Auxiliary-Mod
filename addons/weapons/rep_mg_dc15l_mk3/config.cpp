@@ -90,6 +90,17 @@ class CfgWeapons
 	==============================================================================*/
 	class MET_DC15L_F_Mk3: ShdwCmpny_DC15L_F
 	{
+		ACE_overheating_mrbs=40000; //Mean Rounds Between Stoppages (this will be scaled based on the barrel temp)
+		ACE_Overheating_Dispersion[]={0,0.00079999998,0.0012000001,0.0024000001}; //Dispersion Factor, increases the dispersion of the projectile (this will be scaled based on the barrel temp)
+		ACE_Overheating_SlowdownFactor[]={1,1,0.9,0.8}; //Slowdown Factor, reduces the velocity of the projectile (this will be scaled based on the barrel temp)
+		ACE_Overheating_JamChance[]={0,0.00015000001,0.00075000001,0.0037499999};
+		ACE_Overheating_allowSwapBarrel=1; // 1 to enable barrel swap. 0 to disable. Meant for machine guns where you can easily swap the barrel without dismantling the whole weapon.
+		ACE_Overheating_barrelClassname="ACE_DC15L_SpareBarrel";
+		ace_overheating_jamTypesAllowed[] = {"Feed", "Dud"}; // Allowed and default values are ["Eject", "Extract", "Feed", "Fire", "Dud"]. In the example here a revolver does not eject, extract, or feed on each shot so those values are removed.
+		ace_overheating_closedBolt = 0; // Closed bolt, can cook off from barrel heat.
+        ace_overheating_barrelMass = 6.5; // Mass of the area heated by firing, not strictly just the barrel. Higher mass gives slower heat buildup and faster cooling. Default estimation is 55% of weapon weight in kg.
+		ACE_clearJamAction = "GestureReloadMX"; // Custom jam clearing action. Default uses reload animation, use an empty string to undefine
+		
 		JLTS_hasElectronics=1;
 		JLTS_hasEMPProtection=0;
 		JLTS_friedItem="MET_DC15L_F_Mk3_fried";

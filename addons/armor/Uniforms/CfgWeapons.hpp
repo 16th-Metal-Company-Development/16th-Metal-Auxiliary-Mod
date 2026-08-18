@@ -770,6 +770,24 @@ class MET_Uniform_Trooper_Convor : MET_Uniform_Trooper
 		uniformclass = "MET_Uniform_Trooper_Convor_Base";
 	};
 };
+class MET_Uniform_Trooper_Beige : MET_Uniform_Trooper
+{
+	scope = 2;
+	displayName = "[16th] Beige's Armor";
+	class ItemInfo : ItemInfo
+	{
+		uniformclass = "MET_Uniform_Trooper_Beige_Base";
+	};
+};
+class MET_Uniform_Trooper_Sam : MET_Uniform_Trooper
+{
+	scope = 2;
+	displayName = "[16th] Sam's Armor";
+	class ItemInfo : ItemInfo
+	{
+		uniformclass = "MET_Uniform_Trooper_Sam_Base";
+	};
+};
 class MET_Uniform_Trooper_Fool : MET_Uniform_Trooper
 {
 	scope = 2;

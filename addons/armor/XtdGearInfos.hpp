@@ -130,6 +130,7 @@ class XtdGearInfos {
         // [16th] Custom Armor variants (Phase 2)
         class MET_Uniform_Marshal_Avalanche  { model = "MET_Custom_Armor"; camo = "Avalanche"; };
         class MET_Uniform_Trooper_Ben        { model = "MET_Custom_Armor"; camo = "Ben"; };
+        class MET_Uniform_Trooper_Beige      { model = "MET_Custom_Armor"; camo = "Beige"; };
         class MET_Uniform_Trooper_Blackrose  { model = "MET_Custom_Armor"; camo = "Blackrose"; };
         class MET_Uniform_Trooper_Blatt      { model = "MET_Custom_Armor"; camo = "Blatt"; };
         class MET_Uniform_Trooper_Bopit      { model = "MET_Custom_Armor"; camo = "Bopit"; };
@@ -151,6 +152,7 @@ class XtdGearInfos {
         class MET_Uniform_Trooper_Prez       { model = "MET_Custom_Armor"; camo = "Prez"; };
         class MET_Uniform_Trooper_Ronin      { model = "MET_Custom_Armor"; camo = "Ronin"; };
         class MET_Uniform_Trooper_Roz        { model = "MET_Custom_Armor"; camo = "Roz"; };
+        class MET_Uniform_Trooper_Sam        { model = "MET_Custom_Armor"; camo = "Sam"; };
         class MET_Uniform_Trooper_Six        { model = "MET_Custom_Armor"; camo = "Six"; };
         class MET_Uniform_Trooper_Sunto      { model = "MET_Custom_Armor"; camo = "Sunto"; };
         class MET_Uniform_Trooper_Vergil     { model = "MET_Custom_Armor"; camo = "Vergil"; };
