@@ -39,7 +39,7 @@ class CfgMagazines
 	{
 		displayName="Mass Driver Missiles AA";
 		displayNameShort="MDM AA";
-		count=32;
+		count=16;
 		model="3AS\3AS_arc170\Model\torrent_rail_x1";
 		ammo="Metal_Mass_Driver_Missile";
 	};

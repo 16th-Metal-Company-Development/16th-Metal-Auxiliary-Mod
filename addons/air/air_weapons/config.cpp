@@ -41,28 +41,155 @@ class CfgSoundShaders
 		volume=3;
 		range=3500;
 	};
+	/*class MET_ARC_Shot_SoundShader
+	{
+		samples[]=
+		{
+			
+			{
+				"z\MET\addons\air\air_weapons\sounds\arc170\arc_cannon_1.ogg",
+				1
+			},
+			
+			{
+				"z\MET\addons\air\air_weapons\sounds\arc170\arc_cannon_2.ogg",
+				1
+			},
+			
+			{
+				"z\MET\addons\air\air_weapons\sounds\arc170\arc_cannon_3.ogg",
+				1
+			},
+			
+			{
+				"z\MET\addons\air\air_weapons\sounds\arc170\arc_cannon_4.ogg",
+				1
+			},
+			
+			{
+				"z\MET\addons\air\air_weapons\sounds\arc170\arc_cannon_5.ogg",
+				1
+			},
+			
+			{
+				"z\MET\addons\air\air_weapons\sounds\arc170\arc_cannon_6.ogg",
+				1
+			},
+			
+			{
+				"z\MET\addons\air\air_weapons\sounds\arc170\arc_cannon_7.ogg",
+				1
+			},
+			
+			{
+				"z\MET\addons\air\air_weapons\sounds\arc170\arc_cannon_8.ogg",
+				1
+			},
+			
+			{
+				"z\MET\addons\air\air_weapons\sounds\arc170\arc_cannon_9.ogg",
+				1
+			},
+			
+			{
+				"z\MET\addons\air\air_weapons\sounds\arc170\arc_cannon_10.ogg",
+				1
+			},
+			
+			{
+				"z\MET\addons\air\air_weapons\sounds\arc170\arc_cannon_11.ogg",
+				1
+			},
+			
+			{
+				"z\MET\addons\air\air_weapons\sounds\arc170\arc_cannon_12.ogg",
+				1
+			},
+			
+			{
+				"z\MET\addons\air\air_weapons\sounds\arc170\arc_cannon_13.ogg",
+				1
+			},
+			
+			{
+				"z\MET\addons\air\air_weapons\sounds\arc170\arc_cannon_14.ogg",
+				1
+			},
+			
+			{
+				"z\MET\addons\air\air_weapons\sounds\arc170\arc_cannon_15.ogg",
+				1
+			},
+			
+			{
+				"z\MET\addons\air\air_weapons\sounds\arc170\arc_cannon_16.ogg",
+				1
+			},
+			
+			{
+				"z\MET\addons\air\air_weapons\sounds\arc170\arc_cannon_17.ogg",
+				1
+			},
+			
+			{
+				"z\MET\addons\air\air_weapons\sounds\arc170\arc_cannon_18.ogg",
+				1
+			},
+			
+			{
+				"z\MET\addons\air\air_weapons\sounds\arc170\arc_cannon_19.ogg",
+				1
+			},
+			
+			{
+				"z\MET\addons\air\air_weapons\sounds\arc170\arc_cannon_20.ogg",
+				1
+			},
+			
+			{
+				"z\MET\addons\air\air_weapons\sounds\arc170\arc_cannon_21.ogg",
+				1
+			},
+			
+			{
+				"z\MET\addons\air\air_weapons\sounds\arc170\arc_cannon_22.ogg",
+				1
+			},
+			
+			{
+				"z\MET\addons\air\air_weapons\sounds\arc170\arc_cannon_23.ogg",
+				1
+			},
+			
+			{
+				"z\MET\addons\air\air_weapons\sounds\arc170\arc_cannon_24.ogg",
+				1
+			}
+
+		};
+		volume=3;
+		range=2500;
+	};*/
 	class MET_ARC_Shot_SoundShader
 	{
 		samples[]=
 		{
 			
 			{
-				"z\MET\addons\air\air_weapons\sounds\arc_cannon_shot1.ogg",
+				"z\MET\addons\air\air_weapons\sounds\arc170\arc_cannon_25.ogg",
 				1
 			},
 			
 			{
-				"z\MET\addons\air\air_weapons\sounds\arc_cannon_shot2.ogg",
+				"z\MET\addons\air\air_weapons\sounds\arc170\arc_cannon_26.ogg",
 				1
 			},
 			
 			{
-				"z\MET\addons\air\air_weapons\sounds\arc_cannon_shot3.ogg",
+				"z\MET\addons\air\air_weapons\sounds\arc170\arc_cannon_27.ogg",
 				1
 			}
 		};
-		volume=3;
-		range=2500;
 	};
 };
 class CfgSoundSets

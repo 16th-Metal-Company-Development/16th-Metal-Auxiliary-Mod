@@ -4853,6 +4853,19 @@ class CfgVehicles
 				};
 			};
 		};
+		USAF_TGP_Inbuilt=1;
+		class USAF_Afterburner
+		{
+			force=700;
+			maxSpeed=2200;
+			throttleEngage=0.89999998;
+			fuelUsage=0.0024999999;
+			/*animShow[]=
+			{
+				"afterburner_show"
+			};
+			animStretch="afterburner_stretch";*/
+		};
 		irTarget=1;
 		irTargetSize=0.94999999;
 		radarTarget=1;
@@ -5178,6 +5191,7 @@ class CfgVehicles
 		class Eventhandlers: Eventhandlers
 		{
 			postInit="if (local (_this select 0)) then { [(_this select 0), """", [], false] call BIS_fnc_initVehicle; };";
+			fired="_this call BIS_Effects_EH_Fired; _this execVM '\USAF_missilebox\scr\fall.sqf'; _this spawn USAF_GPS_DIALOG_fnc_firedGPS; _this spawn USAF_EXT_FUEL_fnc_auxilary_fueltank_control;";
 		};
 		hiddenselections[]=
 		{
@@ -5442,11 +5456,52 @@ class CfgVehicles
 							"B_BIM9X_DUAL_RAIL",
 							"B_AGM65_RAIL",
 							"REP_AGM_RAIL",
-							"B_MISSILE_PYLON"
+							"B_MISSILE_PYLON",
+							"B_USAF_AIM9M_Pylon",
+							"B_AIM9M_DUAL_RAIL",
+							"B_USAF_AIM9X_Pylon",
+							"B_AIM9X_DUAL_RAIL",
+							"B_USAF_AIM_120_Pylon",
+							"B_AIM120_DUAL_RAIL",
+							"B_BOMB_GBU12",
+							"B_BOMB_2GBU12_BRU57",
+							"B_BOMB_3GBU12",
+							"B_BOMB_GBU24",
+							"B_BOMB_GBU28",
+							"B_BOMB_GBU31",
+							"B_BOMB_GBU32",
+							"B_BOMB_GBU38",
+							"B_BOMB_2GBU38",
+							"B_BOMB_GBU49",
+							"B_BOMB_2GBU49",
+							"B_BOMB_GBU54",
+							"B_BOMB_2GBU54",
+							"B_BOMB_GBU39",
+							"B_BOMB_GBU53",
+							"B_BOMB_CBU87",
+							"B_BOMB_CBU89",
+							"B_BOMB_CBU97",
+							"B_BOMB_CBU103",
+							"B_BOMB_CBU104",
+							"B_BOMB_CBU105",
+							"B_BOMB_MK20",
+							"B_BOMB_MK77",
+							"B_BOMB_MK82",
+							"B_BOMB_MK82SE",
+							"B_BOMB_MK84",
+							"B_BOMB_AGM154A",
+							"B_BOMB_2AGM154A",
+							"B_BOMB_AGM154B",
+							"B_BOMB_2AGM154B",
+							"B_BOMB_AGM154C",
+							"B_BOMB_2AGM154C",
+							"AGM_158",
+							"B_USAF_AARGMER",
+							"B_USAF_AARGMER_2"
 						};
 						attachment="PylonRack_Missile_BIM9X_x2";
 						priority=10;
-						maxweight=300;
+						maxweight=5000;
 						UIposition[]={0.5,0.25};
 					};
 					class pylons2: pylons1
@@ -5464,11 +5519,52 @@ class CfgVehicles
 							"B_AGM65_DUAL_RAIL",
 							"ARC_AGM_PYLON",
 							"B_BOMB_PYLON",
-							"B_MISSILE_PYLON"
+							"B_MISSILE_PYLON",
+							"B_USAF_AIM9M_Pylon",
+							"B_AIM9M_DUAL_RAIL",
+							"B_USAF_AIM9X_Pylon",
+							"B_AIM9X_DUAL_RAIL",
+							"B_USAF_AIM_120_Pylon",
+							"B_AIM120_DUAL_RAIL",
+							"B_BOMB_GBU12",
+							"B_BOMB_2GBU12_BRU57",
+							"B_BOMB_3GBU12",
+							"B_BOMB_GBU24",
+							"B_BOMB_GBU28",
+							"B_BOMB_GBU31",
+							"B_BOMB_GBU32",
+							"B_BOMB_GBU38",
+							"B_BOMB_2GBU38",
+							"B_BOMB_GBU49",
+							"B_BOMB_2GBU49",
+							"B_BOMB_GBU54",
+							"B_BOMB_2GBU54",
+							"B_BOMB_GBU39",
+							"B_BOMB_GBU53",
+							"B_BOMB_CBU87",
+							"B_BOMB_CBU89",
+							"B_BOMB_CBU97",
+							"B_BOMB_CBU103",
+							"B_BOMB_CBU104",
+							"B_BOMB_CBU105",
+							"B_BOMB_MK20",
+							"B_BOMB_MK77",
+							"B_BOMB_MK82",
+							"B_BOMB_MK82SE",
+							"B_BOMB_MK84",
+							"B_BOMB_AGM154A",
+							"B_BOMB_2AGM154A",
+							"B_BOMB_AGM154B",
+							"B_BOMB_2AGM154B",
+							"B_BOMB_AGM154C",
+							"B_BOMB_2AGM154C",
+							"AGM_158",
+							"B_USAF_AARGMER",
+							"B_USAF_AARGMER_2"
 						};
 						attachment="PylonMissile_1Rnd_Bomb_04_F";
 						priority=9;
-						maxweight=2500;
+						maxweight=5000;
 						UIposition[]={0.55000001,0.34999999};
 					};
 					class pylons4: pylons3
@@ -5486,7 +5582,48 @@ class CfgVehicles
 							"B_HARM_RAIL",
 							"ARC_AGM_PYLON",
 							"B_BOMB_PYLON",
-							"B_MISSILE_PYLON"
+							"B_MISSILE_PYLON",
+							"B_USAF_AIM9M_Pylon",
+							"B_AIM9M_DUAL_RAIL",
+							"B_USAF_AIM9X_Pylon",
+							"B_AIM9X_DUAL_RAIL",
+							"B_USAF_AIM_120_Pylon",
+							"B_AIM120_DUAL_RAIL",
+							"B_BOMB_GBU12",
+							"B_BOMB_2GBU12_BRU57",
+							"B_BOMB_3GBU12",
+							"B_BOMB_GBU24",
+							"B_BOMB_GBU28",
+							"B_BOMB_GBU31",
+							"B_BOMB_GBU32",
+							"B_BOMB_GBU38",
+							"B_BOMB_2GBU38",
+							"B_BOMB_GBU49",
+							"B_BOMB_2GBU49",
+							"B_BOMB_GBU54",
+							"B_BOMB_2GBU54",
+							"B_BOMB_GBU39",
+							"B_BOMB_GBU53",
+							"B_BOMB_CBU87",
+							"B_BOMB_CBU89",
+							"B_BOMB_CBU97",
+							"B_BOMB_CBU103",
+							"B_BOMB_CBU104",
+							"B_BOMB_CBU105",
+							"B_BOMB_MK20",
+							"B_BOMB_MK77",
+							"B_BOMB_MK82",
+							"B_BOMB_MK82SE",
+							"B_BOMB_MK84",
+							"B_BOMB_AGM154A",
+							"B_BOMB_2AGM154A",
+							"B_BOMB_AGM154B",
+							"B_BOMB_2AGM154B",
+							"B_BOMB_AGM154C",
+							"B_BOMB_2AGM154C",
+							"AGM_158",
+							"B_USAF_AARGMER",
+							"B_USAF_AARGMER_2"
 						};
 						attachment="PylonRack_Missile_AMRAAM_D_x1";
 						priority=7;
@@ -5535,6 +5672,24 @@ class CfgVehicles
 				};
 			};
 		};
+		class USAF_ServiceMenu
+		{
+			enabled=1;
+			loadOutCustomization=1;
+			openBays=1;
+			addBaysToggle=1;
+			cameraPos[]=
+			{
+				{0.382,-0.248,-0.46599999},
+				370.04599,
+				9.7089996,
+				25.368
+			};
+			animationToggles[]={};
+		};
+		USAF_TGP_Allowed=1;
+		USAF_TGP_MFDPIP=14;
+		USAF_TGP_MFDPIP_OVERLAY=17;
 		driveoncomponent[]={};
 		camouflage=8;
 		audible=10;
@@ -5626,7 +5781,7 @@ class CfgVehicles
 			class SFoil
 			{
 				source="user";
-				animPeriod=1;
+				animPeriod=2.7;
 				initPhase=1;
 			};
 			class Muzzle_Flash
@@ -5659,13 +5814,60 @@ class CfgVehicles
 				radius=10;
 				onlyForPlayer=0;
 				condition="(this animationSourcePhase ""SFoil"" == 0) AND (currentPilot this isEqualTo player) AND (alive this)";
-				statement="this animateSource [""SFoil"",1]";
+				statement="this animateSource [""SFoil"",1]; playSound3D [""z\MET\addons\air\arc170\sounds\sfoils.ogg"", this];";
+				//statement="this animateSource [""SFoil"",1]";
 			};
 			class undeploySfoils: deploySfoils
 			{
 				displayName="Deploy S-Foils";
 				condition="(this animationSourcePhase ""SFoil"" == 1) AND (currentPilot this isEqualTo player) AND (alive this)";
-				statement="this animateSource [""SFoil"",0]";
+				statement="this animateSource [""SFoil"",0]; playSound3D [""z\MET\addons\air\arc170\sounds\sfoils.ogg"", this];";
+				//statement="this animateSource [""SFoil"",0]";
+			};
+			/*class ALX
+			{
+				displayName="<t color='#FF0077'>Activate Cloaking</t>";
+				onlyforplayer=0;
+				position="pilotcontrol";
+				priority=-1000;
+				radius=25;
+				showWindow=0;
+				condition="driver this == player && {[false] call USAF_ECM_fnc_alx}";
+				statement="[true] spawn USAF_ECM_fnc_alx";
+			};*/
+			class ECM
+			{
+				displayName="(EWS) Electronic Warfare System";
+				onlyforplayer=0;
+				position="pilotcontrol";
+				radius=25;
+				showWindow=0;
+				condition="driver this == player && {(isEngineOn this)}";
+				statement="[this] spawn USAF_ECM_fnc_ECM_INIT;";
+			};
+			class USAF_GPS_targeting_system
+			{
+				displayName="GPS/INS Guidance System";
+				shortcut="User3";
+				position="pilotcontrol";
+				radius=10;
+				onlyforplayer=1;
+				showWindow=0;
+				hideOnUse=1;
+				condition="(driver this == player) && {[this] call USAF_GPS_DIALOG_fnc_isGPSDialogAvailable}";
+				statement="createDialog 'USAF_GPS_DIALOG'";
+			};
+			class USAF_HOB_Setting
+			{
+				displayName="Configure Height of Burst";
+				shortcut="";
+				position="pilotcontrol";
+				radius=10;
+				onlyforplayer=1;
+				showWindow=0;
+				hideOnUse=1;
+				condition="(driver this == player) && {[this] call USAF_HOB_DIALOG_fnc_isHOBDialogAvailable}";
+				statement="createDialog 'USAF_HOB_DIALOG'";
 			};
 		};
 		class WingVortices
@@ -5815,13 +6017,13 @@ class CfgVehicles
 		};
 		soundEngineOnInt[]=
 		{
-			"3AS\3as_arc170\Sounds\ARCStart.ogg",
+			"z\MET\addons\Air\arc170\sounds\engine_start.ogg",
 			"db-0",
 			1
 		};
 		soundEngineOnExt[]=
 		{
-			"3AS\3as_arc170\Sounds\ARCStart.ogg",
+			"z\MET\addons\Air\arc170\sounds\engine_start.ogg",
 			"db5",
 			1,
 			500
@@ -5893,48 +6095,88 @@ class CfgVehicles
 		};
 		class Sounds
 		{
+			class EngineIdleOut
+			{
+				sound[]=
+				{
+					"z\MET\addons\Air\arc170\sounds\engine_idle.ogg",
+					0.7,
+					1,
+					3000
+				};
+				frequency="1";
+				volume="engineOn*camPos*(1 - (rpm factor [0.15, 0.55]))";
+			};
+
 			class EngineLowOut
 			{
 				sound[]=
 				{
-					"3AS\3as_arc170\Sounds\ARCLow.ogg",
-					1.2,
+					"z\MET\addons\Air\arc170\sounds\loop.ogg",
+					1,
 					1,
 					4000
 				};
-				frequency="1.0 min (rpm + 0.5)";
-				volume="camPos*2*(rpm factor[0.95, 0])*(rpm factor[0, 0.95])";
+				frequency="(rpm interpolate [0,1,0.4,1]) * (thrust interpolate [0,1,1.0,2.0])";
+				volume="engineOn*camPos*(rpm interpolate [0.2,0.7,0,1])*(thrust interpolate [0.3,0.9,0,1])";
 			};
+
+			class EngineMidOut
+			{
+				sound[]=
+				{
+					"z\MET\addons\Air\arc170\sounds\loop.ogg",
+					1.4,
+					1,
+					4500
+				};
+				frequency="1";
+				volume="engineOn*camPos*(rpm interpolate [0.45,0.9,0,1])*(thrust interpolate [0.4,1.0,0,1])";
+			};
+
+			class EngineMidHighOut
+			{
+				sound[]=
+				{
+					"z\MET\addons\Air\arc170\sounds\engine_mid_hi.ogg",
+					1.6,
+					1,
+					4700
+				};
+				frequency="1";
+				volume="engineOn*camPos*(rpm interpolate [0.6,0.9,0,1])*(thrust interpolate [0.6,1.0,0,1])";
+			};
+
 			class EngineHighOut
 			{
 				sound[]=
 				{
-					"3AS\3as_arc170\Sounds\ARC170.ogg",
-					1.2,
-					1.2,
+					"z\MET\addons\Air\arc170\sounds\engine_hi.ogg",
+					2,
+					1,
 					5000
 				};
 				frequency="1";
-				volume="camPos*4*(rpm factor[0.5, 1.1])*(rpm factor[1.1, 0.5])";
+				volume="engineOn*camPos*(rpm interpolate [0.7,1,0,1])*(thrust factor[0.5,1.0])";
 			};
 			class ForsageOut
 			{
 				sound[]=
 				{
-					"3AS\3as_arc170\Sounds\ARC170.ogg",
-					"db5",
-					0.99000001,
-					4200
+					"z\MET\addons\Air\arc170\sounds\engine_hi.ogg",
+					1,
+					1,
+					5000
 				};
 				frequency="1";
-				volume="engineOn*camPos*(thrust factor[0.6, 1.0])";
+				volume="engineOn*camPos*(rpm interpolate [0.5,1,0,1])*(thrust factor[0.3,1.0])";
 				cone[]={3.1400001,3.9200001,2,0.5};
 			};
 			class WindNoiseOut
 			{
 				sound[]=
 				{
-					"3AS\3as_arc170\Sounds\ARC170.ogg",
+					"z\MET\addons\Air\arc170\sounds\wind_noise.ogg",
 					"db-5",
 					1,
 					800
