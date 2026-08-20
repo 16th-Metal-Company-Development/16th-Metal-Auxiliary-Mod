@@ -5814,14 +5814,14 @@ class CfgVehicles
 				radius=10;
 				onlyForPlayer=0;
 				condition="(this animationSourcePhase ""SFoil"" == 0) AND (currentPilot this isEqualTo player) AND (alive this)";
-				statement="this animateSource [""SFoil"",1]; playSound3D [""z\MET\addons\air\arc170\sounds\sfoils.ogg"", this];";
+				statement="this animateSource [""SFoil"",1]; playSound3D [""z\MET\addons\air\arc170\sounds\sfoils.ogg"", this, false, getPosASL this, 2, 1, 0];";
 				//statement="this animateSource [""SFoil"",1]";
 			};
 			class undeploySfoils: deploySfoils
 			{
 				displayName="Deploy S-Foils";
 				condition="(this animationSourcePhase ""SFoil"" == 1) AND (currentPilot this isEqualTo player) AND (alive this)";
-				statement="this animateSource [""SFoil"",0]; playSound3D [""z\MET\addons\air\arc170\sounds\sfoils.ogg"", this];";
+				statement="this animateSource [""SFoil"",0]; playSound3D [""z\MET\addons\air\arc170\sounds\sfoils.ogg"", this, false, getPosASL this, 2, 1, 0];";
 				//statement="this animateSource [""SFoil"",0]";
 			};
 			/*class ALX
@@ -6097,93 +6097,127 @@ class CfgVehicles
 		{
 			class EngineIdleOut
 			{
-				sound[]=
+				sound[] =
 				{
-					"z\MET\addons\Air\arc170\sounds\engine_idle.ogg",
-					0.7,
+					"z\MET\addons\air\arc170\sounds\engine_idlev2.ogg",
+					2,
 					1,
 					3000
 				};
-				frequency="1";
-				volume="engineOn*camPos*(1 - (rpm factor [0.15, 0.55]))";
+
+				frequency = "0.985 + (0.015 * (rpm factor [0.10,0.95])) + (0.010 * (thrust factor [0,1]))";
+
+				// Nominal 0-10% throttle.
+				// Crossfade to Low from roughly 7-13%.
+				volume = "engineOn*camPos*(1-(thrust factor [0.07,0.13]))*(0.90+(0.10*(rpm factor [0.10,0.95])))";
 			};
+
 
 			class EngineLowOut
 			{
-				sound[]=
+				sound[] =
 				{
-					"z\MET\addons\Air\arc170\sounds\loop.ogg",
-					1,
+					"z\MET\addons\air\arc170\sounds\engine_lowv2.ogg",
+					2,
 					1,
 					4000
 				};
-				frequency="(rpm interpolate [0,1,0.4,1]) * (thrust interpolate [0,1,1.0,2.0])";
-				volume="engineOn*camPos*(rpm interpolate [0.2,0.7,0,1])*(thrust interpolate [0.3,0.9,0,1])";
+
+				frequency = "0.985 + (0.015 * (rpm factor [0.10,0.95])) + (0.010 * (thrust factor [0,1]))";
+
+				// Nominal 10-35%.
+				// Fade in 7-13%, fade out 30-40%.
+				volume = "engineOn*camPos*(thrust factor [0.07,0.13])*(1-(thrust factor [0.30,0.40]))*(0.90+(0.10*(rpm factor [0.10,0.95])))";
 			};
+
 
 			class EngineMidOut
 			{
-				sound[]=
+				sound[] =
 				{
-					"z\MET\addons\Air\arc170\sounds\loop.ogg",
-					1.4,
+					"z\MET\addons\air\arc170\sounds\engine_midv2.ogg",
+					2,
 					1,
 					4500
 				};
-				frequency="1";
-				volume="engineOn*camPos*(rpm interpolate [0.45,0.9,0,1])*(thrust interpolate [0.4,1.0,0,1])";
+
+				frequency = "0.985 + (0.015 * (rpm factor [0.10,0.95])) + (0.010 * (thrust factor [0,1]))";
+
+				// Nominal 35-65%.
+				// Fade in 30-40%, fade out 60-70%.
+				volume = "engineOn*camPos*(thrust factor [0.30,0.40])*(1-(thrust factor [0.60,0.70]))*(0.90+(0.10*(rpm factor [0.10,0.95])))";
 			};
+
 
 			class EngineMidHighOut
 			{
-				sound[]=
+				sound[] =
 				{
-					"z\MET\addons\Air\arc170\sounds\engine_mid_hi.ogg",
-					1.6,
+					"z\MET\addons\air\arc170\sounds\engine_midhighv2.ogg",
+					2,
 					1,
 					4700
 				};
-				frequency="1";
-				volume="engineOn*camPos*(rpm interpolate [0.6,0.9,0,1])*(thrust interpolate [0.6,1.0,0,1])";
+
+				frequency = "0.985 + (0.015 * (rpm factor [0.10,0.95])) + (0.010 * (thrust factor [0,1]))";
+
+				// Nominal 65-80%.
+				// Fade in 60-70%, fade out 76-84%.
+				volume = "engineOn*camPos*(thrust factor [0.60,0.70])*(1-(thrust factor [0.76,0.84]))*(0.90+(0.10*(rpm factor [0.10,0.95])))";
 			};
+
 
 			class EngineHighOut
 			{
-				sound[]=
+				sound[] =
 				{
-					"z\MET\addons\Air\arc170\sounds\engine_hi.ogg",
+					"z\MET\addons\air\arc170\sounds\engine_highv2.ogg",
 					2,
 					1,
 					5000
 				};
-				frequency="1";
-				volume="engineOn*camPos*(rpm interpolate [0.7,1,0,1])*(thrust factor[0.5,1.0])";
+
+				frequency = "0.985 + (0.015 * (rpm factor [0.10,0.95])) + (0.010 * (thrust factor [0,1]))";
+
+				// Nominal 80-100%.
+				// Starts blending in at 76%, fully established at 84%.
+				volume = "engineOn*camPos*(thrust factor [0.76,0.84])*(0.90+(0.10*(rpm factor [0.10,0.95])))";
 			};
+
+
 			class ForsageOut
 			{
-				sound[]=
+				sound[] =
 				{
-					"z\MET\addons\Air\arc170\sounds\engine_hi.ogg",
-					1,
+					"z\MET\addons\air\arc170\sounds\forsage.ogg",
+					0.8,
 					1,
 					5000
 				};
-				frequency="1";
-				volume="engineOn*camPos*(rpm interpolate [0.5,1,0,1])*(thrust factor[0.3,1.0])";
-				cone[]={3.1400001,3.9200001,2,0.5};
+
+				frequency = "1";
+
+				volume = "engineOn*camPos*(rpm factor [0.85,1.0])*(thrust factor [0.75,1.0])";
+
+				cone[] = {3.14,3.92,2,0.5};
 			};
+
+
 			class WindNoiseOut
 			{
-				sound[]=
+				sound[] =
 				{
-					"z\MET\addons\Air\arc170\sounds\wind_noise.ogg",
+					"z\MET\addons\air\arc170\sounds\wind.ogg",
 					"db-5",
-					1,
+					0.8,
 					800
 				};
-				frequency="(0.1+(1.2*(speed factor[1, 150])))";
-				volume="camPos*(speed factor[1, 150])";
+
+				frequency = "0.85+(0.25*(speed factor [1,150]))";
+
+				volume = "camPos*(speed factor [5,180])";
 			};
+
 			class EngineLowIn
 			{
 				sound[]=

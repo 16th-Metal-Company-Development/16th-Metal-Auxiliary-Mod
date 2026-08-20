@@ -190,6 +190,8 @@ class CfgSoundShaders
 				1
 			}
 		};
+		volume=3;
+		range=3500;
 	};
 };
 class CfgSoundSets
@@ -626,7 +628,7 @@ class CfgWeapons
 			{
 				soundSetShot[]=
 				{
-					"3AS_YwingBlaster_SoundSet"
+					"MET_ARC_Shot_SoundSet"
 				};
 			};
 		};
