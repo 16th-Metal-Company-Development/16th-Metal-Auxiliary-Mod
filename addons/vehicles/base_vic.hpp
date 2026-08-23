@@ -1217,6 +1217,39 @@ class MET_BARC_SideCar: 3AS_BarcSideCar
 	};
 };
 
+class MET_ATRT_Base : ls_vehicle_atrt_base
+{
+	scope = 2;
+	author = "Legion Studios";
+	ls_crew = "ls_clone_phase2_standard_atrtDriver";
+
+	faction = "metal_company";
+	editorSubcategory = "metal_co_EdSubCat_Goff";
+
+	weapons[] =
+	{
+		"MET_ATRT_Cannon"
+	};
+	respawnWeapons[] =
+	{
+		"MET_ATRT_Cannon"
+	};
+	magazines[] =
+	{
+		"MET_ATRT_Mag",
+		"MET_ATRT_Mag",
+		"MET_ATRT_Mag",
+		"MET_ATRT_Mag"
+	};
+	respawnMagazines[] =
+	{
+		"MET_ATRT_Mag",
+		"MET_ATRT_Mag",
+		"MET_ATRT_Mag",
+		"MET_ATRT_Mag"
+	};
+};
+
 // ISPs
 class MET_ISP: 3AS_ISP
 {

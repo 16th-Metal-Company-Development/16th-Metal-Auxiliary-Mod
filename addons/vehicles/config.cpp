@@ -25,6 +25,7 @@ class CfgPatches
 			"MET_Bantha_E_MSV",
 			"MET_Bantha_T_Cargo",
 			"MET_Bantha_T_Assault",
+			"MET_ATRT_Base",
 			"MET_BARC",
 			"MET_BARC_SideCar",
 			"MET_ISP",
@@ -261,6 +262,7 @@ class cfgvehicles
 	class 3AS_BarcSideCar;
 	class 3AS_ISP;
 	class 3AS_ISP_Transport;
+	class ls_vehicle_atrt_base;
 
 	#include "bantha.hpp"
 	#include "base_vic.hpp"
@@ -291,6 +293,9 @@ class CfgFunctions {
 	};
 };
 
+class Mode_SemiAuto;
+class Mode_FullAuto;
+
 class CfgWeapons 
 {
 	class CannonCore;
@@ -302,6 +307,81 @@ class CfgWeapons
 	class 3AS_Sabre_Cannons_Super
 	{
 		class manual;
+	};
+
+	class ls_weapon_atrt_laserCannon;
+
+	class MET_ATRT_Cannon : ls_weapon_atrt_laserCannon
+	{
+		baseWeapon = "MET_ATRT_Cannon";
+		magazines[] =
+		{
+			"MET_ATRT_Mag",
+			"MET_ATRT_Mag"
+		};
+		magazineWell[] = {};
+		recoil = "MET_recoil_ATRT";
+		maxRecoilSway = 0.00000001;
+		modes[] =
+		{
+			"FullAuto",
+			"Single"
+		};
+		class FullAuto : Mode_FullAuto
+		{
+			sounds[] =
+			{
+				"StandardSound"
+			};
+			class StandardSound 
+			{
+
+				soundSetShot[] = {
+					"ATRT_BlasterCannon_Close_SoundSet",
+					"ATRT_BlasterCannon_Distant_SoundSet"
+				};
+
+				/*begin1[] = { "z\MET\addons\vehicles\vics\ATRT\AT_RT_Close.wav", 1.4, 1, 1100 };
+				begin2[] = { "z\MET\addons\vehicles\vics\ATRT\AT_RT_Distant.wav", 1.2, 1, 2200 };
+
+				soundBegin[] = {
+					"begin1", 0.5,
+					"begin2", 0.5
+				};
+
+				closure1[] = {};
+				soundClosure[] = { "closure1", 0.5 };*/
+			};
+
+			reloadTime = 0.215;
+			dispersion = 0.00001;
+		};
+		class Single : Mode_SemiAuto
+		{
+			sounds[] =
+			{
+				"StandardSound"
+			};
+			class StandardSound
+			{
+
+				soundSetShot[] = {
+					"ATRT_BlasterCannon_Close_SoundSet",
+					"ATRT_BlasterCannon_Distant_SoundSet"
+				};
+
+				/*begin1[] = { "z\MET\addons\vehicles\vics\ATRT\AT_RT_Close.wav", 1.4, 1, 1100 };
+				begin2[] = { "z\MET\addons\vehicles\vics\ATRT\AT_RT_Distant.wav", 1.2, 1, 2200 };
+
+				soundBegin[] = {
+					"begin1", 0.5,
+					"begin2", 0.5
+				};
+
+				closure1[] = {};
+				soundClosure[] = { "closure1", 0.5 };*/
+			};
+		};
 	};
 
 	class MET_BARC_Repeater : CannonCore

@@ -1517,6 +1517,24 @@ class CfgMagazines
 		mass = 250;
 		tracersEvery = 1;
 	};
+	class MET_ATRT_Mag : JLTS_DC15A_mag
+	{
+		JLTS_hasElectronics = 1;
+		JLTS_hasEMPProtection = 1;
+		author = "Chet";
+		scope = 1;
+		modelSpecial = "";
+		modelSpecialIsProxy = 0;
+		picture = "\3AS\3AS_Weapons\Data\UI\3as_box_b.paa";
+		model = "\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
+		count = 1000;
+		displayName = "[16th] AT-RT Cannon Cell";
+		displayNameShort = "AT-RT Cannon Cell";
+		descriptionShort = "Energy cell for the AT-RT Cannon";
+		ammo = "MET_blasterbolt_br";
+		mass = 5;
+		tracersEvery = 1;
+	};
 };
 class ACE_Medical_Injuries
 {

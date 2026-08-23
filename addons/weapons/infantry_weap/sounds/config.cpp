@@ -63,6 +63,32 @@ class CfgSoundSets
 			"MET_Nerf_distExp_SoundShader"
 		};
 	};
+
+	// AT-RT Sound Sets
+	class ATRT_BlasterCannon_Close_SoundSet
+    {
+        soundShaders[] = {
+            "ATRT_BlasterCannon_Close_SoundShader",
+            "BlasterCannon_Bass_Revolver_Close_SoundShader",
+            "BlasterCannon_Bass_Close_SoundShader"
+        };
+        volumeFactor = 1.0;
+        spatial = 1;
+        loop = 0;
+    };
+
+    class ATRT_BlasterCannon_Distant_SoundSet
+    {
+        soundShaders[] = {
+            "ATRT_BlasterCannon_Distant_SoundShader",
+            "BlasterCannon_Bass_Revolver_Distant_SoundShader",
+            "BlasterCannon_Bass_Distant_SoundShader"
+        };
+        volumeFactor = 1.0;
+        spatial = 1;
+        loop = 0;
+    };
+
 };
 class CfgSoundShaders
 {
@@ -255,5 +281,94 @@ class CfgSoundShaders
 				1
 			}
 		};
+	};
+
+	class ATRT_BlasterCannon_Close_SoundShader {
+		samples[] = {
+			{"z\MET\addons\vehicles\vics\ATRT\BlasterCannon_Sounds\ATRT_BlasterCannon_Close_01.wav", 1},
+			{"z\MET\addons\vehicles\vics\ATRT\BlasterCannon_Sounds\ATRT_BlasterCannon_Close_02.wav", 1},
+			{"z\MET\addons\vehicles\vics\ATRT\BlasterCannon_Sounds\ATRT_BlasterCannon_Close_03.wav", 1},
+			{"z\MET\addons\vehicles\vics\ATRT\BlasterCannon_Sounds\ATRT_BlasterCannon_Close_04.wav", 1},
+			{"z\MET\addons\vehicles\vics\ATRT\BlasterCannon_Sounds\ATRT_BlasterCannon_Close_05.wav", 1},
+			{"z\MET\addons\vehicles\vics\ATRT\BlasterCannon_Sounds\ATRT_BlasterCannon_Close_06.wav", 1}
+		};
+		volume = 1.2;
+		range = 150; // Only heard up close
+	};
+
+	class BlasterCannon_Bass_Revolver_Close_SoundShader {
+		samples[] = {
+			{"z\MET\addons\vehicles\vics\ATRT\BlasterCannon_Bass_01\Blaster_Bass_Revolver_Close_01.wav", 1},
+			{"z\MET\addons\vehicles\vics\ATRT\BlasterCannon_Bass_01\Blaster_Bass_Revolver_Close_02.wav", 1},
+			{"z\MET\addons\vehicles\vics\ATRT\BlasterCannon_Bass_01\Blaster_Bass_Revolver_Close_03.wav", 1},
+			{"z\MET\addons\vehicles\vics\ATRT\BlasterCannon_Bass_01\Blaster_Bass_Revolver_Close_04.wav", 1},
+			{"z\MET\addons\vehicles\vics\ATRT\BlasterCannon_Bass_01\Blaster_Bass_Revolver_Close_05.wav", 1}
+		};
+		volume = 0.8;
+		range = 150;
+	};
+
+	class BlasterCannon_Bass_Close_SoundShader {
+		samples[] = {
+			{"z\MET\addons\vehicles\vics\ATRT\BlasterCannon_Bass_02\Blaster_Bass_Cannon_Close_01.wav", 1},
+			{"z\MET\addons\vehicles\vics\ATRT\BlasterCannon_Bass_02\Blaster_Bass_Cannon_Close_02.wav", 1},
+			{"z\MET\addons\vehicles\vics\ATRT\BlasterCannon_Bass_02\Blaster_Bass_Cannon_Close_03.wav", 1},
+			{"z\MET\addons\vehicles\vics\ATRT\BlasterCannon_Bass_02\Blaster_Bass_Cannon_Close_04.wav", 1},
+			{"z\MET\addons\vehicles\vics\ATRT\BlasterCannon_Bass_02\Blaster_Bass_Cannon_Close_05.wav", 1},
+			{"z\MET\addons\vehicles\vics\ATRT\BlasterCannon_Bass_02\Blaster_Bass_Cannon_Close_06.wav", 1},
+			{"z\MET\addons\vehicles\vics\ATRT\BlasterCannon_Bass_02\Blaster_Bass_Cannon_Close_07.wav", 1},
+			{"z\MET\addons\vehicles\vics\ATRT\BlasterCannon_Bass_02\Blaster_Bass_Cannon_Close_08.wav", 1},
+			{"z\MET\addons\vehicles\vics\ATRT\BlasterCannon_Bass_02\Blaster_Bass_Cannon_Close_09.wav", 1},
+			{"z\MET\addons\vehicles\vics\ATRT\BlasterCannon_Bass_02\Blaster_Bass_Cannon_Close_10.wav", 1},
+			{"z\MET\addons\vehicles\vics\ATRT\BlasterCannon_Bass_02\Blaster_Bass_Cannon_Close_11.wav", 1},
+			{"z\MET\addons\vehicles\vics\ATRT\BlasterCannon_Bass_02\Blaster_Bass_Cannon_Close_12.wav", 1},
+			{"z\MET\addons\vehicles\vics\ATRT\BlasterCannon_Bass_02\Blaster_Bass_Cannon_Close_13.wav", 1},
+			{"z\MET\addons\vehicles\vics\ATRT\BlasterCannon_Bass_02\Blaster_Bass_Cannon_Close_14.wav", 1},
+			{"z\MET\addons\vehicles\vics\ATRT\BlasterCannon_Bass_02\Blaster_Bass_Cannon_Close_15.wav", 1}
+		};
+		volume = 0.8;
+		range = 150;
+	};
+
+	// AT-RT Distant Sounds
+	class ATRT_BlasterCannon_Distant_SoundShader {
+		samples[] = {
+			{"z\MET\addons\vehicles\vics\ATRT\BlasterCannon_Sounds\ATRT_BlasterCannon_Distant_01.wav", 1},
+			{"z\MET\addons\vehicles\vics\ATRT\BlasterCannon_Sounds\ATRT_BlasterCannon_Distant_02.wav", 1},
+			{"z\MET\addons\vehicles\vics\ATRT\BlasterCannon_Sounds\ATRT_BlasterCannon_Distant_03.wav", 1},
+			{"z\MET\addons\vehicles\vics\ATRT\BlasterCannon_Sounds\ATRT_BlasterCannon_Distant_04.wav", 1},
+			{"z\MET\addons\vehicles\vics\ATRT\BlasterCannon_Sounds\ATRT_BlasterCannon_Distant_05.wav", 1},
+			{"z\MET\addons\vehicles\vics\ATRT\BlasterCannon_Sounds\ATRT_BlasterCannon_Distant_06.wav", 1}
+		};
+		volume = 1.2;
+		range = 2000;
+		rangeCurve[] = {{0,0}, {150,1}, {2000,0}}; 
+	};
+
+	class BlasterCannon_Bass_Revolver_Distant_SoundShader {
+		samples[] = {
+			{"z\MET\addons\vehicles\vics\ATRT\BlasterCannon_Bass_01\Blaster_Bass_Revolver_Distant_01.wav", 1},
+			{"z\MET\addons\vehicles\vics\ATRT\BlasterCannon_Bass_01\Blaster_Bass_Revolver_Distant_02.wav", 1},
+			{"z\MET\addons\vehicles\vics\ATRT\BlasterCannon_Bass_01\Blaster_Bass_Revolver_Distant_03.wav", 1}
+		};
+		volume = 0.8;
+		range = 2000;
+		rangeCurve[] = {{0,0}, {150,1}, {2000,0}};
+	};
+
+	class BlasterCannon_Bass_Distant_SoundShader {
+		samples[] = {
+			{"z\MET\addons\vehicles\vics\ATRT\BlasterCannon_Bass_02\Blaster_Bass_Cannon_Distant_01.wav", 1},
+			{"z\MET\addons\vehicles\vics\ATRT\BlasterCannon_Bass_02\Blaster_Bass_Cannon_Distant_02.wav", 1},
+			{"z\MET\addons\vehicles\vics\ATRT\BlasterCannon_Bass_02\Blaster_Bass_Cannon_Distant_03.wav", 1},
+			{"z\MET\addons\vehicles\vics\ATRT\BlasterCannon_Bass_02\Blaster_Bass_Cannon_Distant_04.wav", 1},
+			{"z\MET\addons\vehicles\vics\ATRT\BlasterCannon_Bass_02\Blaster_Bass_Cannon_Distant_05.wav", 1},
+			{"z\MET\addons\vehicles\vics\ATRT\BlasterCannon_Bass_02\Blaster_Bass_Cannon_Distant_06.wav", 1},
+			{"z\MET\addons\vehicles\vics\ATRT\BlasterCannon_Bass_02\Blaster_Bass_Cannon_Distant_07.wav", 1},
+			{"z\MET\addons\vehicles\vics\ATRT\BlasterCannon_Bass_02\Blaster_Bass_Cannon_Distant_08.wav", 1}
+		};
+		volume = 0.8;
+		range = 2000;
+		rangeCurve[] = {{0,0}, {150,1}, {2000,0}};
 	};
 };
