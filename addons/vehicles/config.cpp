@@ -314,6 +314,7 @@ class CfgWeapons
 	class MET_ATRT_Cannon : ls_weapon_atrt_laserCannon
 	{
 		baseWeapon = "MET_ATRT_Cannon";
+		muzzles[] = { "this", "MET_ATRT_UBGL" };
 		magazines[] =
 		{
 			"MET_ATRT_Mag",
@@ -335,26 +336,14 @@ class CfgWeapons
 			};
 			class StandardSound 
 			{
-
 				soundSetShot[] = {
 					"ATRT_BlasterCannon_Close_SoundSet",
 					"ATRT_BlasterCannon_Distant_SoundSet"
 				};
-
-				/*begin1[] = { "z\MET\addons\vehicles\vics\ATRT\AT_RT_Close.wav", 1.4, 1, 1100 };
-				begin2[] = { "z\MET\addons\vehicles\vics\ATRT\AT_RT_Distant.wav", 1.2, 1, 2200 };
-
-				soundBegin[] = {
-					"begin1", 0.5,
-					"begin2", 0.5
-				};
-
-				closure1[] = {};
-				soundClosure[] = { "closure1", 0.5 };*/
 			};
 
 			reloadTime = 0.215;
-			dispersion = 0.00001;
+			dispersion = 0.001;
 		};
 		class Single : Mode_SemiAuto
 		{
@@ -369,20 +358,53 @@ class CfgWeapons
 					"ATRT_BlasterCannon_Close_SoundSet",
 					"ATRT_BlasterCannon_Distant_SoundSet"
 				};
+			};
+		};
 
-				/*begin1[] = { "z\MET\addons\vehicles\vics\ATRT\AT_RT_Close.wav", 1.4, 1, 1100 };
-				begin2[] = { "z\MET\addons\vehicles\vics\ATRT\AT_RT_Distant.wav", 1.2, 1, 2200 };
+		class MET_ATRT_UBGL : MGun
+		{
+			displayName = "AT-RT Ion Charge";
 
-				soundBegin[] = {
-					"begin1", 0.5,
-					"begin2", 0.5
+			flash = "flash";
+			flashSize = 1;
+			cameraDir = "look";
+
+			discreteDistance[] = { 100, 200, 300, 400, 500 };
+			discreteDistanceInitIndex = 1;
+
+			magazines[] = { "MET_ATRT_UBGL_Mag" };
+			modes[] = { "UBGL_Single" };
+
+			class UBGL_Single : Mode_FullAuto
+			{
+				sounds[] =
+				{
+					"StandardSound"
 				};
+				class StandardSound
+				{
 
-				closure1[] = {};
-				soundClosure[] = { "closure1", 0.5 };*/
+					begin1[] = { "z\MET\addons\vehicles\vics\ATRT\BlasterCannon_Sounds\ATRT_IonCannon_Close.wav", 1.4, 1, 1100 };
+					soundBegin[] = {
+						"begin1", 0.5,
+					};
+					closure1[] = {};
+					soundClosure[] = { "closure1", 0.5 };
+				};
+				reloadTime = 0.43;
+				dispersion = 0;
+
+				// Traditional UBGL configuration keys
+				minRange = 30;
+				minRangeProbab = 0.1;
+				midRange = 200;
+				midRangeProbab = 0.7;
+				maxRange = 400;
+				maxRangeProbab = 0.05;
 			};
 		};
 	};
+	
 
 	class MET_BARC_Repeater : CannonCore
 	{
