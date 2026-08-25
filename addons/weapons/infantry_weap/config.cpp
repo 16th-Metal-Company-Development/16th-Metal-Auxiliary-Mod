@@ -1528,8 +1528,8 @@ class CfgMagazines
 		picture = "\3AS\3AS_Weapons\Data\UI\3as_box_b.paa";
 		model = "\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
 		count = 1000;
-		displayName = "[16th] AT-RT Cannon Cell";
-		displayNameShort = "Laser Cell";
+		displayName = "[16th] AT-RT Blaster Cannon Cell";
+		displayNameShort = "Blaster Cell";
 		descriptionShort = "Energy cell for the AT-RT Cannon";
 		ammo = "MET_blasterbolt_br";
 		mass = 5;
@@ -1546,7 +1546,7 @@ class CfgMagazines
 		picture = "\3AS\3AS_Weapons\Data\UI\3as_box_b.paa";
 		model = "\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
 		count = 25;
-		displayName = "[16th] AT-RT Ion Charge Cell";
+		displayName = "[16th] AT-RT Ion Cannon Cell";
 		displayNameShort = "Ion Cell";
 		descriptionShort = "Energy cell for the AT-RT Cannon";
 		ammo = "MET_blasterbolt_snp_Green";

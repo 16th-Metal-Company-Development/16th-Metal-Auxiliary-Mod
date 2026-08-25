@@ -1230,12 +1230,16 @@ class MET_BARC_SideCar: 3AS_BarcSideCar
 
 class MET_ATRT_Base : ls_vehicle_atrt_base
 {
+	displayName = "[16th] AT-RT";
 	scope = 2;
 	author = "Legion Studios";
 	ls_crew = "ls_clone_phase2_standard_atrtDriver";
 
 	faction = "metal_company";
 	editorSubcategory = "metal_co_EdSubCat_Goff";
+
+	extCameraPosition[] = { 0.7,1.8,-3.15 };
+
 
 	weapons[] =
 	{
@@ -1245,12 +1249,11 @@ class MET_ATRT_Base : ls_vehicle_atrt_base
 	{
 		"MET_ATRT_Cannon"
 	};
+
 	magazines[] =
 	{
 		"MET_ATRT_UBGL_Mag",
 		"MET_ATRT_UBGL_Mag",
-		"MET_ATRT_Mag",
-		"MET_ATRT_Mag",
 		"MET_ATRT_Mag",
 		"MET_ATRT_Mag",
 		"MET_ATRT_Mag"
@@ -1259,8 +1262,6 @@ class MET_ATRT_Base : ls_vehicle_atrt_base
 	{
 		"MET_ATRT_UBGL_Mag",
 		"MET_ATRT_UBGL_Mag",
-		"MET_ATRT_Mag",
-		"MET_ATRT_Mag",
 		"MET_ATRT_Mag",
 		"MET_ATRT_Mag",
 		"MET_ATRT_Mag"

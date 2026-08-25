@@ -304,7 +304,7 @@ class CfgSoundShaders
 			{"z\MET\addons\vehicles\vics\ATRT\BlasterCannon_Bass_01\Blaster_Bass_Revolver_Close_04.wav", 1},
 			{"z\MET\addons\vehicles\vics\ATRT\BlasterCannon_Bass_01\Blaster_Bass_Revolver_Close_05.wav", 1}
 		};
-		volume = 1.0;
+		volume = 1.2;
 		range = 150;
 	};
 
@@ -351,7 +351,7 @@ class CfgSoundShaders
 			{"z\MET\addons\vehicles\vics\ATRT\BlasterCannon_Bass_01\Blaster_Bass_Revolver_Distant_02.wav", 1},
 			{"z\MET\addons\vehicles\vics\ATRT\BlasterCannon_Bass_01\Blaster_Bass_Revolver_Distant_03.wav", 1}
 		};
-		volume = 1.0;
+		volume = 1.2;
 		range = 2000;
 		rangeCurve[] = {{0,0}, {150,1}, {2000,0}};
 	};
