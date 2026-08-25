@@ -290,6 +290,15 @@ class CfgFunctions {
 			file = "z\MET\addons\vehicles\resupply";
 			class addCrates {};
 		};
+		class ATRTSounds
+		{
+			file = "z\MET\addons\vehicles\Scripts";
+
+			class init
+			{
+				postInit = 1;
+			};
+		};
 	};
 };
 
@@ -325,8 +334,7 @@ class CfgWeapons
 		maxRecoilSway = 0.00000001;
 		modes[] =
 		{
-			"FullAuto",
-			"Single"
+			"FullAuto"
 		};
 		class FullAuto : Mode_FullAuto
 		{
@@ -344,21 +352,6 @@ class CfgWeapons
 
 			reloadTime = 0.215;
 			dispersion = 0.001;
-		};
-		class Single : Mode_SemiAuto
-		{
-			sounds[] =
-			{
-				"StandardSound"
-			};
-			class StandardSound
-			{
-
-				soundSetShot[] = {
-					"ATRT_BlasterCannon_Close_SoundSet",
-					"ATRT_BlasterCannon_Distant_SoundSet"
-				};
-			};
 		};
 
 		class MET_ATRT_UBGL : MGun
@@ -384,9 +377,16 @@ class CfgWeapons
 				class StandardSound
 				{
 
-					begin1[] = { "z\MET\addons\vehicles\vics\ATRT\BlasterCannon_Sounds\ATRT_IonCannon_Close.wav", 1.4, 1, 1100 };
+					begin1[] = { "z\MET\addons\vehicles\vics\ATRT\BlasterCannon_Sounds\ATRT_IonCannon_Close.wav", 1.6, 1.0, 1100 };
+					begin2[] = { "z\MET\addons\vehicles\vics\ATRT\BlasterCannon_Sounds\ATRT_IonCannon_Close.wav", 1.6, 0.95, 1100 };
+					begin3[] = { "z\MET\addons\vehicles\vics\ATRT\BlasterCannon_Sounds\ATRT_IonCannon_Close.wav", 1.6, 1.05, 1100 };
+					begin4[] = { "z\MET\addons\vehicles\vics\ATRT\BlasterCannon_Sounds\ATRT_IonCannon_Close.wav", 1.6, 1.1, 1100 };
+
 					soundBegin[] = {
-						"begin1", 0.5,
+						"begin1", 0.50,
+						"begin2", 0.28,
+						"begin3", 0.11,
+						"begin4", 0.11
 					};
 					closure1[] = {};
 					soundClosure[] = { "closure1", 0.5 };

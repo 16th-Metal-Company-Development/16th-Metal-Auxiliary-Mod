@@ -292,7 +292,7 @@ class CfgSoundShaders
 			{"z\MET\addons\vehicles\vics\ATRT\BlasterCannon_Sounds\ATRT_BlasterCannon_Close_05.wav", 1},
 			{"z\MET\addons\vehicles\vics\ATRT\BlasterCannon_Sounds\ATRT_BlasterCannon_Close_06.wav", 1}
 		};
-		volume = 1.2;
+		volume = 1.4;
 		range = 150; // Only heard up close
 	};
 
@@ -304,7 +304,7 @@ class CfgSoundShaders
 			{"z\MET\addons\vehicles\vics\ATRT\BlasterCannon_Bass_01\Blaster_Bass_Revolver_Close_04.wav", 1},
 			{"z\MET\addons\vehicles\vics\ATRT\BlasterCannon_Bass_01\Blaster_Bass_Revolver_Close_05.wav", 1}
 		};
-		volume = 0.8;
+		volume = 1.0;
 		range = 150;
 	};
 
@@ -326,7 +326,7 @@ class CfgSoundShaders
 			{"z\MET\addons\vehicles\vics\ATRT\BlasterCannon_Bass_02\Blaster_Bass_Cannon_Close_14.wav", 1},
 			{"z\MET\addons\vehicles\vics\ATRT\BlasterCannon_Bass_02\Blaster_Bass_Cannon_Close_15.wav", 1}
 		};
-		volume = 0.8;
+		volume = 1.0;
 		range = 150;
 	};
 
@@ -340,7 +340,7 @@ class CfgSoundShaders
 			{"z\MET\addons\vehicles\vics\ATRT\BlasterCannon_Sounds\ATRT_BlasterCannon_Distant_05.wav", 1},
 			{"z\MET\addons\vehicles\vics\ATRT\BlasterCannon_Sounds\ATRT_BlasterCannon_Distant_06.wav", 1}
 		};
-		volume = 1.2;
+		volume = 1.4;
 		range = 2000;
 		rangeCurve[] = {{0,0}, {150,1}, {2000,0}}; 
 	};
@@ -351,7 +351,7 @@ class CfgSoundShaders
 			{"z\MET\addons\vehicles\vics\ATRT\BlasterCannon_Bass_01\Blaster_Bass_Revolver_Distant_02.wav", 1},
 			{"z\MET\addons\vehicles\vics\ATRT\BlasterCannon_Bass_01\Blaster_Bass_Revolver_Distant_03.wav", 1}
 		};
-		volume = 0.8;
+		volume = 1.0;
 		range = 2000;
 		rangeCurve[] = {{0,0}, {150,1}, {2000,0}};
 	};
@@ -367,8 +367,40 @@ class CfgSoundShaders
 			{"z\MET\addons\vehicles\vics\ATRT\BlasterCannon_Bass_02\Blaster_Bass_Cannon_Distant_07.wav", 1},
 			{"z\MET\addons\vehicles\vics\ATRT\BlasterCannon_Bass_02\Blaster_Bass_Cannon_Distant_08.wav", 1}
 		};
-		volume = 0.8;
+		volume = 1.0;
 		range = 2000;
 		rangeCurve[] = {{0,0}, {150,1}, {2000,0}};
 	};
+};
+class CfgSounds
+{
+	class MET_ATRT_Mount
+    {
+        name = "MET_ATRT_Mount";
+
+        sound[] =
+        {
+            "z\MET\addons\vehicles\vics\ATRT\Step\ATRT_Start.wav",
+            5,
+            1,
+            75
+        };
+
+        titles[] = {};
+    };
+
+	class MET_ATRT_Dismount
+    {
+        name = "MET_ATRT_Dismount";
+
+        sound[] =
+        {
+            "z\MET\addons\vehicles\vics\ATRT\Step\ATRT_Stop.wav",
+            5,
+            1,
+            75
+        };
+
+        titles[] = {};
+    };
 };

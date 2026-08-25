@@ -1,9 +1,13 @@
 
 #define ATRT_STEPS \
-    { "z\MET\addons\vehicles\vics\ATRT\Step\Step_04.wav", 5, 1, 20 }, \
-    { "z\MET\addons\vehicles\vics\ATRT\Step\Step_05.wav", 5, 1, 20 }, \
-    { "z\MET\addons\vehicles\vics\ATRT\Step\Step_07.wav", 5, 1, 20 }, \
-    { "z\MET\addons\vehicles\vics\ATRT\Step\Step_08.wav", 5, 1, 20 }, 
+    { "z\MET\addons\vehicles\vics\ATRT\Step\Step_01.wav", 3, 1, 40 }, \
+    { "z\MET\addons\vehicles\vics\ATRT\Step\Step_02.wav", 3, 1, 40 }, \
+    { "z\MET\addons\vehicles\vics\ATRT\Step\Step_03.wav", 3, 1, 40 }, \
+    { "z\MET\addons\vehicles\vics\ATRT\Step\Step_04.wav", 3, 1, 40 }, \
+    { "z\MET\addons\vehicles\vics\ATRT\Step\Step_05.wav", 3, 1, 40 }, \
+    { "z\MET\addons\vehicles\vics\ATRT\Step\Step_06.wav", 3, 1, 40 }, \
+    { "z\MET\addons\vehicles\vics\ATRT\Step\Step_07.wav", 3, 1, 40 }, \
+    { "z\MET\addons\vehicles\vics\ATRT\Step\Step_08.wav", 3, 1, 40 }, 
 
 
 // Change for Forced
