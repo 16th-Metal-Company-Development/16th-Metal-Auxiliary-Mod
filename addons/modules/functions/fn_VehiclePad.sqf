@@ -85,127 +85,228 @@ private _spawnOptions = [_presetClass] call MET_fnc_getSupportPadPresetValues;
 forEach _spawnOptions;
 
 
-if (_allowClear) then {
-	_terminal addAction 
-	[
-		"Clear Pad",
-		{
-			params ["_target", "_caller", "_actionId", "_args"];
-			_args params ["_pad", "_useCost"];
+if (_allowClear) then
+{
+    _terminal addAction
+    [
+        "Clear Pad",
+        {
+            params ["_target", "_caller", "_actionId", "_args"];
+            _args params ["_pad", "_useCost"];
 
-			[_pad, _caller, _useCost]
-				remoteExec ["MET_fnc_deleteVehicle", 2];
-		},
-		[_pad, _vehiclesCostPoints],
-		2,
-		true,
-		true,
-		"",
-		"",
-		10
-	];
+            [_pad, _caller, _useCost]
+                remoteExec ["MET_fnc_deleteVehicle", 2];
+        },
+        [_pad, _vehiclesCostPoints],
+        2,
+        true,
+        true,
+        "",
+        "",
+        10
+    ];
 };
 
-if (_allowRefuel) then {
-	_terminal addAction 
-	[
-		"Refuel", 
-		{
-			params ["", "", "", "_args"];
-			private _pad = _args select 0;
+if (_allowRefuel) then
+{
+    _terminal addAction
+    [
+        "Refuel",
+        {
+            params ["", "", "", "_args"];
+            _args params ["_pad"];
 
-			private _list = nearestObjects [_pad, ["Air","Car","Tank"], 10];
-			if (_list isEqualTo []) exitWith {};
+            private _vehicles = nearestObjects
+            [
+                _pad,
+                ["Air", "Car", "Tank"],
+                10
+            ];
 
-			private _veh = _list select 0;
+            if (_vehicles isEqualTo []) exitWith
+            {
+                hint "No vehicle found on the pad.";
+            };
 
-			["Refueling", 5, {!isEngineOn _veh}, {_veh setFuel 1}, {}]
-				call CBA_fnc_progressBar;
-		},
-		[_pad],
-		2,
-		true,
-		true,
-		"",
-		"",
-		10
-	];
+            private _veh = _vehicles select 0;
+
+            [
+                "Refueling",
+                5,
+                {
+                    (_this select 0) params ["_veh"];
+
+                    alive _veh &&
+                    {!isEngineOn _veh}
+                },
+                {
+                    (_this select 0) params ["_veh"];
+
+                    [_veh, 1]
+                        remoteExecCall ["setFuel", _veh];
+
+                    hint "Refueling complete.";
+                },
+                {
+                    hint "Refueling canceled.";
+                },
+                [_veh]
+            ] call CBA_fnc_progressBar;
+        },
+        [_pad],
+        2,
+        true,
+        true,
+        "",
+        "",
+        10
+    ];
 };
 
-if (_allowRepair) then {
-	_terminal addAction 
-	[
-		"Repair", 
-		{
-			params ["", "", "", "_args"];
-			private _pad = _args select 0;
+if (_allowRepair) then
+{
+    _terminal addAction
+    [
+        "Repair",
+        {
+            params ["", "", "", "_args"];
+            _args params ["_pad"];
 
-			private _list = nearestObjects [_pad, ["Air","Car","Tank"], 10];
-			if (_list isEqualTo []) exitWith {};
+            private _vehicles = nearestObjects
+            [
+                _pad,
+                ["Air", "Car", "Tank"],
+                10
+            ];
 
-			private _veh = _list select 0;
+            if (_vehicles isEqualTo []) exitWith
+            {
+                hint "No vehicle found on the pad.";
+            };
 
-			["Repairing", 5, {!isEngineOn _veh}, {_veh setDamage 0}, {}]
-				call CBA_fnc_progressBar;
-		}, 
-		[_pad],
-		2,
-		true,
-		true,
-		"",
-		"",
-		10
-	];
+            private _veh = _vehicles select 0;
+
+            [
+                "Repairing",
+                5,
+                {
+                    (_this select 0) params ["_veh"];
+
+                    alive _veh &&
+                    {!isEngineOn _veh}
+                },
+                {
+                    (_this select 0) params ["_veh"];
+
+                    _veh setDamage 0;
+
+                    hint "Repairs complete.";
+                },
+                {
+                    hint "Repairs canceled.";
+                },
+                [_veh]
+            ] call CBA_fnc_progressBar;
+        },
+        [_pad],
+        2,
+        true,
+        true,
+        "",
+        "",
+        10
+    ];
 };
 
-if (_allowRearm) then {
-	_terminal addAction 
-	[
-		"Rearm", 
-		{
-		params ["", "", "", "_args"];
-		private _pad = _args select 0;
+if (_allowRearm) then
+{
+    _terminal addAction
+    [
+        "Rearm",
+        {
+            params ["", "", "", "_args"];
+            _args params ["_pad"];
 
-		private _list = nearestObjects [_pad, ["Air","Car","Tank"], 10];
-		if (_list isEqualTo []) exitWith {};
+            private _vehicles = nearestObjects
+            [
+                _pad,
+                ["Air", "Car", "Tank"],
+                10
+            ];
 
-		private _veh = _list select 0;
+            if (_vehicles isEqualTo []) exitWith
+            {
+                hint "No vehicle found on the pad.";
+            };
 
-		["Rearming", 5, {!isEngineOn _veh}, {_veh setVehicleAmmo 1}, {}]
-			call CBA_fnc_progressBar;
-		}, 
-		[_pad],
-		2,
-		true,
-		true,
-		"",
-		"",
-		10
-	];
+            private _veh = _vehicles select 0;
+
+            if ((crew _veh) isNotEqualTo []) exitWith
+            {
+                hint "The vehicle must be empty before rearming.";
+            };
+
+            [
+                "Rearming",
+                5,
+                {
+                    (_this select 0) params ["_veh"];
+
+                    alive _veh &&
+                    {!isEngineOn _veh} &&
+                    {(crew _veh) isEqualTo []}
+                },
+                {
+                    (_this select 0) params ["_veh"];
+
+                    [_veh, 1]
+                        remoteExecCall ["setVehicleAmmo", _veh];
+
+                    hint "Rearming complete.";
+                },
+                {
+                    hint "Rearming canceled.";
+                },
+                [_veh]
+            ] call CBA_fnc_progressBar;
+        },
+        [_pad],
+        2,
+        true,
+        true,
+        "",
+        "",
+        10
+    ];
 };
 
-if (_allowPylons) then {
-	_terminal addAction 
-	[
-		"Change Pylons", 
-		{
-			params ["", "", "", "_args"];
-			private _pad = _args select 0;
+if (_allowPylons) then
+{
+    _terminal addAction
+    [
+        "Change Pylons",
+        {
+            params ["", "_caller", "", "_args"];
+            _args params ["_pad"];
 
-			private _list = nearestObjects [_pad, ["Helicopter","Plane"], 100];
-			if (_list isEqualTo []) exitWith {};
+            private _aircraft = nearestObjects
+            [
+                _pad,
+                ["Air"],
+                10
+            ];
 
-			private _veh = _list select 0;
+            private _veh = _aircraft select 0;
 
-			[_veh] call ace_pylons_fnc_showDialog;
-		}, 
-		[_pad],
-		2,
-		true,
-		true,
-		"",
-		"",
-		10
-	];
+            [_veh] call ace_pylons_fnc_showDialog;
+        },
+        [_pad],
+        2,
+        true,
+        true,
+        "",
+        "",
+        10
+    ];
 };
 
