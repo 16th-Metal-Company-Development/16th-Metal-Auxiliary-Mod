@@ -1,4 +1,15 @@
 
+#define ATRT_STEPS \
+    { "z\MET\addons\vehicles\vics\ATRT\Step\Step_01.wav", 3, 1, 40 }, \
+    { "z\MET\addons\vehicles\vics\ATRT\Step\Step_02.wav", 3, 1, 40 }, \
+    { "z\MET\addons\vehicles\vics\ATRT\Step\Step_03.wav", 3, 1, 40 }, \
+    { "z\MET\addons\vehicles\vics\ATRT\Step\Step_04.wav", 3, 1, 40 }, \
+    { "z\MET\addons\vehicles\vics\ATRT\Step\Step_05.wav", 3, 1, 40 }, \
+    { "z\MET\addons\vehicles\vics\ATRT\Step\Step_06.wav", 3, 1, 40 }, \
+    { "z\MET\addons\vehicles\vics\ATRT\Step\Step_07.wav", 3, 1, 40 }, \
+    { "z\MET\addons\vehicles\vics\ATRT\Step\Step_08.wav", 3, 1, 40 }, 
+
+
 // Change for Forced
 class MET_LAAT_Mk2: 3as_LAAT_MK2
 {
@@ -1214,6 +1225,117 @@ class MET_BARC_SideCar: 3AS_BarcSideCar
 	class TransportItems 
 	{
 
+	};
+};
+
+class MET_ATRT_Base : ls_vehicle_atrt_base
+{
+	displayName = "[16th] AT-RT";
+	scope = 2;
+	author = "Legion Studios";
+	ls_crew = "ls_clone_phase2_standard_atrtDriver";
+
+	faction = "metal_company";
+	editorSubcategory = "metal_co_EdSubCat_Goff";
+
+	extCameraPosition[] = { 0.7,1.8,-3.15 };
+
+
+	weapons[] =
+	{
+		"MET_ATRT_Cannon"
+	};
+	respawnWeapons[] =
+	{
+		"MET_ATRT_Cannon"
+	};
+
+	magazines[] =
+	{
+		"MET_ATRT_UBGL_Mag",
+		"MET_ATRT_UBGL_Mag",
+		"MET_ATRT_Mag",
+		"MET_ATRT_Mag",
+		"MET_ATRT_Mag"
+	};
+	respawnMagazines[] =
+	{
+		"MET_ATRT_UBGL_Mag",
+		"MET_ATRT_UBGL_Mag",
+		"MET_ATRT_Mag",
+		"MET_ATRT_Mag",
+		"MET_ATRT_Mag"
+	};
+
+	class SoundEnvironExt
+	{
+		asphalt_exp[] = { ATRT_STEPS };
+		concrete[] = { ATRT_STEPS };
+		concrete_exp[] = { ATRT_STEPS };
+		debris[] = { ATRT_STEPS };
+		dirt[] = { ATRT_STEPS };
+		dirt_exp[] = { ATRT_STEPS };
+		drygrass[] = { ATRT_STEPS };
+		forest[] = { ATRT_STEPS };
+		forest_exp[] = { ATRT_STEPS };
+		generic[] = { ATRT_STEPS };
+		grass[] = { ATRT_STEPS };
+		grass_exp[] = { ATRT_STEPS };
+		grasstall_exp[] = { ATRT_STEPS };
+		gravel[] = { ATRT_STEPS };
+		gravel_exp[] = { ATRT_STEPS };
+		gridmetal_exp[] = { ATRT_STEPS };
+		int_carpet_exp[] = { ATRT_STEPS };
+		int_concrete[] = { ATRT_STEPS };
+		int_concrete_exp[] = { ATRT_STEPS };
+		int_lino_exp[] = { ATRT_STEPS };
+		int_mat_exp[] = { ATRT_STEPS };
+		int_metal[] = { ATRT_STEPS };
+		int_metalplate_exp[] = { ATRT_STEPS };
+		int_pavement_exp[] = { ATRT_STEPS };
+		int_softwood_exp[] = { ATRT_STEPS };
+		int_solidwood_exp[] = { ATRT_STEPS };
+		int_tiles[] = { ATRT_STEPS };
+		int_wood[] = { ATRT_STEPS };
+		lino_exp[] = { ATRT_STEPS };
+		metal[] = { ATRT_STEPS };
+		metalplate_exp[] = { ATRT_STEPS };
+		metalplatepressed_exp[] = { ATRT_STEPS };
+		mud[] = { ATRT_STEPS };
+		mud_exp[] = { ATRT_STEPS };
+		normal[] = { ATRT_STEPS };
+		pavement_exp[] = { ATRT_STEPS };
+		rock[] = { ATRT_STEPS };
+		rooftiles_exp[] = { ATRT_STEPS };
+		sand[] = { ATRT_STEPS };
+		sand_exp[] = { ATRT_STEPS };
+		seabed_exp[] = { ATRT_STEPS };
+		softwood_exp[] = { ATRT_STEPS };
+		steel_exp[] = { ATRT_STEPS };
+		stones_exp[] = { ATRT_STEPS };
+		stony[] = { ATRT_STEPS };
+		straw_exp[] = { ATRT_STEPS };
+		tarmac[] = { ATRT_STEPS };
+		tiling[] = { ATRT_STEPS };
+		virtual[] = { ATRT_STEPS };
+		water[] = { ATRT_STEPS };
+		water_exp[] = { ATRT_STEPS };
+		wavymetal[] = { ATRT_STEPS };
+		wavymetal_exp[] = { ATRT_STEPS };
+		wood[] = { ATRT_STEPS };
+		normalExt[] = { ATRT_STEPS };
+		road[] = { ATRT_STEPS };
+		gravel2[] = { ATRT_STEPS };
+		wood_int[] = { ATRT_STEPS };
+		carpet[] = { ATRT_STEPS };
+		concrete_int[] = { ATRT_STEPS };
+		concrete_ext[] = { ATRT_STEPS };
+		steel[] = { ATRT_STEPS };
+		hallway[] = { ATRT_STEPS };
+		parkety[] = { ATRT_STEPS };
+		wave_plate[] = { ATRT_STEPS };
+		snow[] = { ATRT_STEPS };
+		crawl[] = { ATRT_STEPS };
 	};
 };
 

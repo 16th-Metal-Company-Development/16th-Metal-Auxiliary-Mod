@@ -815,6 +815,15 @@ class MET_Uniform_Trooper_Cerberus : MET_Uniform_Trooper
 		uniformclass = "MET_Uniform_Trooper_Cerberus_Base";
 	};
 };
+class MET_Uniform_Trooper_Hellwolf : MET_Uniform_Trooper
+{
+	scope = 2;
+	displayName = "[16th] Hellwolf's Armor";
+	class ItemInfo : ItemInfo
+	{
+		uniformclass = "MET_Uniform_Trooper_Hellwolf_Base";
+	};
+};
 class MET_Uniform_Trooper_Hazmat : MET_Uniform_Trooper
 {
 	scope = 2;

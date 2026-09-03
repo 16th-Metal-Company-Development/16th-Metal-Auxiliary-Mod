@@ -25,6 +25,7 @@ class CfgPatches
 			"MET_Bantha_E_MSV",
 			"MET_Bantha_T_Cargo",
 			"MET_Bantha_T_Assault",
+			"MET_ATRT_Base",
 			"MET_BARC",
 			"MET_BARC_SideCar",
 			"MET_ISP",
@@ -261,6 +262,7 @@ class cfgvehicles
 	class 3AS_BarcSideCar;
 	class 3AS_ISP;
 	class 3AS_ISP_Transport;
+	class ls_vehicle_atrt_base;
 
 	#include "bantha.hpp"
 	#include "base_vic.hpp"
@@ -288,8 +290,20 @@ class CfgFunctions {
 			file = "z\MET\addons\vehicles\resupply";
 			class addCrates {};
 		};
+		class ATRTSounds
+		{
+			file = "z\MET\addons\vehicles\Scripts";
+
+			class init
+			{
+				postInit = 1;
+			};
+		};
 	};
 };
+
+class Mode_SemiAuto;
+class Mode_FullAuto;
 
 class CfgWeapons 
 {
@@ -303,6 +317,94 @@ class CfgWeapons
 	{
 		class manual;
 	};
+
+	class ls_weapon_atrt_laserCannon;
+
+	class MET_ATRT_Cannon : ls_weapon_atrt_laserCannon
+	{
+		baseWeapon = "MET_ATRT_Cannon";
+		muzzles[] = { "this", "MET_ATRT_UBGL" };
+		magazines[] =
+		{
+			"MET_ATRT_Mag",
+			"MET_ATRT_Mag"
+		};
+		magazineWell[] = {};
+		recoil = "MET_recoil_ATRT";
+		maxRecoilSway = 0.00000001;
+		modes[] =
+		{
+			"FullAuto"
+		};
+		class FullAuto : Mode_FullAuto
+		{
+			sounds[] =
+			{
+				"StandardSound"
+			};
+			class StandardSound 
+			{
+				soundSetShot[] = {
+					"ATRT_BlasterCannon_Close_SoundSet",
+					"ATRT_BlasterCannon_Distant_SoundSet"
+				};
+			};
+
+			reloadTime = 0.215;
+			dispersion = 0.001;
+		};
+
+		class MET_ATRT_UBGL : MGun
+		{
+			displayName = "AT-RT Ion Charge";
+
+			flash = "flash";
+			flashSize = 1;
+			cameraDir = "look";
+
+			discreteDistance[] = { 100, 200, 300, 400, 500 };
+			discreteDistanceInitIndex = 1;
+
+			magazines[] = { "MET_ATRT_UBGL_Mag" };
+			modes[] = { "UBGL_Single" };
+
+			class UBGL_Single : Mode_FullAuto
+			{
+				sounds[] =
+				{
+					"StandardSound"
+				};
+				class StandardSound
+				{
+
+					begin1[] = { "z\MET\addons\vehicles\vics\ATRT\BlasterCannon_Sounds\ATRT_IonCannon_Close.wav", 1.6, 1.0, 1100 };
+					begin2[] = { "z\MET\addons\vehicles\vics\ATRT\BlasterCannon_Sounds\ATRT_IonCannon_Close.wav", 1.6, 0.95, 1100 };
+					begin3[] = { "z\MET\addons\vehicles\vics\ATRT\BlasterCannon_Sounds\ATRT_IonCannon_Close.wav", 1.6, 1.05, 1100 };
+					begin4[] = { "z\MET\addons\vehicles\vics\ATRT\BlasterCannon_Sounds\ATRT_IonCannon_Close.wav", 1.6, 1.1, 1100 };
+
+					soundBegin[] = {
+						"begin1", 0.50,
+						"begin2", 0.28,
+						"begin3", 0.11,
+						"begin4", 0.11
+					};
+					closure1[] = {};
+					soundClosure[] = { "closure1", 0.5 };
+				};
+				reloadTime = 0.43;
+				dispersion = 0;
+
+				// Traditional UBGL configuration keys
+				minRange = 30;
+				minRangeProbab = 0.1;
+				midRange = 200;
+				midRangeProbab = 0.7;
+				maxRange = 400;
+				maxRangeProbab = 0.05;
+			};
+		};
+	};
+	
 
 	class MET_BARC_Repeater : CannonCore
 	{
