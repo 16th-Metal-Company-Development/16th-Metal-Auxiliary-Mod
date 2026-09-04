@@ -24,16 +24,4 @@ class CfgPatches
             //"metal_texturesaregay"
 		};
 	};
-
-	class CfgRecoils
-	{
-		class recoil_default;
-		class Default;
-		class MET_recoil_ATRT : recoil_default
-		{
-			muzzleOuter[] = { 0,0.25,0.35,0.35 };
-			kickBack[] = { 0.03,0.075 };
-			temporary = 0.015;
-		};
-	};
 };

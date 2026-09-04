@@ -304,6 +304,16 @@ class CfgFunctions {
 
 class Mode_SemiAuto;
 class Mode_FullAuto;
+class CfgRecoils
+{
+	class recoil_default;
+	class MET_recoil_ATRT : recoil_default
+	{
+		muzzleOuter[] = { 0,0.25,0.35,0.35 };
+		kickBack[] = { 0.03,0.075 };
+		temporary = 0.015;
+	};
+};
 
 class CfgWeapons 
 {
