@@ -26,7 +26,7 @@ class XtdGearModels {
                     "Gambit", "Hazmat", "Header", "Hellwolf", "Hevy", "Hood",
                     "Karma", "Kick", "Longshot", "Maia", "Mace", "Maple",
                     "Maxson", "Merlin", "Moldy", "Nix", "Noble",
-                    "Orpheus", "Otto", "Prez", "Ronin", "Roz",
+                    "Orpheus", "Otto", "Prez", "Raven", "Ronin", "Roz",
                     "Sam", "Ska", "Six", "Smith", "Spice",
                     "Sunto", "Talk", "Tavion", "Vergil", "William", "Winters",
                     "Wolf"

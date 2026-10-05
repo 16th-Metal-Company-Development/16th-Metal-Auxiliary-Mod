@@ -1066,6 +1066,15 @@ class MET_Helmet_Trooper_Prez : MET_Helmet_Trooper_Base
 		"z\MET\addons\Armor_Rewrite\Helmets\Textures\Custom\MET_Prez_Helmet_CO.paa"
 	};
 };
+class MET_Helmet_Trooper_Raven : MET_Helmet_Trooper_Base
+{
+	scope = 2;
+	displayName = "[16th] Raven's Helmet";
+	hiddenSelectionsTextures[] =
+	{
+		"z\MET\addons\Armor_Rewrite\Helmets\Textures\Custom\MET_Raven_Helmet_CO.paa"
+	};
+};
 class MET_Helmet_Trooper_Ronin : MET_Helmet_Trooper_Base
 {
 	scope = 1;

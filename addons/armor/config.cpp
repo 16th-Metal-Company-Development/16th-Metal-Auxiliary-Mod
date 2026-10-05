@@ -160,6 +160,7 @@ class CfgPatches
 			"MET_Helmet_Trooper_Orpheus",
 			"MET_Helmet_Trooper_Otto",
 			"MET_Helmet_Trooper_Prez",
+			"MET_Helmet_Trooper_Raven",
 			"MET_Helmet_Trooper_Ronin",
 			"MET_Helmet_Trooper_Roz",
 			"MET_Helmet_Trooper_Sam",
