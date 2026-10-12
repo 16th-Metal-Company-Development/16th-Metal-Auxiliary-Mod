@@ -1102,6 +1102,15 @@ class MET_Helmet_Trooper_Sam : MET_Helmet_Trooper_Base
 		"z\MET\addons\Armor_Rewrite\Helmets\Textures\Custom\MET_Sam_Helmet_CO.paa"
 	};
 };
+class MET_Helmet_Trooper_Shock : MET_Helmet_Trooper_Base
+{
+	scope = 2;
+	displayName = "[16th] Shock's Helmet";
+	hiddenSelectionsTextures[] =
+	{
+		"z\MET\addons\Armor_Rewrite\Helmets\Textures\Custom\MET_Shock_Helmet_CO.paa"
+	};
+};
 class MET_Helmet_Trooper_Six : MET_Helmet_Trooper_Base
 {
 	scope = 2;

@@ -164,6 +164,7 @@ class CfgPatches
 			"MET_Helmet_Trooper_Ronin",
 			"MET_Helmet_Trooper_Roz",
 			"MET_Helmet_Trooper_Sam",
+			"MET_Helmet_Trooper_Shock",
 			"MET_Helmet_Trooper_Six",
 			"MET_Helmet_Trooper_Ska",
 			"MET_Helmet_Trooper_Smith",

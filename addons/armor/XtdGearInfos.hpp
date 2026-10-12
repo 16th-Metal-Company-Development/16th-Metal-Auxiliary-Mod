@@ -53,6 +53,7 @@ class XtdGearInfos {
         class MET_Helmet_BARC_Ronin          { model = "MET_Custom_Helmet"; camo = "Ronin"; };
         class MET_Helmet_Trooper_Roz         { model = "MET_Custom_Helmet"; camo = "Roz"; };
         class MET_Helmet_Trooper_Sam         { model = "MET_Custom_Helmet"; camo = "Sam"; };
+        class MET_Helmet_Trooper_Shock       { model = "MET_Custom_Helmet"; camo = "Shock"; };
         class MET_Helmet_Trooper_Six         { model = "MET_Custom_Helmet"; camo = "Six"; };
         class MET_Helmet_Trooper_Ska         { model = "MET_Custom_Helmet"; camo = "Ska"; };
         class MET_Helmet_Trooper_Smith       { model = "MET_Custom_Helmet"; camo = "Smith"; };
