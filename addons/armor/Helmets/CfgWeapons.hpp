@@ -118,6 +118,26 @@ class MET_Helmet_Trooper_EOD : MET_Helmet_Trooper_Base
 	};
 };
 
+// Enviromental 
+class 3AS_H_CloneEnvironmental_F;
+class MET_Helmet_Desert_Base : 3AS_H_CloneEnvironmental_F
+{
+	author = "Chet";
+	displayName = "[16th] Hazard Trooper Helmet";
+
+	hiddenSelections[] =
+	{
+		"Helmet",
+		"Visor"
+	};
+
+	hiddenSelectionsTextures[] = 
+	{ 
+		"z\MET\addons\Armor_Rewrite\Helmets\Textures\Base\MET_Helmet_Desert_CO.paa",
+		"\3AS\3AS_Republic_Characters\Headgear\data\Clonetrooper_Environmental_Helmet\Clonetrooper_Environmental_Helmet_CO.paa" 
+	};
+};
+
 // Cold Assault
 class SEA_HELMET_GM_Base;
 class SEA_HELMET_GM_IllumBase;

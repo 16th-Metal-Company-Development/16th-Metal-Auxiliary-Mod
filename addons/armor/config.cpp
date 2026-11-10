@@ -94,6 +94,9 @@ class CfgPatches
 			"MET_Helmet_Trooper_Medic",
 			"MET_Helmet_Trooper_EOD",
 
+			// Enviromental
+			"MET_Helmet_Desert_Base",
+
 			// Base Cold
 			"MET_Helmet_Cold_Base",
 			"MET_Helmet_Cold_NCO",
