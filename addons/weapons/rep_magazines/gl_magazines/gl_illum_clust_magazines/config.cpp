@@ -28,7 +28,16 @@ class CfgPatches
 			"MET_3Rnd_ILLUM_P_Grenade_Clust",
 			"MET_3Rnd_ILLUM_TU_Grenade_Clust",
 			"MET_3Rnd_ILLUM_TE_Grenade_Clust",
-			"MET_3Rnd_ILLUM_IR_Grenade_Clust"
+			"MET_3Rnd_ILLUM_IR_Grenade_Clust",
+			"MET_6Rnd_ILLUM_B_Grenade_Clust",
+			"MET_6Rnd_ILLUM_G_Grenade_Clust",
+			"MET_6Rnd_ILLUM_R_Grenade_Clust",
+			"MET_6Rnd_ILLUM_Y_Grenade_Clust",
+			"MET_6Rnd_ILLUM_O_Grenade_Clust",
+			"MET_6Rnd_ILLUM_P_Grenade_Clust",
+			"MET_6Rnd_ILLUM_TU_Grenade_Clust",
+			"MET_6Rnd_ILLUM_TE_Grenade_Clust",
+			"MET_6Rnd_ILLUM_IR_Grenade_Clust"
 		};
 		requiredAddons[]=
 		{
@@ -244,5 +253,142 @@ class CfgMagazines
 		count=3;
 		displayName="[16th] 3 Round IR Illumination Star Cluster";
 		mass=12;
+	};
+	class MET_6Rnd_ILLUM_Grenade_Clust: MET_ILLUM_Grenade_Clust
+	{
+		author="Hazmat";
+		count=6;
+		displayName="[16th] 6 Round Illumination Star Cluster";
+		mass=24;
+	};
+	class MET_6Rnd_ILLUM_B_Grenade_Clust: MET_ILLUM_B_Grenade_Clust
+	{
+		author="Hazmat";
+		count=6;
+		displayName="[16th] 6 Round Blue Illumination Star Cluster";
+		mass=24;
+	};
+	class MET_6Rnd_ILLUM_G_Grenade_Clust: MET_ILLUM_G_Grenade_Clust
+	{
+		author="Hazmat";
+		count=6;
+		displayName="[16th] 6 Round Green Illumination Star Cluster";
+		mass=24;
+	};
+	class MET_6Rnd_ILLUM_R_Grenade_Clust: MET_ILLUM_R_Grenade_Clust
+	{
+		author="Hazmat";
+		count=6;
+		displayName="[16th] 6 Round Red Illumination Star Cluster";
+		mass=24;
+	};
+	class MET_6Rnd_ILLUM_Y_Grenade_Clust: MET_ILLUM_Y_Grenade_Clust
+	{
+		author="Hazmat";
+		count=6;
+		displayName="[16th] 6 Round Yellow Illumination Star Cluster";
+		mass=24;
+	};
+	class MET_6Rnd_ILLUM_O_Grenade_Clust: MET_ILLUM_O_Grenade_Clust
+	{
+		author="Hazmat";
+		count=6;
+		displayName="[16th] 6 Round Orange Illumination Star Cluster";
+		mass=24;
+	};
+	class MET_6Rnd_ILLUM_P_Grenade_Clust: MET_ILLUM_P_Grenade_Clust
+	{
+		author="Hazmat";
+		count=6;
+		displayName="[16th] 6 Round Purple Illumination Star Cluster";
+		mass=24;
+	};
+	class MET_6Rnd_ILLUM_TU_Grenade_Clust: MET_ILLUM_TU_Grenade_Clust
+	{
+		author="Hazmat";
+		count=6;
+		displayName="[16th] 6 Round Turquoise Illumination Star Cluster";
+		mass=24;
+	};
+	class MET_6Rnd_ILLUM_TE_Grenade_Clust: MET_ILLUM_TE_Grenade_Clust
+	{
+		author="Hazmat";
+		count=6;
+		displayName="[16th] 6 Round Teal Illumination Star Cluster";
+		mass=24;
+	};
+	class MET_6Rnd_ILLUM_IR_Grenade_Clust: MET_ILLUM_IR_Grenade_Clust
+	{
+		author="Hazmat";
+		count=6;
+		displayName="[16th] 6 Round IR Illumination Star Cluster";
+		mass=24;
+	};
+};
+class CfgMagazineWells
+{
+	class MET_GL_Magwell
+	{
+		MET_GL_ILLUM_CLUST[]=
+		{
+			"MET_ILLUM_Grenade_Clust",
+			"MET_ILLUM_B_Grenade_Clust",
+			"MET_ILLUM_G_Grenade_Clust",
+			"MET_ILLUM_R_Grenade_Clust",
+			"MET_ILLUM_Y_Grenade_Clust",
+			"MET_ILLUM_O_Grenade_Clust",
+			"MET_ILLUM_P_Grenade_Clust",
+			"MET_ILLUM_TU_Grenade_Clust",
+			"MET_ILLUM_TE_Grenade_Clust",
+			"MET_ILLUM_IR_Grenade_Clust"
+		};
+	};
+	class MET_GL_Marker_Magwell
+	{
+		MET_GL_Marker_ILLUM_CLUST[]=
+		{
+			"MET_ILLUM_Grenade_Clust",
+			"MET_ILLUM_B_Grenade_Clust",
+			"MET_ILLUM_G_Grenade_Clust",
+			"MET_ILLUM_R_Grenade_Clust",
+			"MET_ILLUM_Y_Grenade_Clust",
+			"MET_ILLUM_O_Grenade_Clust",
+			"MET_ILLUM_P_Grenade_Clust",
+			"MET_ILLUM_TU_Grenade_Clust",
+			"MET_ILLUM_TE_Grenade_Clust",
+			"MET_ILLUM_IR_Grenade_Clust"
+		};
+	};
+	class MET_3GL_Magwell
+	{
+		MET_3GL_ILLUM_CLUST[]=
+		{
+			"MET_3Rnd_ILLUM_Grenade_Clust",
+			"MET_3Rnd_ILLUM_B_Grenade_Clust",
+			"MET_3Rnd_ILLUM_G_Grenade_Clust",
+			"MET_3Rnd_ILLUM_R_Grenade_Clust",
+			"MET_3Rnd_ILLUM_Y_Grenade_Clust",
+			"MET_3Rnd_ILLUM_O_Grenade_Clust",
+			"MET_3Rnd_ILLUM_P_Grenade_Clust",
+			"MET_3Rnd_ILLUM_TU_Grenade_Clust",
+			"MET_3Rnd_ILLUM_TE_Grenade_Clust",
+			"MET_3Rnd_ILLUM_IR_Grenade_Clust"
+		};
+	};
+	class MET_6GL_Magwell
+	{
+		MET_6GL_ILLUM_CLUST[]=
+		{
+			"MET_6Rnd_ILLUM_Grenade_Clust",
+			"MET_6Rnd_ILLUM_B_Grenade_Clust",
+			"MET_6Rnd_ILLUM_G_Grenade_Clust",
+			"MET_6Rnd_ILLUM_R_Grenade_Clust",
+			"MET_6Rnd_ILLUM_Y_Grenade_Clust",
+			"MET_6Rnd_ILLUM_O_Grenade_Clust",
+			"MET_6Rnd_ILLUM_P_Grenade_Clust",
+			"MET_6Rnd_ILLUM_TU_Grenade_Clust",
+			"MET_6Rnd_ILLUM_TE_Grenade_Clust",
+			"MET_6Rnd_ILLUM_IR_Grenade_Clust"
+		};
 	};
 };

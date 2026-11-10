@@ -833,6 +833,17 @@ class MET_Uniform_Trooper_Hazmat : MET_Uniform_Trooper
 		uniformclass = "MET_Uniform_Trooper_Hazmat_Base";
 	};
 };
+class MET_Uniform_Trooper_HazmatC : MET_Uniform_Trooper
+{
+	scope = 2;
+	displayName = "[16th] Hazmat's Commander Armor";
+	picture="\MRC\JLTS\characters\CloneArmor\data\ui\CloneArmor_ui_ca.paa";
+	model="\MRC\JLTS\characters\CloneArmor\CloneArmorMC.p3d";
+	class ItemInfo : ItemInfo
+	{
+		uniformclass = "MET_Uniform_Trooper_HazmatC_Base";
+	};
+};
 class MET_Uniform_Trooper_Hood : MET_Uniform_Trooper
 {
 	scope = 2;

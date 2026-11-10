@@ -1,0 +1,11 @@
+// Daylight-readable colour response plus a self-lit surface.
+// Arma 3: opaque self-lit core. Assign the colour CO to model faces.
+// This material does not create a world light.
+ambient[]={1,1,1,1};
+diffuse[]={1,1,1,1};
+forcedDiffuse[]={0,0,0,0};
+emmisive[]={5,5,5,1};
+specular[]={0,0,0,1};
+specularPower=1;
+PixelShaderID="Normal";
+VertexShaderID="Basic";

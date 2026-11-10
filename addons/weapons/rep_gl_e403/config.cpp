@@ -249,15 +249,3 @@ class CfgWeapons
 		};
 	};
 };
-class CfgMagazineWells
-{
-	class MET_E403_magwell
-	{
-		MET_E403_Magazines[]=
-		{
-			"MET_ProtonPack",
-			"MET_HEATProtonPack",
-			"MET_ClusterProtonPack"
-		};
-	};
-};

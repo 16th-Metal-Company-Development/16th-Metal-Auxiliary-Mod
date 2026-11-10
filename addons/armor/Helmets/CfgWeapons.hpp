@@ -895,6 +895,22 @@ class MET_Helmet_Trooper_Hazmat : MET_Helmet_Trooper_Base
 		""
 	};
 };
+class MET_Helmet_Trooper_HazmatC : MET_Helmet_Trooper_Base
+{
+	scope = 2;
+	displayName = "[16th] Hazmat's Commander Helmet";
+	hiddenSelectionsTextures[] =
+	{
+		"z\MET\addons\Armor_Rewrite\Helmets\Textures\Custom\MET_HazmatC_Helmet_CO.paa"
+	};
+	optreHUDStyle = "Phase_2";
+	optreVarietys[] =
+	{
+		"",
+		"",
+		""
+	};
+};
 class MET_Helmet_Trooper_Hellwolf : MET_Helmet_Trooper_Base
 {
 	scope = 2;

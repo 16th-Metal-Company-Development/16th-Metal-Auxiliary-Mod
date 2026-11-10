@@ -18,7 +18,8 @@ class CfgPatches
 		skipWhenMissingDependencies=1;
 		requiredAddons[]=
 		{
-			"SFA_Weapons_S"
+			"SFA_Weapons_S",
+			""
 		};
 	};
 };
@@ -4025,7 +4026,6 @@ class CfgMagazines
 	class MET_DC15x_mag;
 	class MET_blaster_pistol_battery;
 	class MET_DC15A_mag;
-	class MET_HE_Grenade;
 	class MET_DC15L_mag;
 	class SFA_Base_mag;
 	class 3AS_JLTS_MK39_AA;
