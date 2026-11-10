@@ -1079,7 +1079,7 @@ class ace_medical_treatment
 
 			class Abrasion
 			{
-				effectiveness = 8;
+				effectiveness = 6;
 				reopeningChance = 0;
 				reopeningMaxDelay = 1000;
 				reopeningMinDelay = 200;
