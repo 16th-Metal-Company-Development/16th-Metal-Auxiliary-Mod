@@ -18,20 +18,9 @@ class CfgPatches
 		skipWhenMissingDependencies=1;
 		requiredAddons[]=
 		{
-			"SFA_Weapons_S"
+			"SFA_Weapons_S",
+			""
 		};
-	};
-};
-class CfgRecoils
-{
-	class recoil_default;
-	class Default;
-	class 3AS_recoil_default;
-	class MET_recoil_Z6: recoil_default
-	{
-		muzzleOuter[]={0,0.1,0.40000001,0.40000001};
-		kickBack[]={0.059999999,0.090000004};
-		temporary=0.0060000001;
 	};
 };
 class UGL_F;
@@ -4037,7 +4026,6 @@ class CfgMagazines
 	class MET_DC15x_mag;
 	class MET_blaster_pistol_battery;
 	class MET_DC15A_mag;
-	class MET_HE_Grenade;
 	class MET_DC15L_mag;
 	class SFA_Base_mag;
 	class 3AS_JLTS_MK39_AA;

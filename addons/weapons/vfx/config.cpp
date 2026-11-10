@@ -893,6 +893,48 @@ class CfgLights
 		flareSize = 1.5;
 		flareMaxDistance = 6000;
 	};
+	class MET_Marker_BlasterBolt_Purple
+	{
+		color[] = { 165,0,255,0 };
+		diffuse[] = { 165,0,255,1 };
+		ambient[] = { 0,0,0,0.5 };
+		intensity = 665;
+		class Attenuation
+		{
+			start = 0;
+			constant = 0;
+			linear = 0;
+			quadratic = 255;
+			hardLimitStart = "1e20 * 0.7";
+			hardLimitEnd = 1e+020;
+		};
+		dayLight = 1;
+		useFlare = 1;
+		flareSize = 3;
+		flareMaxDistance = 6000;
+		position[] = { 0,0,-1 };
+	};
+	class MET_Marker_BlasterBolt_Purple2
+	{
+		color[] = { 165,0,255,0 };
+		diffuse[] = { 165,0,255,1 };
+		ambient[] = { 0,0,0,0.5 };
+		intensity = 665;
+		class Attenuation
+		{
+			start = 0;
+			constant = 0;
+			linear = 0;
+			quadratic = 255;
+			hardLimitStart = "1e20 * 0.7";
+			hardLimitEnd = 1e+020;
+		};
+		dayLight = 1;
+		useFlare = 1;
+		flareSize = 3;
+		flareMaxDistance = 6000;
+		position[] = { 0,0,1 };
+	};
 };
 class MET_ImpactEffect
 {
@@ -1751,6 +1793,21 @@ class MET_Laser_Red_fly
 		position[] = { 0,0,0 };
 		intensity = 1;
 		qualityLevel = -1;
+	};
+};
+class MET_BlasterBoltGlow_Marker_Purple_Fly
+{
+	class Light
+	{
+		simulation = "light";
+		type = "MET_Marker_BlasterBolt_Purple";
+		position[] = { 0,0,0 };
+	};
+	class Light2
+	{
+		simulation = "light";
+		type = "MET_Marker_BlasterBolt_Purple2";
+		position[] = { 0,0,1 };
 	};
 };
 class SmallFire;

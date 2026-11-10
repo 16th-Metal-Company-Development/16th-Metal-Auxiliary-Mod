@@ -25,7 +25,8 @@ class CfgMagazines
 	class 1Rnd_HE_Grenade_shell;
 	class 3AS_6Rnd_HE_Grenade_shell;
 	class CA_Magazine;
-	class MET_HE_Grenade: 1Rnd_HE_Grenade_shell
+	class MET_blaster_battery;
+	class MET_GL_Magwell: 1Rnd_HE_Grenade_shell
 	{
 		author="Hazmat";
 		count=1;
@@ -95,5 +96,66 @@ class CfgMagazines
 		mass=20;
 		initspeed=100;
 		tracersevery=1;
+	};
+	class MET_ProtonPack: MET_blaster_battery
+	{
+		author="Hazmat";
+		scope=2;
+		picture="\3AS\3AS_Weapons\Data\UI\3as_box_b.paa";
+		count=75;
+		displayName="[16th] E403 HE Proton Pack";
+		displayNameShort="E403 HE Proton Pack";
+		descriptionShort="HE Proton Pack for the E403";
+		ammo="MET_25HE_LauncherGrenade";
+		tracersEvery=1;
+		initSpeed=210;
+		mass=100;
+	};
+};
+class CfgMagazineWells
+{
+	class MET_GL_Magwell
+	{
+		MET_GL_HE[]=
+		{
+			"MET_HE_Grenade",
+			"MET_Nuclear_Grenade"
+		};
+	};
+	class MET_3GL_Magwell
+	{
+		MET_3GL_HE[]=
+		{
+			"MET_3Rnd_HE_Grenade_shell"
+		};
+	};
+	class MET_3GL_HE_Magwell
+	{
+		MET_3GL_HE[]=
+		{
+			"MET_3Rnd_HE_Grenade_shell"
+		};
+	};
+	class MET_6GL_Magwell
+	{
+		MET_6GL_HE[]=
+		{
+			"MET_6Rnd_HE_Grenade_shell",
+			"MET_6Rnd_HE_RocketGrenade"
+		};
+	};
+	class MET_60_GL_Magwell
+	{
+		MET_60mm_GL_HE[]=
+		{
+			"MET_60mm_HE_mag"
+		};
+	};
+	class MET_E403_Magwell
+	{
+		MET_E403_HE[]=
+		{
+			"MET_ProtonPack"
+		};
 	};
 };

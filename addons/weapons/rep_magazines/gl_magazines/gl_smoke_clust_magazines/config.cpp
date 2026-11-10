@@ -98,3 +98,36 @@ class CfgMagazines
 		ammo="MET_GL_Smoke_Clust_Yellow";
 	};
 };
+class CfgMagazineWells
+{
+	class MET_GL_Magwell
+	{
+		MET_GL_SMOKE_CLUST[]=
+		{
+			"MET_SMKW_Clust_Grenade",
+			"MET_SMKB_Clust_Grenade",
+			"MET_SMKG_Clust_Grenade",
+			"MET_SMKR_Clust_Grenade",
+			"MET_SMKY_Clust_Grenade",
+			"MET_SMKO_Clust_Grenade",
+			"MET_SMKP_Clust_Grenade",
+			"MET_SMKTU_Clust_Grenade",
+			"MET_SMKTE_Clust_Grenade"
+		};
+	};
+	class MET_GL_Marker_Magwell
+	{
+		MET_GL_Marker_SMOKE_CLUST[]=
+		{
+			"MET_SMKW_Clust_Grenade",
+			"MET_SMKB_Clust_Grenade",
+			"MET_SMKG_Clust_Grenade",
+			"MET_SMKR_Clust_Grenade",
+			"MET_SMKY_Clust_Grenade",
+			"MET_SMKO_Clust_Grenade",
+			"MET_SMKP_Clust_Grenade",
+			"MET_SMKTU_Clust_Grenade",
+			"MET_SMKTE_Clust_Grenade"
+		};
+	};
+};

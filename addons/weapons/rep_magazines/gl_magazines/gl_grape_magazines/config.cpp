@@ -30,6 +30,7 @@ class CfgMagazines
 		descriptionShort="Fuck that Direction";
 		ammo="MET_GrapeShot_blue";
 		mass=6;
+		scope=1;
 	};
 	class MET_6Rnd_Grape_Grenade: MET_Grape_Grenade
 	{

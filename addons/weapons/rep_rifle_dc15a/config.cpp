@@ -742,19 +742,11 @@ class CfgWeapons
 			discreteDistanceInitIndex=0;
 			magazines[]=
 			{
-				"MET_HE_Grenade",
-				"MET_AT_Grenade",
-				"1Rnd_HE_Grenade_shell",
-				"UGL_FlareWhite_F",
-				"UGL_FlareGreen_F",
-				"UGL_FlareRed_F",
-				"UGL_FlareYellow_F",
-				"UGL_FlareCIR_F",
+				"MET_3Rnd_HE_Grenade_shell"
 			};
 			magazineWell[]=
 			{
-				"UGL_40x36",
-				"MET_GL_MagWell"
+				"MET_3GL_HE_Magwell"
 			};
 		};
 		irLaserPos="";
@@ -926,7 +918,8 @@ class CfgWeapons
 		author="$STR_3as_Studio";
 		magazines[]=
 		{
-			"MET_DC15A_mag"
+			"MET_DC15A_mag",
+			"MET_DC15A_Marker_Purple_Mag"
 		};
 		magazineWell[]=
 		{
@@ -1233,11 +1226,11 @@ class CfgWeapons
 			useExternalOptic=0;
 			magazines[]=
 			{
-				"MET_HE_Grenade"
+				"MET_3Rnd_HE_Grenade_shell"
 			};
 			magazineWell[]=
 			{
-				"MET_GL_MagWell"
+				"MET_3GL_HE_Magwell"
 			};
 			cameraDir="OP_look";
 			discreteDistance[]={50,75,100,150,200,250,300,350,400};
@@ -2008,6 +2001,10 @@ class CfgMagazineWells
 		MET_Magazines[]=
 		{
 			"MET_DC15A_mag"
+		};
+		MET_Marker_Magazines[]=
+		{
+			"MET_DC15A_Marker_Purple_Mag"
 		};
 	};
 	class MET_DC15AM_MagWell

@@ -23,20 +23,13 @@ class CfgWeapons
 		muzzles[]+=
 		{
 			"MetAux_Weaps_Thermal_Detonator_ThrowMuzzle",
+			"MET_Trainer_ThrowMuzzle",
 			"MetAux_Weaps_Thermal_Imploder_ThrowMuzzle",
 			"MetAux_Weaps_Thermal_Impacter_ThrowMuzzle",
 			"MetAux_Weaps_Thermal_Penetrator_ThrowMuzzle",
 			"MetAux_Weaps_Ctype_ThrowMuzzle",
 			"MetAux_Weaps_Flashnade_ThrowMuzzle",
-			"MetAux_Weaps_smoke_white_ThrowMuzzle",
-			"MetAux_Weaps_smoke_purple_ThrowMuzzle",
-			"MetAux_Weaps_smoke_yellow_ThrowMuzzle",
-			"MetAux_Weaps_smoke_red_ThrowMuzzle",
-			"MetAux_Weaps_smoke_green_ThrowMuzzle",
-			"MetAux_Weaps_smoke_blue_ThrowMuzzle",
-			"MetAux_Weaps_smoke_orange_ThrowMuzzle",
-			"MetAux_Weaps_smoke_turquoise_ThrowMuzzle",
-			"MetAux_Weaps_smoke_teal_ThrowMuzzle",
+			
 			"MetAux_Weaps_luma_Green_ThrowMuzzle",
 			"MetAux_Weaps_luma_Red_ThrowMuzzle",
 			"MetAux_Weaps_luma_Blue_ThrowMuzzle",
@@ -49,6 +42,13 @@ class CfgWeapons
 			magazines[]=
 			{
 				"MET_Weapons_Mags_Thermal_Detonator"
+			};
+		};
+		class MET_Trainer_ThrowMuzzle: ThrowMuzzle
+		{
+			magazines[]=
+			{
+				"MET_Thermal_Trainer_Mag"
 			};
 		};
 		class MetAux_Weaps_Thermal_Imploder_ThrowMuzzle: ThrowMuzzle
@@ -91,69 +91,6 @@ class CfgWeapons
 			magazines[]=
 			{
 				"Met_Weapons_Mags_DroidPopper"
-			};
-		};
-		class MetAux_Weaps_smoke_white_ThrowMuzzle: ThrowMuzzle
-		{
-			magazines[]=
-			{
-				"MET_Smoke_White"
-			};
-		};
-		class MetAux_Weaps_smoke_purple_ThrowMuzzle: ThrowMuzzle
-		{
-			magazines[]=
-			{
-				"MET_Smoke_Purple"
-			};
-		};
-		class MetAux_Weaps_smoke_yellow_ThrowMuzzle: ThrowMuzzle
-		{
-			magazines[]=
-			{
-				"MET_Smoke_Yellow"
-			};
-		};
-		class MetAux_Weaps_smoke_red_ThrowMuzzle: ThrowMuzzle
-		{
-			magazines[]=
-			{
-				"MET_Smoke_Red"
-			};
-		};
-		class MetAux_Weaps_smoke_green_ThrowMuzzle: ThrowMuzzle
-		{
-			magazines[]=
-			{
-				"MET_Smoke_Green"
-			};
-		};
-		class MetAux_Weaps_smoke_blue_ThrowMuzzle: ThrowMuzzle
-		{
-			magazines[]=
-			{
-				"MET_Smoke_Blue"
-			};
-		};
-		class MetAux_Weaps_smoke_orange_ThrowMuzzle: ThrowMuzzle
-		{
-			magazines[]=
-			{
-				"MET_Smoke_Orange"
-			};
-		};
-		class MetAux_Weaps_smoke_turquoise_ThrowMuzzle: ThrowMuzzle
-		{
-			magazines[]=
-			{
-				"MET_Smoke_Turquoise"
-			};
-		};
-		class MetAux_Weaps_smoke_teal_ThrowMuzzle: ThrowMuzzle
-		{
-			magazines[]=
-			{
-				"MET_Smoke_Teal"
 			};
 		};
 		class MetAux_Weaps_luma_Green_ThrowMuzzle: ThrowMuzzle

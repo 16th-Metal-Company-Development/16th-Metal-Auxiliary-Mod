@@ -9,6 +9,7 @@ class CfgPatches
 		{
 			"MET_blasterbolt"
 		};
+		skipWhenMissingDependencies=1;
 		requiredAddons[]=
 		{
 			"JLTS_weapons_DC15A",

@@ -28,7 +28,16 @@ class CfgPatches
 			"MET_3Rnd_ILLUM_P_Grenade",
 			"MET_3Rnd_ILLUM_TU_Grenade",
 			"MET_3Rnd_ILLUM_TE_Grenade",
-			"MET_3Rnd_ILLUM_IR_Grenade"
+			"MET_3Rnd_ILLUM_IR_Grenade",
+			"MET_6Rnd_ILLUM_B_Grenade",
+			"MET_6Rnd_ILLUM_G_Grenade",
+			"MET_6Rnd_ILLUM_R_Grenade",
+			"MET_6Rnd_ILLUM_Y_Grenade",
+			"MET_6Rnd_ILLUM_O_Grenade",
+			"MET_6Rnd_ILLUM_P_Grenade",
+			"MET_6Rnd_ILLUM_TU_Grenade",
+			"MET_6Rnd_ILLUM_TE_Grenade",
+			"MET_6Rnd_ILLUM_IR_Grenade"
 		};
 		requiredAddons[]=
 		{
@@ -244,5 +253,142 @@ class CfgMagazines
 		count=3;
 		displayName="[16th] 3 Round IR Illumination Flare";
 		mass=12;
+	};
+	class MET_6Rnd_ILLUM_Grenade: MET_ILLUM_Grenade
+	{
+		author="Hazmat";
+		count=6;
+		displayName="[16th] 6 Round Illumination Flare";
+		mass=24;
+	};
+	class MET_6Rnd_ILLUM_B_Grenade: MET_ILLUM_B_Grenade
+	{
+		author="Hazmat";
+		count=6;
+		displayName="[16th] 6 Round Blue Illumination Flare";
+		mass=24;
+	};
+	class MET_6Rnd_ILLUM_G_Grenade: MET_ILLUM_G_Grenade
+	{
+		author="Hazmat";
+		count=6;
+		displayName="[16th] 6 Round Green Illumination Flare";
+		mass=24;
+	};
+	class MET_6Rnd_ILLUM_R_Grenade: MET_ILLUM_R_Grenade
+	{
+		author="Hazmat";
+		count=6;
+		displayName="[16th] 6 Round Red Illumination Flare";
+		mass=24;
+	};
+	class MET_6Rnd_ILLUM_Y_Grenade: MET_ILLUM_Y_Grenade
+	{
+		author="Hazmat";
+		count=6;
+		displayName="[16th] 6 Round Yellow Illumination Flare";
+		mass=24;
+	};
+	class MET_6Rnd_ILLUM_O_Grenade: MET_ILLUM_O_Grenade
+	{
+		author="Hazmat";
+		count=6;
+		displayName="[16th] 6 Round Orange Illumination Flare";
+		mass=24;
+	};
+	class MET_6Rnd_ILLUM_P_Grenade: MET_ILLUM_P_Grenade
+	{
+		author="Hazmat";
+		count=6;
+		displayName="[16th] 6 Round Purple Illumination Flare";
+		mass=24;
+	};
+	class MET_6Rnd_ILLUM_TU_Grenade: MET_ILLUM_TU_Grenade
+	{
+		author="Hazmat";
+		count=6;
+		displayName="[16th] 6 Round Turquoise Illumination Flare";
+		mass=24;
+	};
+	class MET_6Rnd_ILLUM_TE_Grenade: MET_ILLUM_TE_Grenade
+	{
+		author="Hazmat";
+		count=6;
+		displayName="[16th] 6 Round Teal Illumination Flare";
+		mass=24;
+	};
+	class MET_6Rnd_ILLUM_IR_Grenade: MET_ILLUM_IR_Grenade
+	{
+		author="Hazmat";
+		count=6;
+		displayName="[16th] 6 Round IR Illumination Flare";
+		mass=24;
+	};
+};
+class CfgMagazineWells
+{
+	class MET_GL_Magwell
+	{
+		MET_GL_ILLUM[]=
+		{
+			"MET_ILLUM_Grenade",
+			"MET_ILLUM_B_Grenade",
+			"MET_ILLUM_G_Grenade",
+			"MET_ILLUM_R_Grenade",
+			"MET_ILLUM_Y_Grenade",
+			"MET_ILLUM_O_Grenade",
+			"MET_ILLUM_P_Grenade",
+			"MET_ILLUM_TU_Grenade",
+			"MET_ILLUM_TE_Grenade",
+			"MET_ILLUM_IR_Grenade"
+		};
+	};
+	class MET_GL_Marker_Magwell
+	{
+		MET_GL_Marker_ILLUM[]=
+		{
+			"MET_ILLUM_Grenade",
+			"MET_ILLUM_B_Grenade",
+			"MET_ILLUM_G_Grenade",
+			"MET_ILLUM_R_Grenade",
+			"MET_ILLUM_Y_Grenade",
+			"MET_ILLUM_O_Grenade",
+			"MET_ILLUM_P_Grenade",
+			"MET_ILLUM_TU_Grenade",
+			"MET_ILLUM_TE_Grenade",
+			"MET_ILLUM_IR_Grenade"
+		};
+	};
+	class MET_3GL_Magwell
+	{
+		MET_3GL_ILLUM[]=
+		{
+			"MET_3Rnd_ILLUM_Grenade",
+			"MET_3Rnd_ILLUM_B_Grenade",
+			"MET_3Rnd_ILLUM_G_Grenade",
+			"MET_3Rnd_ILLUM_R_Grenade",
+			"MET_3Rnd_ILLUM_Y_Grenade",
+			"MET_3Rnd_ILLUM_O_Grenade",
+			"MET_3Rnd_ILLUM_P_Grenade",
+			"MET_3Rnd_ILLUM_TU_Grenade",
+			"MET_3Rnd_ILLUM_TE_Grenade",
+			"MET_3Rnd_ILLUM_IR_Grenade"
+		};
+	};
+	class MET_6GL_Magwell
+	{
+		MET_6GL_ILLUM[]=
+		{
+			"MET_6Rnd_ILLUM_Grenade",
+			"MET_6Rnd_ILLUM_B_Grenade",
+			"MET_6Rnd_ILLUM_G_Grenade",
+			"MET_6Rnd_ILLUM_R_Grenade",
+			"MET_6Rnd_ILLUM_Y_Grenade",
+			"MET_6Rnd_ILLUM_O_Grenade",
+			"MET_6Rnd_ILLUM_P_Grenade",
+			"MET_6Rnd_ILLUM_TU_Grenade",
+			"MET_6Rnd_ILLUM_TE_Grenade",
+			"MET_6Rnd_ILLUM_IR_Grenade"
+		};
 	};
 };

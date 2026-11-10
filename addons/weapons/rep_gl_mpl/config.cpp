@@ -53,12 +53,11 @@ class CfgWeapons
 		displayName="[16th] MPL-40";
 		magazines[]=
 		{
-			"MET_3Rnd_HE_Grenade_shell"
+			"MET_6Rnd_HE_Grenade_shell"
 		};
 		magazineWell[]=
 		{
-			"MET_GL_Magwell",
-			"MET_3GL_MagWell"
+			"MET_6GL_Magwell"
 		};
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
@@ -217,158 +216,6 @@ class CfgWeapons
 			0.56234097,
 			1,
 			10
-		};
-	};
-};
-class CfgMagazineWells
-{
-	class MET_3GL_MagWell
-	{
-		MET_3GL_Mags[]=
-		{
-			"MET_3Rnd_HE_Grenade_shell",
-			"MET_3Rnd_AT_Grenade_shell",
-			"MET_Clust_Grenade_shell",
-			"MET_6Rnd_Grape_Grenade",
-			"MET_3Rnd_ILLUM_Grenade",
-			"MET_3Rnd_ILLUM_Grenade_Clust",
-			"MET_3Rnd_ILLUM_B_Grenade",
-			"MET_3Rnd_ILLUM_B_Grenade_Clust",
-			"MET_3Rnd_ILLUM_G_Grenade",
-			"MET_3Rnd_ILLUM_G_Grenade_Clust",
-			"MET_3Rnd_ILLUM_R_Grenade",
-			"MET_3Rnd_ILLUM_R_Grenade_Clust",
-			"MET_3Rnd_ILLUM_Y_Grenade",
-			"MET_3Rnd_ILLUM_Y_Grenade_Clust",
-			"MET_3Rnd_ILLUM_O_Grenade",
-			"MET_3Rnd_ILLUM_O_Grenade_Clust",
-			"MET_3Rnd_ILLUM_P_Grenade",
-			"MET_3Rnd_ILLUM_P_Grenade_Clust",
-			"MET_3Rnd_ILLUM_TU_Grenade",
-			"MET_3Rnd_ILLUM_TU_Grenade_Clust",
-			"MET_3Rnd_ILLUM_TE_Grenade",
-			"MET_3Rnd_ILLUM_TE_Grenade_Clust",
-			"MET_3Rnd_ILLUM_IR_Grenade",
-			"MET_3Rnd_ILLUM_IR_Grenade_Clust",
-			"MET_3Rnd_SMKW_Grenade",
-			"MET_3Rnd_SMKB_Grenade",
-			"MET_3Rnd_SMKG_Grenade",
-			"MET_3Rnd_SMKO_Grenade",
-			"MET_3Rnd_SMKP_Grenade",
-			"MET_3Rnd_SMKR_Grenade",
-			"MET_3Rnd_SMKTU_Grenade",
-			"MET_3Rnd_SMKTE_Grenade",
-			"MET_3Rnd_SMKY_Grenade"
-		};
-	};
-	class MET_GL_MagWell
-	{
-		MET_GL_Mags[]=
-		{
-			"MET_HE_Grenade",
-			"MET_Nuclear_Grenade",
-			"MET_AT_Grenade",
-			"MET_Grape_Grenade",
-			"MET_SMKW_Grenade",
-			"MET_SMKB_Grenade",
-			"MET_SMKG_Grenade",
-			"MET_SMKO_Grenade",
-			"MET_SMKP_Grenade",
-			"MET_SMKR_Grenade",
-			"MET_SMKTU_Grenade",
-			"MET_SMKTE_Grenade",
-			"MET_SMKY_Grenade",
-			"MET_SMKW_Clust_Grenade",
-			"MET_SMKB_Clust_Grenade",
-			"MET_SMKG_Clust_Grenade",
-			"MET_SMKO_Clust_Grenade",
-			"MET_SMKP_Clust_Grenade",
-			"MET_SMKR_Clust_Grenade",
-			"MET_SMKTU_Clust_Grenade",
-			"MET_SMKTE_Clust_Grenade",
-			"MET_SMKY_Clust_Grenade",
-			"MET_SUN_Grenade",
-			"MET_SUN_Grenade_Clust",
-			"MET_RA_Grenade",
-			"MET_RA_Grenade_Clust",
-			"MET_ILLUM_Grenade",
-			"MET_ILLUM_Grenade_Clust",
-			"MET_ILLUM_B_Grenade",
-			"MET_ILLUM_B_Grenade_Clust",
-			"MET_ILLUM_G_Grenade",
-			"MET_ILLUM_G_Grenade_Clust",
-			"MET_ILLUM_R_Grenade",
-			"MET_ILLUM_R_Grenade_Clust",
-			"MET_ILLUM_Y_Grenade",
-			"MET_ILLUM_Y_Grenade_Clust",
-			"MET_ILLUM_O_Grenade",
-			"MET_ILLUM_O_Grenade_Clust",
-			"MET_ILLUM_P_Grenade",
-			"MET_ILLUM_P_Grenade_Clust",
-			"MET_ILLUM_TU_Grenade",
-			"MET_ILLUM_TU_Grenade_Clust",
-			"MET_ILLUM_TE_Grenade",
-			"MET_ILLUM_TE_Grenade_Clust",
-			"MET_ILLUM_IR_Grenade",
-			"MET_ILLUM_IR_Grenade_Clust",
-			"ACE_HuntIR_M203"
-		};
-	};
-	class MET_60_GL_Magwell
-	{
-		MET_60mm_GL_Mags[]=
-		{
-			"MET_60mm_HE_mag",
-			"MET_60mm_HEAT_mag"
-		};
-	};
-	class MET_GL_MagWell_Pacifist
-	{
-		MET_GL_Mags[]=
-		{
-			"MET_SMKW_Grenade",
-			"MET_SMKB_Grenade",
-			"MET_SMKG_Grenade",
-			"MET_SMKO_Grenade",
-			"MET_SMKP_Grenade",
-			"MET_SMKR_Grenade",
-			"MET_SMKTU_Grenade",
-			"MET_SMKTE_Grenade",
-			"MET_SMKY_Grenade",
-			"MET_SMKW_Clust_Grenade",
-			"MET_SMKB_Clust_Grenade",
-			"MET_SMKG_Clust_Grenade",
-			"MET_SMKO_Clust_Grenade",
-			"MET_SMKP_Clust_Grenade",
-			"MET_SMKR_Clust_Grenade",
-			"MET_SMKTU_Clust_Grenade",
-			"MET_SMKTE_Clust_Grenade",
-			"MET_SMKY_Clust_Grenade",
-			"MET_SUN_Grenade",
-			"MET_SUN_Grenade_Clust",
-			"MET_RA_Grenade",
-			"MET_RA_Grenade_Clust",
-			"MET_ILLUM_Grenade",
-			"MET_ILLUM_Grenade_Clust",
-			"MET_ILLUM_B_Grenade",
-			"MET_ILLUM_B_Grenade_Clust",
-			"MET_ILLUM_G_Grenade",
-			"MET_ILLUM_G_Grenade_Clust",
-			"MET_ILLUM_R_Grenade",
-			"MET_ILLUM_R_Grenade_Clust",
-			"MET_ILLUM_Y_Grenade",
-			"MET_ILLUM_Y_Grenade_Clust",
-			"MET_ILLUM_O_Grenade",
-			"MET_ILLUM_O_Grenade_Clust",
-			"MET_ILLUM_P_Grenade",
-			"MET_ILLUM_P_Grenade_Clust",
-			"MET_ILLUM_TU_Grenade",
-			"MET_ILLUM_TU_Grenade_Clust",
-			"MET_ILLUM_TE_Grenade",
-			"MET_ILLUM_TE_Grenade_Clust",
-			"MET_ILLUM_IR_Grenade",
-			"MET_ILLUM_IR_Grenade_Clust",
-			"ACE_HuntIR_M203"
 		};
 	};
 };

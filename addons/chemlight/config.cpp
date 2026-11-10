@@ -7,7 +7,10 @@ class CfgPatches
 		requiredVersion=1;
 		requiredAddons[]=
 		{
-			"A3_Characters_f"
+			"A3_Characters_f",
+			"cba_main",
+			"ace_interact_menu",
+			"ace_chemlights"
 		};
 		author="Frost";
 	};

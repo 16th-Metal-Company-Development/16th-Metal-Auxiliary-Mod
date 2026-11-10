@@ -68,4 +68,16 @@ class CfgAmmo
 		lightcolor[]={0.69,0.69,1};
 		hit=40;
 	};
+	class MET_blasterbolt_Marker_Purple: MET_blasterbolt_base
+	{
+		model="\Indecisive_Armoury_Ammos\Data\Tracers\IDA_Blasterbolt_Blue.p3d";
+		lightcolor[]={0.647,0,1};
+		effectfly="MET_BlasterBoltGlow_Marker_Purple_Fly";
+		hit=10;
+		indirectHit=0;
+		explosive=0;
+		indirectHitRange=0.5;
+		caliber=5;
+		timetolive=15;
+	};
 };

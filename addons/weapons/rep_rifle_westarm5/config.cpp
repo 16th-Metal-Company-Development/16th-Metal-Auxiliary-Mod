@@ -736,7 +736,8 @@ class CfgWeapons
 			magazineWell[]=
 			{
 				"MET_GL_MagWell",
-				"MET_3GL_MagWell"
+				"MET_3GL_MagWell",
+				"MET_6GL_Magwell"
 			};
 			cameraDir="OP_look";
 			discreteDistance[]={50,75,100,150,200,250,300,350,400};
