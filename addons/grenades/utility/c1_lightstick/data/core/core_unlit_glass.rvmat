@@ -1,0 +1,22 @@
+// Arma 3: single-pass tinted glass. Assign the RGBA _ca texture to faces.
+// No visible self-emission; no thermal/StageTI substitute for an IR light.
+ambient[]={1,1,1,0};
+diffuse[]={1,1,1,0};
+forcedDiffuse[]={0,0,0,0};
+emmisive[]={0,0,0,0};
+specular[]={0.35,0.35,0.35,0};
+specularPower=40;
+renderFlags[]={"NoAlphaWrite"};
+PixelShaderID="Glass";
+VertexShaderID="Glass";
+class Stage1
+{
+    texture="#(ai,64,64,1)fresnelGlass(1.5)";
+    uvSource="none";
+};
+class Stage2
+{
+    texture="a3\data_f\env_land_co.paa";
+    uvSource="none";
+    useWorldEnvMap="true";
+};

@@ -29,13 +29,13 @@ class CfgPatches
 };
 //#include "XtdGearModels.hpp"
 //#include "XtdGearInfos.hpp"
-class Extended_FiredBIS_Eventhandlers
-{
-    class CAManBase
-    {
-		fired = "_this call FSNB_fnc_initNuclearPayload";
-    };
-};
+//class Extended_FiredBIS_Eventhandlers
+//{
+//    class CAManBase
+//    {
+//		fired = "_this call FSNB_fnc_initNuclearPayload";
+//    };
+//};
 class CfgRecoils
 {
 	class recoil_default;

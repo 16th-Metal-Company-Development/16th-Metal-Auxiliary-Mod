@@ -19,10 +19,19 @@ include = [
     "addons/Indecisive_Armoury_Ammos.pbo",
     "addons/Kobra.pbo",
     "addons/WBK_HeavyWeaponsFramework.pbo",
-    "addons/Revo_reducedWeaponSway.pbo"
+    "addons/Revo_reducedWeaponSway.pbo",
+    "addons/MET_Bacta.pbo",
+    "addons/MET_Dioxis.pbo"
+]
+
+exclude = [
+    "*.bak",
+    "*.psd",
+    "*.zip",
+    "*rap.txt",
 ]
 
 [version]
 major = 4
-minor = 13
-patch = 4
+minor = 14
+patch = 0

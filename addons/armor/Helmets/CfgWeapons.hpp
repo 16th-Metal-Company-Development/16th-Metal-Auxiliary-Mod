@@ -118,6 +118,26 @@ class MET_Helmet_Trooper_EOD : MET_Helmet_Trooper_Base
 	};
 };
 
+// Enviromental 
+class 3AS_H_CloneEnvironmental_F;
+class MET_Helmet_Desert_Base : 3AS_H_CloneEnvironmental_F
+{
+	author = "Chet";
+	displayName = "[16th] Hazard Trooper Helmet";
+
+	hiddenSelections[] =
+	{
+		"Helmet",
+		"Visor"
+	};
+
+	hiddenSelectionsTextures[] = 
+	{ 
+		"z\MET\addons\Armor_Rewrite\Helmets\Textures\Base\MET_Helmet_Desert_CO.paa",
+		"\3AS\3AS_Republic_Characters\Headgear\data\Clonetrooper_Environmental_Helmet\Clonetrooper_Environmental_Helmet_CO.paa" 
+	};
+};
+
 // Cold Assault
 class SEA_HELMET_GM_Base;
 class SEA_HELMET_GM_IllumBase;
@@ -895,6 +915,22 @@ class MET_Helmet_Trooper_Hazmat : MET_Helmet_Trooper_Base
 		""
 	};
 };
+class MET_Helmet_Trooper_HazmatC : MET_Helmet_Trooper_Base
+{
+	scope = 2;
+	displayName = "[16th] Hazmat's Commander Helmet";
+	hiddenSelectionsTextures[] =
+	{
+		"z\MET\addons\Armor_Rewrite\Helmets\Textures\Custom\MET_HazmatC_Helmet_CO.paa"
+	};
+	optreHUDStyle = "Phase_2";
+	optreVarietys[] =
+	{
+		"",
+		"",
+		""
+	};
+};
 class MET_Helmet_Trooper_Hellwolf : MET_Helmet_Trooper_Base
 {
 	scope = 2;
@@ -1066,6 +1102,15 @@ class MET_Helmet_Trooper_Prez : MET_Helmet_Trooper_Base
 		"z\MET\addons\Armor_Rewrite\Helmets\Textures\Custom\MET_Prez_Helmet_CO.paa"
 	};
 };
+class MET_Helmet_Trooper_Raven : MET_Helmet_Trooper_Base
+{
+	scope = 2;
+	displayName = "[16th] Raven's Helmet";
+	hiddenSelectionsTextures[] =
+	{
+		"z\MET\addons\Armor_Rewrite\Helmets\Textures\Custom\MET_Raven_Helmet_CO.paa"
+	};
+};
 class MET_Helmet_Trooper_Ronin : MET_Helmet_Trooper_Base
 {
 	scope = 1;
@@ -1091,6 +1136,15 @@ class MET_Helmet_Trooper_Sam : MET_Helmet_Trooper_Base
 	hiddenSelectionsTextures[] =
 	{
 		"z\MET\addons\Armor_Rewrite\Helmets\Textures\Custom\MET_Sam_Helmet_CO.paa"
+	};
+};
+class MET_Helmet_Trooper_Shock : MET_Helmet_Trooper_Base
+{
+	scope = 2;
+	displayName = "[16th] Shock's Helmet";
+	hiddenSelectionsTextures[] =
+	{
+		"z\MET\addons\Armor_Rewrite\Helmets\Textures\Custom\MET_Shock_Helmet_CO.paa"
 	};
 };
 class MET_Helmet_Trooper_Six : MET_Helmet_Trooper_Base

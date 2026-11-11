@@ -45,6 +45,25 @@ class CfgMagazines
 		scope=2;
 		mass=10;
 	};
+	class MET_DC15A_Marker_Purple_Mag: CA_Magazine
+	{
+		JLTS_hasElectronics=1;
+		JLTS_hasEMPProtection=1;
+		author="Hazmat";
+		modelSpecialIsProxy=1;
+		picture="\3AS\3AS_Weapons\Data\UI\3as_ammo_p.paa";
+		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
+		modelSpecial = "\ShadowLegion_Weapons\data\Magazines\DC15\Models\DC15_Mag.p3d";
+		count=10;
+		displayName="[16th] DC-15A Spotting Cell";
+		displayNameShort="Energy Cell";
+		descriptionShort="Marker cell for the DC-15A, and DC-15L </br>Ammo Count=10";
+		ammo="MET_blasterbolt_Marker_Purple";
+		tracersEvery=1;
+		scope=2;
+		mass=10;
+		initSpeed = 250;
+	};
 	class MET_DC15A_stendo_mag: MET_DC15A_mag
 	{
 		count=75;

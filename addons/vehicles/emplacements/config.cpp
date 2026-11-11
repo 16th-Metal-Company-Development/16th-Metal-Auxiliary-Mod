@@ -3315,6 +3315,25 @@ class CfgWeapons
         modes[] = {"Single1", "Single2", "Single3", "Burst1", "Burst2", "Burst3"};
         class Single1: Single1
         {
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class StandardSound
+			{
+				begin1[]=
+				{
+					"z\MET\addons\vehicles\sounds\big_nuetron_3.ogg",
+					2.5118864,
+					1,
+					1500
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+			};
 			displayName="Single (Close)";
             artilleryDispersion = 1;
             reloadTime = 2;

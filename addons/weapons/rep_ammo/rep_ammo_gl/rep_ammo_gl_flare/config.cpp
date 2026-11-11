@@ -125,7 +125,7 @@ class CfgAmmo
 	===============================================*/
 	class MET_GL_Flare_R_LUM_SubMun: MET_GL_Flare_LUM_SubMun
 	{
-		lightColor[] = {0.84380001,0.1383,0.1353,0};
+		lightColor[] = {0.8438,0.1383,0.1353,0};
 	};
 	class MET_GL_Flare_R_LUM: MET_GL_Flare_R_LUM_SubMun
 	{

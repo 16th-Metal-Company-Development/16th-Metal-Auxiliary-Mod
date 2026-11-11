@@ -35,7 +35,7 @@ class CfgAmmo
 	class MET_GL_Smoke_Clust_White: GrenadeHand
 	{
 		model="\A3\weapons_f\Ammo\UGL_slug";
-		submunitionAmmo[] = {"Met_Ammo_smoke_white"};
+		submunitionAmmo[] = {"MET_SMOKE_white"};
 		submunitionInitSpeed = 12;
 		submunitionConeAngle[] = {15};
 		submunitionConeAngleHorizontal = 360;
@@ -57,55 +57,55 @@ class CfgAmmo
 	===============================================*/
 	class MET_GL_Smoke_Clust_Blue: MET_GL_Smoke_Clust_White
 	{
-		submunitionAmmo[] = {"Met_Ammo_smoke_blue"};
+		submunitionAmmo[] = {"MET_SMOKE_blue"};
 	};
 	/*===============================================
 	==Green Smoke Grenade
 	===============================================*/
 	class MET_GL_Smoke_Clust_Green: MET_GL_Smoke_Clust_White
 	{
-		submunitionAmmo[] = {"Met_Ammo_smoke_green"};
+		submunitionAmmo[] = {"MET_SMOKE_green"};
 	};
 	/*===============================================
 	==Orange Smoke Grenade
 	===============================================*/
 	class MET_GL_Smoke_Clust_Orange: MET_GL_Smoke_Clust_White
 	{
-		submunitionAmmo[] = {"Met_Ammo_smoke_orange"};
+		submunitionAmmo[] = {"MET_SMOKE_orange"};
 	};
 	/*===============================================
 	==Purple Smoke Grenade
 	===============================================*/
 	class MET_GL_Smoke_Clust_Purple: MET_GL_Smoke_Clust_White
 	{
-		submunitionAmmo[] = {"Met_Ammo_smoke_purple"};
+		submunitionAmmo[] = {"MET_SMOKE_purple"};
 	};
 	/*===============================================
 	==Red Smoke Grenade
 	===============================================*/
 	class MET_GL_Smoke_Clust_Red: MET_GL_Smoke_Clust_White
 	{
-		submunitionAmmo[] = {"Met_Ammo_smoke_red"};
+		submunitionAmmo[] = {"MET_SMOKE_red"};
 	};
 	/*===============================================
 	==Teal Smoke Grenade
 	===============================================*/
 	class MET_GL_Smoke_Clust_Teal: MET_GL_Smoke_Clust_White
 	{
-		submunitionAmmo[] = {"Met_Ammo_smoke_teal"};
+		submunitionAmmo[] = {"MET_SMOKE_teal"};
 	};
 	/*===============================================
 	==Turquoise Smoke Grenade
 	===============================================*/
 	class MET_GL_Smoke_Clust_Turquoise: MET_GL_Smoke_Clust_White
 	{
-		submunitionAmmo[] = {"Met_Ammo_smoke_turquoise"};
+		submunitionAmmo[] = {"MET_SMOKE_turquoise"};
 	};
 	/*===============================================
 	==Yellow Smoke Grenade
 	===============================================*/
 	class MET_GL_Smoke_Clust_Yellow: MET_GL_Smoke_Clust_White
 	{
-		submunitionAmmo[] = {"Met_Ammo_smoke_yellow"};
+		submunitionAmmo[] = {"MET_SMOKE_yellow"};
 	};
 };

@@ -5,13 +5,15 @@ class cfgPatches
 		requiredAddons[]=
 		{
 			"A3_Weapons_F",
-			"ace_grenades"
+			"ace_grenades",
+			"cba_xeh"
 		};
 		units[]={};
 		weapons[]={};
 		magazines[]=
 		{
 			"MET_Weapons_Mags_Ctype",
+			"MET_Thermal_Trainer_Mag",
 			//"MET_Weapons_Mags_CISDetonator",
 			"MET_Weapons_Mags_flashnade",
 			"MET_Weapons_Mags_Thermal_Detonator",
@@ -23,6 +25,7 @@ class cfgPatches
 		ammo[]=
 		{
 			"MET_Weapons_Ammo_Grenades_Detonator",
+			"MET_Training_Detonator",
 			"MET_Weapons_Ammo_Grenades_Imploder",
 			"MET_Weapons_Ammo_Grenades_Impacter",
 			"MET_Weapons_Ammo_Grenades_Ctype",
@@ -33,7 +36,38 @@ class cfgPatches
 		};
 	};
 };
-class CfgMagazines
+class CfgSounds
+{
+	class MET_TrainingDetonatorArmed
+	{
+		name="MET_TrainingDetonatorArmed";
+		sound[]=
+		{
+			"212th\Weapons\212th_Grenades\aux212_thermal_detonators\data\sounds\thermal_detonator_armed.ogg",
+			2,
+			1,
+			150
+		};
+		titles[]={};
+	};
+};
+class Extended_PostInit_EventHandlers
+{
+	class MET_TrainingDetonator
+	{
+		init="call compile preprocessFileLineNumbers 'z\MET\addons\grenades\scripts\init_trainingDetonator.sqf';";
+	};
+};
+class Extended_FiredBIS_EventHandlers
+{
+	class CAManBase
+	{
+		class MET_TrainingDetonator
+		{
+			firedBIS = "if ((_this select 4) isEqualTo 'MET_Training_Detonator') then { ['MET_trainingDetonatorThrown', [_this select 6, getNumber (configFile >> 'CfgAmmo' >> 'MET_Training_Detonator' >> 'explosionTime')]] call CBA_fnc_localEvent; };";
+		};
+	};
+};class CfgMagazines
 {
 	class HandGrenade;
 	class ACE_M84;
@@ -53,6 +87,26 @@ class CfgMagazines
 		nameSound="handgrenade";
 		maxLeadSpeed=7;
 		ammo="MET_Weapons_Ammo_Grenades_Detonator";
+		model="\kobra\442_weapons\explosive\thermal_det.p3d";
+		picture="\3AS\3AS_Equipment\UI\Thermal_Detonator_UI_ca.paa";
+		uipicture="\3AS\3AS_Equipment\UI\Thermal_Detonator_UI_ca.paa";
+	};
+	class MET_Thermal_Trainer_Mag: HandGrenade
+	{
+		author="16th Aux Team";
+		scope=2;
+		scopearsenal=2;
+		displayName="[16th] Thermal Detonator (Training)";
+		displayNameShort="Training Detonator";
+		descriptionShort="'Training' Grenade";
+		type=256;
+		value=1;
+		count=1;
+		initSpeed=20;
+		mass=8;
+		nameSound="handgrenade";
+		maxLeadSpeed=7;
+		ammo="MET_Training_Detonator";
 		model="\kobra\442_weapons\explosive\thermal_det.p3d";
 		picture="\3AS\3AS_Equipment\UI\Thermal_Detonator_UI_ca.paa";
 		uipicture="\3AS\3AS_Equipment\UI\Thermal_Detonator_UI_ca.paa";
@@ -150,6 +204,411 @@ class CfgMagazines
 		initSpeed=25;
 	};
 };
+class CfgCloudlets
+{
+	class FireSparksSmall;
+	class MET_Confetti1: FireSparksSmall
+	{
+		size[]={0.1,0.1,0.1};
+		lifeTime=0.35;
+		interval=0.05;
+		color[]=
+		{
+			{0.996,0.063,0.498,0.9},
+			{0.996,0.063,0.498,0.5},
+			{0.996,0.063,0.498,0.1}
+		};
+	};
+	class MET_Confetti2: MET_Confetti1
+	{
+		color[]=
+		{
+			{0.000,0.792,0.922,0.9},
+			{0.000,0.792,0.922,0.5},
+			{0.000,0.792,0.922,0.1}
+		};
+	};
+	class MET_Confetti3: MET_Confetti1
+	{
+		color[]=
+		{
+			{0.996,0.706,0.176,0.9},
+			{0.996,0.706,0.176,0.5},
+			{0.996,0.706,0.176,0.1}
+		};
+	};
+	class MET_Confetti4: MET_Confetti1
+	{
+		color[]=
+		{
+			{1.000,0.463,0.525,0.9},
+			{1.000,0.463,0.525,0.5},
+			{1.000,0.463,0.525,0.1}
+		};
+	};
+	class MET_Confetti5: MET_Confetti1
+	{
+		color[]=
+		{
+			{0.004,0.365,0.706,0.9},
+			{0.004,0.365,0.706,0.5},
+			{0.004,0.365,0.706,0.1}
+		};
+	};
+	class MET_Confetti6: MET_Confetti1
+	{
+		color[]=
+		{
+			{1.000,0.231,0.000,0.9},
+			{1.000,0.231,0.000,0.5},
+			{1.000,0.231,0.000,0.1}
+		};
+	};
+	class MET_Confetti7: MET_Confetti1
+	{
+		color[]=
+		{
+			{0.937,0.608,0.812,0.9},
+			{0.937,0.608,0.812,0.5},
+			{0.937,0.608,0.812,0.1}
+		};
+	};
+	class MET_Confetti8: MET_Confetti1
+	{
+		color[]=
+		{
+			{1.000,0.592,0.000,0.9},
+			{1.000,0.592,0.000,0.5},
+			{1.000,0.592,0.000,0.1}
+		};
+	};
+	class MET_Confetti9: MET_Confetti1
+	{
+		color[]=
+		{
+			{0.267,0.671,0.553,0.9},
+			{0.267,0.671,0.553,0.5},
+			{0.267,0.671,0.553,0.1}
+		};
+	};
+	class MET_Confetti10: MET_Confetti1
+	{
+		color[]=
+		{
+			{0.922,0.867,0.243,0.9},
+			{0.922,0.867,0.243,0.5},
+			{0.922,0.867,0.243,0.1}
+		};
+	};
+	class MET_Confetti11: MET_Confetti1
+	{
+		color[]=
+		{
+			{0.749,0.933,0.667,0.9},
+			{0.749,0.933,0.667,0.5},
+			{0.749,0.933,0.667,0.1}
+		};
+	};
+	class MET_Confetti12: MET_Confetti1
+	{
+		color[]=
+		{
+			{0.871,0.949,0.976,0.9},
+			{0.871,0.949,0.976,0.5},
+			{0.871,0.949,0.976,0.1}
+		};
+	};
+	class MET_Confetti13: MET_Confetti1
+	{
+		color[]=
+		{
+			{0.690,0.788,0.949,0.9},
+			{0.690,0.788,0.949,0.5},
+			{0.690,0.788,0.949,0.1}
+		};
+	};
+	class MET_Confetti14: MET_Confetti1
+	{
+		color[]=
+		{
+			{0.384,0.659,0.996,0.9},
+			{0.384,0.659,0.996,0.5},
+			{0.384,0.659,0.996,0.1}
+		};
+	};
+	class MET_Confetti15: MET_Confetti1
+	{
+		color[]=
+		{
+			{0.008,0.388,0.267,0.9},
+			{0.008,0.388,0.267,0.5},
+			{0.008,0.388,0.267,0.1}
+		};
+	};
+	class MET_Confetti16: MET_Confetti1
+	{
+		color[]=
+		{
+			{0.996,0.718,0.129,0.9},
+			{0.996,0.718,0.129,0.5},
+			{0.996,0.718,0.129,0.1}
+		};
+	};
+	class MET_Confetti17: MET_Confetti1
+	{
+		color[]=
+		{
+			{0.969,0.455,0.659,0.9},
+			{0.969,0.455,0.659,0.5},
+			{0.969,0.455,0.659,0.1}
+		};
+	};
+	class MET_Confetti18: MET_Confetti1
+	{
+		color[]=
+		{
+			{1.000,0.000,0.784,0.9},
+			{1.000,0.000,0.784,0.5},
+			{1.000,0.000,0.784,0.1}
+		};
+	};
+	class MET_Confetti19: MET_Confetti1
+	{
+		color[]=
+		{
+			{0.000,0.349,0.514,0.9},
+			{0.000,0.349,0.514,0.5},
+			{0.000,0.349,0.514,0.1}
+		};
+	};
+	class MET_Confetti20: MET_Confetti1
+	{
+		color[]=
+		{
+			{1.000,0.718,0.824,0.9},
+			{1.000,0.718,0.824,0.5},
+			{1.000,0.718,0.824,0.1}
+		};
+	};
+	class MET_Confetti21: MET_Confetti1
+	{
+		color[]=
+		{
+			{0.031,0.933,0.753,0.9},
+			{0.031,0.933,0.753,0.5},
+			{0.031,0.933,0.753,0.1}
+		};
+	};
+	class MET_Confetti22: MET_Confetti1
+	{
+		color[]=
+		{
+			{1.000,0.690,0.420,0.9},
+			{1.000,0.690,0.420,0.5},
+			{1.000,0.690,0.420,0.1}
+		};
+	};
+	class MET_Confetti23: MET_Confetti1
+	{
+		color[]=
+		{
+			{0.639,0.890,0.459,0.9},
+			{0.639,0.890,0.459,0.5},
+			{0.639,0.890,0.459,0.1}
+		};
+	};
+	class MET_Confetti24: MET_Confetti1
+	{
+		color[]=
+		{
+			{0.004,0.478,0.937,0.9},
+			{0.004,0.478,0.937,0.5},
+			{0.004,0.478,0.937,0.1}
+		};
+	};
+	class MET_Confetti25: MET_Confetti1
+	{
+		color[]=
+		{
+			{1.000,0.780,0.000,0.9},
+			{1.000,0.780,0.000,0.5},
+			{1.000,0.780,0.000,0.1}
+		};
+	};
+	class MET_Confetti26: MET_Confetti1
+	{
+		color[]=
+		{
+			{0.302,0.176,0.337,0.9},
+			{0.302,0.176,0.337,0.5},
+			{0.302,0.176,0.337,0.1}
+		};
+	};
+	class MET_Confetti27: MET_Confetti1
+	{
+		color[]=
+		{
+			{0.690,0.933,0.875,0.9},
+			{0.690,0.933,0.875,0.5},
+			{0.690,0.933,0.875,0.1}
+		};
+	};
+	class MET_Confetti28: MET_Confetti1
+	{
+		color[]=
+		{
+			{0.000,0.714,0.624,0.9},
+			{0.000,0.714,0.624,0.5},
+			{0.000,0.714,0.624,0.1}
+		};
+	};
+	class MET_Confetti29: MET_Confetti1
+	{
+		color[]=
+		{
+			{0.773,0.620,0.796,0.9},
+			{0.773,0.620,0.796,0.5},
+			{0.773,0.620,0.796,0.1}
+		};
+	};
+	class MET_Confetti30: MET_Confetti1
+	{
+		color[]=
+		{
+			{0.922,0.867,0.243,0.9},
+			{0.922,0.867,0.243,0.5},
+			{0.922,0.867,0.243,0.1}
+		};
+	};
+};
+class MET_Confetti
+{
+	class C1
+	{
+		simulation="particles";
+		type="MET_Confetti1";
+		position[]={0,0.125,0};
+		intensity=1;
+		interval=0.05;
+		lifeTime=3;
+	};
+	class C2: C1
+	{
+		type="MET_Confetti2";
+	};
+	class C3: C1
+	{
+		type="MET_Confetti3";
+	};
+	class C4: C1
+	{
+		type="MET_Confetti4";
+	};
+	class C5: C1
+	{
+		type="MET_Confetti5";
+	};
+	class C6: C1
+	{
+		type="MET_Confetti6";
+	};
+	class C7: C1
+	{
+		type="MET_Confetti7";
+	};
+	class C8: C1
+	{
+		type="MET_Confetti8";
+	};
+	class C9: C1
+	{
+		type="MET_Confetti9";
+	};
+	class C10: C1
+	{
+		type="MET_Confetti10";
+	};
+	class C11: C1
+	{
+		type="MET_Confetti11";
+	};
+	class C12: C1
+	{
+		type="MET_Confetti12";
+	};
+	class C13: C1
+	{
+		type="MET_Confetti13";
+	};
+	class C14: C1
+	{
+		type="MET_Confetti14";
+	};
+	class C15: C1
+	{
+		type="MET_Confetti15";
+	};
+	class C16: C1
+	{
+		type="MET_Confetti16";
+	};
+	class C17: C1
+	{
+		type="MET_Confetti17";
+	};
+	class C18: C1
+	{
+		type="MET_Confetti18";
+	};
+	class C19: C1
+	{
+		type="MET_Confetti19";
+	};
+	class C20: C1
+	{
+		type="MET_Confetti20";
+	};
+	class C21: C1
+	{
+		type="MET_Confetti21";
+	};
+	class C22: C1
+	{
+		type="MET_Confetti22";
+	};
+	class C23: C1
+	{
+		type="MET_Confetti23";
+	};
+	class C24: C1
+	{
+		type="MET_Confetti24";
+	};
+	class C25: C1
+	{
+		type="MET_Confetti25";
+	};
+	class C26: C1
+	{
+		type="MET_Confetti26";
+	};
+	class C27: C1
+	{
+		type="MET_Confetti27";
+	};
+	class C28: C1
+	{
+		type="MET_Confetti28";
+	};
+	class C29: C1
+	{
+		type="MET_Confetti29";
+	};
+	class C30: C1
+	{
+		type="MET_Confetti30";
+	};
+};
 class CfgAmmo
 {
 	class grenade;
@@ -187,6 +646,92 @@ class CfgAmmo
 			"GrenadeHe_Tail_SoundSet",
 			"Explosion_Debris_SoundSet"
 		};
+		class CamShakeExplode
+		{
+			distance=99.817802;
+			duration=1;
+			frequency=20;
+			power=6;
+		};
+		class NVGMarkers
+		{
+			class Blinking1
+			{
+			};
+			/*class IRMarker
+			{
+				name = "IR_marker";
+				color[] = {0, 1, 0, 1};
+				ambient[] = {0, 1, 0, 1};
+				brightness = 0.05;
+				onlyInNvg = 1;
+				blinking = 1;
+			};*/
+			/*class Blinking1
+			{
+				name="blinkpos1";
+				color[]={0.0099999998,0.0099999998,0.0099999998,1};
+				ambient[]={0.0049999999,0.0049999999,0.0049999999,1};
+				blinking=1;
+				brightness=0.0020000001;
+				onlyInNvg=1;
+			};
+			class Blinking2
+			{
+				color[]={0.89999998,0.1,0.1};
+				ambient[]={0.1,0.1,0.1};
+				name="blinkpos2";
+				blinking=1;
+				blinkingStartsOn=1;
+				blinkingPattern[]={0.1,0.89999998};
+				blinkingPatternGuarantee=1;
+				drawLightSize=0.34999999;
+				drawLightCenterSize=0.050000001;
+				brightness=0.0020000001;
+				dayLight=1;
+				onlyInNvg=0;
+				intensity=75;
+				drawLight=1;
+				activeLight=0;
+				useFlare=0;
+			};*/
+		};
+	};
+	class MET_Training_Detonator: grenade
+	{
+		hit=0;
+		indirectHit=0;
+		indirectHitRange=0;
+		ace_grenades_pullPinSound[]=
+		{
+			"\ls\core\addons\sounds\weapons\grenade\pin.wss",
+			3,
+			1,
+			10
+		};
+		model="\kobra\442_weapons\explosive\thermal_det.p3d";
+		explosionEffectsRadius=0;
+		suppressionRadiusHit=24;
+		typicalspeed=18;
+		visibleFire=0.5;
+		audibleFire=0.050000001;
+		visibleFireTime=1;
+		fuseDistance=0;
+		soundFly[]={};
+		SoundSetExplosion[]={};
+		// Remove blast/flash effects, keep the grenade sound and smoke/confetti emitter.
+		explosionEffects="";
+		craterEffects="";
+		effectsFire="";
+		effectFly="";
+		dangerRadiusHit=0;
+		dangerRadiusTrigger=0;
+		smokeColor[]={1,1,1,1};
+		effectsSmoke="MET_Confetti";
+		// Spawn the editable confetti effect through the smoke-grenade simulation.
+		simulation="shotSmokeX";
+		timeToLive=20;
+		explosionTime=5;
 		class CamShakeExplode
 		{
 			distance=99.817802;

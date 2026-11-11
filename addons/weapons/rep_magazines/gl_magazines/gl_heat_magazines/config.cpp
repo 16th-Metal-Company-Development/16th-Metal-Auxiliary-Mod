@@ -10,7 +10,8 @@ class CfgPatches
 			"MET_AT_Grenade",
 			"MET_3Rnd_AT_Grenade_shell",
 			"MET_6Rnd_AT_Grenade_shell",
-			"MET_60mm_HEAT_mag"
+			"MET_60mm_HEAT_mag",
+			"MET_HEATProtonPack"
 		};
 		requiredAddons[]=
 		{
@@ -23,6 +24,7 @@ class CfgMagazines
 	class 1Rnd_HE_Grenade_shell;
 	class 3AS_6Rnd_HE_Grenade_shell;
 	class CA_Magazine;
+	class MET_blaster_battery;
 	class MET_AT_Grenade: 1Rnd_HE_Grenade_shell
 	{
 		author="Hazmat";
@@ -71,5 +73,64 @@ class CfgMagazines
 		mass=20;
 		initspeed=100;
 		tracersevery=1;
+	};
+	class MET_HEATProtonPack: MET_blaster_battery
+	{
+		author="Hazmat";
+		scope=2;
+		picture="\3AS\3AS_Weapons\Data\UI\3as_box_y.paa";
+		count=75;
+		displayName="[16th] E403 HEAT Proton Pack";
+		displayNameShort="E403 HEAT Proton Pack";
+		descriptionShort="HEAT Proton Pack for the E403";
+		ammo="MET_25HEAT_LauncherGrenade";
+		tracersEvery=1;
+		initSpeed=210;
+		mass=100;
+	};
+};
+class CfgMagazineWells
+{
+	class MET_GL_Magwell
+	{
+		MET_GL_HEAT[]=
+		{
+			"MET_AT_Grenade"
+		};
+	};
+	class MET_3GL_Magwell
+	{
+		MET_3GL_HEAT[]=
+		{
+			"MET_3Rnd_AT_Grenade_shell"
+		};
+	};
+	class MET_3GL_HE_Magwell
+	{
+		MET_3GL_HEAT[]=
+		{
+			"MET_3Rnd_AT_Grenade_shell"
+		};
+	};
+	class MET_6GL_Magwell
+	{
+		MET_6GL_HEAT[]=
+		{
+			"MET_6Rnd_AT_Grenade_shell"
+		};
+	};
+	class MET_60_GL_Magwell
+	{
+		MET_60mm_GL_HEAT[]=
+		{
+			"MET_60mm_HEAT_mag"
+		};
+	};
+	class MET_E403_Magwell
+	{
+		MET_E403_HEAT[]=
+		{
+			"MET_HEATProtonPack"
+		};
 	};
 };

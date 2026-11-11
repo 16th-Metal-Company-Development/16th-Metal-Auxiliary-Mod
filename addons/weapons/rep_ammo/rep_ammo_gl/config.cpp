@@ -13,10 +13,10 @@ class CfgPatches
 		};
 	};
 };
-class Extended_FiredBIS_Eventhandlers
-{
-    class CAManBase
-    {
-		fired = "_this call FSNB_fnc_initNuclearPayload";
-    };
-};
+//class Extended_FiredBIS_Eventhandlers
+//{
+//    class CAManBase
+//    {
+//		fired = "_this call FSNB_fnc_initNuclearPayload";
+//    };
+//};

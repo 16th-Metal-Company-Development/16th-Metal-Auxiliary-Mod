@@ -1667,7 +1667,7 @@ class CfgVehicles
 		dustBackRightPos="BR";
 		tas_canBlift=1;
 		tas_liftVars="[[[[0,-4.5,-9]]], [0], [0]]";
-		armor=415;
+		armor=650;
 		armorStructural=10;
 		class HitPoints: HitPoints
 		{

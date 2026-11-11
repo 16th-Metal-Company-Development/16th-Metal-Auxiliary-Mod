@@ -94,6 +94,9 @@ class CfgPatches
 			"MET_Helmet_Trooper_Medic",
 			"MET_Helmet_Trooper_EOD",
 
+			// Enviromental
+			"MET_Helmet_Desert_Base",
+
 			// Base Cold
 			"MET_Helmet_Cold_Base",
 			"MET_Helmet_Cold_NCO",
@@ -160,9 +163,11 @@ class CfgPatches
 			"MET_Helmet_Trooper_Orpheus",
 			"MET_Helmet_Trooper_Otto",
 			"MET_Helmet_Trooper_Prez",
+			"MET_Helmet_Trooper_Raven",
 			"MET_Helmet_Trooper_Ronin",
 			"MET_Helmet_Trooper_Roz",
 			"MET_Helmet_Trooper_Sam",
+			"MET_Helmet_Trooper_Shock",
 			"MET_Helmet_Trooper_Six",
 			"MET_Helmet_Trooper_Ska",
 			"MET_Helmet_Trooper_Smith",

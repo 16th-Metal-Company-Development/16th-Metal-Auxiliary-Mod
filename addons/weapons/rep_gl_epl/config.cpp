@@ -1,6 +1,6 @@
 class CfgPatches
 {
-	class met_rep_gl_mpl
+	class met_rep_gl_epl
 	{
 		author="";
 		requiredVersion=0.1;
@@ -41,7 +41,7 @@ class CfgWeapons
 		displayName="[16th] EPL-2";
 		magazines[]=
 		{
-			"MET_3Rnd_EMP_Grenade_shell"
+			"MET_12Rnd_EMP_Grenade_shell"
 		};
 		magazineWell[]={};
 		class WeaponSlotsInfo: WeaponSlotsInfo
