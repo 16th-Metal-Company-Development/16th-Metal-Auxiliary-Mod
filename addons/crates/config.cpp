@@ -302,7 +302,7 @@ class CfgVehicles
             class _xx_LFP_item_bacta_bandage
             {
                 count=200;
-                name="LFP_item_bacta_bandage";
+                name="MET_LFP_BactaBandage";
             };
             class _xx_ACE_plasmaIV_250
             {
@@ -387,7 +387,7 @@ class CfgVehicles
             class _xx_LFP_item_bacta_bandage
             {
                 count=500;
-                name="LFP_item_bacta_bandage";
+                name="MET_LFP_BactaBandage";
             };
             class _xx_ACE_plasmaIV_250
             {
@@ -695,7 +695,7 @@ class CfgVehicles
             class _xx_LFP_item_bacta_bandage
             {
                 count=2310;
-                name="LFP_item_bacta_bandage";
+                name="MET_LFP_BactaBandage";
             };
             class _xx_ACE_plasmaIV_250
             {
@@ -2094,7 +2094,7 @@ class CfgVehicles
             };
             class _xx_LFP_item_bacta_bandage
             {
-                name="LFP_item_bacta_bandage";
+                name="MET_LFP_BactaBandage";
                 count=2310;
             };
             class _xx_ACE_plasmaIV_250
@@ -3024,7 +3024,7 @@ class CfgVehicles
             class _xx_LFP_item_bacta_bandage
             {
                 count=200;
-                name="LFP_item_bacta_bandage";
+                name="MET_LFP_BactaBandage";
             };
             class _xx_ACE_plasmaIV_250
             {
@@ -3285,7 +3285,7 @@ class CfgVehicles
             class _xx_LFP_item_bacta_bandage
             {
                 count=200;
-                name="LFP_item_bacta_bandage";
+                name="MET_LFP_BactaBandage";
             };
             class _xx_ACE_plasmaIV_250
             {
@@ -3400,7 +3400,7 @@ class CfgVehicles
             class _xx_LFP_item_bacta_bandage
             {
                 count=200;
-                name="LFP_item_bacta_bandage";
+                name="MET_LFP_BactaBandage";
             };
             class _xx_ACE_plasmaIV_250
             {
