@@ -1,6 +1,6 @@
 class CfgPatches
 {
-	class met_rep_pistol_rk3
+	class met_rep_pistol_dc15sa
 	{
 		author="";
 		requiredVersion=0.1;

@@ -18,6 +18,6 @@ if (!hasInterface) exitWith {};
 		};
 
 		if (!isNull _armedSound) then { deleteVehicle _armedSound; };
-		playSound3D ["z\MET\addons\grenades\data\sounds\partyblower.ogg", objNull, false, _lastPos, 2, 1, 300];
+		playSound3D ["z\MET\addons\grenades\data\sounds\partyblower.ogg", objNull, false, _lastPos, 2, 1, 300, 0, true];
 	};
 }] call CBA_fnc_addEventHandler;

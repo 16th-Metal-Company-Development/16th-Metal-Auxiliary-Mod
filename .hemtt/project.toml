@@ -24,6 +24,13 @@ include = [
     "addons/MET_Dioxis.pbo"
 ]
 
+exclude = [
+    "*.bak",
+    "*.psd",
+    "*.zip",
+    "*rap.txt",
+]
+
 [version]
 major = 4
 minor = 14

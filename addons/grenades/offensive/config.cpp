@@ -64,7 +64,7 @@ class Extended_FiredBIS_EventHandlers
 	{
 		class MET_TrainingDetonator
 		{
-			firedBIS="if ((_this select 4) isEqualTo 'MET_Training_Detonator') then { ['MET_trainingDetonatorThrown', [_this select 6, getNumber (configFile >> 'CfgAmmo' >> 'MET_Training_Detonator' >> 'explosionTime')]] call CBA_fnc_globalEvent; };";
+			firedBIS = "if ((_this select 4) isEqualTo 'MET_Training_Detonator') then { ['MET_trainingDetonatorThrown', [_this select 6, getNumber (configFile >> 'CfgAmmo' >> 'MET_Training_Detonator' >> 'explosionTime')]] call CBA_fnc_localEvent; };";
 		};
 	};
 };class CfgMagazines

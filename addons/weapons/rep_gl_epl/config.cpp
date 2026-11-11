@@ -1,6 +1,6 @@
 class CfgPatches
 {
-	class met_rep_gl_mpl
+	class met_rep_gl_epl
 	{
 		author="";
 		requiredVersion=0.1;
