@@ -21,7 +21,8 @@ include = [
     "addons/WBK_HeavyWeaponsFramework.pbo",
     "addons/Revo_reducedWeaponSway.pbo",
     "addons/MET_Bacta.pbo",
-    "addons/MET_Dioxis.pbo"
+    "addons/MET_Dioxis.pbo",
+    "ff_met_faction"
 ]
 
 exclude = [
@@ -34,4 +35,4 @@ exclude = [
 [version]
 major = 4
 minor = 14
-patch = 0
+patch = 1
