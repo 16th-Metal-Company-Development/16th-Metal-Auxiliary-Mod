@@ -201,6 +201,7 @@ class XtdGearInfos {
         class MET_Jetpack_Base   { model = "MET_JT12_Jetpacks"; camo = "Trooper"; };
         class MET_Jetpack_RTO    { model = "MET_JT12_Jetpacks"; camo = "RTO"; };
         class MET_Jetpack_Medic  { model = "MET_JT12_Jetpacks"; camo = "Medic"; };
+        class MET_Jetpack_Blank  { model = "MET_JT12_Jetpacks"; camo = "Blank"; };
 
         // [16th] Jump Packs
         class MET_Jumppack_Base  { model = "MET_Jump_Packs"; camo = "Trooper"; };

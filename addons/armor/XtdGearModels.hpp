@@ -206,7 +206,7 @@ class XtdGearModels {
             author = "16th Mod Team";
             options[] = { "camo" };
             class camo {
-                values[] = { "Trooper", "RTO", "Medic" };
+                values[] = { "Trooper", "RTO", "Medic", "Blank" };
             };
         };
 

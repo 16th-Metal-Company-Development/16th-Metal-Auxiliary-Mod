@@ -241,6 +241,16 @@ class MET_Jetpack_Medic : MET_Jetpack_Base
 	};
 	maximumLoad = 250;
 };
+class MET_Jetpack_Blank : MET_Jetpack_Base
+{
+	scope = 2;
+	displayName = "[16th] JT-12 (Blank)";
+	hiddenSelectionsTextures[] =
+	{
+		"z\MET\addons\Armor_Rewrite\Backpacks\Textures\Base\MET_Jetpack_Blank_CO.paa"
+	};
+	maximumLoad = 250;
+};
 class MET_Jetpack_RTO : MET_Jetpack_Base
 {
 	scope = 2;
