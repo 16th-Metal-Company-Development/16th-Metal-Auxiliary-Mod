@@ -69,6 +69,7 @@ class CfgPatches
 			"MET_Jetpack_Base",
 			"MET_Jetpack_Medic",
 			"MET_Jetpack_RTO",
+			"MET_Jetpack_Blank",
 
 			// JumpPacks	
 			"MET_Jumppack_Base",
